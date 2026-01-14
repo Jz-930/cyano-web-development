@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyano | Enterprise AI Infrastructure</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* ============================
+           1. 核心变量与重置 (CORE VARIABLES)
+           ============================ */
+        :root {
+            --bg-color: #050505;
+            /* 极致深黑 */
+            --bg-card: #0A0A0C;
+            /* 卡片微亮背景 */
+            --text-main: #FFFFFF;
+            --text-muted: #888899;
+            /* 高级灰 */
+            --accent-cyan: #00F2FF;
+            /* Cyano 品牌荧光青 */
+            --accent-dim: rgba(0, 242, 255, 0.1);
+            --border-light: rgba(255, 255, 255, 0.08);
+            /* Harvey 风格极细线 */
+
+            --font-heading: 'Space Grotesk', sans-serif;
+            --font-body: 'Inter', sans-serif;
+
+            --max-width: 1240px;
+            --transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            /* 字体抗锯齿，显瘦 */
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 通用布局类 */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        .section-padding {
+            padding: 140px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        /* 排版工具 */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-heading);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .text-cyan {
+            color: var(--accent-cyan);
+        }
+
+        .text-gradient {
+            background: linear-gradient(120deg, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 滚动显现动画 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ============================
+           2. 导航栏 (NAVBAR)
+           ============================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 80px;
+            background: rgba(5, 5, 5, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .logo span {
+            color: var(--accent-cyan);
+            font-size: 40px;
+            line-height: 0;
+            margin-top: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 48px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .btn-outline {
+            padding: 12px 28px;
+            border: 1px solid var(--border-light);
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+            box-shadow: 0 0 20px var(--accent-dim);
+        }
+
+        /* ============================
+           3. HERO (首屏)
+           ============================ */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 背景氛围灯 - 极其微弱的高级感 */
+        .hero-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(0, 242, 255, 0.06) 0%, rgba(0, 0, 0, 0) 60%);
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .hero-label {
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-family: var(--font-heading);
+            color: var(--accent-cyan);
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .hero-content h1 {
+            font-size: 5rem;
+            /* 大字号撑起气场 */
+            line-height: 1.05;
+            margin-bottom: 32px;
+            color: white;
+            background: linear-gradient(180deg, #FFFFFF 0%, #888888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            max-width: 760px;
+            margin: 0 auto 48px;
+            line-height: 1.7;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent-cyan);
+            color: #000;
+            padding: 16px 40px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: white;
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .hero-links {
+            margin-left: 24px;
+            font-size: 14px;
+            color: var(--text-muted);
+            cursor: pointer;
+            border-bottom: 1px solid transparent;
+        }
+
+        .hero-links:hover {
+            border-color: var(--text-muted);
+            color: white;
+        }
+
+        /* ============================
+           4. PAIN POINTS (网格系统)
+           ============================ */
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 80px;
+            max-width: 800px;
+        }
+
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid var(--border-light);
+            border-left: 1px solid var(--border-light);
+        }
+
+        .grid-item {
+            padding: 50px 32px;
+            border-right: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+            transition: var(--transition);
+        }
+
+        .grid-item:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .icon-box {
+            font-family: var(--font-heading);
+            color: var(--accent-cyan);
+            font-size: 14px;
+            margin-bottom: 24px;
+            opacity: 0.8;
+            letter-spacing: 2px;
+        }
+
+        .grid-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .grid-item p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ============================
+           5. ARCHITECTURE (白盒化展示)
+           ============================ */
+        .arch-container {
+            display: flex;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .arch-text {
+            flex: 1;
+        }
+
+        .arch-step {
+            padding: 32px 0;
+            border-top: 1px solid var(--border-light);
+            position: relative;
+            cursor: default;
+        }
+
+        .arch-step h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .arch-step h4::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #333;
+            margin-right: 16px;
+            transition: var(--transition);
+            border-radius: 50%;
+        }
+
+        .arch-step:hover h4::before {
+            background: var(--accent-cyan);
+            box-shadow: 0 0 10px var(--accent-cyan);
+        }
+
+        .arch-step:hover h4 {
+            color: white;
+        }
+
+        /* 纯 CSS 绘制的架构图 (Abstract Tech) */
+        .arch-visual {
+            flex: 1;
+            height: 500px;
+            position: relative;
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+            border: 1px solid var(--border-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .layer-box {
+            width: 240px;
+            height: 50px;
+            border: 1px solid var(--border-light);
+            background: rgba(0, 0, 0, 0.5);
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-heading);
+            font-size: 12px;
+            letter-spacing: 1px;
+            position: relative;
+            backdrop-filter: blur(5px);
+            z-index: 2;
+        }
+
+        .layer-box.active {
+            border-color: var(--accent-cyan);
+            color: var(--accent-cyan);
+            background: rgba(0, 242, 255, 0.02);
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.05);
+        }
+
+        .line-vertical {
+            width: 1px;
+            height: 30px;
+            background: linear-gradient(to bottom, transparent, #333, transparent);
+        }
+
+        /* ============================
+           6. COMPARISON TABLE
+           ============================ */
+        .table-wrap {
+            width: 100%;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .comp-row {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1.5fr;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .comp-cell {
+            padding: 32px;
+            font-size: 1rem;
+        }
+
+        .comp-head {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: var(--font-heading);
+        }
+
+        .comp-bad {
+            color: var(--text-muted);
+            opacity: 0.7;
+        }
+
+        .comp-good {
+            color: white;
+            font-weight: 500;
+            background: rgba(0, 242, 255, 0.02);
+            position: relative;
+        }
+
+        .comp-good::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: var(--accent-cyan);
+            opacity: 0.3;
+        }
+
+        /* ============================
+           7. CASE STUDIES (核心亮点 - Z布局 + 概念UI)
+           ============================ */
+        .case-section-header {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .case-section-header h2 {
+            font-size: 3.5rem;
+        }
+
+        .case-item {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            margin-bottom: 180px;
+        }
+
+        .case-item.reverse {
+            flex-direction: row-reverse;
+        }
+
+        .case-info {
+            flex: 1;
+        }
+
+        .case-tag {
+            font-family: var(--font-heading);
+            color: var(--accent-cyan);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .case-info h3 {
+            font-size: 2.2rem;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .case-info p {
+            font-size: 1.05rem;
+            margin-bottom: 32px;
+        }
+
+        .stats-grid {
+            display: flex;
+            gap: 40px;
+            border-top: 1px solid var(--border-light);
+            padding-top: 24px;
+        }
+
+        .stat h4 {
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 4px;
+            font-family: var(--font-heading);
+        }
+
+        .stat span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        /* --- 概念 UI 容器 (CSS Mockup) --- */
+        .ui-visual {
+            flex: 1.2;
+            perspective: 1000px;
+        }
+
+        .ui-window {
+            background: #0E0E10;
+            border: 1px solid #222;
+            border-radius: 8px;
+            box-shadow: 0 40px 80px -20px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+            position: relative;
+            transform: rotateY(-5deg) rotateX(2deg);
+            /* 3D 偏转，极具高级感 */
+            transition: transform 0.5s ease, border-color 0.5s ease;
+            aspect-ratio: 16/10;
+        }
+
+        .ui-window:hover {
+            transform: rotateY(0) rotateX(0);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .ui-topbar {
+            height: 36px;
+            background: #161618;
+            border-bottom: 1px solid #222;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #333;
+        }
+
+        .ui-content {
+            padding: 24px;
+            height: 100%;
+            display: flex;
+            gap: 24px;
+        }
+
+        /* UI 内部骨架元素 */
+        .sk-sidebar {
+            width: 60px;
+            height: 80%;
+            border-right: 1px solid #222;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .sk-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .sk-icon {
+            width: 24px;
+            height: 24px;
+            background: #222;
+            border-radius: 4px;
+        }
+
+        .sk-line {
+            height: 8px;
+            background: #222;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .sk-line.short {
+            width: 40%;
+        }
+
+        .sk-box {
+            height: 100px;
+            background: #161618;
+            border: 1px solid #222;
+            border-radius: 4px;
+        }
+
+        /* 特殊高亮元素 */
+        .highlight-bar {
+            background: rgba(0, 242, 255, 0.05);
+            border: 1px solid rgba(0, 242, 255, 0.3);
+            color: var(--accent-cyan);
+            font-family: monospace;
+            font-size: 10px;
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .risk-alert {
+            background: rgba(255, 77, 79, 0.05);
+            border: 1px solid rgba(255, 77, 79, 0.3);
+            color: #FF4D4F;
+            font-size: 10px;
+            padding: 12px;
+            border-radius: 4px;
+            margin-top: auto;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            font-family: monospace;
+        }
+
+        .chat-bubble {
+            background: #1A1A1C;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #ccc;
+            max-width: 80%;
+        }
+
+        .chat-bubble.ai {
+            background: rgba(0, 242, 255, 0.05);
+            border: 1px solid rgba(0, 242, 255, 0.1);
+            color: var(--accent-cyan);
+            align-self: flex-start;
+        }
+
+        .chat-bubble.user {
+            align-self: flex-end;
+            background: #222;
+        }
+
+        /* ============================
+           8. TRUST & FOOTER
+           ============================ */
+        .trust-section {
+            text-align: center;
+            background: #080808;
+        }
+
+        .logo-wall {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            opacity: 0.3;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 80px;
+            flex-wrap: wrap;
+        }
+
+        .deploy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            text-align: left;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .deploy-card {
+            padding: 40px;
+            border: 1px solid var(--border-light);
+            background: var(--bg-card);
+            transition: 0.3s;
+        }
+
+        .deploy-card:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .deploy-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer {
+            padding: 100px 0 60px;
+            border-top: 1px solid var(--border-light);
+            background: black;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            background: #111;
+            border: 1px solid #333;
+            padding: 16px;
+            color: white;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            border-radius: 4px;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: var(--accent-cyan);
+        }
+
+        .input-field::placeholder {
+            color: #555;
+        }
+
+        select.input-field {
+            color: #888;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .grid-4 {
+                grid-template-columns: 1fr;
+            }
+
+            .arch-container {
+                flex-direction: column;
+            }
+
+            .comp-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                padding: 20px;
+            }
+
+            .case-item,
+            .case-item.reverse {
+                flex-direction: column;
+                gap: 40px;
+                margin-bottom: 100px;
+            }
+
+            .ui-window {
+                transform: none;
+                aspect-ratio: 16/12;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .deploy-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <div class="logo">CYANO<span>.</span></div>
+            <div class="nav-links">
+                <a href="#philosophy">核心理念</a>
+                <a href="#architecture">技术架构</a>
+                <a href="#cases">落地案例</a>
+                <a href="#deploy">部署方案</a>
+            </div>
+            <a href="#contact" class="btn-outline">预约咨询</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="container hero-content reveal">
+            <div class="hero-label">ENTERPRISE AI INFRASTRUCTURE</div>
+            <h1>将企业知识<br>转化为可交付的 AI 生产力</h1>
+            <p>不微调模型，不改变业务流。Cyano 为企业构建“知识+流程+治理”的智能中台，让 AI 从“聊天玩具”进化为稳定、可控的数字员工。</p>
+            <div>
+                <button class="btn-primary"
+                    onclick="document.getElementById('contact').scrollIntoView()">探索解决方案</button>
+                <span class="hero-links" onclick="document.getElementById('cases').scrollIntoView()">查看案例 ↓</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="philosophy" class="section-padding">
+        <div class="container">
+            <h2 class="section-title reveal">为什么 ChatGPT 无法<br>直接接管您的业务？</h2>
+            <div class="grid-4 reveal">
+                <div class="grid-item">
+                    <div class="icon-box">/ 01</div>
+                    <h3>知识孤岛</h3>
+                    <p>核心数据散落在文档、数据库与历史记录中，通用 AI 拿不到也用不好，回答空洞无据。</p>
+                </div>
+                <div class="grid-item">
+                    <div class="icon-box">/ 02</div>
+                    <h3>上下文受限</h3>
+                    <p>模型窗口有限，信息喂不全就会产生幻觉，导致输出结果漂移，无法处理复杂任务。</p>
+                </div>
+                <div class="grid-item">
+                    <div class="icon-box">/ 03</div>
+                    <h3>输出不可控</h3>
+                    <p>同题不同答，缺乏校验规则，企业不敢将 AI 用于合同、财务等关键业务流程。</p>
+                </div>
+                <div class="grid-item">
+                    <div class="icon-box">/ 04</div>
+                    <h3>无法规模化</h3>
+                    <p>依赖个别员工的 Prompt 技巧只能救急，无法沉淀为可复用的组织能力，且难以审计。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="section-padding">
+        <div class="container arch-container">
+            <div class="arch-text reveal">
+                <h2 style="margin-bottom: 40px; font-size: 2.5rem;">Cyano 四层智能架构</h2>
+
+                <div class="arch-step">
+                    <h4>01. 知识摄入层 (Ingestion)</h4>
+                    <p>连接 PDF、SQL、API 等多源异构数据，建立带权限管理的动态向量索引。</p>
+                </div>
+                <div class="arch-step">
+                    <h4>02. 上下文编排 (RAG Engine)</h4>
+                    <p>在有限 Token 预算内，自动清洗、拼装最相关的 1% 信息，消除模型噪音。</p>
+                </div>
+                <div class="arch-step">
+                    <h4 class="text-cyan">03. 任务执行层 (Agent)</h4>
+                    <p>将 SOP 固化为 Playbook。包含标准步骤、校验规则与兜底机制，像代码一样执行。</p>
+                </div>
+                <div class="arch-step">
+                    <h4>04. 企业级治理 (Governance)</h4>
+                    <p>全链路日志审计、引用溯源、敏感词拦截。</p>
+                </div>
+            </div>
+
+            <div class="arch-visual reveal">
+                <div class="layer-box">SaaS Application UI</div>
+                <div class="line-vertical"></div>
+                <div class="layer-box active">Cyano Agent Core</div>
+                <div class="line-vertical"></div>
+                <div class="layer-box">RAG Context Engine</div>
+                <div class="line-vertical"></div>
+                <div class="layer-box">Enterprise Data (Files/DB)</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 60px;">从“个人技巧”进化为“系统能力”</h2>
+            <div class="table-wrap reveal">
+                <div class="comp-row">
+                    <div class="comp-cell comp-head">Dimension</div>
+                    <div class="comp-cell comp-head">Traditional Prompt Engineering</div>
+                    <div class="comp-cell comp-head text-cyan">Cyano Intelligence</div>
+                </div>
+                <div class="comp-row">
+                    <div class="comp-cell comp-head">驱动核心</div>
+                    <div class="comp-cell comp-bad">个人灵感与技巧</div>
+                    <div class="comp-cell comp-good">企业知识库 + SOP</div>
+                </div>
+                <div class="comp-row">
+                    <div class="comp-cell comp-head">稳定性</div>
+                    <div class="comp-cell comp-bad">随机性强，难以复现</div>
+                    <div class="comp-cell comp-good">输出稳定，可审计，可复用</div>
+                </div>
+                <div class="comp-row">
+                    <div class="comp-cell comp-head">模型关系</div>
+                    <div class="comp-cell comp-bad">深度绑定特定模型习惯</div>
+                    <div class="comp-cell comp-good">模型无关 (Model Agnostic)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cases" class="section-padding">
+        <div class="container">
+            <div class="case-section-header reveal">
+                <h2>落地场景</h2>
+                <p>已在金融、法务、IT 运维等领域验证的实际效能</p>
+            </div>
+
+            <div class="case-item reveal">
+                <div class="ui-visual">
+                    <div class="ui-window">
+                        <div class="ui-topbar">
+                            <div class="dot"></div>
+                        </div>
+                        <div class="ui-content">
+                            <div class="sk-sidebar">
+                                <div class="sk-icon"></div>
+                                <div class="sk-icon"></div>
+                            </div>
+                            <div class="sk-main">
+                                <div class="highlight-bar">
+                                    <span>> Generating Proposal...</span>
+                                    <span>99% Match</span>
+                                </div>
+                                <div class="sk-box"></div>
+                                <div class="sk-line"></div>
+                                <div class="sk-line"></div>
+                                <div class="sk-line short"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-info">
+                    <span class="case-tag">文档自动化</span>
+                    <h3>智能标书与方案生成</h3>
+                    <p>痛点：历史标书分散，撰写技术方案耗时，且易遗漏参数。<br>
+                        方案：构建专用知识库，RAG 引擎自动提取相似条款，Agent 自动填充参数。</p>
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <h4>15min</h4><span>生成初稿</span>
+                        </div>
+                        <div class="stat">
+                            <h4>99%</h4><span>引用准确率</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-item reverse reveal">
+                <div class="ui-visual">
+                    <div class="ui-window">
+                        <div class="ui-topbar">
+                            <div class="dot"></div>
+                        </div>
+                        <div class="ui-content">
+                            <div class="sk-sidebar">
+                                <div class="sk-icon"></div>
+                            </div>
+                            <div class="sk-main">
+                                <div class="sk-line"></div>
+                                <div class="sk-line short" style="background: rgba(255, 77, 79, 0.2);"></div>
+                                <div class="sk-line"></div>
+                                <div class="sk-line"></div>
+                                <div class="risk-alert">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    Risk Detected: Liability Clause missing...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-info">
+                    <span class="case-tag">合规风控</span>
+                    <h3>合同风险智能审查</h3>
+                    <p>痛点：人工审核大量合同耗时费力，标准不一，易漏看风险条款。<br>
+                        方案：将《合规手册》转化为校验链，自动标记风险并给出修改建议。</p>
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <h4>100%</h4><span>风险覆盖</span>
+                        </div>
+                        <div class="stat">
+                            <h4>5x</h4><span>效率提升</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-item reveal">
+                <div class="ui-visual">
+                    <div class="ui-window">
+                        <div class="ui-topbar">
+                            <div class="dot"></div>
+                        </div>
+                        <div class="ui-content" style="flex-direction: column; justify-content: flex-end;">
+                            <div class="chat-bubble user">如何配置内网 VPN？</div>
+                            <div class="chat-bubble ai">
+                                根据《IT 运维手册 v3.0》P.42，请按照以下步骤操作：<br>
+                                1. 下载 Cert.p12 证书...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-info">
+                    <span class="case-tag">企业 Wiki</span>
+                    <h3>内部智能 IT 助手</h3>
+                    <p>痛点：内部工单积压，员工重复回答相同问题，知识库更新滞后。<br>
+                        方案：接入内网 Wiki，7x24 小时自动处理常见咨询，无法回答时转接人工。</p>
+                    <div class="stats-grid">
+                        <div class="stat">
+                            <h4>80%</h4><span>拦截重复工单</span>
+                        </div>
+                        <div class="stat">
+                            <h4>&lt;3s</h4><span>响应时间</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-item reverse reveal">
+                <div class="ui-visual">
+                    <div class="ui-window"
+                        style="display: flex; align-items: center; justify-content: center; border-style: dashed; opacity: 0.5;">
+                        <span style="font-family: var(--font-heading); color: #444;">DATA AGENT COMING SOON</span>
+                    </div>
+                </div>
+                <div class="case-info">
+                    <span class="case-tag">数据查询</span>
+                    <h3>自然语言业务数据查询</h3>
+                    <p>痛点：业务人员不懂 SQL，查询复杂库存/销量数据需依赖 IT 部门导数。<br>
+                        方案：Text-to-SQL 智能体，允许业务人员用自然语言直接与数据库交互。</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="deploy" class="section-padding trust-section">
+        <div class="container reveal">
+            <div class="logo-wall">
+                <span>OPENAI</span>
+                <span>DEEPSEEK</span>
+                <span>LLAMA 3</span>
+                <span>FEISHU</span>
+                <span>MYSQL</span>
+            </div>
+
+            <h2 style="margin-bottom: 60px;">兼容并蓄，安全落地</h2>
+
+            <div class="deploy-grid">
+                <div class="deploy-card">
+                    <h3><i class="fas fa-cloud"></i> SaaS 托管版</h3>
+                    <p>即刻接入，弹性扩展。适合快速验证与轻量级场景。我们为您提供隔离的云端环境，确保业务快速上线。</p>
+                </div>
+                <div class="deploy-card">
+                    <h3><i class="fas fa-server"></i> 私有化部署版</h3>
+                    <p>数据不出域，模型本地运行。提供完整的 Docker 交付与本地算力适配，确保绝对的数据主权与合规。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container reveal" style="text-align: center;">
+            <h2 style="margin-bottom: 40px;">Ready to upgrade?</h2>
+            <form class="contact-form">
+                <div class="input-group">
+                    <input type="text" class="input-field" placeholder="姓名 / Name">
+                </div>
+                <div class="input-group">
+                    <input type="text" class="input-field" placeholder="公司 / Company">
+                </div>
+                <div class="input-group">
+                    <input type="text" class="input-field" placeholder="工作邮箱 / Work Email">
+                </div>
+                <div class="input-group">
+                    <select class="input-field">
+                        <option>感兴趣的场景...</option>
+                        <option>文档自动化</option>
+                        <option>合规风控</option>
+                        <option>企业知识库</option>
+                    </select>
+                </div>
+                <button type="button" class="btn-primary" style="width: 100%; margin-top: 20px;">提交咨询</button>
+            </form>
+            <div style="margin-top: 80px; color: #444; font-size: 12px;">
+                &copy; 2026 Cyano Intelligence. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 极简的滚动显现脚本
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
