@@ -35,8 +35,40 @@ const Footer = () => {
     };
 
     return (
-        <footer id="contact" style={{ paddingTop: "160px", paddingBottom: "100px", borderTop: "1px solid rgba(255, 255, 255, 0.06)", backgroundColor: "black" }}>
-            <div className="reveal" style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 32px", textAlign: "center" }}>
+        <footer id="contact" style={{ paddingTop: "160px", paddingBottom: "100px", borderTop: "1px solid rgba(255, 255, 255, 0.06)", backgroundColor: "#050505", position: "relative", overflow: "hidden" }}>
+            {/* Bottom-up light glow effect using CSS gradients */}
+            <div style={{
+                position: "absolute",
+                bottom: 0,
+                left: "50%",
+                transform: "translateX(-50%)",
+                width: "200%",
+                height: "600px",
+                background: "radial-gradient(ellipse 50% 80% at 50% 100%, rgba(0, 242, 255, 0.12) 0%, rgba(0, 242, 255, 0.04) 40%, transparent 70%)",
+                pointerEvents: "none",
+            }} />
+            {/* Secondary glow - left */}
+            <div style={{
+                position: "absolute",
+                bottom: "-200px",
+                left: "-10%",
+                width: "600px",
+                height: "600px",
+                background: "radial-gradient(circle at center, rgba(0, 242, 255, 0.08) 0%, transparent 60%)",
+                pointerEvents: "none",
+            }} />
+            {/* Secondary glow - right */}
+            <div style={{
+                position: "absolute",
+                bottom: "-200px",
+                right: "-10%",
+                width: "600px",
+                height: "600px",
+                background: "radial-gradient(circle at center, rgba(0, 242, 255, 0.08) 0%, transparent 60%)",
+                pointerEvents: "none",
+            }} />
+
+            <div className="reveal" style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 32px", textAlign: "center", position: "relative", zIndex: 10 }}>
                 <h2 style={{ marginBottom: "60px", fontFamily: "var(--font-heading)", fontWeight: 600, letterSpacing: "-0.02em", fontSize: "3rem", color: "white" }}>
                     Ready to upgrade?
                 </h2>

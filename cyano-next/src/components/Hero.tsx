@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Spotlight } from "@/components/ui/spotlight-new";
 
 const Hero = () => {
     const labelStyle: React.CSSProperties = {
@@ -62,21 +63,18 @@ const Hero = () => {
     };
 
     return (
-        <section style={{ height: "100vh", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", position: "relative", overflow: "hidden" }}>
-            {/* Background Glow */}
-            <div style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                width: "800px",
-                height: "800px",
-                background: "radial-gradient(circle, rgba(0,242,255,0.06) 0%, rgba(0,0,0,0) 60%)",
-                transform: "translate(-50%, -50%)",
-                zIndex: -1,
-                pointerEvents: "none",
-            }} />
+        <section style={{ height: "100vh", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", position: "relative", overflow: "hidden", background: "transparent" }}>
+            {/* Spotlight Background Effect */}
+            <Spotlight
+                width={680}
+                height={1600}
+                smallWidth={300}
+                gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(180, 100%, 50%, .11) 0, hsla(180, 100%, 50%, .035) 50%, hsla(180, 100%, 45%, 0) 80%)"
+                gradientSecond="radial-gradient(50% 50% at 50% 50%, hsla(180, 100%, 50%, .08) 0, hsla(180, 100%, 50%, .03) 80%, transparent 100%)"
+                gradientThird="radial-gradient(50% 50% at 50% 50%, hsla(180, 100%, 50%, .06) 0, hsla(180, 100%, 45%, .025) 80%, transparent 100%)"
+            />
 
-            <div className="reveal" style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 32px" }}>
+            <div className="reveal" style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 10 }}>
                 <div style={labelStyle}>
                     ENTERPRISE AI INFRASTRUCTURE
                 </div>

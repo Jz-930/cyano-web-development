@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { GlobalStarsBackground } from "@/components/GlobalStarsBackground";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,6 +18,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Cyano | Enterprise AI Infrastructure",
   description: "将企业知识转化为可交付的 AI 生产力",
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -29,7 +35,10 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} bg-background text-text-main font-sans antialiased`}
       >
-        {children}
+        <GlobalStarsBackground />
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );
