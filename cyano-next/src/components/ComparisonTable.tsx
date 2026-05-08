@@ -133,7 +133,7 @@ const ComparisonTable = () => {
                         letterSpacing: "-0.02em",
                         color: "white",
                     }}>
-                        从"个人技巧"进化为"系统能力"
+                        从个人技巧进化为系统能力
                     </h2>
 
                     <div className="reveal" style={{ width: "100%", borderTop: "1px solid rgba(255, 255, 255, 0.06)", overflowX: "auto" }}>

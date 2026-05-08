@@ -1,0 +1,11 @@
+<svg width="960" height="620" viewBox="0 0 960 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="620" rx="34" fill="#050809"/>
+  <rect x="108" y="96" width="744" height="428" rx="28" fill="#081315" stroke="#7EF5D6" stroke-opacity=".18"/>
+  <rect x="156" y="150" width="430" height="58" rx="16" fill="#071416" stroke="#7EF5D6" stroke-opacity=".2"/>
+  <rect x="156" y="238" width="540" height="58" rx="16" fill="#180E10" stroke="#FF6B6B" stroke-opacity=".55"/>
+  <rect x="156" y="326" width="390" height="58" rx="16" fill="#071416" stroke="#7EF5D6" stroke-opacity=".16"/>
+  <path d="M744 196L796 286H692L744 196Z" fill="#FF6B6B" fill-opacity=".18" stroke="#FF6B6B" stroke-width="3"/>
+  <path d="M744 232V268" stroke="#FF6B6B" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="744" cy="286" r="5" fill="#FF6B6B"/>
+  <text x="196" y="474" fill="#D6FFFA" fill-opacity=".7" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">RISK REVIEW CHAIN</text>
+</svg>

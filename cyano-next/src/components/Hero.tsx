@@ -1,97 +1,82 @@
 "use client";
 
 import Link from "next/link";
-import { Spotlight } from "@/components/ui/spotlight-new";
+import Script from "next/script";
+import React from "react";
+
+const splineViewerScript = "https://unpkg.com/@splinetool/viewer@1.12.92/build/spline-viewer.js";
+const splineSceneUrl = "/spline/cyano-robot.scene.splinecode";
 
 const Hero = () => {
-    const labelStyle: React.CSSProperties = {
-        display: "inline-block",
-        border: "1px solid rgba(255, 255, 255, 0.1)",
-        backgroundColor: "rgba(255, 255, 255, 0.03)",
-        padding: "6px 16px",
-        borderRadius: "50px",
-        fontSize: "12px",
-        fontFamily: "var(--font-heading)",
-        color: "#00F2FF",
-        marginBottom: "30px",
-        letterSpacing: "1px",
-    };
+    const splineViewerRef = React.useRef<HTMLElement | null>(null);
+    const [sceneReady, setSceneReady] = React.useState(false);
 
-    const h1Style: React.CSSProperties = {
-        fontSize: "clamp(3rem, 8vw, 5rem)",
-        lineHeight: 1.05,
-        marginBottom: "32px",
-        fontFamily: "var(--font-heading)",
-        fontWeight: 600,
-        letterSpacing: "-0.02em",
-        background: "linear-gradient(180deg, #FFFFFF 0%, #888888 100%)",
-        WebkitBackgroundClip: "text",
-        WebkitTextFillColor: "transparent",
-        backgroundClip: "text",
-    };
+    React.useEffect(() => {
+        const viewer = splineViewerRef.current;
+        if (!viewer) return;
 
-    const pStyle: React.CSSProperties = {
-        fontSize: "1.25rem",
-        color: "#888899",
-        fontWeight: 300,
-        maxWidth: "760px",
-        margin: "0 auto 48px",
-        lineHeight: 1.7,
-    };
+        const handleLoadComplete = () => setSceneReady(true);
 
-    const btnPrimaryStyle: React.CSSProperties = {
-        display: "inline-block",
-        backgroundColor: "#00F2FF",
-        color: "black",
-        padding: "16px 40px",
-        fontWeight: 700,
-        fontSize: "14px",
-        textTransform: "uppercase",
-        letterSpacing: "0.05em",
-        border: "none",
-        transition: "all 0.3s ease",
-        textDecoration: "none",
-    };
-
-    const linkSecondaryStyle: React.CSSProperties = {
-        marginLeft: "24px",
-        fontSize: "14px",
-        color: "#888899",
-        textDecoration: "none",
-        borderBottom: "1px solid transparent",
-        transition: "all 0.3s ease",
-    };
+        viewer.addEventListener("load-complete", handleLoadComplete);
+        return () => viewer.removeEventListener("load-complete", handleLoadComplete);
+    }, []);
 
     return (
-        <section style={{ height: "100vh", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", position: "relative", overflow: "hidden", background: "transparent" }}>
-            {/* Spotlight Background Effect */}
-            <Spotlight
-                width={680}
-                height={1600}
-                smallWidth={300}
-                gradientFirst="radial-gradient(68.54% 68.72% at 55.02% 31.46%, hsla(180, 100%, 50%, .11) 0, hsla(180, 100%, 50%, .035) 50%, hsla(180, 100%, 45%, 0) 80%)"
-                gradientSecond="radial-gradient(50% 50% at 50% 50%, hsla(180, 100%, 50%, .08) 0, hsla(180, 100%, 50%, .03) 80%, transparent 100%)"
-                gradientThird="radial-gradient(50% 50% at 50% 50%, hsla(180, 100%, 50%, .06) 0, hsla(180, 100%, 45%, .025) 80%, transparent 100%)"
-            />
+        <section
+            className="hero-section relative flex min-h-screen items-center overflow-hidden border-b border-white/5 bg-transparent pt-24"
+        >
+            <Script id="spline-viewer-loader" type="module" src={splineViewerScript} strategy="afterInteractive" />
 
-            <div className="reveal" style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 32px", position: "relative", zIndex: 10 }}>
-                <div style={labelStyle}>
-                    ENTERPRISE AI INFRASTRUCTURE
+            <div className="hero-inner relative z-10">
+                <div className="reveal hero-copy min-w-0 text-left">
+                    <h1 className="hero-title mb-8 max-w-4xl">
+                        将企业知识
+                        <span className="block bg-gradient-to-r from-white via-brand-mint to-accent-cyan bg-clip-text text-transparent">
+                            转化为可交付的
+                        </span>
+                        <span className="block bg-gradient-to-r from-brand-mint via-accent-cyan to-accent-amber bg-clip-text text-transparent">
+                            AI 生产力
+                        </span>
+                    </h1>
+                    <p className="mb-10 max-w-2xl text-[1.12rem] leading-9 text-text-muted">
+                        Cyano 帮企业从业务机会梳理开始，设计定制 AI 工具、AI 工作流和托管式 AI
+                        服务，让 AI 不只停留在聊天窗口，而是进入可上线、可维护、可持续合作的生产系统。
+                    </p>
+                    <div className="mb-9 grid max-w-2xl gap-3 sm:grid-cols-3">
+                        {[
+                            ["定制 AI 工具", "accent-dot"],
+                            ["低启动试点", "accent-dot accent-dot--amber"],
+                            ["托管式服务", "accent-dot accent-dot--blue"],
+                        ].map(([label, dot]) => (
+                            <div key={label} className="console-chip">
+                                <span className={`${dot} mr-2`} />
+                                {label}
+                            </div>
+                        ))}
+                    </div>
+                    <div className="flex flex-wrap items-center gap-4">
+                        <Link href="#engagement" className="cyano-button">
+                            查看合作方式
+                        </Link>
+                        <Link href="#cases" className="cyano-ghost-button">
+                            查看落地案例
+                        </Link>
+                    </div>
                 </div>
-                <h1 style={h1Style}>
-                    将企业知识<br />转化为可交付的 AI 生产力
-                </h1>
-                <p style={pStyle}>
-                    不微调模型，不改变业务流。Cyano 为企业构建"知识+流程+治理"的智能中台，让 AI 从"聊天玩具"进化为稳定、可控的数字员工。
-                </p>
-                <div>
-                    <Link href="#contact" style={btnPrimaryStyle}>
-                        探索解决方案
-                    </Link>
-                    <Link href="#cases" style={linkSecondaryStyle}>
-                        查看案例 ↓
-                    </Link>
-                </div>
+            </div>
+
+            <div className="hero-scene" aria-hidden="true">
+                <div className="hero-scene-glow hero-scene-glow--mint" />
+                <div className="hero-scene-glow hero-scene-glow--amber" />
+                {React.createElement("spline-viewer", {
+                    ref: splineViewerRef,
+                    className: `hero-spline-viewer ${sceneReady ? "hero-spline-viewer--ready" : ""}`,
+                    url: splineSceneUrl,
+                    background: "transparent",
+                    "events-target": "global",
+                    loading: "eager",
+                    title: "Cyano live 3D robot",
+                })}
             </div>
         </section>
     );

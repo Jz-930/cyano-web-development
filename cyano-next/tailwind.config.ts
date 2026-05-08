@@ -9,14 +9,20 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                background: "#050505",
-                "bg-color": "#050505",     // Alias for bg-bg-color
-                "bg-card": "#0A0A0C",      // Alias for bg-bg-card
-                "bg-card-hover": "#121214", // Alias for hover states
+                background: "#030607",
+                "bg-color": "#030607",     // Alias for bg-bg-color
+                "bg-card": "#071012",      // Alias for bg-bg-card
+                "bg-card-hover": "#0D191B", // Alias for hover states
                 card: "#0A0A0C",
                 "text-main": "#FFFFFF",
-                "text-muted": "#888899",
+                "text-muted": "#91A3A6",
+                "brand-teal": "#3FA0A6",
+                "brand-mint": "#7EF5D6",
+                "deep-teal": "#062F3A",
                 "accent-cyan": "#00F2FF",
+                "accent-amber": "#FFCF5C",
+                "accent-coral": "#FF6B6B",
+                "accent-blue": "#5D8DFF",
                 "accent-dim": "rgba(0, 242, 255, 0.1)",
                 "accent-glow": "rgba(0, 242, 255, 0.4)",
                 "border-light": "rgba(255, 255, 255, 0.06)",

@@ -60,12 +60,6 @@ const ChallengeSection = () => {
         marginBottom: "80px",
     };
 
-    const gridStyle: React.CSSProperties = {
-        display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
-        gap: "32px",
-    };
-
     const cardStyle: React.CSSProperties = {
         padding: "32px",
         backgroundColor: "#0A0A0C",

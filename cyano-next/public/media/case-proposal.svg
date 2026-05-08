@@ -1,0 +1,10 @@
+<svg width="960" height="620" viewBox="0 0 960 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="620" rx="34" fill="#030708"/>
+  <rect x="132" y="78" width="520" height="466" rx="28" fill="#081315" stroke="#7EF5D6" stroke-opacity=".22"/>
+  <rect x="686" y="146" width="144" height="330" rx="24" fill="#101711" stroke="#FFCF5C" stroke-opacity=".34"/>
+  <path d="M188 154H536M188 216H596M188 278H508M188 340H570M188 402H460" stroke="#D6FFFA" stroke-opacity=".18" stroke-width="18" stroke-linecap="round"/>
+  <path d="M188 154H418M188 216H498M188 278H376" stroke="#7EF5D6" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="758" cy="238" r="38" fill="#FFCF5C" fill-opacity=".2"/>
+  <path d="M720 358H796M720 396H776" stroke="#FFCF5C" stroke-width="10" stroke-linecap="round"/>
+  <text x="190" y="502" fill="#D6FFFA" fill-opacity=".7" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">PROPOSAL BUILDER</text>
+</svg>

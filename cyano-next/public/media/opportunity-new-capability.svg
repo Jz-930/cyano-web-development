@@ -1,0 +1,25 @@
+<svg width="960" height="620" viewBox="0 0 960 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="620">
+      <stop stop-color="#101412"/>
+      <stop offset=".55" stop-color="#081113"/>
+      <stop offset="1" stop-color="#020506"/>
+    </linearGradient>
+    <radialGradient id="coral" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(276 148) rotate(41) scale(420 280)">
+      <stop stop-color="#FF6B6B" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#FF6B6B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="620" rx="34" fill="url(#bg)"/>
+  <rect width="960" height="620" rx="34" fill="url(#coral)"/>
+  <circle cx="284" cy="306" r="122" fill="#0B1A1D" stroke="#7EF5D6" stroke-opacity=".28"/>
+  <circle cx="284" cy="306" r="68" fill="#071113" stroke="#FFCF5C" stroke-opacity=".45"/>
+  <circle cx="284" cy="306" r="18" fill="#FFCF5C"/>
+  <path d="M420 170H780M420 248H706M420 326H812M420 404H732" stroke="#7EF5D6" stroke-opacity=".14" stroke-width="22" stroke-linecap="round"/>
+  <path d="M420 170H665M420 248H596M420 326H724M420 404H620" stroke="#7EF5D6" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="178" cy="214" r="12" fill="#5D8DFF"/>
+  <circle cx="404" cy="152" r="10" fill="#FF6B6B"/>
+  <circle cx="548" cy="486" r="11" fill="#7EF5D6"/>
+  <path d="M284 184L404 152M178 214L284 306M284 428L548 486" stroke="#D6FFFA" stroke-opacity=".22" stroke-width="2"/>
+  <text x="104" y="532" fill="#D6FFFA" fill-opacity=".72" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">NEW CAPABILITY MAP</text>
+</svg>

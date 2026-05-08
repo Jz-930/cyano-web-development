@@ -1,0 +1,14 @@
+<svg width="960" height="620" viewBox="0 0 960 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="620" rx="34" fill="#050809"/>
+  <rect x="86" y="82" width="788" height="456" rx="30" fill="#081315" stroke="#7EF5D6" stroke-opacity=".2"/>
+  <rect x="126" y="130" width="260" height="342" rx="24" fill="#111616" stroke="#FFCF5C" stroke-opacity=".34"/>
+  <rect x="430" y="130" width="402" height="80" rx="20" fill="#071416" stroke="#7EF5D6" stroke-opacity=".22"/>
+  <rect x="430" y="240" width="402" height="80" rx="20" fill="#071416" stroke="#5D8DFF" stroke-opacity=".22"/>
+  <rect x="430" y="350" width="300" height="80" rx="20" fill="#071416" stroke="#FF6B6B" stroke-opacity=".22"/>
+  <circle cx="256" cy="238" r="70" fill="#FFCF5C" fill-opacity=".14" stroke="#FFCF5C" stroke-opacity=".45"/>
+  <path d="M196 380H316" stroke="#7EF5D6" stroke-width="12" stroke-linecap="round"/>
+  <path d="M176 416H336" stroke="#7EF5D6" stroke-opacity=".32" stroke-width="12" stroke-linecap="round"/>
+  <text x="452" y="181" fill="#D6FFFA" fill-opacity=".8" font-family="Arial, sans-serif" font-size="24" font-weight="700">Lead Signal</text>
+  <text x="452" y="291" fill="#D6FFFA" fill-opacity=".8" font-family="Arial, sans-serif" font-size="24" font-weight="700">Customer Angle</text>
+  <text x="452" y="401" fill="#D6FFFA" fill-opacity=".8" font-family="Arial, sans-serif" font-size="24" font-weight="700">Sales Draft</text>
+</svg>

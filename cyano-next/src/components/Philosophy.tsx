@@ -10,29 +10,29 @@ const Philosophy = () => {
             id: "01",
             title: "知识孤岛",
             desc: "核心数据散落在文档、数据库与历史记录中，通用 AI 拿不到也用不好，回答空洞无据。",
-            iconColor1: "#60A5FA",
-            iconColor2: "#93C5FD",
+            iconColor1: "#3FA0A6",
+            iconColor2: "#7EF5D6",
         },
         {
             id: "02",
             title: "上下文受限",
             desc: "模型窗口有限，信息喂不全就会产生幻觉，导致输出结果漂移，无法处理复杂任务。",
-            iconColor1: "#EF4444",
-            iconColor2: "#FDA4AF",
+            iconColor1: "#00F2FF",
+            iconColor2: "#3FA0A6",
         },
         {
             id: "03",
             title: "输出不可控",
             desc: "同题不同答，缺乏校验规则，企业不敢将 AI 用于合同、财务等关键业务流程。",
-            iconColor1: "#BEF264",
-            iconColor2: "#22C55E",
+            iconColor1: "#7EF5D6",
+            iconColor2: "#00F2FF",
         },
         {
             id: "04",
             title: "无法规模化",
             desc: "依赖个别员工的 Prompt 技巧只能救急，无法沉淀为可复用的组织能力，且难以审计。",
-            iconColor1: "#A78BFA",
-            iconColor2: "#7C3AED",
+            iconColor1: "#3FA0A6",
+            iconColor2: "#062F3A",
         },
     ];
 
@@ -94,6 +94,7 @@ const Philosophy = () => {
                                     backgroundColor: "rgba(255, 255, 255, 0.03)",
                                     border: "1px solid rgba(255, 255, 255, 0.1)",
                                     borderRadius: "16px",
+                                    boxShadow: "inset 0 1px 0 rgba(255,255,255,0.04)",
                                     backdropFilter: "blur(4px)",
                                     transition: "all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)",
                                     cursor: "pointer",
@@ -173,16 +174,16 @@ const Philosophy = () => {
                     }
                 }
                 .philosophy-card:hover {
-                    background-color: rgba(255, 255, 255, 0.95) !important;
-                    border-color: rgba(255, 255, 255, 0.3) !important;
+                    background-color: rgba(63, 160, 166, 0.08) !important;
+                    border-color: rgba(126, 245, 214, 0.45) !important;
                     transform: translateY(-8px);
-                    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+                    box-shadow: 0 20px 60px rgba(0, 242, 255, 0.12);
                 }
                 .philosophy-card:hover .card-title {
-                    color: #050505 !important;
+                    color: #7EF5D6 !important;
                 }
                 .philosophy-card:hover .card-desc {
-                    color: #333 !important;
+                    color: rgba(255,255,255,0.78) !important;
                 }
                 .philosophy-card:hover .card-icon {
                     filter: brightness(0.8) saturate(1.2);

@@ -16,8 +16,8 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Cyano | Enterprise AI Infrastructure",
-  description: "将企业知识转化为可交付的 AI 生产力",
+  title: "Cyano | 定制 AI 产品与企业 AI 工作流",
+  description: "Cyano 帮企业定制 AI 工具、AI 工作流和托管式 AI 服务，将企业知识转化为可交付的 AI 生产力。",
   icons: {
     icon: "/favicon.png",
     shortcut: "/favicon.png",

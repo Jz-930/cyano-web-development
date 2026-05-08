@@ -1,0 +1,11 @@
+<svg width="960" height="620" viewBox="0 0 960 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="620" rx="34" fill="#030708"/>
+  <rect x="96" y="100" width="768" height="408" rx="30" fill="#081315" stroke="#7EF5D6" stroke-opacity=".2"/>
+  <path d="M160 188H800M160 278H800M160 368H800" stroke="#D6FFFA" stroke-opacity=".09"/>
+  <path d="M288 130V478M480 130V478M672 130V478" stroke="#D6FFFA" stroke-opacity=".08"/>
+  <rect x="176" y="158" width="96" height="290" rx="16" fill="#7EF5D6" fill-opacity=".24"/>
+  <rect x="368" y="244" width="96" height="204" rx="16" fill="#FFCF5C" fill-opacity=".28"/>
+  <rect x="560" y="198" width="96" height="250" rx="16" fill="#5D8DFF" fill-opacity=".25"/>
+  <rect x="722" y="304" width="76" height="144" rx="16" fill="#FF6B6B" fill-opacity=".22"/>
+  <text x="206" y="558" fill="#D6FFFA" fill-opacity=".7" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">NATURAL LANGUAGE DATA</text>
+</svg>

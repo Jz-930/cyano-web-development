@@ -1,6 +1,80 @@
 "use client";
 
+import MediaFrame from "@/components/MediaFrame";
 import { useReveal } from "@/hooks/useReveal";
+
+type CaseStudy = {
+    tag: string;
+    title: string;
+    pain: string;
+    solution: string;
+    image: string;
+    tone: "mint" | "amber" | "coral" | "blue";
+    reverse?: boolean;
+    stats: Array<[value: string, label: string, highlight: boolean]>;
+};
+
+const caseStudies: CaseStudy[] = [
+    {
+        tag: "精准获客",
+        title: "个性化销售素材生成",
+        pain: "过去无法为每一个潜在客户单独分析需求、定位切入点并撰写宣传内容。",
+        solution: "结合客户画像、行业信号和销售目标，批量生成一客一稿的触达素材。",
+        image: "/media/case-sales.svg",
+        tone: "amber" as const,
+        stats: [
+            ["1:1", "个性化触达", true],
+            ["Scale", "批量生成", false],
+        ],
+    },
+    {
+        tag: "文档自动化",
+        title: "智能标书与方案生成",
+        pain: "历史标书分散，撰写技术方案耗时，且易遗漏参数。",
+        solution: "构建专用知识库，RAG 引擎自动提取相似条款，Agent 自动填充参数。",
+        image: "/media/case-proposal.svg",
+        tone: "mint" as const,
+        stats: [
+            ["15min", "生成初稿", false],
+            ["99%", "引用准确率", true],
+        ],
+    },
+    {
+        tag: "合规风控",
+        title: "合同风险智能审查",
+        pain: "人工审核大量合同耗时费力，标准不一，易漏看风险条款。",
+        solution: "将《合规手册》转化为校验链，自动标记风险并给出修改建议。",
+        image: "/media/case-risk.svg",
+        tone: "coral" as const,
+        reverse: true,
+        stats: [
+            ["100%", "风险覆盖", true],
+            ["5x", "效率提升", false],
+        ],
+    },
+    {
+        tag: "企业 Wiki",
+        title: "内部智能 IT 助手",
+        pain: "内部工单积压，员工重复回答相同问题，知识库更新滞后。",
+        solution: "接入内网 Wiki，7x24 小时自动处理常见咨询，无法回答时转接人工。",
+        image: "/media/case-assistant.svg",
+        tone: "blue" as const,
+        stats: [
+            ["80%", "拦截工单", true],
+            ["<3s", "响应时间", false],
+        ],
+    },
+    {
+        tag: "数据查询",
+        title: "自然语言业务数据查询",
+        pain: "业务人员不懂 SQL，查询复杂库存或销量数据需依赖 IT 部门导数。",
+        solution: "Text-to-SQL 智能体，允许业务人员用自然语言直接与数据库交互。",
+        image: "/media/case-data.svg",
+        tone: "blue" as const,
+        reverse: true,
+        stats: [],
+    },
+];
 
 const Cases = () => {
     useReveal();
@@ -8,166 +82,67 @@ const Cases = () => {
     return (
         <section id="cases" className="section-padding overflow-hidden">
             <div className="container">
-                {/* Section Header */}
-                <div className="text-center mb-[120px] reveal">
-                    <h2 className="mb-6">
-                        落地场景
-                    </h2>
-                    <p className="text-[1.2rem] max-w-2xl mx-auto">
-                        已在金融、法务、IT 运维等领域验证的实际效能
+                <div className="reveal mb-20 text-center">
+                    <div className="lab-kicker mb-4">USE CASES</div>
+                    <h2 className="section-title mb-6">落地场景</h2>
+                    <p className="section-copy mx-auto max-w-2xl">
+                        从精准获客到企业知识库，展示 AI 如何进入真实业务流程。这里的图片先作为媒体占位，后续可以替换成实际产品截图、客户场景图或流程图。
                     </p>
                 </div>
 
-                {/* Case 1: 智能标书与方案生成 */}
-                <div className="case-item reveal grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-[200px]">
-                    <div className="ui-visual">
-                        <div className="ui-window bg-bg-card border-border-light shadow-2xl">
-                            <div className="ui-topbar bg-bg-card-hover border-b border-border-light">
-                                <div className="dot opacity-50"></div>
+                <div className="grid gap-28">
+                    {caseStudies.map((item) => {
+                        const visual = (
+                            <div className="ui-visual" key={`${item.title}-visual`}>
+                                <MediaFrame
+                                    src={item.image}
+                                    alt={`${item.title}视觉占位图`}
+                                    label={`${item.tag} 场景图占位`}
+                                    tone={item.tone}
+                                />
                             </div>
-                            <div className="ui-content">
-                                <div className="sk-sidebar border-r border-border-light">
-                                    <div className="sk-icon opacity-30"></div>
-                                    <div className="sk-icon opacity-30"></div>
-                                </div>
-                                <div className="sk-main">
-                                    <div className="highlight-bar mb-4">
-                                        <span>&gt; Generating Proposal...</span>
-                                        <span>99% Match</span>
+                        );
+
+                        const info = (
+                            <div className="case-info" key={`${item.title}-info`}>
+                                <span className="case-tag">{item.tag}</span>
+                                <h3 className="mb-6 font-heading text-[2.15rem] leading-tight text-white md:text-[2.5rem]">
+                                    {item.title}
+                                </h3>
+                                <p className="mb-10 font-light leading-8 text-text-muted">
+                                    痛点：{item.pain}
+                                    <br />
+                                    方案：{item.solution}
+                                </p>
+                                {item.stats.length > 0 && (
+                                    <div className="stats-grid border-t border-border-light pt-8">
+                                        {item.stats.map(([value, label, highlight]) => (
+                                            <div className="stat" key={label}>
+                                                <h4 className={`text-4xl ${highlight ? "text-accent-cyan" : "text-white"}`}>{value}</h4>
+                                                <span>{label}</span>
+                                            </div>
+                                        ))}
                                     </div>
-                                    <div className="sk-box mb-4 opacity-50"></div>
-                                    <div className="sk-line mb-3 opacity-30"></div>
-                                    <div className="sk-line mb-3 opacity-30"></div>
-                                    <div className="sk-line short opacity-30"></div>
-                                </div>
+                                )}
                             </div>
-                        </div>
-                    </div>
-                    <div className="case-info">
-                        <span className="case-tag">文档自动化</span>
-                        <h3 className="text-[2.5rem] mb-6 font-heading font-semibold text-white">
-                            智能标书与方案生成
-                        </h3>
-                        <p className="mb-10 font-light text-text-muted leading-relaxed">
-                            痛点：历史标书分散，撰写技术方案耗时，且易遗漏参数。<br />
-                            方案：构建专用知识库，RAG 引擎自动提取相似条款，Agent 自动填充参数。
-                        </p>
-                        <div className="stats-grid border-t border-border-light pt-8">
-                            <div className="stat">
-                                <h4 className="text-4xl">15min</h4>
-                                <span>生成初稿</span>
-                            </div>
-                            <div className="stat">
-                                <h4 className="text-4xl text-accent-cyan">99%</h4>
-                                <span>引用准确率</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        );
 
-                {/* Case 2: 合同风险智能审查 */}
-                <div className="case-item reveal grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-[200px]">
-                    <div className="case-info order-2 lg:order-1">
-                        <span className="case-tag">合规风控</span>
-                        <h3 className="text-[2.5rem] mb-6 font-heading font-semibold text-white">
-                            合同风险智能审查
-                        </h3>
-                        <p className="mb-10 font-light text-text-muted leading-relaxed">
-                            痛点：人工审核大量合同耗时费力，标准不一，易漏看风险条款。<br />
-                            方案：将《合规手册》转化为校验链，自动标记风险并给出修改建议。
-                        </p>
-                        <div className="stats-grid border-t border-border-light pt-8">
-                            <div className="stat">
-                                <h4 className="text-4xl text-accent-cyan">100%</h4>
-                                <span>风险覆盖</span>
-                            </div>
-                            <div className="stat">
-                                <h4 className="text-4xl">5x</h4>
-                                <span>效率提升</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="ui-visual order-1 lg:order-2">
-                        <div className="ui-window bg-bg-card border-border-light shadow-2xl">
-                            <div className="ui-topbar bg-bg-card-hover border-b border-border-light">
-                                <div className="dot opacity-50"></div>
-                            </div>
-                            <div className="ui-content">
-                                <div className="sk-sidebar border-r border-border-light">
-                                    <div className="sk-icon opacity-30"></div>
-                                </div>
-                                <div className="sk-main">
-                                    <div className="sk-line mb-4 opacity-30"></div>
-                                    <div className="sk-line short mb-4" style={{ background: "rgba(255, 77, 79, 0.2)" }}></div>
-                                    <div className="sk-line mb-4 opacity-30"></div>
-                                    <div className="sk-line mb-4 opacity-30"></div>
-                                    <div className="risk-alert mt-auto">
-                                        <i className="fas fa-exclamation-triangle"></i>
-                                        Risk Detected: Liability Clause missing...
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Case 3: 内部智能 IT 助手 */}
-                <div className="case-item reveal grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center mb-[200px]">
-                    <div className="ui-visual">
-                        <div className="ui-window bg-bg-card border-border-light shadow-2xl">
-                            <div className="ui-topbar bg-bg-card-hover border-b border-border-light">
-                                <div className="dot opacity-50"></div>
-                            </div>
-                            <div className="ui-content flex flex-col justify-end gap-6 bg-[url('/grid.svg')] bg-cover opacity-80">
-                                <div className="chat-bubble user self-end bg-white/10 text-white border border-white/5 shadow-lg backdrop-blur-sm">
-                                    如何配置内网 VPN？
-                                </div>
-                                <div className="chat-bubble ai self-start">
-                                    根据《IT 运维手册 v3.0》P.42，请按照以下步骤操作：<br />
-                                    1. 下载 Cert.p12 证书...
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="case-info">
-                        <span className="case-tag">企业 Wiki</span>
-                        <h3 className="text-[2.5rem] mb-6 font-heading font-semibold text-white">
-                            内部智能 IT 助手
-                        </h3>
-                        <p className="mb-10 font-light text-text-muted leading-relaxed">
-                            痛点：内部工单积压，员工重复回答相同问题，知识库更新滞后。<br />
-                            方案：接入内网 Wiki，7x24 小时自动处理常见咨询，无法回答时转接人工。
-                        </p>
-                        <div className="stats-grid border-t border-border-light pt-8">
-                            <div className="stat">
-                                <h4 className="text-4xl text-accent-cyan">80%</h4>
-                                <span>拦截工单</span>
-                            </div>
-                            <div className="stat">
-                                <h4 className="text-4xl">&lt;3s</h4>
-                                <span>响应时间</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Case 4: 自然语言业务数据查询 (Coming Soon) */}
-                <div className="case-item reveal grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                    <div className="case-info order-2 lg:order-1">
-                        <span className="case-tag">数据查询</span>
-                        <h3 className="text-[2.5rem] mb-6 font-heading font-semibold text-white">
-                            自然语言业务数据查询
-                        </h3>
-                        <p className="mb-8 font-light text-text-muted leading-relaxed">
-                            痛点：业务人员不懂 SQL，查询复杂库存/销量数据需依赖 IT 部门导数。<br />
-                            方案：Text-to-SQL 智能体，允许业务人员用自然语言直接与数据库交互。
-                        </p>
-                    </div>
-                    <div className="ui-visual order-1 lg:order-2">
-                        <div className="ui-window flex items-center justify-center border-dashed border-2 border-white/10 bg-transparent opacity-60 hover:opacity-100 transition-opacity">
-                            <span className="font-heading tracking-widest text-text-muted text-lg">DATA AGENT COMING SOON</span>
-                        </div>
-                    </div>
+                        return (
+                            <article key={item.title} className="case-item reveal">
+                                {item.reverse ? (
+                                    <>
+                                        {info}
+                                        {visual}
+                                    </>
+                                ) : (
+                                    <>
+                                        {visual}
+                                        {info}
+                                    </>
+                                )}
+                            </article>
+                        );
+                    })}
                 </div>
             </div>
         </section>
