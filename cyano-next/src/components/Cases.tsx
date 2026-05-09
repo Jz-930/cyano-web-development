@@ -184,7 +184,40 @@ const caseStudies: CaseStudy[] = [
         title: "自然语言业务数据查询",
         pain: "业务人员不懂 SQL，查询复杂库存或销量数据需依赖 IT 部门导数。",
         solution: "Text-to-SQL 智能体，允许业务人员用自然语言直接与数据库交互。",
-        image: "/media/case-data.svg",
+        image: "/media/smartdoc-ui-suite/smartdoc-ui-suite-01-dashboard-overview.webp",
+        caption: "SmartDoc AI 自然语言业务数据查询实际界面截图",
+        gallery: [
+            {
+                src: "/media/smartdoc-ui-suite/smartdoc-ui-suite-01-dashboard-overview.webp",
+                alt: "SmartDoc AI 仪表盘展示文档自动化、SQL 查询管控和最近查询活动",
+                label: "业务仪表盘",
+            },
+            {
+                src: "/media/smartdoc-ui-suite/smartdoc-ui-suite-02-sql-control-center.webp",
+                alt: "SmartDoc AI SQL 管控中心展示连接、Schema、查询校验和只读执行流程",
+                label: "SQL 管控中心",
+            },
+            {
+                src: "/media/smartdoc-ui-suite/smartdoc-ui-suite-03-knowledge-base.webp",
+                alt: "SmartDoc AI 知识库页面展示已索引文档、分类和同步状态",
+                label: "知识库管理",
+            },
+            {
+                src: "/media/smartdoc-ui-suite/smartdoc-ui-suite-04-proposal-builder.webp",
+                alt: "SmartDoc AI 方案生成器展示需求、引用来源和生成中的业务文档",
+                label: "方案生成流程",
+            },
+            {
+                src: "/media/smartdoc-ui-suite/smartdoc-ui-suite-05-review-audit.webp",
+                alt: "SmartDoc AI 审核与审计页面展示引用校验、SQL 日志和合规检查",
+                label: "审核与审计",
+            },
+            {
+                src: "/media/smartdoc-ui-suite/smartdoc-ui-suite-06-template-library.webp",
+                alt: "SmartDoc AI 模板库页面展示业务模板、分类和使用频次",
+                label: "模板库",
+            },
+        ],
         tone: "blue" as const,
         reverse: true,
         stats: [],
@@ -194,7 +227,50 @@ const caseStudies: CaseStudy[] = [
         title: "创意写作记忆控制系统",
         pain: "传统大模型对话很难精确控制记忆，长篇小说或剧本创作中容易混淆人物设定、剧情分支、背景信息和当前上下文。",
         solution: "构建可控记忆层，帮助作者管理剧情分支、隔离当前对话记忆、压缩背景信息，并让不同内容片段按需热插拔进入模型上下文；同时兼容常见大模型，也可部署专门训练用于写作的私有模型。",
-        image: "/media/process-map.svg",
+        image: "/media/dme-writing-engine/dme-writing-engine-01-chat-branch-switch.webp",
+        caption: "DME 写作引擎记忆控制系统实际界面截图",
+        gallery: [
+            {
+                src: "/media/dme-writing-engine/dme-writing-engine-01-chat-branch-switch.webp",
+                alt: "DME 写作引擎在聊天界面中切换剧情分支并控制当前写作上下文",
+                label: "剧情分支切换",
+            },
+            {
+                src: "/media/dme-writing-engine/dme-writing-engine-02-chat-memory-drawer.webp",
+                alt: "DME 写作引擎在对话侧边栏中管理角色、背景和当前记忆",
+                label: "对话记忆抽屉",
+            },
+            {
+                src: "/media/dme-writing-engine/dme-writing-engine-03-context-memory-stats.webp",
+                alt: "DME 写作引擎展示上下文容量、记忆层级和写作素材使用统计",
+                label: "上下文统计",
+            },
+            {
+                src: "/media/dme-writing-engine/dme-writing-engine-04-note-editor-ai-panel.webp",
+                alt: "DME 写作引擎在笔记编辑器中联动 AI 面板生成和整理创作内容",
+                label: "笔记与 AI 面板",
+            },
+            {
+                src: "/media/dme-writing-engine/dme-writing-engine-05-fragments-library-bulk.webp",
+                alt: "DME 写作引擎批量管理设定片段、剧情材料和可插拔上下文素材",
+                label: "片段库管理",
+            },
+            {
+                src: "/media/dme-writing-engine/dme-writing-engine-06-archive-pack-inspect.webp",
+                alt: "DME 写作引擎检查归档包中的记忆片段、引用和素材结构",
+                label: "归档包检查",
+            },
+            {
+                src: "/media/dme-writing-engine/dme-writing-engine-07-connections-settings.webp",
+                alt: "DME 写作引擎配置大模型连接、写作模型和系统参数",
+                label: "模型连接设置",
+            },
+            {
+                src: "/media/dme-writing-engine/dme-writing-engine-00-startup-loading.webp",
+                alt: "DME 写作引擎启动加载界面",
+                label: "启动界面",
+            },
+        ],
         tone: "mint" as const,
         stats: [
             ["Memory", "精准记忆控制", true],
@@ -347,26 +423,30 @@ const Cases = () => {
                                         <br />
                                         方案：{item.solution}
                                     </p>
-                                    {item.stats.length > 0 && (
-                                        <div className="stats-grid border-t border-border-light pt-8">
-                                            {item.stats.map(([value, label, highlight]) => (
-                                                <div className="stat" key={label}>
-                                                    <h4 className={`text-4xl ${highlight ? "text-accent-cyan" : "text-white"}`}>{value}</h4>
-                                                    <span>{label}</span>
+                                    {(item.stats.length > 0 || item.demoHref) && (
+                                        <div className="case-meta-row">
+                                            {item.stats.length > 0 && (
+                                                <div className="stats-grid">
+                                                    {item.stats.map(([value, label, highlight]) => (
+                                                        <div className="stat" key={label}>
+                                                            <h4 className={`text-4xl ${highlight ? "text-accent-cyan" : "text-white"}`}>{value}</h4>
+                                                            <span>{label}</span>
+                                                        </div>
+                                                    ))}
                                                 </div>
-                                            ))}
-                                        </div>
-                                    )}
-                                    {item.demoHref && (
-                                        <div className="mt-8 flex justify-end">
-                                            <a
-                                                href={item.demoHref}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="cyano-button"
-                                            >
-                                                查看 DEMO
-                                            </a>
+                                            )}
+                                            {item.demoHref && (
+                                                <div className="case-demo-action">
+                                                    <a
+                                                        href={item.demoHref}
+                                                        target="_blank"
+                                                        rel="noreferrer"
+                                                        className="cyano-button"
+                                                    >
+                                                        查看 DEMO
+                                                    </a>
+                                                </div>
+                                            )}
                                         </div>
                                     )}
                                 </div>
