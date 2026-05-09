@@ -6,6 +6,7 @@ import { useReveal } from "@/hooks/useReveal";
 const opportunityGroups = [
     {
         label: "New Capability",
+        mediaLabel: "过去无法精确完成的工作，在AI的助力下精确完成",
         title: "过去做不了，现在能做",
         desc: "AI 让个性化推荐、精准获客、客户画像和面向每个客户的销售素材生成具备规模化可能。",
         points: ["个性化找客户", "精准定位客群", "一客一稿销售内容", "新增服务能力"],
@@ -16,6 +17,7 @@ const opportunityGroups = [
     },
     {
         label: "Efficiency",
+        mediaLabel: "过去工作量巨大的工作，在AI的助力下解放劳动力",
         title: "已经在做，但成本太高",
         desc: "把文档、审核、查询、客服、运营等重复流程转成 AI 工作流，减少人工、返工和等待时间。",
         points: ["文档自动化", "合同与合规审查", "内部知识问答", "数据查询与运营任务"],
@@ -37,7 +39,7 @@ const OpportunitySection = () => {
                         <div className="lab-kicker mb-4">AI OPPORTUNITY DIAGNOSIS</div>
                         <h2 className="section-title">
                             两类 AI 机会，
-                            <span className="text-brand-mint"> 先判断值不值得做</span>
+                            <span className="text-brand-mint"> 帮助企业成长</span>
                         </h2>
                     </div>
                     <p className="section-copy">
@@ -51,7 +53,8 @@ const OpportunitySection = () => {
                             <MediaFrame
                                 src={group.image}
                                 alt={`${group.title}视觉占位图`}
-                                label={`${group.label} 视觉占位`}
+                                label={group.mediaLabel}
+                                caption={null}
                                 tone={group.tone}
                             />
                             <div className="flex flex-1 flex-col px-2 pt-6 md:px-3 md:pt-7">
@@ -86,7 +89,7 @@ const OpportunitySection = () => {
                     <div className="self-center">
                         <div className="lab-label mb-3">VALUE MODEL MATCHED</div>
                         <p className="section-copy">
-                            这一步的目标不是把所有想法都做成软件，而是判断客户到底该买工具、买试点，还是买结果。机会类型判断清楚，后面的合作方式和收费逻辑才不会混乱。
+                            Cyano的目标不是把所有想法都做成软件，而是帮助客户判断到底该买工具，做开发，还是买结果。我们帮助客户判断他们现在的工作有哪些适合AI接入，帮助他们理解AI会带来的改变，以及之后的发展方向。
                         </p>
                     </div>
                 </div>

@@ -2,12 +2,9 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import HeroSignalsSection from "@/components/HeroSignalsSection";
 import Philosophy from "@/components/Philosophy";
-import OpportunitySection from "@/components/OpportunitySection";
-import EngagementModels from "@/components/EngagementModels";
-import ProcessTimeline from "@/components/ProcessTimeline";
-import Cases from "@/components/Cases";
-import TechnicalProof from "@/components/TechnicalProof";
-import TrustSection from "@/components/TrustSection";
+import HomeServicesPreview from "@/components/HomeServicesPreview";
+import HomeCasesPreview from "@/components/HomeCasesPreview";
+import HomeTechnologyPreview from "@/components/HomeTechnologyPreview";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -17,12 +14,9 @@ export default function Home() {
       <Hero />
       <HeroSignalsSection />
       <Philosophy />
-      <OpportunitySection />
-      <EngagementModels />
-      <ProcessTimeline />
-      <Cases />
-      <TechnicalProof />
-      <TrustSection />
+      <HomeServicesPreview />
+      <HomeCasesPreview />
+      <HomeTechnologyPreview />
       <Footer />
     </main>
   );

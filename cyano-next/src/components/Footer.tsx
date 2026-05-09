@@ -15,15 +15,15 @@ const Footer = () => {
 
             <div className="container reveal relative z-10 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
                 <div>
-                    <div className="lab-kicker mb-4">START WITH DIAGNOSIS</div>
+                    <div className="lab-kicker mb-4">CONTACT US</div>
                     <h2 className="mb-6 max-w-xl font-heading text-[clamp(2.2rem,5vw,4.5rem)] font-semibold leading-tight text-white">
-                        从一次业务诊断开始
+                        联系我们
                     </h2>
                     <p className="mb-10 max-w-lg text-[1.1rem] leading-8 text-text-muted">
-                        告诉我们你想定制工具、启动试点，还是把一批任务交给 Cyano 托管。我们会先帮你判断业务价值和合作方式。
+                        我们提供多类型的合作模式，不论搭建自己的工作平台、协作开发还是直接将工作交给Cyano托管。联系我们，获得更多针对性咨询。
                     </p>
                     <div className="grid max-w-lg gap-3">
-                        {["不公开固定价格，先评估真实业务价值", "支持买断、低启动持续服务、托管式交付", "SaaS 托管与私有化部署均可讨论"].map((item) => (
+                        {["定价灵活，Cyano提供基于最前沿LLM技术的个性化评估", "支持买断、低启动持续服务、托管式交付", "SaaS 托管与私有化部署均可讨论"].map((item) => (
                             <div key={item} className="flex items-center gap-3 text-sm text-white/75">
                                 <span className="h-2 w-2 rounded-full bg-brand-mint shadow-[0_0_14px_rgba(126,245,214,0.65)]" />
                                 {item}

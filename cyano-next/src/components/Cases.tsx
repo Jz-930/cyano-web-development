@@ -1,5 +1,8 @@
 "use client";
 
+import Image from "next/image";
+import { useCallback, useEffect, useState } from "react";
+import { FiChevronLeft, FiChevronRight, FiMaximize2, FiX } from "react-icons/fi";
 import MediaFrame from "@/components/MediaFrame";
 import { useReveal } from "@/hooks/useReveal";
 
@@ -9,22 +12,58 @@ type CaseStudy = {
     pain: string;
     solution: string;
     image: string;
+    caption?: string;
+    gallery?: Array<{
+        src: string;
+        alt: string;
+        label: string;
+    }>;
     tone: "mint" | "amber" | "coral" | "blue";
     reverse?: boolean;
+    demoHref?: string;
     stats: Array<[value: string, label: string, highlight: boolean]>;
+};
+
+type ActiveGallery = {
+    caseIndex: number;
+    photoIndex: number;
 };
 
 const caseStudies: CaseStudy[] = [
     {
-        tag: "精准获客",
-        title: "个性化销售素材生成",
-        pain: "过去无法为每一个潜在客户单独分析需求、定位切入点并撰写宣传内容。",
-        solution: "结合客户画像、行业信号和销售目标，批量生成一客一稿的触达素材。",
-        image: "/media/case-sales.svg",
+        tag: "销售咨询 AI",
+        title: "基于实际数据的销售咨询 AI",
+        pain: "传统客服或销售问答无法深入理解产品细节、历史案例和真实客户需求，线下销售也难以快速查询并准确介绍产品。",
+        solution: "构建深度结合产品资料、过往客户案例和真实业务数据的咨询机器人，根据客户问题收束话题方向，持续输出专业、精确的答案，并辅助线下销售查询、理解和介绍产品。",
+        image: "/media/lnpe-sales-ai/lnpe-sales-consultant-01-public-assistant.webp",
+        caption: "LNPE 智能工程顾问实际界面截图",
+        gallery: [
+            {
+                src: "/media/lnpe-sales-ai/lnpe-sales-consultant-01-public-assistant.webp",
+                alt: "LNPE 官网中的智能工程顾问根据实际项目数据回答客户问题",
+                label: "前台咨询入口",
+            },
+            {
+                src: "/media/lnpe-sales-ai/lnpe-sales-consultant-02-access-portal.webp",
+                alt: "LNPE 内部工程助手访问入口",
+                label: "内部访问入口",
+            },
+            {
+                src: "/media/lnpe-sales-ai/lnpe-sales-consultant-03-project-match.webp",
+                alt: "LNPE 工程助手匹配相似项目和设备记录",
+                label: "项目数据匹配",
+            },
+            {
+                src: "/media/lnpe-sales-ai/lnpe-sales-consultant-04-price-reference.webp",
+                alt: "LNPE 工程助手查询内部报价参考数据",
+                label: "报价参考数据",
+            },
+        ],
         tone: "amber" as const,
+        demoHref: "https://lnpe-2026.vercel.app/",
         stats: [
-            ["1:1", "个性化触达", true],
-            ["Scale", "批量生成", false],
+            ["Data", "真实数据理解", true],
+            ["Sales", "销售现场支持", false],
         ],
     },
     {
@@ -32,24 +71,72 @@ const caseStudies: CaseStudy[] = [
         title: "智能标书与方案生成",
         pain: "历史标书分散，撰写技术方案耗时，且易遗漏参数。",
         solution: "构建专用知识库，RAG 引擎自动提取相似条款，Agent 自动填充参数。",
-        image: "/media/case-proposal.svg",
+        image: "/media/huisheng-proposal-ai/huisheng-proposal-ai-01-workflow-draft.webp",
+        caption: "Huisheng 智能标书与方案生成实际界面截图",
+        gallery: [
+            {
+                src: "/media/huisheng-proposal-ai/huisheng-proposal-ai-01-workflow-draft.webp",
+                alt: "Huisheng 智能标书与方案生成在调研计划阶段生成甲方沟通备忘录和盈利能力评估模型",
+                label: "调研与草稿生成",
+            },
+            {
+                src: "/media/huisheng-proposal-ai/huisheng-proposal-ai-02-start-draft.webp",
+                alt: "Huisheng 智能标书与方案生成的初始文字助手和报告草稿面板",
+                label: "草稿生成入口",
+            },
+        ],
         tone: "mint" as const,
+        demoHref: "https://research-bp-writing.vercel.app/",
         stats: [
             ["15min", "生成初稿", false],
             ["99%", "引用准确率", true],
         ],
     },
     {
-        tag: "合规风控",
-        title: "合同风险智能审查",
-        pain: "人工审核大量合同耗时费力，标准不一，易漏看风险条款。",
-        solution: "将《合规手册》转化为校验链，自动标记风险并给出修改建议。",
-        image: "/media/case-risk.svg",
+        tag: "房屋管理",
+        title: "房屋管理助手",
+        pain: "房屋管理和出租过程中，沟通记录、费用往来和投资表现分散在不同渠道，屋主很难持续形成清晰账单与决策依据。",
+        solution: "基于手机端房屋联络平台，AI 理解复杂沟通、费用逻辑和用户对话流程，自动提取租赁、维修、管理等财务流动，生成账单明细和物业表现记录，帮助屋主精细化评估投资表现。",
+        image: "/media/alpha-house-ai/alpha-house-02-messages.webp",
+        caption: "AlphaHouse 房东记账与管理工具实际界面截图",
+        gallery: [
+            {
+                src: "/media/alpha-house-ai/alpha-house-02-messages.webp",
+                alt: "AlphaHouse 消息工单页面展示租客消息、维修工单和退房清算提醒",
+                label: "消息工单",
+            },
+            {
+                src: "/media/alpha-house-ai/alpha-house-03-work-order-chat.webp",
+                alt: "AlphaHouse 维修工单聊天页面展示水管维修沟通记录",
+                label: "工单沟通",
+            },
+            {
+                src: "/media/alpha-house-ai/alpha-house-04-finance.webp",
+                alt: "AlphaHouse 财务与账单页面展示房产净收入、收入支出和账目明细",
+                label: "财务与账单",
+            },
+            {
+                src: "/media/alpha-house-ai/alpha-house-05-contacts.webp",
+                alt: "AlphaHouse 通讯录页面展示租客、维修工和关联房产联系人",
+                label: "通讯录",
+            },
+            {
+                src: "/media/alpha-house-ai/alpha-house-06-reports.webp",
+                alt: "AlphaHouse 数据报表页面展示年度利润、收入支出和报表导出",
+                label: "数据报表",
+            },
+            {
+                src: "/media/alpha-house-ai/alpha-house-01-login.webp",
+                alt: "AlphaHouse 登录页面展示北美房东记账与管理工具入口",
+                label: "登录入口",
+            },
+        ],
         tone: "coral" as const,
         reverse: true,
+        demoHref: "https://alphahouse-demo.vercel.app/",
         stats: [
-            ["100%", "风险覆盖", true],
-            ["5x", "效率提升", false],
+            ["Ledger", "账单自动生成", true],
+            ["Insight", "投资表现评估", false],
         ],
     },
     {
@@ -57,7 +144,35 @@ const caseStudies: CaseStudy[] = [
         title: "内部智能 IT 助手",
         pain: "内部工单积压，员工重复回答相同问题，知识库更新滞后。",
         solution: "接入内网 Wiki，7x24 小时自动处理常见咨询，无法回答时转接人工。",
-        image: "/media/case-assistant.svg",
+        image: "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-01-dashboard.webp",
+        caption: "Enterprise Wiki 智能 IT 助手实际界面截图",
+        gallery: [
+            {
+                src: "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-01-dashboard.webp",
+                alt: "Enterprise Wiki 智能 IT 助手仪表盘展示工单拦截率、响应时间和聊天窗口",
+                label: "支持仪表盘",
+            },
+            {
+                src: "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-02-articles.webp",
+                alt: "Enterprise Wiki 知识库文章列表按分类和更新时间组织 IT 支持内容",
+                label: "Wiki 文章库",
+            },
+            {
+                src: "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-03-article-detail.webp",
+                alt: "Enterprise Wiki 文章详情页展示 VPN 设置步骤和相关帮助内容",
+                label: "知识文章详情",
+            },
+            {
+                src: "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-04-ticket-detail.webp",
+                alt: "Enterprise Wiki 工单详情页展示员工问题、AI 推荐文章和人工升级状态",
+                label: "工单详情联动",
+            },
+            {
+                src: "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-05-analytics.webp",
+                alt: "Enterprise Wiki 分析面板展示自动化支持、文章命中率和工单趋势",
+                label: "数据分析面板",
+            },
+        ],
         tone: "blue" as const,
         stats: [
             ["80%", "拦截工单", true],
@@ -74,78 +189,294 @@ const caseStudies: CaseStudy[] = [
         reverse: true,
         stats: [],
     },
+    {
+        tag: "创意写作",
+        title: "创意写作记忆控制系统",
+        pain: "传统大模型对话很难精确控制记忆，长篇小说或剧本创作中容易混淆人物设定、剧情分支、背景信息和当前上下文。",
+        solution: "构建可控记忆层，帮助作者管理剧情分支、隔离当前对话记忆、压缩背景信息，并让不同内容片段按需热插拔进入模型上下文；同时兼容常见大模型，也可部署专门训练用于写作的私有模型。",
+        image: "/media/process-map.svg",
+        tone: "mint" as const,
+        stats: [
+            ["Memory", "精准记忆控制", true],
+            ["Branch", "剧情分支管理", false],
+        ],
+    },
 ];
+
+const getCaseGallery = (item: CaseStudy) => (
+    item.gallery?.length
+        ? item.gallery
+        : [
+            {
+                src: item.image,
+                alt: `${item.title}场景图`,
+                label: item.tag,
+            },
+        ]
+);
 
 const Cases = () => {
     useReveal();
+    const [activeGallery, setActiveGallery] = useState<ActiveGallery | null>(null);
+
+    const activeCase = activeGallery === null ? null : caseStudies[activeGallery.caseIndex];
+    const activeImages = activeCase ? getCaseGallery(activeCase) : [];
+    const activePhoto = activeGallery === null ? null : activeImages[activeGallery.photoIndex];
+
+    const openGallery = useCallback((index: number) => {
+        setActiveGallery({ caseIndex: index, photoIndex: 0 });
+    }, []);
+
+    const closeGallery = useCallback(() => {
+        setActiveGallery(null);
+    }, []);
+
+    const showPrevious = useCallback(() => {
+        setActiveGallery((current) => {
+            if (current === null) {
+                return current;
+            }
+
+            const galleryLength = getCaseGallery(caseStudies[current.caseIndex]).length;
+
+            return {
+                ...current,
+                photoIndex: (current.photoIndex - 1 + galleryLength) % galleryLength,
+            };
+        });
+    }, []);
+
+    const showNext = useCallback(() => {
+        setActiveGallery((current) => {
+            if (current === null) {
+                return current;
+            }
+
+            const galleryLength = getCaseGallery(caseStudies[current.caseIndex]).length;
+
+            return {
+                ...current,
+                photoIndex: (current.photoIndex + 1) % galleryLength,
+            };
+        });
+    }, []);
+
+    useEffect(() => {
+        if (activeGallery === null) {
+            return;
+        }
+
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                closeGallery();
+            }
+
+            if (event.key === "ArrowLeft") {
+                showPrevious();
+            }
+
+            if (event.key === "ArrowRight") {
+                showNext();
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            document.body.style.overflow = previousOverflow;
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [activeGallery, closeGallery, showNext, showPrevious]);
 
     return (
-        <section id="cases" className="section-padding overflow-hidden">
-            <div className="container">
-                <div className="reveal mb-20 text-center">
-                    <div className="lab-kicker mb-4">USE CASES</div>
-                    <h2 className="section-title mb-6">落地场景</h2>
-                    <p className="section-copy mx-auto max-w-2xl">
-                        从精准获客到企业知识库，展示 AI 如何进入真实业务流程。这里的图片先作为媒体占位，后续可以替换成实际产品截图、客户场景图或流程图。
-                    </p>
-                </div>
+        <>
+            <section id="cases" className="section-padding overflow-hidden">
+                <div className="container">
+                    <div className="reveal mb-20 text-center">
+                        <div className="lab-kicker mb-4">USE CASES</div>
+                        <h2 className="section-title mb-6">落地场景</h2>
+                        <p className="section-copy mx-auto max-w-2xl">
+                            从销售咨询、房屋管理到创意写作，展示 Cyano 如何把 AI 接入真实业务流程，让模型理解产品、客户、数据、知识和创作上下文。
+                        </p>
+                    </div>
 
-                <div className="grid gap-28">
-                    {caseStudies.map((item) => {
-                        const visual = (
-                            <div className="ui-visual" key={`${item.title}-visual`}>
-                                <MediaFrame
-                                    src={item.image}
-                                    alt={`${item.title}视觉占位图`}
-                                    label={`${item.tag} 场景图占位`}
-                                    tone={item.tone}
-                                />
-                            </div>
-                        );
-
-                        const info = (
-                            <div className="case-info" key={`${item.title}-info`}>
-                                <span className="case-tag">{item.tag}</span>
-                                <h3 className="mb-6 font-heading text-[2.15rem] leading-tight text-white md:text-[2.5rem]">
-                                    {item.title}
-                                </h3>
-                                <p className="mb-10 font-light leading-8 text-text-muted">
-                                    痛点：{item.pain}
-                                    <br />
-                                    方案：{item.solution}
-                                </p>
-                                {item.stats.length > 0 && (
-                                    <div className="stats-grid border-t border-border-light pt-8">
-                                        {item.stats.map(([value, label, highlight]) => (
-                                            <div className="stat" key={label}>
-                                                <h4 className={`text-4xl ${highlight ? "text-accent-cyan" : "text-white"}`}>{value}</h4>
-                                                <span>{label}</span>
-                                            </div>
-                                        ))}
+                    <div className="grid gap-28">
+                        {caseStudies.map((item, index) => {
+                            const visual = (
+                                <div className="ui-visual" key={`${item.title}-visual`}>
+                                    <div
+                                        className="case-gallery-trigger"
+                                        role="button"
+                                        tabIndex={0}
+                                        aria-label={`打开${item.title}相册`}
+                                        onClick={() => openGallery(index)}
+                                        onKeyDown={(event) => {
+                                            if (event.key === "Enter" || event.key === " ") {
+                                                event.preventDefault();
+                                                openGallery(index);
+                                            }
+                                        }}
+                                    >
+                                        <MediaFrame
+                                            src={item.image}
+                                            alt={item.caption ? `${item.title}实际界面截图` : `${item.title}视觉占位图`}
+                                            label={`${item.tag} 场景图`}
+                                            caption={item.caption}
+                                            tone={item.tone}
+                                            priority={index <= 1}
+                                        />
+                                        <span className="case-gallery-trigger__hint">
+                                            <FiMaximize2 aria-hidden="true" />
+                                            查看更多
+                                        </span>
                                     </div>
-                                )}
-                            </div>
-                        );
+                                </div>
+                            );
 
-                        return (
-                            <article key={item.title} className="case-item reveal">
-                                {item.reverse ? (
-                                    <>
-                                        {info}
-                                        {visual}
-                                    </>
-                                ) : (
-                                    <>
-                                        {visual}
-                                        {info}
-                                    </>
-                                )}
-                            </article>
-                        );
-                    })}
+                            const info = (
+                                <div className="case-info" key={`${item.title}-info`}>
+                                    <span className="case-tag">{item.tag}</span>
+                                    <h3 className="mb-6 font-heading text-[2.15rem] leading-tight text-white md:text-[2.5rem]">
+                                        {item.title}
+                                    </h3>
+                                    <p className="mb-10 font-light leading-8 text-text-muted">
+                                        痛点：{item.pain}
+                                        <br />
+                                        方案：{item.solution}
+                                    </p>
+                                    {item.stats.length > 0 && (
+                                        <div className="stats-grid border-t border-border-light pt-8">
+                                            {item.stats.map(([value, label, highlight]) => (
+                                                <div className="stat" key={label}>
+                                                    <h4 className={`text-4xl ${highlight ? "text-accent-cyan" : "text-white"}`}>{value}</h4>
+                                                    <span>{label}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                    {item.demoHref && (
+                                        <div className="mt-8 flex justify-end">
+                                            <a
+                                                href={item.demoHref}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="cyano-button"
+                                            >
+                                                查看 DEMO
+                                            </a>
+                                        </div>
+                                    )}
+                                </div>
+                            );
+
+                            return (
+                                <article key={item.title} className="case-item reveal">
+                                    {item.reverse ? (
+                                        <>
+                                            {info}
+                                            {visual}
+                                        </>
+                                    ) : (
+                                        <>
+                                            {visual}
+                                            {info}
+                                        </>
+                                    )}
+                                </article>
+                            );
+                        })}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            {activeCase && activePhoto && activeGallery && (
+                <div className="case-gallery-backdrop" role="presentation" onClick={closeGallery}>
+                    <div
+                        className="case-gallery-dialog"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="case-gallery-title"
+                        onClick={(event) => event.stopPropagation()}
+                    >
+                        <button
+                            type="button"
+                            className="case-gallery-close"
+                            aria-label="关闭相册"
+                            onClick={closeGallery}
+                        >
+                            <FiX aria-hidden="true" />
+                        </button>
+
+                        <div className="case-gallery-stage">
+                            <div className={`case-gallery-image-shell media-frame--${activeCase.tone}`}>
+                                <Image
+                                    src={activePhoto.src}
+                                    alt={activePhoto.alt}
+                                    width={1280}
+                                    height={800}
+                                    className="case-gallery-image"
+                                    priority
+                                />
+                                <button
+                                    type="button"
+                                    className="case-gallery-nav case-gallery-nav--prev"
+                                    aria-label="上一张"
+                                    onClick={showPrevious}
+                                >
+                                    <FiChevronLeft aria-hidden="true" />
+                                </button>
+                                <button
+                                    type="button"
+                                    className="case-gallery-nav case-gallery-nav--next"
+                                    aria-label="下一张"
+                                    onClick={showNext}
+                                >
+                                    <FiChevronRight aria-hidden="true" />
+                                </button>
+                            </div>
+
+                            <div className="case-gallery-copy">
+                                <span className="case-tag">{activeCase.tag}</span>
+                                <p className="case-gallery-count">
+                                    {activeGallery.photoIndex + 1} / {activeImages.length}
+                                </p>
+                                <h3 id="case-gallery-title">{activeCase.title}</h3>
+                                <p>
+                                    痛点：{activeCase.pain}
+                                    <br />
+                                    方案：{activeCase.solution}
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="case-gallery-thumbs" aria-label="相册缩略图">
+                            {activeImages.map((item, index) => (
+                                <button
+                                    type="button"
+                                    key={`${activeCase.title}-${item.src}-${index}`}
+                                    className={`case-gallery-thumb ${index === activeGallery.photoIndex ? "case-gallery-thumb--active" : ""}`}
+                                    aria-label={`查看${item.label}`}
+                                    aria-current={index === activeGallery.photoIndex ? "true" : undefined}
+                                    onClick={() => setActiveGallery({ caseIndex: activeGallery.caseIndex, photoIndex: index })}
+                                >
+                                    <Image
+                                        src={item.src}
+                                        alt=""
+                                        width={180}
+                                        height={112}
+                                        className="case-gallery-thumb__image"
+                                    />
+                                    <span>{item.label}</span>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            )}
+        </>
     );
 };
 

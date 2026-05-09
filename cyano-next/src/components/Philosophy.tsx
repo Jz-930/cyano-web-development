@@ -80,7 +80,7 @@ const Philosophy = () => {
                             color: "white",
                         }}
                     >
-                        为什么 ChatGPT 无法<br />
+                        为何通用模型（如chatGPT） 无法<br />
                         直接接管您的业务？
                     </h2>
 

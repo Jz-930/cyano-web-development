@@ -25,7 +25,7 @@ const signals = [
     {
         label: "Delivery Guardrail",
         title: "沉淀可审计、可维护的企业工作流",
-        body: "交付不止是一个 Demo，而是能被团队使用、复盘、维护和持续迭代的生产系统。",
+        body: "交付不止是一个演示原型，而是能被团队使用、复盘、维护和持续迭代的生产系统。",
         dot: "accent-dot accent-dot--coral",
         icon: FiShield,
     },
@@ -37,7 +37,7 @@ const HeroSignalsSection = () => (
             <div className="mb-12 grid gap-7 md:mb-14 lg:grid-cols-[0.86fr_1fr] lg:items-end">
                 <div>
                     <div className="lab-kicker mb-5">How We Start</div>
-                    <h2 className="section-title">先判断机会，再决定产品、工作流或托管服务</h2>
+                    <h2 className="section-title">CYANO Tech如何开展工作</h2>
                 </div>
                 <p className="section-copy">
                     我们不会一开始就把需求做成一个固定软件，而是先把业务目标、流程边界、交付责任和合作方式拆清楚，再进入方案设计。

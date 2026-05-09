@@ -6,6 +6,7 @@ type MediaFrameProps = {
     src: string;
     alt: string;
     label: string;
+    caption?: string | null;
     tone?: MediaTone;
     square?: boolean;
     priority?: boolean;
@@ -15,6 +16,7 @@ const MediaFrame = ({
     src,
     alt,
     label,
+    caption = "后续替换为实际截图 / 客户场景图",
     tone = "mint",
     square = false,
     priority = false,
@@ -33,7 +35,7 @@ const MediaFrame = ({
             </div>
             <figcaption className="media-frame__caption">
                 <strong>{label}</strong>
-                <span>后续替换为实际截图 / 客户场景图</span>
+                {caption && <span>{caption}</span>}
             </figcaption>
         </figure>
     );

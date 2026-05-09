@@ -9,33 +9,33 @@ const models = [
     {
         label: "Mode 01",
         title: "完整定制开发",
-        short: "客户买断工具或工作流",
-        bestFor: "需求明确、希望长期拥有一套可反复使用的 AI 工具或系统。",
-        deliverable: "完整产品设计、开发交付、阶段验收、上线后的基础托管与维护。",
-        billing: "前期投入更高，长期使用成本更可控；新增功能、接口变化和额外支持按范围另行评估。",
-        cta: "评估买断方案",
+        short: "为企业打造可长期使用的 AI 工作平台",
+        bestFor: "适合目标清晰、使用频率高，希望把 AI 能力沉淀为自有系统的团队。",
+        deliverable: "从需求梳理、产品设计、模型接入、工作流开发到上线维护，交付可持续迭代的业务系统。",
+        advantage: "帮助企业建立长期可控的 AI 能力，让核心流程、数据和团队经验持续沉淀。",
+        cta: "咨询定制方案",
         tone: "mint" as const,
         dot: "accent-dot",
     },
     {
         label: "Mode 02",
-        title: "低启动费 + 持续服务",
-        short: "先跑起来，再按使用持续合作",
-        bestFor: "客户想降低前期投入，希望先验证业务价值和使用规模。",
-        deliverable: "快速试点、核心工作流上线、持续月费、使用费或服务费支持迭代。",
-        billing: "低启动费不是便宜买断；长期总成本通常高于直接买断，具体根据开发投入和服务规模评估。",
-        cta: "启动试点",
+        title: "轻量试点与分期开发",
+        short: "先跑通关键场景，再逐步扩展",
+        bestFor: "适合想快速验证 AI 价值、控制初期投入，并用真实反馈推动内部决策的团队。",
+        deliverable: "优先上线核心流程和最小可用方案，结合使用反馈持续迭代到更完整的平台。",
+        advantage: "启动更快、节奏更灵活，帮助客户在技术快速变化中保留选择空间。",
+        cta: "启动试点咨询",
         tone: "amber" as const,
         dot: "accent-dot accent-dot--amber",
     },
     {
         label: "Mode 03",
         title: "托管式 AI 服务",
-        short: "客户买结果，不一定买工具",
-        bestFor: "任务批量、重复、可验收，客户更关心结果、价格和交付速度。",
-        deliverable: "Cyano 用 AI 和内部工作流完成交付，客户按任务、数量、项目或周期付费。",
-        billing: "以客户原有人工或外包成本为参照，目标是用更低成本获得更稳定、更快的产出。",
-        cta: "提交托管任务",
+        short: "把持续任务交给 Cyano，直接获得结果",
+        bestFor: "适合有大量重复性产出、需要稳定质量和交付速度，但暂时不想自建系统的团队。",
+        deliverable: "Cyano 结合 AI 工作流和专业服务，持续完成内容、数据、流程或运营类任务。",
+        advantage: "以结果为导向，更快释放团队人力，也方便未来沉淀为专属工具或平台。",
+        cta: "咨询托管服务",
         tone: "blue" as const,
         dot: "accent-dot accent-dot--blue",
     },
@@ -53,12 +53,12 @@ const EngagementModels = () => {
                     <div>
                         <div className="lab-kicker mb-4">SERVICE MODELS</div>
                         <h2 className="section-title">
-                            三种合作方式，
-                            <span className="text-accent-amber"> 对应不同预算与风险</span>
+                            多种合作方式，
+                            <span className="text-accent-amber"> 灵活接入企业 AI 能力</span>
                         </h2>
                     </div>
                     <p className="section-copy">
-                        每个工具型项目都会先评估完整开发价值，再根据客户预算、使用周期和风险选择合作方式。网站只展示合作逻辑，具体报价在业务诊断后形成。
+                        Cyano 可以从完整平台建设、轻量试点到托管式持续交付，按企业阶段选择最合适的路径。我们先理解业务目标和工作流程，再让 AI 能力以可控、可扩展的方式进入团队。
                     </p>
                 </div>
 
@@ -89,7 +89,8 @@ const EngagementModels = () => {
                         <MediaFrame
                             src="/media/engagement-models.svg"
                             alt="三种合作方式视觉占位图"
-                            label={`${active.label} 合作方式图像占位`}
+                            label={`${active.label} 合作模式`}
+                            caption="根据业务阶段选择合适路径"
                             tone={active.tone}
                         />
 
@@ -108,9 +109,9 @@ const EngagementModels = () => {
 
                             <div className="grid gap-4 md:grid-cols-3">
                                 {[
-                                    ["适合谁", active.bestFor, active.dot],
-                                    ["客户得到什么", active.deliverable, "accent-dot"],
-                                    ["收费逻辑", active.billing, "accent-dot accent-dot--amber"],
+                                    ["适合场景", active.bestFor, active.dot],
+                                    ["你将获得", active.deliverable, "accent-dot"],
+                                    ["合作优势", active.advantage, "accent-dot accent-dot--amber"],
                                 ].map(([title, desc, dot]) => (
                                     <div key={title} className="content-card">
                                         <div className="mb-4 flex items-center gap-3">
@@ -125,10 +126,10 @@ const EngagementModels = () => {
                             <div className="mt-8 rounded-2xl border border-brand-mint/15 bg-brand-mint/[0.035] p-6">
                                 <div className="mb-4 flex items-center gap-3">
                                     <span className="accent-dot" />
-                                    <span className="lab-label">Decision Rule</span>
+                                    <span className="lab-label">HOW TO CHOOSE</span>
                                 </div>
                                 <p className="leading-8 text-white/80">
-                                    如果客户想长期拥有工具，优先选择买断；如果想降低前期投入，选择低启动试点；如果只关心结果交付，选择托管式 AI 服务。
+                                    如果你想沉淀长期能力，可以选择完整定制；如果你想先验证价值，可以从轻量试点开始；如果你需要立刻释放团队人力，托管式服务能更快带来稳定产出。
                                 </p>
                             </div>
                         </div>
