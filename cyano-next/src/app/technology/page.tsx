@@ -20,7 +20,7 @@ export default function TechnologyPage() {
         eyebrow="TECHNICAL PROOF"
         title="工程能力不是装饰，"
         accent="是稳定交付的底座"
-        description="这里完整保留原技术内容：长上下文 Agents 的挑战、上下文估值引擎、大规模优化、四层架构、系统能力对比，以及兼容与部署方案。"
+        description="长上下文 Agents 的设计、上下文估值引擎、大规模优化、四层架构、系统能力对比，以及兼容与部署方案。"
         primaryHref="#technical-proof"
         primaryLabel="阅读技术论证"
         secondaryHref="/services"

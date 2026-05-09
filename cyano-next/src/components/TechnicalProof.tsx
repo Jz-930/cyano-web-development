@@ -18,7 +18,7 @@ const TechnicalProof = () => {
                                 <span className="text-brand-mint"> 是稳定交付的底座</span>
                             </h2>
                             <p className="section-copy">
-                                以下保留原有技术内容：长上下文 Agents 的成本、延迟与召回挑战，Cyano 的上下文估值引擎、性能指标、四层架构和系统能力对比。
+                                长上下文 Agents 的成本、延迟与召回挑战，Cyano 的上下文估值引擎、性能指标、四层架构和系统能力对比。
                             </p>
                         </div>
                         <MediaFrame
