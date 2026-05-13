@@ -38,7 +38,7 @@ const getGalleryViewerHref = (caseIndex: number, photoIndex = 0) => {
         back: `/cases#case-study-${caseIndex}`,
     });
 
-    return `/gallery-viewer.html?${params.toString()}`;
+    return `/gallery-viewer?${params.toString()}`;
 };
 
 const shouldUseMobileGalleryViewer = () => window.matchMedia(mobileGalleryQuery).matches;
