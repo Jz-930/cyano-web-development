@@ -29,6 +29,20 @@ type ActiveGallery = {
     photoIndex: number;
 };
 
+const mobileGalleryQuery = "(hover: none), (pointer: coarse), (max-width: 768px)";
+
+const getGalleryViewerHref = (caseIndex: number, photoIndex = 0) => {
+    const params = new URLSearchParams({
+        case: String(caseIndex),
+        photo: String(photoIndex),
+        back: `/cases#case-study-${caseIndex}`,
+    });
+
+    return `/gallery-viewer.html?${params.toString()}`;
+};
+
+const shouldUseMobileGalleryViewer = () => window.matchMedia(mobileGalleryQuery).matches;
+
 const caseStudies: CaseStudy[] = [
     {
         tag: "销售咨询 AI",
@@ -303,6 +317,11 @@ const Cases = () => {
     const activePhoto = activeGallery === null ? null : activeImages[activeGallery.photoIndex];
 
     const openGallery = useCallback((index: number) => {
+        if (shouldUseMobileGalleryViewer()) {
+            window.location.assign(getGalleryViewerHref(index, 0));
+            return;
+        }
+
         galleryReturnScrollY.current = window.scrollY;
         galleryReturnCaseIndex.current = index;
         window.scrollTo({ top: 0, behavior: "auto" });
@@ -358,7 +377,7 @@ const Cases = () => {
     }, []);
 
     useEffect(() => {
-        const mediaQuery = window.matchMedia("(hover: none), (pointer: coarse), (max-width: 768px)");
+        const mediaQuery = window.matchMedia(mobileGalleryQuery);
         const updateGalleryMode = () => setUseMobileGallery(mediaQuery.matches);
 
         updateGalleryMode();
@@ -441,13 +460,14 @@ const Cases = () => {
 
                     <div className="grid gap-28">
                         {caseStudies.map((item, index) => {
+                            const galleryLabel = `Open ${item.title} gallery`;
                             const visual = (
                                 <div className="ui-visual" key={`${item.title}-visual`}>
                                     <div
                                         className="case-gallery-trigger"
                                         role="button"
                                         tabIndex={0}
-                                        aria-label={`打开${item.title}相册`}
+                                        aria-label={galleryLabel}
                                         onClick={() => openGallery(index)}
                                         onKeyDown={(event) => {
                                             if (event.key === "Enter" || event.key === " ") {
