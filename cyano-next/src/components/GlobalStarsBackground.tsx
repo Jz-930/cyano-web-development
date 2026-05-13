@@ -5,7 +5,7 @@ import { StarsBackground } from "@/components/ui/stars-background";
 
 export const GlobalStarsBackground = () => {
     return (
-        <div className="fixed inset-0 z-0 pointer-events-none bg-[#030607]">
+        <div className="global-stars-background fixed inset-0 z-0 pointer-events-none bg-[#030607]">
             <StarsBackground starDensity={0.0001} minTwinkleSpeed={0.7} maxTwinkleSpeed={1.5} />
             <ShootingStars
                 starColor="#7EF5D6"

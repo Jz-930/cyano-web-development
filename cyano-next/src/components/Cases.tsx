@@ -294,6 +294,7 @@ const getCaseGallery = (item: CaseStudy) => (
 const Cases = () => {
     useReveal();
     const [activeGallery, setActiveGallery] = useState<ActiveGallery | null>(null);
+    const [useMobileGallery, setUseMobileGallery] = useState(false);
     const galleryReturnScrollY = useRef(0);
     const galleryReturnCaseIndex = useRef<number | null>(null);
 
@@ -357,16 +358,45 @@ const Cases = () => {
     }, []);
 
     useEffect(() => {
+        const mediaQuery = window.matchMedia("(hover: none), (pointer: coarse), (max-width: 768px)");
+        const updateGalleryMode = () => setUseMobileGallery(mediaQuery.matches);
+
+        updateGalleryMode();
+        mediaQuery.addEventListener("change", updateGalleryMode);
+
+        return () => {
+            mediaQuery.removeEventListener("change", updateGalleryMode);
+        };
+    }, []);
+
+    useEffect(() => {
         if (activeGallery === null) {
             return;
         }
 
         const previousOverflow = document.body.style.overflow;
         const shouldLockPageScroll = window.matchMedia("(min-width: 769px)").matches;
+        let visualViewportFrame = 0;
 
         if (shouldLockPageScroll) {
             document.body.style.overflow = "hidden";
         }
+
+        document.body.classList.add("case-gallery-active");
+        document.documentElement.classList.add("case-gallery-active");
+
+        const updateZoomingClass = () => {
+            window.cancelAnimationFrame(visualViewportFrame);
+            visualViewportFrame = window.requestAnimationFrame(() => {
+                const isZooming = (window.visualViewport?.scale ?? 1) > 1.01;
+                document.body.classList.toggle("case-gallery-zooming", isZooming);
+                document.documentElement.classList.toggle("case-gallery-zooming", isZooming);
+            });
+        };
+
+        updateZoomingClass();
+        window.visualViewport?.addEventListener("resize", updateZoomingClass);
+        window.visualViewport?.addEventListener("scroll", updateZoomingClass);
 
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === "Escape") {
@@ -388,6 +418,11 @@ const Cases = () => {
             if (shouldLockPageScroll) {
                 document.body.style.overflow = previousOverflow;
             }
+            window.cancelAnimationFrame(visualViewportFrame);
+            window.visualViewport?.removeEventListener("resize", updateZoomingClass);
+            window.visualViewport?.removeEventListener("scroll", updateZoomingClass);
+            document.body.classList.remove("case-gallery-active", "case-gallery-zooming");
+            document.documentElement.classList.remove("case-gallery-active", "case-gallery-zooming");
             window.removeEventListener("keydown", handleKeyDown);
         };
     }, [activeGallery, closeGallery, showNext, showPrevious]);
@@ -518,12 +553,14 @@ const Cases = () => {
                         <div className="case-gallery-stage">
                             <div className={`case-gallery-image-shell media-frame--${activeCase.tone}`}>
                                 <Image
+                                    key={activePhoto.src}
                                     src={activePhoto.src}
                                     alt={activePhoto.alt}
                                     width={1280}
                                     height={800}
                                     className="case-gallery-image"
                                     priority
+                                    unoptimized
                                 />
                                 <a
                                     href={activePhoto.src}
@@ -567,7 +604,8 @@ const Cases = () => {
                             </div>
                         </div>
 
-                        <div className="case-gallery-thumbs" aria-label="相册缩略图">
+                        {!useMobileGallery && (
+                            <div className="case-gallery-thumbs" aria-label="相册缩略图">
                             {activeImages.map((item, index) => (
                                 <button
                                     type="button"
@@ -587,7 +625,8 @@ const Cases = () => {
                                     <span>{item.label}</span>
                                 </button>
                             ))}
-                        </div>
+                            </div>
+                        )}
                     </div>
                 </div>
             )}
