@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
-import { FiChevronLeft, FiChevronRight, FiMaximize2, FiX } from "react-icons/fi";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { FiChevronLeft, FiChevronRight, FiExternalLink, FiMaximize2, FiX } from "react-icons/fi";
 import MediaFrame from "@/components/MediaFrame";
 import { useReveal } from "@/hooks/useReveal";
 
@@ -294,17 +294,36 @@ const getCaseGallery = (item: CaseStudy) => (
 const Cases = () => {
     useReveal();
     const [activeGallery, setActiveGallery] = useState<ActiveGallery | null>(null);
+    const galleryReturnScrollY = useRef(0);
+    const galleryReturnCaseIndex = useRef<number | null>(null);
 
     const activeCase = activeGallery === null ? null : caseStudies[activeGallery.caseIndex];
     const activeImages = activeCase ? getCaseGallery(activeCase) : [];
     const activePhoto = activeGallery === null ? null : activeImages[activeGallery.photoIndex];
 
     const openGallery = useCallback((index: number) => {
+        galleryReturnScrollY.current = window.scrollY;
+        galleryReturnCaseIndex.current = index;
+        window.scrollTo({ top: 0, behavior: "auto" });
         setActiveGallery({ caseIndex: index, photoIndex: 0 });
     }, []);
 
     const closeGallery = useCallback(() => {
+        const returnCaseIndex = galleryReturnCaseIndex.current;
         setActiveGallery(null);
+        window.requestAnimationFrame(() => {
+            const returnCase = returnCaseIndex === null
+                ? null
+                : document.getElementById(`case-study-${returnCaseIndex}`);
+
+            if (returnCase) {
+                returnCase.scrollIntoView({ block: "center", behavior: "auto" });
+            } else {
+                window.scrollTo({ top: galleryReturnScrollY.current, behavior: "auto" });
+            }
+
+            galleryReturnCaseIndex.current = null;
+        });
     }, []);
 
     const showPrevious = useCallback(() => {
@@ -343,7 +362,11 @@ const Cases = () => {
         }
 
         const previousOverflow = document.body.style.overflow;
-        document.body.style.overflow = "hidden";
+        const shouldLockPageScroll = window.matchMedia("(min-width: 769px)").matches;
+
+        if (shouldLockPageScroll) {
+            document.body.style.overflow = "hidden";
+        }
 
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === "Escape") {
@@ -362,14 +385,16 @@ const Cases = () => {
         window.addEventListener("keydown", handleKeyDown);
 
         return () => {
-            document.body.style.overflow = previousOverflow;
+            if (shouldLockPageScroll) {
+                document.body.style.overflow = previousOverflow;
+            }
             window.removeEventListener("keydown", handleKeyDown);
         };
     }, [activeGallery, closeGallery, showNext, showPrevious]);
 
     return (
         <>
-            <section id="cases" className="section-padding overflow-hidden">
+            <section id="cases" className="section-padding cases-section">
                 <div className="container">
                     <div className="reveal mb-20 text-center">
                         <div className="lab-kicker mb-4">USE CASES</div>
@@ -453,7 +478,7 @@ const Cases = () => {
                             );
 
                             return (
-                                <article key={item.title} className="case-item reveal">
+                                <article key={item.title} id={`case-study-${index}`} className="case-item reveal">
                                     {item.reverse ? (
                                         <>
                                             {info}
@@ -500,6 +525,16 @@ const Cases = () => {
                                     className="case-gallery-image"
                                     priority
                                 />
+                                <a
+                                    href={activePhoto.src}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="case-gallery-original"
+                                    aria-label="在新标签打开原图"
+                                >
+                                    <FiExternalLink aria-hidden="true" />
+                                    <span>原图</span>
+                                </a>
                                 <button
                                     type="button"
                                     className="case-gallery-nav case-gallery-nav--prev"
