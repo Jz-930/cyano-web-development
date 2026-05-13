@@ -10,14 +10,19 @@ type ServiceHeroSplineProps = {
 };
 
 const splineViewerScript = "/vendor/spline-viewer-1.12.92.js";
+const phoneHeroMediaQuery = "(max-width: 767px), ((hover: none) and (pointer: coarse) and (max-height: 480px))";
 
 const ServiceHeroSpline = ({ src, title, variant = "default" }: ServiceHeroSplineProps) => {
     const viewerId = React.useId();
     const [isLoaded, setIsLoaded] = React.useState(false);
     const [shouldRenderScene, setShouldRenderScene] = React.useState(false);
+    const [useMobileVideo, setUseMobileVideo] = React.useState(false);
     const isProject = variant === "project";
     const isHome = variant === "home";
     const usesSplineViewer = src.endsWith(".splinecode");
+    const mobileVideoSrc = src.includes("cyano-robot")
+        ? "/media/hero-videos/cyano-robot-mobile.mp4?v=20260513a"
+        : "/media/hero-videos/cyano-data-model-mobile.mp4?v=20260513a";
 
     const handleWheel = React.useCallback((event: React.WheelEvent<Element>) => {
         event.preventDefault();
@@ -30,9 +35,11 @@ const ServiceHeroSpline = ({ src, title, variant = "default" }: ServiceHeroSplin
     }, []);
 
     React.useEffect(() => {
-        const mediaQuery = window.matchMedia("(hover: none), (pointer: coarse), (max-width: 1024px)");
+        const mediaQuery = window.matchMedia(phoneHeroMediaQuery);
         const updateRenderMode = () => {
-            setShouldRenderScene(!mediaQuery.matches);
+            const shouldUseVideo = mediaQuery.matches;
+            setUseMobileVideo(shouldUseVideo);
+            setShouldRenderScene(!shouldUseVideo);
         };
 
         updateRenderMode();
@@ -106,7 +113,19 @@ const ServiceHeroSpline = ({ src, title, variant = "default" }: ServiceHeroSplin
                             onWheelCapture={handleWheel}
                         />
                     )
-                : <div className="service-hero-frame service-hero-frame--static service-hero-frame--ready" />}
+                : useMobileVideo ? (
+                    <video
+                        className="service-hero-frame service-hero-mobile-video service-hero-frame--ready"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
+                        aria-label={`${title} animated preview`}
+                    >
+                        <source src={mobileVideoSrc} type="video/mp4" />
+                    </video>
+                ) : <div className="service-hero-frame service-hero-frame--static service-hero-frame--ready" />}
         </div>
     );
 };

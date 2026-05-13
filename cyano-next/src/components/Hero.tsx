@@ -6,16 +6,21 @@ import React from "react";
 
 const splineViewerScript = "/vendor/spline-viewer-1.12.92.js";
 const splineSceneUrl = "/spline/cyano-robot.scene.splinecode";
+const mobileHeroVideoUrl = "/media/hero-videos/cyano-robot-mobile.mp4?v=20260513a";
+const phoneHeroMediaQuery = "(max-width: 767px), ((hover: none) and (pointer: coarse) and (max-height: 480px))";
 
 const Hero = () => {
     const viewerId = React.useId();
     const [sceneReady, setSceneReady] = React.useState(false);
     const [shouldRenderScene, setShouldRenderScene] = React.useState(false);
+    const [useMobileVideo, setUseMobileVideo] = React.useState(false);
 
     React.useEffect(() => {
-        const mediaQuery = window.matchMedia("(hover: none), (pointer: coarse), (max-width: 1024px)");
+        const mediaQuery = window.matchMedia(phoneHeroMediaQuery);
         const updateRenderMode = () => {
-            setShouldRenderScene(!mediaQuery.matches);
+            const shouldUseVideo = mediaQuery.matches;
+            setUseMobileVideo(shouldUseVideo);
+            setShouldRenderScene(!shouldUseVideo);
         };
 
         updateRenderMode();
@@ -94,7 +99,19 @@ const Hero = () => {
                     "events-target": "global",
                     loading: "eager",
                     title: "Cyano live 3D robot",
-                }) : <div className="hero-spline-viewer hero-spline-viewer--static hero-spline-viewer--ready" />}
+                }) : useMobileVideo ? (
+                    <video
+                        className="hero-spline-viewer hero-mobile-video hero-spline-viewer--ready"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
+                        aria-label="Cyano animated robot preview"
+                    >
+                        <source src={mobileHeroVideoUrl} type="video/mp4" />
+                    </video>
+                ) : <div className="hero-spline-viewer hero-spline-viewer--static hero-spline-viewer--ready" />}
             </div>
         </section>
     );

@@ -29,7 +29,7 @@ type ActiveGallery = {
     photoIndex: number;
 };
 
-const mobileGalleryQuery = "(hover: none), (pointer: coarse), (max-width: 768px)";
+const mobileGalleryQuery = "(max-width: 767px), ((hover: none) and (pointer: coarse) and (max-height: 480px))";
 
 const getGalleryViewerHref = (caseIndex: number, photoIndex = 0) => {
     const params = new URLSearchParams({
@@ -324,24 +324,14 @@ const Cases = () => {
 
         galleryReturnScrollY.current = window.scrollY;
         galleryReturnCaseIndex.current = index;
-        window.scrollTo({ top: 0, behavior: "auto" });
         setActiveGallery({ caseIndex: index, photoIndex: 0 });
     }, []);
 
     const closeGallery = useCallback(() => {
-        const returnCaseIndex = galleryReturnCaseIndex.current;
+        const returnScrollY = galleryReturnScrollY.current;
         setActiveGallery(null);
         window.requestAnimationFrame(() => {
-            const returnCase = returnCaseIndex === null
-                ? null
-                : document.getElementById(`case-study-${returnCaseIndex}`);
-
-            if (returnCase) {
-                returnCase.scrollIntoView({ block: "center", behavior: "auto" });
-            } else {
-                window.scrollTo({ top: galleryReturnScrollY.current, behavior: "auto" });
-            }
-
+            window.scrollTo({ top: returnScrollY, behavior: "auto" });
             galleryReturnCaseIndex.current = null;
         });
     }, []);
@@ -393,12 +383,20 @@ const Cases = () => {
             return;
         }
 
-        const previousOverflow = document.body.style.overflow;
-        const shouldLockPageScroll = window.matchMedia("(min-width: 769px)").matches;
+        const previousBodyOverflow = document.body.style.overflow;
+        const previousBodyPaddingRight = document.body.style.paddingRight;
+        const previousDocumentOverflow = document.documentElement.style.overflow;
+        const shouldLockPageScroll = !window.matchMedia(mobileGalleryQuery).matches;
         let visualViewportFrame = 0;
 
         if (shouldLockPageScroll) {
+            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+            document.documentElement.style.overflow = "hidden";
             document.body.style.overflow = "hidden";
+
+            if (scrollbarWidth > 0) {
+                document.body.style.paddingRight = `${scrollbarWidth}px`;
+            }
         }
 
         document.body.classList.add("case-gallery-active");
@@ -435,7 +433,9 @@ const Cases = () => {
 
         return () => {
             if (shouldLockPageScroll) {
-                document.body.style.overflow = previousOverflow;
+                document.documentElement.style.overflow = previousDocumentOverflow;
+                document.body.style.overflow = previousBodyOverflow;
+                document.body.style.paddingRight = previousBodyPaddingRight;
             }
             window.cancelAnimationFrame(visualViewportFrame);
             window.visualViewport?.removeEventListener("resize", updateZoomingClass);
