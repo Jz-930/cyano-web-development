@@ -641,6 +641,11 @@ p {
   opacity: 1;
 }
 
+.hero-spline-viewer--static,
+.service-hero-frame--static {
+  display: none;
+}
+
 .hero-scene::after {
   content: "";
   position: absolute;

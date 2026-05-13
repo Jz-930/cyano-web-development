@@ -8,24 +8,42 @@ const splineViewerScript = "/vendor/spline-viewer-1.12.92.js";
 const splineSceneUrl = "/spline/cyano-robot.scene.splinecode";
 
 const Hero = () => {
-    const splineViewerRef = React.useRef<HTMLElement | null>(null);
+    const viewerId = React.useId();
     const [sceneReady, setSceneReady] = React.useState(false);
+    const [shouldRenderScene, setShouldRenderScene] = React.useState(false);
 
     React.useEffect(() => {
-        const viewer = splineViewerRef.current;
+        const mediaQuery = window.matchMedia("(hover: none), (pointer: coarse), (max-width: 1024px)");
+        const updateRenderMode = () => {
+            setShouldRenderScene(!mediaQuery.matches);
+        };
+
+        updateRenderMode();
+        mediaQuery.addEventListener("change", updateRenderMode);
+
+        return () => mediaQuery.removeEventListener("change", updateRenderMode);
+    }, []);
+
+    React.useEffect(() => {
+        if (!shouldRenderScene) {
+            setSceneReady(true);
+            return;
+        }
+
+        const viewer = document.getElementById(viewerId);
         if (!viewer) return;
 
         const handleLoadComplete = () => setSceneReady(true);
 
         viewer.addEventListener("load-complete", handleLoadComplete);
         return () => viewer.removeEventListener("load-complete", handleLoadComplete);
-    }, []);
+    }, [viewerId, shouldRenderScene]);
 
     return (
         <section
             className="hero-section relative flex min-h-screen items-center overflow-hidden border-b border-white/5 bg-transparent pt-24"
         >
-            <Script id="spline-viewer-loader" type="module" src={splineViewerScript} strategy="afterInteractive" />
+            {shouldRenderScene && <Script id="spline-viewer-loader" type="module" src={splineViewerScript} strategy="afterInteractive" />}
 
             <div className="hero-inner relative z-10">
                 <div className="reveal hero-copy min-w-0 text-left">
@@ -68,15 +86,15 @@ const Hero = () => {
             <div className="hero-scene" aria-hidden="true">
                 <div className="hero-scene-glow hero-scene-glow--mint" />
                 <div className="hero-scene-glow hero-scene-glow--amber" />
-                {React.createElement("spline-viewer", {
-                    ref: splineViewerRef,
+                {shouldRenderScene ? React.createElement("spline-viewer", {
+                    id: viewerId,
                     className: `hero-spline-viewer ${sceneReady ? "hero-spline-viewer--ready" : ""}`,
                     url: splineSceneUrl,
                     background: "transparent",
                     "events-target": "global",
                     loading: "eager",
                     title: "Cyano live 3D robot",
-                })}
+                }) : <div className="hero-spline-viewer hero-spline-viewer--static hero-spline-viewer--ready" />}
             </div>
         </section>
     );
