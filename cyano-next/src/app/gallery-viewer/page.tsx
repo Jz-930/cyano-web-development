@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
 import { Suspense } from "react";
 import GalleryViewerClient from "./GalleryViewerClient";
+import { siteContent } from "@/i18n/locales";
 
 export const metadata: Metadata = {
-    title: "Cyano Gallery",
+    ...siteContent.cn.meta["/gallery-viewer"],
     robots: {
         index: false,
         follow: false,

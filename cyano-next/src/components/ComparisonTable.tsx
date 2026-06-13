@@ -1,57 +1,41 @@
 "use client";
 
 import { useReveal } from "@/hooks/useReveal";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const ComparisonTable = () => {
     useReveal();
-
-    const rows = [
-        {
-            title: "驱动核心",
-            bad: "个人灵感与技巧",
-            good: "企业知识库 + SOP",
-            icon: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="12" r="3" />
-                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
-                </svg>
-            ),
-        },
-        {
-            title: "稳定性",
-            bad: "随机性强，难以复现",
-            good: "输出稳定，可审计，可复用",
-            icon: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                </svg>
-            ),
-        },
-        {
-            title: "模型关系",
-            bad: "深度绑定特定模型习惯",
-            good: "模型无关 (Model Agnostic)",
-            icon: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
-                    <path d="M8 21h8M12 17v4" />
-                </svg>
-            ),
-        },
-        {
-            title: "可迁移性",
-            bad: "不可迁移，永远跟不上大模型发展速度",
-            good: "可迁移，永远适用当下最合适的模型",
-            icon: (
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M17 1l4 4-4 4" />
-                    <path d="M3 11V9a4 4 0 0 1 4-4h14" />
-                    <path d="M7 23l-4-4 4-4" />
-                    <path d="M21 13v2a4 4 0 0 1-4 4H3" />
-                </svg>
-            ),
-        },
+    const { content } = useI18n();
+    const comparison = content.technology.comparison;
+    const rowIcons = [
+        (
+            <svg key="core" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+            </svg>
+        ),
+        (
+            <svg key="stability" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+        ),
+        (
+            <svg key="model" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                <path d="M8 21h8M12 17v4" />
+            </svg>
+        ),
+        (
+            <svg key="portability" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M17 1l4 4-4 4" />
+                <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                <path d="M7 23l-4-4 4-4" />
+                <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+            </svg>
+        ),
     ];
+    const comparisonRows = comparison.rows as Array<{ title: string; bad: string; good: string }>;
+    const rows = comparisonRows.map((row, index) => ({ ...row, icon: rowIcons[index] }));
 
     // Status icons
     const CrossIcon = () => (
@@ -133,17 +117,17 @@ const ComparisonTable = () => {
                         letterSpacing: "-0.02em",
                         color: "white",
                     }}>
-                        从个人技巧进化为系统能力
+                        {comparison.title}
                     </h2>
 
                     <div className="reveal" style={{ width: "100%", borderTop: "1px solid rgba(255, 255, 255, 0.06)", overflowX: "auto" }}>
                         {/* Header Row */}
                         <div className="table-row" style={headerRowStyle}>
                             <div style={headerCellStyle}>
-                                Dimension
+                                {comparison.headers[0]}
                             </div>
                             <div style={headerCellStyle}>
-                                Traditional Prompt Engineering
+                                {comparison.headers[1]}
                             </div>
                             <div style={{
                                 ...headerCellStyle,
@@ -154,7 +138,7 @@ const ComparisonTable = () => {
                             }}>
                                 <div style={{ position: "absolute", inset: 0, backgroundColor: "rgba(0, 242, 255, 0.03)" }} />
                                 <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "2px", backgroundColor: "#00F2FF", opacity: 0.5, boxShadow: "0 0 10px rgba(0,242,255,0.5)" }} />
-                                <span style={{ position: "relative", zIndex: 10 }}>Cyano Intelligence</span>
+                                <span style={{ position: "relative", zIndex: 10 }}>{comparison.headers[2]}</span>
                             </div>
                         </div>
 

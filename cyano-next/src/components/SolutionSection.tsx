@@ -1,40 +1,19 @@
 "use client";
 
 import { useReveal } from "@/hooks/useReveal";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const SolutionSection = () => {
     useReveal();
-
-    const levels = [
-        {
-            level: "Level 1",
-            title: "Immutable Directives",
-            weight: "0.4",
-            strategy: "无损保留 (Lossless Retention)",
-            desc: "代理配置、输出格式等最高权重指令，100% 召回。",
-        },
-        {
-            level: "Level 2",
-            title: "Key States",
-            weight: "0.3",
-            strategy: "结构化摘要 (Structured Summary)",
-            desc: '将"登录成功"、"数据解析中"等节点转化为高密度状态数据。',
-        },
-        {
-            level: "Level 3",
-            title: "Reasoning Chains",
-            weight: "0.2",
-            strategy: "激进剪枝 (Aggressive Pruning)",
-            desc: "针对 CoT (思维链) 过程，仅保留最终结论，剔除冗长的试错路径。",
-        },
-        {
-            level: "Level 4",
-            title: "Noise & Logs",
-            weight: "0.1",
-            strategy: "根因提取 (Root Cause Only)",
-            desc: "遇到报错时，仅保留错误原因，自动清洗堆栈噪声。",
-        }
-    ];
+    const { content } = useI18n();
+    const solution = content.technology.solution;
+    const levels = solution.levels as Array<{
+        level: string;
+        title: string;
+        weight: string;
+        strategy: string;
+        desc: string;
+    }>;
 
     const sectionStyle: React.CSSProperties = {
         padding: "160px 0",
@@ -87,7 +66,7 @@ const SolutionSection = () => {
                         marginBottom: "24px",
                         letterSpacing: "-0.02em",
                     }}>
-                        智能上下文<span style={{ color: "#00F2FF", fontStyle: "italic" }}>估值</span>引擎
+                        {solution.titlePrefix}<span style={{ color: "#00F2FF", fontStyle: "italic" }}>{solution.titleAccent}</span>{solution.titleSuffix}
                     </h2>
                     <p style={{
                         color: "#888899",
@@ -96,7 +75,7 @@ const SolutionSection = () => {
                         maxWidth: "700px",
                         margin: "0 auto",
                     }}>
-                        像操作系统管理虚拟内存一样，动态管理 Agent 的长期记忆。
+                        {solution.description}
                     </p>
                 </div>
 
@@ -111,7 +90,7 @@ const SolutionSection = () => {
                             letterSpacing: "0.15em",
                             marginBottom: "16px",
                         }}>
-                            Raw Conversation Flow
+                            {solution.rawLabel}
                         </div>
                         {[1, 2, 3, 4, 5, 6].map((i) => (
                             <div
@@ -184,7 +163,7 @@ const SolutionSection = () => {
                                         fontFamily: "monospace",
                                         color: "#888899",
                                     }}>
-                                        Weight: <span style={{ color: "white" }}>{level.weight}</span>
+                                        {solution.weightLabel}: <span style={{ color: "white" }}>{level.weight}</span>
                                     </div>
                                 </div>
 
@@ -223,7 +202,7 @@ const SolutionSection = () => {
                             letterSpacing: "0.15em",
                             marginBottom: "20px",
                         }}>
-                            High-Value Memory
+                            {solution.outputLabel}
                         </div>
                         <div style={{
                             width: "180px",
@@ -271,7 +250,7 @@ const SolutionSection = () => {
                                     color: "#00F2FF",
                                     fontFamily: "monospace",
                                 }}>
-                                    Optimized
+                                    {solution.optimizedLabel}
                                 </span>
                             </div>
                         </div>

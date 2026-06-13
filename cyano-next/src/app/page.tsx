@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import HeroSignalsSection from "@/components/HeroSignalsSection";
@@ -6,6 +7,9 @@ import HomeServicesPreview from "@/components/HomeServicesPreview";
 import HomeCasesPreview from "@/components/HomeCasesPreview";
 import HomeTechnologyPreview from "@/components/HomeTechnologyPreview";
 import Footer from "@/components/Footer";
+import { siteContent } from "@/i18n/locales";
+
+export const metadata: Metadata = siteContent.cn.meta["/"];
 
 export default function Home() {
   return (

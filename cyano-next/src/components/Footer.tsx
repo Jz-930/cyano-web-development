@@ -1,12 +1,15 @@
 "use client";
 
 import { useReveal } from "@/hooks/useReveal";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const fieldClass =
     "w-full rounded-2xl border border-white/10 bg-[#071012]/85 px-5 py-4 text-base text-white outline-none transition-all placeholder:text-white/30 focus:border-brand-mint/60 focus:shadow-[0_0_0_4px_rgba(126,245,214,0.08)]";
 
 const Footer = () => {
     useReveal();
+    const { content } = useI18n();
+    const footer = content.contact.footer;
 
     return (
         <footer id="contact" className="relative overflow-hidden border-t border-brand-mint/10 bg-[#030607] py-28">
@@ -15,15 +18,15 @@ const Footer = () => {
 
             <div className="container reveal relative z-10 grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
                 <div>
-                    <div className="lab-kicker mb-4">CONTACT US</div>
+                    <div className="lab-kicker mb-4">{footer.kicker}</div>
                     <h2 className="mb-6 max-w-xl font-heading text-[clamp(2.2rem,5vw,4.5rem)] font-semibold leading-tight text-white">
-                        联系我们
+                        {footer.title}
                     </h2>
                     <p className="mb-10 max-w-lg text-[1.1rem] leading-8 text-text-muted">
-                        我们提供多类型的合作模式，不论搭建自己的工作平台、协作开发还是直接将工作交给Cyano托管。联系我们，获得更多针对性咨询。
+                        {footer.description}
                     </p>
                     <div className="grid max-w-lg gap-3">
-                        {["定价灵活，Cyano提供基于最前沿LLM技术的个性化评估", "支持买断、低启动持续服务、托管式交付", "SaaS 托管与私有化部署均可讨论"].map((item) => (
+                        {footer.bullets.map((item: string) => (
                             <div key={item} className="flex items-center gap-3 text-sm text-white/75">
                                 <span className="h-2 w-2 rounded-full bg-brand-mint shadow-[0_0_14px_rgba(126,245,214,0.65)]" />
                                 {item}
@@ -34,27 +37,26 @@ const Footer = () => {
 
                 <form className="lab-panel grid gap-5 p-6 md:p-8">
                     <div className="grid gap-5 md:grid-cols-2">
-                        <input type="text" className={fieldClass} placeholder="姓名 / Name" />
-                        <input type="text" className={fieldClass} placeholder="公司 / Company" />
+                        <input type="text" className={fieldClass} placeholder={footer.fields.name} />
+                        <input type="text" className={fieldClass} placeholder={footer.fields.company} />
                     </div>
-                    <input type="email" className={fieldClass} placeholder="工作邮箱 / Work Email" />
+                    <input type="email" className={fieldClass} placeholder={footer.fields.email} />
                     <select className={`${fieldClass} text-white/70`}>
-                        <option>我想定制 AI 工具</option>
-                        <option>我想低成本启动试点</option>
-                        <option>我想把任务交给 Cyano 托管</option>
-                        <option>我还不确定，想先评估</option>
+                        {footer.fields.selectOptions.map((option: string) => (
+                            <option key={option}>{option}</option>
+                        ))}
                     </select>
                     <textarea
                         className={`${fieldClass} min-h-[132px] resize-none`}
-                        placeholder="简单描述你的业务场景、现有成本或希望 AI 帮你完成的任务"
+                        placeholder={footer.fields.message}
                     />
                     <button type="button" className="cyano-button mt-2 w-full">
-                        提交咨询
+                        {footer.fields.submit}
                     </button>
                 </form>
 
                 <div className="lg:col-span-2 border-t border-white/10 pt-10 text-center text-sm tracking-[0.05em] text-text-muted/70">
-                    &copy; 2026 Cyano Intelligence. All Rights Reserved.
+                    {footer.copyright}
                 </div>
             </div>
         </footer>

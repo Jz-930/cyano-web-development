@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 type MediaTone = "mint" | "amber" | "coral" | "blue";
 
@@ -16,11 +19,14 @@ const MediaFrame = ({
     src,
     alt,
     label,
-    caption = "业务流程与系统能力示意图",
+    caption,
     tone = "mint",
     square = false,
     priority = false,
 }: MediaFrameProps) => {
+    const { content } = useI18n();
+    const resolvedCaption = caption === undefined ? content.common.mediaDefaultCaption : caption;
+
     return (
         <figure className={`media-frame media-frame--${tone} ${square ? "media-frame--square" : ""}`}>
             <div className="media-frame__image-wrap">
@@ -35,7 +41,7 @@ const MediaFrame = ({
             </div>
             <figcaption className="media-frame__caption">
                 <strong>{label}</strong>
-                {caption && <span>{caption}</span>}
+                {resolvedCaption && <span>{resolvedCaption}</span>}
             </figcaption>
         </figure>
     );

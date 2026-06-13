@@ -2,7 +2,7 @@
 @config "../../tailwind.config.ts";
 
 /* ============================
-   1. 核心变量与重置 (CORE VARIABLES)
+   1. Core Variables and Reset
    ============================ */
 :root {
   /* Core Colors */
@@ -29,8 +29,8 @@
   --border-hover: rgba(255, 255, 255, 0.15);
 
   /* Fonts */
-  --font-heading: var(--font-space-grotesk), sans-serif;
-  --font-body: var(--font-inter), sans-serif;
+  --font-heading: var(--font-space-grotesk, "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif);
+  --font-body: var(--font-inter, "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif);
 
   /* Layout */
   --max-width: 1200px;
@@ -90,7 +90,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 通用布局类 */
+/* Layout utilities */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -103,7 +103,7 @@ html {
   border-bottom: 1px solid var(--border-light);
 }
 
-/* 排版工具 */
+/* Typography utilities */
 h1,
 h2,
 h3,
@@ -1230,7 +1230,7 @@ p {
   }
 }
 
-/* 滚动显现动画 */
+/* Scroll reveal animation */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -1243,7 +1243,7 @@ p {
 }
 
 /* ============================
-   按钮样式
+   Button styles
    ============================ */
 .btn-outline {
   padding: 12px 28px;
@@ -1283,7 +1283,7 @@ p {
 }
 
 /* ============================
-   表单样式
+   Form styles
    ============================ */
 .input-field {
   width: 100%;
@@ -1310,7 +1310,7 @@ select.input-field {
 }
 
 /* ============================
-   网格系统 (GRID SYSTEM)
+   Grid system
    ============================ */
 .grid-4 {
   display: grid;
@@ -1344,7 +1344,7 @@ select.input-field {
 }
 
 /* ============================
-   响应式
+   Responsive rules
    ============================ */
 @media (max-width: 900px) {
   .nav-links {
@@ -1788,7 +1788,7 @@ select.input-field {
 }
 
 /* ============================
-   UI Visual / Mockup Styles (从原始 HTML)
+   UI Visual / Mockup Styles
    ============================ */
 .ui-visual {
   flex: 1.2;
@@ -1836,7 +1836,7 @@ select.input-field {
   gap: 24px;
 }
 
-/* UI 内部骨架元素 */
+/* Internal UI skeleton elements */
 .sk-sidebar {
   width: 60px;
   height: 80%;
@@ -1878,7 +1878,7 @@ select.input-field {
   border-radius: 4px;
 }
 
-/* 特殊高亮元素 */
+/* Special highlight elements */
 .highlight-bar {
   background: rgba(0, 242, 255, 0.05);
   border: 1px solid rgba(0, 242, 255, 0.3);

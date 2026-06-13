@@ -4,42 +4,13 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import MediaFrame from "@/components/MediaFrame";
 import { useReveal } from "@/hooks/useReveal";
-
-const steps = [
-    {
-        title: "业务诊断",
-        desc: "先判断这是新能力建设，还是现有流程降本增效，避免把 AI 做成展示品。",
-        signal: "Problem Framed",
-        dot: "accent-dot",
-    },
-    {
-        title: "价值评估",
-        desc: "一起核算人工、外包、管理、返工和机会成本，判断这件事是否值得投入。",
-        signal: "Value Scored",
-        dot: "accent-dot accent-dot--amber",
-    },
-    {
-        title: "方案报价",
-        desc: "明确工具买断、低启动持续服务，或托管式交付的边界和收费逻辑。",
-        signal: "Model Selected",
-        dot: "accent-dot accent-dot--coral",
-    },
-    {
-        title: "开发 / 试点 / 托管交付",
-        desc: "按选定模式交付可用工具、业务工作流，或成批任务结果。",
-        signal: "Workflow Live",
-        dot: "accent-dot",
-    },
-    {
-        title: "上线维护与迭代",
-        desc: "根据托管、接口变化、新需求和使用反馈，持续优化系统与服务。",
-        signal: "Ops Loop",
-        dot: "accent-dot accent-dot--blue",
-    },
-];
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const ProcessTimeline = () => {
     useReveal();
+    const { content } = useI18n();
+    const process = content.services.process;
+    const steps = process.steps as Array<{ title: string; desc: string; signal: string; dot: string }>;
     const [activeIndex, setActiveIndex] = useState(0);
     const refs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -75,14 +46,14 @@ const ProcessTimeline = () => {
             <div className="lab-container">
                 <div className="reveal mb-16 grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
                     <div>
-                        <div className="lab-kicker mb-4">DELIVERY SEQUENCE</div>
+                        <div className="lab-kicker mb-4">{process.kicker}</div>
                         <h2 className="section-title">
-                            从一次业务诊断开始，
-                            <span className="text-brand-mint"> 到可维护的交付</span>
+                            {process.title}
+                            <span className="text-brand-mint">{process.accent}</span>
                         </h2>
                     </div>
                     <p className="section-copy">
-                        Cyano 的合作流程把“想法”变成可验收、可上线、可维护的系统或服务，同时让客户在一开始就知道自己是在买工具、买使用权，还是买结果。
+                        {process.description}
                     </p>
                 </div>
 
@@ -130,13 +101,13 @@ const ProcessTimeline = () => {
                         <div className="sticky top-28 grid gap-5">
                             <MediaFrame
                                 src="/media/process-map.svg"
-                                alt="Cyano 合作流程示意图"
-                                label="合作流程图"
+                                alt={process.imageAlt}
+                                label={process.imageLabel}
                                 tone="amber"
                             />
                             <div className="lab-panel scanline p-7">
                                 <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-5">
-                                    <span className="lab-label">Current Phase</span>
+                                    <span className="lab-label">{process.currentPhaseLabel}</span>
                                     <span className="font-mono text-sm text-accent-amber">0{activeIndex + 1}/05</span>
                                 </div>
                                 <div className="mb-6">
@@ -155,7 +126,7 @@ const ProcessTimeline = () => {
                                     />
                                 </div>
                                 <Link href="#contact" className="cyano-ghost-button w-full">
-                                    预约一次业务诊断
+                                    {process.ctaLabel}
                                 </Link>
                             </div>
                         </div>

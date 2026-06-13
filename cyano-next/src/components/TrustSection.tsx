@@ -3,9 +3,12 @@
 import { useReveal } from "@/hooks/useReveal";
 import { FaCloud, FaServer } from "react-icons/fa";
 import { SiOpenai, SiMysql, SiMeta } from "react-icons/si";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const TrustSection = () => {
     useReveal();
+    const { content } = useI18n();
+    const trust = content.technology.trust;
 
     const sectionStyle: React.CSSProperties = {
         padding: "160px 0",
@@ -86,7 +89,7 @@ const TrustSection = () => {
                     fontSize: "clamp(2rem, 4vw, 3rem)",
                     color: "white",
                 }}>
-                    兼容并蓄，安全落地
+                    {trust.title}
                 </h2>
 
                 <div className="trust-grid" style={gridStyle}>
@@ -111,10 +114,10 @@ const TrustSection = () => {
                             }}>
                                 <FaCloud />
                             </span>
-                            SaaS 托管版
+                            {trust.cards[0].title}
                         </h3>
                         <p className="card-desc" style={descStyle}>
-                            即刻接入，弹性扩展。适合快速验证与轻量级场景。我们为您提供隔离的云端环境，确保业务快速上线。
+                            {trust.cards[0].desc}
                         </p>
                     </div>
                     <div
@@ -138,10 +141,10 @@ const TrustSection = () => {
                             }}>
                                 <FaServer />
                             </span>
-                            私有化部署版
+                            {trust.cards[1].title}
                         </h3>
                         <p className="card-desc" style={descStyle}>
-                            数据不出域，模型本地运行。提供完整的 Docker 交付与本地算力适配，确保绝对的数据主权与合规。
+                            {trust.cards[1].desc}
                         </p>
                     </div>
                 </div>

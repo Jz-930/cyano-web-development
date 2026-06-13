@@ -2,6 +2,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const galleries = [
     [
@@ -68,6 +69,8 @@ const getSafeBackHref = (value: string | null) => {
 };
 
 export default function GalleryViewerClient() {
+    const { content } = useI18n();
+    const viewer = content.galleryViewer;
     const searchParams = useSearchParams();
     const caseIndex = getSafeIndex(searchParams.get("case"), galleries.length);
     const gallery = galleries[caseIndex];
@@ -89,15 +92,15 @@ export default function GalleryViewerClient() {
 
     return (
         <main className="gallery-viewer-page">
-            <nav className="gallery-viewer-bar" aria-label="Gallery controls">
+            <nav className="gallery-viewer-bar" aria-label={viewer.controlsLabel}>
                 <a className="gallery-viewer-button" href={backHref}>
-                    Back
+                    {viewer.back}
                 </a>
                 <span className="gallery-viewer-count">
                     {photoIndex + 1} / {gallery.length}
                 </span>
                 <a className="gallery-viewer-button" href={src} target="_blank" rel="noreferrer">
-                    Original
+                    {viewer.original}
                 </a>
             </nav>
 
@@ -105,16 +108,16 @@ export default function GalleryViewerClient() {
                 <img
                     className="gallery-viewer-image"
                     src={src}
-                    alt={`Cyano project screenshot ${photoIndex + 1}`}
+                    alt={viewer.imageAlt(photoIndex + 1)}
                 />
             </div>
 
-            <nav className="gallery-viewer-footer" aria-label="Gallery navigation">
+            <nav className="gallery-viewer-footer" aria-label={viewer.navigationLabel}>
                 <a className="gallery-viewer-button" href={getViewerHref(previousIndex)}>
-                    Previous
+                    {viewer.previous}
                 </a>
                 <a className="gallery-viewer-button" href={getViewerHref(nextIndex)}>
-                    Next
+                    {viewer.next}
                 </a>
             </nav>
         </main>

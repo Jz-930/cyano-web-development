@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Script from "next/script";
 import React from "react";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const splineViewerScript = "/vendor/spline-viewer-1.12.92.js";
 const splineSceneUrl = "/spline/cyano-robot.scene.splinecode";
@@ -10,6 +11,8 @@ const mobileHeroVideoUrl = "/media/hero-videos/cyano-robot-mobile.mp4?v=20260513
 const phoneHeroMediaQuery = "(max-width: 767px), ((hover: none) and (pointer: coarse) and (max-height: 480px))";
 
 const Hero = () => {
+    const { content } = useI18n();
+    const hero = content.home.hero;
     const viewerId = React.useId();
     const [sceneReady, setSceneReady] = React.useState(false);
     const [shouldRenderScene, setShouldRenderScene] = React.useState(false);
@@ -53,36 +56,34 @@ const Hero = () => {
             <div className="hero-inner relative z-10">
                 <div className="reveal hero-copy min-w-0 text-left">
                     <h1 className="hero-title max-w-4xl">
-                        将企业知识
+                        {hero.titleLines[0]}
                         <span className="block bg-gradient-to-r from-white via-brand-mint to-accent-cyan bg-clip-text text-transparent">
-                            转化为可交付的
+                            {hero.titleLines[1]}
                         </span>
                         <span className="block bg-gradient-to-r from-brand-mint via-accent-cyan to-accent-amber bg-clip-text text-transparent">
-                            AI 生产力
+                            {hero.titleLines[2]}
                         </span>
                     </h1>
                     <p className="hero-description mb-10">
-                        Cyano 帮企业从业务机会梳理开始，设计定制 AI 工具、AI 工作流和托管式 AI
-                        服务，让 AI 不只停留在聊天窗口，而是进入可上线、可维护、可持续合作的生产系统。
+                        {hero.description}
                     </p>
                     <div className="mb-9 grid max-w-2xl gap-3 sm:grid-cols-3">
-                        {[
-                            ["定制 AI 工具", "accent-dot"],
-                            ["低启动试点", "accent-dot accent-dot--amber"],
-                            ["托管式服务", "accent-dot accent-dot--blue"],
-                        ].map(([label, dot]) => (
+                        {hero.chips.map((label: string, index: number) => {
+                            const dot = ["accent-dot", "accent-dot accent-dot--amber", "accent-dot accent-dot--blue"][index];
+                            return (
                             <div key={label} className="console-chip">
                                 <span className={`${dot} mr-2`} />
                                 {label}
                             </div>
-                        ))}
+                            );
+                        })}
                     </div>
                     <div className="hero-actions">
                         <Link href="/services" className="cyano-button">
-                            查看合作方式
+                            {hero.primaryLabel}
                         </Link>
                         <Link href="/cases" className="cyano-ghost-button">
-                            查看项目展示
+                            {hero.secondaryLabel}
                         </Link>
                     </div>
                 </div>
@@ -98,7 +99,7 @@ const Hero = () => {
                     background: "transparent",
                     "events-target": "global",
                     loading: "eager",
-                    title: "Cyano live 3D robot",
+                    title: hero.splineTitle,
                 }) : useMobileVideo ? (
                     <video
                         className="hero-spline-viewer hero-mobile-video hero-spline-viewer--ready"
@@ -107,7 +108,7 @@ const Hero = () => {
                         loop
                         playsInline
                         preload="auto"
-                        aria-label="Cyano animated robot preview"
+                        aria-label={hero.mobileVideoLabel}
                     >
                         <source src={mobileHeroVideoUrl} type="video/mp4" />
                     </video>

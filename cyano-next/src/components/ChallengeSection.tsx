@@ -1,48 +1,42 @@
 "use client";
 
 import { useReveal } from "@/hooks/useReveal";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const ChallengeSection = () => {
     useReveal();
+    const { content } = useI18n();
+    const challengeContent = content.technology.challenges;
 
-    const challenges = [
-        {
-            icon: (
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24 4V44" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M4 24H44" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M34 14L44 4" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M14 34L4 44" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-            ),
-            title: "Cost Explosion",
-            subtitle: "成本失控",
-            desc: "随着对话轮数增加，全量历史传输导致 API 成本呈指数级上升。单次对话成本可能翻几十倍。"
-        },
-        {
-            icon: (
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="24" cy="24" r="20" stroke="#00F2FF" strokeWidth="2" />
-                    <path d="M24 10V24L34 34" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-            ),
-            title: "Latency Spikes",
-            subtitle: "首字延迟 (TTFT)",
-            desc: "上下文窗口负载过高会导致 Time-To-First-Token (首字时间) 显著增加，破坏实时交互体验。"
-        },
-        {
-            icon: (
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24 4L4 44H44L24 4Z" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <path d="M24 14V34" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    <circle cx="24" cy="38" r="2" fill="#00F2FF" />
-                </svg>
-            ),
-            title: "\"Lost in the Middle\"",
-            subtitle: "中间迷失效应",
-            desc: "海量噪声会导致模型注意力分散。更多的数据不等于更智能，反而会导致模型忽略中间的关键指令。"
-        }
+    const challengeIcons = [
+        (
+            <svg key="cost" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 4V44" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M4 24H44" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M34 14L44 4" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M14 34L4 44" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+        ),
+        (
+            <svg key="latency" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="20" stroke="#00F2FF" strokeWidth="2" />
+                <path d="M24 10V24L34 34" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+        ),
+        (
+            <svg key="middle" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 4L4 44H44L24 4Z" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M24 14V34" stroke="#00F2FF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <circle cx="24" cy="38" r="2" fill="#00F2FF" />
+            </svg>
+        ),
     ];
+
+    const challengeItems = challengeContent.items as Array<{ title: string; subtitle: string; desc: string }>;
+    const challenges = challengeItems.map((item, index) => ({
+        ...item,
+        icon: challengeIcons[index],
+    }));
 
     const sectionStyle: React.CSSProperties = {
         padding: "160px 0",
@@ -80,7 +74,7 @@ const ChallengeSection = () => {
                         marginBottom: "24px",
                         letterSpacing: "-0.02em",
                     }}>
-                        长上下文 <span style={{ color: "#00F2FF" }}>Agents</span> 的不可能三角
+                        {challengeContent.titlePrefix}<span style={{ color: "#00F2FF" }}>{challengeContent.titleAccent}</span>{challengeContent.titleSuffix}
                     </h2>
                     <p style={{
                         color: "#888899",
@@ -89,7 +83,7 @@ const ChallengeSection = () => {
                         maxWidth: "700px",
                         margin: "0 auto",
                     }}>
-                        随着对话深度增加，暴力堆砌 Token 只会带来系统性崩溃。
+                        {challengeContent.description}
                     </p>
                 </div>
 

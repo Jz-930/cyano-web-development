@@ -1,9 +1,14 @@
 "use client";
 
 import { useReveal } from "@/hooks/useReveal";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const PerformanceSection = () => {
     useReveal();
+    const { content } = useI18n();
+    const performance = content.technology.performance;
+    const metrics = performance.metrics as Array<{ value: string; unit: string; label: string; desc: string }>;
+    const bottomMetrics = performance.bottomMetrics as Array<[string, string]>;
 
     const sectionStyle: React.CSSProperties = {
         padding: "160px 0",
@@ -45,7 +50,7 @@ const PerformanceSection = () => {
                             marginBottom: "24px",
                             letterSpacing: "-0.02em",
                         }}>
-                            大规模<span style={{ color: "#00F2FF" }}>优化</span>
+                            {performance.titlePrefix}<span style={{ color: "#00F2FF" }}>{performance.titleAccent}</span>
                         </h2>
                         <p style={{
                             color: "#888899",
@@ -53,59 +58,36 @@ const PerformanceSection = () => {
                             fontWeight: 300,
                             marginBottom: "48px",
                         }}>
-                            基于 100 轮对话测试基准
+                            {performance.description}
                         </p>
 
                         <div>
-                            <div className="metric-card" style={metricCardStyle}>
-                                <h4 style={{
-                                    fontSize: "2rem",
-                                    fontFamily: "var(--font-heading)",
-                                    fontWeight: 700,
-                                    color: "white",
-                                    marginBottom: "8px",
-                                }}>
-                                    &lt; 200<span style={{ fontSize: "1rem", color: "#888899" }}>ms</span>
-                                </h4>
-                                <p style={{
-                                    fontSize: "0.8rem",
-                                    fontFamily: "monospace",
-                                    color: "#00F2FF",
-                                    textTransform: "uppercase",
-                                    letterSpacing: "0.15em",
-                                    marginBottom: "8px",
-                                }}>
-                                    Latency Stability
-                                </p>
-                                <p style={{ color: "#888899", fontSize: "0.9rem" }}>
-                                    无论第 1 轮还是第 50 轮，响应速度恒定
-                                </p>
-                            </div>
-
-                            <div className="metric-card" style={metricCardStyle}>
-                                <h4 style={{
-                                    fontSize: "2rem",
-                                    fontFamily: "var(--font-heading)",
-                                    fontWeight: 700,
-                                    color: "white",
-                                    marginBottom: "8px",
-                                }}>
-                                    100<span style={{ fontSize: "1rem", color: "#888899" }}>%</span>
-                                </h4>
-                                <p style={{
-                                    fontSize: "0.8rem",
-                                    fontFamily: "monospace",
-                                    color: "#00F2FF",
-                                    textTransform: "uppercase",
-                                    letterSpacing: "0.15em",
-                                    marginBottom: "8px",
-                                }}>
-                                    Instruction Recall
-                                </p>
-                                <p style={{ color: "#888899", fontSize: "0.9rem" }}>
-                                    核心配置指令零丢失
-                                </p>
-                            </div>
+                            {metrics.map((metric) => (
+                                <div className="metric-card" style={metricCardStyle} key={metric.label}>
+                                    <h4 style={{
+                                        fontSize: "2rem",
+                                        fontFamily: "var(--font-heading)",
+                                        fontWeight: 700,
+                                        color: "white",
+                                        marginBottom: "8px",
+                                    }}>
+                                        {metric.value}<span style={{ fontSize: "1rem", color: "#888899" }}>{metric.unit}</span>
+                                    </h4>
+                                    <p style={{
+                                        fontSize: "0.8rem",
+                                        fontFamily: "monospace",
+                                        color: "#00F2FF",
+                                        textTransform: "uppercase",
+                                        letterSpacing: "0.15em",
+                                        marginBottom: "8px",
+                                    }}>
+                                        {metric.label}
+                                    </p>
+                                    <p style={{ color: "#888899", fontSize: "0.9rem" }}>
+                                        {metric.desc}
+                                    </p>
+                                </div>
+                            ))}
                         </div>
                     </div>
 
@@ -123,7 +105,7 @@ const PerformanceSection = () => {
                             color: "white",
                             marginBottom: "40px",
                         }}>
-                            Cost Analysis (Token Usage)
+                            {performance.chartTitle}
                         </h3>
 
                         <div style={{ marginBottom: "32px" }}>
@@ -138,8 +120,8 @@ const PerformanceSection = () => {
                                     fontFamily: "monospace",
                                     textTransform: "uppercase",
                                 }}>
-                                    <span>Standard RAG</span>
-                                    <span>100% Cost</span>
+                                    <span>{performance.standardLabel}</span>
+                                    <span>{performance.standardCost}</span>
                                 </div>
                                 <div style={{
                                     height: "48px",
@@ -160,8 +142,8 @@ const PerformanceSection = () => {
                                     fontFamily: "monospace",
                                     textTransform: "uppercase",
                                 }}>
-                                    <span>Cyano Engine</span>
-                                    <span style={{ color: "#00F2FF", fontWeight: 700 }}>-40% Cost</span>
+                                    <span>{performance.cyanoLabel}</span>
+                                    <span style={{ color: "#00F2FF", fontWeight: 700 }}>{performance.cyanoCost}</span>
                                 </div>
                                 <div style={{
                                     height: "48px",
@@ -185,7 +167,7 @@ const PerformanceSection = () => {
                                         color: "white",
                                         fontWeight: 700,
                                     }}>
-                                        Savings
+                                        {performance.savingsLabel}
                                     </span>
                                 </div>
                             </div>
@@ -199,40 +181,25 @@ const PerformanceSection = () => {
                             gridTemplateColumns: "1fr 1fr",
                             gap: "16px",
                         }}>
-                            <div style={{ textAlign: "center" }}>
+                            {bottomMetrics.map(([value, label]) => (
+                            <div style={{ textAlign: "center" }} key={label}>
                                 <div style={{
                                     fontSize: "2rem",
                                     fontWeight: 700,
                                     color: "white",
                                     marginBottom: "4px",
                                 }}>
-                                    10X
+                                    {value}
                                 </div>
                                 <div style={{
                                     fontSize: "0.7rem",
                                     color: "#888899",
                                     textTransform: "uppercase",
                                 }}>
-                                    ROI Increase
+                                    {label}
                                 </div>
                             </div>
-                            <div style={{ textAlign: "center" }}>
-                                <div style={{
-                                    fontSize: "2rem",
-                                    fontWeight: 700,
-                                    color: "white",
-                                    marginBottom: "4px",
-                                }}>
-                                    ∞
-                                </div>
-                                <div style={{
-                                    fontSize: "0.7rem",
-                                    color: "#888899",
-                                    textTransform: "uppercase",
-                                }}>
-                                    Context Scaling
-                                </div>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </div>

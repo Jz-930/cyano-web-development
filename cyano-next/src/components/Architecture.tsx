@@ -2,41 +2,15 @@
 
 import { useReveal } from "@/hooks/useReveal";
 import { useState } from "react";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const Architecture = () => {
     useReveal();
+    const { content } = useI18n();
+    const architecture = content.technology.architecture;
     const [activeStep, setActiveStep] = useState(1);
-
-    const steps = [
-        {
-            id: 0,
-            title: "01. 知识摄入层 (Ingestion)",
-            desc: "连接 PDF、SQL、API 等多源异构数据，建立带权限管理的动态向量索引。",
-        },
-        {
-            id: 1,
-            title: "02. 上下文编排 (RAG Engine)",
-            desc: "在有限 Token 预算内，自动清洗、拼装最相关的 1% 信息，消除模型噪音。",
-        },
-        {
-            id: 2,
-            title: "03. 任务执行层 (Agent)",
-            desc: "将 SOP 固化为 Playbook。包含标准步骤、校验规则与兜底机制，像代码一样执行。",
-            highlight: true,
-        },
-        {
-            id: 3,
-            title: "04. 企业级治理 (Governance)",
-            desc: "全链路日志审计、引用溯源、敏感词拦截。",
-        },
-    ];
-
-    const layers = [
-        "SaaS Application UI",
-        "Cyano Agent Core",
-        "RAG Context Engine",
-        "Enterprise Data (Files/DB)",
-    ];
+    const steps = architecture.steps as Array<{ id: number; title: string; desc: string; highlight?: boolean }>;
+    const layers = architecture.layers as string[];
 
     const layerMapping = [3, 2, 1, 0];
 
@@ -114,7 +88,7 @@ const Architecture = () => {
                             letterSpacing: "-0.02em",
                             color: "white",
                         }}>
-                            Cyano 四层智能架构
+                            {architecture.title}
                         </h2>
 
                         {steps.map((step, index) => (

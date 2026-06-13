@@ -1,36 +1,28 @@
 "use client";
 
 import { useReveal } from "@/hooks/useReveal";
+import { useI18n } from "@/i18n/LanguageProvider";
 
 const Philosophy = () => {
     useReveal();
+    const { content } = useI18n();
+    const philosophy = content.home.philosophy;
+    const philosophyItems = philosophy.items as Array<{ id: string; title: string; desc: string }>;
 
-    const items = [
+    const iconStyles = [
         {
-            id: "01",
-            title: "知识孤岛",
-            desc: "核心数据散落在文档、数据库与历史记录中，通用 AI 拿不到也用不好，回答空洞无据。",
             iconColor1: "#3FA0A6",
             iconColor2: "#7EF5D6",
         },
         {
-            id: "02",
-            title: "上下文受限",
-            desc: "模型窗口有限，信息喂不全就会产生幻觉，导致输出结果漂移，无法处理复杂任务。",
             iconColor1: "#00F2FF",
             iconColor2: "#3FA0A6",
         },
         {
-            id: "03",
-            title: "输出不可控",
-            desc: "同题不同答，缺乏校验规则，企业不敢将 AI 用于合同、财务等关键业务流程。",
             iconColor1: "#7EF5D6",
             iconColor2: "#00F2FF",
         },
         {
-            id: "04",
-            title: "无法规模化",
-            desc: "依赖个别员工的 Prompt 技巧只能救急，无法沉淀为可复用的组织能力，且难以审计。",
             iconColor1: "#3FA0A6",
             iconColor2: "#062F3A",
         },
@@ -80,12 +72,14 @@ const Philosophy = () => {
                             color: "white",
                         }}
                     >
-                        为何通用模型（如chatGPT） 无法<br />
-                        直接接管您的业务？
+                        {philosophy.titleLines[0]}<br />
+                        {philosophy.titleLines[1]}
                     </h2>
 
                     <div className="reveal philosophy-grid" style={gridStyle}>
-                        {items.map((item, index) => (
+                        {philosophyItems.map((item, index) => {
+                            const iconStyle = iconStyles[index];
+                            return (
                             <div
                                 key={item.id}
                                 className="philosophy-card"
@@ -113,26 +107,26 @@ const Philosophy = () => {
                                 }}>
                                     {index === 0 && (
                                         <>
-                                            <div style={{ width: "100%", height: "24px", backgroundColor: item.iconColor1, borderBottomLeftRadius: "24px", borderBottomRightRadius: "24px" }} />
-                                            <div style={{ width: "100%", height: "12px", backgroundColor: item.iconColor2, borderBottomLeftRadius: "24px", borderBottomRightRadius: "24px", marginTop: "-4px", opacity: 0.7 }} />
+                                            <div style={{ width: "100%", height: "24px", backgroundColor: iconStyle.iconColor1, borderBottomLeftRadius: "24px", borderBottomRightRadius: "24px" }} />
+                                            <div style={{ width: "100%", height: "12px", backgroundColor: iconStyle.iconColor2, borderBottomLeftRadius: "24px", borderBottomRightRadius: "24px", marginTop: "-4px", opacity: 0.7 }} />
                                         </>
                                     )}
                                     {index === 1 && (
                                         <>
-                                            <div style={{ width: "24px", height: "40px", backgroundColor: item.iconColor1, borderTopLeftRadius: "4px", borderBottomLeftRadius: "4px" }} />
-                                            <div style={{ width: "24px", height: "40px", backgroundColor: item.iconColor2, borderTopRightRadius: "24px", borderBottomRightRadius: "24px" }} />
+                                            <div style={{ width: "24px", height: "40px", backgroundColor: iconStyle.iconColor1, borderTopLeftRadius: "4px", borderBottomLeftRadius: "4px" }} />
+                                            <div style={{ width: "24px", height: "40px", backgroundColor: iconStyle.iconColor2, borderTopRightRadius: "24px", borderBottomRightRadius: "24px" }} />
                                         </>
                                     )}
                                     {index === 2 && (
                                         <>
-                                            <div style={{ width: "40px", height: "24px", backgroundColor: item.iconColor1, borderTopLeftRadius: "24px", borderTopRightRadius: "24px" }} />
-                                            <div style={{ width: "48px", height: "16px", backgroundColor: item.iconColor2, borderRadius: "2px" }} />
+                                            <div style={{ width: "40px", height: "24px", backgroundColor: iconStyle.iconColor1, borderTopLeftRadius: "24px", borderTopRightRadius: "24px" }} />
+                                            <div style={{ width: "48px", height: "16px", backgroundColor: iconStyle.iconColor2, borderRadius: "2px" }} />
                                         </>
                                     )}
                                     {index === 3 && (
                                         <div style={{ position: "relative", width: "48px", height: "48px" }}>
-                                            <div style={{ position: "absolute", top: 0, right: 0, width: "32px", height: "32px", backgroundColor: item.iconColor1, borderTopRightRadius: "8px" }} />
-                                            <div style={{ position: "absolute", bottom: 0, left: 0, width: "32px", height: "32px", backgroundColor: item.iconColor2, borderBottomLeftRadius: "8px" }} />
+                                            <div style={{ position: "absolute", top: 0, right: 0, width: "32px", height: "32px", backgroundColor: iconStyle.iconColor1, borderTopRightRadius: "8px" }} />
+                                            <div style={{ position: "absolute", bottom: 0, left: 0, width: "32px", height: "32px", backgroundColor: iconStyle.iconColor2, borderBottomLeftRadius: "8px" }} />
                                         </div>
                                     )}
                                 </div>
@@ -157,7 +151,8 @@ const Philosophy = () => {
                                     {item.desc}
                                 </p>
                             </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             </div>
