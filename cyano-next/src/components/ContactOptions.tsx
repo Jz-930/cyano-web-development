@@ -8,7 +8,7 @@ const contactOptions = [
     {
         label: "Project Showcase",
         title: "查看项目展示",
-        body: "适合想看现有项目、产品介绍、截图、录屏或交互演示的客户。后续项目素材会统一沉淀在项目展示页。",
+        body: "适合想了解已有项目、产品界面、演示入口和落地场景的客户，先从真实案例判断匹配度。",
         dot: "accent-dot accent-dot--amber",
     },
     {

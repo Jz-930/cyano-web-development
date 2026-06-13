@@ -16,7 +16,7 @@ const MediaFrame = ({
     src,
     alt,
     label,
-    caption = "后续替换为实际截图 / 客户场景图",
+    caption = "业务流程与系统能力示意图",
     tone = "mint",
     square = false,
     priority = false,

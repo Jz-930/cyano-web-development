@@ -52,7 +52,7 @@ const OpportunitySection = () => {
                         <article key={group.title} className="opportunity-card lab-panel flex flex-col p-4 md:p-5 lg:p-6">
                             <MediaFrame
                                 src={group.image}
-                                alt={`${group.title}视觉占位图`}
+                                alt={`${group.title}能力示意图`}
                                 label={group.mediaLabel}
                                 caption={null}
                                 tone={group.tone}

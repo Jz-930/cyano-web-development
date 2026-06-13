@@ -3,7 +3,7 @@ import MediaFrame from "@/components/MediaFrame";
 
 const featuredProjects = [
     {
-        status: "演示整理中",
+        status: "销售咨询 AI",
         title: "个性化销售素材生成",
         value: "基于客户画像、行业信号和销售目标，生成一客一稿的触达内容。",
         audience: "适合需要批量获客、销售触达和客户分层运营的团队。",
@@ -12,7 +12,7 @@ const featuredProjects = [
         tags: ["精准获客", "客户画像", "销售素材"],
     },
     {
-        status: "项目位预留",
+        status: "文档自动化",
         title: "智能标书与方案生成",
         value: "从历史标书、知识库和项目参数中生成可编辑的方案初稿。",
         audience: "适合需要频繁输出投标文件、技术方案和商务材料的团队。",
@@ -21,7 +21,7 @@ const featuredProjects = [
         tags: ["文档自动化", "知识库引用", "方案生成"],
     },
     {
-        status: "内部演示",
+        status: "企业知识库",
         title: "企业知识库 AI 助手",
         value: "接入内部 Wiki、手册或 SOP，回答员工问题并保留引用依据。",
         audience: "适合 IT、运营、客服和内部支持场景。",
@@ -33,19 +33,19 @@ const featuredProjects = [
 
 const demoSlots = [
     {
-        title: "产品截图位",
-        body: "用于放置真实界面截图、任务面板、结果页或后台控制台。",
-        status: "素材待整理",
+        title: "产品界面展示",
+        body: "通过系统界面、任务面板和结果页，直观看到 AI 如何接入真实业务流程。",
+        status: "界面展示",
     },
     {
-        title: "视频讲解位",
-        body: "用于承接录屏、短视频、流程讲解或客户演示版本。",
-        status: "可后续接入",
+        title: "流程演示",
+        body: "用录屏、讲解和客户演示串联输入、处理、审核和交付结果，降低理解成本。",
+        status: "演示入口",
     },
     {
-        title: "交互演示位",
-        body: "用于未来嵌入可点击演示、表单模拟器或公开体验入口。",
-        status: "结构已预留",
+        title: "交互体验",
+        body: "通过可点击演示、表单模拟器或体验入口，让客户更快判断场景是否适合自身业务。",
+        status: "体验入口",
     },
 ];
 
@@ -58,12 +58,12 @@ const ProjectShowcase = () => {
                         <div>
                             <div className="lab-kicker mb-4">FEATURED PROJECTS</div>
                             <h2 className="section-title">
-                                已有项目先占位，
-                                <span className="text-brand-mint"> 后续替换成真实素材</span>
+                                项目能力展示，
+                                <span className="text-brand-mint"> 覆盖真实业务场景</span>
                             </h2>
                         </div>
                         <p className="section-copy">
-                            这里的卡片字段已经按项目展示设计好：项目名称、价值、适用场景、素材状态、截图/视频位和核心能力标签都可以逐步补齐。
+                            每个项目围绕业务价值、适用场景、核心能力和交付形态展开，帮助客户快速判断 Cyano 的 AI 产品是否匹配自己的业务问题。
                         </p>
                     </div>
 
@@ -72,8 +72,8 @@ const ProjectShowcase = () => {
                             <article key={project.title} className="lab-panel flex flex-col p-4 md:p-5">
                                 <MediaFrame
                                     src={project.image}
-                                    alt={`${project.title}项目视觉占位图`}
-                                    label={`${project.status} / Project Slot`}
+                                    alt={`${project.title}项目场景图`}
+                                    label={`${project.status} / Project Overview`}
                                     tone={project.tone}
                                 />
                                 <div className="flex flex-1 flex-col px-2 pt-6 md:px-3">
@@ -102,9 +102,9 @@ const ProjectShowcase = () => {
                 <div className="lab-container">
                     <div className="reveal mb-12 max-w-3xl">
                         <div className="lab-kicker mb-4">SHOWCASE MATERIALS</div>
-                        <h2 className="section-title">演示素材入口先留好</h2>
+                        <h2 className="section-title">按场景查看项目材料</h2>
                         <p className="section-copy mt-5">
-                            下一步整理产品截图、录屏或交互演示时，直接替换这些卡片，不需要重新规划页面。
+                            项目材料围绕界面截图、流程说明和演示入口组织，方便客户快速理解系统形态、交付边界和业务收益。
                         </p>
                     </div>
 
@@ -123,7 +123,7 @@ const ProjectShowcase = () => {
 
                     <div className="reveal mt-9 flex flex-wrap items-center justify-between gap-5 rounded-3xl border border-brand-mint/15 bg-white/[0.025] p-6 md:p-7">
                         <p className="max-w-2xl text-base leading-8 text-white/72">
-                            当前页面先保留结构，后续每新增一个项目，只需要填项目卡片字段或扩展为单独详情页。
+                            如果你希望了解某类场景是否适合自己的业务，可以联系我们进行一次业务诊断。
                         </p>
                         <Link href="/contact" className="cyano-button">
                             联系我们

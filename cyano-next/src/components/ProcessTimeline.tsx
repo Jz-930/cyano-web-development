@@ -130,8 +130,8 @@ const ProcessTimeline = () => {
                         <div className="sticky top-28 grid gap-5">
                             <MediaFrame
                                 src="/media/process-map.svg"
-                                alt="合作流程视觉占位图"
-                                label="流程图占位"
+                                alt="Cyano 合作流程示意图"
+                                label="合作流程图"
                                 tone="amber"
                             />
                             <div className="lab-panel scanline p-7">

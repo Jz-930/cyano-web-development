@@ -8,7 +8,7 @@ const projectHeroSplineUrl = "/spline/ai-data-model-interaction.scene.splinecode
 
 export const metadata: Metadata = {
   title: "项目展示 | Cyano",
-  description: "Cyano 项目、产品演示和落地场景展示页，使用 AI 数据模型互动视觉承接现有项目介绍、截图、视频和交互演示位置。",
+  description: "Cyano 项目展示页，集中呈现销售咨询、文档自动化、房屋管理、企业知识库、数据查询与创意写作等 AI 产品落地成果。",
 };
 
 export default function CasesPage() {
@@ -18,8 +18,8 @@ export default function CasesPage() {
       <PageHero
         eyebrow="PROJECT SHOWCASE"
         title="项目与产品能力，"
-        accent="统一沉淀在这里"
-        description="这页为已有产品介绍和演示素材预留结构，同时完整保留原有落地场景。后续只需要把截图、视频、说明和交互入口补进对应卡片。"
+        accent="集中展示落地价值"
+        description="每个案例都围绕业务痛点、AI 工作流、系统界面和可衡量价值展开，帮助你判断 Cyano 如何把模型能力转化为可上线、可维护的企业产品。"
         primaryHref="#cases"
         primaryLabel="查看落地场景"
         secondaryHref="/contact"

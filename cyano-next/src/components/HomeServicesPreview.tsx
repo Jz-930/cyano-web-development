@@ -52,7 +52,7 @@ const HomeServicesPreview = () => {
 
                 <div className="reveal mt-9 flex flex-wrap items-center justify-between gap-5 rounded-3xl border border-brand-mint/15 bg-white/[0.025] p-6 md:p-7">
                     <p className="max-w-2xl text-base leading-8 text-white/72">
-                        详细的“两类 AI 机会、三种合作方式、五步合作流程”都保留在服务页。
+                        你可以在服务页查看完整的机会诊断、合作模式和交付流程。
                     </p>
                     <Link href="/services" className="cyano-button">
                         查看服务与合作

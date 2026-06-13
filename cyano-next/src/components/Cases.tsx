@@ -478,7 +478,7 @@ const Cases = () => {
                                     >
                                         <MediaFrame
                                             src={item.image}
-                                            alt={item.caption ? `${item.title}实际界面截图` : `${item.title}视觉占位图`}
+                                            alt={item.caption ? `${item.title}实际界面截图` : `${item.title}场景示意图`}
                                             label={`${item.tag} 场景图`}
                                             caption={item.caption}
                                             tone={item.tone}

@@ -88,7 +88,7 @@ const EngagementModels = () => {
                     <div className="grid gap-5">
                         <MediaFrame
                             src="/media/engagement-models.svg"
-                            alt="三种合作方式视觉占位图"
+                            alt="三种合作方式示意图"
                             label={`${active.label} 合作模式`}
                             caption="根据业务阶段选择合适路径"
                             tone={active.tone}

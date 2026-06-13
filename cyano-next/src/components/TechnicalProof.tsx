@@ -23,8 +23,8 @@ const TechnicalProof = () => {
                         </div>
                         <MediaFrame
                             src="/media/technical-stack.svg"
-                            alt="Cyano 技术保障视觉占位图"
-                            label="技术保障图占位"
+                            alt="Cyano 技术保障架构示意图"
+                            label="技术保障架构"
                             tone="mint"
                         />
                     </div>

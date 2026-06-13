@@ -2,23 +2,23 @@ import Link from "next/link";
 
 const previewProjects = [
     {
-        status: "演示整理中",
+        status: "销售咨询 AI",
         title: "个性化销售素材生成",
-        body: "为精准获客、客户画像和一客一稿销售内容预留产品介绍与演示入口。",
+        body: "基于真实产品资料、客户画像和历史案例，帮助销售团队完成专业咨询、需求收束和一客一稿触达。",
         tags: ["精准获客", "销售内容", "一客一稿"],
         dot: "accent-dot accent-dot--amber",
     },
     {
-        status: "项目位预留",
+        status: "文档自动化",
         title: "智能标书与方案生成",
-        body: "保留文档自动化、知识库引用和方案生成类项目的展示位置。",
+        body: "连接历史标书、知识库和项目参数，生成可编辑的方案初稿，让文档生产从经验驱动变成流程化交付。",
         tags: ["文档自动化", "RAG", "方案生成"],
         dot: "accent-dot",
     },
     {
-        status: "内部演示",
+        status: "企业知识库",
         title: "企业知识库 AI 助手",
-        body: "为内部问答、IT 助手、知识库检索和工单拦截类演示留好内容位。",
+        body: "接入企业 Wiki、SOP 和工单系统，自动回答员工问题并保留引用依据，降低重复支持成本。",
         tags: ["企业 Wiki", "IT 助手", "知识问答"],
         dot: "accent-dot accent-dot--blue",
     },
@@ -36,7 +36,7 @@ const HomeCasesPreview = () => {
                         </h2>
                     </div>
                     <p className="section-copy">
-                        对LLM进行调整，规划完全适合您现有工作流的高效管线，并封装成易用、稳定的软件落地，让AI，真的能够接手现有工作。
+                        围绕客户现有数据、知识库和工作流定制 AI 管线，并封装成易用、稳定的软件产品，让 AI 真正接入销售、文档、运营和内部支持等关键流程。
                     </p>
                 </div>
 
@@ -62,7 +62,7 @@ const HomeCasesPreview = () => {
 
                 <div className="reveal mt-9 flex flex-wrap items-center justify-between gap-5 rounded-3xl border border-accent-amber/20 bg-accent-amber/[0.035] p-6 md:p-7">
                     <p className="max-w-2xl text-base leading-8 text-white/72">
-                        不同行业千变万化，但人类的思考总有迹可循，来查看更多案例展示
+                        查看更多真实界面与业务场景，了解 Cyano 如何把 AI 能力落到具体流程。
                     </p>
                     <Link href="/cases" className="cyano-button">
                         查看项目展示
