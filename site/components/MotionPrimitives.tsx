@@ -2,51 +2,52 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
+/**
+ * Scroll-triggered entrance wrapper (GPU transform + opacity only).
+ */
 export function Reveal({
   children,
-  delayMs = 0,
   className = "",
+  delayMs = 0,
 }: {
   children: React.ReactNode;
-  delayMs?: number;
   className?: string;
+  delayMs?: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       setVisible(true);
       return;
     }
-    const el = ref.current;
-    if (!el) return;
+
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true);
-          observer.disconnect();
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setVisible(true);
+            observer.disconnect();
+            break;
+          }
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -32px 0px" }
+      { rootMargin: "0px 0px -6% 0px", threshold: 0.06 }
     );
+
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
-  const clampedDelay = Math.min(Math.max(delayMs, 0), 210);
-
   return (
     <div
       ref={ref}
-      className={`reveal-item ${visible ? "is-visible" : ""} ${className}`}
-      style={
-        clampedDelay > 0 && !visible
-          ? { transitionDelay: `${clampedDelay}ms` }
-          : clampedDelay > 0
-          ? { transitionDelay: `${clampedDelay}ms` }
-          : undefined
-      }
+      style={delayMs ? { transitionDelay: `${delayMs}ms` } : undefined}
+      className={`reveal-block ${visible ? "is-visible" : ""} ${className}`}
     >
       {children}
     </div>
@@ -54,163 +55,142 @@ export function Reveal({
 }
 
 /**
- * Real-time GPU-friendly multi-filament spectral cyan/mint optical field (G-02 / A-05).
- * Pauses automatically when off-screen or tab hidden; renders crisp static harmonics under prefers-reduced-motion.
+ * Polychromatic Spectral Aurora & Harmonic Ribbon Canvas:
+ * Blends Electric Indigo, Luminous Cyan, Violet, and Warm Champagne Amber
+ * in calm, silky optical waves. Pauses off-screen via IntersectionObserver.
  */
 export function SpectralFlowCanvas({
-  intensity = "hero",
   className = "",
+  intensity = "hero",
 }: {
-  intensity?: "hero" | "band";
   className?: string;
+  intensity?: "hero" | "subtle";
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d", { alpha: true });
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    let width = 0;
+    let height = 0;
     let rafId = 0;
     let inView = true;
-    let t = 12.5;
-    const pointer = { x: 0.65, y: 0.42, targetX: 0.65, targetY: 0.42 };
+    let t = 14;
+    let pointerX = 0.65;
+    let pointerY = 0.42;
 
     const resize = () => {
+      const rect = canvas.getBoundingClientRect();
       const dpr = Math.min(window.devicePixelRatio || 1, 1.75);
-      const w = canvas.clientWidth || 1200;
-      const h = canvas.clientHeight || 600;
-      canvas.width = Math.round(w * dpr);
-      canvas.height = Math.round(h * dpr);
+      width = Math.max(1, Math.floor(rect.width));
+      height = Math.max(1, Math.floor(rect.height));
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 
     resize();
-    window.addEventListener("resize", resize, { passive: true });
+
+    const ribbons =
+      intensity === "hero"
+        ? [
+            { r: 34, g: 211, b: 238, alpha: 0.24, amp: 34, freq: 0.0024, yRatio: 0.34, lw: 2.2 }, // Cyano Cyan (Lead)
+            { r: 59, g: 130, b: 246, alpha: 0.2, amp: 28, freq: 0.0031, yRatio: 0.52, lw: 1.8 },  // Sapphire Cobalt
+            { r: 251, g: 191, b: 36, alpha: 0.14, amp: 24, freq: 0.0028, yRatio: 0.46, lw: 1.5 }, // Warm Champagne Gold
+            { r: 167, g: 139, b: 250, alpha: 0.14, amp: 30, freq: 0.0021, yRatio: 0.66, lw: 1.5 }, // Iridescent Violet
+          ]
+        : [
+            { r: 34, g: 211, b: 238, alpha: 0.16, amp: 22, freq: 0.0026, yRatio: 0.44, lw: 1.6 }, // Cyano Cyan
+            { r: 59, g: 130, b: 246, alpha: 0.14, amp: 18, freq: 0.0032, yRatio: 0.58, lw: 1.3 }, // Sapphire Cobalt
+            { r: 251, g: 191, b: 36, alpha: 0.1, amp: 16, freq: 0.0024, yRatio: 0.51, lw: 1.2 },  // Warm Champagne Gold
+          ];
+
+    const drawFrame = () => {
+      ctx.clearRect(0, 0, width, height);
+
+      // Soft ambient polychromatic Cyano aura following pointer subtly
+      const aura = ctx.createRadialGradient(
+        width * pointerX,
+        height * pointerY,
+        10,
+        width * pointerX,
+        height * pointerY,
+        Math.max(width, height) * 0.48
+      );
+      aura.addColorStop(0, "rgba(34, 211, 238, 0.11)");
+      aura.addColorStop(0.45, "rgba(29, 78, 216, 0.07)");
+      aura.addColorStop(0.75, "rgba(245, 158, 11, 0.03)");
+      aura.addColorStop(1, "rgba(2, 8, 14, 0)");
+      ctx.fillStyle = aura;
+      ctx.fillRect(0, 0, width, height);
+
+      for (let i = 0; i < ribbons.length; i++) {
+        const rb = ribbons[i];
+        const baseY = height * rb.yRatio;
+        const grad = ctx.createLinearGradient(0, 0, width, 0);
+        grad.addColorStop(0, `rgba(${rb.r}, ${rb.g}, ${rb.b}, 0)`);
+        grad.addColorStop(0.28, `rgba(${rb.r}, ${rb.g}, ${rb.b}, ${rb.alpha * 0.55})`);
+        grad.addColorStop(0.68, `rgba(${rb.r}, ${rb.g}, ${rb.b}, ${rb.alpha})`);
+        grad.addColorStop(1, `rgba(${rb.r}, ${rb.g}, ${rb.b}, 0.03)`);
+
+        ctx.beginPath();
+        const step = 20;
+        for (let x = 0; x <= width + step; x += step) {
+          const progress = x / Math.max(width, 1);
+          const damping = 1 - progress * 0.45;
+          const wave =
+            Math.sin(x * rb.freq + t * (0.35 + i * 0.07) + i * 1.4) * rb.amp * damping +
+            Math.cos(x * rb.freq * 0.55 - t * 0.22 + i) * (rb.amp * 0.45) * damping;
+          const y = baseY + wave + (pointerY - 0.5) * 18 * progress;
+          if (x === 0) ctx.moveTo(x, y);
+          else ctx.lineTo(x, y);
+        }
+        ctx.strokeStyle = grad;
+        ctx.lineWidth = rb.lw;
+        ctx.stroke();
+      }
+    };
+
+    drawFrame();
+    if (reducedMotion) return;
+
+    const loop = () => {
+      if (inView) {
+        t += 0.014;
+        drawFrame();
+      }
+      rafId = window.requestAnimationFrame(loop);
+    };
+    rafId = window.requestAnimationFrame(loop);
 
     const onPointerMove = (e: PointerEvent) => {
       const rect = canvas.getBoundingClientRect();
-      if (!rect.width || !rect.height) return;
-      pointer.targetX = (e.clientX - rect.left) / rect.width;
-      pointer.targetY = (e.clientY - rect.top) / rect.height;
+      if (rect.width > 0 && rect.height > 0) {
+        pointerX = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
+        pointerY = Math.min(1, Math.max(0, (e.clientY - rect.top) / rect.height));
+      }
     };
-    window.addEventListener("pointermove", onPointerMove, { passive: true });
 
     const io = new IntersectionObserver(
-      ([entry]) => {
-        inView = entry.isIntersecting;
+      (entries) => {
+        inView = entries[0]?.isIntersecting ?? false;
       },
       { threshold: 0.02 }
     );
     io.observe(canvas);
 
-    const ribbonCount = intensity === "hero" ? 6 : 4;
-    const photonCount = intensity === "hero" ? 26 : 14;
-
-    const renderFrame = (timeSec: number) => {
-      const w = canvas.clientWidth || 1200;
-      const h = canvas.clientHeight || 600;
-      ctx.clearRect(0, 0, w, h);
-
-      pointer.x += (pointer.targetX - pointer.x) * 0.04;
-      pointer.y += (pointer.targetY - pointer.y) * 0.04;
-
-      // Ambient pointer optical aura
-      const aura = ctx.createRadialGradient(
-        w * pointer.x,
-        h * pointer.y,
-        10,
-        w * pointer.x,
-        h * pointer.y,
-        Math.max(w, h) * 0.44
-      );
-      aura.addColorStop(0, "rgba(126, 245, 214, 0.11)");
-      aura.addColorStop(0.45, "rgba(63, 160, 166, 0.06)");
-      aura.addColorStop(1, "rgba(3, 7, 9, 0)");
-      ctx.fillStyle = aura;
-      ctx.fillRect(0, 0, w, h);
-
-      // Spectral harmonic filaments
-      for (let r = 0; r < ribbonCount; r++) {
-        const phase = r * 0.85 + timeSec * (0.28 + r * 0.035);
-        const yBase = h * (0.24 + (r / ribbonCount) * 0.56);
-        const amp1 = h * (0.06 + (r % 3) * 0.028);
-        const amp2 = h * 0.032;
-
-        const grad = ctx.createLinearGradient(0, yBase - amp1, w, yBase + amp1);
-        grad.addColorStop(0, "rgba(6, 47, 58, 0)");
-        grad.addColorStop(0.28, r % 2 === 0 ? "rgba(63, 160, 166, 0.24)" : "rgba(34, 133, 142, 0.18)");
-        grad.addColorStop(0.64, r === 1 ? "rgba(126, 245, 214, 0.38)" : "rgba(82, 199, 204, 0.24)");
-        grad.addColorStop(1, "rgba(6, 47, 58, 0)");
-
-        ctx.beginPath();
-        const steps = 40;
-        for (let s = 0; s <= steps; s++) {
-          const u = s / steps;
-          const x = u * w;
-          const pull = (pointer.y - 0.5) * 26 * Math.exp(-Math.pow((u - pointer.x) * 2.6, 2));
-          const y =
-            yBase +
-            Math.sin(u * 4.4 + phase) * amp1 +
-            Math.cos(u * 8.2 - phase * 0.7) * amp2 +
-            pull;
-          if (s === 0) ctx.moveTo(x, y);
-          else ctx.lineTo(x, y);
-        }
-        ctx.strokeStyle = grad;
-        ctx.lineWidth = r === 1 ? 2.1 : 1.25;
-        ctx.stroke();
-      }
-
-      // Data photon pulses travelling along trajectories
-      for (let i = 0; i < photonCount; i++) {
-        const u = ((timeSec * (0.045 + (i % 5) * 0.008) + i / photonCount) % 1);
-        const r = i % ribbonCount;
-        const phase = r * 0.85 + timeSec * (0.28 + r * 0.035);
-        const yBase = h * (0.24 + (r / ribbonCount) * 0.56);
-        const amp1 = h * (0.06 + (r % 3) * 0.028);
-        const amp2 = h * 0.032;
-        const x = u * w;
-        const y =
-          yBase +
-          Math.sin(u * 4.4 + phase) * amp1 +
-          Math.cos(u * 8.2 - phase * 0.7) * amp2;
-        const alpha = Math.sin(u * Math.PI) * (i % 4 === 0 ? 0.85 : 0.45);
-
-        ctx.beginPath();
-        ctx.fillStyle = `rgba(126, 245, 214, ${alpha.toFixed(3)})`;
-        ctx.arc(x, y, i % 5 === 0 ? 2.1 : 1.2, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    };
-
-    if (reduced) {
-      renderFrame(t);
-      return () => {
-        io.disconnect();
-        window.removeEventListener("resize", resize);
-        window.removeEventListener("pointermove", onPointerMove);
-      };
-    }
-
-    let last = performance.now();
-    const tick = (now: number) => {
-      rafId = requestAnimationFrame(tick);
-      if (!inView || document.hidden) {
-        last = now;
-        return;
-      }
-      const dt = Math.min((now - last) / 1000, 0.05);
-      last = now;
-      t += dt;
-      renderFrame(t);
-    };
-    rafId = requestAnimationFrame(tick);
+    window.addEventListener("resize", resize, { passive: true });
+    window.addEventListener("pointermove", onPointerMove, { passive: true });
 
     return () => {
-      cancelAnimationFrame(rafId);
+      window.cancelAnimationFrame(rafId);
       io.disconnect();
       window.removeEventListener("resize", resize);
       window.removeEventListener("pointermove", onPointerMove);

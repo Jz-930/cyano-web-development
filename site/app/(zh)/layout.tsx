@@ -4,6 +4,13 @@ import localFont from "next/font/local";
 import { Header } from "@/components/Header";
 import { pick, siteCopy } from "@/lib/content";
 
+const manropeDisplay = localFont({
+  src: "../fonts/manrope-latin.woff2",
+  variable: "--font-display",
+  display: "swap",
+  weight: "200 800",
+});
+
 const interLatin = localFont({
   src: "../fonts/inter-latin.woff2",
   variable: "--font-sans",
@@ -27,8 +34,17 @@ export default function ZhRootLayout({
   return (
     <html
       lang="zh-CN"
-      className={`${interLatin.variable} ${jetbrainsMono.variable}`}
+      className={`${manropeDisplay.variable} ${interLatin.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/noto-sc-core.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <a className="skip-link" href="#main">
           {pick("zh", siteCopy.nav.skipToMain)}

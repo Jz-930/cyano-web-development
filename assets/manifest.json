@@ -1,73 +1,173 @@
 {
-  "date": "2026-11-12",
-  "tool": "Built-in image_gen",
-  "direction": "Business-first; all four illustrated founders wear glasses; no geographical metaphors.",
+  "date": "2026-11-13",
+  "tool": "Built-in image-generator + Sharp post-processing pipeline (site/scripts/process-cyano-art.mjs)",
+  "direction": "Cyano Polychromatic Optical Engineering + Business-First Clarity; official logo.png laminar C-channels & data droplets motif; all four illustrated founders wear glasses; zero geographical metaphors.",
+  "promptSpecDoc": "docs/cyano-v2-art-prompts.md",
+  "officialBrandMarks": [
+    {
+      "id": "cyano-logo-light",
+      "source": "site/public/logo.png",
+      "output": "site/public/art/cyano-logo-light.webp",
+      "dimensions": "128x128",
+      "usage": "Header BrandLogo on white gallery pages (#2C8B96 Cyano Teal)"
+    },
+    {
+      "id": "cyano-logo-dark",
+      "source": "site/public/logo.png",
+      "output": "site/public/art/cyano-logo-dark.webp",
+      "dimensions": "128x128",
+      "usage": "Header & Footer BrandLogo on dark obsidian stages (luminous #48E0EE -> #2EBAD8 cyan from official alpha mask)"
+    }
+  ],
   "active": [
+    {
+      "id": "cyano-hero-laminar",
+      "source": "assets/source/cyano-v2/cyano-hero-laminar.jpg",
+      "output": "site/public/art/cyano-hero-laminar.webp",
+      "dimensions": "1600x900",
+      "blendMode": "black-screen",
+      "usage": "Homepage Act 1 full-bleed obsidian Hero laminar C-channel & droplet sculpture"
+    },
+    {
+      "id": "cyano-closing-aurora",
+      "source": "assets/source/cyano-v2/cyano-closing-aurora.jpg",
+      "output": "site/public/art/cyano-closing-aurora.webp",
+      "dimensions": "1600x900",
+      "blendMode": "black-screen",
+      "usage": "Global Closing CTA (#site-closing-cta) sweeping laminar aurora & glowing droplets"
+    },
+    {
+      "id": "cyano-wave-spectrum",
+      "source": "assets/source/cyano-v2/cyano-wave-spectrum.jpg",
+      "output": "site/public/art/cyano-wave-spectrum.webp",
+      "dimensions": "1600x900",
+      "blendMode": "black-screen",
+      "usage": "Homepage Act 5 nocturnal diptych (right) & About Design Discipline wave band"
+    },
+    {
+      "id": "cyano-core-strata",
+      "source": "assets/source/cyano-v2/cyano-core-strata.jpg",
+      "output": "site/public/art/cyano-core-strata.webp",
+      "dimensions": "1400x875",
+      "blendMode": "cover",
+      "usage": "Technology 4-layer Cyano Core architecture showcase, /services vertical spotlight, and /services/[slug] deliverables panel"
+    },
+    {
+      "id": "cyano-context-prism",
+      "source": "assets/source/cyano-v2/cyano-context-prism.jpg",
+      "output": "site/public/art/cyano-context-prism.webp",
+      "dimensions": "1400x788",
+      "blendMode": "cover",
+      "usage": "Homepage Act 5 nocturnal diptych (left) & Technology Context Budget Engineering visual"
+    },
+    {
+      "id": "cyano-sol-sales",
+      "source": "assets/source/cyano-v2/cyano-sol-sales.jpg",
+      "output": "site/public/art/cyano-sol-sales.webp",
+      "dimensions": "1400x788",
+      "blendMode": "white-multiply",
+      "usage": "Sales & Lead Automation gallery sculpture (Home Explorer Tab 01, /services Chapter 01, /services/sales-automation header)"
+    },
+    {
+      "id": "cyano-sol-docs",
+      "source": "assets/source/cyano-v2/cyano-sol-docs.jpg",
+      "output": "site/public/art/cyano-sol-docs.webp",
+      "dimensions": "1400x788",
+      "blendMode": "white-multiply",
+      "usage": "Proposal & Report Drafting gallery sculpture (Home Explorer Tab 02, /services header & Chapter 02, /services/doc-intelligence header)"
+    },
+    {
+      "id": "cyano-sol-kb",
+      "source": "assets/source/cyano-v2/cyano-sol-kb.jpg",
+      "output": "site/public/art/cyano-sol-kb.webp",
+      "dimensions": "1400x788",
+      "blendMode": "white-multiply",
+      "usage": "Enterprise Knowledge Assistant gallery sculpture (Home Explorer Tab 03, /services Chapter 03, /services/knowledge-assistant header, /insights header)"
+    },
+    {
+      "id": "cyano-sol-data",
+      "source": "assets/source/cyano-v2/cyano-sol-data.jpg",
+      "output": "site/public/art/cyano-sol-data.webp",
+      "dimensions": "1400x788",
+      "blendMode": "white-multiply",
+      "usage": "Natural-Language Data Query gallery sculpture (Home Explorer Tab 04, /services Chapter 04, /services/data-query header)"
+    },
+    {
+      "id": "cyano-white-c-monolith",
+      "source": "assets/source/cyano-v2/cyano-white-c-monolith.jpg",
+      "output": "site/public/art/cyano-white-c-monolith.webp",
+      "dimensions": "1400x788",
+      "blendMode": "white-multiply",
+      "usage": "Sculpted Cyano C glass monolith + spheres (/about & /contact PageHeader)"
+    },
+    {
+      "id": "cyano-white-tech-astrolabe",
+      "source": "assets/source/cyano-v2/cyano-white-tech-astrolabe.jpg",
+      "output": "site/public/art/cyano-white-tech-astrolabe.webp",
+      "dimensions": "1400x788",
+      "blendMode": "white-multiply",
+      "usage": "Cyano calibration astrolabe schematic (/technology PageHeader)"
+    },
+    {
+      "id": "cyano-white-engagement",
+      "source": "assets/source/cyano-v2/cyano-white-engagement.jpg",
+      "output": "site/public/art/cyano-white-engagement.webp",
+      "dimensions": "1400x788",
+      "blendMode": "white-multiply",
+      "usage": "3-mode optical delivery triptych (Homepage Act 6 & /engagement PageHeader)"
+    },
+    {
+      "id": "cyano-white-prisms",
+      "source": "assets/source/cyano-v2/cyano-white-prisms.jpg",
+      "output": "site/public/art/cyano-white-prisms.webp",
+      "dimensions": "1400x788",
+      "blendMode": "white-multiply",
+      "usage": "Harmonic refractive prisms (/cases & /cases/[slug] PageHeader)"
+    },
+    {
+      "id": "cyano-insight-kb",
+      "source": "assets/source/cyano-v2/cyano-insight-kb.jpg",
+      "output": "site/public/art/cyano-insight-kb.webp",
+      "dimensions": "1400x875",
+      "blendMode": "cover",
+      "usage": "Insight 01 cover & article hero plate (why-chatgpt-is-not-a-knowledge-base)"
+    },
+    {
+      "id": "cyano-insight-proposal",
+      "source": "assets/source/cyano-v2/cyano-insight-proposal.jpg",
+      "output": "site/public/art/cyano-insight-proposal.webp",
+      "dimensions": "1400x875",
+      "blendMode": "cover",
+      "usage": "Insight 02 cover & article hero plate (proposal-draft-in-15-minutes)"
+    },
+    {
+      "id": "cyano-insight-delivery",
+      "source": "assets/source/cyano-v2/cyano-insight-delivery.jpg",
+      "output": "site/public/art/cyano-insight-delivery.webp",
+      "dimensions": "1400x875",
+      "blendMode": "cover",
+      "usage": "Insight 03 cover & article hero plate (buy-pilot-or-managed)"
+    },
     {
       "id": "team",
       "source": "assets/source/team-business-glasses.png",
-      "original": "exec-18d9ead7-967a-4f50-b224-325003400d14.png",
       "output": "site/public/art/team.webp",
-      "seed": null,
-      "postProcess": "Lossy WebP compression; no creative edits outside image generation.",
-      "prompt": "Four illustrated founders with glasses discussing business documents, software dashboard and a workflow diagram; preserve identities, replace all maps and islands with office business materials."
-    },
-    {
-      "id": "portraits",
-      "source": "assets/source/portraits-business-glasses.png",
-      "original": "exec-b0ab357e-b5e3-4e8b-9609-877e96591663.png",
-      "output": "site/public/art/portraits.webp",
-      "seed": null,
-      "postProcess": "Lossy WebP compression; no creative edits outside image generation.",
-      "prompt": "Four equal quarter-width illustrated founder portraits, all wearing clear glasses, plain mist paper-grain background; preserve identities and attire."
-    }
-  ],
-  "archived": [
-    "hero.png",
-    "technology.png",
-    "team.png"
-  ],
-  "caseScreenshots": {
-    "count": 31,
-    "source": "https://cyano.app/media/",
-    "modifications": "None; display framing only"
-  },
-  "v2Updated": "2026-11-12",
-  "v2Assets": [
-    {
-      "id": "v2-hero-optics",
-      "source": "assets/source/v2-hero-optics.jpg",
-      "output": "site/public/art/v2-hero-optics.webp",
-      "usage": "Homepage Hero dark optical glass ambient layer",
-      "constraints": "Zero text, zero geographical imagery, brand cyan-mint palette"
-    },
-    {
-      "id": "v2-core-lattice",
-      "source": "assets/source/v2-core-lattice.jpg",
-      "output": "site/public/art/v2-core-lattice.webp",
-      "usage": "Technology 4-layer architecture optical strata backdrop",
-      "constraints": "Zero text, zero geographical imagery, brand cyan-mint palette"
-    },
-    {
-      "id": "v2-core-prism",
-      "source": "assets/source/v2-core-prism.jpg",
-      "output": "site/public/art/v2-core-prism.webp",
-      "usage": "Context Valuation Engine optical convergence visual",
-      "constraints": "Zero text, zero geographical imagery, brand cyan-mint palette"
-    },
-    {
-      "id": "v2-cta-aurora",
-      "source": "assets/source/v2-cta-aurora.jpg",
-      "output": "site/public/art/v2-cta-aurora.webp",
-      "usage": "Closing CTA frosted obsidian ambient backdrop",
-      "constraints": "Zero text, zero geographical imagery, brand cyan-mint palette"
+      "dimensions": "1408x768",
+      "blendMode": "cover",
+      "usage": "Homepage Act 7 & /about natural-color studio group workflow illustration (all 4 founders wear glasses)"
     },
     {
       "id": "founder-1..4",
       "source": "assets/source/portraits-business-glasses.png",
-      "output": "site/public/art/founder-1.webp .. founder-4.webp",
-      "usage": "Unified brand cyan-slate duotone founder portraits (G-21)",
-      "postProcess": "Quarter slice + 5-stop brand cyan-slate duotone LUT"
+      "output": "site/public/art/founder-1.webp .. founder-4.webp + founder-4-avatar.webp",
+      "dimensions": "352x768 each (160x160 avatar)",
+      "blendMode": "cover",
+      "usage": "Natural full-color individual founder portraits on Homepage, /about, /insights/[slug], and /contact"
     }
-  ]
+  ],
+  "caseScreenshots": {
+    "count": 31,
+    "source": "site/public/media/*",
+    "modifications": "None; untouched production interfaces"
+  }
 }

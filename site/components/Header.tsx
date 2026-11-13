@@ -4,22 +4,24 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
+  ArrowRight,
   ArrowUpRight,
   ChevronDown,
   Globe,
   Menu,
   X,
-  ArrowRight,
 } from "lucide-react";
 import {
   type Locale,
   href,
   pick,
-  t,
   siteCopy,
   solutionsList,
+  t,
 } from "@/lib/content";
 import { BrandLogo } from "./BrandLogo";
+
+const DOMAIN_DOTS = ["#0B7A8C", "#1D4ED8", "#6D28D9", "#B45309"];
 
 export function Header({ locale }: { locale: Locale }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -28,9 +30,10 @@ export function Header({ locale }: { locale: Locale }) {
   const pathname = usePathname() || "/";
 
   const localPath = pathname.replace(/^\/en(?=\/|$)/, "") || "/";
+  const isDarkHeader = localPath === "/";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16);
+    const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -68,7 +71,6 @@ export function Header({ locale }: { locale: Locale }) {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  // Accessible focus trap & background inert lock when mobile nav is open
   useEffect(() => {
     if (!mobileOpen) return;
     const regions = [
@@ -124,142 +126,168 @@ export function Header({ locale }: { locale: Locale }) {
     { key: "about", label: pick(locale, siteCopy.nav.about), hasMenu: true as const },
   ];
 
-  const targetLocaleHref =
-    locale === "zh"
-      ? localPath === "/"
-        ? "/en"
-        : `/en${localPath}`
-      : localPath;
+  const switchTargetLocale: Locale = locale === "zh" ? "en" : "zh";
+  const switchHref = href(switchTargetLocale, localPath === "/" ? "" : localPath);
+
+  const headerShellClass = isDarkHeader
+    ? mobileOpen
+      ? "border-b border-white/[0.1] bg-[#02080E]"
+      : scrolled
+        ? "border-b border-white/[0.1] bg-[#000000]/92 backdrop-blur-xl"
+        : "border-b border-white/[0.06] bg-[#000000]/80 backdrop-blur-md"
+    : mobileOpen
+      ? "border-b border-black/[0.09] bg-white"
+      : scrolled
+        ? "border-b border-black/[0.09] bg-white/95 backdrop-blur-xl"
+        : "border-b border-black/[0.06] bg-white/90 backdrop-blur-md";
+
+  const linkClass = (active: boolean) =>
+    isDarkHeader
+      ? active
+        ? "text-[#22D3EE] font-medium"
+        : "text-white/80 hover:text-white"
+      : active
+        ? "text-[#0B7A8C] font-semibold"
+        : "text-[#2C3A47] hover:text-[#0B1520]";
 
   return (
-    <header
-      className={`site-header-dark sticky top-0 z-50 transition-colors duration-200 ${
-        scrolled || mobileOpen
-          ? "border-b border-[#7EF5D6]/18 bg-[#030709]/92 backdrop-blur-xl"
-          : "border-b border-white/8 bg-[#030709]/82 backdrop-blur-md"
-      }`}
-    >
-      <div className="site-container flex h-[72px] items-center justify-between gap-4">
+    <>
+      <header className={`sticky top-0 z-50 transition-colors duration-200 ${headerShellClass}`}>
+      <div className="site-container flex h-[76px] items-center justify-between gap-6">
         <Link
           href={href(locale)}
-          aria-label={t(locale, "Cyano 首页", "Cyano Home")}
-          className="inline-flex min-h-[40px] items-center rounded-md py-1"
+          className="inline-flex min-h-[42px] items-center py-1"
+          aria-label={t(locale, "Cyano · 澜屿智创", "Cyano Intelligence")}
         >
-          <BrandLogo tone="dark" />
+          <BrandLogo variant={isDarkHeader ? "dark" : "light"} size={32} />
         </Link>
 
-        {/* Desktop navigation */}
+        {/* Unboxed Gallery Desktop Navigation */}
         <nav
           aria-label={t(locale, "主导航", "Main navigation")}
-          className="hidden lg:flex lg:items-center lg:gap-1"
+          className="hidden items-center gap-2 lg:flex"
         >
           {navItems.map((item) => {
-            const isActive =
+            const active =
               localPath === `/${item.key}` ||
-              localPath.startsWith(`/${item.key}/`) ||
-              (item.key === "about" &&
-                (localPath.startsWith("/insights") || localPath === "/contact"));
+              localPath.startsWith(`/${item.key}/`);
+
+            if (!item.hasMenu) {
+              return (
+                <Link
+                  key={item.key}
+                  href={href(locale, `/${item.key}`)}
+                  aria-current={active ? "page" : undefined}
+                  className={`inline-flex min-h-[42px] items-center px-3.5 text-[14px] transition-colors ${linkClass(active)}`}
+                >
+                  {item.label}
+                </Link>
+              );
+            }
+
             const menuKey = item.key as "services" | "about";
+            const isOpen = dropdown === menuKey;
 
             return (
               <div
                 key={item.key}
                 className="relative"
-                onMouseEnter={() => item.hasMenu && setDropdown(menuKey)}
-                onMouseLeave={() => item.hasMenu && setDropdown("")}
+                onMouseEnter={() => setDropdown(menuKey)}
+                onMouseLeave={() => setDropdown("")}
+                onBlur={(e) => {
+                  if (!e.currentTarget.contains(e.relatedTarget as Node | null)) {
+                    setDropdown("");
+                  }
+                }}
               >
-                <div className="flex items-center">
+                <div className="inline-flex items-center">
                   <Link
                     href={href(locale, `/${item.key}`)}
-                    className={`inline-flex min-h-[40px] items-center rounded-lg px-3.5 text-[14px] font-medium transition-colors ${
-                      isActive
-                        ? "text-[#7EF5D6]"
-                        : "text-[#D7EAEB] hover:text-white"
-                    }`}
+                    aria-current={active ? "page" : undefined}
+                    className={`inline-flex min-h-[42px] items-center pl-3.5 pr-1 text-[14px] transition-colors ${linkClass(active || isOpen)}`}
                   >
                     {item.label}
                   </Link>
-                  {item.hasMenu && (
-                    <button
-                      type="button"
-                      aria-label={t(
-                        locale,
-                        `展开${item.label}子菜单`,
-                        `Toggle ${item.label} menu`
-                      )}
-                      aria-expanded={dropdown === menuKey}
-                      onClick={() =>
-                        setDropdown(dropdown === menuKey ? "" : menuKey)
-                      }
-                      className="inline-flex h-[38px] w-[30px] items-center justify-center rounded-md text-[#93B5B9] hover:text-white"
-                    >
-                      <ChevronDown
-                        size={14}
-                        className={`transition-transform duration-200 ${
-                          dropdown === menuKey ? "rotate-180 text-[#7EF5D6]" : ""
-                        }`}
-                      />
-                    </button>
-                  )}
+                  <button
+                    type="button"
+                    aria-expanded={isOpen}
+                    aria-haspopup="true"
+                    aria-label={
+                      isOpen
+                        ? t(locale, `收起${item.label}子菜单`, `Collapse ${item.label} menu`)
+                        : t(locale, `展开${item.label}子菜单`, `Expand ${item.label} menu`)
+                    }
+                    onClick={() => setDropdown(isOpen ? "" : menuKey)}
+                    className={`inline-flex min-h-[42px] min-w-[28px] items-center justify-center pr-2 transition-colors ${
+                      isDarkHeader
+                        ? "text-white/65 hover:text-white"
+                        : "text-black/55 hover:text-black"
+                    }`}
+                  >
+                    <ChevronDown
+                      size={14}
+                      className={`transition-transform duration-150 ${isOpen ? "rotate-180" : ""}`}
+                    />
+                  </button>
                 </div>
 
-                {item.hasMenu && dropdown === menuKey && (
+                {isOpen && menuKey === "services" && (
                   <div className="absolute left-0 top-full pt-2">
-                    {menuKey === "services" ? (
-                      <div className="w-[380px] rounded-2xl border border-[#7EF5D6]/24 bg-[#061217]/98 p-3 shadow-2xl backdrop-blur-xl">
-                        <div className="grid gap-1">
-                          {solutionsList.map((sol, idx) => (
-                            <Link
-                              key={sol.slug}
-                              href={href(locale, `/services/${sol.slug}`)}
-                              className="group flex flex-col gap-0.5 rounded-xl px-3.5 py-2.5 transition-colors hover:bg-[#0D252E]"
-                            >
-                              <span className="flex items-center justify-between text-[14px] font-semibold text-[#F2FAF9] group-hover:text-[#7EF5D6]">
-                                <span>
-                                  <span className="font-mono-tech mr-2 text-[12px] text-[#52C7CC]">
-                                    0{idx + 1}
-                                  </span>
-                                  {pick(locale, sol.name)}
-                                </span>
-                                <ArrowRight
-                                  size={14}
-                                  className="opacity-0 transition-opacity group-hover:opacity-100"
-                                />
-                              </span>
-                              <span className="pl-6 text-[13px] text-[#93B5B9]">
+                    <div className="w-[460px] rounded-2xl border border-black/10 bg-white p-5 text-[#0B1520] shadow-[0_28px_70px_-16px_rgba(11,21,32,0.22)]">
+                      <div className="divide-y divide-black/[0.07]">
+                        {solutionsList.map((sol, idx) => (
+                          <Link
+                            key={sol.slug}
+                            href={href(locale, `/services/${sol.slug}`)}
+                            className="group flex items-start gap-3.5 py-3.5 first:pt-1 last:pb-1"
+                          >
+                            <span
+                              aria-hidden="true"
+                              className="mt-2 h-2 w-2 shrink-0 rounded-full"
+                              style={{ backgroundColor: DOMAIN_DOTS[idx % DOMAIN_DOTS.length] }}
+                            />
+                            <div>
+                              <div className="text-[14px] font-medium text-[#0B1520] group-hover:text-[#0B7A8C]">
+                                {pick(locale, sol.name)}
+                              </div>
+                              <div className="mt-0.5 text-[13px] leading-snug text-[#52606D]">
                                 {pick(locale, sol.promise)}
-                              </span>
-                            </Link>
-                          ))}
-                        </div>
-                        <div className="mt-2 border-t border-white/10 pt-2">
-                          <Link
-                            href={href(locale, "/services")}
-                            className="flex min-h-[38px] items-center justify-between rounded-lg px-3.5 text-[13px] font-semibold text-[#7EF5D6] hover:bg-[#0D252E]"
-                          >
-                            <span>{pick(locale, siteCopy.nav.allSolutions)}</span>
-                            <ArrowRight size={14} />
-                          </Link>
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="w-[220px] rounded-2xl border border-[#7EF5D6]/24 bg-[#061217]/98 p-2.5 shadow-2xl backdrop-blur-xl">
-                        {[
-                          { path: "/about", label: pick(locale, siteCopy.nav.team) },
-                          { path: "/insights", label: pick(locale, siteCopy.nav.insights) },
-                          { path: "/contact", label: pick(locale, siteCopy.nav.contact) },
-                        ].map((sub) => (
-                          <Link
-                            key={sub.path}
-                            href={href(locale, sub.path)}
-                            className="flex min-h-[40px] items-center justify-between rounded-xl px-3.5 text-[14px] font-medium text-[#E4F3F4] transition-colors hover:bg-[#0D252E] hover:text-[#7EF5D6]"
-                          >
-                            <span>{sub.label}</span>
-                            <ArrowUpRight size={14} className="text-[#52C7CC]" />
+                              </div>
+                            </div>
                           </Link>
                         ))}
                       </div>
-                    )}
+                      <div className="mt-3 border-t border-black/10 pt-3">
+                        <Link
+                          href={href(locale, "/services")}
+                          className="inline-flex min-h-[34px] items-center gap-1.5 text-[13px] font-medium text-[#0B1520] hover:text-[#0B7A8C]"
+                        >
+                          <span>{t(locale, "查看全部解决方案", "Explore all solutions")}</span>
+                          <ArrowRight size={14} />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {isOpen && menuKey === "about" && (
+                  <div className="absolute left-0 top-full pt-2">
+                    <div className="w-[240px] rounded-2xl border border-black/10 bg-white p-3 text-[#0B1520] shadow-[0_28px_70px_-16px_rgba(11,21,32,0.22)]">
+                      {[
+                        { path: "/about", label: pick(locale, siteCopy.nav.about) },
+                        { path: "/insights", label: pick(locale, siteCopy.nav.insights) },
+                        { path: "/contact", label: pick(locale, siteCopy.nav.contact) },
+                      ].map((sub) => (
+                        <Link
+                          key={sub.path}
+                          href={href(locale, sub.path)}
+                          className="flex min-h-[40px] items-center justify-between rounded-lg px-3 text-[14px] text-[#0B1520] transition-colors hover:bg-[#F6FAFC] hover:text-[#0B7A8C]"
+                        >
+                          <span>{sub.label}</span>
+                          <ArrowRight size={14} className="text-black/40" />
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
@@ -267,32 +295,34 @@ export function Header({ locale }: { locale: Locale }) {
           })}
         </nav>
 
-        {/* Right actions */}
-        <div className="flex items-center gap-2.5">
-          <a
-            href={targetLocaleHref}
-            onClick={(e) => {
-              e.currentTarget.href =
-                targetLocaleHref + window.location.search + window.location.hash;
-            }}
+        {/* Actions */}
+        <div className="flex items-center gap-3">
+          <Link
+            href={switchHref}
+            lang={switchTargetLocale === "zh" ? "zh-CN" : "en"}
             style={{
               fontFamily:
-                'system-ui, -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif',
+                'system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif',
             }}
-            aria-label={t(
-              locale,
-              "Switch language to English",
-              "切换为中文页面"
-            )}
-            className="inline-flex min-h-[38px] min-w-[44px] items-center justify-center gap-1.5 rounded-full border border-white/16 bg-white/5 px-3 text-[13px] font-medium text-[#E4F3F4] transition-colors hover:border-[#7EF5D6]/50 hover:text-[#7EF5D6]"
+            aria-label={t(locale, "切换到英文版", "Switch language to Chinese")}
+            className={`inline-flex min-h-[40px] items-center gap-1.5 px-2.5 text-[13px] font-medium transition-colors ${
+              isDarkHeader
+                ? "text-white/80 hover:text-white"
+                : "text-[#2C3A47] hover:text-[#0B1520]"
+            }`}
           >
-            <Globe size={14} className="text-[#7EF5D6]" />
-            <span>{locale === "zh" ? "EN" : "中文"}</span>
-          </a>
+            <Globe size={14} className="opacity-75" />
+            <span>{t(locale, "EN", "中文")}</span>
+          </Link>
 
           <Link
             href={href(locale, "/contact#form")}
-            className="hidden sm:inline-flex min-h-[40px] items-center gap-1.5 rounded-full bg-[#7EF5D6] px-4 py-2 text-[13px] font-bold text-[#04191E] shadow-[0_6px_20px_-4px_rgba(126,245,214,0.45)] transition-transform hover:-translate-y-0.5 hover:bg-[#95F8DF]"
+            className={
+              isDarkHeader
+                ? "btn-primary-mint hidden md:inline-flex"
+                : "btn-primary-dark hidden md:inline-flex"
+            }
+            style={{ minHeight: "40px", padding: "0.5rem 1.2rem", fontSize: "13px" }}
           >
             <span>{pick(locale, siteCopy.nav.primaryCta)}</span>
             <ArrowUpRight size={15} />
@@ -301,60 +331,91 @@ export function Header({ locale }: { locale: Locale }) {
           <button
             id="mobile-menu-toggle"
             type="button"
-            aria-label={t(
-              locale,
-              mobileOpen ? "关闭导航菜单" : "打开导航菜单",
-              mobileOpen ? "Close navigation menu" : "Open navigation menu"
-            )}
             aria-expanded={mobileOpen}
-            onClick={() => setMobileOpen((v) => !v)}
-            className="inline-flex h-[42px] w-[42px] items-center justify-center rounded-xl border border-white/16 bg-white/5 text-[#F2FAF9] lg:hidden"
+            aria-controls="mobile-navigation-drawer"
+            aria-label={
+              mobileOpen
+                ? t(locale, "关闭导航菜单", "Close navigation menu")
+                : t(locale, "打开导航菜单", "Open navigation menu")
+            }
+            onClick={() => setMobileOpen((prev) => !prev)}
+            className={`inline-flex h-[42px] w-[42px] items-center justify-center rounded-full border lg:hidden ${
+              isDarkHeader
+                ? "border-white/25 text-white"
+                : "border-black/15 text-[#0B1520]"
+            }`}
           >
-            {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+            {mobileOpen ? <X size={19} /> : <Menu size={19} />}
           </button>
         </div>
       </div>
+      </header>
 
-      {/* Mobile full-height navigation drawer */}
+      {/* Mobile Navigation Drawer rendered OUTSIDE <header> so backdrop-blur never creates a 76px fixed containing block */}
       {mobileOpen && (
-        <nav
+        <div
           id="mobile-navigation-drawer"
-          aria-label={t(locale, "移动端主导航", "Mobile navigation")}
-          className="fixed inset-x-0 top-[72px] bottom-0 z-50 overflow-y-auto bg-[#030709]/98 px-6 py-8 backdrop-blur-2xl lg:hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-label={t(locale, "移动导航菜单", "Mobile navigation")}
+          className="fixed inset-x-0 top-[76px] bottom-0 z-50 overflow-y-auto bg-[#02080E] px-6 py-8 text-white lg:hidden"
         >
-          <div className="mx-auto flex max-w-lg flex-col gap-2">
+          <div className="mx-auto flex max-w-lg flex-col divide-y divide-white/12">
+            <div className="pb-5">
+              <Link
+                href={href(locale, "/services")}
+                className="flex min-h-[44px] items-center justify-between text-[18px] font-normal text-white"
+              >
+                <span>{pick(locale, siteCopy.nav.solutions)}</span>
+                <ArrowRight size={17} className="text-[#22D3EE]" />
+              </Link>
+              <div className="mt-2 flex flex-col gap-1 pl-3">
+                {solutionsList.map((sol, idx) => (
+                  <Link
+                    key={sol.slug}
+                    href={href(locale, `/services/${sol.slug}`)}
+                    className="flex min-h-[40px] items-center gap-2.5 text-[15px] text-white/78 hover:text-white"
+                  >
+                    <span
+                      className="h-1.5 w-1.5 rounded-full"
+                      style={{ backgroundColor: DOMAIN_DOTS[idx % DOMAIN_DOTS.length] }}
+                    />
+                    <span>{pick(locale, sol.name)}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             {[
-              ...navItems.map((n) => ({ path: `/${n.key}`, label: n.label })),
+              { path: "/cases", label: pick(locale, siteCopy.nav.cases) },
+              { path: "/technology", label: pick(locale, siteCopy.nav.technology) },
+              { path: "/engagement", label: pick(locale, siteCopy.nav.engagement) },
+              { path: "/about", label: pick(locale, siteCopy.nav.about) },
               { path: "/insights", label: pick(locale, siteCopy.nav.insights) },
               { path: "/contact", label: pick(locale, siteCopy.nav.contact) },
-            ].map((item, idx) => (
+            ].map((lnk) => (
               <Link
-                key={item.path}
-                href={href(locale, item.path)}
-                className="flex min-h-[52px] items-center justify-between rounded-xl border border-white/10 bg-[#08161B] px-4 py-3 text-[16px] font-semibold text-[#F2FAF9] active:border-[#7EF5D6]"
+                key={lnk.path}
+                href={href(locale, lnk.path)}
+                className="flex min-h-[52px] items-center justify-between text-[17px] font-normal text-white/90"
               >
-                <span className="flex items-center gap-3">
-                  <span className="font-mono-tech text-[12px] text-[#7EF5D6]">
-                    0{idx + 1}
-                  </span>
-                  <span>{item.label}</span>
-                </span>
-                <ArrowUpRight size={18} className="text-[#52C7CC]" />
+                <span>{lnk.label}</span>
+                <ArrowRight size={16} className="text-[#22D3EE]/70" />
               </Link>
             ))}
 
-            <div className="mt-5">
+            <div className="pt-7">
               <Link
                 href={href(locale, "/contact#form")}
                 className="btn-primary-mint w-full"
               >
                 <span>{pick(locale, siteCopy.nav.primaryCta)}</span>
-                <ArrowUpRight size={17} />
+                <ArrowUpRight size={16} />
               </Link>
             </div>
           </div>
-        </nav>
+        </div>
       )}
-    </header>
+    </>
   );
 }

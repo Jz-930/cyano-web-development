@@ -26,8 +26,19 @@ import {
   t,
 } from "@/lib/content";
 
+const INDUSTRY_ACCENT: Record<string, string> = {
+  manufacturing: "#0B7A8C",
+  consulting: "#1D4ED8",
+  "enterprise-it": "#0E7490",
+  retail: "#B45309",
+  "real-estate": "#6D28D9",
+  media: "#0369A1",
+};
+
 /**
- * Consistent engineered CaseCard (fixes V-11 arbitrary 02/03/01 badge numbers & M-02 mobile crop).
+ * Unboxed Gallery-Style CaseCard:
+ * Crisp 16:10 dark titanium studio browser frame on top,
+ * open editorial typography below — ZERO outer card-border clutter!
  */
 export function CaseCard({
   item,
@@ -39,80 +50,84 @@ export function CaseCard({
   const mainImg = item.images[item.mainImageIndex] ?? item.images[0];
   const meta = getMediaMeta(mainImg.src);
   const showDemo = Boolean(item.demoUrl && isDemoEnabled(item.slug));
+  const accent = INDUSTRY_ACCENT[item.industryKey] ?? "#4F46E5";
 
   return (
-    <article className="card-light card-light-interactive group flex flex-col overflow-hidden">
+    <article className="group flex flex-col">
+      {/* Studio Browser Frame */}
       <Link
         href={href(locale, `/cases/${item.slug}`)}
         aria-label={pick(locale, item.title)}
-        className="relative block overflow-hidden border-b border-[#D3E3E6] bg-[#06151B]"
+        className="block overflow-hidden rounded-2xl bg-[#07111B] p-2.5 shadow-[0_24px_56px_-20px_rgba(11,21,32,0.22)] ring-1 ring-slate-900/[0.08] transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-[0_32px_70px_-18px_rgba(11,122,140,0.24)] sm:p-3.5"
       >
-        {/* Top console header */}
-        <div className="flex items-center justify-between border-b border-white/10 bg-[#041015] px-4 py-2.5">
+        <div className="mb-2.5 flex items-center justify-between px-1.5">
           <div className="flex items-center gap-2">
-            <span className="flex gap-1" aria-hidden="true">
-              <span className="h-2 w-2 rounded-full bg-[#3FA0A6]/70" />
-              <span className="h-2 w-2 rounded-full bg-[#7EF5D6]" />
+            <span className="flex gap-1.5" aria-hidden="true">
+              <span className="h-2 w-2 rounded-full bg-[#FB7185]/75" />
+              <span className="h-2 w-2 rounded-full bg-[#FBBF24]/80" />
+              <span className="h-2 w-2 rounded-full bg-[#34D399]/80" />
             </span>
-            <span className="font-mono-tech truncate text-[12px] font-medium text-[#D8ECEE]">
+            <span className="font-mono-tech truncate text-[12px] text-[#94A3B8]">
               {pick(locale, item.system)}
             </span>
           </div>
           <ArrowUpRight
             size={15}
-            className="shrink-0 text-[#7EF5D6] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            className="shrink-0 text-[#94A3B8] transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-white"
           />
         </div>
 
-        {/* Crisp 16:10 screenshot viewport; mobile-frame screenshots centered cleanly on dark backdrop */}
-        <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#081A21]">
+        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-[#060911]">
           <Image
             src={mainImg.src}
             alt={`${pick(locale, item.system)} — ${pick(locale, mainImg.caption)}`}
             width={meta.width}
             height={meta.height}
-            sizes="(max-width: 768px) 94vw, (max-width: 1200px) 46vw, 580px"
+            sizes="(max-width: 768px) 94vw, (max-width: 1200px) 46vw, 600px"
             placeholder={meta.blurDataURL ? "blur" : "empty"}
             blurDataURL={meta.blurDataURL || undefined}
-            className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.02] ${
+            className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.015] ${
               item.isMobileFrame
-                ? "object-contain p-2"
+                ? "object-contain p-3"
                 : "object-cover object-top"
             }`}
           />
         </div>
       </Link>
 
-      {/* Card copy & scoped primary metric */}
-      <div className="flex flex-1 flex-col justify-between p-6">
+      {/* Open Unboxed Editorial Typography Below */}
+      <div className="flex flex-1 flex-col justify-between pt-6">
         <div>
-          <div className="flex flex-wrap items-center justify-between gap-2">
-            <span className="rounded-full bg-[#E7F4F5] px-3 py-1 text-[12px] font-semibold text-[#0E5961]">
+          <div className="flex flex-wrap items-baseline justify-between gap-3">
+            <span
+              className="font-mono-tech text-[12px] font-semibold uppercase tracking-[0.08em]"
+              style={{ color: accent }}
+            >
               {pick(locale, item.industry)}
             </span>
-            <span className="font-mono-tech inline-flex items-baseline gap-1.5 text-[14px] font-bold text-[#062F3A]">
+            <span className="font-mono-tech inline-flex items-baseline gap-1.5 text-[15px] font-bold text-[#0B1120]">
               <span>{pick(locale, item.stats[0].value)}</span>
-              <span className="font-sans text-[12px] font-medium text-[#496269]">
+              <span className="font-sans text-[12px] font-normal text-[#526277]">
                 {pick(locale, item.stats[0].label)}
               </span>
             </span>
           </div>
 
-          <h3 className="mt-3.5 text-[19px] font-semibold leading-snug text-[#07161A]">
+          <h3 className="mt-2.5 text-[21px] font-semibold leading-snug text-[#0B1120]">
             <Link
               href={href(locale, `/cases/${item.slug}`)}
-              className="inline-block py-0.5 hover:text-[#0E5961]"
+              className="inline-block py-0.5 transition-colors hover:text-[#4F46E5]"
             >
               {pick(locale, item.title)}
             </Link>
           </h3>
 
-          <p className="mt-2 text-[14px] leading-relaxed text-[#31494F]">
+          <p className="mt-2 text-[14px] leading-relaxed text-[#526277]">
             {pick(locale, item.profile)}
           </p>
         </div>
 
-        <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-[#D3E3E6] pt-4">
+        <div className="mt-5 flex flex-wrap items-center gap-6 border-t border-slate-200/80 pt-4">
           <Link
             href={href(locale, `/cases/${item.slug}`)}
             className="link-inline-tech"
@@ -126,10 +141,10 @@ export function CaseCard({
               href={item.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex min-h-[38px] items-center gap-1 rounded-full border border-[#0E5961]/30 bg-[#F3FAFA] px-3 py-1 text-[12px] font-semibold text-[#0E5961] transition-colors hover:border-[#0E5961] hover:bg-[#E7F4F5]"
+              className="inline-flex min-h-[36px] items-center gap-1 text-[13px] font-medium text-[#4F46E5] transition-colors hover:text-[#0B1120]"
             >
               <span>{pick(locale, siteCopy.demo.publicButton)}</span>
-              <ArrowUpRight size={13} />
+              <ArrowUpRight size={14} />
             </a>
           )}
         </div>
@@ -139,58 +154,58 @@ export function CaseCard({
 }
 
 /**
- * CaseFilterGrid with URL sync + D-6 Core Enterprise Workflows vs Specialized Vertical Systems grouping.
+ * CaseFilterGrid with URL sync + Core vs Specialized Vertical grouping.
  */
 export function CaseFilterGrid({ locale }: { locale: Locale }) {
   const [filter, setFilter] = useState<string>("all");
 
   useEffect(() => {
-    const param = new URLSearchParams(window.location.search).get("industry");
-    if (param) {
-      // Support both industryKey ('manufacturing') and legacy case slug
-      const matchedBySlug = casesList.find((c) => c.slug === param);
-      setFilter(matchedBySlug ? matchedBySlug.industryKey : param);
-    }
+    const syncFromUrl = () => {
+      const param = new URLSearchParams(window.location.search).get("industry");
+      setFilter(
+        param && industriesList.some((i) => i.key === param) ? param : "all"
+      );
+    };
+    syncFromUrl();
+    window.addEventListener("popstate", syncFromUrl);
+    return () => window.removeEventListener("popstate", syncFromUrl);
   }, []);
 
-  const selectFilter = (val: string) => {
-    setFilter(val);
+  const applyFilter = (key: string) => {
+    setFilter(key);
     const url = new URL(window.location.href);
-    if (val === "all") url.searchParams.delete("industry");
-    else url.searchParams.set("industry", val);
-    window.history.replaceState(null, "", url);
+    if (key === "all") url.searchParams.delete("industry");
+    else url.searchParams.set("industry", key);
+    window.history.replaceState(null, "", url.pathname + url.search);
   };
 
   const filtered =
     filter === "all"
       ? casesList
-      : casesList.filter(
-          (c) => c.industryKey === filter || c.slug === filter
-        );
+      : casesList.filter((c) => c.industryKey === filter);
 
   const coreCases = filtered.filter((c) => c.group === "core");
   const verticalCases = filtered.filter((c) => c.group === "vertical");
 
   return (
-    <div className="space-y-10">
-      {/* Filter pill bar */}
+    <div className="space-y-16">
+      {/* Clean Minimal Filter Strip */}
       <div
         role="group"
-        aria-label={t(locale, "按行业筛选客户项目", "Filter case studies by industry")}
-        className="flex flex-wrap items-center gap-2"
+        aria-label={t(locale, "按行业筛选案例", "Filter case studies by industry")}
+        className="flex flex-wrap items-center gap-x-2 gap-y-2 border-b border-slate-200 pb-4"
       >
         <button
           type="button"
           aria-pressed={filter === "all"}
-          onClick={() => selectFilter("all")}
-          className={`inline-flex min-h-[40px] items-center gap-1.5 rounded-full border px-4 py-1.5 text-[13px] font-semibold transition-colors ${
+          onClick={() => applyFilter("all")}
+          className={`min-h-[38px] rounded-full px-4 text-[13px] font-semibold transition-colors ${
             filter === "all"
-              ? "border-[#062F3A] bg-[#062F3A] text-[#F2FAF9]"
-              : "border-[#C6DCE0] bg-white text-[#1E373D] hover:border-[#0E5961]"
+              ? "bg-[#0B1120] text-white"
+              : "text-[#526277] hover:bg-slate-100 hover:text-[#0B1120]"
           }`}
         >
-          <span>{t(locale, "全部项目", "All projects")}</span>
-          <span className="font-mono-tech text-[12px] opacity-80">06</span>
+          {t(locale, "全部项目", "All projects")} ({casesList.length})
         </button>
 
         {industriesList.map((ind) => {
@@ -200,11 +215,11 @@ export function CaseFilterGrid({ locale }: { locale: Locale }) {
               key={ind.key}
               type="button"
               aria-pressed={active}
-              onClick={() => selectFilter(ind.key)}
-              className={`inline-flex min-h-[40px] items-center rounded-full border px-4 py-1.5 text-[13px] font-medium transition-colors ${
+              onClick={() => applyFilter(ind.key)}
+              className={`min-h-[38px] rounded-full px-4 text-[13px] font-medium transition-colors ${
                 active
-                  ? "border-[#062F3A] bg-[#062F3A] text-[#F2FAF9]"
-                  : "border-[#C6DCE0] bg-white text-[#1E373D] hover:border-[#0E5961]"
+                  ? "bg-[#0B1120] font-semibold text-white"
+                  : "text-[#526277] hover:bg-slate-100 hover:text-[#0B1120]"
               }`}
             >
               {pick(locale, ind.label)}
@@ -213,48 +228,28 @@ export function CaseFilterGrid({ locale }: { locale: Locale }) {
         })}
       </div>
 
-      {/* Core Enterprise Workflow Cases */}
+      {/* Group 1: Core Enterprise Workflow Cases */}
       {coreCases.length > 0 && (
-        <div className="space-y-5">
-          {filter === "all" && (
-            <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-[#D3E3E6] pb-3">
-              <h2 className="text-[22px] font-semibold text-[#07161A]">
-                {t(
-                  locale,
-                  "核心企业工作流系统",
-                  "Core enterprise workflow systems"
-                )}
-              </h2>
-              <span className="font-mono-tech text-[12px] font-semibold text-[#0E5961]">
-                {t(
-                  locale,
-                  "销售问答 · 标书方案 · 内部知识库 · 数据查询",
-                  "Sales Q&A · Proposals · Internal Wiki · SQL Analytics"
-                )}
-              </span>
-            </div>
-          )}
-          <div className="grid gap-6 md:grid-cols-2">
-            {coreCases.map((c) => (
-              <CaseCard key={c.slug} item={c} locale={locale} />
-            ))}
-          </div>
+        <div className="grid gap-x-10 gap-y-16 md:grid-cols-2">
+          {coreCases.map((c) => (
+            <CaseCard key={c.slug} item={c} locale={locale} />
+          ))}
         </div>
       )}
 
-      {/* Specialized Vertical Systems (D-6) */}
+      {/* Group 2: Specialized Vertical Systems */}
       {verticalCases.length > 0 && (
-        <div className="space-y-5 pt-2">
+        <div className="space-y-10 border-t border-slate-200 pt-14">
           {filter === "all" && (
-            <div className="flex flex-wrap items-baseline justify-between gap-2 border-b border-[#D3E3E6] pb-3">
-              <h2 className="text-[22px] font-semibold text-[#07161A]">
+            <div className="flex flex-col justify-between gap-2 sm:flex-row sm:items-baseline">
+              <h2 className="text-[24px] font-semibold text-[#0B1120]">
                 {t(
                   locale,
                   "垂直场景定制系统",
                   "Specialized vertical systems"
                 )}
               </h2>
-              <span className="font-mono-tech text-[12px] font-semibold text-[#496269]">
+              <span className="font-mono-tech text-[12px] font-medium text-[#526277]">
                 {t(
                   locale,
                   "多物业资产记账 · 百万字长篇设定记忆引擎",
@@ -263,7 +258,7 @@ export function CaseFilterGrid({ locale }: { locale: Locale }) {
               </span>
             </div>
           )}
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-x-10 gap-y-16 md:grid-cols-2">
             {verticalCases.map((c) => (
               <CaseCard key={c.slug} item={c} locale={locale} />
             ))}
@@ -275,7 +270,8 @@ export function CaseFilterGrid({ locale }: { locale: Locale }) {
 }
 
 /**
- * G-12: Proportional Before & After Dual Time-Track Infographic.
+ * BeforeAfterTracks:
+ * Pure proportional graphic bars + unclipped legend labels below (ZERO truncated words inside bars!).
  */
 export function BeforeAfterTracks({
   item,
@@ -284,84 +280,108 @@ export function BeforeAfterTracks({
   item: CaseItem;
   locale: Locale;
 }) {
-  const beforeTotalWeight = item.beforeSegments.reduce(
-    (acc, s) => acc + s.weight,
-    0
-  );
-  const afterTotalWeight = item.afterSegments.reduce(
-    (acc, s) => acc + s.weight,
-    0
-  );
+  const beforeTotalWeight = item.beforeSegments.reduce((acc, s) => acc + s.weight, 0);
+  const afterTotalWeight = item.afterSegments.reduce((acc, s) => acc + s.weight, 0);
+  const beforeShades = ["#FB7185", "#F97316", "#F59E0B", "#EAB308"];
+  const afterShades = ["#22D3EE", "#6366F1", "#8B5CF6", "#34D399"];
 
   return (
-    <div className="card-light p-6 md:p-8">
-      <div className="grid gap-7">
-        {/* BEFORE Track (Full 100% Baseline) */}
-        <div>
-          <div className="flex flex-wrap items-baseline justify-between gap-2">
-            <span className="font-mono-tech text-[12px] font-semibold uppercase tracking-[0.08em] text-[#8A4B08]">
-              {t(locale, "改造前流程", "BEFORE · MANUAL WORKFLOW")}
-            </span>
-            <span className="font-mono-tech text-[14px] font-bold text-[#8A4B08]">
-              {pick(locale, item.beforeTotalLabel)}
-            </span>
-          </div>
-          <p className="mt-1 text-[14px] text-[#31494F]">
-            {pick(locale, item.beforeSummary)}
-          </p>
+    <div className="divide-y divide-slate-200/90 border-t border-b border-slate-200/90">
+      {/* BEFORE Track */}
+      <div className="py-8">
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <span className="font-mono-tech text-[12px] font-semibold uppercase tracking-[0.1em] text-[#E11D48]">
+            {t(locale, "改造前人工流程", "BEFORE · MANUAL WORKFLOW")}
+          </span>
+          <span className="font-mono-tech text-[18px] font-bold text-[#0B1120]">
+            {pick(locale, item.beforeTotalLabel)}
+          </span>
+        </div>
+        <p className="mt-1.5 text-[14px] text-[#526277]">
+          {pick(locale, item.beforeSummary)}
+        </p>
 
-          <div className="mt-3 flex min-h-[44px] w-full gap-1 overflow-hidden rounded-xl border border-[#E7B97A] bg-[#FEF6EC] p-1">
-            {item.beforeSegments.map((seg, idx) => (
+        {/* Pure Segmented Proportional Bar */}
+        <div className="mt-5 flex h-3 w-full gap-1 overflow-hidden rounded-full bg-slate-100">
+          {item.beforeSegments.map((seg, idx) => (
+            <div
+              key={idx}
+              style={{
+                width: `${(seg.weight / beforeTotalWeight) * 100}%`,
+                backgroundColor: beforeShades[idx % beforeShades.length],
+              }}
+              className="h-full first:rounded-l-full last:rounded-r-full"
+            />
+          ))}
+        </div>
+
+        {/* Clean Unclipped Segment Legend */}
+        <div className="mt-3.5 flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-[#334155]">
+          {item.beforeSegments.map((seg, idx) => (
+            <span key={idx} className="inline-flex items-center gap-2">
+              <span
+                className="h-2 w-2 shrink-0 rounded-full"
+                style={{ backgroundColor: beforeShades[idx % beforeShades.length] }}
+              />
+              <span>{pick(locale, seg.label)}</span>
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* AFTER Track */}
+      <div className="py-8">
+        <div className="flex flex-wrap items-baseline justify-between gap-2">
+          <span className="font-mono-tech text-[12px] font-semibold uppercase tracking-[0.1em] text-[#4F46E5]">
+            {t(locale, "接入定制系统后", "AFTER · ENGINEERED WORKFLOW")}
+          </span>
+          <span className="font-mono-tech text-[18px] font-bold text-[#4F46E5]">
+            {pick(locale, item.afterTotalLabel)}
+          </span>
+        </div>
+        <p className="mt-1.5 text-[14px] text-[#526277]">
+          {pick(locale, item.afterSummary)}
+        </p>
+
+        {/* Proportional Compressed Bar */}
+        <div className="mt-5 h-3 w-full rounded-full bg-slate-100">
+          <div
+            style={{ width: `${Math.max(item.afterWidthPercent, 22)}%` }}
+            className="flex h-full gap-1 overflow-hidden rounded-full"
+          >
+            {item.afterSegments.map((seg, idx) => (
               <div
                 key={idx}
-                style={{ width: `${(seg.weight / beforeTotalWeight) * 100}%` }}
-                className="flex items-center justify-center rounded-lg bg-[#F5DFC1] px-2.5 py-1.5 text-center text-[12px] font-medium text-[#5C3104]"
-              >
-                <span className="truncate">{pick(locale, seg.label)}</span>
-              </div>
+                style={{
+                  width: `${(seg.weight / afterTotalWeight) * 100}%`,
+                  backgroundColor: seg.isHumanReview
+                    ? "#F59E0B"
+                    : afterShades[idx % afterShades.length],
+                }}
+                className="h-full"
+              />
             ))}
           </div>
         </div>
 
-        {/* AFTER Track (Proportional Compressed Width + Explicit Human Review Gate) */}
-        <div>
-          <div className="flex flex-wrap items-baseline justify-between gap-2">
-            <span className="font-mono-tech text-[12px] font-semibold uppercase tracking-[0.08em] text-[#0E5961]">
-              {t(locale, "接入系统后", "AFTER · ENGINEERED WORKFLOW")}
+        {/* Clean Unclipped Segment Legend */}
+        <div className="mt-3.5 flex flex-wrap gap-x-6 gap-y-2 text-[13px] text-[#334155]">
+          {item.afterSegments.map((seg, idx) => (
+            <span key={idx} className="inline-flex items-center gap-2">
+              <span
+                className="h-2 w-2 shrink-0 rounded-full"
+                style={{
+                  backgroundColor: seg.isHumanReview
+                    ? "#F59E0B"
+                    : afterShades[idx % afterShades.length],
+                }}
+              />
+              <span className={seg.isHumanReview ? "font-semibold text-[#B45309]" : ""}>
+                {pick(locale, seg.label)}
+              </span>
+              {seg.isHumanReview && <UserCheck size={13} className="text-[#D97706]" />}
             </span>
-            <span className="font-mono-tech text-[15px] font-bold text-[#062F3A]">
-              {pick(locale, item.afterTotalLabel)}
-            </span>
-          </div>
-          <p className="mt-1 text-[14px] text-[#31494F]">
-            {pick(locale, item.afterSummary)}
-          </p>
-
-          <div className="mt-3 w-full rounded-xl bg-[#EAF4F5] p-1.5">
-            <div
-              style={{
-                width: `${Math.max(item.afterWidthPercent, 34)}%`,
-              }}
-              className="flex min-h-[42px] min-w-[260px] max-w-full gap-1"
-            >
-              {item.afterSegments.map((seg, idx) => (
-                <div
-                  key={idx}
-                  style={{ width: `${(seg.weight / afterTotalWeight) * 100}%` }}
-                  className={`flex items-center justify-center gap-1 rounded-lg px-2.5 py-1.5 text-center text-[12px] font-semibold ${
-                    seg.isHumanReview
-                      ? "border border-[#D99B38] bg-[#FFF4DF] text-[#6E3D05]"
-                      : "bg-[#062F3A] text-[#7EF5D6]"
-                  }`}
-                >
-                  {seg.isHumanReview && (
-                    <UserCheck size={13} className="shrink-0" />
-                  )}
-                  <span className="truncate">{pick(locale, seg.label)}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
@@ -369,8 +389,8 @@ export function BeforeAfterTracks({
 }
 
 /**
- * G-13 + D-2: Annotated System Screenshot Gallery with Interactive 1-4 Hotspots,
- * All 31 Captioned Screenshots, Accessible Lightbox, and EN Client Interface Note.
+ * AnnotatedSystemGallery:
+ * Clean dark showcase frame + open hairline annotation list on the right (no cramped boxes!).
  */
 export function AnnotatedSystemGallery({
   item,
@@ -383,141 +403,123 @@ export function AnnotatedSystemGallery({
   const [activeHotspot, setActiveHotspot] = useState(0);
   const [lightboxOpen, setLightboxOpen] = useState(false);
 
+  const triggerRef = useRef<HTMLButtonElement>(null);
   const closeBtnRef = useRef<HTMLButtonElement>(null);
-  const triggerBtnRef = useRef<HTMLButtonElement>(null);
 
   const currentImg = item.images[currentIdx] ?? item.images[0];
   const imgMeta = getMediaMeta(currentImg.src);
   const showHotspots = currentIdx === item.mainImageIndex;
+  const pinColors = ["#38BDF8", "#818CF8", "#34D399", "#FBBF24"];
 
   useEffect(() => {
     if (!lightboxOpen) return;
-    closeBtnRef.current?.focus();
     document.body.style.overflow = "hidden";
+    closeBtnRef.current?.focus();
 
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setLightboxOpen(false);
-      if (e.key === "ArrowRight")
+      if (e.key === "ArrowRight") {
         setCurrentIdx((v) => (v + 1) % item.images.length);
-      if (e.key === "ArrowLeft")
+      }
+      if (e.key === "ArrowLeft") {
         setCurrentIdx((v) => (v - 1 + item.images.length) % item.images.length);
-      if (e.key === "Tab") {
-        const btns = [
-          ...document.querySelectorAll<HTMLButtonElement>(
-            "#case-lightbox button"
-          ),
-        ];
-        if (!btns.length) return;
-        const idx = btns.indexOf(document.activeElement as HTMLButtonElement);
-        e.preventDefault();
-        btns[(idx + (e.shiftKey ? -1 : 1) + btns.length) % btns.length]?.focus();
       }
     };
     window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", onKey);
-      triggerBtnRef.current?.focus();
+      triggerRef.current?.focus();
     };
   }, [lightboxOpen, item.images.length]);
 
   return (
-    <div className="space-y-5">
-      {/* Polite client working-language note on /en when screenshot UI is Chinese (D-2) */}
-      {locale === "en" && item.interfaceLanguage === "zh" && (
-        <div className="inline-flex items-center gap-2 rounded-xl border border-[#C6DCE0] bg-white px-3.5 py-2 text-[13px] text-[#31494F]">
-          <Globe2 size={15} className="shrink-0 text-[#0E5961]" />
-          <span>
-            Client operating language: Chinese — numbered callouts below explain
-            each interface zone in English.
-          </span>
-        </div>
-      )}
+    <div className="space-y-8">
+      <div className="grid gap-10 lg:grid-cols-[1.45fr_0.55fr] lg:items-start">
+        {/* Left Screenshot Stage */}
+        <div>
+          <div className="overflow-hidden rounded-2xl bg-[#0B101D] p-3 shadow-[0_28px_70px_-22px_rgba(15,23,42,0.28)] sm:p-4">
+            <div className="mb-3 flex flex-wrap items-center justify-between gap-2 px-1">
+              <span className="font-mono-tech text-[12px] text-[#CBD5E1]">
+                {String(currentIdx + 1).padStart(2, "0")} /{" "}
+                {String(item.images.length).padStart(2, "0")} ·{" "}
+                {pick(locale, currentImg.caption)}
+              </span>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
-        {/* Main Annotated Frame */}
-        <div className="overflow-hidden rounded-[20px] border border-[#062F3A]/20 bg-[#051116] p-3 shadow-xl sm:p-4">
-          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-2.5">
-            <span className="font-mono-tech text-[12px] text-[#B4CFD2]">
-              {String(currentIdx + 1).padStart(2, "0")} /{" "}
-              {String(item.images.length).padStart(2, "0")} ·{" "}
-              {pick(locale, item.system)}
-            </span>
-            <button
-              ref={triggerBtnRef}
-              type="button"
-              onClick={() => setLightboxOpen(true)}
-              className="inline-flex min-h-[36px] items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-3 text-[12px] font-medium text-[#E4F3F4] hover:border-[#7EF5D6] hover:text-[#7EF5D6]"
-            >
-              <Expand size={13} />
-              <span>{t(locale, "全屏放大查看", "Enlarge screen")}</span>
-            </button>
-          </div>
-
-          <div className="relative mt-3 overflow-hidden rounded-xl bg-[#081A21]">
-            <Image
-              src={currentImg.src}
-              alt={`${pick(locale, item.system)} — ${pick(locale, currentImg.caption)}`}
-              width={imgMeta.width}
-              height={imgMeta.height}
-              sizes="(max-width: 1024px) 94vw, 820px"
-              placeholder={imgMeta.blurDataURL ? "blur" : "empty"}
-              blurDataURL={imgMeta.blurDataURL || undefined}
-              className={`block w-full ${
-                item.isMobileFrame
-                  ? "max-h-[540px] object-contain mx-auto"
-                  : "h-auto object-cover"
-              }`}
-            />
-
-            {/* Interactive 1-4 Numbered Callout Pins on Main Screen */}
-            {showHotspots &&
-              item.hotspots.map((spot, idx) => {
-                const selected = activeHotspot === idx;
-                return (
-                  <button
-                    key={idx}
-                    type="button"
-                    aria-label={`${idx + 1}: ${pick(locale, spot.title)}`}
-                    onClick={() => setActiveHotspot(idx)}
-                    style={{ left: `${spot.x}%`, top: `${spot.y}%` }}
-                    className={`-translate-x-1/2 -translate-y-1/2 absolute flex h-8 w-8 items-center justify-center rounded-full border-2 font-mono-tech text-[13px] font-bold transition-transform ${
-                      selected
-                        ? "hotspot-pulse scale-110 border-white bg-[#7EF5D6] text-[#03161B]"
-                        : "border-[#7EF5D6] bg-[#04141A]/90 text-[#7EF5D6] hover:scale-105"
-                    }`}
-                  >
-                    {idx + 1}
-                  </button>
-                );
-              })}
-          </div>
-
-          <p className="mt-3 text-[13px] leading-relaxed text-[#C6DFE2]">
-            {pick(locale, currentImg.caption)}
-          </p>
-        </div>
-
-        {/* Right Side: Interactive Callout Guide (or Screen List when viewing secondary screens) */}
-        <div className="card-light p-5">
-          <div className="flex items-center justify-between border-b border-[#D3E3E6] pb-3">
-            <span className="font-mono-tech text-[12px] font-semibold uppercase tracking-[0.06em] text-[#0E5961]">
-              {t(locale, "核心界面拆解标注", "INTERFACE CALLOUTS")}
-            </span>
-            {!showHotspots && (
               <button
+                ref={triggerRef}
                 type="button"
-                onClick={() => setCurrentIdx(item.mainImageIndex)}
-                className="text-[12px] font-semibold text-[#0E5961] underline"
+                onClick={() => setLightboxOpen(true)}
+                className="inline-flex min-h-[32px] items-center gap-1.5 text-[12px] font-medium text-[#93C5FD] transition-colors hover:text-white"
               >
-                {t(locale, "返回主标注图", "Show annotated main view")}
+                <Expand size={13} />
+                <span>{t(locale, "全屏查看原图", "Expand full screen")}</span>
               </button>
-            )}
+            </div>
+
+            <div className="relative overflow-hidden rounded-xl bg-[#060911]">
+              <Image
+                src={currentImg.src}
+                alt={`${pick(locale, item.system)} — ${pick(locale, currentImg.caption)}`}
+                width={imgMeta.width}
+                height={imgMeta.height}
+                sizes="(max-width: 1024px) 94vw, 780px"
+                placeholder={imgMeta.blurDataURL ? "blur" : "empty"}
+                blurDataURL={imgMeta.blurDataURL || undefined}
+                className={`mx-auto block ${
+                  item.isMobileFrame
+                    ? "max-h-[520px] w-auto object-contain py-3"
+                    : "h-auto w-full object-cover"
+                }`}
+              />
+
+              {/* Subtle Numbered Pins on Primary Screen */}
+              {showHotspots &&
+                item.hotspots.map((spot, idx) => {
+                  const active = activeHotspot === idx;
+                  const pinColor = pinColors[idx % pinColors.length];
+                  return (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => setActiveHotspot(idx)}
+                      style={{ left: `${spot.x}%`, top: `${spot.y}%` }}
+                      aria-label={`${idx + 1}: ${pick(locale, spot.title)}`}
+                      className={`absolute -translate-x-1/2 -translate-y-1/2 flex h-7 w-7 items-center justify-center rounded-full font-mono-tech text-[12px] font-bold transition-transform ${
+                        active
+                          ? "scale-115 bg-white text-[#0B1120] ring-4 ring-white/35"
+                          : "bg-[#0B1120]/90 text-white ring-2 ring-white/50 hover:scale-105"
+                      }`}
+                    >
+                      <span style={active ? { color: "#0B1120" } : { color: pinColor }}>
+                        {idx + 1}
+                      </span>
+                    </button>
+                  );
+                })}
+            </div>
           </div>
 
-          <div className="mt-3 flex flex-col gap-2.5">
+          {locale === "en" && item.interfaceLanguage === "zh" && (
+            <p className="mt-3 flex items-center gap-2 text-[13px] text-[#526277]">
+              <Globe2 size={14} className="shrink-0 text-[#4F46E5]" />
+              <span>
+                Note: Client interface shown in production Chinese as deployed for the client’s working team; annotations on the right translate each workflow module.
+              </span>
+            </p>
+          )}
+        </div>
+
+        {/* Right Open Hairline Callout List (ZERO nested boxes!) */}
+        <div>
+          <div className="font-mono-tech text-[12px] font-semibold uppercase tracking-[0.1em] text-[#526277]">
+            {t(locale, "界面核心模块拆解", "INTERFACE MODULE BREAKDOWN")}
+          </div>
+
+          <div className="mt-3 divide-y divide-slate-200/90 border-t border-b border-slate-200/90">
             {item.hotspots.map((spot, idx) => {
               const active = showHotspots && activeHotspot === idx;
+              const pinColor = pinColors[idx % pinColors.length];
               return (
                 <button
                   key={idx}
@@ -526,26 +528,30 @@ export function AnnotatedSystemGallery({
                     setCurrentIdx(item.mainImageIndex);
                     setActiveHotspot(idx);
                   }}
-                  className={`flex items-start gap-3 rounded-xl border p-3 text-left transition-colors ${
-                    active
-                      ? "border-[#0E5961] bg-[#EDF8F8]"
-                      : "border-[#E1ECEE] bg-white hover:border-[#9DB8BE]"
-                  }`}
+                  className="relative flex w-full items-start gap-3.5 py-4 pl-3 text-left transition-colors"
                 >
                   <span
-                    className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full font-mono-tech text-[12px] font-bold ${
+                    aria-hidden="true"
+                    className="absolute top-3 bottom-3 left-0 w-[2.5px] rounded-full"
+                    style={{
+                      backgroundColor: active ? pinColor : "transparent",
+                    }}
+                  />
+                  <span
+                    className="font-mono-tech mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-[12px] font-bold"
+                    style={
                       active
-                        ? "bg-[#062F3A] text-[#7EF5D6]"
-                        : "bg-[#E7F4F5] text-[#0E5961]"
-                    }`}
+                        ? { backgroundColor: "#0B1120", color: "#FFFFFF" }
+                        : { backgroundColor: "#E2E8F0", color: "#334155" }
+                    }
                   >
                     {idx + 1}
                   </span>
                   <div>
-                    <div className="text-[14px] font-semibold text-[#07161A]">
+                    <div className="text-[15px] font-semibold text-[#0B1120]">
                       {pick(locale, spot.title)}
                     </div>
-                    <p className="mt-1 text-[13px] leading-snug text-[#31494F]">
+                    <p className="mt-1 text-[13px] leading-relaxed text-[#526277]">
                       {pick(locale, spot.detail)}
                     </p>
                   </div>
@@ -556,9 +562,9 @@ export function AnnotatedSystemGallery({
         </div>
       </div>
 
-      {/* Thumbnail Strip for All Screens in This Project */}
+      {/* Thumbnail Strip */}
       {item.images.length > 1 && (
-        <div className="flex flex-wrap items-center gap-2.5">
+        <div className="flex flex-wrap items-center gap-3 pt-2">
           {item.images.map((im, idx) => {
             const m = getMediaMeta(im.src);
             const isCurrent = idx === currentIdx;
@@ -572,10 +578,10 @@ export function AnnotatedSystemGallery({
                   pick(locale, im.caption)
                 }
                 onClick={() => setCurrentIdx(idx)}
-                className={`relative h-[64px] w-[104px] overflow-hidden rounded-xl border-2 transition-all ${
+                className={`relative h-[64px] w-[108px] overflow-hidden rounded-xl transition-all ${
                   isCurrent
-                    ? "border-[#0E5961] ring-2 ring-[#0E5961]/25"
-                    : "border-[#C6DCE0] opacity-75 hover:opacity-100"
+                    ? "ring-2 ring-[#4F46E5] ring-offset-2"
+                    : "opacity-65 hover:opacity-100"
                 }`}
               >
                 <Image
@@ -586,16 +592,13 @@ export function AnnotatedSystemGallery({
                   sizes="110px"
                   className="h-full w-full object-cover object-top"
                 />
-                <span className="font-mono-tech absolute right-1 bottom-1 rounded bg-[#030A0D]/80 px-1 text-[12px] text-white">
-                  0{idx + 1}
-                </span>
               </button>
             );
           })}
         </div>
       )}
 
-      {/* Accessible Lightbox Modal */}
+      {/* Lightbox Modal */}
       {lightboxOpen && (
         <div
           id="case-lightbox"
@@ -603,14 +606,14 @@ export function AnnotatedSystemGallery({
           aria-modal="true"
           aria-label={pick(locale, item.system)}
           onClick={() => setLightboxOpen(false)}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#020709]/95 p-4 backdrop-blur-xl"
+          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-[#050811]/95 p-4 backdrop-blur-xl"
         >
           <div
             onClick={(e) => e.stopPropagation()}
             className="relative flex max-h-[90vh] w-full max-w-6xl flex-col items-center"
           >
-            <div className="mb-3 flex w-full items-center justify-between text-[#F2FAF9]">
-              <span className="font-mono-tech text-[13px] text-[#7EF5D6]">
+            <div className="mb-3 flex w-full items-center justify-between text-white">
+              <span className="font-mono-tech text-[13px] text-[#CBD5E1]">
                 {String(currentIdx + 1).padStart(2, "0")} /{" "}
                 {String(item.images.length).padStart(2, "0")} ·{" "}
                 {pick(locale, currentImg.caption)}
@@ -620,13 +623,13 @@ export function AnnotatedSystemGallery({
                 type="button"
                 onClick={() => setLightboxOpen(false)}
                 aria-label={t(locale, "关闭大图", "Close enlarged view")}
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white hover:border-[#7EF5D6]"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white hover:bg-white/20"
               >
                 <X size={18} />
               </button>
             </div>
 
-            <div className="relative flex w-full items-center justify-center overflow-hidden rounded-2xl border border-white/15 bg-[#061318] p-2">
+            <div className="relative flex w-full items-center justify-center overflow-hidden rounded-2xl bg-[#0B101D] p-2">
               {item.images.length > 1 && (
                 <button
                   type="button"
@@ -636,7 +639,7 @@ export function AnnotatedSystemGallery({
                     )
                   }
                   aria-label={t(locale, "上一张界面", "Previous screen")}
-                  className="absolute left-3 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-[#030A0D]/85 text-white hover:border-[#7EF5D6]"
+                  className="absolute left-3 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-[#070A12]/85 text-white hover:bg-white/20"
                 >
                   <ChevronLeft size={20} />
                 </button>
@@ -655,7 +658,7 @@ export function AnnotatedSystemGallery({
                     setCurrentIdx((v) => (v + 1) % item.images.length)
                   }
                   aria-label={t(locale, "下一张界面", "Next screen")}
-                  className="absolute right-3 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-[#030A0D]/85 text-white hover:border-[#7EF5D6]"
+                  className="absolute right-3 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-[#070A12]/85 text-white hover:bg-white/20"
                 >
                   <ChevronRight size={20} />
                 </button>
@@ -669,7 +672,8 @@ export function AnnotatedSystemGallery({
 }
 
 /**
- * G-14: Project-Specific 4-Stage Workflow Diagram per Case.
+ * CaseWorkflowGraph:
+ * Open 4-Column Architectural Hairline Grid (ZERO card boxes!).
  */
 export function CaseWorkflowGraph({
   item,
@@ -678,53 +682,64 @@ export function CaseWorkflowGraph({
   item: CaseItem;
   locale: Locale;
 }) {
-  return (
-    <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-      {item.workflowSteps.map((step, idx) => (
-        <div
-          key={idx}
-          className={`flex flex-col justify-between rounded-2xl border p-5 ${
-            step.humanCheckpoint
-              ? "border-[#D99B38] bg-[#FFFBF4]"
-              : "border-[#D3E3E6] bg-white"
-          }`}
-        >
-          <div>
-            <div className="flex items-center justify-between gap-2">
-              <span className="font-mono-tech text-[12px] font-semibold text-[#0E5961]">
-                {pick(locale, step.stage)}
-              </span>
-              {step.humanCheckpoint && (
-                <span className="inline-flex items-center gap-1 rounded-full bg-[#FEF0D6] px-2.5 py-0.5 text-[12px] font-semibold text-[#8A4B08]">
-                  <UserCheck size={12} />
-                  <span>{t(locale, "人工把关", "Human gate")}</span>
-                </span>
-              )}
-            </div>
-            <h3 className="mt-2.5 text-[17px] font-semibold text-[#07161A]">
-              {pick(locale, step.title)}
-            </h3>
-            <p className="mt-2 text-[14px] leading-relaxed text-[#31494F]">
-              {pick(locale, step.detail)}
-            </p>
-          </div>
+  const stepColors = ["#0891B2", "#4F46E5", "#059669", "#D97706"];
 
-          <div className="mt-4 border-t border-[#E5EFF1] pt-3">
-            <span className="font-mono-tech block text-[12px] text-[#496269]">
-              {t(locale, "阶段产物：", "Artifact: ")}
-              <strong className="text-[#07161A]">
+  return (
+    <div className="grid gap-10 border-t border-slate-200/90 pt-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:divide-x lg:divide-slate-200/80">
+      {item.workflowSteps.map((step, idx) => {
+        const color = step.humanCheckpoint
+          ? "#D97706"
+          : stepColors[idx % stepColors.length];
+        return (
+          <div
+            key={idx}
+            className={`flex flex-col justify-between ${
+              idx === 0
+                ? "lg:pr-7"
+                : idx === item.workflowSteps.length - 1
+                  ? "lg:pl-7"
+                  : "lg:px-7"
+            }`}
+          >
+            <div>
+              <div className="flex items-center justify-between gap-2">
+                <span
+                  className="font-mono-tech text-[12px] font-bold uppercase tracking-[0.08em]"
+                  style={{ color }}
+                >
+                  {pick(locale, step.stage)}
+                </span>
+                {step.humanCheckpoint && (
+                  <span className="inline-flex items-center gap-1 text-[12px] font-semibold text-[#B45309]">
+                    <UserCheck size={13} />
+                    <span>{t(locale, "人工把关", "Human gate")}</span>
+                  </span>
+                )}
+              </div>
+              <h3 className="mt-3 text-[18px] font-semibold text-[#0B1120]">
+                {pick(locale, step.title)}
+              </h3>
+              <p className="mt-2.5 text-[14px] leading-relaxed text-[#526277]">
+                {pick(locale, step.detail)}
+              </p>
+            </div>
+
+            <div className="mt-5 border-t border-slate-100 pt-3 text-[13px] text-[#526277]">
+              <span>{t(locale, "阶段产物：", "Deliverable: ")}</span>
+              <strong className="font-semibold text-[#0B1120]">
                 {pick(locale, step.artifact)}
               </strong>
-            </span>
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }
 
 /**
- * G-15: Project-Specific 4-Phase Delivery Timeline.
+ * CaseDeliveryTimeline:
+ * Clean Horizontal Milestone Progression (ZERO outer card box!).
  */
 export function CaseDeliveryTimeline({
   item,
@@ -733,28 +748,30 @@ export function CaseDeliveryTimeline({
   item: CaseItem;
   locale: Locale;
 }) {
+  const dots = ["#22D3EE", "#6366F1", "#8B5CF6", "#F59E0B"];
+
   return (
-    <div className="card-light p-6 md:p-8">
-      <div className="grid gap-5 md:grid-cols-4">
-        {item.timeline.map((phase, idx) => (
-          <div key={idx} className="relative flex flex-col">
-            <div className="flex items-center gap-2">
-              <span className="font-mono-tech flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#062F3A] text-[12px] font-bold text-[#7EF5D6]">
-                0{idx + 1}
-              </span>
-              <span className="font-mono-tech rounded bg-[#E7F4F5] px-2 py-0.5 text-[12px] font-semibold text-[#0E5961]">
-                {pick(locale, phase.duration)}
-              </span>
-            </div>
-            <h3 className="mt-3 text-[15px] font-semibold text-[#07161A]">
-              {pick(locale, phase.phase)}
-            </h3>
-            <p className="mt-1.5 text-[13px] leading-relaxed text-[#31494F]">
-              {pick(locale, phase.detail)}
-            </p>
+    <div className="grid gap-8 border-t border-slate-200/90 pt-8 md:grid-cols-4">
+      {item.timeline.map((phase, idx) => (
+        <div key={idx} className="relative flex flex-col">
+          <div className="flex items-center gap-2.5">
+            <span
+              aria-hidden="true"
+              className="h-2.5 w-2.5 rounded-full"
+              style={{ backgroundColor: dots[idx % dots.length] }}
+            />
+            <span className="font-mono-tech text-[12px] font-bold text-[#4F46E5]">
+              0{idx + 1} · {pick(locale, phase.duration)}
+            </span>
           </div>
-        ))}
-      </div>
+          <h3 className="mt-3 text-[17px] font-semibold text-[#0B1120]">
+            {pick(locale, phase.phase)}
+          </h3>
+          <p className="mt-2 text-[14px] leading-relaxed text-[#526277]">
+            {pick(locale, phase.detail)}
+          </p>
+        </div>
+      ))}
     </div>
   );
 }

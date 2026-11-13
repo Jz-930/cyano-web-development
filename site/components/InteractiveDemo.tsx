@@ -121,31 +121,31 @@ export function InteractiveDemo({
   const currentSqlRecord = queryDemo[selected] ?? queryDemo[0];
 
   return (
-    <div className="overflow-hidden rounded-[22px] border border-[#062F3A]/25 bg-[#051217] text-[#F2FAF9] shadow-xl">
-      {/* Top Console Header */}
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 bg-[#030B0E] px-5 py-3.5">
-        <div className="flex items-center gap-2.5">
-          <Database size={17} className="text-[#7EF5D6]" />
-          <span className="font-mono-tech text-[13px] font-bold text-[#F2FAF9]">
+    <div className="overflow-hidden rounded-2xl bg-[#000000] text-white shadow-[0_32px_80px_-24px_rgba(0,0,0,0.45)]">
+      {/* Top Minimalist Console Bar */}
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/12 px-6 py-4">
+        <div className="flex items-center gap-3">
+          <Database size={16} className="text-[#00C2FF]" />
+          <span className="font-mono-tech text-[13px] font-medium text-white">
             {isSql
               ? "SmartDoc AI · Read-Only SQL Sandbox"
               : "Enterprise Wiki · Permissioned RAG Sandbox"}
           </span>
         </div>
-        <span className="inline-flex items-center gap-2 rounded-full border border-[#7EF5D6]/35 bg-[#092730] px-3 py-1 font-mono-tech text-[12px] text-[#7EF5D6]">
-          <span className="h-2 w-2 rounded-full bg-[#7EF5D6]" />
-          <span>{t(locale, "交互流程预览", "Interactive Walkthrough")}</span>
+        <span className="inline-flex items-center gap-2 font-mono-tech text-[12px] text-[#00C2FF]">
+          <span className="h-2 w-2 rounded-full bg-[#00C2FF]" />
+          <span>{t(locale, "交互流程预览", "INTERACTIVE WALKTHROUGH")}</span>
         </span>
       </div>
 
       {/* Main Split Body */}
-      <div className="grid lg:grid-cols-[310px_1fr]">
-        {/* Left Preset Prompts */}
-        <div className="border-b border-white/10 bg-[#040E12] p-4 lg:border-r lg:border-b-0">
-          <div className="mb-2.5 font-mono-tech text-[12px] font-semibold uppercase tracking-[0.06em] text-[#93B5B9]">
-            {t(locale, "点击预设问题体验", "SELECT A SAMPLE PROMPT")}
+      <div className="grid lg:grid-cols-[330px_1fr]">
+        {/* Left Unboxed Hairline Prompt List */}
+        <div className="border-b border-white/12 p-5 lg:border-r lg:border-b-0">
+          <div className="mb-3 font-mono-tech text-[12px] uppercase tracking-[0.1em] text-white/50">
+            {t(locale, "选择预设问题体验", "SELECT A SAMPLE PROMPT")}
           </div>
-          <div className="flex flex-col gap-1.5">
+          <div className="divide-y divide-white/[0.08]">
             {questions.map((q, idx) => {
               const active = selected === idx;
               return (
@@ -153,14 +153,30 @@ export function InteractiveDemo({
                   key={q}
                   type="button"
                   onClick={() => runPrompt(idx)}
-                  className={`flex min-h-[42px] items-center justify-between gap-2 rounded-xl border px-3 py-2 text-left text-[13px] font-medium transition-colors ${
-                    active
-                      ? "border-[#7EF5D6]/60 bg-[#0B2A34] text-[#7EF5D6]"
-                      : "border-white/8 bg-white/[0.03] text-[#C6DFE2] hover:border-white/25"
-                  }`}
+                  className="group relative flex min-h-[46px] w-full items-center justify-between gap-3 py-3 pl-4 text-left text-[13px] transition-colors"
                 >
-                  <span>{q}</span>
-                  <ArrowUpRight size={14} className="shrink-0 opacity-75" />
+                  <span
+                    aria-hidden="true"
+                    className="absolute top-2.5 bottom-2.5 left-0 w-[2px]"
+                    style={{
+                      backgroundColor: active ? "#00C2FF" : "transparent",
+                    }}
+                  />
+                  <span
+                    className={
+                      active
+                        ? "font-medium text-white"
+                        : "text-white/65 group-hover:text-white"
+                    }
+                  >
+                    {q}
+                  </span>
+                  <ArrowUpRight
+                    size={14}
+                    className={`shrink-0 ${
+                      active ? "text-[#00C2FF]" : "text-white/35"
+                    }`}
+                  />
                 </button>
               );
             })}
@@ -168,39 +184,42 @@ export function InteractiveDemo({
         </div>
 
         {/* Right Output & Provenance Pane */}
-        <div className="flex flex-col justify-between p-5 md:p-6">
+        <div className="flex flex-col justify-between p-6 md:p-8">
           <div>
-            <div className="inline-block rounded-xl border border-[#7EF5D6]/25 bg-[#09232C] px-3.5 py-2 text-[14px] font-semibold text-[#7EF5D6]">
+            <div className="font-mono-tech text-[12px] uppercase tracking-[0.1em] text-[#FBBF24]">
+              {t(locale, "当前提问", "ACTIVE QUERY")}
+            </div>
+            <div className="mt-1.5 text-[18px] font-normal text-white">
               {questions[selected]}
             </div>
 
-            <p className="mt-4 min-h-[48px] text-[15px] leading-relaxed text-[#E4F3F4]">
+            <p className="mt-5 min-h-[48px] text-[15px] leading-relaxed text-white/85">
               {answer}
               {running && (
-                <span className="ml-1 inline-block h-4 w-2 animate-pulse bg-[#7EF5D6]" />
+                <span className="ml-1 inline-block h-4 w-2 animate-pulse bg-[#00C2FF]" />
               )}
             </p>
 
             {!running && isSql && (
-              <div className="mt-4 space-y-3">
-                <div className="overflow-x-auto rounded-xl border border-white/12 bg-[#030A0D]">
+              <div className="mt-6 space-y-4">
+                <div className="overflow-x-auto border-t border-b border-white/15">
                   <table className="w-full border-collapse text-left text-[13px]">
                     <thead>
-                      <tr className="border-b border-white/12 bg-[#081C24] text-[#7EF5D6]">
+                      <tr className="border-b border-white/15 text-[#00C2FF]">
                         {currentSqlRecord.columns[locale].map((col) => (
-                          <th key={col} className="px-4 py-2.5 font-semibold">
+                          <th key={col} className="py-3 pr-5 font-medium">
                             {col}
                           </th>
                         ))}
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-white/8 text-[#D8ECEE]">
+                    <tbody className="divide-y divide-white/[0.08] text-white/85">
                       {currentSqlRecord.rows[locale].map((row, rIdx) => (
                         <tr key={rIdx}>
                           {row.map((cell, cIdx) => (
                             <td
                               key={cIdx}
-                              className={`px-4 py-2 ${
+                              className={`py-2.5 pr-5 ${
                                 cIdx > 0 ? "font-mono-tech" : ""
                               }`}
                             >
@@ -213,15 +232,15 @@ export function InteractiveDemo({
                   </table>
                 </div>
 
-                <details className="rounded-xl border border-white/12 bg-[#030A0D] p-3">
-                  <summary className="cursor-pointer font-mono-tech text-[12px] font-semibold text-[#52C7CC]">
+                <details className="pt-2">
+                  <summary className="cursor-pointer font-mono-tech text-[12px] font-medium text-[#00C2FF] hover:text-white">
                     {t(
                       locale,
                       "展开查看只读策略校验后的 SQL 语句",
                       "Inspect validated read-only SQL statement"
                     )}
                   </summary>
-                  <pre className="font-mono-tech mt-2 overflow-x-auto text-[12px] text-[#7EF5D6]">
+                  <pre className="font-mono-tech mt-3 overflow-x-auto border-l-2 border-[#00C2FF] pl-4 text-[12px] text-white/80">
                     {currentSqlRecord.sql}
                   </pre>
                 </details>
@@ -229,10 +248,10 @@ export function InteractiveDemo({
             )}
 
             {!running && !isSql && (
-              <div className="mt-5 flex items-start gap-2.5 rounded-xl border border-[#7EF5D6]/30 bg-[#082028] p-3.5 text-[13px] text-[#C6DFE2]">
+              <div className="mt-6 flex items-start gap-3 border-t border-white/12 pt-5 text-[13px] text-white/75">
                 <ShieldCheck
                   size={16}
-                  className="mt-0.5 shrink-0 text-[#7EF5D6]"
+                  className="mt-0.5 shrink-0 text-[#00C2FF]"
                 />
                 <span>
                   {selected === 5
@@ -264,7 +283,7 @@ export function InteractiveDemo({
       </div>
 
       {/* Anonymized Sandbox Disclaimer */}
-      <div className="border-t border-white/10 bg-[#030A0D] px-5 py-2.5 text-[12px] text-[#93B5B9]">
+      <div className="border-t border-white/10 px-6 py-3 text-[12px] text-white/45">
         {pick(locale, siteCopy.demo.interactiveDisclaimer)}
       </div>
     </div>

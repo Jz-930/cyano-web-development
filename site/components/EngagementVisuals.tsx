@@ -3,16 +3,16 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import {
-  ArrowUpRight,
+  ArrowRight,
   CloudCog,
-  Compass,
   Server,
   ShieldCheck,
 } from "lucide-react";
 import { type Locale, href, pick, siteCopy, t } from "@/lib/content";
 
 /**
- * G-17: Interactive 3-Question Fit Recommender on /engagement.
+ * ModeSelectorQuiz:
+ * Clean Swiss-modernist interactive recommender — ZERO heavy dark-green nested boxes!
  */
 export function ModeSelectorQuiz({ locale }: { locale: Locale }) {
   const rec = siteCopy.engagement.recommender;
@@ -22,7 +22,6 @@ export function ModeSelectorQuiz({ locale }: { locale: Locale }) {
     readiness: 1,
   });
 
-  // Sum scores across selected options
   const totals = { custom: 0, pilot: 0, managed: 0 };
   rec.questions.forEach((q) => {
     const idx = answers[q.id] ?? 0;
@@ -36,50 +35,47 @@ export function ModeSelectorQuiz({ locale }: { locale: Locale }) {
     totals.managed >= totals.custom && totals.managed >= totals.pilot
       ? "managed"
       : totals.custom > totals.pilot
-      ? "custom"
-      : "pilot";
+        ? "custom"
+        : "pilot";
 
   const bestMode =
     siteCopy.engagementModes.find((m) => m.key === bestKey) ??
     siteCopy.engagementModes[1];
 
   return (
-    <div className="rounded-[22px] border border-[#0E5961]/24 bg-[#05141A] p-6 text-[#F2FAF9] shadow-xl md:p-8">
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-4">
+    <div className="grid gap-12 border-t border-b border-slate-900/15 py-12 lg:grid-cols-12 lg:items-start">
+      {/* Left 7 Columns: 3 Clean Questions */}
+      <div className="space-y-9 lg:col-span-7">
         <div>
-          <span className="eyebrow-badge eyebrow-badge-dark">
+          <div className="text-[14px] font-medium text-[#0B7A8C]">
             {pick(locale, rec.eyebrow)}
-          </span>
-          <h2 className="mt-2 text-[22px] font-semibold text-[#F2FAF9] md:text-[26px]">
+          </div>
+          <h2 className="mt-2 text-[clamp(1.85rem,3vw,2.5rem)] font-normal tracking-tight text-[#0B1520]">
             {pick(locale, rec.title)}
           </h2>
         </div>
-        <Compass size={26} className="text-[#7EF5D6]" />
-      </div>
 
-      <div className="mt-6 grid gap-6 lg:grid-cols-[1.35fr_0.85fr] lg:items-center">
-        {/* 3 Interactive Questions */}
-        <div className="space-y-5">
+        <div className="divide-y divide-slate-200">
           {rec.questions.map((q) => (
-            <fieldset key={q.id} className="m-0 border-0 p-0">
-              <legend className="text-[14px] font-semibold text-[#D8ECEE]">
+            <div key={q.id} className="py-6 first:pt-0 last:pb-0">
+              <div className="text-[16px] font-medium text-[#0B1520]">
                 {pick(locale, q.label)}
-              </legend>
-              <div className="mt-2.5 grid gap-2 sm:grid-cols-3">
-                {q.options.map((opt, idx) => {
-                  const selected = (answers[q.id] ?? 0) === idx;
+              </div>
+              <div className="mt-3.5 flex flex-wrap gap-2.5">
+                {q.options.map((opt, oIdx) => {
+                  const active = (answers[q.id] ?? 0) === oIdx;
                   return (
                     <button
-                      key={opt.value}
+                      key={oIdx}
                       type="button"
-                      aria-pressed={selected}
+                      aria-pressed={active}
                       onClick={() =>
-                        setAnswers((prev) => ({ ...prev, [q.id]: idx }))
+                        setAnswers((prev) => ({ ...prev, [q.id]: oIdx }))
                       }
-                      className={`min-h-[48px] rounded-xl border px-3.5 py-2.5 text-left text-[13px] font-medium leading-snug transition-all ${
-                        selected
-                          ? "border-[#7EF5D6] bg-[#0B2B36] text-[#7EF5D6] shadow-[0_0_20px_-6px_rgba(126,245,214,0.35)]"
-                          : "border-white/12 bg-[#081A21] text-[#C6DFE2] hover:border-[#7EF5D6]/40"
+                      className={`min-h-[40px] rounded-full px-4 py-2 text-[14px] transition-all ${
+                        active
+                          ? "bg-[#0B7A8C] font-medium text-white shadow-sm"
+                          : "border border-slate-300 bg-white text-[#334155] hover:border-[#0B7A8C] hover:text-[#0B1520]"
                       }`}
                     >
                       {pick(locale, opt.label)}
@@ -87,44 +83,44 @@ export function ModeSelectorQuiz({ locale }: { locale: Locale }) {
                   );
                 })}
               </div>
-            </fieldset>
+            </div>
           ))}
         </div>
+      </div>
 
-        {/* Dynamic Recommendation Output */}
-        <div className="flex flex-col justify-between rounded-2xl border border-[#7EF5D6]/45 bg-gradient-to-b from-[#0A2A35] to-[#06181F] p-6">
-          <div>
-            <span className="font-mono-tech inline-flex rounded-full bg-[#7EF5D6]/18 px-3 py-1 text-[12px] font-bold text-[#7EF5D6]">
-              {t(locale, "建议起步模式", "RECOMMENDED STARTING MODEL")}
-            </span>
-            <h3 className="mt-3 text-[22px] font-semibold text-[#F2FAF9]">
-              {pick(locale, bestMode.name)}
-            </h3>
-            <div className="mt-1.5 font-mono-tech text-[14px] font-semibold text-[#52C7CC]">
-              {pick(locale, bestMode.duration)}
-            </div>
-            <p className="mt-3 text-[14px] leading-relaxed text-[#D8ECEE]">
-              {pick(locale, bestMode.summary)}
-            </p>
-          </div>
-
-          <div className="mt-6 pt-4 border-t border-white/12">
-            <Link
-              href={href(locale, `/contact?inquiry=${bestMode.key}#form`)}
-              className="btn-primary-mint w-full"
-            >
-              <span>{pick(locale, rec.applyCta)}</span>
-              <ArrowUpRight size={16} />
-            </Link>
-          </div>
+      {/* Right 5 Columns: Calm Nocturnal Recommendation Panel */}
+      <div className="rounded-2xl bg-[#02080E] p-8 text-white ring-1 ring-white/[0.08] sm:p-10 lg:col-span-5">
+        <div className="font-mono-tech text-[12px] uppercase tracking-[0.12em] text-[#22D3EE]">
+          {t(locale, "推荐起步方式", "RECOMMENDED STARTING MODEL")}
         </div>
+        <h3 className="mt-3 text-[28px] font-normal text-white">
+          {pick(locale, bestMode.name)}
+        </h3>
+        <div className="font-mono-tech mt-2 text-[15px] text-[#FBBF24]">
+          {pick(locale, bestMode.duration)} · {pick(locale, bestMode.milestoneLabel)}
+        </div>
+        <p className="mt-4 text-[15px] leading-relaxed text-white/75">
+          {pick(locale, bestMode.summary)}
+        </p>
+        <p className="mt-4 border-t border-white/12 pt-4 text-[14px] text-white/60">
+          {pick(locale, bestMode.bestFor)}
+        </p>
+
+        <Link
+          href={href(locale, `/contact?inquiry=${bestMode.key}#form`)}
+          className="mt-7 inline-flex min-h-[44px] items-center gap-2 text-[15px] font-semibold text-white transition-colors hover:text-[#22D3EE]"
+        >
+          <span>{t(locale, "按此模式预约评估", "Discuss this starting model")}</span>
+          <ArrowRight size={17} />
+        </Link>
       </div>
     </div>
   );
 }
 
 /**
- * G-18 + M-03: 5-Row Structured Comparison Matrix on Desktop + 3 Clean Cards on Mobile.
+ * ComparisonMatrix:
+ * Clean Architectural Table on Desktop + 3 Clean Hairline Blocks on Mobile (M-03).
  */
 export function ComparisonMatrix({ locale }: { locale: Locale }) {
   const rows = siteCopy.engagement.comparisonRows;
@@ -132,43 +128,40 @@ export function ComparisonMatrix({ locale }: { locale: Locale }) {
 
   return (
     <div>
-      {/* Desktop Table */}
-      <div className="card-light hidden overflow-hidden md:block">
+      {/* Desktop Clean Hairline Table */}
+      <div className="hidden overflow-x-auto md:block">
         <table className="w-full border-collapse text-left">
           <thead>
-            <tr className="border-b border-[#D3E3E6] bg-[#062F3A] text-[#F2FAF9]">
-              <th className="w-[19%] p-5 font-mono-tech text-[12px] uppercase tracking-[0.08em] text-[#7EF5D6]">
-                {t(locale, "对比维度", "Dimension")}
+            <tr className="border-b border-slate-900/20">
+              <th className="py-5 pr-6 text-[13px] font-semibold uppercase tracking-[0.08em] text-[#64748B]">
+                {t(locale, "对比维度", "DIMENSION")}
               </th>
               {modes.map((m) => (
-                <th key={m.key} className="w-[27%] p-5">
-                  <div className="text-[16px] font-semibold text-[#F2FAF9]">
+                <th key={m.key} className="py-5 px-6">
+                  <div className="text-[18px] font-medium text-[#111111]">
                     {pick(locale, m.name)}
                   </div>
-                  <div className="mt-1 font-mono-tech text-[12px] font-medium text-[#7EF5D6]">
+                  <div className="font-mono-tech mt-1 text-[13px] text-[#4F46E5]">
                     {pick(locale, m.duration)}
                   </div>
                 </th>
               ))}
             </tr>
           </thead>
-          <tbody className="divide-y divide-[#D3E3E6] text-[14px]">
-            {rows.map((r, idx) => (
-              <tr
-                key={idx}
-                className={idx % 2 === 1 ? "bg-[#F8FCFC]" : "bg-white"}
-              >
-                <th className="p-5 font-semibold text-[#07161A] align-top">
-                  {pick(locale, r.dimension)}
-                </th>
-                <td className="p-5 text-[#31494F] align-top leading-relaxed">
-                  {pick(locale, r.custom)}
+          <tbody className="divide-y divide-slate-200">
+            {rows.map((row, rIdx) => (
+              <tr key={rIdx}>
+                <td className="py-5 pr-6 text-[15px] font-medium text-[#111111]">
+                  {pick(locale, row.dimension)}
                 </td>
-                <td className="p-5 text-[#31494F] align-top leading-relaxed">
-                  {pick(locale, r.pilot)}
+                <td className="py-5 px-6 text-[15px] leading-relaxed text-[#334155]">
+                  {pick(locale, row.custom)}
                 </td>
-                <td className="p-5 text-[#31494F] align-top leading-relaxed">
-                  {pick(locale, r.managed)}
+                <td className="py-5 px-6 text-[15px] leading-relaxed text-[#334155]">
+                  {pick(locale, row.pilot)}
+                </td>
+                <td className="py-5 px-6 text-[15px] leading-relaxed text-[#334155]">
+                  {pick(locale, row.managed)}
                 </td>
               </tr>
             ))}
@@ -176,67 +169,88 @@ export function ComparisonMatrix({ locale }: { locale: Locale }) {
         </table>
       </div>
 
-      {/* Mobile Stacked Mode Cards (M-03: zero cramped horizontal scroll) */}
-      <div className="grid gap-4 md:hidden">
-        {modes.map((m) => {
-          const k = m.key as "custom" | "pilot" | "managed";
-          return (
-            <div key={m.key} className="card-light p-5">
-              <div className="border-b border-[#D3E3E6] pb-3">
-                <span className="font-mono-tech text-[12px] font-semibold text-[#0E5961]">
-                  {pick(locale, m.duration)}
-                </span>
-                <h3 className="mt-1 text-[18px] font-semibold text-[#07161A]">
-                  {pick(locale, m.name)}
-                </h3>
+      {/* Mobile Stacked Blocks */}
+      <div className="grid gap-6 md:hidden">
+        {modes.map((m) => (
+          <div
+            key={m.key}
+            className="border border-slate-900/15 bg-white p-6"
+          >
+            <div className="border-b border-slate-200 pb-4">
+              <h3 className="text-[20px] font-medium text-[#111111]">
+                {pick(locale, m.name)}
+              </h3>
+              <div className="font-mono-tech mt-1 text-[13px] text-[#4F46E5]">
+                {pick(locale, m.duration)}
               </div>
-              <dl className="mt-3 space-y-2.5 text-[14px]">
-                {rows.map((r, rIdx) => (
-                  <div key={rIdx}>
-                    <dt className="font-semibold text-[#07161A]">
-                      {pick(locale, r.dimension)}
+            </div>
+            <dl className="mt-4 space-y-3">
+              {rows.map((row, idx) => {
+                const val =
+                  m.key === "custom"
+                    ? row.custom
+                    : m.key === "pilot"
+                      ? row.pilot
+                      : row.managed;
+                return (
+                  <div key={idx}>
+                    <dt className="text-[12px] font-semibold uppercase tracking-[0.06em] text-[#64748B]">
+                      {pick(locale, row.dimension)}
                     </dt>
-                    <dd className="m-0 mt-0.5 text-[#31494F]">
-                      {pick(locale, r[k])}
+                    <dd className="m-0 mt-0.5 text-[14px] text-[#111111]">
+                      {pick(locale, val)}
                     </dd>
                   </div>
-                ))}
-              </dl>
-            </div>
-          );
-        })}
+                );
+              })}
+            </dl>
+          </div>
+        ))}
       </div>
     </div>
   );
 }
 
 /**
- * V-15: Distinct icons & architectural framing for SaaS vs Private Environment Deployment.
+ * DeploymentOptionsGrid:
+ * jrvs.ca-inspired Minimalist Architectural Line Blocks with Distinct Line Icons!
  */
 export function DeploymentOptionsGrid({ locale }: { locale: Locale }) {
+  const icons = [CloudCog, Server, ShieldCheck];
+  const accents = ["#0B7A8C", "#1D4ED8", "#B45309"];
+  const opts = siteCopy.engagement.deployments;
+
   return (
-    <div className="grid gap-5 md:grid-cols-2">
-      {siteCopy.engagement.deployments.map((d) => {
-        const isPrivate = d.key === "private";
-        const Icon = isPrivate ? Server : CloudCog;
+    <div className="divide-y divide-black/15 border border-black/15 bg-white">
+      {opts.map((opt, idx) => {
+        const Icon = icons[idx % icons.length];
+        const accent = accents[idx % accents.length];
         return (
-          <article key={d.key} className="card-light p-6 md:p-7">
-            <div className="flex items-center justify-between gap-3">
-              <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#062F3A] text-[#7EF5D6]">
-                <Icon size={22} />
+          <div
+            key={opt.key}
+            className="flex flex-col justify-between gap-6 p-8 sm:p-10 md:flex-row md:items-start"
+          >
+            <div className="max-w-3xl">
+              <span
+                className="font-mono-tech text-[12px] font-medium uppercase tracking-[0.1em]"
+                style={{ color: accent }}
+              >
+                {pick(locale, opt.badge)}
               </span>
-              <span className="font-mono-tech inline-flex items-center gap-1.5 rounded-full bg-[#E7F4F5] px-3 py-1 text-[12px] font-semibold text-[#0E5961]">
-                {isPrivate && <ShieldCheck size={13} />}
-                <span>{pick(locale, d.badge)}</span>
-              </span>
+              <h3 className="mt-2 text-[24px] font-normal tracking-tight text-[#0B1520]">
+                {pick(locale, opt.title)}
+              </h3>
+              <p className="mt-3 text-[16px] leading-relaxed text-[#334155]">
+                {pick(locale, opt.body)}
+              </p>
             </div>
-            <h3 className="mt-4 text-[20px] font-semibold text-[#07161A]">
-              {pick(locale, d.title)}
-            </h3>
-            <p className="mt-2.5 text-[15px] leading-relaxed text-[#31494F]">
-              {pick(locale, d.body)}
-            </p>
-          </article>
+            <Icon
+              size={36}
+              strokeWidth={1.25}
+              style={{ color: accent }}
+              className="shrink-0"
+            />
+          </div>
         );
       })}
     </div>

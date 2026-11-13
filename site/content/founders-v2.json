@@ -22,7 +22,7 @@
       "zh": "曾在世界 500 强企业从事技术与业务管理工作，拥有 6 年以上软件开发经验，参与过 AI 模型研发与企业级业务系统建设。负责在立项前拆解人工、外包与返工成本，与客户共同确定可量化的验收标准与分期投入节奏。",
       "en": "Engineering and commercial background at Fortune Global 500 companies, with 6+ years of software development and hands‑on AI model R&D. Leads pre‑project cost‑benefit analysis, scoping ambiguous workflows into measurable milestones and clear acceptance criteria."
     },
-    "portrait": "/art/founder-1.webp"
+    "portrait": "/art/founder-1-natural.webp"
   },
   {
     "id": "F2",
@@ -47,7 +47,7 @@
       "zh": "曾任职于世界 500 强企业核心技术团队，拥有 6 年以上开发经验与深度 AI 模型研发经历。主导设计 Cyano Core 上下文估值引擎与四层治理架构，解决百轮级长对话成本、指令遗漏与企业级权限隔离问题。",
       "en": "Former senior engineer at Fortune Global 500 companies with 6+ years of software engineering and deep AI model R&D experience. Architects Cyano Core, designing priority‑weighted context management, permission‑scoped retrieval and deterministic SQL/SOP guardrails."
     },
-    "portrait": "/art/founder-2.webp"
+    "portrait": "/art/founder-2-natural.webp"
   },
   {
     "id": "F3",
@@ -72,7 +72,7 @@
       "zh": "拥有世界 500 强企业大规模系统工程背景与 6 年以上开发经验，参与过 AI 模型训练与推理优化。负责将复杂 AI 工作流拆解为可回归测试、可监控日志与可独立升级的生产服务，保障上线后的响应速度与稳定性。",
       "en": "Large‑scale systems engineering background at Fortune Global 500 companies, with 6+ years of development and AI model inference optimization. Turns complex AI pipelines into testable, observable services with Docker on‑prem packaging and post‑launch incident SLAs."
     },
-    "portrait": "/art/founder-3.webp"
+    "portrait": "/art/founder-3-natural.webp"
   },
   {
     "id": "F4",
@@ -97,7 +97,7 @@
       "zh": "拥有世界 500 强企业产品与研发双重背景、6 年以上开发经验及 AI 模型研发经历。负责深入一线业务团队梳理现有文档来源、参数口径与审批节点，把 AI 嵌入员工顺手的日常审核界面。",
       "en": "Product and engineering background at Fortune Global 500 companies, bringing 6+ years of software development and AI model R&D. Works directly with frontline operators to map document sources, parameter rules and human approval gates into practical interfaces."
     },
-    "portrait": "/art/founder-4.webp",
-    "avatar": "/art/founder-4-avatar.webp"
+    "portrait": "/art/founder-4-natural.webp",
+    "avatar": "/art/founder-4-avatar-natural.webp"
   }
 ]
