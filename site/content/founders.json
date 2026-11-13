@@ -1,0 +1,78 @@
+[
+  {
+    "id": "F1",
+    "role": [
+      "首席执行官",
+      "Chief Executive Officer"
+    ],
+    "tags": [
+      "企业战略 · 客户合作 · AI 商业化",
+      "Strategy · Partnerships · AI commercialization"
+    ],
+    "motto": [
+      "负责项目评估、客户合作与业务目标。",
+      "Leads project assessment, client partnerships and business planning."
+    ],
+    "bio": [
+      "曾在世界 500 强企业从事技术与业务工作，拥有 6 年以上软件开发经验，参与过 AI 模型研发与企业系统项目。负责 Cyano 的战略与客户合作，与客户确定项目目标、预算和验收要求。",
+      "Has worked in engineering and business roles at Fortune Global 500 companies, with over six years of software development and experience in AI model R&D and enterprise systems. Leads strategy and client partnerships, agreeing on project goals, budgets and acceptance criteria with clients."
+    ]
+  },
+  {
+    "id": "F2",
+    "role": [
+      "首席技术官",
+      "Chief Technology Officer"
+    ],
+    "tags": [
+      "大模型工程 · 上下文架构 · 系统集成",
+      "LLM engineering · Context architecture · Integration"
+    ],
+    "motto": [
+      "负责模型接入、上下文管理与平台架构。",
+      "Leads model integration, context management and platform architecture."
+    ],
+    "bio": [
+      "曾任职于世界 500 强企业，拥有 6 年以上开发经验，参与过 AI 模型研发与工程化。主导 Cyano Core 平台架构，负责长上下文管理、知识检索与 Agent 任务编排。",
+      "Previously worked at Fortune Global 500 companies, with over six years of development experience and work in AI model R&D and deployment. Leads Cyano Core architecture, including long-context management, retrieval and agent orchestration."
+    ]
+  },
+  {
+    "id": "F3",
+    "role": [
+      "工程交付负责人",
+      "Head of Engineering Delivery"
+    ],
+    "tags": [
+      "工程交付 · 上线运维 · 质量保障",
+      "Delivery · Operations · Quality"
+    ],
+    "motto": [
+      "负责开发测试、系统部署和上线运维。",
+      "Leads development, testing, deployment and operations."
+    ],
+    "bio": [
+      "拥有世界 500 强企业工程背景和 6 年以上开发经验，参与过 AI 模型研发与大规模系统交付。负责项目开发、测试和上线运维，跟进故障处理与版本更新。",
+      "Has an engineering background at Fortune Global 500 companies, over six years of development experience, and experience in AI model R&D and large-scale systems. Leads development, testing and operations, including incident handling and releases."
+    ]
+  },
+  {
+    "id": "F4",
+    "role": [
+      "产品与解决方案负责人",
+      "Head of Product & Solutions"
+    ],
+    "tags": [
+      "需求评估 · 产品设计 · 解决方案",
+      "Requirements · Product design · Solutions"
+    ],
+    "motto": [
+      "负责需求梳理、产品设计和使用流程。",
+      "Leads requirements, product design and user workflows."
+    ],
+    "bio": [
+      "拥有世界 500 强企业的产品与技术背景、6 年以上开发经验及 AI 模型研发经验。负责需求评估与产品设计，梳理客户的操作步骤、资料来源和审核要求，并与使用者确认功能设计。",
+      "Has a product and engineering background at Fortune Global 500 companies, over six years of development and experience in AI model R&D. Leads requirements and product design, reviewing client processes, sources and approval requirements with the people who will use the system."
+    ]
+  }
+]

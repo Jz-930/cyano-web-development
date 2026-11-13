@@ -1,0 +1,3014 @@
+[
+  {
+    "file": "components/pages.tsx",
+    "rows": [
+      {
+        "line": 71,
+        "text": "page-hero dark"
+      },
+      {
+        "line": 74,
+        "text": "container page-hero-inner"
+      },
+      {
+        "line": 76,
+        "text": "首页"
+      },
+      {
+        "line": 92,
+        "text": "home-hero dark"
+      },
+      {
+        "line": 95,
+        "text": "container hero-content"
+      },
+      {
+        "line": 99,
+        "text": "将企业知识，"
+      },
+      {
+        "line": 101,
+        "text": "转化为可交付的"
+      },
+      {
+        "line": 104,
+        "text": "AI 生产力"
+      },
+      {
+        "line": 108,
+        "text": "Turn your company’s"
+      },
+      {
+        "line": 110,
+        "text": "knowledge into"
+      },
+      {
+        "line": 113,
+        "text": "AI that ships."
+      },
+      {
+        "line": 117,
+        "text": "副标题"
+      },
+      {
+        "line": 119,
+        "text": "主按钮"
+      },
+      {
+        "line": 121,
+        "text": "查看案例"
+      },
+      {
+        "line": 121,
+        "text": "See our work"
+      },
+      {
+        "line": 128,
+        "text": "container hero-bottom"
+      },
+      {
+        "line": 132,
+        "text": "从真实业务出发，交付可用的 AI"
+      },
+      {
+        "line": 133,
+        "text": "YOUR KNOWLEDGE. YOUR WORKFLOW. REAL RESULTS."
+      },
+      {
+        "line": 138,
+        "text": "向下探索"
+      },
+      {
+        "line": 138,
+        "text": "SCROLL TO EXPLORE"
+      },
+      {
+        "line": 141,
+        "text": "CYANO / 01 — KNOWLEDGE IN MOTION"
+      },
+      {
+        "line": 150,
+        "text": "深耕真实业务"
+      },
+      {
+        "line": 150,
+        "text": "BUILT FOR REAL BUSINESS"
+      },
+      {
+        "line": 163,
+        "text": "manifesto dark"
+      },
+      {
+        "line": 165,
+        "text": "container manifesto-grid"
+      },
+      {
+        "line": 166,
+        "text": "我们是谁"
+      },
+      {
+        "line": 166,
+        "text": "WHO WE ARE"
+      },
+      {
+        "line": 170,
+        "text": "少谈 AI 概念，"
+      },
+      {
+        "line": 173,
+        "text": "多交付能用的系统。"
+      },
+      {
+        "line": 176,
+        "text": "Less talk about AI."
+      },
+      {
+        "line": 179,
+        "text": "More AI that works."
+      },
+      {
+        "line": 184,
+        "text": "宣言段 1"
+      },
+      {
+        "line": 185,
+        "text": "宣言段 2"
+      },
+      {
+        "line": 189,
+        "text": "text-link light-link"
+      },
+      {
+        "line": 191,
+        "text": "认识 Cyano（澜屿智创）"
+      },
+      {
+        "line": 191,
+        "text": "Meet Cyano"
+      },
+      {
+        "line": 197,
+        "text": "section solutions-section"
+      },
+      {
+        "line": 200,
+        "text": "解决方案"
+      },
+      {
+        "line": 200,
+        "text": "WHAT WE DO"
+      },
+      {
+        "line": 201,
+        "text": "解决方案区标题"
+      },
+      {
+        "line": 204,
+        "text": "全部解决方案"
+      },
+      {
+        "line": 204,
+        "text": "All solutions"
+      },
+      {
+        "line": 211,
+        "text": "section cases-section mist"
+      },
+      {
+        "line": 214,
+        "text": "精选案例"
+      },
+      {
+        "line": 214,
+        "text": "SELECTED WORK"
+      },
+      {
+        "line": 215,
+        "text": "精选案例标题"
+      },
+      {
+        "line": 216,
+        "text": "精选案例导语"
+      },
+      {
+        "line": 219,
+        "text": "查看全部案例"
+      },
+      {
+        "line": 219,
+        "text": "View all case studies"
+      },
+      {
+        "line": 235,
+        "text": "section dark difference-section"
+      },
+      {
+        "line": 238,
+        "text": "从模型，到业务"
+      },
+      {
+        "line": 238,
+        "text": "BEYOND THE MODEL"
+      },
+      {
+        "line": 239,
+        "text": "痛点区标题"
+      },
+      {
+        "line": 241,
+        "text": "模型提供能力。工程让能力进入真实业务。"
+      },
+      {
+        "line": 242,
+        "text": "Models provide the capability. Engineering puts it to work."
+      },
+      {
+        "line": 248,
+        "text": "痛点"
+      },
+      {
+        "line": 267,
+        "text": "text-link light-link"
+      },
+      {
+        "line": 269,
+        "text": "痛点区链接"
+      },
+      {
+        "line": 276,
+        "text": "合作方式"
+      },
+      {
+        "line": 276,
+        "text": "BUILT AROUND YOU"
+      },
+      {
+        "line": 277,
+        "text": "合作区标题"
+      },
+      {
+        "line": 280,
+        "text": "合作区链接"
+      },
+      {
+        "line": 286,
+        "text": "section team-section mist"
+      },
+      {
+        "line": 290,
+        "text": "与你一起交付的人"
+      },
+      {
+        "line": 291,
+        "text": "THE PEOPLE BEHIND THE WORK"
+      },
+      {
+        "line": 294,
+        "text": "团队区标题"
+      },
+      {
+        "line": 295,
+        "text": "团队区导语"
+      },
+      {
+        "line": 298,
+        "text": "团队区链接"
+      },
+      {
+        "line": 307,
+        "text": "思考与实践"
+      },
+      {
+        "line": 309,
+        "text": "关于 AI 落地，我们的思考"
+      },
+      {
+        "line": 310,
+        "text": "Ideas grounded in delivery"
+      },
+      {
+        "line": 315,
+        "text": "查看全部洞察"
+      },
+      {
+        "line": 315,
+        "text": "All insights"
+      },
+      {
+        "line": 329,
+        "text": "engagement-card engagement-"
+      },
+      {
+        "line": 337,
+        "text": "买工具"
+      },
+      {
+        "line": 337,
+        "text": "买使用权"
+      },
+      {
+        "line": 337,
+        "text": "买结果"
+      },
+      {
+        "line": 338,
+        "text": "OWN THE TOOL"
+      },
+      {
+        "line": 338,
+        "text": "PROVE THE VALUE"
+      },
+      {
+        "line": 338,
+        "text": "BUY THE OUTCOME"
+      },
+      {
+        "line": 344,
+        "text": "完整定制开发"
+      },
+      {
+        "line": 344,
+        "text": "低启动试点 + 持续服务"
+      },
+      {
+        "line": 344,
+        "text": "托管式 AI 服务"
+      },
+      {
+        "line": 345,
+        "text": "Full custom build"
+      },
+      {
+        "line": 346,
+        "text": "Pilot + ongoing service"
+      },
+      {
+        "line": 347,
+        "text": "Managed AI service"
+      },
+      {
+        "line": 355,
+        "text": "目标清晰、使用频率高，希望把 AI 能力沉淀为自有系统。"
+      },
+      {
+        "line": 356,
+        "text": "场景还在探索，希望先低成本验证价值，再持续迭代。"
+      },
+      {
+        "line": 357,
+        "text": "更关心稳定产出，希望把任务交给专业团队持续交付。"
+      },
+      {
+        "line": 360,
+        "text": "For clear goals, frequent use and teams that want to own the capability."
+      },
+      {
+        "line": 361,
+        "text": "Prove value with a focused first version, then expand as it earns its place."
+      },
+      {
+        "line": 362,
+        "text": "Reliable outcomes, delivered continuously, without building your own AI team."
+      },
+      {
+        "line": 371,
+        "text": "6–12 周首期上线"
+      },
+      {
+        "line": 371,
+        "text": "2–6 周首个可用版本"
+      },
+      {
+        "line": 371,
+        "text": "首批结果 2 周内"
+      },
+      {
+        "line": 372,
+        "text": "First release in 6–12 weeks"
+      },
+      {
+        "line": 373,
+        "text": "Working version in 2–6 weeks"
+      },
+      {
+        "line": 374,
+        "text": "First results within 2 weeks"
+      },
+      {
+        "line": 381,
+        "text": "咨询合作方式"
+      },
+      {
+        "line": 381,
+        "text": "Discuss engagement"
+      },
+      {
+        "line": 396,
+        "text": "解决方案"
+      },
+      {
+        "line": 397,
+        "text": "总览 Hero 标题"
+      },
+      {
+        "line": 398,
+        "text": "总览 Hero 导语"
+      },
+      {
+        "line": 400,
+        "text": "主按钮"
+      },
+      {
+        "line": 411,
+        "text": "过去做不了，现在能做"
+      },
+      {
+        "line": 411,
+        "text": "已经在做，但成本太高"
+      },
+      {
+        "line": 412,
+        "text": "New capabilities, now possible"
+      },
+      {
+        "line": 413,
+        "text": "Work you do today, at too high a cost"
+      },
+      {
+        "line": 421,
+        "text": "把企业经验转化为随时可用的服务能力，让专业咨询、精准问答和个性化内容不再受人力限制。"
+      },
+      {
+        "line": 422,
+        "text": "从文档、查询、客服和运营中找到重复工作，把时间留给真正需要判断与创造的任务。"
+      },
+      {
+        "line": 425,
+        "text": "Turn company expertise into always-available capabilities: expert advice, precise answers and personalized content."
+      },
+      {
+        "line": 426,
+        "text": "Find repetitive work in documents, support, queries and operations. Reserve human time for judgment and creativity."
+      },
+      {
+        "line": 464,
+        "text": "探索解决方案"
+      },
+      {
+        "line": 464,
+        "text": "Explore solution"
+      },
+      {
+        "line": 474,
+        "text": "你的场景不在上面？"
+      },
+      {
+        "line": 474,
+        "text": "Don’t see your use case?"
+      },
+      {
+        "line": 476,
+        "text": "不在清单上？"
+      },
+      {
+        "line": 477,
+        "text": "主按钮"
+      },
+      {
+        "line": 495,
+        "text": "销售现场查资料慢|产品问题太专业，客服无法独立回答|销售材料千篇一律，缺少针对性"
+      },
+      {
+        "line": 496,
+        "text": "历史方案分散，资料难以复用|每份初稿耗时，反复核对参数|关键条款容易遗漏，审核压力大"
+      },
+      {
+        "line": 497,
+        "text": "员工反复问同样的问题|知识更新后，旧答案仍在传播|权限不同，资料不能随意开放"
+      },
+      {
+        "line": 498,
+        "text": "查一个数字，要等 IT 导数|指标口径不统一，结果难核对|业务人员不会 SQL，无法自助分析"
+      },
+      {
+        "line": 501,
+        "text": "Product information takes too long to find|Support cannot answer specialist questions|Sales material lacks relevance"
+      },
+      {
+        "line": 502,
+        "text": "Past proposals are scattered|Drafting and parameter checks take days|Critical requirements get missed"
+      },
+      {
+        "line": 503,
+        "text": "Employees ask the same questions repeatedly|Old answers persist after policy updates|Different roles need different access"
+      },
+      {
+        "line": 504,
+        "text": "Every query goes through the IT queue|Inconsistent metrics make results hard to trust|Business users cannot write SQL"
+      },
+      {
+        "line": 517,
+        "text": "主按钮"
+      },
+      {
+        "line": 519,
+        "text": "查看相关案例"
+      },
+      {
+        "line": 519,
+        "text": "See related work"
+      },
+      {
+        "line": 533,
+        "text": "你的日常，我们理解"
+      },
+      {
+        "line": 533,
+        "text": "THE CHALLENGE"
+      },
+      {
+        "line": 535,
+        "text": "这些问题，是否正在发生？"
+      },
+      {
+        "line": 536,
+        "text": "Does this sound familiar?"
+      },
+      {
+        "line": 550,
+        "text": "section mist"
+      },
+      {
+        "line": 553,
+        "text": "我们怎么做"
+      },
+      {
+        "line": 553,
+        "text": "THE APPROACH"
+      },
+      {
+        "line": 555,
+        "text": "把经验，变成可执行的工作流"
+      },
+      {
+        "line": 556,
+        "text": "Turn expertise into a working system"
+      },
+      {
+        "line": 562,
+        "text": "你会得到什么"
+      },
+      {
+        "line": 562,
+        "text": "What you receive"
+      },
+      {
+        "line": 566,
+        "text": "上线维护与持续迭代"
+      },
+      {
+        "line": 567,
+        "text": "Maintenance and ongoing iteration"
+      },
+      {
+        "line": 582,
+        "text": "已经交付的答案"
+      },
+      {
+        "line": 582,
+        "text": "IN PRODUCTION"
+      },
+      {
+        "line": 583,
+        "text": "看看它在真实业务中的表现"
+      },
+      {
+        "line": 583,
+        "text": "See it at work"
+      },
+      {
+        "line": 592,
+        "text": "常见问题"
+      },
+      {
+        "line": 592,
+        "text": "Common questions"
+      },
+      {
+        "line": 597,
+        "text": "可以接入我们已有的系统吗？"
+      },
+      {
+        "line": 598,
+        "text": "Can it connect to our existing systems?"
+      },
+      {
+        "line": 602,
+        "text": "可以。诊断阶段会确认数据来源、接口和权限，优先复用现有数据库、文档与业务系统。"
+      },
+      {
+        "line": 603,
+        "text": "Yes. Diagnosis covers data sources, interfaces and permissions, prioritizing the systems and documents you already use."
+      },
+      {
+        "line": 609,
+        "text": "如何保证答案和结果可靠？"
+      },
+      {
+        "line": 610,
+        "text": "How do you make results reliable?"
+      },
+      {
+        "line": 614,
+        "text": "使用企业自己的资料，结合引用溯源、规则校验和人工复核点。无法确认的任务交还业务负责人处理。"
+      },
+      {
+        "line": 615,
+        "text": "We use your own sources, citations, validation rules and human review. Uncertain tasks return to a business owner."
+      },
+      {
+        "line": 621,
+        "text": "多久能看到第一版？"
+      },
+      {
+        "line": 622,
+        "text": "When can we try a first version?"
+      },
+      {
+        "line": 625,
+        "text": "合作提示（T9）"
+      },
+      {
+        "line": 640,
+        "text": "我们的工作"
+      },
+      {
+        "line": 640,
+        "text": "OUR WORK"
+      },
+      {
+        "line": 641,
+        "text": "列表 Hero 标题"
+      },
+      {
+        "line": 642,
+        "text": "汇总一行"
+      },
+      {
+        "line": 648,
+        "text": "保密说明（案例）"
+      },
+      {
+        "line": 652,
+        "text": "列表收尾"
+      },
+      {
+        "line": 654,
+        "text": "预约保密演示"
+      },
+      {
+        "line": 654,
+        "text": "Book a confidential demo"
+      },
+      {
+        "line": 668,
+        "text": "“客户项目”标签"
+      },
+      {
+        "line": 674,
+        "text": "预约保密演示"
+      },
+      {
+        "line": 674,
+        "text": "Book a confidential demo"
+      },
+      {
+        "line": 682,
+        "text": "系统"
+      },
+      {
+        "line": 683,
+        "text": "合作方式"
+      },
+      {
+        "line": 684,
+        "text": "项目周期"
+      },
+      {
+        "line": 702,
+        "text": "section mist"
+      },
+      {
+        "line": 705,
+        "text": "真实界面"
+      },
+      {
+        "line": 705,
+        "text": "THE SYSTEM, UP CLOSE"
+      },
+      {
+        "line": 708,
+        "text": "从业务入口到交付结果，每一步都在同一套系统中完成。"
+      },
+      {
+        "line": 709,
+        "text": "From the first question to a usable result, all in one system."
+      },
+      {
+        "line": 714,
+        "text": "confidential-note gallery-note"
+      },
+      {
+        "line": 715,
+        "text": "保密说明（案例）"
+      },
+      {
+        "line": 722,
+        "text": "挑战与转变"
+      },
+      {
+        "line": 722,
+        "text": "THE TRANSFORMATION"
+      },
+      {
+        "line": 726,
+        "text": "把复杂留给系统，把时间还给团队。"
+      },
+      {
+        "line": 727,
+        "text": "Let the system handle complexity. Give the team its time back."
+      },
+      {
+        "line": 733,
+        "text": "过去"
+      },
+      {
+        "line": 737,
+        "text": "现在"
+      },
+      {
+        "line": 745,
+        "text": "解决路径"
+      },
+      {
+        "line": 745,
+        "text": "HOW IT WORKS"
+      },
+      {
+        "line": 747,
+        "text": "从企业资料，到业务结果"
+      },
+      {
+        "line": 748,
+        "text": "From company knowledge to business results"
+      },
+      {
+        "line": 758,
+        "text": "项目成果摘要"
+      },
+      {
+        "line": 758,
+        "text": "PROJECT OUTCOME"
+      },
+      {
+        "line": 762,
+        "text": "企业知识 · 工作流编排 · 权限与审计"
+      },
+      {
+        "line": 763,
+        "text": "Company knowledge · Workflow orchestration · Access & audit"
+      },
+      {
+        "line": 768,
+        "text": "了解背后的工程方法"
+      },
+      {
+        "line": 768,
+        "text": "Explore the engineering"
+      },
+      {
+        "line": 773,
+        "text": "继续探索"
+      },
+      {
+        "line": 773,
+        "text": "MORE WORK"
+      },
+      {
+        "line": 775,
+        "text": "其他正在运行的系统"
+      },
+      {
+        "line": 776,
+        "text": "More systems in production"
+      },
+      {
+        "line": 798,
+        "text": "CYANO CORE"
+      },
+      {
+        "line": 799,
+        "text": "Hero 标题"
+      },
+      {
+        "line": 800,
+        "text": "Hero 导语"
+      },
+      {
+        "line": 804,
+        "text": "与技术负责人聊聊"
+      },
+      {
+        "line": 804,
+        "text": "Talk to our CTO"
+      },
+      {
+        "line": 811,
+        "text": "工程底座"
+      },
+      {
+        "line": 811,
+        "text": "THE ENGINEERING FOUNDATION"
+      },
+      {
+        "line": 814,
+        "text": "Cyano Core"
+      },
+      {
+        "line": 816,
+        "text": "Cyano Core 定义"
+      },
+      {
+        "line": 823,
+        "text": "第"
+      },
+      {
+        "line": 824,
+        "text": "层"
+      },
+      {
+        "line": 828,
+        "text": "architecture-layer layer-"
+      },
+      {
+        "line": 840,
+        "text": "section dark"
+      },
+      {
+        "line": 843,
+        "text": "长上下文工程"
+      },
+      {
+        "line": 843,
+        "text": "CONTEXT ENGINEERING"
+      },
+      {
+        "line": 844,
+        "text": "估值引擎标题"
+      },
+      {
+        "line": 848,
+        "text": "难题"
+      },
+      {
+        "line": 866,
+        "text": "无损保留核心指令"
+      },
+      {
+        "line": 867,
+        "text": "结构化关键状态"
+      },
+      {
+        "line": 868,
+        "text": "剪枝推理链"
+      },
+      {
+        "line": 869,
+        "text": "只保留根因的日志"
+      },
+      {
+        "line": 872,
+        "text": "Core instructions, preserved"
+      },
+      {
+        "line": 873,
+        "text": "Structured key states"
+      },
+      {
+        "line": 874,
+        "text": "Pruned reasoning chains"
+      },
+      {
+        "line": 875,
+        "text": "Root-cause logs only"
+      },
+      {
+        "line": 896,
+        "text": "响应延迟"
+      },
+      {
+        "line": 897,
+        "text": "核心指令召回"
+      },
+      {
+        "line": 898,
+        "text": "Token 成本最多降低"
+      },
+      {
+        "line": 899,
+        "text": "投入回报最高可达"
+      },
+      {
+        "line": 902,
+        "text": "Response latency"
+      },
+      {
+        "line": 903,
+        "text": "Core instruction recall"
+      },
+      {
+        "line": 904,
+        "text": "Lower token cost, up to"
+      },
+      {
+        "line": 905,
+        "text": "Return on investment, up to"
+      },
+      {
+        "line": 913,
+        "text": "技术页脚注"
+      },
+      {
+        "line": 919,
+        "text": "融入现有系统"
+      },
+      {
+        "line": 919,
+        "text": "DESIGNED TO CONNECT"
+      },
+      {
+        "line": 920,
+        "text": "兼容区标题"
+      },
+      {
+        "line": 923,
+        "text": "OpenAI GPT"
+      },
+      {
+        "line": 924,
+        "text": "Anthropic Claude"
+      },
+      {
+        "line": 925,
+        "text": "Google Gemini"
+      },
+      {
+        "line": 927,
+        "text": "通义千问"
+      },
+      {
+        "line": 931,
+        "text": "飞书"
+      },
+      {
+        "line": 932,
+        "text": "钉钉"
+      },
+      {
+        "line": 933,
+        "text": "企业微信"
+      },
+      {
+        "line": 936,
+        "text": "ERP / CRM"
+      },
+      {
+        "line": 937,
+        "text": "PDF / Office"
+      },
+      {
+        "line": 946,
+        "text": "安全区标题"
+      },
+      {
+        "line": 949,
+        "text": "权限控制、引用溯源、全链路日志审计与敏感信息拦截，从第一天就进入架构。支持 SaaS 托管与私有化部署。"
+      },
+      {
+        "line": 950,
+        "text": "Access controls, citations, audit trails and sensitive-data filtering are built into the architecture from day one. Available as SaaS or private deployment."
+      },
+      {
+        "line": 958,
+        "text": "咨询数据安全与部署"
+      },
+      {
+        "line": 959,
+        "text": "Discuss data security and deployment"
+      },
+      {
+        "line": 982,
+        "text": "合作方式"
+      },
+      {
+        "line": 982,
+        "text": "HOW WE WORK"
+      },
+      {
+        "line": 983,
+        "text": "Hero 标题"
+      },
+      {
+        "line": 984,
+        "text": "Hero 导语"
+      },
+      {
+        "line": 989,
+        "text": "怎么选"
+      },
+      {
+        "line": 994,
+        "text": "对比维度"
+      },
+      {
+        "line": 999,
+        "text": "完整定制开发"
+      },
+      {
+        "line": 999,
+        "text": "低启动试点"
+      },
+      {
+        "line": 999,
+        "text": "托管式服务"
+      },
+      {
+        "line": 1000,
+        "text": "Full custom build"
+      },
+      {
+        "line": 1001,
+        "text": "Pilot + service"
+      },
+      {
+        "line": 1002,
+        "text": "Managed service"
+      },
+      {
+        "line": 1016,
+        "text": "你得到什么"
+      },
+      {
+        "line": 1016,
+        "text": "系统运营"
+      },
+      {
+        "line": 1016,
+        "text": "适合谁"
+      },
+      {
+        "line": 1017,
+        "text": "What you get"
+      },
+      {
+        "line": 1017,
+        "text": "Best for"
+      },
+      {
+        "line": 1025,
+        "text": "完整业务系统，归你所有"
+      },
+      {
+        "line": 1026,
+        "text": "关键场景可用版本，按需扩展"
+      },
+      {
+        "line": 1027,
+        "text": "AI 工作流与人工审核的持续结果"
+      },
+      {
+        "line": 1030,
+        "text": "包含基础维护，可持续迭代"
+      },
+      {
+        "line": 1031,
+        "text": "包含在持续服务中"
+      },
+      {
+        "line": 1032,
+        "text": "由 Cyano 全面负责"
+      },
+      {
+        "line": 1035,
+        "text": "希望拥有长期能力的团队"
+      },
+      {
+        "line": 1036,
+        "text": "希望先验证价值的团队"
+      },
+      {
+        "line": 1037,
+        "text": "希望立即释放人力的团队"
+      },
+      {
+        "line": 1042,
+        "text": "A complete system you own"
+      },
+      {
+        "line": 1043,
+        "text": "A working version, expanded as needed"
+      },
+      {
+        "line": 1044,
+        "text": "Ongoing AI outputs with human review"
+      },
+      {
+        "line": 1047,
+        "text": "Maintenance with ongoing iteration"
+      },
+      {
+        "line": 1048,
+        "text": "Included in the service"
+      },
+      {
+        "line": 1049,
+        "text": "Fully run by Cyano"
+      },
+      {
+        "line": 1052,
+        "text": "Teams building long-term capability"
+      },
+      {
+        "line": 1053,
+        "text": "Teams validating a use case"
+      },
+      {
+        "line": 1054,
+        "text": "Teams needing additional capacity"
+      },
+      {
+        "line": 1068,
+        "text": "section mist"
+      },
+      {
+        "line": 1072,
+        "text": "从第一步，到长期合作"
+      },
+      {
+        "line": 1073,
+        "text": "FROM FIRST CONVERSATION TO LASTING VALUE"
+      },
+      {
+        "line": 1077,
+        "text": "每一步，都有清晰的交付"
+      },
+      {
+        "line": 1078,
+        "text": "A clear deliverable at every step"
+      },
+      {
+        "line": 1089,
+        "text": "业务诊断"
+      },
+      {
+        "line": 1090,
+        "text": "价值评估"
+      },
+      {
+        "line": 1091,
+        "text": "方案报价"
+      },
+      {
+        "line": 1092,
+        "text": "开发与交付"
+      },
+      {
+        "line": 1093,
+        "text": "上线维护与迭代"
+      },
+      {
+        "line": 1097,
+        "text": "Size the value"
+      },
+      {
+        "line": 1099,
+        "text": "Build & deliver"
+      },
+      {
+        "line": 1100,
+        "text": "Run & improve"
+      },
+      {
+        "line": 1108,
+        "text": "梳理目标、流程与数据，一周内给出诊断结论。"
+      },
+      {
+        "line": 1109,
+        "text": "测算人工、外包与返工成本，明确投入回报与优先级。"
+      },
+      {
+        "line": 1110,
+        "text": "确认范围边界、合作方式、验收标准与报价。"
+      },
+      {
+        "line": 1111,
+        "text": "按约定节奏交付工具、工作流或批量成果。"
+      },
+      {
+        "line": 1112,
+        "text": "追踪使用反馈，优化系统，持续迭代新需求。"
+      },
+      {
+        "line": 1115,
+        "text": "Map goals, workflows and data. Receive a diagnosis within one week."
+      },
+      {
+        "line": 1116,
+        "text": "Size current costs, expected return and priorities."
+      },
+      {
+        "line": 1117,
+        "text": "Agree scope, engagement, acceptance criteria and price."
+      },
+      {
+        "line": 1118,
+        "text": "Deliver working tools, workflows or batch results on the agreed schedule."
+      },
+      {
+        "line": 1119,
+        "text": "Monitor real use, improve reliability and iterate on new needs."
+      },
+      {
+        "line": 1131,
+        "text": "SaaS 托管"
+      },
+      {
+        "line": 1131,
+        "text": "私有化部署"
+      },
+      {
+        "line": 1138,
+        "text": "SaaS hosting"
+      },
+      {
+        "line": 1138,
+        "text": "Private deployment"
+      },
+      {
+        "line": 1148,
+        "text": "container faq-layout"
+      },
+      {
+        "line": 1150,
+        "text": "常见问题"
+      },
+      {
+        "line": 1150,
+        "text": "GOOD QUESTIONS"
+      },
+      {
+        "line": 1151,
+        "text": "开始之前，\n你可能想知道"
+      },
+      {
+        "line": 1151,
+        "text": "Before we begin"
+      },
+      {
+        "line": 1164,
+        "text": "关于 CYANO"
+      },
+      {
+        "line": 1164,
+        "text": "ABOUT CYANO"
+      },
+      {
+        "line": 1165,
+        "text": "使命句"
+      },
+      {
+        "line": 1173,
+        "text": "工程师的思考，企业级的交付"
+      },
+      {
+        "line": 1173,
+        "text": "ENGINEERS AT HEART"
+      },
+      {
+        "line": 1177,
+        "text": "懂模型，也懂业务。"
+      },
+      {
+        "line": 1178,
+        "text": "We know models.\nAnd we know business."
+      },
+      {
+        "line": 1182,
+        "text": "我们是谁 1"
+      },
+      {
+        "line": 1183,
+        "text": "我们是谁 2"
+      },
+      {
+        "line": 1189,
+        "text": "Cyano 四位创始人讨论业务工作流的插画"
+      },
+      {
+        "line": 1190,
+        "text": "Illustration of the four Cyano founders discussing a business workflow"
+      },
+      {
+        "line": 1201,
+        "text": "section mist"
+      },
+      {
+        "line": 1204,
+        "text": "共同创造，长期负责"
+      },
+      {
+        "line": 1204,
+        "text": "BUILT TOGETHER"
+      },
+      {
+        "line": 1205,
+        "text": "创始团队标题"
+      },
+      {
+        "line": 1210,
+        "text": "section dark name-story"
+      },
+      {
+        "line": 1211,
+        "text": "container editorial-split"
+      },
+      {
+        "line": 1212,
+        "text": "名字的由来标题"
+      },
+      {
+        "line": 1216,
+        "text": "从企业经验，\n到每天都能用的能力。"
+      },
+      {
+        "line": 1217,
+        "text": "Your expertise.\nWorking every day."
+      },
+      {
+        "line": 1223,
+        "text": "Cyano（澜屿智创）专注一件事：把企业已有的资料、经验和流程，转化为能被团队每天使用的 AI 系统。我们从具体问题出发，把数据、模型与业务规则连接起来，并对上线后的维护与迭代负责。"
+      },
+      {
+        "line": 1224,
+        "text": "Cyano turns the knowledge and workflows already inside your company into AI systems your team can use every day. We start with a concrete business problem, connect data, models and rules, and take responsibility for maintenance and improvement after launch."
+      },
+      {
+        "line": 1234,
+        "text": "我们的原则"
+      },
+      {
+        "line": 1234,
+        "text": "OUR PRINCIPLES"
+      },
+      {
+        "line": 1235,
+        "text": "原则标题"
+      },
+      {
+        "line": 1239,
+        "text": "原则"
+      },
+      {
+        "line": 1261,
+        "text": "让我们开始"
+      },
+      {
+        "line": 1261,
+        "text": "LET’S TALK"
+      },
+      {
+        "line": 1262,
+        "text": "Hero 标题"
+      },
+      {
+        "line": 1263,
+        "text": "Hero 导语"
+      },
+      {
+        "line": 1266,
+        "text": "section contact-section"
+      },
+      {
+        "line": 1267,
+        "text": "container contact-layout"
+      },
+      {
+        "line": 1270,
+        "text": "从这里开始"
+      },
+      {
+        "line": 1270,
+        "text": "A GOOD PLACE TO START"
+      },
+      {
+        "line": 1274,
+        "text": "有问题，\n就值得聊一聊。"
+      },
+      {
+        "line": 1275,
+        "text": "A good question\nis a good beginning."
+      },
+      {
+        "line": 1281,
+        "text": "起点"
+      },
+      {
+        "line": 1300,
+        "text": "产品与解决方案负责人插画"
+      },
+      {
+        "line": 1301,
+        "text": "Head of Product & Solutions illustration"
+      },
+      {
+        "line": 1311,
+        "text": "由资深顾问亲自回复"
+      },
+      {
+        "line": 1312,
+        "text": "A senior consultant will reply"
+      },
+      {
+        "line": 1316,
+        "text": "谁会回复你"
+      },
+      {
+        "line": 1320,
+        "text": "接下来会发生什么"
+      },
+      {
+        "line": 1320,
+        "text": "What happens next"
+      },
+      {
+        "line": 1324,
+        "text": "接下来"
+      },
+      {
+        "line": 1342,
+        "text": "洞察"
+      },
+      {
+        "line": 1344,
+        "text": "从工程现场出发，\n把 AI 落地说清楚。"
+      },
+      {
+        "line": 1345,
+        "text": "Perspectives from\nthe work itself."
+      },
+      {
+        "line": 1349,
+        "text": "关于企业知识、AI 工程与合作选择的具体思考。"
+      },
+      {
+        "line": 1350,
+        "text": "Practical perspectives on company knowledge, AI engineering and choosing the right engagement."
+      },
+      {
+        "line": 1377,
+        "text": "section article-section"
+      },
+      {
+        "line": 1378,
+        "text": "container article-layout"
+      },
+      {
+        "line": 1382,
+        "text": "Cyano 创始团队"
+      },
+      {
+        "line": 1382,
+        "text": "Cyano founding team"
+      },
+      {
+        "line": 1385,
+        "text": "本文内容"
+      },
+      {
+        "line": 1385,
+        "text": "IN THIS ARTICLE"
+      },
+      {
+        "line": 1405,
+        "text": "把思考带回你的业务。"
+      },
+      {
+        "line": 1406,
+        "text": "Bring this back to your business."
+      },
+      {
+        "line": 1412,
+        "text": "从一次具体的业务诊断开始，判断下一步是否值得做。"
+      },
+      {
+        "line": 1413,
+        "text": "Start with a business diagnosis and decide whether the next step is worth taking."
+      },
+      {
+        "line": 1417,
+        "text": "主按钮"
+      },
+      {
+        "line": 1435,
+        "text": "我们收集的信息"
+      },
+      {
+        "line": 1436,
+        "text": "当你提交咨询时，我们收集你主动提供的姓名、公司、职位、工作邮箱、电话或微信、业务场景与启动时间。网站可能收集不跨站追踪的访问统计数据。"
+      },
+      {
+        "line": 1439,
+        "text": "我们如何使用信息"
+      },
+      {
+        "line": 1440,
+        "text": "信息用于回复咨询、提供你所请求的资料、沟通项目需求及改进网站体验。我们不出售你的个人信息。"
+      },
+      {
+        "line": 1443,
+        "text": "存储与处理"
+      },
+      {
+        "line": 1444,
+        "text": "信息由 Cyano 及其委托的云服务与邮件服务商存储和处理，可能涉及跨境传输。我们采取加密传输与访问控制等措施保护数据。"
+      },
+      {
+        "line": 1447,
+        "text": "保留期限与用户权利"
+      },
+      {
+        "line": 1448,
+        "text": "咨询信息通常保留不超过 24 个月，或在你要求删除时提前删除。你可以通过联系表单申请查询、更正、删除个人信息或撤回同意。"
+      },
+      {
+        "line": 1451,
+        "text": "Cookie 与统计"
+      },
+      {
+        "line": 1452,
+        "text": "我们不使用跨站广告追踪 Cookie。语言偏好可能存储在你的浏览器中；你可以随时清除。"
+      },
+      {
+        "line": 1455,
+        "text": "联系与更新"
+      },
+      {
+        "line": 1456,
+        "text": "如有关于信息处理的疑问，请通过联系表单与 Cyano（澜屿智创）沟通。本政策更新时将在此页面公布。"
+      },
+      {
+        "line": 1461,
+        "text": "网站内容"
+      },
+      {
+        "line": 1462,
+        "text": "本网站用于介绍 Cyano 的能力、服务与项目。内容仅供参考，不构成合同承诺；具体服务范围、交付标准与价格以双方协议为准。"
+      },
+      {
+        "line": 1465,
+        "text": "知识产权"
+      },
+      {
+        "line": 1466,
+        "text": "网站的文字、设计、品牌资产与相关内容由 Cyano 或相应权利人拥有。未经许可，不得复制或将其用于商业用途。"
+      },
+      {
+        "line": 1469,
+        "text": "合理使用与免责声明"
+      },
+      {
+        "line": 1470,
+        "text": "请勿尝试破坏网站、绕过安全措施或通过表单发送违法内容。我们努力保持信息准确，但不保证所有信息始终完整或最新。"
+      },
+      {
+        "line": 1473,
+        "text": "外部链接"
+      },
+      {
+        "line": 1474,
+        "text": "网站可能链接到第三方服务或项目体验页面。相应页面由其运营者管理，适用其自身的条款与隐私政策。"
+      },
+      {
+        "line": 1477,
+        "text": "适用法律与变更"
+      },
+      {
+        "line": 1478,
+        "text": "本条款依据适用法律解释。我们可能随服务变化更新条款，更新后的内容在此页面公布。"
+      },
+      {
+        "line": 1481,
+        "text": "联系我们"
+      },
+      {
+        "line": 1481,
+        "text": "如对网站或条款有疑问，请通过联系表单与我们沟通。"
+      },
+      {
+        "line": 1485,
+        "text": "Information we collect"
+      },
+      {
+        "line": 1486,
+        "text": "When you submit an inquiry, we collect the details you provide: name, company, role, work email, phone or WeChat, use case and preferred start. We may collect site analytics that do not track you across websites."
+      },
+      {
+        "line": 1489,
+        "text": "How we use information"
+      },
+      {
+        "line": 1490,
+        "text": "We use your information to answer inquiries, supply requested materials, discuss project needs and improve the website. We do not sell personal information."
+      },
+      {
+        "line": 1493,
+        "text": "Storage and processing"
+      },
+      {
+        "line": 1494,
+        "text": "Cyano and its cloud and email service providers store and process information. This may involve cross-border transfers. We use encrypted transmission and access controls to protect data."
+      },
+      {
+        "line": 1497,
+        "text": "Retention and your rights"
+      },
+      {
+        "line": 1498,
+        "text": "Inquiry information is generally retained for no more than 24 months, or deleted earlier on request. Use our contact form to request access, correction, deletion or withdrawal of consent."
+      },
+      {
+        "line": 1501,
+        "text": "Cookies and analytics"
+      },
+      {
+        "line": 1502,
+        "text": "We do not use cross-site advertising cookies. Language preferences may be stored in your browser, which you can clear at any time."
+      },
+      {
+        "line": 1505,
+        "text": "Contact and updates"
+      },
+      {
+        "line": 1506,
+        "text": "For questions about information handling, contact Cyano through the inquiry form. Policy updates will appear on this page."
+      },
+      {
+        "line": 1511,
+        "text": "Website information"
+      },
+      {
+        "line": 1512,
+        "text": "This website describes Cyano’s capabilities, services and projects. Information is provided for reference and is not a contractual commitment. Scope, delivery requirements and pricing are governed by the parties’ agreement."
+      },
+      {
+        "line": 1515,
+        "text": "Intellectual property"
+      },
+      {
+        "line": 1516,
+        "text": "Text, designs, brand assets and related content belong to Cyano or their respective owners. Commercial copying or reuse requires permission."
+      },
+      {
+        "line": 1519,
+        "text": "Acceptable use and disclaimers"
+      },
+      {
+        "line": 1520,
+        "text": "Do not disrupt the website, bypass security or submit unlawful content. We aim for accuracy but do not warrant that all information is complete or current at all times."
+      },
+      {
+        "line": 1523,
+        "text": "External links"
+      },
+      {
+        "line": 1524,
+        "text": "We may link to third-party services and project experiences. Their operators control those sites, which have their own terms and privacy policies."
+      },
+      {
+        "line": 1527,
+        "text": "Applicable law and changes"
+      },
+      {
+        "line": 1528,
+        "text": "These terms are interpreted under applicable law. We may update them as services change; updates will be published here."
+      },
+      {
+        "line": 1532,
+        "text": "Please use the contact form for questions about this website or these terms."
+      },
+      {
+        "line": 1543,
+        "text": "隐私政策"
+      },
+      {
+        "line": 1543,
+        "text": "使用条款"
+      },
+      {
+        "line": 1544,
+        "text": "Privacy Policy"
+      },
+      {
+        "line": 1544,
+        "text": "Terms of Use"
+      },
+      {
+        "line": 1552,
+        "text": "更新日期：2026 年 11 月 12 日"
+      },
+      {
+        "line": 1553,
+        "text": "Updated November 12, 2026"
+      },
+      {
+        "line": 1564,
+        "text": "联系我们"
+      },
+      {
+        "line": 1564,
+        "text": "Contact us"
+      },
+      {
+        "line": 1577,
+        "text": "标题"
+      },
+      {
+        "line": 1578,
+        "text": "正文"
+      },
+      {
+        "line": 1580,
+        "text": "返回首页"
+      },
+      {
+        "line": 1580,
+        "text": "Back to home"
+      },
+      {
+        "line": 1582,
+        "text": "查看案例"
+      },
+      {
+        "line": 1582,
+        "text": "See our work"
+      }
+    ]
+  },
+  {
+    "file": "components/ui.tsx",
+    "rows": [
+      {
+        "line": 129,
+        "text": "年"
+      },
+      {
+        "line": 131,
+        "text": "个"
+      },
+      {
+        "line": 138,
+        "text": "每位核心成员的最低开发经验"
+      },
+      {
+        "line": 139,
+        "text": "核心成员拥有 AI 模型研发经验"
+      },
+      {
+        "line": 140,
+        "text": "核心成员拥有世界 500 强企业工作经历"
+      },
+      {
+        "line": 141,
+        "text": "已落地行业"
+      },
+      {
+        "line": 144,
+        "text": "Minimum engineering experience"
+      },
+      {
+        "line": 145,
+        "text": "Hands-on AI model R&D"
+      },
+      {
+        "line": 146,
+        "text": "Fortune Global 500 experience"
+      },
+      {
+        "line": 147,
+        "text": "Industries in production"
+      },
+      {
+        "line": 169,
+        "text": "noopener noreferrer"
+      },
+      {
+        "line": 172,
+        "text": "在线 Demo 按钮"
+      },
+      {
+        "line": 189,
+        "text": "case-visual visual-"
+      },
+      {
+        "line": 212,
+        "text": "“客户项目”标签"
+      },
+      {
+        "line": 229,
+        "text": "阅读案例"
+      },
+      {
+        "line": 229,
+        "text": "Read case study"
+      },
+      {
+        "line": 248,
+        "text": "portrait portrait-"
+      },
+      {
+        "line": 253,
+        "text": "插画形象"
+      },
+      {
+        "line": 253,
+        "text": "Illustrated Cyano"
+      },
+      {
+        "line": 278,
+        "text": "insight-image insight-"
+      },
+      {
+        "line": 314,
+        "text": "接入企业知识"
+      },
+      {
+        "line": 315,
+        "text": "AI 理解与执行"
+      },
+      {
+        "line": 316,
+        "text": "校验与人工复核"
+      },
+      {
+        "line": 317,
+        "text": "交付业务结果"
+      },
+      {
+        "line": 320,
+        "text": "Connect knowledge"
+      },
+      {
+        "line": 321,
+        "text": "Reason & execute"
+      },
+      {
+        "line": 322,
+        "text": "Validate & review"
+      },
+      {
+        "line": 323,
+        "text": "Deliver results"
+      },
+      {
+        "line": 331,
+        "text": "资料、数据库与现有系统"
+      },
+      {
+        "line": 332,
+        "text": "检索、编排与任务处理"
+      },
+      {
+        "line": 333,
+        "text": "引用、规则与权限检查"
+      },
+      {
+        "line": 334,
+        "text": "可编辑、可追踪、可复用"
+      },
+      {
+        "line": 354,
+        "text": "closing dark"
+      },
+      {
+        "line": 356,
+        "text": "container closing-inner"
+      },
+      {
+        "line": 359,
+        "text": "下一步，从一次对话开始"
+      },
+      {
+        "line": 359,
+        "text": "YOUR NEXT CHAPTER"
+      },
+      {
+        "line": 361,
+        "text": "收尾 CTA 口号"
+      },
+      {
+        "line": 362,
+        "text": "收尾 CTA 副句"
+      },
+      {
+        "line": 364,
+        "text": "主按钮"
+      },
+      {
+        "line": 367,
+        "text": "footer dark"
+      },
+      {
+        "line": 374,
+        "text": "页脚定位句"
+      },
+      {
+        "line": 375,
+        "text": "页脚服务地区"
+      },
+      {
+        "line": 378,
+        "text": "解决方案"
+      },
+      {
+        "line": 386,
+        "text": "公司"
+      },
+      {
+        "line": 392,
+        "text": "关于我们"
+      },
+      {
+        "line": 392,
+        "text": "案例"
+      },
+      {
+        "line": 392,
+        "text": "方法与技术"
+      },
+      {
+        "line": 392,
+        "text": "合作方式"
+      },
+      {
+        "line": 392,
+        "text": "洞察"
+      },
+      {
+        "line": 394,
+        "text": "Case studies"
+      },
+      {
+        "line": 396,
+        "text": "How we work"
+      },
+      {
+        "line": 406,
+        "text": "联系"
+      },
+      {
+        "line": 408,
+        "text": "主按钮"
+      },
+      {
+        "line": 416,
+        "text": "中国 · 北美 · 全球远程交付"
+      },
+      {
+        "line": 417,
+        "text": "China · North America · Worldwide"
+      },
+      {
+        "line": 426,
+        "text": "© 2026 Cyano Intelligence · 澜屿智创 版权所有"
+      },
+      {
+        "line": 427,
+        "text": "© 2026 Cyano Intelligence. All rights reserved."
+      },
+      {
+        "line": 433,
+        "text": "隐私政策"
+      },
+      {
+        "line": 433,
+        "text": "Privacy Policy"
+      },
+      {
+        "line": 436,
+        "text": "使用条款"
+      },
+      {
+        "line": 436,
+        "text": "Terms of Use"
+      },
+      {
+        "line": 438,
+        "text": "CYANO INTELLIGENCE"
+      }
+    ]
+  },
+  {
+    "file": "components/interactive.tsx",
+    "rows": [
+      {
+        "line": 1,
+        "text": "use client"
+      },
+      {
+        "line": 81,
+        "text": ".mobile-nav a"
+      },
+      {
+        "line": 85,
+        "text": ".menu-toggle,.mobile-nav a"
+      },
+      {
+        "line": 104,
+        "text": "解决方案"
+      },
+      {
+        "line": 105,
+        "text": "案例"
+      },
+      {
+        "line": 105,
+        "text": "Case studies"
+      },
+      {
+        "line": 106,
+        "text": "方法与技术"
+      },
+      {
+        "line": 107,
+        "text": "合作方式"
+      },
+      {
+        "line": 107,
+        "text": "How we work"
+      },
+      {
+        "line": 108,
+        "text": "关于我们"
+      },
+      {
+        "line": 117,
+        "text": "Cyano 首页"
+      },
+      {
+        "line": 117,
+        "text": "Cyano home"
+      },
+      {
+        "line": 123,
+        "text": "主导航"
+      },
+      {
+        "line": 123,
+        "text": "Main navigation"
+      },
+      {
+        "line": 141,
+        "text": "展开"
+      },
+      {
+        "line": 165,
+        "text": "团队与故事"
+      },
+      {
+        "line": 165,
+        "text": "洞察"
+      },
+      {
+        "line": 165,
+        "text": "联系我们"
+      },
+      {
+        "line": 166,
+        "text": "Team & Story"
+      },
+      {
+        "line": 184,
+        "text": "中文"
+      },
+      {
+        "line": 188,
+        "text": "主按钮"
+      },
+      {
+        "line": 195,
+        "text": "关闭菜单"
+      },
+      {
+        "line": 195,
+        "text": "打开菜单"
+      },
+      {
+        "line": 196,
+        "text": "Close menu"
+      },
+      {
+        "line": 196,
+        "text": "Open menu"
+      },
+      {
+        "line": 208,
+        "text": "移动导航"
+      },
+      {
+        "line": 208,
+        "text": "Mobile navigation"
+      },
+      {
+        "line": 218,
+        "text": "洞察"
+      },
+      {
+        "line": 222,
+        "text": "主按钮"
+      },
+      {
+        "line": 284,
+        "text": "解决方案"
+      },
+      {
+        "line": 330,
+        "text": "solution-panel solution-panel-"
+      },
+      {
+        "line": 352,
+        "text": "探索解决方案"
+      },
+      {
+        "line": 352,
+        "text": "Explore solution"
+      },
+      {
+        "line": 380,
+        "text": "按行业筛选案例"
+      },
+      {
+        "line": 380,
+        "text": "Filter cases by industry"
+      },
+      {
+        "line": 383,
+        "text": "全部案例"
+      },
+      {
+        "line": 383,
+        "text": "All cases"
+      },
+      {
+        "line": 403,
+        "text": "没有符合筛选的案例。"
+      },
+      {
+        "line": 403,
+        "text": "No cases match this filter."
+      },
+      {
+        "line": 406,
+        "text": "查看全部案例"
+      },
+      {
+        "line": 406,
+        "text": "View all cases"
+      },
+      {
+        "line": 432,
+        "text": ".lightbox button"
+      },
+      {
+        "line": 452,
+        "text": "放大查看界面"
+      },
+      {
+        "line": 452,
+        "text": "Enlarge screenshot"
+      },
+      {
+        "line": 459,
+        "text": "界面"
+      },
+      {
+        "line": 469,
+        "text": "点击放大"
+      },
+      {
+        "line": 469,
+        "text": "Click to enlarge"
+      },
+      {
+        "line": 479,
+        "text": "查看界面"
+      },
+      {
+        "line": 479,
+        "text": "View screen"
+      },
+      {
+        "line": 503,
+        "text": "关闭"
+      },
+      {
+        "line": 513,
+        "text": "上一张"
+      },
+      {
+        "line": 528,
+        "text": "下一张"
+      },
+      {
+        "line": 590,
+        "text": "提交失败，请稍后重试。"
+      },
+      {
+        "line": 591,
+        "text": "Unable to send. Please try again."
+      },
+      {
+        "line": 607,
+        "text": "谢谢，咨询已提交。"
+      },
+      {
+        "line": 607,
+        "text": "Thank you. Your inquiry is in."
+      },
+      {
+        "line": 609,
+        "text": "提交成功"
+      },
+      {
+        "line": 611,
+        "text": "提交另一条咨询"
+      },
+      {
+        "line": 611,
+        "text": "Send another inquiry"
+      },
+      {
+        "line": 618,
+        "text": "聊聊你的业务场景"
+      },
+      {
+        "line": 618,
+        "text": "Tell us what you want to change"
+      },
+      {
+        "line": 622,
+        "text": "从一个具体的问题开始，我们一起找到答案。"
+      },
+      {
+        "line": 623,
+        "text": "Start with one concrete problem. We’ll work out the next step together."
+      },
+      {
+        "line": 629,
+        "text": "姓名"
+      },
+      {
+        "line": 630,
+        "text": "公司"
+      },
+      {
+        "line": 631,
+        "text": "职位"
+      },
+      {
+        "line": 631,
+        "text": "Job title"
+      },
+      {
+        "line": 632,
+        "text": "工作邮箱"
+      },
+      {
+        "line": 632,
+        "text": "Work email"
+      },
+      {
+        "line": 633,
+        "text": "电话或微信"
+      },
+      {
+        "line": 633,
+        "text": "Phone or WeChat"
+      },
+      {
+        "line": 658,
+        "text": "期望启动时间"
+      },
+      {
+        "line": 658,
+        "text": "Preferred start"
+      },
+      {
+        "line": 661,
+        "text": "还不确定"
+      },
+      {
+        "line": 661,
+        "text": "Not sure yet"
+      },
+      {
+        "line": 664,
+        "text": "1 个月内"
+      },
+      {
+        "line": 664,
+        "text": "Within 1 month"
+      },
+      {
+        "line": 667,
+        "text": "1–3 个月"
+      },
+      {
+        "line": 670,
+        "text": "3 个月以后"
+      },
+      {
+        "line": 670,
+        "text": "Later than 3 months"
+      },
+      {
+        "line": 676,
+        "text": "咨询类型"
+      },
+      {
+        "line": 676,
+        "text": "Inquiry type"
+      },
+      {
+        "line": 680,
+        "text": "咨询类型选项"
+      },
+      {
+        "line": 686,
+        "text": "业务场景描述"
+      },
+      {
+        "line": 686,
+        "text": "Describe your use case"
+      },
+      {
+        "line": 695,
+        "text": "我想了解案例："
+      },
+      {
+        "line": 695,
+        "text": "I would like to discuss:"
+      },
+      {
+        "line": 700,
+        "text": "描述框提示"
+      },
+      {
+        "line": 712,
+        "text": "我已阅读并同意"
+      },
+      {
+        "line": 712,
+        "text": "I agree to the"
+      },
+      {
+        "line": 714,
+        "text": "《隐私政策》"
+      },
+      {
+        "line": 714,
+        "text": "Privacy Policy"
+      },
+      {
+        "line": 723,
+        "text": "button form-submit"
+      },
+      {
+        "line": 727,
+        "text": "正在提交…"
+      },
+      {
+        "line": 731,
+        "text": "提交按钮"
+      },
+      {
+        "line": 739,
+        "text": "你的信息仅用于沟通与提供服务。"
+      },
+      {
+        "line": 740,
+        "text": "Your information is only used to respond and provide services."
+      },
+      {
+        "line": 748,
+        "text": "如何重置 VPN 密码？"
+      },
+      {
+        "line": 749,
+        "text": "新员工如何申请电脑？"
+      },
+      {
+        "line": 750,
+        "text": "如何申请软件安装权限？"
+      },
+      {
+        "line": 751,
+        "text": "远程办公有哪些安全要求？"
+      },
+      {
+        "line": 752,
+        "text": "邮箱无法登录怎么办？"
+      },
+      {
+        "line": 753,
+        "text": "我遇到了其他问题"
+      },
+      {
+        "line": 756,
+        "text": "How do I reset my VPN password?"
+      },
+      {
+        "line": 757,
+        "text": "How do new employees request a laptop?"
+      },
+      {
+        "line": 758,
+        "text": "How can I request software installation?"
+      },
+      {
+        "line": 759,
+        "text": "What are the security rules for remote work?"
+      },
+      {
+        "line": 760,
+        "text": "I cannot access my email. What should I do?"
+      },
+      {
+        "line": 761,
+        "text": "I need help with something else"
+      },
+      {
+        "line": 784,
+        "text": "本月各区域销售额是多少？"
+      },
+      {
+        "line": 785,
+        "text": "哪些商品库存低于安全线？"
+      },
+      {
+        "line": 786,
+        "text": "近六个月销售趋势如何？"
+      },
+      {
+        "line": 787,
+        "text": "华东地区最畅销的商品？"
+      },
+      {
+        "line": 788,
+        "text": "哪些库存周转较慢？"
+      },
+      {
+        "line": 789,
+        "text": "本月销量与上月相比？"
+      },
+      {
+        "line": 792,
+        "text": "Sales by region this month?"
+      },
+      {
+        "line": 793,
+        "text": "Which items are below safety stock?"
+      },
+      {
+        "line": 794,
+        "text": "Sales trend over six months?"
+      },
+      {
+        "line": 795,
+        "text": "Top products in the East region?"
+      },
+      {
+        "line": 796,
+        "text": "Which inventory moves slowly?"
+      },
+      {
+        "line": 797,
+        "text": "Sales compared with last month?"
+      },
+      {
+        "line": 803,
+        "text": "在企业身份门户进入“安全设置 → VPN”，通过多因素认证后设置新密码。新密码至少 12 位，不能与最近使用的密码相同。若验证设备丢失，请转交 IT 服务台核验身份。"
+      },
+      {
+        "line": 804,
+        "text": "在服务门户提交“新员工设备”申请，填写部门、岗位和入职日期，由直属主管审批。设备交付前，IT 团队会完成加密、安全软件与账号配置。"
+      },
+      {
+        "line": 805,
+        "text": "在软件目录查找已批准的软件并提交安装申请。未收录的软件需要补充用途与许可证信息，由安全团队审核。请勿使用个人账号下载未经审批的软件。"
+      },
+      {
+        "line": 806,
+        "text": "使用公司批准的 VPN 和设备，开启磁盘加密与自动锁屏。不要把业务资料同步到个人云盘；共享文件前核对接收人的访问权限。"
+      },
+      {
+        "line": 807,
+        "text": "先检查企业身份门户是否正常，确认账号未锁定，再尝试重置密码。若仍无法登录，提交错误时间和截图，避免在工单中写入密码。"
+      },
+      {
+        "line": 808,
+        "text": "这个问题需要人工进一步核验。请在企业服务门户提交工单，说明故障时间、影响范围和已经尝试的操作。系统会保留本次对话作为处理背景。"
+      },
+      {
+        "line": 811,
+        "text": "Open Security → VPN in your identity portal and verify with MFA before setting a new password. Use at least 12 characters and do not reuse recent passwords. If your verification device is lost, contact the service desk for identity verification."
+      },
+      {
+        "line": 812,
+        "text": "Submit a New Employee Equipment request with department, role and start date. Your manager approves it; IT configures encryption, security software and accounts before delivery."
+      },
+      {
+        "line": 813,
+        "text": "Find approved software in the catalog and submit an installation request. For unlisted software, include its purpose and license details for security review."
+      },
+      {
+        "line": 814,
+        "text": "Use approved devices and VPN, enable disk encryption and auto-lock. Keep company files out of personal cloud drives and verify sharing permissions."
+      },
+      {
+        "line": 815,
+        "text": "Check the identity portal, confirm the account is not locked, and try a password reset. If it still fails, submit the error time and a screenshot without including passwords."
+      },
+      {
+        "line": 816,
+        "text": "This needs human verification. Submit a service ticket with the time, impact and steps already attempted. Your conversation is retained as context for the support team."
+      },
+      {
+        "line": 827,
+        "text": "查询已通过只读权限和字段校验。以下结果来自当前体验数据集，点击其他问题可切换视图。"
+      },
+      {
+        "line": 828,
+        "text": "The query passed read-only access and field validation. The results below come from this interactive dataset. Select another question to explore."
+      },
+      {
+        "line": 846,
+        "text": "SmartDoc AI"
+      },
+      {
+        "line": 846,
+        "text": "Enterprise Wiki"
+      },
+      {
+        "line": 850,
+        "text": "在线体验"
+      },
+      {
+        "line": 850,
+        "text": "Interactive experience"
+      },
+      {
+        "line": 855,
+        "text": "试着问一个问题"
+      },
+      {
+        "line": 855,
+        "text": "TRY A QUESTION"
+      },
+      {
+        "line": 875,
+        "text": "你的知识，随时可用。"
+      },
+      {
+        "line": 876,
+        "text": "Your knowledge. Ready when you need it."
+      },
+      {
+        "line": 882,
+        "text": "选择一个问题，体验从提问到有据可查的答案。"
+      },
+      {
+        "line": 883,
+        "text": "Select a question to see how knowledge becomes a sourced answer."
+      },
+      {
+        "line": 918,
+        "text": "查看生成的只读查询"
+      },
+      {
+        "line": 919,
+        "text": "View the generated read-only query"
+      },
+      {
+        "line": 932,
+        "text": "已保留问题上下文，可转人工处理。"
+      },
+      {
+        "line": 933,
+        "text": "Context retained for a human handoff."
+      },
+      {
+        "line": 937,
+        "text": "来源：IT 服务制度 · 访问权限与操作指南 §"
+      },
+      {
+        "line": 939,
+        "text": "Source: IT Service Policy · Access & Operations §"
+      },
+      {
+        "line": 953,
+        "text": "回答已生成，可以查看结果与来源。"
+      },
+      {
+        "line": 954,
+        "text": "Answer ready. Review the result and sources."
+      },
+      {
+        "line": 960,
+        "text": "交互 Demo 说明小字"
+      },
+      {
+        "line": 986,
+        "text": "链接已复制"
+      },
+      {
+        "line": 986,
+        "text": "复制文章链接"
+      },
+      {
+        "line": 987,
+        "text": "Link copied"
+      },
+      {
+        "line": 987,
+        "text": "Copy article link"
+      }
+    ]
+  },
+  {
+    "file": "components/business-visuals.tsx",
+    "rows": [
+      {
+        "line": 20,
+        "text": "已交付项目 · 智能标书与方案生成"
+      },
+      {
+        "line": 21,
+        "text": "IN PRODUCTION · INTELLIGENT PROPOSAL BUILDER"
+      },
+      {
+        "line": 34,
+        "text": "企业知识，进入实际工作。"
+      },
+      {
+        "line": 35,
+        "text": "Company knowledge. Put to work."
+      },
+      {
+        "line": 48,
+        "text": "智能标书系统真实界面：左侧知识问答，右侧生成方案草稿"
+      },
+      {
+        "line": 49,
+        "text": "Actual proposal system: knowledge-assisted dialogue and generated proposal draft"
+      },
+      {
+        "line": 65,
+        "text": "从企业资料，到方案初稿"
+      },
+      {
+        "line": 66,
+        "text": "FROM COMPANY SOURCES TO A FIRST DRAFT"
+      },
+      {
+        "line": 71,
+        "text": "2 天"
+      },
+      {
+        "line": 73,
+        "text": "15 分钟"
+      },
+      {
+        "line": 87,
+        "text": "企业资料接入"
+      },
+      {
+        "line": 87,
+        "text": "AI 工作流处理"
+      },
+      {
+        "line": 87,
+        "text": "可审核的交付结果"
+      },
+      {
+        "line": 88,
+        "text": "Your knowledge"
+      },
+      {
+        "line": 88,
+        "text": "AI workflows"
+      },
+      {
+        "line": 88,
+        "text": "Reviewable results"
+      },
+      {
+        "line": 121,
+        "text": "知识与任务编排"
+      },
+      {
+        "line": 121,
+        "text": "KNOWLEDGE & TASK ORCHESTRATION"
+      },
+      {
+        "line": 127,
+        "text": "可追溯 · 可审计 · 可交付"
+      },
+      {
+        "line": 128,
+        "text": "TRACEABLE · AUDITABLE · DELIVERABLE"
+      }
+    ]
+  },
+  {
+    "file": "app/[[...path]]/page.tsx",
+    "rows": [
+      {
+        "line": 46,
+        "text": "企业 AI 工程与定制解决方案"
+      },
+      {
+        "line": 47,
+        "text": "Enterprise AI Engineering"
+      },
+      {
+        "line": 51,
+        "text": "解决方案"
+      },
+      {
+        "line": 52,
+        "text": "案例"
+      },
+      {
+        "line": 52,
+        "text": "Case studies"
+      },
+      {
+        "line": 53,
+        "text": "方法与技术"
+      },
+      {
+        "line": 54,
+        "text": "合作方式"
+      },
+      {
+        "line": 54,
+        "text": "How we work"
+      },
+      {
+        "line": 55,
+        "text": "关于我们"
+      },
+      {
+        "line": 56,
+        "text": "联系我们"
+      },
+      {
+        "line": 57,
+        "text": "洞察"
+      },
+      {
+        "line": 58,
+        "text": "隐私政策"
+      },
+      {
+        "line": 58,
+        "text": "Privacy Policy"
+      },
+      {
+        "line": 59,
+        "text": "使用条款"
+      },
+      {
+        "line": 59,
+        "text": "Terms of Use"
+      },
+      {
+        "line": 71,
+        "text": "Cyano（澜屿智创）为企业定制 AI 工具、工作流与托管式服务。从业务诊断开始，交付能上线、能审计、能持续迭代的系统。"
+      },
+      {
+        "line": 72,
+        "text": "Cyano builds custom enterprise AI tools, workflows and managed services. Start with a diagnosis. Ship systems you can audit, maintain and grow."
+      },
+      {
+        "line": 92,
+        "text": "Cyano Intelligence"
+      },
+      {
+        "line": 100,
+        "text": "Cyano Intelligence —"
+      },
+      {
+        "line": 159,
+        "text": "Cyano Intelligence"
+      },
+      {
+        "line": 160,
+        "text": "澜屿智创"
+      },
+      {
+        "line": 163,
+        "text": "页脚定位句"
+      }
+    ]
+  },
+  {
+    "file": "app/[[...path]]/layout.tsx",
+    "rows": [
+      {
+        "line": 22,
+        "text": "跳转到主要内容"
+      },
+      {
+        "line": 22,
+        "text": "Skip to content"
+      }
+    ]
+  },
+  {
+    "file": "app/[[...path]]/not-found.tsx",
+    "rows": [
+      {
+        "line": 1,
+        "text": "use client"
+      },
+      {
+        "line": 7,
+        "text": "page-hero dark"
+      },
+      {
+        "line": 10,
+        "text": "container page-hero-inner"
+      },
+      {
+        "line": 13,
+        "text": "eyebrow eyebrow-light"
+      },
+      {
+        "line": 17,
+        "text": "This page could not be found."
+      },
+      {
+        "line": 17,
+        "text": "没有找到这个页面。"
+      },
+      {
+        "line": 20,
+        "text": "The page you're looking for doesn't exist or has moved."
+      },
+      {
+        "line": 21,
+        "text": "你要找的页面不存在或已经移动。"
+      },
+      {
+        "line": 25,
+        "text": "Back to home"
+      },
+      {
+        "line": 25,
+        "text": "返回首页"
+      },
+      {
+        "line": 28,
+        "text": "button button-outline"
+      },
+      {
+        "line": 31,
+        "text": "See our work"
+      },
+      {
+        "line": 31,
+        "text": "查看案例"
+      }
+    ]
+  },
+  {
+    "file": "app/api/contact/route.ts",
+    "rows": [
+      {
+        "line": 29,
+        "text": "Request origin not allowed."
+      },
+      {
+        "line": 34,
+        "text": "Request too large."
+      },
+      {
+        "line": 40,
+        "text": "Request too large."
+      },
+      {
+        "line": 45,
+        "text": "Invalid request."
+      },
+      {
+        "line": 48,
+        "text": "Invalid request."
+      },
+      {
+        "line": 55,
+        "text": "提交未通过验证，请重试。"
+      },
+      {
+        "line": 56,
+        "text": "Unable to verify this submission."
+      },
+      {
+        "line": 66,
+        "text": "请检查必填项、邮箱格式及业务描述（至少 10 个字符）。"
+      },
+      {
+        "line": 67,
+        "text": "Check the required fields, email and description (at least 10 characters)."
+      },
+      {
+        "line": 84,
+        "text": "提交次数较多，请一小时后再试。"
+      },
+      {
+        "line": 85,
+        "text": "Too many requests. Please try again in an hour."
+      },
+      {
+        "line": 98,
+        "text": "咨询发送暂未开通，请稍后再试。你的信息尚未发送。"
+      },
+      {
+        "line": 99,
+        "text": "Inquiry delivery is not available yet. Please try again later. Your information has not been sent."
+      },
+      {
+        "line": 126,
+        "text": "Cyano inquiry —"
+      },
+      {
+        "line": 127,
+        "text": "<h1>New inquiry</h1><p>"
+      },
+      {
+        "line": 127,
+        "text": "</p><p>Phone / WeChat:"
+      },
+      {
+        "line": 127,
+        "text": "</p><p>Preferred start:"
+      },
+      {
+        "line": 134,
+        "text": "Cyano 已收到你的咨询"
+      },
+      {
+        "line": 135,
+        "text": "Cyano received your inquiry"
+      },
+      {
+        "line": 138,
+        "text": "<p>谢谢你的咨询。我们的资深顾问将在 1 个工作日内回复。</p><p>Cyano Intelligence · 澜屿智创</p>"
+      },
+      {
+        "line": 139,
+        "text": "<p>Thank you. A senior consultant will reply within one business day.</p><p>Cyano Intelligence</p>"
+      },
+      {
+        "line": 151,
+        "text": "Delivery failed"
+      },
+      {
+        "line": 160,
+        "text": "New Cyano inquiry:"
+      },
+      {
+        "line": 166,
+        "text": "Lead notification unavailable"
+      },
+      {
+        "line": 175,
+        "text": "发送暂时失败，请稍后重试。"
+      },
+      {
+        "line": 176,
+        "text": "Unable to send right now. Please try again later."
+      }
+    ]
+  }
+]

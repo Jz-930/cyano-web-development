@@ -1,0 +1,14 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import sharp from 'sharp';
+const root=path.resolve(import.meta.dirname,'..');
+const folder='C:/Users/jiack/.codex/generated_images/01a1cfd0-18b4-7ae0-97a9-58d0bc5c0906';
+const assets=[['team','exec-18d9ead7-967a-4f50-b224-325003400d14.png'],['portraits','exec-b0ab357e-b5e3-4e8b-9609-877e96591663.png']];
+for(const [name,file] of assets){await fs.copyFile(path.join(folder,file),path.join(root,'../assets/source',name+'-business-glasses.png'));await sharp(path.join(folder,file)).resize({width:name==='team'?1600:2172,withoutEnlargement:true}).webp({quality:84}).toFile(path.join(root,'public/art',name+'.webp'))}
+const logo=await sharp(path.join(root,'public/logo.png')).resize(100,100).png().toBuffer();
+const og=Buffer.from(`<svg width="1200" height="630"><rect width="1200" height="630" fill="#07191e"/><rect x="58" y="74" width="5" height="27" fill="#7ef5d6"/><text x="81" y="99" font-family="Arial" font-size="28" letter-spacing="6" fill="#d9eee6">CYANO INTELLIGENCE</text><text x="60" y="255" font-family="Arial" font-size="65" fill="#ffffff">Custom AI for</text><text x="60" y="345" font-family="Arial" font-size="65" fill="#7ef5d6">everyday work.</text><text x="65" y="510" font-family="Arial" font-size="22" fill="#8caeaa">Customer inquiries, proposals, knowledge and data queries.</text><line x1="65" x2="1135" y1="563" y2="563" stroke="#2c4b4c"/><text x="65" y="597" font-family="Arial" font-size="16" fill="#748f8b">CUSTOM DEVELOPMENT / PILOTS / MANAGED SERVICES</text></svg>`);
+await sharp(og).composite([{input:logo,left:1030,top:80}]).jpeg({quality:90}).toFile(path.join(root,'public/art/og.jpg'));
+await sharp(path.join(root,'public/logo.png')).resize(180,180).png().toFile(path.join(root,'public/apple-touch-icon.png'));
+const manifest={date:'2026-11-12',tool:'Built-in image_gen',direction:'Business-first; all four illustrated founders wear glasses; no geographical metaphors.',active:assets.map(([name,file])=>({id:name,source:'assets/source/'+name+'-business-glasses.png',original:file,output:'site/public/art/'+name+'.webp',seed:null,postProcess:'Lossy WebP compression; no creative edits outside image generation.',prompt:name==='team'?'Four illustrated founders with glasses discussing business documents, software dashboard and a workflow diagram; preserve identities, replace all maps and islands with office business materials.':'Four equal quarter-width illustrated founder portraits, all wearing clear glasses, plain mist paper-grain background; preserve identities and attire.'})),archived:['hero.png','technology.png','team.png'],caseScreenshots:{count:31,source:'https://cyano.app/media/',modifications:'None; display framing only'}};
+await fs.writeFile(path.join(root,'../assets/manifest.json'),JSON.stringify(manifest,null,2));
+console.log('Active business illustrations and OG saved.');

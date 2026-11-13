@@ -1,0 +1,10 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+const root=path.resolve(import.meta.dirname,'..');
+await fs.mkdir(path.join(root,'public/fonts'),{recursive:true});
+const ua='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
+for(const [name,family] of [['manrope','Manrope:wght@200..800'],['inter','Inter:wght@100..900']]){
+const css=await (await fetch('https://fonts.googleapis.com/css2?family='+family+'&display=swap',{headers:{'User-Agent':ua}})).text();const matches=[...css.matchAll(/url\((https:[^)]+)\)/g)];const url=matches.at(-1)?.[1];if(!url)throw new Error(css);await fs.writeFile(path.join(root,'public/fonts',name+'.woff2'),Buffer.from(await (await fetch(url)).arrayBuffer()));console.log(name+' downloaded');}
+let text='';async function walk(dir){for(const e of await fs.readdir(dir,{withFileTypes:true})){const p=path.join(dir,e.name);if(e.isDirectory())await walk(p);else if(/\.(tsx?|json)$/.test(e.name))text+=await fs.readFile(p,'utf8')}}await walk(path.join(root,'content'));await walk(path.join(root,'components'));await walk(path.join(root,'lib'));
+const glyphs=[...new Set(text.match(/[\u3000-\u9fff]/g)||[])].join('');
+let css=await (await fetch('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300..500&display=swap&text='+encodeURIComponent(glyphs),{headers:{'User-Agent':ua}})).text();const urls=[...new Set([...css.matchAll(/url\((https:[^)]+)\)/g)].map(m=>m[1]))];if(!urls.length)throw new Error(css);let bytes=0;await Promise.all(urls.map(async(url,i)=>{const data=Buffer.from(await (await fetch(url)).arrayBuffer());bytes+=data.length;await fs.writeFile(path.join(root,'public/fonts',`noto-sc-${i}.woff2`),data);css=css.replaceAll(url,`/fonts/noto-sc-${i}.woff2`)}));await fs.writeFile(path.join(root,'app/fonts.css'),css);await fs.writeFile(path.join(root,'public/fonts/subset.txt'),glyphs);console.log('Noto Sans SC '+glyphs.length+' glyphs; '+urls.length+' chunks; '+bytes+' bytes');

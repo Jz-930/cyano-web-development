@@ -1,0 +1,8 @@
+import fs from 'node:fs/promises';
+let s=await fs.readFile('components/interactive.tsx','utf8');
+s=s.replace("import {useState,useEffect,useRef,FormEvent} from 'react';","import {useState,useEffect,useRef,FormEvent} from 'react';\nimport queryDemo from '@/content/query-demo.json';");
+const old='<table className="demo-table"><thead><tr><th>{t(locale,\'区域\',\'Region\')}</th><th>{t(locale,\'销售额\',\'Sales\')}</th><th>{t(locale,\'环比\',\'MoM\')}</th></tr></thead><tbody>{(locale===\'zh\'?[\'华东\',\'华南\',\'华北\',\'华中\',\'西部\']:[\'East\',\'South\',\'North\',\'Central\',\'West\']).map((r,i)=><tr key={r}><td>{r}</td><td>¥{((i+2)*128400+(selected*21900)).toLocaleString()}</td><td>+{[12,8,15,6,11][(i+selected)%5]}%</td></tr>)}</tbody></table>';
+const replacement='<><table className="demo-table"><thead><tr>{queryDemo[selected].columns[locale].map(c=><th key={c}>{c}</th>)}</tr></thead><tbody>{queryDemo[selected].rows[locale].map((row,i)=><tr key={i}>{row.map((cell,j)=><td key={j}>{cell}</td>)}</tr>)}</tbody></table><details className="demo-sql"><summary>{t(locale,\'查看生成的只读查询\',\'View the generated read-only query\')}</summary><pre>{queryDemo[selected].sql}</pre></details></>';
+if(!s.includes(old))throw new Error('Demo replacement target missing');s=s.replace(old,replacement);
+await fs.writeFile('components/interactive.tsx',s);
+let api=await fs.readFile('app/api/contact/route.ts','utf8');api=api.replace('<p>${safe(data.inquiry)}</p><p>${safe(data.message)', '<p>Role: ${safe(data.role||\'—\')}</p><p>Phone / WeChat: ${safe(data.phone||\'—\')}</p><p>Preferred start: ${safe(data.start||\'—\')}</p><p>${safe(data.inquiry)}</p><p>${safe(data.message)');await fs.writeFile('app/api/contact/route.ts',api);

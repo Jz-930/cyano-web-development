@@ -1,0 +1,568 @@
+{
+  "D.1": {
+    "主导航": {
+      "zh": "解决方案 · 案例 · 方法与技术 · 合作方式 · 关于我们",
+      "en": "Solutions · Case Studies · Technology · How We Work · About"
+    },
+    "关于我们下拉": {
+      "zh": "团队与故事 · 洞察 · 联系我们",
+      "en": "Team & Story · Insights · Contact"
+    },
+    "主按钮": {
+      "zh": "预约业务诊断",
+      "en": "Book a diagnosis"
+    },
+    "解决方案下拉说明：销售": {
+      "zh": "销售与客户咨询 AI —— 让 AI 成为最懂产品的顾问",
+      "en": "Sales & Customer AI — your most knowledgeable advisor"
+    },
+    "解决方案下拉说明：文档": {
+      "zh": "文档、标书与方案自动化 —— 初稿最快 15 分钟",
+      "en": "Document & Proposal Automation — drafts in 15 minutes"
+    },
+    "解决方案下拉说明：知识库": {
+      "zh": "企业知识库与内部助手 —— 3 秒找到有出处的答案",
+      "en": "Knowledge Assistant — sourced answers in seconds"
+    },
+    "解决方案下拉说明：数据": {
+      "zh": "业务数据查询与分析 —— 用一句话查数",
+      "en": "Data Query & Analytics — ask your data in plain language"
+    },
+    "下拉末项": {
+      "zh": "查看全部解决方案 →",
+      "en": "All solutions →"
+    },
+    "页脚定位句": {
+      "zh": "企业 AI 工程团队：定制 AI 工具、AI 工作流与托管式 AI 服务。",
+      "en": "Enterprise AI engineering: custom AI tools, workflows and managed AI services."
+    },
+    "页脚服务地区": {
+      "zh": "服务中国与北美企业，支持全球远程交付",
+      "en": "Serving enterprises in China and North America, with remote delivery worldwide."
+    },
+    "页脚栏目标题": {
+      "zh": "解决方案 · 公司 · 联系",
+      "en": "Solutions · Company · Contact"
+    },
+    "页脚法律链接": {
+      "zh": "隐私政策 · 使用条款",
+      "en": "Privacy Policy · Terms of Use"
+    },
+    "收尾 CTA 口号": {
+      "zh": "先诊断，再交付，长期负责。",
+      "en": "Diagnose. Deliver. Sustain."
+    },
+    "收尾 CTA 副句": {
+      "zh": "从一次 30–45 分钟的业务沟通开始。",
+      "en": "It starts with a 30–45 minute conversation about your business."
+    },
+    "保密说明（案例）": {
+      "zh": "以下案例均来自 Cyano 为企业客户交付的定制项目。应客户保密要求，界面中的客户信息与数据已做脱敏处理；完整案例可在签署保密协议后，由我们的工程师现场演示。",
+      "en": "Every case below is a production system we built for an enterprise client. Client information and data in the screens have been anonymized to honor confidentiality agreements. Full walkthroughs are available under NDA."
+    },
+    "“客户项目”标签": {
+      "zh": "客户项目",
+      "en": "Client project"
+    },
+    "案例 CTA": {
+      "zh": "预约保密演示 · 索取完整案例集",
+      "en": "Book a confidential demo · Get the full case book"
+    },
+    "在线 Demo 按钮": {
+      "zh": "打开在线 Demo ↗",
+      "en": "Open live demo ↗"
+    },
+    "网页内 Demo 标签": {
+      "zh": "在线体验",
+      "en": "Try it live"
+    },
+    "画廊按钮": {
+      "zh": "查看全部界面",
+      "en": "View all screens"
+    },
+    "交互 Demo 说明小字": {
+      "zh": "已脱敏数据，交互流程与上线系统一致。",
+      "en": "Anonymized data. Same interaction flow as the production system."
+    },
+    "语言提示条": {
+      "zh": "This page is also available in English.",
+      "en": "本页面有中文版本。"
+    },
+    "技术页脚注": {
+      "zh": "* 基于 Cyano 内部基准测试。",
+      "en": "* Based on Cyano internal benchmarks."
+    }
+  },
+  "D.2": {
+    "Eyebrow": {
+      "zh": "企业 AI 工程团队",
+      "en": "ENTERPRISE AI ENGINEERING"
+    },
+    "主标题": {
+      "zh": "将企业知识，转化为可交付的 AI 生产力",
+      "en": "Turn your company's knowledge into AI that ships."
+    },
+    "副标题": {
+      "zh": "Cyano 为企业定制 AI 工具、AI 工作流与托管式 AI 服务。从业务诊断开始，交付能上线、能审计、能持续迭代的生产系统。",
+      "en": "Cyano builds custom AI tools, workflows and managed AI services for enterprises — starting with a business diagnosis and ending in production systems you can audit, maintain and grow."
+    },
+    "按钮": {
+      "zh": "预约业务诊断 · 查看案例",
+      "en": "Book a diagnosis · See our work"
+    },
+    "信任条数字 1": {
+      "zh": "6+ 年 —— 每位核心成员的最低开发经验",
+      "en": "6+ years — minimum engineering experience of every core member"
+    },
+    "信任条数字 2": {
+      "zh": "100% —— 核心成员拥有 AI 模型研发经验",
+      "en": "100% — of core members have hands-on AI model R&D experience"
+    },
+    "信任条数字 3": {
+      "zh": "100% —— 核心成员拥有世界 500 强企业工作经历",
+      "en": "100% — of core members have worked at Fortune Global 500 companies"
+    },
+    "信任条数字 4": {
+      "zh": "6 个 —— 已落地行业",
+      "en": "6 — industries with systems in production"
+    },
+    "行业名": {
+      "zh": "工程与制造 · 专业服务与投研 · 房地产与物业 · 零售与供应链 · 企业服务 · 内容与传媒",
+      "en": "Engineering & Manufacturing · Professional Services & Research · Real Estate & Property · Retail & Supply Chain · Enterprise Services · Content & Media"
+    },
+    "宣言句": {
+      "zh": "少谈 AI 概念，多交付能用的系统。",
+      "en": "Less talk about AI. More AI that works."
+    },
+    "宣言段 1": {
+      "zh": "Cyano 是一支由资深工程师组成的企业 AI 团队。每位核心成员都有 6 年以上开发经验、AI 模型研发经验和世界 500 强企业的工作经历。",
+      "en": "Cyano is an enterprise AI team of senior engineers. Every core member brings 6+ years of software development, hands-on AI model R&D and experience at Fortune Global 500 companies."
+    },
+    "宣言段 2": {
+      "zh": "我们相信，AI 的价值不在聊天窗口里，而在企业每天运转的流程里。所以我们从业务诊断开始，只交付能上线、能审计、能长期维护的系统。",
+      "en": "We believe AI creates value inside the workflows that run your business — not in a chat window. So we start with a diagnosis, and we only ship systems that go live, stay auditable and keep improving."
+    },
+    "解决方案区标题": {
+      "zh": "我们解决的四类问题",
+      "en": "Four problems we solve"
+    },
+    "精选案例标题": {
+      "zh": "真实交付，真实结果",
+      "en": "Real deployments. Real results."
+    },
+    "精选案例导语": {
+      "zh": "每个案例都是一套正在企业里运行的系统。",
+      "en": "Each case is a system running inside a real business today."
+    },
+    "痛点区标题": {
+      "zh": "为什么不能直接用 ChatGPT？",
+      "en": "Why not just use ChatGPT?"
+    },
+    "痛点 1": {
+      "zh": "知识孤岛 —— 核心数据散落在文档、数据库和员工经验里，通用 AI 拿不到，也用不好。→ Cyano 把企业知识接入、清洗、建立带权限的索引。",
+      "en": "Knowledge silos — your critical data lives in documents, databases and people's heads. Generic AI can't reach it. → Cyano connects, cleans and indexes your knowledge with permissions built in."
+    },
+    "痛点 2": {
+      "zh": "上下文受限 —— 信息喂不全就会产生幻觉，复杂任务越做越偏。→ Cyano Core 在有限窗口内只装入最相关的信息。",
+      "en": "Limited context — incomplete context breeds hallucinations and drift. → Cyano Core fits only the most relevant information into every request."
+    },
+    "痛点 3": {
+      "zh": "输出不可控 —— 同一个问题不同答案，企业不敢把它用在合同与财务流程上。→ 每个工作流都有校验规则、引用溯源和人工审核点。",
+      "en": "Unpredictable output — same question, different answers. Not acceptable for contracts or finance. → Every workflow has validation rules, citations and human checkpoints."
+    },
+    "痛点 4": {
+      "zh": "无法规模化 —— 靠个别员工的 Prompt 技巧只能救急，无法沉淀为组织能力。→ 我们把 SOP 固化为可复用、可审计的系统。",
+      "en": "No way to scale — individual prompting skills don't become company capability. → We turn your SOPs into reusable, auditable systems."
+    },
+    "痛点区链接": {
+      "zh": "了解 Cyano Core →",
+      "en": "Explore Cyano Core →"
+    },
+    "合作区标题": {
+      "zh": "三种合作方式，按你的节奏开始",
+      "en": "Three ways to work with us"
+    },
+    "合作区链接": {
+      "zh": "比较三种合作方式 →",
+      "en": "Compare engagement models →"
+    },
+    "团队区标题": {
+      "zh": "创始团队",
+      "en": "The founding team"
+    },
+    "团队区导语": {
+      "zh": "四位创始人，每一位都写过多年代码、做过 AI 模型，也在世界 500 强企业里交付过系统。",
+      "en": "Four founders. Every one has years of engineering, real AI model work, and delivery experience at Fortune Global 500 companies."
+    },
+    "团队区链接": {
+      "zh": "认识团队 →",
+      "en": "Meet the team →"
+    },
+    "Logo 墙标题（条件）": {
+      "zh": "合作与交流过的企业",
+      "en": "Organizations we've worked and engaged with"
+    },
+    "评价区标题（条件）": {
+      "zh": "客户怎么说",
+      "en": "What clients say"
+    },
+    "洞察区标题": {
+      "zh": "洞察 · 查看全部 →",
+      "en": "Insights · View all →"
+    }
+  },
+  "D.3": {
+    "总览 Hero 标题": {
+      "zh": "两类 AI 机会，四条落地路径",
+      "en": "Two kinds of AI opportunity. Four proven paths."
+    },
+    "总览 Hero 导语": {
+      "zh": "Cyano 不为用 AI 而用 AI。我们先判断这是一项新能力，还是一个降本增效的机会，再决定做成工具、工作流还是托管服务。",
+      "en": "We never use AI for its own sake. First we work out whether it's a new capability or an efficiency gain — then we decide whether it should be a tool, a workflow or a managed service."
+    },
+    "机会 1": {
+      "zh": "过去做不了，现在能做 —— AI 让个性化推荐、精准获客、客户画像和一客一稿的销售材料第一次可以规模化。标签：个性化找客户 · 精准定位客群 · 一客一稿 · 新增服务能力",
+      "en": "What wasn't possible before — AI makes personalization, precise targeting, customer profiling and one-to-one sales content possible at scale. Tags: Personalized prospecting · Precise targeting · One-to-one content · New service lines"
+    },
+    "机会 2": {
+      "zh": "已经在做，但成本太高 —— 把文档、审核、查询、客服、运营等重复流程变成 AI 工作流，减少人工、返工和等待。标签：文档自动化 · 合同与合规审查 · 内部知识问答 · 数据查询与运营",
+      "en": "What you already do, but at too high a cost — turn repetitive work in documents, review, search, support and operations into AI workflows. Tags: Document automation · Contract & compliance review · Internal Q&A · Data & operations"
+    },
+    "不在清单上？": {
+      "zh": "你的场景不在上面？我们同样承接垂直场景定制，例如房产管理与长篇内容创作。多数项目都从一次业务诊断开始。",
+      "en": "Don't see your use case? We also build for specialized domains such as property management and long-form content creation. Most projects start with a diagnosis."
+    },
+    "销售 Hero": {
+      "zh": "让 AI 成为最懂产品的销售顾问",
+      "en": "Your most knowledgeable sales advisor, available 24/7"
+    },
+    "文档 Hero": {
+      "zh": "标书与方案初稿，最快 15 分钟",
+      "en": "Proposal drafts in as little as 15 minutes"
+    },
+    "知识库 Hero": {
+      "zh": "让员工 3 秒内找到有出处的答案",
+      "en": "Sourced answers for every employee, in under 3 seconds"
+    },
+    "数据 Hero": {
+      "zh": "用一句话查数，不再排队等 IT",
+      "en": "Ask your data in plain language. No more waiting for IT."
+    },
+    "合作提示（T9）": {
+      "zh": "可以从低启动试点开始，2–6 周上线首个可用版本。",
+      "en": "Start with a low-cost pilot — first working version in 2–6 weeks."
+    }
+  },
+  "D.4": {
+    "Hero 标题": {
+      "zh": "先算清楚值不值得做，再决定怎么合作",
+      "en": "First, find out if it's worth building. Then decide how."
+    },
+    "Hero 导语": {
+      "zh": "每个行业、每条流程的 AI 机会都不一样。我们先研究你现在的工作方式，算清楚投入与回报，再推荐最合适的合作模式。",
+      "en": "Every industry and workflow is different. We study how you work today, size the return, and only then recommend how to engage."
+    },
+    "怎么选": {
+      "zh": "想沉淀长期能力，选完整定制；想先验证价值，从低启动试点开始；想马上释放团队人力，托管式服务最快见效。",
+      "en": "Want to own the capability long-term? Build it. Want to prove value first? Start with a pilot. Need capacity now? Managed service is the fastest route."
+    },
+    "SaaS 托管": {
+      "zh": "即刻接入，弹性扩展。隔离的云端环境，适合快速验证与轻量场景。",
+      "en": "Fast to start, elastic to scale. An isolated cloud environment for quick validation and lighter workloads."
+    },
+    "私有化部署": {
+      "zh": "数据不出你的环境，模型本地运行。完整的 Docker 交付与本地算力适配，满足数据主权与合规要求。",
+      "en": "Your data never leaves your environment. Models run on-premises with full Docker delivery and local compute support."
+    },
+    "应该完整定制，还是从试点开始？ / Full build or pilot first?": {
+      "zh": "目标明确、使用频率高，可以直接规划完整系统；场景还在探索，就先用低启动试点快速验证价值，用真实反馈决定下一步。",
+      "en": "If the goal is clear and usage is high, plan the full system. If you're still exploring, start with a pilot and let real results decide the next step."
+    },
+    "什么时候适合托管式 AI 服务？ / When does managed service make sense?": {
+      "zh": "当你更关心稳定产出，而不想自己组建团队维护系统时。Cyano 用 AI 工作流加人工审核，直接交付结果。",
+      "en": "When you care about reliable output more than running the system yourself. We combine AI workflows with human review and deliver the results."
+    },
+    "前期诊断会带来什么？ / What does the diagnosis give us?": {
+      "zh": "我们会梳理你的流程、数据来源和团队协作方式，找到 AI 最值得接入的位置，给出清晰、可执行的建设路径。",
+      "en": "A clear map of your workflow, data and team, the places where AI pays off most, and an actionable path to get there."
+    },
+    "如何获得适合自己的方案？ / How do we get a tailored proposal?": {
+      "zh": "联系我们后，我们会根据业务价值、技术复杂度、使用规模和上线节奏，给出贴合实际的建议与报价。",
+      "en": "Talk to us. We tailor the recommendation and quote to your business value, technical complexity, scale and timeline."
+    },
+    "数据安全如何保障？ / How is our data protected?": {
+      "zh": "支持私有化部署，数据不出你的环境；系统内置权限控制、全链路日志审计与敏感信息拦截。",
+      "en": "Private deployment keeps data inside your environment. Every system includes access control, full audit logs and sensitive-data filtering."
+    },
+    "上线之后谁来维护？ / Who maintains it after launch?": {
+      "zh": "三种合作模式都包含上线后的维护与迭代；托管式服务由 Cyano 全面负责。",
+      "en": "All three models include post-launch maintenance and iteration. With managed service, Cyano runs everything."
+    },
+    "如果效果不达预期怎么办？ / What if results fall short?": {
+      "zh": "我们先诊断、再试点。试点阶段双方共同定义验收标准，用真实数据看到效果后，再决定是否扩大投入。",
+      "en": "We diagnose first and pilot second. Acceptance criteria are agreed up front, and you decide whether to scale only after seeing real results."
+    }
+  },
+  "D.5": {
+    "列表 Hero 标题": {
+      "zh": "每一个案例，都是一套正在运行的系统",
+      "en": "Every case here is a system in production."
+    },
+    "汇总一行": {
+      "zh": "6 个落地案例 · 6 个行业 · 4 条解决方案线",
+      "en": "6 case studies · 6 industries · 4 solution areas"
+    },
+    "案例集标题": {
+      "zh": "索取完整案例集",
+      "en": "Get the full case book"
+    },
+    "案例集说明": {
+      "zh": "6 个案例的完整流程、界面与成果，中英文版本，填写后发送到你的邮箱。",
+      "en": "All six cases with workflows, interfaces and results, in English and Chinese — sent to your inbox."
+    },
+    "案例集按钮": {
+      "zh": "发送案例集",
+      "en": "Send me the case book"
+    },
+    "列表收尾": {
+      "zh": "想看和你行业最接近的案例？预约一次保密演示。",
+      "en": "Want to see the case closest to your industry? Book a confidential demo."
+    }
+  },
+  "D.6": {
+    "Hero 标题": {
+      "zh": "工程能力不是装饰，是稳定交付的底座",
+      "en": "Engineering isn't decoration. It's what makes delivery reliable."
+    },
+    "Hero 导语": {
+      "zh": "长上下文、知识召回、Agent 编排、成本与延迟、权限与部署 —— 这些决定了 AI 能不能真正进入业务。",
+      "en": "Long context, retrieval, agent orchestration, cost and latency, permissions and deployment — these decide whether AI actually makes it into your business."
+    },
+    "Cyano Core 定义": {
+      "zh": "Cyano Core 是我们在每个项目中使用的企业 AI 工程平台：把企业数据变成可检索的知识，把 SOP 变成可执行的工作流，并让每一次输出都可追溯、可审计。",
+      "en": "Cyano Core is the enterprise AI engineering platform behind every project we ship: it turns your data into searchable knowledge, your SOPs into executable workflows, and makes every output traceable and auditable."
+    },
+    "第 1 层": {
+      "zh": "知识摄入 —— 连接 PDF、数据库、API 等多源数据，建立带权限管理的动态索引。",
+      "en": "Ingestion — connects PDFs, databases and APIs into a permission-aware, continuously updated index."
+    },
+    "第 2 层": {
+      "zh": "上下文编排 —— 在有限的 Token 预算内，自动筛选并拼装最相关的信息。",
+      "en": "Context orchestration — selects and assembles only the most relevant information within the token budget."
+    },
+    "第 3 层": {
+      "zh": "任务执行 —— 把 SOP 固化为 Playbook，包含标准步骤、校验规则与兜底机制。",
+      "en": "Execution — encodes SOPs as playbooks with defined steps, validation rules and fallbacks."
+    },
+    "第 4 层": {
+      "zh": "企业级治理 —— 全链路日志审计、引用溯源、敏感信息拦截。",
+      "en": "Governance — end-to-end audit logs, source citations and sensitive-data filtering."
+    },
+    "难题 1": {
+      "zh": "成本失控 —— 对话越长，全量历史传输让 API 成本成倍上升。",
+      "en": "Cost explosion — as conversations grow, resending full history multiplies API cost."
+    },
+    "难题 2": {
+      "zh": "首字延迟 —— 上下文过载，让第一个字迟迟出不来，实时交互体验崩溃。",
+      "en": "Latency spikes — overloaded context delays the first token and breaks real-time interaction."
+    },
+    "难题 3": {
+      "zh": "中间迷失 —— 信息越多，模型越容易忽略中间的关键指令。",
+      "en": "Lost in the middle — more data makes models miss the instructions that matter."
+    },
+    "估值引擎标题": {
+      "zh": "智能上下文估值引擎：像操作系统管理内存一样，管理 Agent 的长期记忆。",
+      "en": "The context valuation engine: managing agent memory the way an OS manages RAM."
+    },
+    "指标 1": {
+      "zh": "< 200ms* —— 响应延迟，第 1 轮与第 100 轮一样快",
+      "en": "< 200ms* — response latency, as fast at turn 100 as at turn 1"
+    },
+    "指标 2": {
+      "zh": "100%* —— 核心指令召回",
+      "en": "100%* — recall of core instructions"
+    },
+    "指标 3": {
+      "zh": "最多 40%* —— Token 成本降低",
+      "en": "Up to 40%* — lower token cost"
+    },
+    "指标 4": {
+      "zh": "最高 10 倍* —— 投入回报",
+      "en": "Up to 10×* — return on investment"
+    },
+    "对比表标题": {
+      "zh": "从个人技巧，到系统能力",
+      "en": "From individual tricks to company capability"
+    },
+    "对比表行": {
+      "zh": "驱动核心：个人灵感与技巧 → 企业知识库 + SOP；稳定性：随机，难以复现 → 稳定、可审计、可复用；模型关系：绑定特定模型 → 模型无关；可迁移性：跟不上模型迭代 → 始终使用当下最合适的模型",
+      "en": "Driven by: individual skill → company knowledge + SOPs; Stability: random, hard to reproduce → consistent, auditable, reusable; Model dependency: tied to one model → model-agnostic; Portability: falls behind every model release → always on the best model available"
+    },
+    "兼容区标题": {
+      "zh": "支持的模型与系统",
+      "en": "Models and systems we support"
+    },
+    "安全区标题": {
+      "zh": "安全与治理",
+      "en": "Security & governance"
+    },
+    "收尾": {
+      "zh": "和我们的技术负责人聊聊你的数据与部署要求。",
+      "en": "Talk to our CTO about your data and deployment requirements."
+    }
+  },
+  "D.7": {
+    "使命句": {
+      "zh": "让企业的知识流动起来，变成每天都在创造价值的 AI 系统。",
+      "en": "We make company knowledge flow — into AI systems that create value every day."
+    },
+    "我们是谁 1": {
+      "zh": "Cyano（澜屿智创）是一支企业 AI 工程团队，服务中国与北美的企业客户。我们为企业定制 AI 工具、AI 工作流与托管式 AI 服务，专注于把 AI 用进销售、文档、知识管理和数据分析等核心业务流程。",
+      "en": "Cyano is an enterprise AI engineering team serving clients in China and North America. We build custom AI tools, workflows and managed AI services that put AI to work in sales, documents, knowledge management and analytics."
+    },
+    "我们是谁 2": {
+      "zh": "团队的每一位核心成员都有 6 年以上开发经验、AI 模型研发经验和世界 500 强企业的工作经历。我们既懂模型，也懂企业系统是怎样在真实环境里运转的。",
+      "en": "Every core member has 6+ years of engineering, hands-on AI model R&D, and experience at Fortune Global 500 companies. We understand models — and how enterprise systems actually run."
+    },
+    "名字的由来标题": {
+      "zh": "名字的由来",
+      "en": "Why “Cyano”"
+    },
+    "名字的由来正文": {
+      "zh": "Cyano 取自 cyan —— 青色，冷静、精确、清澈。我们的中文名“澜屿”，澜是流动的波澜，屿是海中的岛屿。企业的知识像一座座孤岛，散落在文档、系统和员工的经验里；我们做的，是让知识像波澜一样在岛屿之间流动起来，变成每天都能用上的能力。",
+      "en": "Cyano comes from cyan — calm, precise, clear. Our Chinese name, 澜屿 (Lán Yǔ), means “waves and islands.” Company knowledge sits on islands: in documents, in systems, in people's heads. Our job is to make it flow between them, like waves — and turn it into something your team uses every day."
+    },
+    "团队数字": {
+      "zh": "6+ 年：每位核心成员的最低开发经验 · 100%：核心成员拥有 AI 模型研发经验 · 100%：核心成员拥有世界 500 强企业工作经历 · 6 个：已落地行业",
+      "en": "6+ years: minimum engineering experience per core member · 100%: hands-on AI model R&D · 100%: Fortune Global 500 experience · 6: industries in production"
+    },
+    "创始团队标题": {
+      "zh": "创始团队",
+      "en": "The founding team"
+    },
+    "原则标题": {
+      "zh": "我们怎么工作",
+      "en": "How we work"
+    },
+    "原则 1": {
+      "zh": "先诊断，后开发 —— 不为用 AI 而用 AI，先算清楚值不值得做。",
+      "en": "Diagnose before we build — we never use AI for its own sake."
+    },
+    "原则 2": {
+      "zh": "对上线结果负责 —— 交付的不是演示，而是每天在用的系统。",
+      "en": "Own the outcome — we ship systems people use every day, not demos."
+    },
+    "原则 3": {
+      "zh": "用你自己的知识 —— AI 的答案来自你的资料，每一句都有出处。",
+      "en": "Your knowledge, cited — answers come from your own sources."
+    },
+    "原则 4": {
+      "zh": "长期合作，持续迭代 —— 模型在变，你的系统也会一直跟上。",
+      "en": "Built to last — as models evolve, your system keeps up."
+    }
+  },
+  "D.8": {
+    "Hero 标题": {
+      "zh": "联系我们，从业务问题开始",
+      "en": "Start with a business problem."
+    },
+    "Hero 导语": {
+      "zh": "不需要准备完整的需求文档。告诉我们你的业务场景、现在的成本和希望达到的结果，我们会判断下一步怎么走。",
+      "en": "No requirements document needed. Tell us about your workflow, what it costs today and what you want to achieve — we'll work out the next step."
+    },
+    "起点 1": {
+      "zh": "讨论业务问题 —— 还不确定该做工具、试点还是托管？先把目标、流程、数据和成本讲清楚。",
+      "en": "Discuss a business problem — not sure whether you need a tool, a pilot or a managed service? Start with your goals, workflow, data and costs."
+    },
+    "起点 2": {
+      "zh": "查看案例 —— 想先看看和你行业接近的项目？我们可以安排一次保密演示。",
+      "en": "See relevant work — want to see projects close to your industry first? We'll arrange a confidential demo."
+    },
+    "起点 3": {
+      "zh": "确认技术与部署 —— 数据接入、权限、私有化部署、模型选择和后续维护，都可以先聊。",
+      "en": "Check technical fit — data access, permissions, private deployment, model choice and maintenance."
+    },
+    "表单字段": {
+      "zh": "姓名 · 公司 · 职位 · 工作邮箱 · 电话或微信 · 咨询类型 · 业务场景描述 · 期望启动时间",
+      "en": "Name · Company · Job title · Work email · Phone or WeChat · Inquiry type · Describe your use case · Preferred start"
+    },
+    "咨询类型选项": {
+      "zh": "我想定制 AI 工具 · 我想低成本启动试点 · 我想把任务交给 Cyano 托管 · 我想预约保密案例演示 · 我还不确定，想先评估",
+      "en": "Build a custom AI tool · Start a low-cost pilot · Hand work to a managed service · Book a confidential case demo · Not sure yet — help me evaluate"
+    },
+    "期望启动时间选项": {
+      "zh": "1 个月内 · 1–3 个月 · 3 个月以后 · 还不确定",
+      "en": "Within 1 month · 1–3 months · Later than 3 months · Not sure yet"
+    },
+    "描述框提示": {
+      "zh": "例如：我们每月要写 20 份投标方案，每份需要 2 天，希望缩短时间并减少参数错误。",
+      "en": "e.g. We write about 20 proposals a month and each takes two days. We want to cut the time and reduce errors."
+    },
+    "隐私同意": {
+      "zh": "我已阅读并同意《隐私政策》",
+      "en": "I agree to the Privacy Policy"
+    },
+    "提交按钮": {
+      "zh": "提交咨询",
+      "en": "Send inquiry"
+    },
+    "提交成功": {
+      "zh": "已收到，谢谢你。我们会在 1 个工作日内回复，确认邮件已发送到你填写的邮箱。",
+      "en": "Thanks — we've got it. We'll reply within one business day, and a confirmation is on its way to your inbox."
+    },
+    "谁会回复你": {
+      "zh": "你的咨询会由我们的资深顾问亲自阅读和回复。",
+      "en": "A senior consultant will read and answer your inquiry personally."
+    },
+    "接下来 1": {
+      "zh": "1 个工作日内回复，约一次 30–45 分钟的沟通。",
+      "en": "We reply within one business day to set up a 30–45 minute call."
+    },
+    "接下来 2": {
+      "zh": "一周内给出诊断结论和建议的合作方式。",
+      "en": "Within a week, you get a diagnosis and a recommended engagement model."
+    },
+    "接下来 3": {
+      "zh": "你决定是否推进，我们给出范围与报价。",
+      "en": "You decide whether to proceed; we provide scope and a quote."
+    }
+  },
+  "D.9": {
+    "标题": {
+      "zh": "这座岛还不在地图上。",
+      "en": "This island isn't on the map yet."
+    },
+    "正文": {
+      "zh": "你要找的页面不存在或已经移动。",
+      "en": "The page you're looking for doesn't exist or has moved."
+    },
+    "按钮": {
+      "zh": "返回首页 · 查看案例",
+      "en": "Back to home · See our work"
+    },
+    "版本": {
+      "zh": "日期",
+      "en": "变更内容"
+    },
+    "v1.0": {
+      "zh": "2026-11-12",
+      "en": "初版：研究报告与重建方案"
+    },
+    "v1.1": {
+      "zh": "2026-11-12",
+      "en": "宣传尺度表；双市场；团队插画形象；案例保密呈现方案"
+    },
+    "v2.0": {
+      "zh": "2026-11-12",
+      "en": "全文改为可直接执行的确定方案：新增项目事实表与可选数据输入机制（删除全部待决策事项与占位登记）；新增美术资产生产章节（风格块、4 位创始人角色设定、全部生图 Prompt、代码绘制资产规范、后期与评分）；新增定稿文案库（中英）；Gate 改为执行者可独立完成的自动检查 + 独立评审 Agent 评审；新增上线文字扫描规则，防止任何内部说明进入网站"
+    },
+    "v2.1": {
+      "zh": "2026-11-12",
+      "en": "取消虚构演示公司：案例统一以“某企业 + 行业”呈现，界面中不出现任何企业名称（§6.4 改为脱敏数据规则，新增系统功能标识 §8.7.4），去掉画面中的“Demo”水印"
+    },
+    "v2.2": {
+      "zh": "2026-11-12",
+      "en": "案例全部使用真实素材：现站 31 张截图全部进入案例画廊（按原路径保留），3 个在线 Demo 全部保留并加构建检查与监控（§6.8、§6.9）；系统名称沿用现站名称；不再用代码重绘案例界面；新增零死链规则（R12、§6.9）"
+    }
+  }
+}

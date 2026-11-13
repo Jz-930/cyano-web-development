@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-12",
+  "tool": "Built-in image_gen",
+  "direction": "Business-first; all four illustrated founders wear glasses; no geographical metaphors.",
+  "active": [
+    {
+      "id": "team",
+      "source": "assets/source/team-business-glasses.png",
+      "original": "exec-18d9ead7-967a-4f50-b224-325003400d14.png",
+      "output": "site/public/art/team.webp",
+      "seed": null,
+      "postProcess": "Lossy WebP compression; no creative edits outside image generation.",
+      "prompt": "Four illustrated founders with glasses discussing business documents, software dashboard and a workflow diagram; preserve identities, replace all maps and islands with office business materials."
+    },
+    {
+      "id": "portraits",
+      "source": "assets/source/portraits-business-glasses.png",
+      "original": "exec-b0ab357e-b5e3-4e8b-9609-877e96591663.png",
+      "output": "site/public/art/portraits.webp",
+      "seed": null,
+      "postProcess": "Lossy WebP compression; no creative edits outside image generation.",
+      "prompt": "Four equal quarter-width illustrated founder portraits, all wearing clear glasses, plain mist paper-grain background; preserve identities and attire."
+    }
+  ],
+  "archived": [
+    "hero.png",
+    "technology.png",
+    "team.png"
+  ],
+  "caseScreenshots": {
+    "count": 31,
+    "source": "https://cyano.app/media/",
+    "modifications": "None; display framing only"
+  }
+}

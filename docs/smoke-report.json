@@ -1,0 +1,264 @@
+{
+  "date": "2026-11-12",
+  "pages": [
+    {
+      "path": "/",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/services",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/services",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/services/sales-ai",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/services/sales-ai",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/services/document-automation",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/services/document-automation",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/services/knowledge-assistant",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/services/knowledge-assistant",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/services/data-query",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/services/data-query",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/cases",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/cases",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/cases/sales-consultant-ai",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/cases/sales-consultant-ai",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/cases/proposal-generation",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/cases/proposal-generation",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/cases/it-knowledge-assistant",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/cases/it-knowledge-assistant",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/cases/nl-data-query",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/cases/nl-data-query",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/cases/property-management",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/cases/property-management",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/cases/writing-memory-engine",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/cases/writing-memory-engine",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/technology",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/technology",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/engagement",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/engagement",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/about",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/insights",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/insights",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/insights/why-chatgpt-is-not-a-knowledge-base",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/insights/why-chatgpt-is-not-a-knowledge-base",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/insights/proposal-draft-in-15-minutes",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/insights/proposal-draft-in-15-minutes",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/insights/buy-pilot-or-managed",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/insights/buy-pilot-or-managed",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/contact",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/contact",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/privacy",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/privacy",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/terms",
+      "status": 200,
+      "h1": 1
+    },
+    {
+      "path": "/en/terms",
+      "status": 200,
+      "h1": 1
+    }
+  ],
+  "refsChecked": 96,
+  "api": [
+    {
+      "name": "null",
+      "status": 400,
+      "expected": 400,
+      "error": "Invalid request."
+    },
+    {
+      "name": "empty",
+      "status": 400,
+      "expected": 400,
+      "error": "请检查必填项、邮箱格式及业务描述（至少 10 个字符）。"
+    },
+    {
+      "name": "cross-origin",
+      "status": 403,
+      "expected": 403,
+      "error": "Request origin not allowed."
+    },
+    {
+      "name": "unconfigured-delivery",
+      "status": 503,
+      "expected": 503,
+      "error": "咨询发送暂未开通，请稍后再试。你的信息尚未发送。"
+    }
+  ],
+  "notFoundStatus": 404,
+  "failures": []
+}

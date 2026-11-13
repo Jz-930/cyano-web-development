@@ -1,0 +1,554 @@
+[
+  [
+    "预约业务诊断",
+    "预约项目咨询"
+  ],
+  [
+    "Book a diagnosis",
+    "Discuss your project"
+  ],
+  [
+    "团队与故事 · 洞察 · 联系我们",
+    "团队介绍 · 洞察 · 联系我们"
+  ],
+  [
+    "Team & Story · Insights · Contact",
+    "Team · Insights · Contact"
+  ],
+  [
+    "销售与客户咨询 AI —— 让 AI 成为最懂产品的顾问",
+    "销售与客户咨询 AI —— 根据产品资料回答客户问题"
+  ],
+  [
+    "Sales & Customer AI — your most knowledgeable advisor",
+    "Sales & Customer AI — answers based on your product documentation"
+  ],
+  [
+    "先诊断，再交付，长期负责。",
+    "聊聊你希望改进的工作流程"
+  ],
+  [
+    "Diagnose. Deliver. Sustain.",
+    "Tell us about your workflow"
+  ],
+  [
+    "从一次 30–45 分钟的业务沟通开始。",
+    "预约一次 30–45 分钟的沟通，讨论现有流程、资料和项目目标。"
+  ],
+  [
+    "It starts with a 30–45 minute conversation about your business.",
+    "Book a 30–45 minute call to discuss your process, source material and project goals."
+  ],
+  [
+    "以下案例均来自 Cyano 为企业客户交付的定制项目。应客户保密要求，界面中的客户信息与数据已做脱敏处理；完整案例可在签署保密协议后，由我们的工程师现场演示。",
+    "这些案例来自 Cyano 为企业客户交付的项目。界面中的客户信息与数据已按保密要求脱敏。签署保密协议后，可由工程师演示完整系统。"
+  ],
+  [
+    "Every case below is a production system we built for an enterprise client. Client information and data in the screens have been anonymized to honor confidentiality agreements. Full walkthroughs are available under NDA.",
+    "These projects were built for enterprise clients. Client information and data in the screenshots have been anonymized. An engineer can demonstrate the full system under NDA."
+  ],
+  [
+    "已脱敏数据，交互流程与上线系统一致。",
+    "本页使用预设问题和脱敏示例展示操作流程，不连接客户数据。"
+  ],
+  [
+    "Anonymized data. Same interaction flow as the production system.",
+    "This walkthrough uses preset questions and anonymized examples. It does not connect to client data."
+  ],
+  [
+    "将企业知识，转化为可交付的 AI 生产力",
+    "为企业开发日常工作用得上的 AI"
+  ],
+  [
+    "Turn your company's knowledge into AI that ships.",
+    "Custom AI for your everyday work"
+  ],
+  [
+    "Cyano 为企业定制 AI 工具、AI 工作流与托管式 AI 服务。从业务诊断开始，交付能上线、能审计、能持续迭代的生产系统。",
+    "我们为企业开发销售问答、标书生成、内部知识库和数据查询系统，也提供托管式 AI 服务。项目包括需求评估、开发部署和上线后的维护。"
+  ],
+  [
+    "Cyano builds custom AI tools, workflows and managed AI services for enterprises — starting with a business diagnosis and ending in production systems you can audit, maintain and grow.",
+    "We build AI systems for customer inquiries, proposal drafting, internal knowledge and data queries. We also offer managed AI services, with support from initial assessment through deployment and maintenance."
+  ],
+  [
+    "预约业务诊断 · 查看案例",
+    "预约项目咨询 · 查看案例"
+  ],
+  [
+    "Book a diagnosis · See our work",
+    "Discuss your project · See our work"
+  ],
+  [
+    "少谈 AI 概念，多交付能用的系统。",
+    "熟悉模型研发，也做过企业系统。"
+  ],
+  [
+    "Less talk about AI. More AI that works.",
+    "Experience in AI models and enterprise software."
+  ],
+  [
+    "Cyano 是一支由资深工程师组成的企业 AI 团队。每位核心成员都有 6 年以上开发经验、AI 模型研发经验和世界 500 强企业的工作经历。",
+    "Cyano 的核心成员均有 6 年以上软件开发经验，参与过 AI 模型研发，并曾在世界 500 强企业工作。"
+  ],
+  [
+    "Cyano is an enterprise AI team of senior engineers. Every core member brings 6+ years of software development, hands-on AI model R&D and experience at Fortune Global 500 companies.",
+    "Every core member of Cyano has more than six years of software development experience, has worked on AI model R&D and has worked at a Fortune Global 500 company."
+  ],
+  [
+    "我们相信，AI 的价值不在聊天窗口里，而在企业每天运转的流程里。所以我们从业务诊断开始，只交付能上线、能审计、能长期维护的系统。",
+    "我们先了解一项工作现在如何完成、资料存在哪里、结果由谁审核，再设计系统。上线后继续维护知识库、处理使用反馈，并按业务变化调整流程。"
+  ],
+  [
+    "We believe AI creates value inside the workflows that run your business — not in a chat window. So we start with a diagnosis, and we only ship systems that go live, stay auditable and keep improving.",
+    "We first examine how a task is done, where its source material is stored and who reviews the result. After launch, we maintain the knowledge base, address user feedback and update workflows as the business changes."
+  ],
+  [
+    "真实交付，真实结果",
+    "已交付的客户项目"
+  ],
+  [
+    "Real deployments. Real results.",
+    "Client projects"
+  ],
+  [
+    "每个案例都是一套正在企业里运行的系统。",
+    "查看系统界面、使用流程和上线后的变化。"
+  ],
+  [
+    "Each case is a system running inside a real business today.",
+    "See the interfaces, workflows and results of systems in use."
+  ],
+  [
+    "为什么不能直接用 ChatGPT？",
+    "企业使用 AI，需要处理哪些问题？"
+  ],
+  [
+    "Why not just use ChatGPT?",
+    "What does AI need to work in a business?"
+  ],
+  [
+    "知识孤岛 —— 核心数据散落在文档、数据库和员工经验里，通用 AI 拿不到，也用不好。→ Cyano 把企业知识接入、清洗、建立带权限的索引。",
+    "资料分散 —— 产品资料、业务记录和操作经验分布在不同文档与系统中。→ 接入并整理资料，建立按权限检索的索引。"
+  ],
+  [
+    "Knowledge silos — your critical data lives in documents, databases and people's heads. Generic AI can't reach it. → Cyano connects, cleans and indexes your knowledge with permissions built in.",
+    "Scattered sources — product information, business records and procedures live in different documents and systems. → Connect and organize these sources for retrieval with access controls."
+  ],
+  [
+    "上下文受限 —— 信息喂不全就会产生幻觉，复杂任务越做越偏。→ Cyano Core 在有限窗口内只装入最相关的信息。",
+    "信息取舍 —— 一次请求能容纳的信息有限，过多无关资料也会干扰回答。→ Cyano Core 根据当前任务选择相关资料与上下文。"
+  ],
+  [
+    "Limited context — incomplete context breeds hallucinations and drift. → Cyano Core fits only the most relevant information into every request.",
+    "Context selection — each request has a size limit, and irrelevant material can distract from the question. → Cyano Core selects sources and context for the current task."
+  ],
+  [
+    "输出不可控 —— 同一个问题不同答案，企业不敢把它用在合同与财务流程上。→ 每个工作流都有校验规则、引用溯源和人工审核点。",
+    "结果核查 —— 生成内容可能有误，合同和财务等工作需要明确的审核程序。→ 在流程中加入规则校验、来源引用和人工审核。"
+  ],
+  [
+    "Unpredictable output — same question, different answers. Not acceptable for contracts or finance. → Every workflow has validation rules, citations and human checkpoints.",
+    "Review requirements — generated content can be wrong, and work involving contracts or finances needs review. → Add validation rules, source citations and human approval to the workflow."
+  ],
+  [
+    "无法规模化 —— 靠个别员工的 Prompt 技巧只能救急，无法沉淀为组织能力。→ 我们把 SOP 固化为可复用、可审计的系统。",
+    "团队使用 —— 员工各自编写提示词，处理方法和结果难以统一。→ 按企业 SOP 设置操作步骤，保留执行记录，供团队重复使用。"
+  ],
+  [
+    "No way to scale — individual prompting skills don't become company capability. → We turn your SOPs into reusable, auditable systems.",
+    "Team use — individually written prompts can produce inconsistent processes and results. → Define shared steps from your SOPs and retain execution records."
+  ],
+  [
+    "三种合作方式，按你的节奏开始",
+    "定制开发、试点或托管服务"
+  ],
+  [
+    "Three ways to work with us",
+    "Custom development, pilots and managed services"
+  ],
+  [
+    "四位创始人，每一位都写过多年代码、做过 AI 模型，也在世界 500 强企业里交付过系统。",
+    "四位创始人分别负责客户合作、技术架构、工程交付和产品设计。"
+  ],
+  [
+    "Four founders. Every one has years of engineering, real AI model work, and delivery experience at Fortune Global 500 companies.",
+    "Our four founders lead client partnerships, technical architecture, engineering delivery and product design."
+  ],
+  [
+    "两类 AI 机会，四条落地路径",
+    "销售、文档、知识库与数据查询"
+  ],
+  [
+    "Two kinds of AI opportunity. Four proven paths.",
+    "AI for sales, documents, knowledge and data"
+  ],
+  [
+    "Cyano 不为用 AI 而用 AI。我们先判断这是一项新能力，还是一个降本增效的机会，再决定做成工具、工作流还是托管服务。",
+    "我们根据工作频率、资料条件和审核要求，评估哪些环节适合使用 AI。你可以选择定制系统、先做一个试点，或委托我们持续处理任务。"
+  ],
+  [
+    "We never use AI for its own sake. First we work out whether it's a new capability or an efficiency gain — then we decide whether it should be a tool, a workflow or a managed service.",
+    "We assess where AI can help by looking at task frequency, available sources and review requirements. We can build a system, start with a pilot or handle recurring work as a managed service."
+  ],
+  [
+    "过去做不了，现在能做 —— AI 让个性化推荐、精准获客、客户画像和一客一稿的销售材料第一次可以规模化。标签：个性化找客户 · 精准定位客群 · 一客一稿 · 新增服务能力",
+    "扩展客户服务 —— 根据产品资料与客户需求，提供个性化推荐、客户分析和销售材料。标签：客户筛选 · 客群分析 · 个性化销售材料 · 新增服务能力"
+  ],
+  [
+    "What wasn't possible before — AI makes personalization, precise targeting, customer profiling and one-to-one sales content possible at scale. Tags: Personalized prospecting · Precise targeting · One-to-one content · New service lines",
+    "Expand customer services — use product information and customer needs to prepare recommendations, profiles and sales materials. Tags: Prospect selection · Customer analysis · Personalized sales materials · New services"
+  ],
+  [
+    "已经在做，但成本太高 —— 把文档、审核、查询、客服、运营等重复流程变成 AI 工作流，减少人工、返工和等待。标签：文档自动化 · 合同与合规审查 · 内部知识问答 · 数据查询与运营",
+    "减少重复处理 —— 将文档整理、审核、查询和客服等重复步骤接入 AI 工作流，减少手工操作与等待。标签：文档自动化 · 合同与合规审查 · 内部知识问答 · 数据查询与运营"
+  ],
+  [
+    "What you already do, but at too high a cost — turn repetitive work in documents, review, search, support and operations into AI workflows. Tags: Document automation · Contract & compliance review · Internal Q&A · Data & operations",
+    "Reduce repetitive work — use AI workflows for recurring steps in document preparation, review, queries and support. Tags: Document automation · Contract & compliance review · Internal Q&A · Data & operations"
+  ],
+  [
+    "你的场景不在上面？我们同样承接垂直场景定制，例如房产管理与长篇内容创作。多数项目都从一次业务诊断开始。",
+    "我们也承接房产管理、长篇内容创作等行业定制项目。可以结合现有工作样本，讨论适合你的方案。"
+  ],
+  [
+    "Don't see your use case? We also build for specialized domains such as property management and long-form content creation. Most projects start with a diagnosis.",
+    "We also build systems for property management, long-form writing and other specialized work. Bring a sample of your current work so we can discuss a suitable approach."
+  ],
+  [
+    "让 AI 成为最懂产品的销售顾问",
+    "根据产品资料，回答客户问题"
+  ],
+  [
+    "Your most knowledgeable sales advisor, available 24/7",
+    "Answer customer questions using your product knowledge"
+  ],
+  [
+    "让员工 3 秒内找到有出处的答案",
+    "查询内部资料，回答附带出处"
+  ],
+  [
+    "Sourced answers for every employee, in under 3 seconds",
+    "Find internal information with source citations"
+  ],
+  [
+    "用一句话查数，不再排队等 IT",
+    "直接提问，查询库存和销量"
+  ],
+  [
+    "Ask your data in plain language. No more waiting for IT.",
+    "Query inventory and sales in plain language"
+  ],
+  [
+    "可以从低启动试点开始，2–6 周上线首个可用版本。",
+    "试点通常在 2–6 周内交付首个可用版本，具体周期取决于范围与数据接入条件。"
+  ],
+  [
+    "Start with a low-cost pilot — first working version in 2–6 weeks.",
+    "A pilot typically delivers a first working version in 2–6 weeks, depending on scope and data access."
+  ],
+  [
+    "先算清楚值不值得做，再决定怎么合作",
+    "选择适合当前项目的合作方式"
+  ],
+  [
+    "First, find out if it's worth building. Then decide how.",
+    "Choose how to work with us"
+  ],
+  [
+    "每个行业、每条流程的 AI 机会都不一样。我们先研究你现在的工作方式，算清楚投入与回报，再推荐最合适的合作模式。",
+    "先评估现有流程的成本、使用频率和预期收益，再确定开发范围与合作方式。三种模式的交付内容和维护责任如下。"
+  ],
+  [
+    "Every industry and workflow is different. We study how you work today, size the return, and only then recommend how to engage.",
+    "We assess current costs, usage and expected benefits before agreeing on scope. The three options below differ in what you receive and who operates the system."
+  ],
+  [
+    "想沉淀长期能力，选完整定制；想先验证价值，从低启动试点开始；想马上释放团队人力，托管式服务最快见效。",
+    "需要长期使用自有系统，可以选择定制开发；还不确定效果，可以先做试点；希望委托我们按批次完成工作，可以选择托管服务。"
+  ],
+  [
+    "Want to own the capability long-term? Build it. Want to prove value first? Start with a pilot. Need capacity now? Managed service is the fastest route.",
+    "Choose a custom build for a system your team will own and use regularly, a pilot to test an uncertain use case, or a managed service for work you want us to deliver in batches."
+  ],
+  [
+    "即刻接入，弹性扩展。隔离的云端环境，适合快速验证与轻量场景。",
+    "在隔离的云端环境中使用系统，按使用量扩展资源，适合试点和较轻的工作负载。"
+  ],
+  [
+    "Fast to start, elastic to scale. An isolated cloud environment for quick validation and lighter workloads.",
+    "Use the system in an isolated cloud environment, with resources scaled to usage. Suitable for pilots and lighter workloads."
+  ],
+  [
+    "数据不出你的环境，模型本地运行。完整的 Docker 交付与本地算力适配，满足数据主权与合规要求。",
+    "模型与数据在你的环境中运行。交付 Docker 部署配置，并适配本地算力；部署要求在项目开始前确认。"
+  ],
+  [
+    "Your data never leaves your environment. Models run on-premises with full Docker delivery and local compute support.",
+    "Run models and data inside your environment. We provide Docker deployment configurations and adapt them to local compute, with requirements agreed before the project starts."
+  ],
+  [
+    "我们会梳理你的流程、数据来源和团队协作方式，找到 AI 最值得接入的位置，给出清晰、可执行的建设路径。",
+    "我们会梳理操作步骤、数据来源和参与人员，估算改造成本与预期收益，给出建议范围和实施顺序。"
+  ],
+  [
+    "A clear map of your workflow, data and team, the places where AI pays off most, and an actionable path to get there.",
+    "We review the process, data sources and people involved, estimate costs and benefits, and recommend a scope and implementation sequence."
+  ],
+  [
+    "三种合作模式都包含上线后的维护与迭代；托管式服务由 Cyano 全面负责。",
+    "三种模式都包含上线后的维护。定制开发和试点的维护、迭代范围在合作时约定；托管服务的运行与交付由 Cyano 负责。"
+  ],
+  [
+    "All three models include post-launch maintenance and iteration. With managed service, Cyano runs everything.",
+    "All three options include maintenance. The scope of support and further development is agreed for builds and pilots; Cyano operates and delivers the managed service."
+  ],
+  [
+    "我们先诊断、再试点。试点阶段双方共同定义验收标准，用真实数据看到效果后，再决定是否扩大投入。",
+    "试点开始前，双方约定验收标准。根据实际结果判断需要补充资料、调整流程还是停止试点，再决定是否扩大投入。"
+  ],
+  [
+    "We diagnose first and pilot second. Acceptance criteria are agreed up front, and you decide whether to scale only after seeing real results.",
+    "Agree on acceptance criteria before the pilot. Use the results to decide whether to improve the sources, change the workflow or stop before investing further."
+  ],
+  [
+    "每一个案例，都是一套正在运行的系统",
+    "六个客户项目的界面与成果"
+  ],
+  [
+    "Every case here is a system in production.",
+    "Six client projects: systems and results"
+  ],
+  [
+    "6 个落地案例 · 6 个行业 · 4 条解决方案线",
+    "6 个客户项目 · 覆盖 6 个行业"
+  ],
+  [
+    "6 case studies · 6 industries · 4 solution areas",
+    "6 client projects across 6 industries"
+  ],
+  [
+    "6 个案例的完整流程、界面与成果，中英文版本，填写后发送到你的邮箱。",
+    "六个案例的流程、界面与成果整理为中英文资料，可通过邮箱索取。"
+  ],
+  [
+    "All six cases with workflows, interfaces and results, in English and Chinese — sent to your inbox.",
+    "Request workflows, screenshots and results for all six projects by email, in English or Chinese."
+  ],
+  [
+    "想看和你行业最接近的案例？预约一次保密演示。",
+    "需要了解与你的业务相近的项目，可以预约工程师演示。"
+  ],
+  [
+    "Want to see the case closest to your industry? Book a confidential demo.",
+    "Book an engineer-led demo of a project relevant to your business."
+  ],
+  [
+    "工程能力不是装饰，是稳定交付的底座",
+    "我们如何开发和维护企业 AI 系统"
+  ],
+  [
+    "Engineering isn't decoration. It's what makes delivery reliable.",
+    "How we build and maintain enterprise AI"
+  ],
+  [
+    "长上下文、知识召回、Agent 编排、成本与延迟、权限与部署 —— 这些决定了 AI 能不能真正进入业务。",
+    "这里介绍资料检索、上下文管理和任务编排的处理方法，以及成本、响应速度、权限和部署的设计。"
+  ],
+  [
+    "Long context, retrieval, agent orchestration, cost and latency, permissions and deployment — these decide whether AI actually makes it into your business.",
+    "Our approach covers retrieval, context management and task orchestration, along with cost, response time, access controls and deployment."
+  ],
+  [
+    "Cyano Core 是我们在每个项目中使用的企业 AI 工程平台：把企业数据变成可检索的知识，把 SOP 变成可执行的工作流，并让每一次输出都可追溯、可审计。",
+    "Cyano Core 是我们用于项目开发的工程平台。它索引企业资料、按 SOP 执行任务，并记录输出所用的依据和处理步骤，供业务人员复核。"
+  ],
+  [
+    "Cyano Core is the enterprise AI engineering platform behind every project we ship: it turns your data into searchable knowledge, your SOPs into executable workflows, and makes every output traceable and auditable.",
+    "Cyano Core is the engineering platform we use in our projects. It indexes company sources, runs tasks according to SOPs and records the evidence and steps behind outputs for review."
+  ],
+  [
+    "任务执行 —— 把 SOP 固化为 Playbook，包含标准步骤、校验规则与兜底机制。",
+    "任务执行 —— 将 SOP 配置为 Playbook，定义操作步骤、校验规则和异常处理方式。"
+  ],
+  [
+    "Execution — encodes SOPs as playbooks with defined steps, validation rules and fallbacks.",
+    "Execution — configure SOPs as playbooks with defined steps, validation rules and exception handling."
+  ],
+  [
+    "企业级治理 —— 全链路日志审计、引用溯源、敏感信息拦截。",
+    "权限与审计 —— 记录处理日志、保留来源引用，并过滤敏感信息。"
+  ],
+  [
+    "Governance — end-to-end audit logs, source citations and sensitive-data filtering.",
+    "Access and audit — record processing logs, retain source citations and filter sensitive information."
+  ],
+  [
+    "成本失控 —— 对话越长，全量历史传输让 API 成本成倍上升。",
+    "调用成本 —— 每次发送完整历史记录，会使长对话的 API 费用持续增加。"
+  ],
+  [
+    "Cost explosion — as conversations grow, resending full history multiplies API cost.",
+    "API costs — resending the full history increases costs as a conversation grows."
+  ],
+  [
+    "首字延迟 —— 上下文过载，让第一个字迟迟出不来，实时交互体验崩溃。",
+    "响应等待 —— 输入内容越长，模型开始返回文字前的处理时间可能越久。"
+  ],
+  [
+    "Latency spikes — overloaded context delays the first token and breaks real-time interaction.",
+    "Response time — longer inputs can increase the wait before the model begins responding."
+  ],
+  [
+    "中间迷失 —— 信息越多，模型越容易忽略中间的关键指令。",
+    "指令遗漏 —— 资料过多时，模型可能忽略夹在中间的重要指令。"
+  ],
+  [
+    "Lost in the middle — more data makes models miss the instructions that matter.",
+    "Missed instructions — a model may overlook important instructions within a large body of material."
+  ],
+  [
+    "智能上下文估值引擎：像操作系统管理内存一样，管理 Agent 的长期记忆。",
+    "根据任务选择上下文，控制长对话的成本与延迟。"
+  ],
+  [
+    "The context valuation engine: managing agent memory the way an OS manages RAM.",
+    "Select context for each task to control cost and latency in long conversations."
+  ],
+  [
+    "从个人技巧，到系统能力",
+    "统一管理知识、流程与模型接入"
+  ],
+  [
+    "From individual tricks to company capability",
+    "Manage knowledge, workflows and model access"
+  ],
+  [
+    "驱动核心：个人灵感与技巧 → 企业知识库 + SOP；稳定性：随机，难以复现 → 稳定、可审计、可复用；模型关系：绑定特定模型 → 模型无关；可迁移性：跟不上模型迭代 → 始终使用当下最合适的模型",
+    "知识来源：员工手动提供 → 按权限检索企业知识库；执行过程：手动编写提示词 → 按 SOP 执行并记录步骤；模型接入：分别调用 → 通过统一接口接入；模型更换：逐项调整 → 保留知识与流程，测试新模型后切换"
+  ],
+  [
+    "Driven by: individual skill → company knowledge + SOPs; Stability: random, hard to reproduce → consistent, auditable, reusable; Model dependency: tied to one model → model-agnostic; Portability: falls behind every model release → always on the best model available",
+    "Sources: manually supplied → retrieved from authorized company knowledge; Execution: manually written prompts → recorded SOP steps; Model access: separate calls → a shared interface; Model changes: individual adjustments → retain knowledge and workflows, test before switching"
+  ],
+  [
+    "让企业的知识流动起来，变成每天都在创造价值的 AI 系统。",
+    "为企业开发和维护 AI 工具"
+  ],
+  [
+    "We make company knowledge flow — into AI systems that create value every day.",
+    "Building and maintaining AI tools for businesses"
+  ],
+  [
+    "团队的每一位核心成员都有 6 年以上开发经验、AI 模型研发经验和世界 500 强企业的工作经历。我们既懂模型，也懂企业系统是怎样在真实环境里运转的。",
+    "每位核心成员都有 6 年以上开发经验，参与过 AI 模型研发，并曾在世界 500 强企业工作。团队共同负责项目的需求分析、开发和上线维护。"
+  ],
+  [
+    "Every core member has 6+ years of engineering, hands-on AI model R&D, and experience at Fortune Global 500 companies. We understand models — and how enterprise systems actually run.",
+    "Every core member has more than six years of development experience, has worked on AI model R&D and has worked at a Fortune Global 500 company. The team handles requirements, development and post-launch maintenance."
+  ],
+  [
+    "名字的由来",
+    "服务范围"
+  ],
+  [
+    "Why “Cyano”",
+    "Our services"
+  ],
+  [
+    "Cyano 取自 cyan —— 青色，冷静、精确、清澈。我们的中文名“澜屿”，澜是流动的波澜，屿是海中的岛屿。企业的知识像一座座孤岛，散落在文档、系统和员工的经验里；我们做的，是让知识像波澜一样在岛屿之间流动起来，变成每天都能用上的能力。",
+    "Cyano（澜屿智创）提供企业 AI 定制开发、试点与托管服务。我们根据企业的资料和流程设计系统，并负责约定范围内的上线维护。"
+  ],
+  [
+    "Cyano comes from cyan — calm, precise, clear. Our Chinese name, 澜屿 (Lán Yǔ), means “waves and islands.” Company knowledge sits on islands: in documents, in systems, in people's heads. Our job is to make it flow between them, like waves — and turn it into something your team uses every day.",
+    "Cyano provides custom enterprise AI development, pilots and managed services. We design systems around company sources and workflows, and maintain them within the agreed service scope."
+  ],
+  [
+    "先诊断，后开发 —— 不为用 AI 而用 AI，先算清楚值不值得做。",
+    "评估投入与收益 —— 开发前核对工作量、资料条件和预期改善，确定是否值得投入。"
+  ],
+  [
+    "Diagnose before we build — we never use AI for its own sake.",
+    "Assess costs and benefits — review workload, source quality and expected improvements before committing to development."
+  ],
+  [
+    "对上线结果负责 —— 交付的不是演示，而是每天在用的系统。",
+    "约定验收标准 —— 在项目开始前明确系统要完成的任务、审核方式与上线条件。"
+  ],
+  [
+    "Own the outcome — we ship systems people use every day, not demos.",
+    "Agree on acceptance criteria — define the tasks, review process and launch requirements before development."
+  ],
+  [
+    "用你自己的知识 —— AI 的答案来自你的资料，每一句都有出处。",
+    "保留回答依据 —— 使用企业提供的资料，并将关键结论与来源关联，方便核查。"
+  ],
+  [
+    "Your knowledge, cited — answers come from your own sources.",
+    "Keep source references — use company material and link key statements to their sources for review."
+  ],
+  [
+    "长期合作，持续迭代 —— 模型在变，你的系统也会一直跟上。",
+    "安排后续维护 —— 根据资料、业务规则和模型变化更新系统，持续处理使用反馈。"
+  ],
+  [
+    "Built to last — as models evolve, your system keeps up.",
+    "Plan for maintenance — update the system as sources, business rules and models change, and address user feedback."
+  ],
+  [
+    "联系我们，从业务问题开始",
+    "联系我们，讨论你的项目"
+  ],
+  [
+    "Start with a business problem.",
+    "Contact us about your project"
+  ],
+  [
+    "不需要准备完整的需求文档。告诉我们你的业务场景、现在的成本和希望达到的结果，我们会判断下一步怎么走。",
+    "告诉我们目前如何完成这项工作、需要多少时间，以及希望改进什么。有现成的工作样本即可开始讨论，不必先写完整的需求文档。"
+  ],
+  [
+    "No requirements document needed. Tell us about your workflow, what it costs today and what you want to achieve — we'll work out the next step.",
+    "Tell us how you do the work today, how long it takes and what you want to improve. A work sample is enough to begin; a full requirements document can come later."
+  ],
+  [
+    "讨论业务问题 —— 还不确定该做工具、试点还是托管？先把目标、流程、数据和成本讲清楚。",
+    "评估业务需求 —— 一起梳理目标、操作步骤、数据条件和成本，判断适合定制、试点还是托管。"
+  ],
+  [
+    "Discuss a business problem — not sure whether you need a tool, a pilot or a managed service? Start with your goals, workflow, data and costs.",
+    "Assess your needs — review goals, process, data and costs to choose between a custom build, pilot or managed service."
+  ],
+  [
+    "查看案例 —— 想先看看和你行业接近的项目？我们可以安排一次保密演示。",
+    "了解已有项目 —— 可安排与你业务相近的案例演示，完整系统演示需签署保密协议。"
+  ],
+  [
+    "See relevant work — want to see projects close to your industry first? We'll arrange a confidential demo.",
+    "See related projects — arrange a demo relevant to your business. Full system walkthroughs require an NDA."
+  ],
+  [
+    "已收到，谢谢你。我们会在 1 个工作日内回复，确认邮件已发送到你填写的邮箱。",
+    "咨询已收到，确认邮件已发送到你填写的邮箱。我们会在 1 个工作日内回复。"
+  ],
+  [
+    "Thanks — we've got it. We'll reply within one business day, and a confirmation is on its way to your inbox.",
+    "Your inquiry has been received and a confirmation email has been sent. We will reply within one business day."
+  ],
+  [
+    "你的咨询会由我们的资深顾问亲自阅读和回复。",
+    "资深顾问会阅读你的描述，并与你确认资料、时间和项目需求。"
+  ],
+  [
+    "A senior consultant will read and answer your inquiry personally.",
+    "A senior consultant will review your inquiry and follow up about source material, timing and project requirements."
+  ],
+  [
+    "这座岛还不在地图上。",
+    "没有找到这个页面"
+  ],
+  [
+    "This island isn't on the map yet.",
+    "Page not found"
+  ]
+]

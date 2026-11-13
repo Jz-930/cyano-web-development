@@ -1,0 +1,16 @@
+<svg width="960" height="620" viewBox="0 0 960 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="620" rx="34" fill="#030708"/>
+  <path d="M120 150H840M120 260H840M120 370H840M120 480H840" stroke="#7EF5D6" stroke-opacity=".12"/>
+  <rect x="150" y="104" width="660" height="74" rx="20" fill="#071416" stroke="#7EF5D6" stroke-opacity=".28"/>
+  <rect x="150" y="214" width="660" height="74" rx="20" fill="#0B121B" stroke="#5D8DFF" stroke-opacity=".3"/>
+  <rect x="150" y="324" width="660" height="74" rx="20" fill="#101711" stroke="#FFCF5C" stroke-opacity=".32"/>
+  <rect x="150" y="434" width="660" height="74" rx="20" fill="#130E10" stroke="#FF6B6B" stroke-opacity=".28"/>
+  <text x="198" y="151" fill="#D6FFFA" fill-opacity=".82" font-family="Arial, sans-serif" font-size="24" font-weight="700">Context Valuation Engine</text>
+  <text x="198" y="261" fill="#D6FFFA" fill-opacity=".82" font-family="Arial, sans-serif" font-size="24" font-weight="700">Memory Compression Pipeline</text>
+  <text x="198" y="371" fill="#D6FFFA" fill-opacity=".82" font-family="Arial, sans-serif" font-size="24" font-weight="700">Agent Routing Layer</text>
+  <text x="198" y="481" fill="#D6FFFA" fill-opacity=".82" font-family="Arial, sans-serif" font-size="24" font-weight="700">Deployment Guardrails</text>
+  <circle cx="760" cy="141" r="18" fill="#7EF5D6" fill-opacity=".26" stroke="#7EF5D6"/>
+  <circle cx="760" cy="251" r="18" fill="#5D8DFF" fill-opacity=".26" stroke="#5D8DFF"/>
+  <circle cx="760" cy="361" r="18" fill="#FFCF5C" fill-opacity=".26" stroke="#FFCF5C"/>
+  <circle cx="760" cy="471" r="18" fill="#FF6B6B" fill-opacity=".26" stroke="#FF6B6B"/>
+</svg>

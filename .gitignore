@@ -1,0 +1,14 @@
+# Dependencies & build outputs
+node_modules/
+site/node_modules/
+site/.next/
+site/out/
+site/*.tsbuildinfo
+.env
+.env.*
+!.env.example
+site/.env
+site/.env.*
+!site/.env.example
+.DS_Store
+Thumbs.db

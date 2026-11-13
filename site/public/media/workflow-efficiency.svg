@@ -1,0 +1,28 @@
+<svg width="960" height="620" viewBox="0 0 960 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="620">
+      <stop stop-color="#07161A"/>
+      <stop offset="1" stop-color="#020506"/>
+    </linearGradient>
+    <radialGradient id="blue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(706 164) rotate(133) scale(430 320)">
+      <stop stop-color="#5D8DFF" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#5D8DFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="620" rx="34" fill="url(#bg)"/>
+  <rect width="960" height="620" rx="34" fill="url(#blue)"/>
+  <rect x="90" y="114" width="210" height="120" rx="22" fill="#0B1A1D" stroke="#7EF5D6" stroke-opacity=".22"/>
+  <rect x="374" y="114" width="210" height="120" rx="22" fill="#0B1A1D" stroke="#FFCF5C" stroke-opacity=".34"/>
+  <rect x="658" y="114" width="210" height="120" rx="22" fill="#0B1A1D" stroke="#5D8DFF" stroke-opacity=".4"/>
+  <rect x="232" y="300" width="210" height="120" rx="22" fill="#0B1A1D" stroke="#FF6B6B" stroke-opacity=".34"/>
+  <rect x="516" y="300" width="210" height="120" rx="22" fill="#0B1A1D" stroke="#7EF5D6" stroke-opacity=".28"/>
+  <path d="M300 174H374M584 174H658M479 234L337 300M479 234L621 300" stroke="#D6FFFA" stroke-opacity=".22" stroke-width="3"/>
+  <text x="136" y="184" fill="#D6FFFA" fill-opacity=".86" font-family="Arial, sans-serif" font-size="24" font-weight="700">Input</text>
+  <text x="414" y="184" fill="#D6FFFA" fill-opacity=".86" font-family="Arial, sans-serif" font-size="24" font-weight="700">Review</text>
+  <text x="706" y="184" fill="#D6FFFA" fill-opacity=".86" font-family="Arial, sans-serif" font-size="24" font-weight="700">Output</text>
+  <text x="278" y="370" fill="#D6FFFA" fill-opacity=".86" font-family="Arial, sans-serif" font-size="24" font-weight="700">Agent</text>
+  <text x="560" y="370" fill="#D6FFFA" fill-opacity=".86" font-family="Arial, sans-serif" font-size="24" font-weight="700">Ops Loop</text>
+  <rect x="164" y="486" width="632" height="24" rx="12" fill="#11272B"/>
+  <rect x="164" y="486" width="438" height="24" rx="12" fill="#7EF5D6"/>
+  <text x="246" y="552" fill="#D6FFFA" fill-opacity=".72" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">EFFICIENCY PIPELINE</text>
+</svg>

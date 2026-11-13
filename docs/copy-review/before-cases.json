@@ -1,0 +1,225 @@
+[
+  {
+    "slug": "sales-consultant-ai",
+    "title": "让每一次客户咨询，都有资深顾问级的回答",
+    "system": "LNPE 智能工程顾问",
+    "solution": "销售与客户咨询 AI",
+    "model": "完整定制开发",
+    "duration": "8 周",
+    "profile": "某粉体工程装备企业，产品线复杂、技术参数多",
+    "stats": [
+      {
+        "value": "7×24",
+        "label": "在线专业咨询",
+        "sourceId": "case-sales-consultant-ai"
+      },
+      {
+        "value": "秒级",
+        "label": "产品资料与历史项目检索",
+        "sourceId": "case-sales-consultant-ai"
+      },
+      {
+        "value": "一客一稿",
+        "label": "个性化销售材料",
+        "sourceId": "case-sales-consultant-ai"
+      }
+    ],
+    "beforeAfter": "过去：客户问题要等工程师回复，销售现场查资料慢 → 现在：AI 基于真实产品资料与项目记录即时回答，并为每位客户生成专属材料",
+    "outcome": "上线后，该企业的线上咨询实现 7×24 小时专业应答，销售在客户现场即可秒级调取产品资料、相似项目与报价参考。",
+    "images": [
+      "/media/lnpe-sales-ai/lnpe-sales-consultant-01-public-assistant.webp",
+      "/media/lnpe-sales-ai/lnpe-sales-consultant-02-access-portal.webp",
+      "/media/lnpe-sales-ai/lnpe-sales-consultant-03-project-match.webp",
+      "/media/lnpe-sales-ai/lnpe-sales-consultant-04-price-reference.webp"
+    ],
+    "main": 2,
+    "demo": "https://lnpe-2026.vercel.app/"
+  },
+  {
+    "slug": "proposal-generation",
+    "title": "把方案初稿从两天缩短到 15 分钟",
+    "system": "智能标书与方案生成",
+    "solution": "文档、标书与方案自动化",
+    "model": "完整定制开发",
+    "duration": "10 周",
+    "profile": "某专业咨询与投研机构，方案与报告撰写量大、论证要求高",
+    "stats": [
+      {
+        "value": "15 分钟",
+        "label": "生成方案初稿",
+        "sourceId": "case-proposal-generation"
+      },
+      {
+        "value": "99%",
+        "label": "引用准确率",
+        "sourceId": "case-proposal-generation"
+      },
+      {
+        "value": "7 项",
+        "label": "完整性自动检查",
+        "sourceId": "case-proposal-generation"
+      }
+    ],
+    "beforeAfter": "过去：2 天撰写 + 反复核对资料 → 现在：15 分钟生成初稿，AI 自动完成完整性检查，人工只需复核",
+    "outcome": "上线后，该机构的撰写团队把主要精力从整理资料转向打磨核心论证，方案初稿 15 分钟内即可生成。",
+    "images": [
+      "/media/huisheng-proposal-ai/huisheng-proposal-ai-01-workflow-draft.webp",
+      "/media/huisheng-proposal-ai/huisheng-proposal-ai-02-start-draft.webp"
+    ],
+    "main": 0,
+    "demo": "https://research-bp-writing.vercel.app/"
+  },
+  {
+    "slug": "it-knowledge-assistant",
+    "title": "80% 的常见工单，由 AI 在 3 秒内答完",
+    "system": "Enterprise Wiki 智能 IT 助手",
+    "solution": "企业知识库与内部助手",
+    "model": "低启动试点 + 持续服务",
+    "duration": "试点 4 周，全面上线 8 周",
+    "profile": "某大型企业 IT 部门，内部员工规模大、工单量高",
+    "stats": [
+      {
+        "value": "80%",
+        "label": "常见工单自动拦截",
+        "sourceId": "case-it-knowledge-assistant"
+      },
+      {
+        "value": "< 3s",
+        "label": "平均响应时间",
+        "sourceId": "case-it-knowledge-assistant"
+      },
+      {
+        "value": "7×24",
+        "label": "全天候在线",
+        "sourceId": "case-it-knowledge-assistant"
+      }
+    ],
+    "beforeAfter": "过去：员工排队等 IT 回复，同一问题反复解答 → 现在：3 秒内获得带出处的答案，复杂问题自动转人工",
+    "outcome": "上线后，该企业 IT 团队 80% 的常见咨询由 AI 自动处理，团队得以把时间投入到更有价值的系统建设上。",
+    "images": [
+      "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-01-dashboard.webp",
+      "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-02-articles.webp",
+      "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-03-article-detail.webp",
+      "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-04-ticket-detail.webp",
+      "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-05-analytics.webp"
+    ],
+    "main": 0,
+    "demo": null
+  },
+  {
+    "slug": "nl-data-query",
+    "title": "业务人员用一句话查数，不再排队等 IT 导数",
+    "system": "SmartDoc AI 数据查询",
+    "solution": "业务数据查询与分析",
+    "model": "低启动试点 + 持续服务",
+    "duration": "6 周",
+    "profile": "某零售与供应链企业，SKU 多、库存与销量数据量大",
+    "stats": [
+      {
+        "value": "0 行",
+        "label": "SQL 编写",
+        "sourceId": "case-nl-data-query"
+      },
+      {
+        "value": "秒级",
+        "label": "查询结果返回",
+        "sourceId": "case-nl-data-query"
+      },
+      {
+        "value": "自然语言",
+        "label": "直接问库存与销量",
+        "sourceId": "case-nl-data-query"
+      }
+    ],
+    "beforeAfter": "过去：提需求给 IT，等待一天甚至更久 → 现在：业务人员直接提问，秒级拿到表格与图表",
+    "outcome": "上线后，该企业的业务人员可以用自然语言直接查询库存与销量数据，常规查数不再依赖 IT 部门。",
+    "images": [
+      "/media/smartdoc-ui-suite/smartdoc-ui-suite-01-dashboard-overview.webp",
+      "/media/smartdoc-ui-suite/smartdoc-ui-suite-02-sql-control-center.webp",
+      "/media/smartdoc-ui-suite/smartdoc-ui-suite-03-knowledge-base.webp",
+      "/media/smartdoc-ui-suite/smartdoc-ui-suite-04-proposal-builder.webp",
+      "/media/smartdoc-ui-suite/smartdoc-ui-suite-05-review-audit.webp",
+      "/media/smartdoc-ui-suite/smartdoc-ui-suite-06-template-library.webp"
+    ],
+    "main": 1,
+    "demo": null
+  },
+  {
+    "slug": "property-management",
+    "title": "沟通与账单自动归集，让每套房产的收益一目了然",
+    "system": "AlphaHouse 房东记账与管理工具",
+    "solution": "垂直场景定制",
+    "model": "完整定制开发",
+    "duration": "8 周",
+    "profile": "某房产管理与租赁运营方，管理多套出租物业",
+    "stats": [
+      {
+        "value": "自动",
+        "label": "账单明细生成",
+        "sourceId": "case-property-management"
+      },
+      {
+        "value": "多渠道",
+        "label": "沟通与费用统一归集",
+        "sourceId": "case-property-management"
+      },
+      {
+        "value": "一目了然",
+        "label": "单套房产投资表现",
+        "sourceId": "case-property-management"
+      }
+    ],
+    "beforeAfter": "过去：沟通记录、费用往来散落在不同渠道，账目靠手工整理 → 现在：AI 自动提取租赁、维修与管理费用，生成账单与物业表现报告",
+    "outcome": "上线后，该运营方的房产账目由 AI 从日常沟通中自动归集，屋主可以随时查看每套房产的收支与投资表现。",
+    "images": [
+      "/media/alpha-house-ai/alpha-house-01-login.webp",
+      "/media/alpha-house-ai/alpha-house-02-messages.webp",
+      "/media/alpha-house-ai/alpha-house-03-work-order-chat.webp",
+      "/media/alpha-house-ai/alpha-house-04-finance.webp",
+      "/media/alpha-house-ai/alpha-house-05-contacts.webp",
+      "/media/alpha-house-ai/alpha-house-06-reports.webp"
+    ],
+    "main": 3,
+    "demo": "https://alphahouse-demo.vercel.app/"
+  },
+  {
+    "slug": "writing-memory-engine",
+    "title": "让 AI 记住百万字长篇里的每一条设定",
+    "system": "DME 写作引擎",
+    "solution": "垂直场景定制",
+    "model": "完整定制开发",
+    "duration": "10 周",
+    "profile": "某内容创作团队，长期创作长篇小说与剧本",
+    "stats": [
+      {
+        "value": "百万字级",
+        "label": "长篇设定管理",
+        "sourceId": "case-writing-memory-engine"
+      },
+      {
+        "value": "多分支",
+        "label": "剧情分支精准切换",
+        "sourceId": "case-writing-memory-engine"
+      },
+      {
+        "value": "多模型",
+        "label": "兼容主流模型并支持私有模型部署",
+        "sourceId": "case-writing-memory-engine"
+      }
+    ],
+    "beforeAfter": "过去：长篇创作中 AI 混淆人物设定与剧情分支 → 现在：可控记忆层按需调用设定与上下文，分支之间互不干扰",
+    "outcome": "上线后，该团队在长篇创作中可以精确管理人物设定与剧情分支，AI 输出与既有设定保持一致。",
+    "images": [
+      "/media/dme-writing-engine/dme-writing-engine-00-startup-loading.webp",
+      "/media/dme-writing-engine/dme-writing-engine-01-chat-branch-switch.webp",
+      "/media/dme-writing-engine/dme-writing-engine-02-chat-memory-drawer.webp",
+      "/media/dme-writing-engine/dme-writing-engine-03-context-memory-stats.webp",
+      "/media/dme-writing-engine/dme-writing-engine-04-note-editor-ai-panel.webp",
+      "/media/dme-writing-engine/dme-writing-engine-05-fragments-library-bulk.webp",
+      "/media/dme-writing-engine/dme-writing-engine-06-archive-pack-inspect.webp",
+      "/media/dme-writing-engine/dme-writing-engine-07-connections-settings.webp"
+    ],
+    "main": 1,
+    "demo": null
+  }
+]

@@ -1,0 +1,19 @@
+<svg width="960" height="620" viewBox="0 0 960 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="620" rx="34" fill="#030708"/>
+  <path d="M94 310H866" stroke="#7EF5D6" stroke-opacity=".22" stroke-width="4"/>
+  <path d="M94 310H478" stroke="#7EF5D6" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="146" cy="310" r="46" fill="#071719" stroke="#7EF5D6" stroke-opacity=".48" stroke-width="2"/>
+  <circle cx="322" cy="310" r="46" fill="#101711" stroke="#FFCF5C" stroke-opacity=".48" stroke-width="2"/>
+  <circle cx="498" cy="310" r="46" fill="#130E10" stroke="#FF6B6B" stroke-opacity=".44" stroke-width="2"/>
+  <circle cx="674" cy="310" r="46" fill="#071719" stroke="#7EF5D6" stroke-opacity=".28" stroke-width="2"/>
+  <circle cx="850" cy="310" r="46" fill="#0A121B" stroke="#5D8DFF" stroke-opacity=".4" stroke-width="2"/>
+  <text x="132" y="319" fill="#D6FFFA" font-family="Arial, sans-serif" font-size="24" font-weight="700">01</text>
+  <text x="308" y="319" fill="#D6FFFA" font-family="Arial, sans-serif" font-size="24" font-weight="700">02</text>
+  <text x="484" y="319" fill="#D6FFFA" font-family="Arial, sans-serif" font-size="24" font-weight="700">03</text>
+  <text x="660" y="319" fill="#D6FFFA" fill-opacity=".68" font-family="Arial, sans-serif" font-size="24" font-weight="700">04</text>
+  <text x="836" y="319" fill="#D6FFFA" fill-opacity=".68" font-family="Arial, sans-serif" font-size="24" font-weight="700">05</text>
+  <rect x="116" y="128" width="728" height="72" rx="20" fill="#071416" stroke="#7EF5D6" stroke-opacity=".16"/>
+  <rect x="188" y="436" width="584" height="58" rx="20" fill="#071416" stroke="#5D8DFF" stroke-opacity=".18"/>
+  <text x="268" y="172" fill="#D6FFFA" fill-opacity=".72" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="5">DIAGNOSE - VALUE - SCOPE</text>
+  <text x="286" y="474" fill="#D6FFFA" fill-opacity=".72" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="5">DELIVER - OPERATE - ITERATE</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg width="960" height="620" viewBox="0 0 960 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="620" rx="34" fill="#040809"/>
+  <path d="M82 174H878M82 310H878M82 446H878" stroke="#7EF5D6" stroke-opacity=".11"/>
+  <path d="M250 94V526M480 94V526M710 94V526" stroke="#7EF5D6" stroke-opacity=".09"/>
+  <rect x="112" y="140" width="220" height="340" rx="30" fill="#081719" stroke="#7EF5D6" stroke-opacity=".3"/>
+  <rect x="370" y="100" width="220" height="420" rx="30" fill="#101711" stroke="#FFCF5C" stroke-opacity=".38"/>
+  <rect x="628" y="140" width="220" height="340" rx="30" fill="#0A121B" stroke="#5D8DFF" stroke-opacity=".38"/>
+  <circle cx="222" cy="226" r="42" fill="#7EF5D6" fill-opacity=".18" stroke="#7EF5D6" stroke-opacity=".5"/>
+  <circle cx="480" cy="220" r="42" fill="#FFCF5C" fill-opacity=".18" stroke="#FFCF5C" stroke-opacity=".5"/>
+  <circle cx="738" cy="226" r="42" fill="#5D8DFF" fill-opacity=".18" stroke="#5D8DFF" stroke-opacity=".5"/>
+  <text x="178" y="338" fill="#D6FFFA" fill-opacity=".82" font-family="Arial, sans-serif" font-size="22" font-weight="700">Custom</text>
+  <text x="420" y="338" fill="#D6FFFA" fill-opacity=".82" font-family="Arial, sans-serif" font-size="22" font-weight="700">Pilot</text>
+  <text x="690" y="338" fill="#D6FFFA" fill-opacity=".82" font-family="Arial, sans-serif" font-size="22" font-weight="700">Managed</text>
+  <rect x="154" y="382" width="136" height="12" rx="6" fill="#7EF5D6" fill-opacity=".72"/>
+  <rect x="412" y="382" width="136" height="12" rx="6" fill="#FFCF5C" fill-opacity=".72"/>
+  <rect x="670" y="382" width="136" height="12" rx="6" fill="#5D8DFF" fill-opacity=".72"/>
+  <text x="276" y="560" fill="#D6FFFA" fill-opacity=".68" font-family="Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="5">SERVICE MODEL SELECTOR</text>
+</svg>

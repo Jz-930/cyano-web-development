@@ -1,0 +1,8 @@
+{
+  "email": true,
+  "demos": {
+    "proposal-generation": true,
+    "property-management": true,
+    "sales-consultant-ai": true
+  }
+}

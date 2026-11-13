@@ -1,0 +1,32 @@
+zh-home-m: / width=780 cssHeight=10693 tiles=13
+en-home-m: /en width=780 cssHeight=11336 tiles=14
+
+# Corrected phone tiles (true 390px viewport, 2x). The earlier *-m-* tiles were invalid and removed.
+zh-home-mobile: / viewport=390 scrollWidth=390 cssHeight=10388 tiles=13
+en-home-mobile: /en viewport=390 scrollWidth=390 cssHeight=11079 tiles=14
+en-case-proposal-mobile: /en/cases/proposal-generation viewport=390 scrollWidth=390 cssHeight=5536 tiles=7
+en-technology-mobile: /en/technology viewport=390 scrollWidth=390 cssHeight=4914 tiles=6
+en-engagement-mobile: /en/engagement viewport=390 scrollWidth=390 cssHeight=5751 tiles=7
+zh-about-mobile: /about viewport=390 scrollWidth=390 cssHeight=5163 tiles=7
+en-contact-mobile: /en/contact viewport=390 scrollWidth=390 cssHeight=3527 tiles=5
+zh-case-proposal-mobile: /cases/proposal-generation viewport=390 scrollWidth=390 cssHeight=5077 tiles=6
+
+# Corrected phone tiles (true 390px viewport, 2x). The earlier *-m-* tiles were invalid and removed.
+zh-home-mobile: / viewport=390 scrollWidth=390 cssHeight=10388 tiles=13
+en-home-mobile: /en viewport=390 scrollWidth=390 cssHeight=11079 tiles=14
+en-case-proposal-mobile: /en/cases/proposal-generation viewport=390 scrollWidth=390 cssHeight=5536 tiles=7
+en-technology-mobile: /en/technology viewport=390 scrollWidth=390 cssHeight=4914 tiles=6
+en-engagement-mobile: /en/engagement viewport=390 scrollWidth=390 cssHeight=5751 tiles=7
+zh-about-mobile: /about viewport=390 scrollWidth=390 cssHeight=5163 tiles=7
+en-contact-mobile: /en/contact viewport=390 scrollWidth=390 cssHeight=3527 tiles=5
+zh-case-proposal-mobile: /cases/proposal-generation viewport=390 scrollWidth=390 cssHeight=5077 tiles=6
+
+# Corrected phone tiles (true 390px viewport, 2x). The earlier *-m-* tiles were invalid and removed.
+zh-home-mobile: / viewport=390 scrollWidth=390 cssHeight=10388 tiles=13
+en-home-mobile: /en viewport=390 scrollWidth=390 cssHeight=11079 tiles=14
+en-case-proposal-mobile: /en/cases/proposal-generation viewport=390 scrollWidth=390 cssHeight=5536 tiles=7
+en-technology-mobile: /en/technology viewport=390 scrollWidth=390 cssHeight=4914 tiles=6
+en-engagement-mobile: /en/engagement viewport=390 scrollWidth=390 cssHeight=5751 tiles=7
+zh-about-mobile: /about viewport=390 scrollWidth=390 cssHeight=5163 tiles=7
+en-contact-mobile: /en/contact viewport=390 scrollWidth=390 cssHeight=3527 tiles=5
+zh-case-proposal-mobile: /cases/proposal-generation viewport=390 scrollWidth=390 cssHeight=5077 tiles=6

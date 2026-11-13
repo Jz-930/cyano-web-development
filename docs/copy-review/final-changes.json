@@ -1,0 +1,152 @@
+[
+  {
+    "file": "content/copy.json",
+    "before": "目标明确、使用频率高，可以直接规划完整系统；场景还在探索，就先用低启动试点快速验证价值，用真实反馈决定下一步。",
+    "after": "需求明确且使用频繁时，可以规划完整系统。对效果或使用量还没有把握时，先用小范围试点测试，再决定是否扩展。"
+  },
+  {
+    "file": "content/copy.json",
+    "before": "If the goal is clear and usage is high, plan the full system. If you're still exploring, start with a pilot and let real results decide the next step.",
+    "after": "A full build suits clear requirements and frequent use. If results or likely usage remain uncertain, test a smaller scope in a pilot before expanding."
+  },
+  {
+    "file": "content/copy.json",
+    "before": "当你更关心稳定产出，而不想自己组建团队维护系统时。Cyano 用 AI 工作流加人工审核，直接交付结果。",
+    "after": "适合希望按批次委托工作、暂不准备自行维护系统的团队。客户提供资料与标准，Cyano 运行 AI 工作流并审核结果。"
+  },
+  {
+    "file": "content/copy.json",
+    "before": "When you care about reliable output more than running the system yourself. We combine AI workflows with human review and deliver the results.",
+    "after": "It suits teams that want to outsource recurring work without operating a system. You supply sources and criteria; Cyano runs the AI workflow and reviews the output."
+  },
+  {
+    "file": "content/copy.json",
+    "before": "六个案例的流程、界面与成果整理为中英文资料，可通过邮箱索取。",
+    "after": "可通过邮箱了解六个案例的流程、界面与成果，支持中英文沟通。"
+  },
+  {
+    "file": "content/copy.json",
+    "before": "Request workflows, screenshots and results for all six projects by email, in English or Chinese.",
+    "after": "Contact us by email for project workflows, screenshots and results, in English or Chinese."
+  },
+  {
+    "file": "content/copy.json",
+    "before": "我想定制 AI 工具 · 我想低成本启动试点 · 我想把任务交给 Cyano 托管 · 我想预约保密案例演示 · 我还不确定，想先评估",
+    "after": "定制 AI 系统 · 小范围试点 · 托管服务 · 预约案例演示 · 先评估需求"
+  },
+  {
+    "file": "content/copy.json",
+    "before": "Build a custom AI tool · Start a low-cost pilot · Hand work to a managed service · Book a confidential case demo · Not sure yet — help me evaluate",
+    "after": "Custom AI system · Pilot project · Managed service · Case demo · Requirements assessment"
+  },
+  {
+    "file": "content/copy.json",
+    "before": "一周内给出诊断结论和建议的合作方式。",
+    "after": "一周内给出需求评估结论和合作建议。"
+  },
+  {
+    "file": "content/copy.json",
+    "before": "Within a week, you get a diagnosis and a recommended engagement model.",
+    "after": "Within a week, we provide an assessment and a recommended way to proceed."
+  },
+  {
+    "file": "content/founders.json",
+    "before": "业务诊断 · 产品设计 · 解决方案",
+    "after": "需求评估 · 产品设计 · 解决方案"
+  },
+  {
+    "file": "content/founders.json",
+    "before": "Diagnosis · Product design · Solutions",
+    "after": "Requirements · Product design · Solutions"
+  },
+  {
+    "file": "content/cases.json",
+    "before": "过去：2 天撰写 + 反复核对资料 → 现在：15 分钟生成初稿，AI 自动完成完整性检查，人工只需复核",
+    "after": "过去：2 天撰写并反复核对资料 → 现在：15 分钟生成初稿并执行完整性检查，再由人工修改、复核"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "可以。诊断阶段会确认数据来源、接口和权限，优先复用现有数据库、文档与业务系统。",
+    "after": "可以。评估阶段会确认数据来源、接口和权限，优先使用现有数据库、文档与业务系统。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Yes. Diagnosis covers data sources, interfaces and permissions, prioritizing the systems and documents you already use.",
+    "after": "Yes. The assessment covers data sources, interfaces and permissions, starting with the systems and documents you already use."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "AI 工作流与人工审核的持续结果",
+    "after": "按批次交付经过人工审核的结果"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "由 Cyano 全面负责",
+    "after": "Cyano 负责运行与交付"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Ongoing AI outputs with human review",
+    "after": "Batch outputs reviewed by people"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "业务诊断",
+    "after": "需求评估"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Diagnose",
+    "after": "Assess requirements"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Size the value",
+    "after": "Estimate costs and benefits"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Run & improve",
+    "after": "Maintain and update"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "梳理目标、流程与数据，一周内给出诊断结论。",
+    "after": "梳理目标、流程与数据，一周内给出评估结论。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "测算人工、外包与返工成本，明确投入回报与优先级。",
+    "after": "估算人工、外包与返工成本，比较预期收益，确定开发顺序。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "确认范围边界、合作方式、验收标准与报价。",
+    "after": "确认项目范围、合作方式、验收标准与报价。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "追踪使用反馈，优化系统，持续迭代新需求。",
+    "after": "处理使用反馈与故障，按约定更新资料和功能。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Map goals, workflows and data. Receive a diagnosis within one week.",
+    "after": "Review goals, workflows and data, with an assessment within one week."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Size current costs, expected return and priorities.",
+    "after": "Estimate current costs and expected benefits to prioritize development."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Monitor real use, improve reliability and iterate on new needs.",
+    "after": "Address user feedback and faults, and update sources and features as agreed."
+  },
+  {
+    "file": "components/ui.tsx",
+    "before": "已落地行业",
+    "after": "已服务行业"
+  }
+]

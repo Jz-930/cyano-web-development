@@ -1,0 +1,887 @@
+[
+  {
+    "file": "components/pages.tsx",
+    "before": "将企业知识，",
+    "after": "为企业开发"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "转化为可交付的",
+    "after": "日常工作用得上的"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "AI 生产力",
+    "after": "AI"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Turn your company’s",
+    "after": "Custom AI"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "knowledge into",
+    "after": "for your"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "AI that ships.",
+    "after": "everyday work."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "从真实业务出发，交付可用的 AI",
+    "after": "定制开发 · 试点 · 托管服务"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "YOUR KNOWLEDGE. YOUR WORKFLOW. REAL RESULTS.",
+    "after": "CUSTOM DEVELOPMENT · PILOTS · MANAGED SERVICES"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "CYANO / 01 — KNOWLEDGE IN MOTION",
+    "after": "CYANO / ENTERPRISE AI"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "深耕真实业务",
+    "after": "已服务行业"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "BUILT FOR REAL BUSINESS",
+    "after": "INDUSTRIES WE SERVE"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "少谈 AI 概念，",
+    "after": "熟悉模型研发，"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "多交付能用的系统。",
+    "after": "也做过企业系统。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Less talk about AI.",
+    "after": "Experience in AI models"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "More AI that works.",
+    "after": "and enterprise software."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "从模型，到业务",
+    "after": "实施中需要处理的问题"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "BEYOND THE MODEL",
+    "after": "IMPLEMENTATION"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "模型提供能力。工程让能力进入真实业务。",
+    "after": "资料、权限和审核流程，需要与模型一起设计。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Models provide the capability. Engineering puts it to work.",
+    "after": "Sources, access controls and review steps need to be designed alongside the model."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "BUILT AROUND YOU",
+    "after": "ENGAGEMENT OPTIONS"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "与你一起交付的人",
+    "after": "团队分工"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "THE PEOPLE BEHIND THE WORK",
+    "after": "OUR TEAM"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "关于 AI 落地，我们的思考",
+    "after": "项目经验与实施建议"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Ideas grounded in delivery",
+    "after": "Project notes and implementation advice"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "买工具",
+    "after": "自有系统"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "买使用权",
+    "after": "小范围试用"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "买结果",
+    "after": "按批次交付"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "OWN THE TOOL",
+    "after": "OWN A SYSTEM"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "PROVE THE VALUE",
+    "after": "TEST A USE CASE"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "BUY THE OUTCOME",
+    "after": "OUTSOURCE THE WORK"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "目标清晰、使用频率高，希望把 AI 能力沉淀为自有系统。",
+    "after": "适合需求明确、使用频繁，需要拥有并长期使用系统的团队。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "场景还在探索，希望先低成本验证价值，再持续迭代。",
+    "after": "先开发一个范围较小的版本，根据实际效果决定是否扩展。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "更关心稳定产出，希望把任务交给专业团队持续交付。",
+    "after": "客户提供资料与质量标准，Cyano 运行工作流、审核并交付结果。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "For clear goals, frequent use and teams that want to own the capability.",
+    "after": "For teams with clear requirements and frequent use that want to own the system."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Prove value with a focused first version, then expand as it earns its place.",
+    "after": "Start with a smaller working version and use the results to decide whether to expand."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Reliable outcomes, delivered continuously, without building your own AI team.",
+    "after": "You provide the sources and quality criteria. Cyano runs the workflow, reviews the output and delivers it."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "过去做不了，现在能做",
+    "after": "扩展客户服务"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "已经在做，但成本太高",
+    "after": "减少重复处理"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "New capabilities, now possible",
+    "after": "Expand customer services"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Work you do today, at too high a cost",
+    "after": "Reduce repetitive work"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "把企业经验转化为随时可用的服务能力，让专业咨询、精准问答和个性化内容不再受人力限制。",
+    "after": "用产品资料和项目经验回答客户问题，按不同需求准备推荐方案与销售材料。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "从文档、查询、客服和运营中找到重复工作，把时间留给真正需要判断与创造的任务。",
+    "after": "将资料整理、数据查询和常见客服问题交给工作流处理，减少手工录入和反复查找。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Turn company expertise into always-available capabilities: expert advice, precise answers and personalized content.",
+    "after": "Use product documentation and project experience to answer questions and prepare recommendations for each customer."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Find repetitive work in documents, support, queries and operations. Reserve human time for judgment and creativity.",
+    "after": "Automate recurring document preparation, data queries and support questions to reduce manual entry and repeated searches."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "你的日常，我们理解",
+    "after": "使用场景"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "这些问题，是否正在发生？",
+    "after": "需要解决的日常问题"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Does this sound familiar?",
+    "after": "Common problems in this workflow"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "把经验，变成可执行的工作流",
+    "after": "系统如何处理任务"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Turn expertise into a working system",
+    "after": "How the system handles a task"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "已经交付的答案",
+    "after": "相关客户项目"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "看看它在真实业务中的表现",
+    "after": "查看相关系统与项目结果"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "See it at work",
+    "after": "Related system and project results"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "从业务入口到交付结果，每一步都在同一套系统中完成。",
+    "after": "以下界面展示系统的主要功能与操作步骤。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "From the first question to a usable result, all in one system.",
+    "after": "Screenshots show the main functions and operating steps."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "挑战与转变",
+    "after": "使用前后"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "THE TRANSFORMATION",
+    "after": "BEFORE AND AFTER"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "把复杂留给系统，把时间还给团队。",
+    "after": "这项工作如何改变"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Let the system handle complexity. Give the team its time back.",
+    "after": "What changed in the workflow"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "从企业资料，到业务结果",
+    "after": "资料处理与审核步骤"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "From company knowledge to business results",
+    "after": "Processing and review steps"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "工程底座",
+    "after": "平台功能"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "THE ENGINEERING FOUNDATION",
+    "after": "PLATFORM FUNCTIONS"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "无损保留核心指令",
+    "after": "保留核心指令"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "剪枝推理链",
+    "after": "压缩中间推理记录"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "只保留根因的日志",
+    "after": "保留故障原因记录"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Pruned reasoning chains",
+    "after": "Condensed reasoning records"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Root-cause logs only",
+    "after": "Fault-cause records"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "权限控制、引用溯源、全链路日志审计与敏感信息拦截，从第一天就进入架构。支持 SaaS 托管与私有化部署。",
+    "after": "系统提供访问权限、来源引用、处理日志和敏感信息过滤。部署可选择 SaaS 托管或私有环境。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Access controls, citations, audit trails and sensitive-data filtering are built into the architecture from day one. Available as SaaS or private deployment.",
+    "after": "The system includes access controls, citations, processing logs and sensitive-data filtering. Deployment is available through SaaS hosting or a private environment."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "希望拥有长期能力的团队",
+    "after": "需要自有系统的团队"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "希望先验证价值的团队",
+    "after": "需要先测试效果的团队"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "希望立即释放人力的团队",
+    "after": "希望委托处理任务的团队"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Teams building long-term capability",
+    "after": "Teams that need their own system"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "从第一步，到长期合作",
+    "after": "项目流程"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "FROM FIRST CONVERSATION TO LASTING VALUE",
+    "after": "PROJECT PROCESS"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "每一步，都有清晰的交付",
+    "after": "从需求评估到上线维护"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "A clear deliverable at every step",
+    "after": "Assessment, development and ongoing support"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "GOOD QUESTIONS",
+    "after": "COMMON QUESTIONS"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "工程师的思考，企业级的交付",
+    "after": "团队背景"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "ENGINEERS AT HEART",
+    "after": "OUR BACKGROUND"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "懂模型，也懂业务。",
+    "after": "模型研发与企业软件经验"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "We know models.\nAnd we know business.",
+    "after": "AI research and\nenterprise software experience"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "共同创造，长期负责",
+    "after": "创始团队"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "BUILT TOGETHER",
+    "after": "FOUNDERS"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "从企业经验，\n到每天都能用的能力。",
+    "after": "按你的资料与流程，\n设计合适的系统。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Your expertise.\nWorking every day.",
+    "after": "Designed around\nyour sources and process."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Cyano（澜屿智创）专注一件事：把企业已有的资料、经验和流程，转化为能被团队每天使用的 AI 系统。我们从具体问题出发，把数据、模型与业务规则连接起来，并对上线后的维护与迭代负责。",
+    "after": "销售咨询需要产品参数与项目记录；标书生成需要模板、引用和审核要求；数据查询需要明确指标与访问权限。我们根据每类工作的条件设计系统，并在上线后维护。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Cyano turns the knowledge and workflows already inside your company into AI systems your team can use every day. We start with a concrete business problem, connect data, models and rules, and take responsibility for maintenance and improvement after launch.",
+    "after": "Sales inquiries need specifications and project records. Proposals need templates, sources and review criteria. Data queries need agreed metrics and access controls. We design for those requirements and maintain the system after launch."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "从这里开始",
+    "after": "可以咨询的内容"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "A GOOD PLACE TO START",
+    "after": "TOPICS TO DISCUSS"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "有问题，\n就值得聊一聊。",
+    "after": "需求、案例\n或技术问题"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "A good question\nis a good beginning.",
+    "after": "Requirements, projects\nor technical questions"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "由资深顾问亲自回复",
+    "after": "咨询回复"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "A senior consultant will reply",
+    "after": "Your inquiry"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "从工程现场出发，\n把 AI 落地说清楚。",
+    "after": "企业 AI 项目的\n设计与实施经验"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Perspectives from\nthe work itself.",
+    "after": "Notes on designing\nand implementing AI"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "关于企业知识、AI 工程与合作选择的具体思考。",
+    "after": "介绍知识库建设、文档生成流程，以及定制、试点与托管服务的选择。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Practical perspectives on company knowledge, AI engineering and choosing the right engagement.",
+    "after": "Guides to knowledge systems, document generation and choosing between a custom build, pilot or managed service."
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "把思考带回你的业务。",
+    "after": "讨论类似的项目需求"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Bring this back to your business.",
+    "after": "Discuss a similar project"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "从一次具体的业务诊断开始，判断下一步是否值得做。",
+    "after": "可以带着现有流程和工作样本，与我们讨论范围、成本和实施条件。"
+  },
+  {
+    "file": "components/pages.tsx",
+    "before": "Start with a business diagnosis and decide whether the next step is worth taking.",
+    "after": "Bring your current process and a work sample to discuss scope, costs and implementation requirements."
+  },
+  {
+    "file": "components/ui.tsx",
+    "before": "接入企业知识",
+    "after": "接入资料"
+  },
+  {
+    "file": "components/ui.tsx",
+    "before": "AI 理解与执行",
+    "after": "检索与生成"
+  },
+  {
+    "file": "components/ui.tsx",
+    "before": "交付业务结果",
+    "after": "交付结果"
+  },
+  {
+    "file": "components/ui.tsx",
+    "before": "Connect knowledge",
+    "after": "Connect sources"
+  },
+  {
+    "file": "components/ui.tsx",
+    "before": "Reason & execute",
+    "after": "Retrieve & generate"
+  },
+  {
+    "file": "components/ui.tsx",
+    "before": "可编辑、可追踪、可复用",
+    "after": "查看、编辑或导出结果"
+  },
+  {
+    "file": "components/ui.tsx",
+    "before": "Editable, traceable, reusable",
+    "after": "View, edit or export results"
+  },
+  {
+    "file": "components/ui.tsx",
+    "before": "下一步，从一次对话开始",
+    "after": "项目咨询"
+  },
+  {
+    "file": "components/ui.tsx",
+    "before": "YOUR NEXT CHAPTER",
+    "after": "CONTACT US"
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "团队与故事",
+    "after": "团队介绍"
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "Team & Story",
+    "after": "Team"
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "谢谢，咨询已提交。",
+    "after": "咨询已提交"
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "Thank you. Your inquiry is in.",
+    "after": "Inquiry submitted"
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "从一个具体的问题开始，我们一起找到答案。",
+    "after": "请描述目前的工作方式和希望改进的部分。"
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "Start with one concrete problem. We’ll work out the next step together.",
+    "after": "Describe how you do the work today and what you want to improve."
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "查询已通过只读权限和字段校验。以下结果来自当前体验数据集，点击其他问题可切换视图。",
+    "after": "以下为该问题对应的示例数据与只读查询语句，可选择其他问题查看不同结果。"
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "The query passed read-only access and field validation. The results below come from this interactive dataset. Select another question to explore.",
+    "after": "Below are sample data and a read-only query for this question. Choose another question to see a different result."
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "你的知识，随时可用。",
+    "after": "选择一个问题查看示例"
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "Your knowledge. Ready when you need it.",
+    "after": "Choose a sample question"
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "选择一个问题，体验从提问到有据可查的答案。",
+    "after": "下方展示预设回答、查询结果与来源说明。"
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "Select a question to see how knowledge becomes a sourced answer.",
+    "after": "See a preset answer, query result and source information."
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "已保留问题上下文，可转人工处理。",
+    "after": "正式系统可将问题与处理记录转交人工。"
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "Context retained for a human handoff.",
+    "after": "The production system can pass the question and prior steps to a support agent."
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "回答已生成，可以查看结果与来源。",
+    "after": "示例已显示，可以查看结果与来源。"
+  },
+  {
+    "file": "components/interactive.tsx",
+    "before": "Answer ready. Review the result and sources.",
+    "after": "Example loaded. Review the result and sources."
+  },
+  {
+    "file": "components/business-visuals.tsx",
+    "before": "企业知识，进入实际工作。",
+    "after": "智能标书与方案生成"
+  },
+  {
+    "file": "components/business-visuals.tsx",
+    "before": "Company knowledge. Put to work.",
+    "after": "AI-assisted proposal drafting"
+  },
+  {
+    "file": "components/business-visuals.tsx",
+    "before": "可审核的交付结果",
+    "after": "人工审核"
+  },
+  {
+    "file": "components/business-visuals.tsx",
+    "before": "Reviewable results",
+    "after": "Human review"
+  },
+  {
+    "file": "components/business-visuals.tsx",
+    "before": "可追溯 · 可审计 · 可交付",
+    "after": "来源引用 · 处理日志 · 任务结果"
+  },
+  {
+    "file": "components/business-visuals.tsx",
+    "before": "TRACEABLE · AUDITABLE · DELIVERABLE",
+    "after": "SOURCES · LOGS · TASK OUTPUTS"
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "Expert-level answers for every customer inquiry",
+    "after": "Round-the-clock answers from product and project records"
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "Expert customer support",
+    "after": "Product and technical inquiries"
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "Grounded answers, relevant equipment and tailored sales material, all in one workflow.",
+    "after": "Answers based on product records, equipment matching and customer-specific sales material."
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "80% of routine IT tickets, answered by AI in under 3 seconds",
+    "after": "AI handles 80% of routine inquiries, averaging under 3 seconds"
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "Ask your data in plain language — no more waiting for IT",
+    "after": "Query inventory and sales in plain language"
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "Every message and every expense, reconciled automatically",
+    "after": "Extract expenses from messages and organize property accounts"
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "Clear",
+    "after": "Per property"
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "An AI that remembers every detail of a million-word story",
+    "after": "Manage character details and branches in million-word stories"
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "Writers control character settings and story branches precisely, with relevant memories available to each generation.",
+    "after": "Writers manage character settings and story branches, with relevant records retrieved for each generation."
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "让产品资料、技术参数与项目经验进入每一次客户沟通。从专业问答到个性化销售材料，帮助团队更快响应、更准确地推荐。",
+    "after": "根据产品资料、技术参数和历史项目回答客户问题，并准备对应的推荐方案与销售材料。"
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "连接 Wiki、SOP 与工单系统，让员工快速找到有依据的答案，让支持团队专注真正复杂的问题。",
+    "after": "连接 Wiki、操作规范与工单系统。常见问题附带来源回答，复杂请求转交支持团队。"
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "Bring product knowledge and project experience into every customer conversation, from expert answers to personalized sales materials.",
+    "after": "Use product documentation and project records to answer customer questions and prepare relevant recommendations and sales materials."
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "Connect your wiki, SOPs and ticketing system. Give employees sourced answers and free your support team to handle the complex work.",
+    "after": "Connect your wiki, SOPs and ticketing system to answer routine questions with sources and route complex requests to the support team."
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "为什么直接用 ChatGPT 做不了企业知识库",
+    "after": "企业知识库需要怎样的检索、权限和维护"
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "买断、试点还是托管：企业 AI 项目怎么选合作方式",
+    "after": "定制、试点还是托管：如何选择合作方式"
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "Why ChatGPT alone can't run your company knowledge base",
+    "after": "Retrieval, permissions and maintenance for a company knowledge base"
+  },
+  {
+    "file": "lib/content.ts",
+    "before": "Buy, pilot or managed: how to engage on enterprise AI",
+    "after": "Choosing a custom build, pilot or managed AI service"
+  },
+  {
+    "file": "app/[[...path]]/page.tsx",
+    "before": "Cyano（澜屿智创）为企业定制 AI 工具、工作流与托管式服务。从业务诊断开始，交付能上线、能审计、能持续迭代的系统。",
+    "after": "Cyano（澜屿智创）为企业开发销售问答、标书生成、知识库和数据查询系统，提供定制开发、试点、托管与维护服务。"
+  },
+  {
+    "file": "app/[[...path]]/page.tsx",
+    "before": "Cyano builds custom enterprise AI tools, workflows and managed services. Start with a diagnosis. Ship systems you can audit, maintain and grow.",
+    "after": "Cyano builds AI for customer inquiries, proposals, internal knowledge and data queries. Services include custom development, pilots, managed operations and maintenance."
+  },
+  {
+    "file": "content/founders.json",
+    "before": "先算清楚值不值得做，再决定怎么做。",
+    "after": "负责项目评估、客户合作与业务目标。"
+  },
+  {
+    "file": "content/founders.json",
+    "before": "First prove it's worth doing. Then decide how.",
+    "after": "Leads project assessment, client partnerships and business planning."
+  },
+  {
+    "file": "content/founders.json",
+    "before": "拥有世界 500 强企业的技术与业务双重背景，6 年以上软件开发经验，长期参与 AI 模型研发与企业级系统落地。负责 Cyano 的整体战略与客户合作，擅长把模糊的业务诉求拆解为可衡量、可交付的 AI 项目，并对最终的业务结果负责。",
+    "after": "曾在世界 500 强企业从事技术与业务工作，拥有 6 年以上软件开发经验，参与过 AI 模型研发与企业系统项目。负责 Cyano 的战略与客户合作，与客户确定项目目标、预算和验收要求。"
+  },
+  {
+    "file": "content/founders.json",
+    "before": "Brings both engineering and business experience from Fortune Global 500 companies, 6+ years of software development and long-standing work on AI models and enterprise systems. Leads Cyano's strategy and client partnerships, turning ambiguous needs into measurable AI projects — and owning the business outcome.",
+    "after": "Has worked in engineering and business roles at Fortune Global 500 companies, with over six years of software development and experience in AI model R&D and enterprise systems. Leads strategy and client partnerships, agreeing on project goals, budgets and acceptance criteria with clients."
+  },
+  {
+    "file": "content/founders.json",
+    "before": "模型会过时，工程方法不会。",
+    "after": "负责模型接入、上下文管理与平台架构。"
+  },
+  {
+    "file": "content/founders.json",
+    "before": "Models age. Good engineering doesn't.",
+    "after": "Leads model integration, context management and platform architecture."
+  },
+  {
+    "file": "content/founders.json",
+    "before": "曾任职于世界 500 强企业，6 年以上开发经验，深度参与 AI 模型研发与工程化。主导 Cyano Core 平台架构，专注长上下文、知识召回与 Agent 编排，确保每个系统都能在真实业务数据上稳定、可审计地运行。",
+    "after": "曾任职于世界 500 强企业，拥有 6 年以上开发经验，参与过 AI 模型研发与工程化。主导 Cyano Core 平台架构，负责长上下文管理、知识检索与 Agent 任务编排。"
+  },
+  {
+    "file": "content/founders.json",
+    "before": "Fortune Global 500 alumnus with 6+ years of engineering and deep experience in AI model R&D and productionization. Architect of Cyano Core, focused on long context, retrieval and agent orchestration — so every system runs reliably and auditably on real business data.",
+    "after": "Previously worked at Fortune Global 500 companies, with over six years of development experience and work in AI model R&D and deployment. Leads Cyano Core architecture, including long-context management, retrieval and agent orchestration."
+  },
+  {
+    "file": "content/founders.json",
+    "before": "能上线、能维护，才算交付。",
+    "after": "负责开发测试、系统部署和上线运维。"
+  },
+  {
+    "file": "content/founders.json",
+    "before": "If it can't run and be maintained, it isn't delivered.",
+    "after": "Leads development, testing, deployment and operations."
+  },
+  {
+    "file": "content/founders.json",
+    "before": "世界 500 强企业工程背景，6 年以上开发经验，具备 AI 模型研发与大规模系统交付经验。负责 Cyano 所有项目的工程交付与上线运维，把复杂的 AI 工作流拆成可测试、可追踪、可持续迭代的模块。",
+    "after": "拥有世界 500 强企业工程背景和 6 年以上开发经验，参与过 AI 模型研发与大规模系统交付。负责项目开发、测试和上线运维，跟进故障处理与版本更新。"
+  },
+  {
+    "file": "content/founders.json",
+    "before": "Engineering background at Fortune Global 500 companies, 6+ years of development and experience in AI model work and large-scale delivery. Owns delivery and operations for every Cyano project, breaking complex AI workflows into testable, traceable modules that keep improving.",
+    "after": "Has an engineering background at Fortune Global 500 companies, over six years of development experience, and experience in AI model R&D and large-scale systems. Leads development, testing and operations, including incident handling and releases."
+  },
+  {
+    "file": "content/founders.json",
+    "before": "先理解你的流程，再设计你的 AI。",
+    "after": "负责需求梳理、产品设计和使用流程。"
+  },
+  {
+    "file": "content/founders.json",
+    "before": "Understand the workflow first. Then design the AI.",
+    "after": "Leads requirements, product design and user workflows."
+  },
+  {
+    "file": "content/founders.json",
+    "before": "拥有世界 500 强企业的产品与技术背景，6 年以上开发经验和 AI 模型研发经验。负责业务诊断与解决方案设计，深入客户现有流程，找到 AI 最能创造价值的位置，并把它设计成团队愿意每天使用的产品。",
+    "after": "拥有世界 500 强企业的产品与技术背景、6 年以上开发经验及 AI 模型研发经验。负责需求评估与产品设计，梳理客户的操作步骤、资料来源和审核要求，并与使用者确认功能设计。"
+  },
+  {
+    "file": "content/founders.json",
+    "before": "Product and engineering background at Fortune Global 500 companies, 6+ years of development and AI model R&D experience. Leads diagnosis and solution design — finding where AI creates the most value in a client's workflow, and shaping it into a product teams want to use every day.",
+    "after": "Has a product and engineering background at Fortune Global 500 companies, over six years of development and experience in AI model R&D. Leads requirements and product design, reviewing client processes, sources and approval requirements with the people who will use the system."
+  },
+  {
+    "file": "content/cases.json",
+    "before": "让每一次客户咨询，都有资深顾问级的回答",
+    "after": "根据产品与项目资料，提供全天候客户问答"
+  },
+  {
+    "file": "content/cases.json",
+    "before": "80% 的常见工单，由 AI 在 3 秒内答完",
+    "after": "AI 处理 80% 常见咨询，平均响应低于 3 秒"
+  },
+  {
+    "file": "content/cases.json",
+    "before": "常见工单自动拦截",
+    "after": "常见咨询自动处理"
+  },
+  {
+    "file": "content/cases.json",
+    "before": "上线后，该企业 IT 团队 80% 的常见咨询由 AI 自动处理，团队得以把时间投入到更有价值的系统建设上。",
+    "after": "该项目中，AI 自动处理了 80% 的常见咨询，减少 IT 团队重复回答问题的时间。"
+  },
+  {
+    "file": "content/cases.json",
+    "before": "业务人员用一句话查数，不再排队等 IT 导数",
+    "after": "业务人员直接提问，查询库存与销量"
+  },
+  {
+    "file": "content/cases.json",
+    "before": "沟通与账单自动归集，让每套房产的收益一目了然",
+    "after": "从沟通记录提取费用，按房产整理收支"
+  },
+  {
+    "file": "content/cases.json",
+    "before": "一目了然",
+    "after": "按房产查看"
+  },
+  {
+    "file": "content/cases.json",
+    "before": "让 AI 记住百万字长篇里的每一条设定",
+    "after": "管理百万字长篇的人物设定与剧情分支"
+  },
+  {
+    "file": "content/cases.json",
+    "before": "剧情分支精准切换",
+    "after": "剧情分支切换"
+  }
+]
