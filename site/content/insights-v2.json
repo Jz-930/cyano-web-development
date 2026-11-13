@@ -1,0 +1,507 @@
+[
+  {
+    "slug": "why-chatgpt-is-not-a-knowledge-base",
+    "title": {
+      "zh": "企业知识库需要怎样的检索、权限和维护",
+      "en": "Retrieval, permissions and maintenance for a company knowledge base"
+    },
+    "metaDescription": {
+      "zh": "企业内部知识问答不止于上传文档：详解按员工权限检索、条款级出处定位、转人工工单上下文传递与日常知识维护流程。",
+      "en": "Why uploading files to a chat window falls short for teams: permission-aware retrieval, clause-level citations, ticket handoffs and ongoing source maintenance."
+    },
+    "category": {
+      "zh": "知识管理",
+      "en": "Knowledge management"
+    },
+    "dateIso": "2026-11-10",
+    "dateDisplay": {
+      "zh": "2026 年 11 月 10 日",
+      "en": "Nov 10, 2026"
+    },
+    "readingTime": {
+      "zh": "约 6 分钟阅读",
+      "en": "6 min read"
+    },
+    "authorId": "F2",
+    "coverCode": "NOTE 01 · RAG & ACL",
+    "coverMetric": {
+      "zh": "权限前置过滤 · 条款级溯源",
+      "en": "Pre-query ACL · Clause citations"
+    },
+    "coverNodes": [
+      {
+        "zh": "身份与组织鉴权",
+        "en": "Identity & role ACL"
+      },
+      {
+        "zh": "生效版本筛选",
+        "en": "Active version filter"
+      },
+      {
+        "zh": "出处核验或转人工",
+        "en": "Cited reply or handoff"
+      }
+    ],
+    "pullQuote": {
+      "insertAfterIndex": 2,
+      "text": {
+        "zh": "上传一份文件能应付单次提问；多人长期使用的企业知识库，核心工程在于版本生效控制、检索前权限隔离，以及答不出时的干净转交。",
+        "en": "Uploading a file serves a single prompt. A production company knowledge base depends on active-version control, pre-retrieval permission checks and clean human handoffs."
+      },
+      "note": {
+        "zh": "企业知识库工程设计要点",
+        "en": "Enterprise knowledge system design note"
+      }
+    },
+    "diagrams": [
+      {
+        "insertAfterIndex": 1,
+        "eyebrow": {
+          "zh": "工程图解 01 · 检索前过滤链路",
+          "en": "DIAGRAM 01 · PRE-RETRIEVAL GATEWAY"
+        },
+        "title": {
+          "zh": "每次提问如何选出合规、有效的制度段落",
+          "en": "How each query selects authorized, active policy clauses"
+        },
+        "caption": {
+          "zh": "权限与生效状态在进入生成模型前完成过滤，避免把过期文件或未授权部门资料带入上下文。",
+          "en": "Role clearance and document validity are enforced before model generation, keeping expired or unauthorized files out of context."
+        },
+        "nodes": [
+          {
+            "tag": "01 / ACL",
+            "label": {
+              "zh": "确认部门、角色与地区",
+              "en": "Verify role, org & region"
+            },
+            "note": {
+              "zh": "同步账号在职状态与授权目录",
+              "en": "Sync directory clearance before search"
+            }
+          },
+          {
+            "tag": "02 / INDEX",
+            "label": {
+              "zh": "筛选现行有效章节",
+              "en": "Select active version clauses"
+            },
+            "note": {
+              "zh": "保留表格行列关系与条款上下文",
+              "en": "Preserve table structure & clause scope"
+            },
+            "highlight": true
+          },
+          {
+            "tag": "03 / CITE",
+            "label": {
+              "zh": "附带条款出处生成回答",
+              "en": "Generate reply with exact citation"
+            },
+            "note": {
+              "zh": "支持一键打开源文档核对",
+              "en": "Open source clause directly for review"
+            }
+          },
+          {
+            "tag": "04 / AUDIT",
+            "label": {
+              "zh": "留存检索与引用记录",
+              "en": "Log retrieved evidence & version"
+            },
+            "note": {
+              "zh": "日志独立设权，便于排查答错原因",
+              "en": "Separate audit access for root-cause QA"
+            }
+          }
+        ]
+      },
+      {
+        "insertAfterIndex": 5,
+        "eyebrow": {
+          "zh": "工程图解 02 · 自动分流与人工接手",
+          "en": "DIAGRAM 02 · ROUTING & TICKET HANDOFF"
+        },
+        "title": {
+          "zh": "明确自动回答边界，避免员工向支持人员重复描述",
+          "en": "Clear automation boundaries so employees never repeat context"
+        },
+        "caption": {
+          "zh": "当遇到权限提升、制度冲突或资料缺失时，工作流停止猜测并将上下文完整写入工单。",
+          "en": "When facing elevated privileges, policy conflicts or missing rules, the system stops guessing and writes structured context into the ticket."
+        },
+        "nodes": [
+          {
+            "tag": "AUTO",
+            "label": {
+              "zh": "常规咨询直接附出处解答",
+              "en": "Routine SOP queries answered"
+            },
+            "note": {
+              "zh": "设备申请、VPN 重置、标准排障",
+              "en": "Equipment, VPN reset, documented fixes"
+            },
+            "highlight": true
+          },
+          {
+            "tag": "CHECK",
+            "label": {
+              "zh": "识别异常身份或资料冲突",
+              "en": "Detect policy gap or privilege request"
+            },
+            "note": {
+              "zh": "不强行生成未经授权的结论",
+              "en": "Halt generation when evidence is incomplete"
+            }
+          },
+          {
+            "tag": "HANDOFF",
+            "label": {
+              "zh": "带上下文自动创建工单",
+              "en": "Create pre-filled support ticket"
+            },
+            "note": {
+              "zh": "附带已查资料、报错信息与对话记录",
+              "en": "Attach retrieved docs & steps already tried"
+            }
+          }
+        ]
+      }
+    ],
+    "relatedCaseSlug": "it-knowledge-assistant",
+    "relatedSolutionSlug": "knowledge-assistant"
+  },
+  {
+    "slug": "proposal-draft-in-15-minutes",
+    "title": {
+      "zh": "15 分钟出标书初稿：智能标书系统是怎么搭起来的",
+      "en": "A proposal draft in 15 minutes: how we built it"
+    },
+    "metaDescription": {
+      "zh": "拆解智能标书与方案生成工作流：如何把产品知识库、项目约束提取、分章节检索、7 项完整性校验与人工复核结合起来。",
+      "en": "Inside a production proposal drafting workflow: separating reusable product specs from past project assumptions, staged drafting, 7 completeness checks and human sign-off."
+    },
+    "category": {
+      "zh": "工程实践",
+      "en": "Engineering"
+    },
+    "dateIso": "2026-11-03",
+    "dateDisplay": {
+      "zh": "2026 年 11 月 3 日",
+      "en": "Nov 3, 2026"
+    },
+    "readingTime": {
+      "zh": "约 7 分钟阅读",
+      "en": "7 min read"
+    },
+    "authorId": "F3",
+    "coverCode": "NOTE 02 · STAGED DRAFTING",
+    "coverMetric": {
+      "zh": "15 分钟初稿 · 7 项完整性检查",
+      "en": "15 min draft · 7 completeness checks"
+    },
+    "coverNodes": [
+      {
+        "zh": "招标约束提取",
+        "en": "RFP constraint parse"
+      },
+      {
+        "zh": "分章证据拼装",
+        "en": "Section evidence match"
+      },
+      {
+        "zh": "7 项校验与复核",
+        "en": "7 QA checks & sign-off"
+      }
+    ],
+    "pullQuote": {
+      "insertAfterIndex": 3,
+      "text": {
+        "zh": "把过去两天的找资料与拼初稿压缩到 15 分钟，前提是不把整本标书交给单次提示词，而是按章节拆分检索、参数计算与完整性核查。",
+        "en": "Cutting two days of assembly down to 15 minutes comes from staged engineering—separating requirement extraction, deterministic parameter checks and section citations rather than relying on one giant prompt."
+      },
+      "note": {
+        "zh": "来自咨询与投研机构标书项目的交付总结",
+        "en": "Lesson from the consulting & research proposal workflow"
+      }
+    },
+    "diagrams": [
+      {
+        "insertAfterIndex": 2,
+        "eyebrow": {
+          "zh": "工程图解 01 · 三类资料分层隔离",
+          "en": "DIAGRAM 01 · SOURCE SEPARATION"
+        },
+        "title": {
+          "zh": "把稳定产品知识与旧项目特定假设分开管理",
+          "en": "Separating reusable facts from old project-specific conditions"
+        },
+        "caption": {
+          "zh": "避免新方案沿用旧项目的过期报价或特定假设；缺失参数会直接生成缺失信息清单。",
+          "en": "Prevents stale pricing or prior client assumptions from leaking into a new bid; missing inputs trigger an explicit question list."
+        },
+        "nodes": [
+          {
+            "tag": "LAYER A",
+            "label": {
+              "zh": "现行产品与资质库",
+              "en": "Active product & credential specs"
+            },
+            "note": {
+              "zh": "绑定设备型号、生效版本与标准参数",
+              "en": "Tied to model version & verified specs"
+            },
+            "highlight": true
+          },
+          {
+            "tag": "LAYER B",
+            "label": {
+              "zh": "历史方案论证素材",
+              "en": "Past proposal structure & cases"
+            },
+            "note": {
+              "zh": "仅复用论证结构与可公开交付记录",
+              "en": "Reuse argument structure, strip old quotes"
+            }
+          },
+          {
+            "tag": "LAYER C",
+            "label": {
+              "zh": "本次项目输入与约束",
+              "en": "Current RFP inputs & constraints"
+            },
+            "note": {
+              "zh": "缺失数值列为问题清单交由业务确认",
+              "en": "Flag missing figures instead of guessing"
+            }
+          }
+        ]
+      },
+      {
+        "insertAfterIndex": 4,
+        "eyebrow": {
+          "zh": "工程图解 02 · 分阶段生成与 7 项校验",
+          "en": "DIAGRAM 02 · STAGED PIPELINE & QA"
+        },
+        "title": {
+          "zh": "在成稿导出前执行确定性计算与完整性核查",
+          "en": "Deterministic parameter checks and completeness QA before review"
+        },
+        "caption": {
+          "zh": "最终承诺、商业条款与专业责任仍由授权审核人员确认，界面支持直接点开每处引用。",
+          "en": "Commercial commitments and assumptions stay under human review, with one-click access to every underlying citation."
+        },
+        "nodes": [
+          {
+            "tag": "STEP 1",
+            "label": {
+              "zh": "提取诉求与拟定提纲",
+              "en": "Extract requirements & outline"
+            },
+            "note": {
+              "zh": "人工先确认大纲方向再展开撰写",
+              "en": "Confirm outline before drafting chapters"
+            }
+          },
+          {
+            "tag": "STEP 2",
+            "label": {
+              "zh": "分章检索与确定性计算",
+              "en": "Section drafting & deterministic math"
+            },
+            "note": {
+              "zh": "数值与单位交由确定程序校验",
+              "en": "Units and totals checked programmatically"
+            }
+          },
+          {
+            "tag": "STEP 3",
+            "label": {
+              "zh": "7 项完整性清单扫描",
+              "en": "7-point completeness checklist"
+            },
+            "note": {
+              "zh": "核查必填章节、资质引用与前后参数一致",
+              "en": "Verify required sections, citations & consistency"
+            },
+            "highlight": true
+          },
+          {
+            "tag": "STEP 4",
+            "label": {
+              "zh": "人工审阅并导出可编辑稿",
+              "en": "Human review & editable export"
+            },
+            "note": {
+              "zh": "审核记录反哺后续模板调优",
+              "en": "Reviewer edits tracked to refine templates"
+            }
+          }
+        ]
+      }
+    ],
+    "relatedCaseSlug": "proposal-generation",
+    "relatedSolutionSlug": "document-automation"
+  },
+  {
+    "slug": "buy-pilot-or-managed",
+    "title": {
+      "zh": "定制、试点还是托管：如何选择合作方式",
+      "en": "Choosing a custom build, pilot or managed AI service"
+    },
+    "metaDescription": {
+      "zh": "结合任务频率、资料准备度与内部运维能力，比较完整定制开发、2–6 周低启动试点与托管式 AI 服务的边界与验收方式。",
+      "en": "How to match workflow frequency, source readiness and internal operating capacity to a full custom build, a 2–6 week pilot or a managed AI service."
+    },
+    "category": {
+      "zh": "合作指南",
+      "en": "Working together"
+    },
+    "dateIso": "2026-10-27",
+    "dateDisplay": {
+      "zh": "2026 年 10 月 27 日",
+      "en": "Oct 27, 2026"
+    },
+    "readingTime": {
+      "zh": "约 6 分钟阅读",
+      "en": "6 min read"
+    },
+    "authorId": "F1",
+    "coverCode": "NOTE 03 · DELIVERY MODELS",
+    "coverMetric": {
+      "zh": "定制 6–12 周 · 试点 2–6 周 · 托管 < 2 周",
+      "en": "Build 6–12w · Pilot 2–6w · Managed < 2w"
+    },
+    "coverNodes": [
+      {
+        "zh": "完整定制自有系统",
+        "en": "Custom owned system"
+      },
+      {
+        "zh": "2–6 周单场景验证",
+        "en": "2–6w scoped pilot"
+      },
+      {
+        "zh": "按批次托管交付",
+        "en": "Managed batch output"
+      }
+    ],
+    "pullQuote": {
+      "insertAfterIndex": 3,
+      "text": {
+        "zh": "用自己团队的真实工时、返工率与资料准备成本做测算，远比套用其他企业的回报数字更有决策价值。",
+        "en": "Estimating against your own team’s hours, rework rate and source-preparation effort is far more reliable than borrowing another company’s return figures."
+      },
+      "note": {
+        "zh": "项目启动前的投入产出评估原则",
+        "en": "Pre-project ROI assessment principle"
+      }
+    },
+    "diagrams": [
+      {
+        "insertAfterIndex": 1,
+        "eyebrow": {
+          "zh": "工程图解 01 · 三种合作模式的权责边界",
+          "en": "DIAGRAM 01 · OWNERSHIP & OPERATIONS"
+        },
+        "title": {
+          "zh": "按资产归属、验证阶段与团队精力选择起点",
+          "en": "Matching ownership, validation risk and operating capacity"
+        },
+        "caption": {
+          "zh": "如果使用频率尚不确定，先用小范围试点验证真实资料表现，再决定是否扩建完整系统。",
+          "en": "When usage or source quality is unproven, validate on real documents in a narrow pilot before committing to a full build."
+        },
+        "nodes": [
+          {
+            "tag": "6–12 WKS",
+            "label": {
+              "zh": "完整定制开发",
+              "en": "Full custom build"
+            },
+            "note": {
+              "zh": "需求明确、高频使用，系统资产归客户所有",
+              "en": "Clear scope & daily usage; client owns system"
+            }
+          },
+          {
+            "tag": "2–6 WKS",
+            "label": {
+              "zh": "低启动试点 + 持续服务",
+              "en": "Pilot + ongoing service"
+            },
+            "note": {
+              "zh": "单任务快速验证节省工时与采纳度，按结果扩缩",
+              "en": "Test real sources & adoption before scaling"
+            },
+            "highlight": true
+          },
+          {
+            "tag": "< 2 WKS",
+            "label": {
+              "zh": "托管式 AI 服务",
+              "en": "Managed AI service"
+            },
+            "note": {
+              "zh": "不设内部技术运维，Cyano 运行流程并复核交付",
+              "en": "Cyano runs workflows + QA and delivers batches"
+            }
+          }
+        ]
+      },
+      {
+        "insertAfterIndex": 5,
+        "eyebrow": {
+          "zh": "工程图解 02 · 首次 30–45 分钟沟通清单",
+          "en": "DIAGRAM 02 · FIRST CALL PREPARATION"
+        },
+        "title": {
+          "zh": "不需要先写长篇技术需求书，带三样信息即可评估",
+          "en": "No formal spec needed—three inputs are enough to assess fit"
+        },
+        "caption": {
+          "zh": "沟通后一周内提供书面评估结论、建议合作模式与停止/验收条件。",
+          "en": "Within one week of the call, we return a written assessment, recommended model and clear acceptance criteria."
+        },
+        "nodes": [
+          {
+            "tag": "INPUT 01",
+            "label": {
+              "zh": "一份真实工作样本",
+              "en": "One anonymized work sample"
+            },
+            "note": {
+              "zh": "脱敏后的历史标书、制度手册或报表导出样例",
+              "en": "Past proposal, SOP excerpt or sample data export"
+            },
+            "highlight": true
+          },
+          {
+            "tag": "INPUT 02",
+            "label": {
+              "zh": "当前步骤与常见卡点",
+              "en": "Current steps & bottlenecks"
+            },
+            "note": {
+              "zh": "目前耗时在哪一步、每月处理量与常见返工点",
+              "en": "Where hours go today, monthly volume & rework"
+            }
+          },
+          {
+            "tag": "INPUT 03",
+            "label": {
+              "zh": "业务规则与数据负责人",
+              "en": "Rule & data permission owners"
+            },
+            "note": {
+              "zh": "明确谁解释业务口径、谁开放权限、谁验收结果",
+              "en": "Who defines rules, grants access & signs off"
+            }
+          }
+        ]
+      }
+    ],
+    "relatedCaseSlug": "sales-consultant-ai",
+    "relatedSolutionSlug": "sales-ai"
+  }
+]

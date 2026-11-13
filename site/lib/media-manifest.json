@@ -1,0 +1,254 @@
+{
+  "/art/founder-1.webp": {
+    "src": "/art/founder-1.webp",
+    "width": 543,
+    "height": 724,
+    "blurDataURL": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAAAQBQCdASoUABsAPwFwr1CrJqQisBgIAWAgCWMAxvcsE6IF5PicxPyHjzEjNn6qG/8AAP7vwsThVCjvP6lhktMbYVeAmDEiotQwnNw1Xp/+HF7orrGyJNkgNHnBuQcCiBffbBfcms95jXZdLxD2KeNuM+NR+6zY5vANX7tTNnKcgwM3OtF9PMkwl9av1BF15RDJedg0fpPiR9g3CPvz0+9dUIAs1WDTFXBx4SyAAAA="
+  },
+  "/art/founder-2.webp": {
+    "src": "/art/founder-2.webp",
+    "width": 543,
+    "height": 724,
+    "blurDataURL": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAACQBQCdASoUABsAPwFwrlCrJqQisBgIAWAgCWMAwN2MTm3WZqitVLtMMhFybgPlchPm9qacAAD+77+tbVTIRb0Him0qBAxt4L5b4E3rJRbMe4Q6iN2CV9wN4bDArfW8oCvF1a+xToc/NQ4QCNQDJt0qnYAbXzV9yk8VM8KT4q9VjIr3Y0NzWCkpsfX0FZWRvdECCXhaWdBqE2csqLOHCbOutfNCxAAA"
+  },
+  "/art/founder-3.webp": {
+    "src": "/art/founder-3.webp",
+    "width": 543,
+    "height": 724,
+    "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAACwBACdASoUABsAPwFoq06rJaOiMAgBYCAJYgDCgCFT1u/7cxPTQquKSV1mG3TAAP7vwSzI8EV5aM2MNhWI7z4nrE0LQiE1tYUNN/1yOPW3Yan6j3WQZwasqfzMGrjHPgqc0Y2YDPLID/ego8mRE05u8jhITbsAbZWmCA7V7rh+yaI2BE0SWnWksHnCeN3KgHPcAAAA"
+  },
+  "/art/founder-4.webp": {
+    "src": "/art/founder-4.webp",
+    "width": 543,
+    "height": 724,
+    "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAADwBACdASoUABsAPwFqrU8rJiQiMAgBYCAJYwC7ACHfcR9b2aHOgojT3VwJwIYyTwAA/u/CItbjF0yat0EJIStTseAXkeni9sjgA1JWZ0Ie5NK7IV7glTGVg7gNIlQRUIsVeHzxF8IBAYdUlNEC9Gh3fzWFptzQoD1OhMNe8A5JRpfj8lD/IB0zzO93suZAlHUppgAA"
+  },
+  "/art/founder-4-avatar.webp": {
+    "src": "/art/founder-4-avatar.webp",
+    "width": 160,
+    "height": 160,
+    "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAADQBACdASoUABQAPwF2s1QrJySjKAgBYCAJYwDA3BE8O709icQC+LR/5Up92lxcAAD+78NLGs720oFKTLPpMZ1q/40aeKioJ2vcb9T7rpV9gzqFFtB84vHEPHgxGlcCsNBSEw8pmTVneC0mMpCV13cjN5bzXdEWG89umi9FPDkshEuMYxG4sAAA"
+  },
+  "/art/team-duotone.webp": {
+    "src": "/art/team-duotone.webp",
+    "width": 1280,
+    "height": 853,
+    "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAABQBACdASoUAA0APwForE6rJaQiMAgBYCAJYwCdB2pTZboatRh+Kpf3XZWAAP4BMfb+Jz2FeUtdr46vlY55X/UKuhRyhGygkna13DG5vD3Cq5EMnFs2MHpAeT3P3VBS0iEGBVnxgKym0x9+Af8m4CBQRtngXxYa61arsQo6Kxu8faakqAA="
+  },
+  "/art/team.webp": {
+    "src": "/art/team.webp",
+    "width": 1536,
+    "height": 1024,
+    "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoUAA0APwFqrE6rJiQiMAgBYCAJYwC7GuATCAC9YZF2t52kB4AA/gEx95qhxU9MX/2B7/Wex1Qf9fxQ06WyJZs5z07XAPVztsqvcs04YDgn+N5v/8SdKnB1rdAlAz6f8m4QyUIDedNvzWdDp70p/i/HBlTqN4CXeiIjR8hRAAA="
+  },
+  "/media/alpha-house-ai/alpha-house-01-login.webp": {
+    "src": "/media/alpha-house-ai/alpha-house-01-login.webp",
+    "width": 1440,
+    "height": 969,
+    "blurDataURL": "data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAADwAgCdASoTAA0APwFqrE6rJiQiMAgBYCAJaQDM0C0kAAD+7u8NyXJCnxi3lrVyGBr54f6GLYAAAA=="
+  },
+  "/media/alpha-house-ai/alpha-house-02-messages.webp": {
+    "src": "/media/alpha-house-ai/alpha-house-02-messages.webp",
+    "width": 1440,
+    "height": 933,
+    "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAACwAgCdASoUAA0APwFqrE8rJiQiMAgBYCAJaQAAeyAA/u7sPlRd7xKmRwAAAA=="
+  },
+  "/media/alpha-house-ai/alpha-house-03-work-order-chat.webp": {
+    "src": "/media/alpha-house-ai/alpha-house-03-work-order-chat.webp",
+    "width": 1440,
+    "height": 879,
+    "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAgCdASoUAAwAPwFqrU8rJaQiMAgBYCAJZwAAeyAA/u7rZhFN1pCgAAA="
+  },
+  "/media/alpha-house-ai/alpha-house-04-finance.webp": {
+    "src": "/media/alpha-house-ai/alpha-house-04-finance.webp",
+    "width": 1440,
+    "height": 899,
+    "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAwAwCdASoTAAwAPwFqrE8rJiQiMAgBYCAJZwAAW4apwT/AAP7qj9SFrXZJbbO+U+hyo+lMCr9fq2AgAAA="
+  },
+  "/media/alpha-house-ai/alpha-house-05-contacts.webp": {
+    "src": "/media/alpha-house-ai/alpha-house-05-contacts.webp",
+    "width": 1440,
+    "height": 913,
+    "blurDataURL": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAACwAgCdASoUAA0APwFqrE8rJiQiMAgBYCAJaQAAeyAA/u8WlXRAYx75HAA="
+  },
+  "/media/alpha-house-ai/alpha-house-06-reports.webp": {
+    "src": "/media/alpha-house-ai/alpha-house-06-reports.webp",
+    "width": 1440,
+    "height": 923,
+    "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADwAgCdASoUAA0APwFqrU8rJaQiMAgBYCAJaQDMHC0kAAD+7vNAB8Sc8jZjpWJ3w+98rXtSAAA="
+  },
+  "/media/dme-writing-engine/dme-writing-engine-00-startup-loading.webp": {
+    "src": "/media/dme-writing-engine/dme-writing-engine-00-startup-loading.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAADwAgCdASoUAAwAPwFqrU8rJaQiMAgBYCAJaQDImC0kAAD+7+J9/bJ2kSlJ6qqXgAA="
+  },
+  "/media/dme-writing-engine/dme-writing-engine-01-chat-branch-switch.webp": {
+    "src": "/media/dme-writing-engine/dme-writing-engine-01-chat-branch-switch.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoUAAwAPwForE6rJiQiMAgBYCAJaQDE2CHfiPDAAP7uhRQRbv99dpGuSBRyG4RZtVc958O9gtiAAA=="
+  },
+  "/media/dme-writing-engine/dme-writing-engine-02-chat-memory-drawer.webp": {
+    "src": "/media/dme-writing-engine/dme-writing-engine-02-chat-memory-drawer.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAAAwAwCdASoUAAwAPwFwrk+rJqQiMAgBYCAJZwAAeldCV09wAP7wAbQTE2UtQykLdmWKHjDuNjQPb9cNXyRQAA=="
+  },
+  "/media/dme-writing-engine/dme-writing-engine-03-context-memory-stats.webp": {
+    "src": "/media/dme-writing-engine/dme-writing-engine-03-context-memory-stats.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoUAAwAPwFqrU8rJiQiMAgBYCAJZwDCgCHfiO68tQAA/u6FFBFu/312ka5IFHIWdt669Ao5xv69ttM1FmgAAA=="
+  },
+  "/media/dme-writing-engine/dme-writing-engine-04-note-editor-ai-panel.webp": {
+    "src": "/media/dme-writing-engine/dme-writing-engine-04-note-editor-ai-panel.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAABwAwCdASoUAAwAPwFqrE8rJiQiMAgBYCAJZwDKACIj+LpDSkAA/ujoJGPRpnegw5fBneXUy0s3wAAA"
+  },
+  "/media/dme-writing-engine/dme-writing-engine-05-fragments-library-bulk.webp": {
+    "src": "/media/dme-writing-engine/dme-writing-engine-05-fragments-library-bulk.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRkwAAABXRUJQVlA4IEAAAAAQAwCdASoUAAwAPwForE6rJaQiMAgBYCAJZwC7ADBhegAA/u/CratCbUR/SLaqLJ9HHfWdGEAHayWOjXpO9IAA"
+  },
+  "/media/dme-writing-engine/dme-writing-engine-06-archive-pack-inspect.webp": {
+    "src": "/media/dme-writing-engine/dme-writing-engine-06-archive-pack-inspect.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADwAgCdASoUAAwAPwFqrU8rJaQiMAgBYCAJZwC/ODBsAAD+78GZnE60Q3p86WewJgMAAA=="
+  },
+  "/media/dme-writing-engine/dme-writing-engine-07-connections-settings.webp": {
+    "src": "/media/dme-writing-engine/dme-writing-engine-07-connections-settings.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAAAQAwCdASoUAAwAPwF6sFCrKKSisAgBYCAJZwABNMExyVAA/vhmZOAcQQ0u7hxNzkXZ/ySIHWHg6nAAAAA="
+  },
+  "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-01-dashboard.webp": {
+    "src": "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-01-dashboard.webp",
+    "width": 1600,
+    "height": 1000,
+    "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABwAwCdASoUAAwAPwFqrE8rJiQiMAgBYCAJZQCdAB6QNoDqAAAA/krlWQ/UrnB5RFj0DBGXqEW3UaMr42SSJ5/roqYdfXAA"
+  },
+  "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-02-articles.webp": {
+    "src": "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-02-articles.webp",
+    "width": 1600,
+    "height": 1000,
+    "blurDataURL": "data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAACQAwCdASoUAAwAPwFqrE6rJiQiMAgBYCAJZQCdAB6QNoEI5AAAAP5KdpiifL2mbzAYJ+bjqEW3UaOEK13Ki349hRmyYz1Mne1QLwAA"
+  },
+  "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-03-article-detail.webp": {
+    "src": "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-03-article-detail.webp",
+    "width": 1600,
+    "height": 1000,
+    "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAABwAwCdASoUAAwAPwFqrU8rJaQiMAgBYCAJYwCdAB6QoErlXwAA/kp2mKJ8LvvDu31LkAp9KpZJMGwFNo8i/ULDVLXWgdu/IAA="
+  },
+  "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-04-ticket-detail.webp": {
+    "src": "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-04-ticket-detail.webp",
+    "width": 1600,
+    "height": 1000,
+    "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACQAwCdASoUAAwAPwFqrU8rJaQiMAgBYCAJZQCdAB6Q9cT/9fAAAP6IFzZTsBaSV0CcrpqwIqXOpYL1B5Zps8oYtxyLHxqFwAA="
+  },
+  "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-05-analytics.webp": {
+    "src": "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-05-analytics.webp",
+    "width": 1600,
+    "height": 1000,
+    "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACwAwCdASoUAAwAPwFqrE6rJiQiMAgBYCAJZQCw7B6R/sCXoT/CwAD+iBc2U7AEcE/CiSqKyH1CLbqgvQkTubPC4NxJK+XMAAA="
+  },
+  "/media/huisheng-proposal-ai/huisheng-proposal-ai-01-workflow-draft.webp": {
+    "src": "/media/huisheng-proposal-ai/huisheng-proposal-ai-01-workflow-draft.webp",
+    "width": 1600,
+    "height": 1000,
+    "blurDataURL": "data:image/webp;base64,UklGRkYAAABXRUJQVlA4IDoAAABQAwCdASoUAAwAPwFqrE8rJiQiMAgBYCAJZwCdACzclTJAAAD+7y/EZ1MongSCuUW3eKHmM0UvTIAA"
+  },
+  "/media/huisheng-proposal-ai/huisheng-proposal-ai-02-start-draft.webp": {
+    "src": "/media/huisheng-proposal-ai/huisheng-proposal-ai-02-start-draft.webp",
+    "width": 1600,
+    "height": 1000,
+    "blurDataURL": "data:image/webp;base64,UklGRjgAAABXRUJQVlA4ICwAAADwAgCdASoUAAwAPwFqrU8rJiQiMAgBYCAJZQCdAC5JAAD+71VP8tqE6KcQAA=="
+  },
+  "/media/lnpe-sales-ai/lnpe-sales-consultant-01-public-assistant.webp": {
+    "src": "/media/lnpe-sales-ai/lnpe-sales-consultant-01-public-assistant.webp",
+    "width": 1600,
+    "height": 1000,
+    "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAwCdASoUAAwAPwFsrU8rJiQiMAgBYCAJZwDE2CHfy305ag0E8AD6n7Sccmw2YDyi4y/hL/q4sY+pHxxFwMm+Z8LLTr8xzM5JS8Rsj1scAETsID90zJL/GVIV2nAA"
+  },
+  "/media/lnpe-sales-ai/lnpe-sales-consultant-02-access-portal.webp": {
+    "src": "/media/lnpe-sales-ai/lnpe-sales-consultant-02-access-portal.webp",
+    "width": 1600,
+    "height": 1000,
+    "blurDataURL": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAABQAwCdASoUAAwAPwFqrE6rJiQiMAgBYCAJaQAAW+vuu+Y4AAD+7Tce6VaDnfwYYJjkMPIAAAA="
+  },
+  "/media/lnpe-sales-ai/lnpe-sales-consultant-03-project-match.webp": {
+    "src": "/media/lnpe-sales-ai/lnpe-sales-consultant-03-project-match.webp",
+    "width": 1600,
+    "height": 1000,
+    "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAABQAwCdASoUAAwAPwForE6rJaQiMAgBYCAJYwAAW+x0LJCKYAD+7UTVLuoX4LZWTn1xbNjco9YY3fZFD9ouFoAJb9CIPjZwkBJGcXmJOHkAAA=="
+  },
+  "/media/lnpe-sales-ai/lnpe-sales-consultant-04-price-reference.webp": {
+    "src": "/media/lnpe-sales-ai/lnpe-sales-consultant-04-price-reference.webp",
+    "width": 1600,
+    "height": 1000,
+    "blurDataURL": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAAAQAwCdASoUAAwAPwFqrE6rJiQiMAgBYCAJZwAAUqLWggAA/uqR0X/Ma/WgetTez5rR4buj+4jiJWl5CqLe2VZ4aXAmP0AA"
+  },
+  "/media/smartdoc-ui-suite/smartdoc-ui-suite-01-dashboard-overview.webp": {
+    "src": "/media/smartdoc-ui-suite/smartdoc-ui-suite-01-dashboard-overview.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACQAwCdASoUAAwAPwFqrE6rJiQiMAgBYCAJYwAAW+irK0bm8lQAAP6yPoTfmhQGIb5/3JY+5xmwm2hNsnEUIHcQfYxJy4FKfBXpp+w3hEkhHNyH2JmEAWk6AAA="
+  },
+  "/media/smartdoc-ui-suite/smartdoc-ui-suite-02-sql-control-center.webp": {
+    "src": "/media/smartdoc-ui-suite/smartdoc-ui-suite-02-sql-control-center.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACQAwCdASoUAAwAPwFsrU8rJiQiMAgBYCAJZQAAWq3InVJnIt8AAP6yPoTiDTNAUWZdx/yWLToWQ497wBkqz5iWJu/0bK70vVKHjQOlO1AjVTgfx5w+AAAA"
+  },
+  "/media/smartdoc-ui-suite/smartdoc-ui-suite-03-knowledge-base.webp": {
+    "src": "/media/smartdoc-ui-suite/smartdoc-ui-suite-03-knowledge-base.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAACwAwCdASoUAAwAPwFqrE6rJiQiMAgBYCAJQBYdhDvZ/gl3AJiTxAD+sj6E4AhvkOdzMa8o8OslnGnSTxLN33GOrt4Iw3RwWVI6koJC/tyNSV3wdSyu+GALLNKKLsAA"
+  },
+  "/media/smartdoc-ui-suite/smartdoc-ui-suite-04-proposal-builder.webp": {
+    "src": "/media/smartdoc-ui-suite/smartdoc-ui-suite-04-proposal-builder.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAABQAwCdASoUAAwAPwFqrk8rJiQiMAgBYCAJZQAAW+9rZpfWAAD+sj6E4gzm1Zg8ZAF1MvvfDjLAEgEed7Bv+dzIAAA="
+  },
+  "/media/smartdoc-ui-suite/smartdoc-ui-suite-05-review-audit.webp": {
+    "src": "/media/smartdoc-ui-suite/smartdoc-ui-suite-05-review-audit.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAwCdASoUAAwAPwForE6rJaQiMAgBYCAJZQAAW+n/tcBOfQCgAP6yPoTfl5oIANR4kaP/4ZXPIXHowv/2pfhmU3zRANr7yUtXk8PY0PgAAA=="
+  },
+  "/media/smartdoc-ui-suite/smartdoc-ui-suite-06-template-library.webp": {
+    "src": "/media/smartdoc-ui-suite/smartdoc-ui-suite-06-template-library.webp",
+    "width": 1280,
+    "height": 800,
+    "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACQAwCdASoUAAwAPwFqrE8rJiQiMAgBYCAJZQAAW+qxdk4YpgIAAP6yPoTiDOa69AaJDrjVLqhZKari6ewb7/msq2sRUY1/OQ0p8JHhPGacvAAA"
+  },
+  "/art/v2-hero-optics.webp": {
+    "src": "/art/v2-hero-optics.webp",
+    "width": 1376,
+    "height": 768,
+    "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAADwAwCdASoUAAsAPwFqrk6rJiQiMAgBYCAJQBadBCpbDdIRcSs8ZAgAAP7yqfIXvgkaJKOwWmyevc3ug843o4gAdueHSVnIm7+Z0qhxiAY4mAAA"
+  },
+  "/art/v2-core-lattice.webp": {
+    "src": "/art/v2-core-lattice.webp",
+    "width": 1376,
+    "height": 768,
+    "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAABwAwCdASoUAAsAPwFqrE8rJiQiMAgBYCAJZQAAW+nyYffBqWAA/vDTVHeZbhjgDH9jd2njQkYKOd9VAAA="
+  },
+  "/art/v2-core-prism.webp": {
+    "src": "/art/v2-core-prism.webp",
+    "width": 1376,
+    "height": 768,
+    "blurDataURL": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAACQAwCdASoUAAsAPwForE6rJaQiMAgBYCAJYwDCgCFrrPlII89AAP7xGRps4WsttvgobN29OsKL7QeN5CIJx+vVBZ7Ww8AAAAA="
+  },
+  "/art/v2-cta-aurora.webp": {
+    "src": "/art/v2-cta-aurora.webp",
+    "width": 1376,
+    "height": 768,
+    "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoUAAsAPwFssE6rJiUiMAgBYCAJZQC7MoAEZxYpVwAA/vABd5en4mVmhQ57HokWlZhV9jSrDd5QIsLZkwoAAA=="
+  }
+}

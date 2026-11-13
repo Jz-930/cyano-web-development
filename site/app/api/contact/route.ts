@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { createHash } from "node:crypto";
+import { createHash } from "crypto";
 export const runtime = "nodejs";
 const schema = z.object({
   name: z.string().trim().min(1).max(160),

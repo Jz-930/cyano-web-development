@@ -31,5 +31,43 @@
     "count": 31,
     "source": "https://cyano.app/media/",
     "modifications": "None; display framing only"
-  }
+  },
+  "v2Updated": "2026-11-12",
+  "v2Assets": [
+    {
+      "id": "v2-hero-optics",
+      "source": "assets/source/v2-hero-optics.jpg",
+      "output": "site/public/art/v2-hero-optics.webp",
+      "usage": "Homepage Hero dark optical glass ambient layer",
+      "constraints": "Zero text, zero geographical imagery, brand cyan-mint palette"
+    },
+    {
+      "id": "v2-core-lattice",
+      "source": "assets/source/v2-core-lattice.jpg",
+      "output": "site/public/art/v2-core-lattice.webp",
+      "usage": "Technology 4-layer architecture optical strata backdrop",
+      "constraints": "Zero text, zero geographical imagery, brand cyan-mint palette"
+    },
+    {
+      "id": "v2-core-prism",
+      "source": "assets/source/v2-core-prism.jpg",
+      "output": "site/public/art/v2-core-prism.webp",
+      "usage": "Context Valuation Engine optical convergence visual",
+      "constraints": "Zero text, zero geographical imagery, brand cyan-mint palette"
+    },
+    {
+      "id": "v2-cta-aurora",
+      "source": "assets/source/v2-cta-aurora.jpg",
+      "output": "site/public/art/v2-cta-aurora.webp",
+      "usage": "Closing CTA frosted obsidian ambient backdrop",
+      "constraints": "Zero text, zero geographical imagery, brand cyan-mint palette"
+    },
+    {
+      "id": "founder-1..4",
+      "source": "assets/source/portraits-business-glasses.png",
+      "output": "site/public/art/founder-1.webp .. founder-4.webp",
+      "usage": "Unified brand cyan-slate duotone founder portraits (G-21)",
+      "postProcess": "Quarter slice + 5-stop brand cyan-slate duotone LUT"
+    }
+  ]
 }

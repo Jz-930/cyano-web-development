@@ -1,0 +1,1433 @@
+[
+  {
+    "slug": "proposal-generation",
+    "group": "core",
+    "industryKey": "consulting",
+    "industry": {
+      "zh": "专业服务与投研",
+      "en": "Professional Services & Research"
+    },
+    "title": {
+      "zh": "把方案初稿从两天缩短到 15 分钟",
+      "en": "From two days to 15 minutes: AI‑drafted proposals and reports"
+    },
+    "metaDescription": {
+      "zh": "某专业咨询与投研机构的智能标书与方案生成项目：连接历史方案与参数库，15 分钟生成可编辑初稿，引用准确率 99%，自动执行 7 项完整性检查。",
+      "en": "How Cyano built an AI‑drafted proposal and report system for a consulting and research firm: 15‑minute editable drafts, 99% citation accuracy and 7 automated completeness checks."
+    },
+    "system": {
+      "zh": "智能标书与方案生成",
+      "en": "Intelligent Proposal Builder"
+    },
+    "solutionSlug": "document-automation",
+    "solutionLabel": {
+      "zh": "文档、标书与方案自动化",
+      "en": "Document & Proposal Automation"
+    },
+    "model": {
+      "zh": "完整定制开发",
+      "en": "Full custom build"
+    },
+    "duration": {
+      "zh": "10 周",
+      "en": "10 weeks"
+    },
+    "profile": {
+      "zh": "某专业咨询与投研机构，方案与尽调报告撰写量大、引用与论证要求严格。",
+      "en": "A consulting and investment research firm producing high volumes of evidence‑based proposals and due‑diligence memos."
+    },
+    "background": {
+      "zh": "该机构每月需交付大量项目建议书与行业尽调备忘录。过往分析报告、政策文件与财务模型分散在不同目录，撰写人员需要花费大量时间翻找旧稿、核对技术参数与检查章节遗漏。",
+      "en": "Analysts prepare dozens of client proposals and investment memos each month. Historical reports, regulatory filings and financial assumptions lived in separate folders, forcing teams to spend days locating references and cross‑checking figures."
+    },
+    "challenges": [
+      {
+        "zh": "历史方案、行业政策与成本模型分散存放，新项目难以快速定位有效依据。",
+        "en": "Past proposals, regulatory documents and cost models sat in separate repositories with no unified clause search."
+      },
+      {
+        "zh": "每份初稿整理与拼写约需两天，商业假设与技术路线容易前后不一致。",
+        "en": "Assembling a first draft took roughly two days, and late changes often broke consistency across sections."
+      },
+      {
+        "zh": "关键风险提示与必填章节靠人工逐页检查，高峰期审核压力大。",
+        "en": "Missing mandatory sections or unstressed financial assumptions had to be caught manually under tight deadlines."
+      }
+    ],
+    "whyNotGeneric": {
+      "zh": "通用聊天工具无法区分过期项目条件与当前客户约束，也无法按该机构的七项交付标准逐条核验引用出处与关键假设压力测试。",
+      "en": "A generic chat window cannot separate outdated project assumptions from current client constraints, nor enforce the firm’s seven‑point completeness and citation checklist."
+    },
+    "stats": [
+      {
+        "value": { "zh": "15 分钟", "en": "15 min" },
+        "label": { "zh": "生成可编辑方案初稿", "en": "To an editable first draft" },
+        "condition": { "zh": "从项目诉求输入到待人工复核初稿（原约 2 天）", "en": "From project intake to human‑reviewable draft (down from ~2 days)" },
+        "sourceId": "case-proposal-generation"
+      },
+      {
+        "value": { "zh": "99%", "en": "99%" },
+        "label": { "zh": "该项目引用准确率", "en": "Project citation accuracy" },
+        "condition": { "zh": "基于该项目验收测试集核验，人工复核后定稿", "en": "Measured on project acceptance set prior to human sign‑off" },
+        "sourceId": "case-proposal-generation"
+      },
+      {
+        "value": { "zh": "7 项", "en": "7 checks" },
+        "label": { "zh": "完整性自动检查", "en": "Automated completeness checks" },
+        "condition": { "zh": "覆盖市场、商业模式、合规与压力评估清单", "en": "Covers market, business model, compliance and stress‑test items" },
+        "sourceId": "case-proposal-generation"
+      }
+    ],
+    "beforeSummary": {
+      "zh": "2 天查找旧稿、摘录参数并手工撰写，提交前反复人工查漏。",
+      "en": "Two days searching archives, copying parameters and checking sections by hand."
+    },
+    "afterSummary": {
+      "zh": "15 分钟生成带出处的结构化初稿并完成 7 项完整性检查，分析师专注核心论证复核。",
+      "en": "15 minutes to a cited draft with 7 automated checks, leaving analysts to refine core arguments."
+    },
+    "beforeTotalLabel": { "zh": "约 2 个工作日（16 小时）", "en": "~2 working days (16 hrs)" },
+    "afterTotalLabel": { "zh": "15 分钟初稿 + 人工复核", "en": "15 min draft + human review" },
+    "afterWidthPercent": 18,
+    "beforeSegments": [
+      { "label": { "zh": "翻找历史方案与政策 4h", "en": "Archive & policy search · 4h" }, "weight": 25 },
+      { "label": { "zh": "核对财务与工艺参数 4h", "en": "Parameter cross‑check · 4h" }, "weight": 25 },
+      { "label": { "zh": "手工撰写各章节初稿 6h", "en": "Manual section drafting · 6h" }, "weight": 37.5 },
+      { "label": { "zh": "人工逐项查漏 2h", "en": "Manual checklist review · 2h" }, "weight": 12.5 }
+    ],
+    "afterSegments": [
+      { "label": { "zh": "AI 检索 + 初稿 + 7 项检查（15m）", "en": "AI retrieval + draft + 7 checks (15m)" }, "weight": 45 },
+      { "label": { "zh": "分析师复核核心论证与定稿", "en": "Analyst argument review & sign‑off" }, "weight": 55, "isHumanReview": true }
+    ],
+    "outcome": {
+      "zh": "上线后，该机构的撰写团队把主要精力从搜集整理资料转向打磨核心商业论证，方案初稿在 15 分钟内即可生成并进入人工复核。",
+      "en": "Writers shifted their time from hunting down source files to sharpening investment arguments, generating cited first drafts within 15 minutes for senior review."
+    },
+    "techHighlights": [
+      { "zh": "按章节与适用条件切分历史报告与法规库，避免跨项目串用旧参数。", "en": "Section‑aware document indexing separates reusable domain facts from legacy project assumptions." },
+      { "zh": "分阶段执行诉求提取、提纲确认、章节起草与压力测试提示。", "en": "Staged playbook pipeline runs requirement extraction, outline confirmation, drafting and stress‑test alerts." },
+      { "zh": "内置 7 项交付完整性清单，自动标出未覆盖章节与待核实假设。", "en": "Built‑in 7‑point delivery gate flags missing sections and unverified financial assumptions before export." }
+    ],
+    "images": [
+      {
+        "src": "/media/huisheng-proposal-ai/huisheng-proposal-ai-01-workflow-draft.webp",
+        "caption": {
+          "zh": "主工作台：左侧项目阶段与 7 项完整性检查，中栏诉求提取问答，右侧实时生成结构化备忘录与关键假设压力提示。",
+          "en": "Main workspace: staged workflow and 7‑point completeness checklist on the left, constraint extraction in the center, and live memo draft with stress‑test alerts on the right."
+        }
+      },
+      {
+        "src": "/media/huisheng-proposal-ai/huisheng-proposal-ai-02-start-draft.webp",
+        "caption": {
+          "zh": "新建方案向导：选择项目类型、导入客户访谈纪要与关联历史参考资料库。",
+          "en": "Project intake view: selecting document templates, importing client interview notes and scoping reference repositories."
+        }
+      }
+    ],
+    "mainImageIndex": 0,
+    "interfaceLanguage": "zh",
+    "hotspots": [
+      {
+        "x": 7,
+        "y": 26,
+        "title": { "zh": "多阶段项目工作流", "en": "Staged workflow rail" },
+        "detail": {
+          "zh": "将甲方沟通、内部讨论、调研计划与报告输出拆分为可追溯节点。",
+          "en": "Tracks client intake, internal review, research plan and report generation as auditable stages."
+        }
+      },
+      {
+        "x": 29,
+        "y": 38,
+        "title": { "zh": "核心诉求与约束提取", "en": "Client constraint extraction" },
+        "detail": {
+          "zh": "从访谈记录中提炼政策壁垒、工艺路线成本与团队稳定性三项核心关注点。",
+          "en": "Extracts regulatory barriers, process cost comparisons and team stability concerns from raw notes."
+        }
+      },
+      {
+        "x": 71,
+        "y": 46,
+        "title": { "zh": "带压力测试提示的初稿", "en": "Live draft & assumption alert" },
+        "detail": {
+          "zh": "自动生成结构化章节，并用醒目黄框标出需要财务复核的临界价格假设。",
+          "en": "Generates structured sections while highlighting critical price‑threshold assumptions for analyst review."
+        }
+      },
+      {
+        "x": 7,
+        "y": 84,
+        "title": { "zh": "7 项完整性自动检查", "en": "7‑point completeness checklist" },
+        "detail": {
+          "zh": "实时核对市场、商业模式、合规风险与压力评估完成度（当前 5/7）。",
+          "en": "Monitors coverage across market, business model, compliance risk and stress testing in real time."
+        }
+      }
+    ],
+    "workflowSteps": [
+      {
+        "stage": { "zh": "01 输入源", "en": "01 Sources" },
+        "title": { "zh": "访谈纪要 + 历史报告库", "en": "Client notes + past reports" },
+        "detail": { "zh": "接入甲方沟通记录、行业法规白名单与过往投研模板。", "en": "Ingests client memos, regulatory filings and historical templates." },
+        "artifact": { "zh": "带版本标签的条款片段", "en": "Version‑tagged clause chunks" }
+      },
+      {
+        "stage": { "zh": "02 编排起草", "en": "02 Staged drafting" },
+        "title": { "zh": "诉求拆解与分章生成", "en": "Constraint mapping & drafting" },
+        "detail": { "zh": "先锁定本次约束条件，再逐章检索依据并写入备忘录草稿。", "en": "Locks project‑specific constraints before retrieving evidence per section." },
+        "artifact": { "zh": "关联出处的章节初稿", "en": "Source‑linked section draft" }
+      },
+      {
+        "stage": { "zh": "03 规则校验", "en": "03 Validation" },
+        "title": { "zh": "7 项完整性与假设质检", "en": "7‑point check & stress alert" },
+        "detail": { "zh": "自动扫描必填模块缺失项，标出敏感财务假设供重点核查。", "en": "Flags missing mandatory sections and sensitive financial thresholds." },
+        "artifact": { "zh": "质检报告与风险高亮", "en": "Checklist score & risk flags" }
+      },
+      {
+        "stage": { "zh": "04 人工复核", "en": "04 Human sign‑off" },
+        "title": { "zh": "分析师审定并导出报告", "en": "Analyst review & export" },
+        "detail": { "zh": "项目负责人在对比视图中核实引用与结论，确认后生成正式稿。", "en": "Lead analyst verifies citations and assumptions in diff view before export." },
+        "artifact": { "zh": "可交付正式方案文档", "en": "Approved client proposal" },
+        "humanCheckpoint": true
+      }
+    ],
+    "timeline": [
+      {
+        "phase": { "zh": "第 1–2 周 · 诊断与标准梳理", "en": "Weeks 1–2 · Diagnosis & rubric" },
+        "duration": { "zh": "2 周", "en": "2 wks" },
+        "detail": { "zh": "梳理历史报告结构、参数口径与 7 项完整性审核标准。", "en": "Mapped historical report templates, parameter rules and the 7‑point review checklist." }
+      },
+      {
+        "phase": { "zh": "第 3–6 周 · 索引与工作流开发", "en": "Weeks 3–6 · Indexing & pipeline" },
+        "duration": { "zh": "4 周", "en": "4 wks" },
+        "detail": { "zh": "完成多源文档分块索引、分阶段起草编排与双栏复核工作台。", "en": "Built section‑aware retrieval, staged drafting playbooks and the split‑screen review UI." }
+      },
+      {
+        "phase": { "zh": "第 7–8 周 · 历史项目回归评测", "en": "Weeks 7–8 · Historical backtesting" },
+        "duration": { "zh": "2 周", "en": "2 wks" },
+        "detail": { "zh": "用过往真实项目盲测引用准确率与风险提示覆盖率。", "en": "Validated citation accuracy and risk‑flag coverage against completed past engagements." }
+      },
+      {
+        "phase": { "zh": "第 9–10 周 · 正式上线与培训", "en": "Weeks 9–10 · Rollout & tuning" },
+        "duration": { "zh": "2 周", "en": "2 wks" },
+        "detail": { "zh": "投研团队全员接入使用，并根据审稿反馈微调提示与模板。", "en": "Deployed to the research team and refined section prompts from reviewer edits." }
+      }
+    ],
+    "demoUrl": "https://research-bp-writing.vercel.app/",
+    "interactiveDemo": null
+  },
+  {
+    "slug": "it-knowledge-assistant",
+    "group": "core",
+    "industryKey": "enterprise-it",
+    "industry": {
+      "zh": "企业服务",
+      "en": "Enterprise Services"
+    },
+    "title": {
+      "zh": "80% 的常见咨询由 AI 处理，平均响应低于 3 秒",
+      "en": "80% of routine IT tickets answered in under 3 seconds"
+    },
+    "metaDescription": {
+      "zh": "某大型企业 IT 部门的 Enterprise Wiki 智能助手项目：连接内部知识库与工单系统，80% 常见咨询自动附出处解答，平均响应低于 3 秒。",
+      "en": "Enterprise Wiki IT Assistant built by Cyano: connects internal SOPs and ticketing to resolve 80% of routine IT inquiries in under 3 seconds with source citations."
+    },
+    "system": {
+      "zh": "Enterprise Wiki 智能 IT 助手",
+      "en": "Enterprise Wiki IT Assistant"
+    },
+    "solutionSlug": "knowledge-assistant",
+    "solutionLabel": {
+      "zh": "企业知识库与内部助手",
+      "en": "Knowledge & Internal Assistants"
+    },
+    "model": {
+      "zh": "低启动试点 + 持续服务",
+      "en": "Pilot + ongoing service"
+    },
+    "duration": {
+      "zh": "试点 4 周 · 全面上线 8 周",
+      "en": "4‑week pilot · 8‑week rollout"
+    },
+    "profile": {
+      "zh": "某大型企业内部 IT 支持部门，员工规模大、日常账号与设备工单密集。",
+      "en": "An enterprise IT support organization serving a large internal workforce with high daily ticket volume."
+    },
+    "background": {
+      "zh": "该企业拥有上千篇内部 IT 操作指南，但员工遇到 VPN、邮箱、软件权限或设备申领问题时仍习惯直接提工单，导致一线支持工程师每天重复回答相同问题。",
+      "en": "Despite maintaining over 1,200 internal Wiki articles, employees routinely opened support tickets for VPN setup, email access and software requests, creating long queues for Tier‑1 engineers."
+    },
+    "challenges": [
+      {
+        "zh": "VPN、权限与设备申请等高频问题占工单大多数，挤占系统建设人力。",
+        "en": "Repetitive VPN, access and hardware questions consumed most Tier‑1 support capacity."
+      },
+      {
+        "zh": "制度文档更新后旧截图与旧流程仍在流传，员工难以确认现行规定。",
+        "en": "Policy updates left outdated instructions circulating, making employees unsure which guide applied."
+      },
+      {
+        "zh": "涉及权限审批与异常故障的请求需要完整上下文转交人工，不能盲目作答。",
+        "en": "Privilege escalations and network anomalies required clean handoffs to human engineers rather than guesswork."
+      }
+    ],
+    "whyNotGeneric": {
+      "zh": "内部支持必须严格按员工所属部门与权限检索现行有效制度，并在低置信度或涉及特权审批时自动创建带排查记录的一线工单。",
+      "en": "Internal IT support requires role‑scoped retrieval over active SOPs, exact article citations and automatic ticket creation when confidence is low or human approval is required."
+    },
+    "stats": [
+      {
+        "value": { "zh": "80%", "en": "80%" },
+        "label": { "zh": "常见咨询自动拦截", "en": "Routine inquiries resolved" },
+        "condition": { "zh": "该项目上线后常见重复类 IT 工单拦截比例", "en": "Share of recurring Tier‑1 IT questions resolved without human queue" },
+        "sourceId": "case-it-knowledge-assistant"
+      },
+      {
+        "value": { "zh": "< 3s", "en": "< 3s" },
+        "label": { "zh": "平均响应时间", "en": "Average response time" },
+        "condition": { "zh": "含权限校验、知识检索与引用生成耗时", "en": "End‑to‑end including permission check, retrieval and citation" },
+        "sourceId": "case-it-knowledge-assistant"
+      },
+      {
+        "value": { "zh": "7×24", "en": "24/7" },
+        "label": { "zh": "跨时区全天候响应", "en": "Always‑on internal support" },
+        "condition": { "zh": "低置信度或特权操作自动转交人工工单", "en": "Complex or privileged requests automatically routed to Tier‑1 staff" },
+        "sourceId": "case-it-knowledge-assistant"
+      }
+    ],
+    "beforeSummary": {
+      "zh": "员工提单排队等待数小时，IT 团队反复粘贴相同操作步骤。",
+      "en": "Employees waited hours in the ticket queue while IT staff repeated the same troubleshooting steps."
+    },
+    "afterSummary": {
+      "zh": "3 秒内返回附带 Wiki 链接与更新时间的答案；未解决或需审批问题自动带记录转人工。",
+      "en": "Cited Wiki answers arrive in under 3 seconds; unresolved or privileged issues escalate with full context."
+    },
+    "beforeTotalLabel": { "zh": "工单排队数小时", "en": "Hours in ticket queue" },
+    "afterTotalLabel": { "zh": "< 3 秒附出处即时解答", "en": "< 3s cited answer + smart escalation" },
+    "afterWidthPercent": 15,
+    "beforeSegments": [
+      { "label": { "zh": "提交工单并等待分配", "en": "Submit ticket & wait for triage" }, "weight": 45 },
+      { "label": { "zh": "工程师人工查找对应 SOP", "en": "Agent looks up SOP manually" }, "weight": 30 },
+      { "label": { "zh": "多轮追问确认设备与系统环境", "en": "Back‑and‑forth environment check" }, "weight": 25 }
+    ],
+    "afterSegments": [
+      { "label": { "zh": "AI 按权限检索并附 Wiki 出处（<3s）", "en": "ACL retrieval + cited answer (<3s)" }, "weight": 55 },
+      { "label": { "zh": "复杂/权限工单带上下文转一线人工", "en": "15% complex tickets routed to human" }, "weight": 45, "isHumanReview": true }
+    ],
+    "outcome": {
+      "zh": "上线后，该企业 IT 部门 80% 的常见重复咨询由 AI 自动解答，一线工程师得以将时间投入到核心基础设施与复杂故障处理上。",
+      "en": "AI now resolves 80% of routine IT inquiries with direct Wiki citations, freeing support engineers to focus on infrastructure projects and complex incidents."
+    },
+    "techHighlights": [
+      { "zh": "同步 1,200+ 篇内部 Wiki 状态，文档修订或下架后即时刷新检索索引。", "en": "Live sync across 1,200+ Wiki articles ensures deprecated guides stop appearing immediately." },
+      { "zh": "每条回复强制附带来源文章标题与最近更新时间，方便员工点开核对。", "en": "Every answer attaches clickable source titles and last‑updated timestamps for instant verification." },
+      { "zh": "内置置信度与意图分流规则，15% 复杂或权限类问题自动打包对话生成工单。", "en": "Confidence and policy routing escalates privileged or unresolved threads into pre‑filled Tier‑1 tickets." }
+    ],
+    "images": [
+      {
+        "src": "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-01-dashboard.webp",
+        "caption": {
+          "zh": "运营总览看板：实时显示 80% 工单拦截率、< 3 秒响应速度、15% 转人工比例及右侧带出处问答窗口。",
+          "en": "Operations dashboard showing 80% ticket deflection, sub‑3‑second response time, 15% escalation split and live cited chat."
+        }
+      },
+      {
+        "src": "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-02-articles.webp",
+        "caption": {
+          "zh": "知识库管理视图：按分类、生效状态与更新时间管理内部 IT 制度与排查手册。",
+          "en": "Knowledge base directory managing IT SOPs by category, verification status and update recency."
+        }
+      },
+      {
+        "src": "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-03-article-detail.webp",
+        "caption": {
+          "zh": "文档详情与引用片段：保留章节层级、适用系统环境与维护负责人信息。",
+          "en": "Article detail view preserving section hierarchy, OS scope and document owner metadata."
+        }
+      },
+      {
+        "src": "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-04-ticket-detail.webp",
+        "caption": {
+          "zh": "转人工工单详情：自动附带员工提问历史、已命中的知识条目与转交原因。",
+          "en": "Escalated ticket view pre‑populated with conversation history, retrieved articles and escalation reason."
+        }
+      },
+      {
+        "src": "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-05-analytics.webp",
+        "caption": {
+          "zh": "质量与缺口分析：统计高频未命中问题，指导知识库维护人员按周补充文档。",
+          "en": "Analytics view surfacing unanswered topics so maintainers know which SOPs to update next."
+        }
+      }
+    ],
+    "mainImageIndex": 0,
+    "interfaceLanguage": "en",
+    "hotspots": [
+      {
+        "x": 31,
+        "y": 30,
+        "title": { "zh": "80% 常见工单自动拦截", "en": "80% ticket deflection KPI" },
+        "detail": {
+          "zh": "实时追踪自动解答占比与周环比变化，验证知识库覆盖效果。",
+          "en": "Tracks automated resolution share and week‑over‑week deflection improvement."
+        }
+      },
+      {
+        "x": 53,
+        "y": 30,
+        "title": { "zh": "低于 3 秒的平均响应", "en": "Sub‑3‑second response speed" },
+        "detail": {
+          "zh": "权限过滤与混合检索并行执行，让员工在提问窗口即时拿到步骤。",
+          "en": "Parallel permission filtering and hybrid search deliver troubleshooting steps immediately."
+        }
+      },
+      {
+        "x": 79,
+        "y": 49,
+        "title": { "zh": "精确到篇目的 Wiki 出处", "en": "Inline Wiki source citation" },
+        "detail": {
+          "zh": "回复直接附带《Setup VPN on Windows》链接与更新时间，杜绝无依据猜测。",
+          "en": "Links directly to the active Wiki guide and shows its last‑updated timestamp."
+        }
+      },
+      {
+        "x": 53,
+        "y": 58,
+        "title": { "zh": "可控的人工转交分流", "en": "Transparent human escalation" },
+        "detail": {
+          "zh": "清晰区分人工接手（10%）与低置信度兜底（5%），自动分配至一线团队。",
+          "en": "Separates explicit transfers and low‑confidence fallbacks for clean Tier‑1 routing."
+        }
+      }
+    ],
+    "workflowSteps": [
+      {
+        "stage": { "zh": "01 身份与资料", "en": "01 Identity & Wiki" },
+        "title": { "zh": "员工角色校验 + 1,200+ SOP", "en": "Employee RBAC + 1,200+ SOPs" },
+        "detail": { "zh": "先确认员工部门与地区权限，只检索当前生效的内部文档。", "en": "Checks department and region permissions before querying active Wiki articles." },
+        "artifact": { "zh": "已授权有效条款集合", "en": "Authorized active passages" }
+      },
+      {
+        "stage": { "zh": "02 检索回答", "en": "02 Grounded answer" },
+        "title": { "zh": "生成分步指引并附来源链接", "en": "Step‑by‑step answer + citation" },
+        "detail": { "zh": "按标准排查顺序组织步骤，每条结论绑定对应 Wiki 链接。", "en": "Formats troubleshooting steps with clickable Wiki source references." },
+        "artifact": { "zh": "带 [Wiki] 出处的即时回复", "en": "Cited troubleshooting reply" }
+      },
+      {
+        "stage": { "zh": "03 置信度门禁", "en": "03 Confidence gate" },
+        "title": { "zh": "识别特权申请与未知故障", "en": "Privilege & gap detection" },
+        "detail": { "zh": "遇到权限审批、资料冲突或追问仍未解决时，停止猜测并触发转单。", "en": "Halts generation when privilege approval is needed or source coverage is insufficient." },
+        "artifact": { "zh": "结构化转交上下文包", "en": "Structured handoff summary" }
+      },
+      {
+        "stage": { "zh": "04 人工接手", "en": "04 Tier‑1 handoff" },
+        "title": { "zh": "一线工程师接单与知识回补", "en": "Engineer resolution & SOP update" },
+        "detail": { "zh": "支持人员基于完整排查记录继续处理，并将新解法补入知识库。", "en": "Support staff resolve the pre‑filled ticket and publish missing SOPs back to the Wiki." },
+        "artifact": { "zh": "已解决工单与更新文档", "en": "Resolved ticket & updated Wiki" },
+        "humanCheckpoint": true
+      }
+    ],
+    "timeline": [
+      {
+        "phase": { "zh": "第 1 周 · 工单抽样与诊断", "en": "Week 1 · Ticket audit" },
+        "duration": { "zh": "1 周", "en": "1 wk" },
+        "detail": { "zh": "分析历史高频工单分布，锁定首批高频标准场景与转人工边界。", "en": "Clustered historical tickets to identify top recurring topics and escalation rules." }
+      },
+      {
+        "phase": { "zh": "第 2–4 周 · 低启动试点上线", "en": "Weeks 2–4 · Pilot launch" },
+        "duration": { "zh": "3 周", "en": "3 wks" },
+        "detail": { "zh": "接入核心 IT Wiki 与工单接口，在小范围部门完成首个可用版本验证。", "en": "Connected Wiki and ticketing APIs to validate deflection with a pilot user group." }
+      },
+      {
+        "phase": { "zh": "第 5–8 周 · 全员推广与权限深化", "en": "Weeks 5–8 · Full rollout" },
+        "duration": { "zh": "4 周", "en": "4 wks" },
+        "detail": { "zh": "扩展至全公司员工使用，完善多角色权限隔离与质量分析报表。", "en": "Expanded across all departments with role‑based access and gap analytics." }
+      },
+      {
+        "phase": { "zh": "持续服务 · 知识巡检与迭代", "en": "Ongoing · Knowledge maintenance" },
+        "duration": { "zh": "按月持续", "en": "Ongoing" },
+        "detail": { "zh": "根据每周未命中问题报表更新文档与分流规则。", "en": "Monthly tuning of SOP coverage and routing thresholds from live analytics." }
+      }
+    ],
+    "demoUrl": null,
+    "interactiveDemo": "kb"
+  },
+  {
+    "slug": "sales-consultant-ai",
+    "group": "core",
+    "industryKey": "manufacturing",
+    "industry": {
+      "zh": "工程与制造",
+      "en": "Engineering & Manufacturing"
+    },
+    "title": {
+      "zh": "根据产品与历史项目资料，提供全天候工程级问答",
+      "en": "Round‑the‑clock engineering answers from product and plant records"
+    },
+    "metaDescription": {
+      "zh": "某粉体工程装备企业的 LNPE 智能工程顾问系统：连接专有设备参数与历史产线记录，实现 7×24 专业咨询、秒级相似项目匹配与个性化销售材料生成。",
+      "en": "LNPE Engineering Advisor built by Cyano: connects proprietary equipment specs and plant records for 24/7 technical Q&A, comparable project matching and tailored sales materials."
+    },
+    "system": {
+      "zh": "LNPE 智能工程顾问",
+      "en": "LNPE Engineering Advisor"
+    },
+    "solutionSlug": "sales-ai",
+    "solutionLabel": {
+      "zh": "销售与客户咨询 AI",
+      "en": "Sales & Customer AI"
+    },
+    "model": {
+      "zh": "完整定制开发",
+      "en": "Full custom build"
+    },
+    "duration": {
+      "zh": "8 周",
+      "en": "8 weeks"
+    },
+    "profile": {
+      "zh": "某粉体工程装备制造企业，设备型号多、工艺参数复杂、海外与现场咨询频繁。",
+      "en": "An industrial powder‑processing equipment manufacturer with complex machinery lines and global technical inquiries."
+    },
+    "background": {
+      "zh": "客户在选型时常询问特定物料（如磷酸铁锂、高镍三元材料）的粒径指标、能耗占地与相似产线案例。过去一线销售难以当场答准，需要反复向后端工艺工程师求证。",
+      "en": "Prospective buyers ask detailed questions about particle‑size distributions, energy consumption and comparable plant installations. Field sales previously had to wait on senior process engineers before responding."
+    },
+    "challenges": [
+      {
+        "zh": "工艺参数分散在规格书与历史交付档案中，销售在客户现场查找缓慢。",
+        "en": "Specifications and past plant records lived across separate engineering files, slowing down field meetings."
+      },
+      {
+        "zh": "海外与跨时区线上访客咨询技术细节时，普通客服无法给出专业解答。",
+        "en": "International prospects asking technical questions outside business hours waited days for qualified replies."
+      },
+      {
+        "zh": "对外公开问答与内部报价参考需要严格的权限分级，敏感价格不能外泄。",
+        "en": "Public prospect Q&A and internal pricing benchmarks needed strict clearance separation."
+      }
+    ],
+    "whyNotGeneric": {
+      "zh": "工业选型依赖企业独有的设备实测数据库（如 P12 产线记录），且必须区分公开访客门户与内部销售工作台的查阅权限。",
+      "en": "Industrial equipment selection relies on proprietary plant performance records and requires separate access tiers for external prospects and internal sales engineers."
+    },
+    "stats": [
+      {
+        "value": { "zh": "7×24", "en": "24/7" },
+        "label": { "zh": "在线工程技术咨询", "en": "Technical & product consultation" },
+        "condition": { "zh": "对外公开助手全天候响应产品与工艺基础问询", "en": "Public portal answers product and process inquiries across time zones" },
+        "sourceId": "case-sales-consultant-ai"
+      },
+      {
+        "value": { "zh": "秒级", "en": "Seconds" },
+        "label": { "zh": "相似产线与设备记录检索", "en": "Comparable plant & spec retrieval" },
+        "condition": { "zh": "内部销售工作台按物料与产能匹配历史交付档案", "en": "Internal workbench matches historical machinery and plant records" },
+        "sourceId": "case-sales-consultant-ai"
+      },
+      {
+        "value": { "zh": "一客一稿", "en": "1‑to‑1" },
+        "label": { "zh": "针对性选型与销售参考", "en": "Tailored sales & pricing briefs" },
+        "condition": { "zh": "按客户物料需求组织案例与报价区间供人工确认", "en": "Assembles customer‑specific specs and pricing references for engineer review" },
+        "sourceId": "case-sales-consultant-ai"
+      }
+    ],
+    "beforeSummary": {
+      "zh": "客户提问需转交后端工程师排期回复，现场销售翻找多个文件夹拼凑材料。",
+      "en": "Inquiries waited in engineering queues while field reps searched scattered folders for comparable plants."
+    },
+    "afterSummary": {
+      "zh": "公开门户即时响应基础问询；内部工作台秒级调出匹配产线、工艺参数与内部报价参考。",
+      "en": "Public portal handles initial technical Q&A; internal workbench retrieves matched plant records and pricing in seconds."
+    },
+    "beforeTotalLabel": { "zh": "跨部门等待 1–3 天", "en": "1–3 days waiting on engineering" },
+    "afterTotalLabel": { "zh": "秒级调取产线记录 + 工程师复核报价", "en": "Instant plant match + engineer quote check" },
+    "afterWidthPercent": 20,
+    "beforeSegments": [
+      { "label": { "zh": "销售记录问题并转交工艺部", "en": "Log inquiry & forward to engineering" }, "weight": 35 },
+      { "label": { "zh": "翻查历史项目与设备台账", "en": "Manual search across plant archives" }, "weight": 40 },
+      { "label": { "zh": "整理选型参数与参考材料", "en": "Assemble spec sheet & reference deck" }, "weight": 25 }
+    ],
+    "afterSegments": [
+      { "label": { "zh": "AI 匹配设备规格与相似产线（秒级）", "en": "AI spec & plant record match (seconds)" }, "weight": 50 },
+      { "label": { "zh": "销售与工程师核对正式报价参数", "en": "Engineer verifies formal quote terms" }, "weight": 50, "isHumanReview": true }
+    ],
+    "outcome": {
+      "zh": "上线后，该企业的线上门户实现 7×24 小时专业技术应答，销售人员在客户现场即可秒级调取相似产线档案与内部报价参考。",
+      "en": "The company now fields 24/7 technical inquiries online while equipping field sales to pull comparable plant records, specifications and pricing references on the spot."
+    },
+    "techHighlights": [
+      { "zh": "双门户权限隔离：外部访客仅可检索公开规格，内部工作台解锁产线档案与价格参考。", "en": "Dual‑portal clearance separates public product specifications from internal plant records and pricing." },
+      { "zh": "多模态工程档案检索：将工艺文本结论与对应的设备实拍、三维布局记录关联展示。", "en": "Links quantitative process parameters directly to visual machinery and plant installation cards." },
+      { "zh": "引导式追问推荐：自动生成占地、能耗与报价细分追问，辅助销售推进深度沟通。", "en": "Contextual follow‑up prompts surface footprint, energy consumption and pricing checks during live calls." }
+    ],
+    "images": [
+      {
+        "src": "/media/lnpe-sales-ai/lnpe-sales-consultant-03-project-match.webp",
+        "caption": {
+          "zh": "内部工程顾问工作台：针对磷酸铁锂产线提问，返回 P12 数据库粒径参数并匹配真实气流磨与产线档案。",
+          "en": "Internal Engineering Workbench: answering an LFP inquiry with P12 particle‑size data and matched jet‑mill plant records."
+        }
+      },
+      {
+        "src": "/media/lnpe-sales-ai/lnpe-sales-consultant-01-public-assistant.webp",
+        "caption": {
+          "zh": "对外公开咨询门户：面向潜在客户全天候解答设备选型与工艺范围问题。",
+          "en": "Public technical assistant answering prospect questions on equipment lines and material compatibility."
+        }
+      },
+      {
+        "src": "/media/lnpe-sales-ai/lnpe-sales-consultant-02-access-portal.webp",
+        "caption": {
+          "zh": "权限分级入口：区分外部访客咨询通道与内部销售工程团队工作台。",
+          "en": "Role‑gated portal separating public visitor access from authenticated sales‑engineering tools."
+        }
+      },
+      {
+        "src": "/media/lnpe-sales-ai/lnpe-sales-consultant-04-price-reference.webp",
+        "caption": {
+          "zh": "内部报价参考视图：按历史相似产线配置调取价格区间，供销售准备正式方案前核对。",
+          "en": "Internal pricing reference screen surfacing historical configuration ranges for authorized staff."
+        }
+      }
+    ],
+    "mainImageIndex": 0,
+    "interfaceLanguage": "en",
+    "hotspots": [
+      {
+        "x": 76,
+        "y": 19,
+        "title": { "zh": "具体物料与产线选型提问", "en": "Material‑specific plant query" },
+        "detail": {
+          "zh": "销售直接输入客户关注的磷酸铁产线相似项目与工艺表现问题。",
+          "en": "Sales engineer queries comparable projects for Lithium Iron Phosphate processing."
+        }
+      },
+      {
+        "x": 42,
+        "y": 26,
+        "title": { "zh": "专有数据库实测指标引用", "en": "Grounded P12 database metrics" },
+        "detail": {
+          "zh": "精确调用 P12 数据库中的 D50 粒径控制数值（66.8 μm），避免模糊套话。",
+          "en": "Retrieves exact D50 particle‑size performance (66.8 μm) from the proprietary P12 database."
+        }
+      },
+      {
+        "x": 46,
+        "y": 48,
+        "title": { "zh": "自动匹配真实设备与工厂记录", "en": "Matched machinery & plant cards" },
+        "detail": {
+          "zh": "同步调出气流磨产线与历史交付工厂档案，方便现场向客户直观展示。",
+          "en": "Displays verified Jet Mill Line and LFP plant installation cards alongside the answer."
+        }
+      },
+      {
+        "x": 92,
+        "y": 24,
+        "title": { "zh": "T2 权限分级与库同步状态", "en": "Clearance level & live DB sync" },
+        "detail": {
+          "zh": "标明当前内部权限等级（Security Clearance T2）与 P12 数据库连接状态。",
+          "en": "Shows active T2 security clearance and real‑time connection status to internal nodes."
+        }
+      }
+    ],
+    "workflowSteps": [
+      {
+        "stage": { "zh": "01 资料库", "en": "01 Engineering DB" },
+        "title": { "zh": "设备规格书 + P12 产线台账", "en": "Equipment specs + plant records" },
+        "detail": { "zh": "结构化整理粉体装备参数、物料试验数据与历史交付报价档案。", "en": "Indexes machinery specs, material test metrics and historical plant configurations." },
+        "artifact": { "zh": "分级授权工程索引", "en": "Clearance‑tiered index" }
+      },
+      {
+        "stage": { "zh": "02 方案匹配", "en": "02 Project match" },
+        "title": { "zh": "按物料、粒径与产能检索匹配", "en": "Match by material & capacity" },
+        "detail": { "zh": "识别客户询问的物料特性，匹配最接近的已交付产线与关键指标。", "en": "Matches prospect material requirements against proven plant installations." },
+        "artifact": { "zh": "参数结论 + 产线档案卡", "en": "Grounded answer + plant cards" }
+      },
+      {
+        "stage": { "zh": "03 权限过滤", "en": "03 Access gate" },
+        "title": { "zh": "区分公开规格与内部价格区间", "en": "Public vs. internal pricing gate" },
+        "detail": { "zh": "外部通道自动隐去商业敏感价格；内部认证账号可调阅历史报价参考。", "en": "Strips commercial pricing on public channels while unlocking ranges for T2 staff." },
+        "artifact": { "zh": "合规脱敏输出", "en": "Clearance‑filtered response" }
+      },
+      {
+        "stage": { "zh": "04 工程师确认", "en": "04 Quote review" },
+        "title": { "zh": "工艺与销售审定正式技术方案", "en": "Engineer sign‑off on formal quote" },
+        "detail": { "zh": "针对高意向客户生成针对性选型材料草稿，由工程师核准后对外发送。", "en": "Tailored recommendation briefs are verified by process engineers before formal quoting." },
+        "artifact": { "zh": "一客一稿选型建议书", "en": "Verified customer brief" },
+        "humanCheckpoint": true
+      }
+    ],
+    "timeline": [
+      {
+        "phase": { "zh": "第 1–2 周 · 工艺资料盘点与分级", "en": "Weeks 1–2 · Spec & access audit" },
+        "duration": { "zh": "2 周", "en": "2 wks" },
+        "detail": { "zh": "梳理各产品线规格书、历史项目卡及内外网访问权限边界。", "en": "Cataloged machinery specs, plant records and public‑versus‑internal access tiers." }
+      },
+      {
+        "phase": { "zh": "第 3–5 周 · 工程检索与双门户开发", "en": "Weeks 3–5 · Dual‑portal build" },
+        "duration": { "zh": "3 周", "en": "3 wks" },
+        "detail": { "zh": "搭建参数精确检索管道、公开咨询助手与内部销售工程工作台。", "en": "Built parameter‑accurate retrieval, the public advisor and the T2 sales workbench." }
+      },
+      {
+        "phase": { "zh": "第 6–7 周 · 工艺工程师盲测校准", "en": "Weeks 6–7 · Engineer validation" },
+        "duration": { "zh": "2 周", "en": "2 wks" },
+        "detail": { "zh": "由资深工艺工程师核验百余组选型问答与相似产线推荐准确度。", "en": "Process engineers tested technical answers and plant matches across product lines." }
+      },
+      {
+        "phase": { "zh": "第 8 周 · 部署上线与销售培训", "en": "Week 8 · Production launch" },
+        "duration": { "zh": "1 周", "en": "1 wk" },
+        "detail": { "zh": "正式接入线上官网与销售移动端工作流，建立新项目档案月度同步机制。", "en": "Launched across web and field sales teams with monthly plant‑record updates." }
+      }
+    ],
+    "demoUrl": "https://lnpe-2026.vercel.app/",
+    "interactiveDemo": null
+  },
+  {
+    "slug": "nl-data-query",
+    "group": "core",
+    "industryKey": "retail",
+    "industry": {
+      "zh": "零售与供应链",
+      "en": "Retail & Supply Chain"
+    },
+    "title": {
+      "zh": "业务人员直接用自然语言查数，不再排队等 IT 导表",
+      "en": "Plain‑language inventory and sales queries without waiting for IT"
+    },
+    "metaDescription": {
+      "zh": "某零售与供应链企业的 SmartDoc AI 数据查询系统：只读连接业务数据库，0 行 SQL 实现自然语言秒级查数，内置五重 SQL 安全策略与审计日志。",
+      "en": "SmartDoc AI Data Query built by Cyano: read‑only PostgreSQL and MySQL connections let business teams query inventory and sales in plain language with full SQL policy guardrails."
+    },
+    "system": {
+      "zh": "SmartDoc AI 数据查询",
+      "en": "SmartDoc AI Data Query"
+    },
+    "solutionSlug": "data-query",
+    "solutionLabel": {
+      "zh": "业务数据查询与分析",
+      "en": "Data Query & Analytics"
+    },
+    "model": {
+      "zh": "低启动试点 + 持续服务",
+      "en": "Pilot + ongoing service"
+    },
+    "duration": {
+      "zh": "6 周",
+      "en": "6 weeks"
+    },
+    "profile": {
+      "zh": "某零售与供应链运营企业，SKU 数量多，日常库存预警、供应商履约与区域销量查询频繁。",
+      "en": "A retail and supply‑chain operator managing a large SKU catalog across regional warehouses and vendors."
+    },
+    "background": {
+      "zh": "运营与采购团队每天需要核对各区域销售额、低库存商品与供应商响应时效。由于业务人员不会编写 SQL，过去每次临时看数都要向数据团队提单排期。",
+      "en": "Operations and merchandising teams needed daily answers on regional sales, low‑stock SKUs and vendor SLAs, but every ad‑hoc question required filing a ticket for an analyst to write SQL."
+    },
+    "challenges": [
+      {
+        "zh": "常规临时查数需求排队一天以上，错过库存补货与促销调整窗口。",
+        "en": "Routine data requests waited a day or more in the IT queue, delaying restocking decisions."
+      },
+      {
+        "zh": "多套业务库字段命名复杂，直接开放数据库既不安全也容易算错口径。",
+        "en": "Raw table schemas across ERP, CRM and warehouse databases were too complex and risky to expose directly."
+      },
+      {
+        "zh": "企业合规要求严禁写操作与敏感列泄露，每次查询必须保留完整审计记录。",
+        "en": "Security rules required strict read‑only execution, PII column masking and full query audit trails."
+      }
+    ],
+    "whyNotGeneric": {
+      "zh": "业务查数必须绑定双方确认的统一指标语义层，并在执行前通过只读策略门禁（禁止改表、PII 脱敏、行数上限与审计编号记录）。",
+      "en": "Trusted analytics requires an agreed metric schema map plus a deterministic SQL policy gate enforcing SELECT‑only queries, PII masking, row limits and audit IDs."
+    },
+    "stats": [
+      {
+        "value": { "zh": "0 行", "en": "0 lines" },
+        "label": { "zh": "业务人员手写 SQL", "en": "SQL written by business users" },
+        "condition": { "zh": "直接用中文或英文日常业务问题发起查询", "en": "Operators ask questions in plain language; validated SQL is generated automatically" },
+        "sourceId": "case-nl-data-query"
+      },
+      {
+        "value": { "zh": "秒级", "en": "Seconds" },
+        "label": { "zh": "只读沙箱校验与返回结果", "en": "Policy‑checked query execution" },
+        "condition": { "zh": "实际耗时视数据库规模与查询复杂度而定（示例查询约 186ms）", "en": "Validated in read‑only sandbox (186 ms on benchmark vendor query)" },
+        "sourceId": "case-nl-data-query"
+      },
+      {
+        "value": { "zh": "5 重", "en": "5 gates" },
+        "label": { "zh": "SQL 安全策略自动校验", "en": "Automated SQL policy checks" },
+        "condition": { "zh": "只读 SELECT、零结构变更、PII 脱敏、LIMIT 限制与审计追踪", "en": "SELECT‑only, no DDL, PII masking, LIMIT enforcement and audit metadata" },
+        "sourceId": "case-nl-data-query"
+      }
+    ],
+    "beforeSummary": {
+      "zh": "向 IT 提交导数申请，等待排期编写 SQL 并手工导出表格，耗时一天以上。",
+      "en": "Submit an IT data request, wait in queue for custom SQL and receive a static spreadsheet a day later."
+    },
+    "afterSummary": {
+      "zh": "输入一句话问题，系统映射标准指标、通过五重只读门禁校验并秒级返回带审计编号的结果表。",
+      "en": "Ask in plain language; the system maps agreed schemas, passes 5 SQL policy gates and returns auditable results in seconds."
+    },
+    "beforeTotalLabel": { "zh": "IT 排期导数 1–2 天", "en": "1–2 days waiting for IT export" },
+    "afterTotalLabel": { "zh": "秒级只读查询 + SQL 透明可查", "en": "Seconds via read‑only SQL gate" },
+    "afterWidthPercent": 12,
+    "beforeSegments": [
+      { "label": { "zh": "填写取数需求单并排期", "en": "File data ticket & wait in queue" }, "weight": 50 },
+      { "label": { "zh": "数据人员手写 SQL 与核对口径", "en": "Analyst writes SQL & checks metric" }, "weight": 30 },
+      { "label": { "zh": "导出 Excel 发送业务方", "en": "Export CSV/Excel & email back" }, "weight": 20 }
+    ],
+    "afterSegments": [
+      { "label": { "zh": "自然语言转 SQL + 5 重策略门禁执行（秒级）", "en": "NL‑to‑SQL + 5 policy gates (seconds)" }, "weight": 55 },
+      { "label": { "zh": "业务核对生成的 SQL 口径与审计编号", "en": "Inspect generated SQL & citation ID" }, "weight": 45, "isHumanReview": true }
+    ],
+    "outcome": {
+      "zh": "上线后，采购与运营人员可用自然语言直接查询库存、销量与供应商履约数据，常规取数不再依赖 IT 导表队列。",
+      "en": "Merchandising and operations teams now query inventory, sales and vendor metrics directly in plain language, removing routine reporting from the IT backlog."
+    },
+    "techHighlights": [
+      { "zh": "只读数据库连接与字段级权限映射，从源头杜绝误删改生产表风险。", "en": "Read‑only PostgreSQL, MySQL and Snowflake connectors with table‑level permission mapping." },
+      { "zh": "五重策略沙箱（Policy Gate）逐条拦截非 SELECT 语句、未脱敏敏感字段与无上限全表扫描。", "en": "Deterministic Policy Gate blocks non‑SELECT statements, unmasked PII columns and unbounded scans." },
+      { "zh": "每行返回结果附带来源编号与完整执行审计日志，生成的 SQL 对审核人完全透明。", "en": "Every result row carries a citation ID and full SQL audit trail for complete transparency." }
+    ],
+    "images": [
+      {
+        "src": "/media/smartdoc-ui-suite/smartdoc-ui-suite-02-sql-control-center.webp",
+        "caption": {
+          "zh": "SQL 控制中心：展示只读连接池、自动生成的参数化 SQL 沙箱、五重安全门禁状态与带编号的查询结果预览。",
+          "en": "SQL Control Center: read‑only database connections, generated SQL sandbox, 5‑point policy gate and cited execution preview."
+        }
+      },
+      {
+        "src": "/media/smartdoc-ui-suite/smartdoc-ui-suite-01-dashboard-overview.webp",
+        "caption": {
+          "zh": "工作台总览：汇总知识库、数据查询连接状态与近期业务任务执行概览。",
+          "en": "Workspace overview summarizing active data connections, knowledge repositories and recent query tasks."
+        }
+      },
+      {
+        "src": "/media/smartdoc-ui-suite/smartdoc-ui-suite-03-knowledge-base.webp",
+        "caption": {
+          "zh": "业务口径与指标字典库：维护统一的表结构说明、指标计算公式与访问策略。",
+          "en": "Metric dictionary and knowledge base maintaining agreed schema definitions and calculation rules."
+        }
+      },
+      {
+        "src": "/media/smartdoc-ui-suite/smartdoc-ui-suite-04-proposal-builder.webp",
+        "caption": {
+          "zh": "数据驱动报告生成：将受控 SQL 查询出的真实指标直接引用进业务分析文档。",
+          "en": "Guided report builder embedding verified SQL facts directly into cited operational documents."
+        }
+      },
+      {
+        "src": "/media/smartdoc-ui-suite/smartdoc-ui-suite-05-review-audit.webp",
+        "caption": {
+          "zh": "合规复核与审计面板：集中检查 SQL 来源、策略门禁通过记录与审批流状态。",
+          "en": "Review & Audit workspace inspecting SQL provenance, PII masking logs and reviewer approvals."
+        }
+      },
+      {
+        "src": "/media/smartdoc-ui-suite/smartdoc-ui-suite-06-template-library.webp",
+        "caption": {
+          "zh": "常用分析模板库：沉淀周度销售复盘、低库存预警与供应商评估标准模板。",
+          "en": "Reusable template library for weekly sales reviews, safety‑stock alerts and vendor scorecards."
+        }
+      }
+    ],
+    "mainImageIndex": 0,
+    "interfaceLanguage": "en",
+    "hotspots": [
+      {
+        "x": 18,
+        "y": 34,
+        "title": { "zh": "只读业务库连接池", "en": "Read‑only DB connectors" },
+        "detail": {
+          "zh": "以只读账号接入 ERP PostgreSQL、数仓与 CRM MySQL，实时监控表结构同步状态。",
+          "en": "Connects to ERP PostgreSQL, warehouse and CRM MySQL via strictly read‑only credentials."
+        }
+      },
+      {
+        "x": 52,
+        "y": 36,
+        "title": { "zh": "透明可见的参数化 SQL 沙箱", "en": "Generated SQL sandbox" },
+        "detail": {
+          "zh": "将业务问题转为标准参数化 SQL，口径逻辑对技术与业务复核人完全公开。",
+          "en": "Displays the exact parameterized SQL statement generated from the user’s plain‑language question."
+        }
+      },
+      {
+        "x": 84,
+        "y": 34,
+        "title": { "zh": "五重安全策略门禁（Passed）", "en": "5‑point SQL Policy Gate" },
+        "detail": {
+          "zh": "执行前强制校验：仅限 SELECT、禁止改表、PII 字段脱敏、强制 LIMIT 与附加审计信息。",
+          "en": "Verifies SELECT‑only syntax, zero schema mutation, PII masking, row limits and audit tagging before execution."
+        }
+      },
+      {
+        "x": 72,
+        "y": 66,
+        "title": { "zh": "带溯源编号的结果与延迟监控", "en": "Cited results & audit trail" },
+        "detail": {
+          "zh": "186ms 返回结果预览，每行绑定 CIT 编号，并在底部记录完整审计轨迹。",
+          "en": "Returns tabular results in 186 ms with per‑row citation IDs and a persistent audit log below."
+        }
+      }
+    ],
+    "workflowSteps": [
+      {
+        "stage": { "zh": "01 语义字典", "en": "01 Schema map" },
+        "title": { "zh": "只读业务库 + 统一指标定义", "en": "Read‑only DBs + metric dictionary" },
+        "detail": { "zh": "映射 ERP、库存与销售表关系，固化毛利、周转等标准计算口径。", "en": "Maps ERP, inventory and sales schemas with agreed metric definitions." },
+        "artifact": { "zh": "受权限约束的语义层", "en": "Permission‑scoped schema graph" }
+      },
+      {
+        "stage": { "zh": "02 生成查询", "en": "02 NL‑to‑SQL" },
+        "title": { "zh": "自然语言解析为参数化 SQL", "en": "Plain language to parameterized SQL" },
+        "detail": { "zh": "解析时间范围、区域与商品条件，生成标准可读的查询语句。", "en": "Translates time window, region and SKU filters into clean parameterized SQL." },
+        "artifact": { "zh": "待校验 SQL 语句", "en": "Candidate SQL query" }
+      },
+      {
+        "stage": { "zh": "03 策略门禁", "en": "03 Policy gate" },
+        "title": { "zh": "五重只读与脱敏规则拦截", "en": "5‑gate read‑only & PII check" },
+        "detail": { "zh": "AST 语法级校验只读属性、自动遮蔽敏感列并强制附加查询上限。", "en": "AST‑level gate enforces SELECT‑only execution, PII masking and row limits." },
+        "artifact": { "zh": "审计日志 ID（CIT‑xxxx）", "en": "Audit log & citation ID" }
+      },
+      {
+        "stage": { "zh": "04 结果核验", "en": "04 Business review" },
+        "title": { "zh": "展示表格图表与口径说明", "en": "Result preview & SQL inspection" },
+        "detail": { "zh": "返回可视化报表并附所查表名与过滤条件，供业务人员确认后使用。", "en": "Presents tables and SQL scope notes so operators can verify definitions before acting." },
+        "artifact": { "zh": "可追溯经营数据报表", "en": "Auditable business report" },
+        "humanCheckpoint": true
+      }
+    ],
+    "timeline": [
+      {
+        "phase": { "zh": "第 1 周 · 核心表结构与口径对齐", "en": "Week 1 · Schema & metric alignment" },
+        "duration": { "zh": "1 周", "en": "1 wk" },
+        "detail": { "zh": "与数据及业务团队确认高频指标公式、只读账号权限与敏感字段清单。", "en": "Agreed on core KPI formulas, read‑only DB roles and PII masking rules." }
+      },
+      {
+        "phase": { "zh": "第 2–4 周 · 语义映射与安全门禁开发", "en": "Weeks 2–4 · SQL sandbox & policy gate" },
+        "duration": { "zh": "3 周", "en": "3 wks" },
+        "detail": { "zh": "完成自然语言转 SQL 引擎、五重安全门禁与查询审计界面。", "en": "Built the NL‑to‑SQL translator, 5‑point policy gate and audit log viewer." }
+      },
+      {
+        "phase": { "zh": "第 5 周 · 历史报表对账验证", "en": "Week 5 · Reconciliation testing" },
+        "duration": { "zh": "1 周", "en": "1 wk" },
+        "detail": { "zh": "用既有财务与库存周报逐项核对生成 SQL 的数值一致性。", "en": "Reconciled generated query outputs against established weekly finance and stock reports." }
+      },
+      {
+        "phase": { "zh": "第 6 周 · 试点上线与口径扩充", "en": "Week 6 · Rollout & ongoing tuning" },
+        "duration": { "zh": "1 周", "en": "1 wk" },
+        "detail": { "zh": "采购与区域运营团队上线使用，持续按新问题扩充常用分析模板。", "en": "Launched to merchandising teams with ongoing additions to the metric template library." }
+      }
+    ],
+    "demoUrl": null,
+    "interactiveDemo": "sql"
+  },
+  {
+    "slug": "property-management",
+    "group": "vertical",
+    "industryKey": "real-estate",
+    "industry": {
+      "zh": "房地产与物业",
+      "en": "Real Estate & Property"
+    },
+    "title": {
+      "zh": "从日常沟通与票据中自动提取费用，按房产整理收支账目",
+      "en": "Automated expense extraction and property‑level accounting"
+    },
+    "metaDescription": {
+      "zh": "某房产管理运营方的 AlphaHouse 记账与工单系统：从租客维修沟通与拍照票据中自动提取费用，按单套物业生成收支与年度表现报表。",
+      "en": "AlphaHouse property management system built by Cyano: extracts repair and tax expenses from tenant chats and OCR receipts into per‑property financial statements."
+    },
+    "system": {
+      "zh": "AlphaHouse 房东记账与管理工具",
+      "en": "AlphaHouse Property Ledger"
+    },
+    "solutionSlug": null,
+    "solutionLabel": {
+      "zh": "垂直场景定制",
+      "en": "Specialized vertical system"
+    },
+    "model": {
+      "zh": "完整定制开发",
+      "en": "Full custom build"
+    },
+    "duration": {
+      "zh": "8 周",
+      "en": "8 weeks"
+    },
+    "profile": {
+      "zh": "某多套出租物业管理与租赁运营方，日常需协调租客、维修工与多套房产账目。",
+      "en": "A residential rental and property management operator overseeing multiple leased properties, contractors and owner statements."
+    },
+    "background": {
+      "zh": "管理多套房源时，暖炉检修、水管维修、地税账单与租金流水分散在聊天消息和纸质票据中，月底手工对账耗时且容易漏记支出。",
+      "en": "Across dozens of units, furnace repairs, plumbing invoices, property‑tax bills and rent receipts arrived through scattered chat threads and paper photos, making monthly reconciliation error‑prone."
+    },
+    "challenges": [
+      {
+        "zh": "租客报修、维修工报价与完工确认散落在不同消息里，难以与账单对应。",
+        "en": "Tenant repair requests, contractor quotes and completion notes sat in separate chat threads."
+      },
+      {
+        "zh": "地税单、管理费收据需要手工录入金额、日期与归属房源。",
+        "en": "Property‑tax and HOA bills had to be keyed into spreadsheets manually per address."
+      },
+      {
+        "zh": "屋主希望随时在手机端查看单套物业净收益与年度收支结构。",
+        "en": "Property owners wanted clear mobile visibility into per‑unit net income and annual cash flow."
+      }
+    ],
+    "whyNotGeneric": {
+      "zh": "需要将移动端多角色沟通工单、票据 OCR 识别与房源级财务分类账打通，并在入账前保留运营人员一键核对环节。",
+      "en": "Requires tying mobile work‑order threads and receipt OCR directly into a property‑scoped ledger with operator confirmation before posting."
+    },
+    "stats": [
+      {
+        "value": { "zh": "自动提取", "en": "Automated" },
+        "label": { "zh": "票据与工单费用识别", "en": "Receipt & work‑order extraction" },
+        "condition": { "zh": "支持拍照票据 OCR 与维修对话费用提取", "en": "Extracts amounts, dates and categories from photos and repair chats" },
+        "sourceId": "case-property-management"
+      },
+      {
+        "value": { "zh": "多渠道归集", "en": "Unified" },
+        "label": { "zh": "租客、维修工与账单联动", "en": "Messages, work orders & ledger" },
+        "condition": { "zh": "每笔维修支出可直接回溯对应工单沟通记录", "en": "Every repair line item links back to its originating maintenance thread" },
+        "sourceId": "case-property-management"
+      },
+      {
+        "value": { "zh": "按房源核算", "en": "Per‑unit" },
+        "label": { "zh": "单套物业净收支与年报", "en": "Property P&L and annual reports" },
+        "condition": { "zh": "支持按全部房产或单套物业筛选收支表现", "en": "Switch between portfolio totals and individual property statements" },
+        "sourceId": "case-property-management"
+      }
+    ],
+    "beforeSummary": {
+      "zh": "月底翻找聊天记录与纸质收据，手工在表格里按房源拆分录入。",
+      "en": "End‑of‑month scramble through chat logs and paper receipts to update spreadsheets by hand."
+    },
+    "afterSummary": {
+      "zh": "日常维修工单与拍照账单自动识别金额与房源，运营人员确认后即时生成物业收支报表。",
+      "en": "Repair chats and snapped bills auto‑populate property expense entries, updating portfolio P&L upon confirmation."
+    },
+    "beforeTotalLabel": { "zh": "月底集中手工对账数天", "en": "Days of manual monthly reconciliation" },
+    "afterTotalLabel": { "zh": "日常拍照/工单即时归集入账", "en": "Real‑time OCR & chat capture + 1‑tap check" },
+    "afterWidthPercent": 22,
+    "beforeSegments": [
+      { "label": { "zh": "翻查各租客与维修工聊天记录", "en": "Scroll tenant & contractor chats" }, "weight": 40 },
+      { "label": { "zh": "手工抄录纸质税单与管理费收据", "en": "Type paper tax & utility bills" }, "weight": 35 },
+      { "label": { "zh": "按房源汇总月度与年度收支表", "en": "Compile per‑property Excel statements" }, "weight": 25 }
+    ],
+    "afterSegments": [
+      { "label": { "zh": "OCR 识票 + 工单对话自动提取费用", "en": "OCR bill scan + chat expense extraction" }, "weight": 55 },
+      { "label": { "zh": "管理人确认科目并生成屋主报表", "en": "Manager confirms entry & owner report" }, "weight": 45, "isHumanReview": true }
+    ],
+    "outcome": {
+      "zh": "上线后，该运营方的维修与票据账目在日常沟通中即可自动归集，屋主与管理人可随时在手机上查看每套房产的净收入与支出明细。",
+      "en": "Maintenance costs and utility bills are now captured as work happens, giving owners and managers live mobile visibility into every property’s net income."
+    },
+    "techHighlights": [
+      { "zh": "票据 OCR 与结构化字段提取，自动识别地税单、管理费与维修发票金额及日期。", "en": "Receipt and tax‑bill OCR extracts vendor, date, amount and expense category automatically." },
+      { "zh": "工单对话费用联动，从维修沟通中识别上门费与人工费并绑定对应房源。", "en": "Work‑order parser links agreed contractor charges directly to the affected property unit." },
+      { "zh": "移动优先的多角色工作台，集成消息、通讯录、工单跟踪与年度财务报表。", "en": "Mobile‑first workflow combining tenant messaging, contractor directory and property‑level P&L." }
+    ],
+    "images": [
+      {
+        "src": "/media/alpha-house-ai/alpha-house-04-finance.webp",
+        "caption": {
+          "zh": "财务与账单中心：展示全部房产总净收入、拍照上传税单/管理费 OCR 入口及关联工单的支出明细。",
+          "en": "Finance & Ledger screen showing portfolio net income, camera OCR upload for bills and work‑order‑linked expense items."
+        }
+      },
+      {
+        "src": "/media/alpha-house-ai/alpha-house-03-work-order-chat.webp",
+        "caption": {
+          "zh": "维修工单沟通页：在聊天流中自动识别故障描述、上门时间与维修费用。",
+          "en": "Work‑order chat thread automatically extracting repair scope, schedule and agreed fee."
+        }
+      },
+      {
+        "src": "/media/alpha-house-ai/alpha-house-02-messages.webp",
+        "caption": {
+          "zh": "多渠道消息收件箱：按房源与紧急程度归集租客及维修人员沟通。",
+          "en": "Unified message inbox organizing tenant and contractor threads by property."
+        }
+      },
+      {
+        "src": "/media/alpha-house-ai/alpha-house-06-reports.webp",
+        "caption": {
+          "zh": "单套物业年度表现报告：可视化呈现租金收入、维护支出与净回报结构。",
+          "en": "Annual property performance report breaking down rental income, maintenance costs and net yield."
+        }
+      },
+      {
+        "src": "/media/alpha-house-ai/alpha-house-05-contacts.webp",
+        "caption": {
+          "zh": "租客与维修供应商通讯录：关联历史服务记录与负责物业。",
+          "en": "Tenant and contractor directory linked to service history and assigned units."
+        }
+      },
+      {
+        "src": "/media/alpha-house-ai/alpha-house-01-login.webp",
+        "caption": {
+          "zh": "移动端安全登录入口：支持屋主与物业运营人员按角色查看对应资产。",
+          "en": "Mobile role‑based sign‑in for property owners and operations staff."
+        }
+      }
+    ],
+    "mainImageIndex": 0,
+    "interfaceLanguage": "zh",
+    "isMobileFrame": true,
+    "hotspots": [
+      {
+        "x": 48,
+        "y": 32,
+        "title": { "zh": "房产组合与单套净收益看板", "en": "Portfolio & unit net income card" },
+        "detail": {
+          "zh": "顶部可切换全部房产或指定房源，实时汇总总收入、总支出与年度报表。",
+          "en": "Filter by all properties or a single unit to inspect net income, gross rent and expenses."
+        }
+      },
+      {
+        "x": 48,
+        "y": 56,
+        "title": { "zh": "税单与管理费拍照 OCR 入账", "en": "One‑tap OCR bill capture" },
+        "detail": {
+          "zh": "手机拍照上传地税单或管理费账单，自动提取金额、日期并预填支出科目。",
+          "en": "Snap property‑tax or HOA statements to extract amounts and pre‑fill ledger entries."
+        }
+      },
+      {
+        "x": 48,
+        "y": 71,
+        "title": { "zh": "工单自动关联的账目明细", "en": "Work‑order‑linked expense rows" },
+        "detail": {
+          "zh": "暖炉检查与修水管支出自动带出“工单”标签，点开即可核对当时的维修沟通。",
+          "en": "Furnace and plumbing charges carry a work‑order badge linking straight back to the repair chat."
+        }
+      },
+      {
+        "x": 48,
+        "y": 87,
+        "title": { "zh": "消息、维修工与财务一体化", "en": "Integrated mobile operator bar" },
+        "detail": {
+          "zh": "在一个移动应用内串联消息通知、供应商名录、工单进度与财务账本。",
+          "en": "Connects messages, contacts, contractor dispatch and accounting in one mobile workflow."
+        }
+      }
+    ],
+    "workflowSteps": [
+      {
+        "stage": { "zh": "01 日常输入", "en": "01 Daily inputs" },
+        "title": { "zh": "租客报修消息 + 纸质账单拍照", "en": "Repair chats + photographed bills" },
+        "detail": { "zh": "汇集租客沟通、维修工报价消息以及手机拍摄的税单收据。", "en": "Captures tenant messages, contractor quotes and photographed tax or utility bills." },
+        "artifact": { "zh": "原始消息流与票据图像", "en": "Raw threads & receipt scans" }
+      },
+      {
+        "stage": { "zh": "02 智能解析", "en": "02 AI extraction" },
+        "title": { "zh": "OCR 识别与工单要素提取", "en": "OCR & work‑order parsing" },
+        "detail": { "zh": "提取房源地址、维修事项、发生日期与金额，自动匹配收支分类。", "en": "Extracts property unit, vendor, date, amount and accounting category." },
+        "artifact": { "zh": "待复核分录草稿", "en": "Draft ledger entry" }
+      },
+      {
+        "stage": { "zh": "03 账单核对", "en": "03 Operator check" },
+        "title": { "zh": "管理人一键核实金额与归属", "en": "Manager verifies unit & amount" },
+        "detail": { "zh": "运营人员对照原图与工单聊天确认无误后正式记入对应房源账本。", "en": "Property manager confirms extracted figures against the receipt or chat before posting." },
+        "artifact": { "zh": "带工单溯源的正式账目", "en": "Verified ledger record" },
+        "humanCheckpoint": true
+      },
+      {
+        "stage": { "zh": "04 收益报表", "en": "04 Owner reporting" },
+        "title": { "zh": "按物业生成月度与年度表现报告", "en": "Per‑property P&L & annual statements" },
+        "detail": { "zh": "自动汇总每套房产净现金流与费用占比，供屋主随时查阅与报税准备。", "en": "Updates per‑property cash‑flow dashboards and exportable annual owner statements." },
+        "artifact": { "zh": "单套物业收支年报", "en": "Property performance statement" }
+      }
+    ],
+    "timeline": [
+      {
+        "phase": { "zh": "第 1–2 周 · 租赁与记账流程梳理", "en": "Weeks 1–2 · Workflow & ledger design" },
+        "duration": { "zh": "2 周", "en": "2 wks" },
+        "detail": { "zh": "梳理报修派单流程、常见票据样式与屋主财务报表科目。", "en": "Mapped maintenance dispatch steps, bill formats and owner accounting categories." }
+      },
+      {
+        "phase": { "zh": "第 3–5 周 · 移动工作台与 OCR 开发", "en": "Weeks 3–5 · Mobile app & OCR pipeline" },
+        "duration": { "zh": "3 周", "en": "3 wks" },
+        "detail": { "zh": "完成移动端消息工单、票据 OCR 提取与按房源记账模块。", "en": "Built mobile messaging, receipt OCR extraction and property‑scoped ledger views." }
+      },
+      {
+        "phase": { "zh": "第 6–7 周 · 历史票据与工单实测", "en": "Weeks 6–7 · Real‑bill testing" },
+        "duration": { "zh": "2 周", "en": "2 wks" },
+        "detail": { "zh": "使用真实地税单、维修收据与多房源账目校验提取准确度。", "en": "Tested extraction accuracy on historical tax statements, contractor invoices and chats." }
+      },
+      {
+        "phase": { "zh": "第 8 周 · 运营团队与屋主上线", "en": "Week 8 · Operator rollout" },
+        "duration": { "zh": "1 周", "en": "1 wk" },
+        "detail": { "zh": "多套在管房源正式迁入日常使用，按月自动生成屋主对账单。", "en": "Rolled out across managed properties for daily mobile expense capture and reporting." }
+      }
+    ],
+    "demoUrl": "https://alphahouse-demo.vercel.app/",
+    "interactiveDemo": null
+  },
+  {
+    "slug": "writing-memory-engine",
+    "group": "vertical",
+    "industryKey": "media",
+    "industry": {
+      "zh": "内容与传媒",
+      "en": "Content & Media"
+    },
+    "title": {
+      "zh": "可控记忆层与多分支管理，支撑百万字级长篇连载创作",
+      "en": "Controlled memory and branch isolation for million‑word narratives"
+    },
+    "metaDescription": {
+      "zh": "某长篇内容创作团队的 DME 写作引擎项目：设计百万字级设定记忆管理、平行剧情分支隔离与多模型切换能力，解决长篇创作前后设定冲突问题。",
+      "en": "DME Writing Engine built by Cyano: manages million‑word story canon, isolated plot branches and multi‑model routing so long‑form narratives stay consistent."
+    },
+    "system": {
+      "zh": "DME 写作引擎",
+      "en": "DME Writing Engine"
+    },
+    "solutionSlug": null,
+    "solutionLabel": {
+      "zh": "垂直场景定制",
+      "en": "Specialized vertical system"
+    },
+    "model": {
+      "zh": "完整定制开发",
+      "en": "Full custom build"
+    },
+    "duration": {
+      "zh": "10 周",
+      "en": "10 weeks"
+    },
+    "profile": {
+      "zh": "某专业长篇小说与影视剧本创作团队，单部作品体量达数十万至百万字。",
+      "en": "A serialized fiction and scriptwriting studio developing multi‑arc narratives spanning hundreds of thousands to over a million words."
+    },
+    "background": {
+      "zh": "在长篇连载与多线剧本推演中，人物动机、时间线伏笔与世界观规则多达数百条。普通对话窗口一旦超过几十轮就会遗忘早期设定，尝试不同剧情走向时还会把废弃分支的细节混入正稿。",
+      "en": "Long‑running series accumulate hundreds of character constraints, timeline clues and world rules. Standard chat tools forget early canon as chapters grow and bleed discarded plot experiments into the main storyline."
+    },
+    "challenges": [
+      {
+        "zh": "百万字级设定资料远超单次模型输入上限，全量塞入既昂贵又容易顾此失彼。",
+        "en": "A million‑word story bible cannot fit cleanly into a single prompt without high cost and missed details."
+      },
+      {
+        "zh": "推演“冷静谈判”与“行动失控”等不同走向时，平行分支记忆容易互相污染。",
+        "en": "Exploring alternate chapter directions caused conventional chat threads to mix up canon across branches."
+      },
+      {
+        "zh": "团队希望按章节任务灵活切换云端商业大模型与本地私有模型。",
+        "en": "Writers needed to switch seamlessly between frontier cloud models and local private endpoints."
+      }
+    ],
+    "whyNotGeneric": {
+      "zh": "需要独立的树状分支状态机与可审查的“记忆抽屉”，让作者精确决定哪条伏笔入库、哪个分支生效，而不是任由黑盒上下文随意截断。",
+      "en": "Requires explicit branch‑isolated state trees and an inspectable memory drawer where authors approve which canon cards enter active context."
+    },
+    "stats": [
+      {
+        "value": { "zh": "百万字级", "en": "1M+ words" },
+        "label": { "zh": "设定与归档记忆容量", "en": "Designed story‑memory capacity" },
+        "condition": { "zh": "指记忆库分层归档管理容量，按当前章节动态装载所需片段", "en": "Managed archive capacity; loads only chapter‑relevant fragments per request" },
+        "sourceId": "case-writing-memory-engine"
+      },
+      {
+        "value": { "zh": "多分支", "en": "Multi‑branch" },
+        "label": { "zh": "平行剧情线隔离推演", "en": "Isolated storyline branches" },
+        "condition": { "zh": "各分支拥有独立记忆快照，切换走向互不串设定", "en": "Separate memory snapshots per branch prevent canon cross‑contamination" },
+        "sourceId": "case-writing-memory-engine"
+      },
+      {
+        "value": { "zh": "多模型", "en": "Multi‑model" },
+        "label": { "zh": "主流 API 与私有模型兼容", "en": "Cloud & private model routing" },
+        "condition": { "zh": "同一套设定记忆库可跨不同生成模型复用", "en": "Story memory and fragments stay portable across cloud and local models" },
+        "sourceId": "case-writing-memory-engine"
+      }
+    ],
+    "beforeSummary": {
+      "zh": "手工维护冗长设定文档并反复粘贴提示词，切换剧情走向时经常出现人物前后矛盾。",
+      "en": "Manually pasting character sheets into chat windows and untangling contradictions whenever plotlines branched."
+    },
+    "afterSummary": {
+      "zh": "按章节自动装载相关设定卡片，树状切换平行剧情分支，自动提炼新伏笔经作者确认后归档。",
+      "en": "Relevant canon cards load automatically per scene, branches stay isolated, and new plot hooks enter memory only after author approval."
+    },
+    "beforeTotalLabel": { "zh": "手工粘贴设定 + 频繁修补穿帮", "en": "Manual prompt pasting + canon drift" },
+    "afterTotalLabel": { "zh": "按需装载记忆抽屉 + 分支零串线", "en": "Scoped memory drawer + clean branch switch" },
+    "afterWidthPercent": 24,
+    "beforeSegments": [
+      { "label": { "zh": "手工翻找旧章节核对人物细节", "en": "Search back‑chapters for character facts" }, "weight": 40 },
+      { "label": { "zh": "复制粘贴长段设定占用上下文", "en": "Paste bulky lore notes every session" }, "weight": 30 },
+      { "label": { "zh": "排查并返工前后穿帮的剧情段落", "en": "Rewrite scenes broken by canon drift" }, "weight": 30 }
+    ],
+    "afterSegments": [
+      { "label": { "zh": "记忆引擎按分支与场景动态装载设定", "en": "Branch‑scoped dynamic memory loading" }, "weight": 50 },
+      { "label": { "zh": "主创确认新伏笔卡片并选定正稿分支", "en": "Author approves memory cards & canon branch" }, "weight": 50, "isHumanReview": true }
+    ],
+    "outcome": {
+      "zh": "上线后，创作团队可在平行分支中自由推演不同剧情走向而不污染正稿设定，长篇连载中的人物底线与伏笔回收保持前后一致。",
+      "en": "Writers now test alternate chapter arcs without polluting main‑line canon, keeping character rules and foreshadowed clues consistent across long‑form serials."
+    },
+    "techHighlights": [
+      { "zh": "可视化的记忆抽屉与碎片库，每条人物性格、关键谎言与伏笔均可独立查看、编辑与启停。", "en": "Inspectable memory drawer and fragment library where every character rule and clue can be toggled or edited." },
+      { "zh": "树状会话分支快照（如 1/2 与 2/2 走向对比），切换分支时同步切换对应的上下文状态。", "en": "Tree‑structured branch snapshots switch active memory state cleanly alongside conversation turns." },
+      { "zh": "模型无关的连接层与打包归档机制，支持将整部作品的设定包导出备份或切换底层模型。", "en": "Model‑agnostic connector layer and portable archive packs decouple story memory from any single LLM." }
+    ],
+    "images": [
+      {
+        "src": "/media/dme-writing-engine/dme-writing-engine-01-chat-branch-switch.webp",
+        "caption": {
+          "zh": "多分支推演主界面：对比“分支 B：行动失控线（2/2）”，自动提炼人物底线与关键伏笔为待入库记忆卡片。",
+          "en": "Branch comparison workspace evaluating Branch B (2/2) and proposing structured character and plot‑hook memory cards."
+        }
+      },
+      {
+        "src": "/media/dme-writing-engine/dme-writing-engine-02-chat-memory-drawer.webp",
+        "caption": {
+          "zh": "会话记忆抽屉：展示当前章节已装载的人物设定、地点规则与生效状态。",
+          "en": "Active memory drawer inspecting character profiles, location rules and pinned constraints for the scene."
+        }
+      },
+      {
+        "src": "/media/dme-writing-engine/dme-writing-engine-03-context-memory-stats.webp",
+        "caption": {
+          "zh": "上下文与记忆计量面板：实时监控各层级记忆占用的 Token 预算与命中情况。",
+          "en": "Context and memory telemetry view tracking token allocation across active and archived memory tiers."
+        }
+      },
+      {
+        "src": "/media/dme-writing-engine/dme-writing-engine-04-note-editor-ai-panel.webp",
+        "caption": {
+          "zh": "沉浸式正文编辑器与 AI 辅助侧栏：边写正稿边调用已验证的世界观设定。",
+          "en": "Manuscript editor paired with the context‑aware AI assistant panel."
+        }
+      },
+      {
+        "src": "/media/dme-writing-engine/dme-writing-engine-05-fragments-library-bulk.webp",
+        "caption": {
+          "zh": "设定碎片库批量管理：按人物、章节与标签筛选、合并或归档大量设定条目。",
+          "en": "Fragment library supporting bulk filtering, tagging and curation across hundreds of lore entries."
+        }
+      },
+      {
+        "src": "/media/dme-writing-engine/dme-writing-engine-06-archive-pack-inspect.webp",
+        "caption": {
+          "zh": "归档包检查器：查看长篇作品阶段性记忆快照包的结构与版本记录。",
+          "en": "Archive pack inspector verifying versioned story‑bible snapshots."
+        }
+      },
+      {
+        "src": "/media/dme-writing-engine/dme-writing-engine-07-connections-settings.webp",
+        "caption": {
+          "zh": "多模型连接配置：统一管理主流云端模型 API 与本地私有推理端点。",
+          "en": "Multi‑model connection settings configuring cloud APIs and local private inference endpoints."
+        }
+      },
+      {
+        "src": "/media/dme-writing-engine/dme-writing-engine-00-startup-loading.webp",
+        "caption": {
+          "zh": "引擎启动与本地记忆索引初始化界面。",
+          "en": "Engine initialization loading workspace indexes and memory stores."
+        }
+      }
+    ],
+    "mainImageIndex": 0,
+    "interfaceLanguage": "zh",
+    "hotspots": [
+      {
+        "x": 83,
+        "y": 4,
+        "title": { "zh": "单次会话独立设定抽屉", "en": "Isolated session memory drawer" },
+        "detail": {
+          "zh": "顶部明确指示当前会话绑定的独立设定集，点击即可展开核查生效条目。",
+          "en": "Displays active session memory scope with one‑click inspection of loaded canon rules."
+        }
+      },
+      {
+        "x": 90,
+        "y": 12,
+        "title": { "zh": "实时记忆容量与预算监控", "en": "Live MEMO budget meter" },
+        "detail": {
+          "zh": "实时显示当前装载记忆与总归档容量，避免无效历史撑爆上下文窗口。",
+          "en": "Tracks active memory tokens against total archive capacity so prompts stay lean."
+        }
+      },
+      {
+        "x": 34,
+        "y": 36,
+        "title": { "zh": "平行剧情分支对比与切换（2/2）", "en": "Parallel plot‑branch switcher" },
+        "detail": {
+          "zh": "在同一节点对比“冷静谈判”与“行动失控”两条走向及其悬疑利弊，互不串线。",
+          "en": "Switches cleanly between alternate plot branches (1/2 vs. 2/2) with isolated state."
+        }
+      },
+      {
+        "x": 32,
+        "y": 77,
+        "title": { "zh": "待主创确认的伏笔记忆卡片建议", "en": "Author‑approved memory cards" },
+        "detail": {
+          "zh": "自动将人物底线与第三章待回收伏笔整理为结构化卡片，经作者确认后才写入记忆库。",
+          "en": "Proposes structured character‑rule and foreshadowing cards that enter canon only when approved."
+        }
+      }
+    ],
+    "workflowSteps": [
+      {
+        "stage": { "zh": "01 设定碎片库", "en": "01 Story bible" },
+        "title": { "zh": "人物小传、世界规则与章节归档", "en": "Character rules, lore & chapter packs" },
+        "detail": { "zh": "将长篇设定拆分为带标签的结构化记忆碎片与阶段归档包。", "en": "Organizes character rules, timeline facts and chapter history into tagged fragments." },
+        "artifact": { "zh": "分层设定记忆库", "en": "Tiered canon repository" }
+      },
+      {
+        "stage": { "zh": "02 按需装载", "en": "02 Scoped loading" },
+        "title": { "zh": "按当前出场人物与分支装配上下文", "en": "Scene & branch context assembly" },
+        "detail": { "zh": "只把当前场景涉及的人物底线与有效分支状态装入模型预算。", "en": "Loads only active‑branch state and scene‑relevant character cards into the prompt." },
+        "artifact": { "zh": "纯净分支上下文快照", "en": "Branch‑clean context window" }
+      },
+      {
+        "stage": { "zh": "03 多线推演", "en": "03 Multi‑branch draft" },
+        "title": { "zh": "跨模型生成走向并提取新伏笔", "en": "Generate arcs & extract new hooks" },
+        "detail": { "zh": "支持切换不同模型推演多个章节方案，并自动摘出新增剧情事实。", "en": "Evaluates alternate plot arcs across chosen models and surfaces new canon candidates." },
+        "artifact": { "zh": "候选记忆卡片建议", "en": "Candidate memory cards" }
+      },
+      {
+        "stage": { "zh": "04 主创审定", "en": "04 Canon sign‑off" },
+        "title": { "zh": "作者拍板正稿分支与入库设定", "en": "Author locks branch & canon cards" },
+        "detail": { "zh": "由主创人员决定采纳哪条分支及哪些伏笔卡片正式写入长期记忆。", "en": "Lead writer approves which storyline branch and memory cards commit to long‑term canon." },
+        "artifact": { "zh": "前后一致的连载正稿", "en": "Consistent serialized manuscript" },
+        "humanCheckpoint": true
+      }
+    ],
+    "timeline": [
+      {
+        "phase": { "zh": "第 1–2 周 · 长篇创作痛点与记忆建模", "en": "Weeks 1–2 · Memory model design" },
+        "duration": { "zh": "2 周", "en": "2 wks" },
+        "detail": { "zh": "与编剧及作者梳理设定分类、分支回滚逻辑与人工确认节点。", "en": "Defined fragment schemas, branch isolation rules and author approval workflows." }
+      },
+      {
+        "phase": { "zh": "第 3–6 周 · 记忆抽屉与分支引擎开发", "en": "Weeks 3–6 · Branch & drawer engine" },
+        "duration": { "zh": "4 周", "en": "4 wks" },
+        "detail": { "zh": "实现树状会话分支、动态上下文预算统计、碎片库与归档包机制。", "en": "Built tree‑branch state, live token telemetry, bulk fragment management and archive packs." }
+      },
+      {
+        "phase": { "zh": "第 7–8 周 · 多模型接入与长卷压测", "en": "Weeks 7–8 · Long‑arc stress testing" },
+        "duration": { "zh": "2 周", "en": "2 wks" },
+        "detail": { "zh": "接入主流云端与私有模型端点，用数十万字连载样本测试设定召回一致性。", "en": "Integrated cloud and private LLM endpoints and tested recall across multi‑volume drafts." }
+      },
+      {
+        "phase": { "zh": "第 9–10 周 · 编辑器整合与交付上线", "en": "Weeks 9–10 · Studio deployment" },
+        "duration": { "zh": "2 周", "en": "2 wks" },
+        "detail": { "zh": "完善正文编辑器联动交互并交付创作团队日常连载使用。", "en": "Delivered the integrated note editor and memory suite to the writing team." }
+      }
+    ],
+    "demoUrl": null,
+    "interactiveDemo": null
+  }
+]

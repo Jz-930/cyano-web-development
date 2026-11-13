@@ -1,0 +1,446 @@
+[
+  {
+    "slug": "sales-ai",
+    "name": {
+      "zh": "销售与客户咨询 AI",
+      "en": "Sales & Customer AI"
+    },
+    "shortName": {
+      "zh": "销售与咨询",
+      "en": "Sales & Advisory"
+    },
+    "promise": {
+      "zh": "根据产品资料与历史项目，专业回答客户问题",
+      "en": "Answer customer questions from your product and project records"
+    },
+    "intro": {
+      "zh": "连接产品规格书、技术参数库与过往交付案例，对外提供 7×24 小时在线技术应答，对内辅助销售秒级匹配相似项目并准备针对性材料。",
+      "en": "Connect product specifications, engineering parameters and past project records to answer prospect inquiries 24/7 and help field reps prepare tailored recommendations in seconds."
+    },
+    "metaDescription": {
+      "zh": "Cyano 销售与客户咨询 AI 解决方案：基于真实产品规格与历史项目库回答客户技术问询，支持公开问答门户与内部销售选型工作台。",
+      "en": "Cyano Sales & Customer AI solutions: ground technical inquiries, comparable project matching and tailored sales briefs in your verified product records."
+    },
+    "deliverables": [
+      { "zh": "7×24 小时在线产品与技术问答门户", "en": "24/7 product and technical Q&A portal" },
+      { "zh": "内部销售选型与相似项目匹配工作台", "en": "Internal project‑matching & spec workbench" },
+      { "zh": "按客户需求生成的针对性销售参考材料", "en": "Customer‑specific recommendation briefs" },
+      { "zh": "公开资料与内部报价分级权限控制", "en": "Public‑vs‑internal pricing access controls" }
+    ],
+    "capabilities": [
+      {
+        "title": { "zh": "参数级精确检索", "en": "Parameter‑exact retrieval" },
+        "detail": { "zh": "针对型号、粒径、功耗等数值指标做结构化索引，杜绝张冠李戴。", "en": "Indexes model numbers, tolerances and capacities structurally so figures never blur across products." }
+      },
+      {
+        "title": { "zh": "内外网双级权限门禁", "en": "Dual‑tier clearance gates" },
+        "detail": { "zh": "外部访客仅看公开规格，内部认证销售可调阅历史产线与报价区间。", "en": "Prospects see approved public specs while authenticated reps unlock plant records and pricing ranges." }
+      },
+      {
+        "title": { "zh": "工程师正式报价复核点", "en": "Engineer quote sign‑off" },
+        "detail": { "zh": "涉及非标定制与正式商务承诺时自动打包参数转交工程师确认。", "en": "Routes custom configurations and binding commercial quotes to engineers with pre‑filled context." }
+      }
+    ],
+    "caseSlug": "sales-consultant-ai",
+    "pains": [
+      {
+        "title": { "zh": "销售现场查资料慢", "en": "Slow spec lookup in client meetings" },
+        "scenario": {
+          "zh": "客户在会议现场追问特定物料参数与过往相似产线时，销售要在多个文件夹和群聊里翻找，当场答不上来。",
+          "en": "When buyers ask about specific material tolerances or comparable installations live on a call, reps have to dig through scattered PDFs and chat logs."
+        },
+        "metricTag": { "zh": "现状：跨部门等待 1–3 天", "en": "Today: 1–3 day engineering wait" }
+      },
+      {
+        "title": { "zh": "专业技术问题客服接不住", "en": "Support cannot field specialist questions" },
+        "scenario": {
+          "zh": "海外跨时区访客或线上线索询问具体工艺指标时，常规客服只能留资转交，响应慢导致高意向线索流失。",
+          "en": "International prospects asking detailed process questions outside local hours get generic form replies instead of substantive engineering answers."
+        },
+        "metricTag": { "zh": "现状：非工作时间线索流失", "en": "Today: After‑hours lead drop‑off" }
+      },
+      {
+        "title": { "zh": "销售材料千篇一律", "en": "One‑size‑fits‑all sales collateral" },
+        "scenario": {
+          "zh": "不同行业客户拿到的都是同一份通用宣传册，人工按客户工况挑选案例并重排方案耗时太长。",
+          "en": "Every prospect receives the same generic brochure because assembling industry‑matched case studies by hand takes hours per lead."
+        },
+        "metricTag": { "zh": "现状：人工拼材料数小时/份", "en": "Today: Hours per custom brief" }
+      }
+    ],
+    "workflow": [
+      {
+        "stage": { "zh": "输入源", "en": "Sources" },
+        "title": { "zh": "产品规格书 + 历史项目台账", "en": "Product specs + project archive" },
+        "detail": { "zh": "接入型号参数、实测记录与分级报价表", "en": "Specs, plant records & tiered pricing" },
+        "badge": { "zh": "ACL 权限分级", "en": "Role‑tiered" }
+      },
+      {
+        "stage": { "zh": "AI 编排", "en": "Orchestration" },
+        "title": { "zh": "工况解析与相似案例匹配", "en": "Requirement parse & case match" },
+        "detail": { "zh": "按物料、产能匹配实测指标与交付档案", "en": "Matches material & capacity to records" },
+        "badge": { "zh": "秒级检索", "en": "Sub‑second" }
+      },
+      {
+        "stage": { "zh": "校验复核", "en": "Verification" },
+        "title": { "zh": "敏感报价过滤 + 工程师确认", "en": "Price gate + engineer review" },
+        "detail": { "zh": "公开端脱敏，正式方案经工程师审定", "en": "Masks public quotes; engineer approves" },
+        "badge": { "zh": "人工复核点", "en": "Human check" },
+        "humanReview": true
+      },
+      {
+        "stage": { "zh": "业务输出", "en": "Output" },
+        "title": { "zh": "即时专业问答与一客一稿材料", "en": "Grounded Q&A & tailored brief" },
+        "detail": { "zh": "附设备档案卡与可编辑选型建议书", "en": "Matched plant cards & editable brief" },
+        "badge": { "zh": "7×24 在线", "en": "24/7 ready" }
+      }
+    ],
+    "faqs": [
+      {
+        "q": { "zh": "公开问答助手会不会把内部底价或客户名称泄露出去？", "en": "Could the public assistant expose internal pricing or confidential client names?" },
+        "a": { "zh": "不会。对外门户与内部销售工作台使用严格分离的索引范围：公开索引在入库前已剔除底价与脱敏客户身份，内部报价参考仅对通过身份认证的员工可见。", "en": "No. Public and internal portals query physically separated index scopes. Sensitive pricing and client identifiers are excluded from the public index and require authenticated staff clearance." }
+      },
+      {
+        "q": { "zh": "产品参数更新或新增交付案例后，怎么同步到系统？", "en": "How do we keep specifications and new project records up to date?" },
+        "a": { "zh": "支持后台上传新版规格表或定时同步业务数据库。旧版参数归档停用后不会再被检索进新回答中。", "en": "You can upload revised spec sheets or sync directly from your database on a schedule. Superseded versions are archived immediately so outdated tolerances stop appearing." }
+      },
+      {
+        "q": { "zh": "多久能看到第一版效果？", "en": "How quickly can we test a first working version?" },
+        "a": { "zh": "可以从一条核心产品线开始做低启动试点，通常 2–6 周即可上线供销售与技术团队实测验收。", "en": "Most teams start with one flagship product line in a focused pilot, reaching a working version for field testing in 2–6 weeks." }
+      }
+    ]
+  },
+  {
+    "slug": "document-automation",
+    "name": {
+      "zh": "文档、标书与方案自动化",
+      "en": "Document & Proposal Automation"
+    },
+    "shortName": {
+      "zh": "文档与标书",
+      "en": "Docs & Proposals"
+    },
+    "promise": {
+      "zh": "连接历史方案与参数库，标书与报告初稿最快 15 分钟",
+      "en": " cited proposal and report drafts in as little as 15 minutes"
+    },
+    "intro": {
+      "zh": "把分散的历史标书、行业法规、案例履历与项目参数连接起来，按企业既定章节模板分步生成有引用出处、经过完整性检查的可编辑初稿。",
+      "en": "Connect past proposals, compliance documents and project parameters into staged workflows that produce editable, source‑cited drafts with automated completeness checks."
+    },
+    "metaDescription": {
+      "zh": "Cyano 文档、标书与方案自动化解决方案：基于企业历史方案与参数库分步起草可编辑标书初稿，内置引用溯源与完整性自动检查。",
+      "en": "Cyano Document & Proposal Automation: generate editable, source‑cited proposals and due‑diligence reports in 15 minutes with automated completeness checks."
+    },
+    "deliverables": [
+      { "zh": "按章节模板生成的可编辑方案/标书初稿", "en": "Editable section‑by‑section proposal drafts" },
+      { "zh": "逐段关联原文的引用溯源与版本标注", "en": "Paragraph‑level source citations & version tags" },
+      { "zh": "必填章节、参数一致性与敏感假设自动检查", "en": "Automated completeness & assumption checks" },
+      { "zh": "双栏对比复核界面与标准 Word/PDF 导出", "en": "Split‑screen human review & Word/PDF export" }
+    ],
+    "capabilities": [
+      {
+        "title": { "zh": "历史经验与当期约束分离", "en": "Reusable facts vs. project constraints" },
+        "detail": { "zh": "严格区分可复用的公司资质方案与仅属旧项目的特定报价假设，防止串标与错填。", "en": "Separates reusable technical boilerplate from legacy client assumptions so old terms never leak into new bids." }
+      },
+      {
+        "title": { "zh": "分阶段可中断起草流水线", "en": "Staged, inspectable drafting" },
+        "detail": { "zh": "按诉求提取、提纲确认、分章检索起草与全篇质检依次推进，每步可人工干预。", "en": "Runs intake, outline approval, section drafting and full QA in stages rather than one opaque generation." }
+      },
+      {
+        "title": { "zh": "定制化完整性核验清单", "en": "Custom completeness gates" },
+        "detail": { "zh": "将企业的审稿标准配置为自动检查项，漏项或敏感假设未确认前醒目提示。", "en": "Codifies your review rubric into automated checks that flag missing sections and unverified numbers." }
+      }
+    ],
+    "caseSlug": "proposal-generation",
+    "pains": [
+      {
+        "title": { "zh": "历史优秀方案难以复用", "en": "Past winning proposals sit scattered" },
+        "scenario": {
+          "zh": "写过的几十份高质量标书和尽调报告散落在不同项目组成员电脑里，每次遇到新项目都要重新到处找参考。",
+          "en": "Dozens of strong past proposals and technical write‑ups sit on individual laptops, forcing every new bid to start from a manual file hunt."
+        },
+        "metricTag": { "zh": "现状：找资料占去半天以上", "en": "Today: Half a day just locating files" }
+      },
+      {
+        "title": { "zh": "初稿拼写与改参数耗时长", "en": "Days spent assembling and checking drafts" },
+        "scenario": {
+          "zh": "每份方案初稿动辄耗费两天，一旦中途调整技术路线或预算假设，前后多个章节的数字就容易不一致。",
+          "en": "Drafting takes two days per document, and a single scope change mid‑draft leaves conflicting figures across later sections."
+        },
+        "metricTag": { "zh": "现状：约 2 天完成一份初稿", "en": "Today: ~2 days per first draft" }
+      },
+      {
+        "title": { "zh": "截标前人工审稿压力巨大", "en": "High‑risk manual review under deadline" },
+        "scenario": {
+          "zh": "交付前全靠资深负责人熬夜逐页核查必填条款、资质附件与关键商业假设，稍有疏忽就会影响评分。",
+          "en": "Senior leads spend late nights manually checking mandatory clauses, compliance evidence and financial assumptions before submission."
+        },
+        "metricTag": { "zh": "现状：全靠人工逐页排雷", "en": "Today: Manual line‑by‑line QA" }
+      }
+    ],
+    "workflow": [
+      {
+        "stage": { "zh": "输入源", "en": "Sources" },
+        "title": { "zh": "招标/访谈文件 + 历史方案库", "en": "RFP / intake notes + past bids" },
+        "detail": { "zh": "导入当期需求、企业模板与历史条款库", "en": "Current RFP, templates & clause bank" },
+        "badge": { "zh": "结构解析", "en": "Parsed" }
+      },
+      {
+        "stage": { "zh": "AI 编排", "en": "Orchestration" },
+        "title": { "zh": "提取约束并按章节检索起草", "en": "Extract constraints & draft sections" },
+        "detail": { "zh": "逐章匹配历史依据与精确计算参数", "en": "Sectional retrieval & parameter fill" },
+        "badge": { "zh": "逐句溯源", "en": "99% cited" }
+      },
+      {
+        "stage": { "zh": "校验复核", "en": "Verification" },
+        "title": { "zh": "完整性检查 + 撰写人审定", "en": "Completeness gate + human edit" },
+        "detail": { "zh": "自动执行 7 项质检并标出待核实假设", "en": "7‑point check + analyst sign‑off" },
+        "badge": { "zh": "人工复核点", "en": "Human check" },
+        "humanReview": true
+      },
+      {
+        "stage": { "zh": "业务输出", "en": "Output" },
+        "title": { "zh": "15 分钟生成可编辑正式初稿", "en": "15‑min editable proposal draft" },
+        "detail": { "zh": "保留引用出处链接，一键导出审签", "en": "Editable doc with linked evidence" },
+        "badge": { "zh": "2 天 → 15 分钟", "en": "2d → 15m" }
+      }
+    ],
+    "faqs": [
+      {
+        "q": { "zh": "系统会不会自己编造不存在的项目业绩或技术参数？", "en": "Will the system invent past project credentials or technical numbers?" },
+        "a": { "zh": "不会。数值参数与项目履历强制绑定企业已入库的真实记录；当资料库缺少某项必填数据时，系统会将其列为“缺失信息清单”提醒业务人员填写，绝不自行编造数字。", "en": "No. Credentials and figures must resolve to indexed source records. Whenever a required parameter is missing, the workflow flags an explicit open question for the author rather than fabricating a number." }
+      },
+      {
+        "q": { "zh": "我们有自己严格的 Word 排版与章节模板，可以适配吗？", "en": "Can it follow our existing Word templates and section rubrics?" },
+        "a": { "zh": "可以。立项诊断阶段我们会梳理你现有的标准模板、评审打分点与审核清单，将生成结构与导出格式对齐到团队习惯的文档样式。", "en": "Yes. During assessment we map your section templates, scoring rubrics and approval checklists so generated drafts export cleanly into your team’s standard format." }
+      },
+      {
+        "q": { "zh": "应该先做哪一类文档？", "en": "Which document type should we automate first?" },
+        "a": { "zh": "建议优先选择撰写频率高、历史样本较齐、审核标准清晰的单一文档类型启动 2–6 周试点，跑通并确认省时效果后再横向扩展。", "en": "Start with one high‑frequency document type that has solid historical samples and clear review rules — typically proven in a 2–6 week pilot before adding other formats." }
+      }
+    ]
+  },
+  {
+    "slug": "knowledge-assistant",
+    "name": {
+      "zh": "企业知识库与内部助手",
+      "en": "Knowledge & Internal Assistants"
+    },
+    "shortName": {
+      "zh": "知识库与助手",
+      "en": "Knowledge & IT"
+    },
+    "promise": {
+      "zh": "按员工权限查询内部资料，3 秒内返回带出处的答案",
+      "en": "Permission‑aware internal answers with source citations in under 3 seconds"
+    },
+    "intro": {
+      "zh": "连接企业 Wiki、制度手册、操作规范与工单系统。常见重复问题附带原文出处即时解答，涉及审批或资料不足的复杂请求自动带上下文转交人工。",
+      "en": "Connect your internal Wiki, SOP manuals and ticketing system so routine employee questions get cited answers in seconds and complex requests escalate cleanly to support staff."
+    },
+    "metaDescription": {
+      "zh": "Cyano 企业知识库与内部助手解决方案：连接飞书、钉钉、SharePoint、Confluence 与工单系统，按员工权限返回带出处的秒级答案。",
+      "en": "Cyano Knowledge & Internal Assistants: permission‑scoped RAG over Confluence, SharePoint, Lark and SOPs with inline citations and smart ticket routing."
+    },
+    "deliverables": [
+      { "zh": "带部门/角色权限隔离的企业知识索引管道", "en": "Role‑ and department‑scoped knowledge index" },
+      { "zh": "精确到章节与生效日期的原文引用问答界面", "en": "Clause‑level cited Q&A interface" },
+      { "zh": "低置信度与特权请求自动转人工工单联动", "en": "Automated ticket escalation with context" },
+      { "zh": "高频未命中问题统计与知识维护巡检看板", "en": "Knowledge‑gap analytics & maintenance dashboard" }
+    ],
+    "capabilities": [
+      {
+        "title": { "zh": "先验权限，再做检索", "en": "Permissions enforced pre‑retrieval" },
+        "detail": { "zh": "对接企业组织架构与角色权限，未授权文档不会进入模型上下文。", "en": "Syncs with organizational roles so unauthorized documents never enter the retrieval candidate set." }
+      },
+      {
+        "title": { "zh": "版本状态感知与过期剔除", "en": "Version‑aware indexing" },
+        "detail": { "zh": "制度修订或废止后自动刷新索引，并在回答中展示所用文档的更新时间。", "en": "Automatically retires superseded policies and displays each cited document’s effective date." }
+      },
+      {
+        "title": { "zh": "带排查记录的工单移交", "en": "Context‑rich human handoff" },
+        "detail": { "zh": "转人工时自动写入已确认现象与已查文档，员工不必向支持人员重复描述。", "en": "Pre‑fills escalated tickets with user details, retrieved articles and steps already tried." }
+      }
+    ],
+    "caseSlug": "it-knowledge-assistant",
+    "pains": [
+      {
+        "title": { "zh": "员工反复提问，支持团队疲于应付", "en": "Recurring questions swamp support queues" },
+        "scenario": {
+          "zh": "账号开通、VPN 配置、报销标准与软件申请每天被问上百遍，IT 与职能团队大量时间花在重复贴链接。",
+          "en": "VPN setup, software access and policy rules get asked dozens of times a week, tying up IT and operations specialists in repetitive chat replies."
+        },
+        "metricTag": { "zh": "现状：80% 工单属重复常见咨询", "en": "Today: Up to 80% repetitive tickets" }
+      },
+      {
+        "title": { "zh": "制度更新后，旧口径仍在误导执行", "en": "Outdated policy files cause wrong answers" },
+        "scenario": {
+          "zh": "公司群和网盘里同时躺着好几个年份的制度文档，员工搜到旧版照着办，到了审批环节才发现早已作废。",
+          "en": "Multiple versions of SOPs linger across shared drives, causing employees to follow superseded rules and fail approval."
+        },
+        "metricTag": { "zh": "现状：多版本混杂难辨真伪", "en": "Today: Version confusion & rework" }
+      },
+      {
+        "title": { "zh": "跨部门敏感文档不敢一股脑接入", "en": "Sensitive docs require strict access boundaries" },
+        "scenario": {
+          "zh": "人事薪酬、法务合同与核心研发规范有严格的查阅范围，没有权限隔离的知识库根本无法在企业内上线。",
+          "en": "HR, legal and engineering repositories have strict visibility rules — a flat, permission‑blind chatbot cannot pass security review."
+        },
+        "metricTag": { "zh": "现状：缺权限隔离无法投产", "en": "Today: Blocked by flat permissions" }
+      }
+    ],
+    "workflow": [
+      {
+        "stage": { "zh": "输入源", "en": "Sources" },
+        "title": { "zh": "Wiki / 制度库 + 组织权限目录", "en": "Wiki / SOPs + org directory" },
+        "detail": { "zh": "同步飞书、钉钉、Confluence 与角色权限", "en": "Confluence, SharePoint, Lark & RBAC" },
+        "badge": { "zh": "实时同步", "en": "Live sync" }
+      },
+      {
+        "stage": { "zh": "AI 编排", "en": "Orchestration" },
+        "title": { "zh": "按身份检索有效条款并生成答案", "en": "Scoped retrieval & cited answer" },
+        "detail": { "zh": "只用当前生效文档，逐条标注来源链接", "en": "Active docs only + inline links" },
+        "badge": { "zh": "< 3s 响应", "en": "< 3s reply" }
+      },
+      {
+        "stage": { "zh": "校验复核", "en": "Verification" },
+        "title": { "zh": "置信度评估与人工工单分流", "en": "Confidence check & ticket routing" },
+        "detail": { "zh": "特权审批或资料缺失自动带记录转人工", "en": "Escalates complex/privileged tickets" },
+        "badge": { "zh": "人工兜底点", "en": "Human route" },
+        "humanReview": true
+      },
+      {
+        "stage": { "zh": "业务输出", "en": "Output" },
+        "title": { "zh": "80% 常见咨询自助解决", "en": "80% routine inquiries resolved" },
+        "detail": { "zh": "未命中问题汇总成周报指导知识回补", "en": "Analytics guide weekly SOP updates" },
+        "badge": { "zh": "可核查出处", "en": "Auditable" }
+      }
+    ],
+    "faqs": [
+      {
+        "q": { "zh": "支持接入我们正在用的飞书、企业微信、Confluence 或 SharePoint 吗？", "en": "Can it connect to Confluence, SharePoint, Lark or WeCom?" },
+        "a": { "zh": "支持。我们通过标准连接器或只读 API 同步现有知识空间与文档库，员工仍可在熟悉的办公软件窗口内直接提问。", "en": "Yes. We sync existing workspaces and document repositories via read‑only connectors and expose the assistant inside the collaboration tools your employees already use." }
+      },
+      {
+        "q": { "zh": "如果文档里根本没有写这件事，AI 会不会乱编答案？", "en": "What happens when the knowledge base doesn’t contain the answer?" },
+        "a": { "zh": "不会强行作答。当检索置信度不足或条款互相冲突时，系统会明确告知缺少哪部分现行依据，并一键生成带上下文的支持工单转交对应负责人。", "en": "Instead of guessing, the workflow states what policy coverage is missing and offers a one‑click escalation ticket pre‑filled for the responsible team." }
+      },
+      {
+        "q": { "zh": "私有化部署在企业内网环境可以吗？", "en": "Can the entire knowledge assistant run inside our private environment?" },
+        "a": { "zh": "可以。支持完整的 Docker 私有化交付并适配本地推理算力，企业内部制度文档与提问日志全程留在自有环境中。", "en": "Yes. Full Docker private deployment is supported, keeping internal documents, embeddings and query logs entirely inside your environment." }
+      }
+    ]
+  },
+  {
+    "slug": "data-query",
+    "name": {
+      "zh": "业务数据查询与分析",
+      "en": "Data Query & Analytics"
+    },
+    "shortName": {
+      "zh": "数据查询",
+      "en": "Data & SQL"
+    },
+    "promise": {
+      "zh": "用日常业务语言直接查库存与销量，只读受控、口径透明",
+      "en": "Query inventory, sales and operations in plain language with read‑only SQL guardrails"
+    },
+    "intro": {
+      "zh": "只读连接现有业务数据库与数仓，将自然语言提问转换为经过安全策略校验的参数化 SQL，秒级返回数据表、趋势图与可核查的查询口径。",
+      "en": "Connect read‑only databases and warehouses to translate plain‑language questions into policy‑checked SQL, returning tables, trends and inspectable query logic within seconds."
+    },
+    "metaDescription": {
+      "zh": "Cyano 业务数据查询与分析解决方案：自然语言转受控只读 SQL，内置五重安全策略门禁、PII 脱敏与完整执行审计日志。",
+      "en": "Cyano Data Query & Analytics: plain‑language analytics over PostgreSQL, MySQL and data warehouses with read‑only SQL policy gates and full audit logs."
+    },
+    "deliverables": [
+      { "zh": "业务指标语义映射字典（统一毛利、库存、周转口径）", "en": "Agreed metric & schema semantic layer" },
+      { "zh": "自然语言即时查数与图表生成工作台", "en": "Plain‑language query & chart workspace" },
+      { "zh": "五重只读 SQL 安全门禁与敏感字段脱敏", "en": "5‑point read‑only SQL gate & PII masking" },
+      { "zh": "透明 SQL 预览与逐次查询审计日志", "en": "Inspectable SQL preview & full audit trail" }
+    ],
+    "capabilities": [
+      {
+        "title": { "zh": "指标口径预对齐", "en": "Governed metric definitions" },
+        "detail": { "zh": "将企业确认的计算公式写入语义层，不同人问“华东本月销量”跑出同一套标准口径。", "en": "Binds business terms to approved formulas so everyone querying regional sales gets the exact same definition." }
+      },
+      {
+        "title": { "zh": "AST 级只读安全沙箱", "en": "AST‑level read‑only sandbox" },
+        "detail": { "zh": "语法树级拦截任何写表、删表、越权连表与无上限全表扫描，保护生产库稳定。", "en": "Parses every generated query to block mutations, unauthorized joins and unbounded scans before execution." }
+      },
+      {
+        "title": { "zh": "SQL 与数据出处完全可见", "en": "Transparent SQL & provenance" },
+        "detail": { "zh": "每张结果表附带所查表名、过滤条件与生成的 SQL，方便技术与财务随时抽检。", "en": "Shows the underlying tables, filters and SQL alongside every chart for effortless spot‑checking." }
+      }
+    ],
+    "caseSlug": "nl-data-query",
+    "pains": [
+      {
+        "title": { "zh": "临时看数全靠排队等 IT 导表", "en": "Every ad‑hoc question waits in the IT queue" },
+        "scenario": {
+          "zh": "运营想看某批商品安全库存或上周区域环比，提需求单给数据团队往往要等一天以上，拿到表时业务时机已过。",
+          "en": "Checking safety‑stock levels or regional week‑over‑week shifts means filing a data ticket and waiting a day or longer for a CSV export."
+        },
+        "metricTag": { "zh": "现状：常规导数等待 1–2 天", "en": "Today: 1–2 day reporting lag" }
+      },
+      {
+        "title": { "zh": "各部门手工算表，指标口径打架", "en": "Conflicting numbers across spreadsheets" },
+        "scenario": {
+          "zh": "销售、采购与财务各自导出明细在 Excel 里二次加工，退货扣除与统计周期不一，开会时先花半小时对数字。",
+          "en": "Sales, purchasing and finance filter raw exports differently in spreadsheets, spending half of every review meeting reconciling totals."
+        },
+        "metricTag": { "zh": "现状：同名指标多套算法", "en": "Today: Inconsistent KPI math" }
+      },
+      {
+        "title": { "zh": "生产数据库不敢直接向业务开放", "en": "Direct database access is too risky" },
+        "scenario": {
+          "zh": "底层表结构复杂且含客户与供应商敏感字段，既不能让业务人员手写 SQL，也不能冒慢查询拖垮数据库的风险。",
+          "en": "Production schemas contain PII and complex joins — exposing raw SQL credentials risks privacy leaks and heavy unindexed queries."
+        },
+        "metricTag": { "zh": "现状：安全与自助难以兼顾", "en": "Today: Security vs. self‑service" }
+      }
+    ],
+    "workflow": [
+      {
+        "stage": { "zh": "输入源", "en": "Sources" },
+        "title": { "zh": "只读业务库 + 标准指标语义层", "en": "Read‑only DBs + metric map" },
+        "detail": { "zh": "连接 PostgreSQL / MySQL 与确认公式", "en": "PostgreSQL / MySQL & KPI rules" },
+        "badge": { "zh": "只读账号", "en": "Read‑only" }
+      },
+      {
+        "stage": { "zh": "AI 编排", "en": "Orchestration" },
+        "title": { "zh": "日常提问解析为参数化 SQL", "en": "Plain language to SQL" },
+        "detail": { "zh": "映射表字段、时间窗口与角色行级权限", "en": "Maps tables, dates & row ACLs" },
+        "badge": { "zh": "0 行手写 SQL", "en": "0 manual SQL" }
+      },
+      {
+        "stage": { "zh": "校验复核", "en": "Verification" },
+        "title": { "zh": "五重策略门禁 + 口径透明复核", "en": "5‑gate policy check + SQL inspect" },
+        "detail": { "zh": "只读校验、PII 脱敏，展示 SQL 供核对", "en": "PII mask, LIMIT & visible SQL" },
+        "badge": { "zh": "策略与复核点", "en": "Policy gate" },
+        "humanReview": true
+      },
+      {
+        "stage": { "zh": "业务输出", "en": "Output" },
+        "title": { "zh": "秒级返回表格、趋势与审计编号", "en": "Tables, charts & audit trail" },
+        "detail": { "zh": "支持追问下钻与导出审计记录", "en": "Follow‑up drilldowns & logs" },
+        "badge": { "zh": "秒级返回", "en": "Seconds" }
+      }
+    ],
+    "faqs": [
+      {
+        "q": { "zh": "AI 生成的查询有没有可能修改或删掉我们的业务数据？", "en": "Could a generated query modify or delete production records?" },
+        "a": { "zh": "不可能。一方面数据库连接本身使用数据库级只读账号；另一方面应用层五重策略门禁会在执行前解析语法树，非 SELECT 语句、未加 LIMIT 的大表扫描与敏感列访问都会被直接拦截。", "en": "No. Connections use database‑enforced read‑only credentials, and our AST policy gate blocks any non‑SELECT statement, unbounded table scan or unmasked PII column before execution." }
+      },
+      {
+        "q": { "zh": "业务人员怎么知道查询出来的数字口径对不对？", "en": "How can users verify that a returned number used the right definition?" },
+        "a": { "zh": "每次返回结果时，界面都会同步列出本次使用的业务指标定义、时间范围、所查数据表及生成的完整 SQL，业务与数据人员随时可以核对。", "en": "Every result card displays the applied metric definition, date filter, source tables and exact SQL statement so analysts or managers can verify the logic at a glance." }
+      },
+      {
+        "q": { "zh": "我们的表字段命名不规范，需要先重构数仓才能用吗？", "en": "Do we have to rebuild our data warehouse before starting?" },
+        "a": { "zh": "不需要。试点阶段我们先围绕最常用的 5–10 张核心业务表建立一层轻量语义字典，映射字段含义与计算口径，2–6 周即可上线验证。", "en": "No. We start by mapping a lightweight semantic dictionary over the 5–10 tables behind your most frequent questions, delivering a working pilot in 2–6 weeks without warehouse refactoring." }
+      }
+    ]
+  }
+]

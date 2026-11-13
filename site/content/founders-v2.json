@@ -1,0 +1,103 @@
+[
+  {
+    "id": "F1",
+    "role": {
+      "zh": "首席执行官",
+      "en": "Chief Executive Officer"
+    },
+    "tags": [
+      { "zh": "业务收益测算", "en": "ROI modeling" },
+      { "zh": "范围与验收边界", "en": "Scope & acceptance" },
+      { "zh": "客户合作推进", "en": "Client partnerships" }
+    ],
+    "specialtyBadge": {
+      "zh": "专长：立项阶段的投入产出测算与验收指标制定",
+      "en": "Specialty: Pre‑build ROI sizing & acceptance criteria design"
+    },
+    "focusDeliverable": {
+      "zh": "主导交付：价值评估报告、合作方案边界与阶段验收标准",
+      "en": "Owns: Value assessment, engagement scope & milestone acceptance"
+    },
+    "bio": {
+      "zh": "曾在世界 500 强企业从事技术与业务管理工作，拥有 6 年以上软件开发经验，参与过 AI 模型研发与企业级业务系统建设。负责在立项前拆解人工、外包与返工成本，与客户共同确定可量化的验收标准与分期投入节奏。",
+      "en": "Engineering and commercial background at Fortune Global 500 companies, with 6+ years of software development and hands‑on AI model R&D. Leads pre‑project cost‑benefit analysis, scoping ambiguous workflows into measurable milestones and clear acceptance criteria."
+    },
+    "portrait": "/art/founder-1.webp"
+  },
+  {
+    "id": "F2",
+    "role": {
+      "zh": "首席技术官",
+      "en": "Chief Technology Officer"
+    },
+    "tags": [
+      { "zh": "上下文估值引擎", "en": "Context valuation" },
+      { "zh": "权限检索架构", "en": "ACL retrieval" },
+      { "zh": "多模型编排", "en": "Multi‑model routing" }
+    ],
+    "specialtyBadge": {
+      "zh": "专长：长上下文记忆分层、带权限 RAG 与多模型切换架构",
+      "en": "Specialty: Long‑context memory tiering & permission‑aware RAG"
+    },
+    "focusDeliverable": {
+      "zh": "主导交付：Cyano Core 平台架构、检索准确率与安全审计底座",
+      "en": "Owns: Cyano Core platform, retrieval precision & audit architecture"
+    },
+    "bio": {
+      "zh": "曾任职于世界 500 强企业核心技术团队，拥有 6 年以上开发经验与深度 AI 模型研发经历。主导设计 Cyano Core 上下文估值引擎与四层治理架构，解决百轮级长对话成本、指令遗漏与企业级权限隔离问题。",
+      "en": "Former senior engineer at Fortune Global 500 companies with 6+ years of software engineering and deep AI model R&D experience. Architects Cyano Core, designing priority‑weighted context management, permission‑scoped retrieval and deterministic SQL/SOP guardrails."
+    },
+    "portrait": "/art/founder-2.webp"
+  },
+  {
+    "id": "F3",
+    "role": {
+      "zh": "工程交付负责人",
+      "en": "Head of Engineering Delivery"
+    },
+    "tags": [
+      { "zh": "私有化 Docker 部署", "en": "Private Docker delivery" },
+      { "zh": "自动化评测集", "en": "Regression evals" },
+      { "zh": "生产监控运维", "en": "Production SRE" }
+    ],
+    "specialtyBadge": {
+      "zh": "专长：私有环境算力适配、上线回归评测与生产级稳定运行",
+      "en": "Specialty: On‑prem compute adaptation, regression evals & SRE"
+    },
+    "focusDeliverable": {
+      "zh": "主导交付：生产环境部署包、历史样本测试集与持续运维迭代",
+      "en": "Owns: Production deployment, evaluation suites & post‑launch operations"
+    },
+    "bio": {
+      "zh": "拥有世界 500 强企业大规模系统工程背景与 6 年以上开发经验，参与过 AI 模型训练与推理优化。负责将复杂 AI 工作流拆解为可回归测试、可监控日志与可独立升级的生产服务，保障上线后的响应速度与稳定性。",
+      "en": "Large‑scale systems engineering background at Fortune Global 500 companies, with 6+ years of development and AI model inference optimization. Turns complex AI pipelines into testable, observable services with Docker on‑prem packaging and post‑launch incident SLAs."
+    },
+    "portrait": "/art/founder-3.webp"
+  },
+  {
+    "id": "F4",
+    "role": {
+      "zh": "产品与解决方案负责人",
+      "en": "Head of Product & Solutions"
+    },
+    "tags": [
+      { "zh": "业务流程诊断", "en": "Workflow diagnosis" },
+      { "zh": "人机协同复核界面", "en": "Human‑in‑the‑loop UX" },
+      { "zh": "SOP 规则拆解", "en": "SOP codification" }
+    ],
+    "specialtyBadge": {
+      "zh": "专长：复杂业务 SOP 梳理与“引用核查 + 人工复核”交互设计",
+      "en": "Specialty: SOP mapping & citation‑backed human review interfaces"
+    },
+    "focusDeliverable": {
+      "zh": "主导交付：1 周业务诊断书、资料与审核清单、一线员工工作台",
+      "en": "Owns: 1‑week workflow diagnosis, review checklists & operator UI"
+    },
+    "bio": {
+      "zh": "拥有世界 500 强企业产品与研发双重背景、6 年以上开发经验及 AI 模型研发经历。负责深入一线业务团队梳理现有文档来源、参数口径与审批节点，把 AI 嵌入员工顺手的日常审核界面。",
+      "en": "Product and engineering background at Fortune Global 500 companies, bringing 6+ years of software development and AI model R&D. Works directly with frontline operators to map document sources, parameter rules and human approval gates into practical interfaces."
+    },
+    "portrait": "/art/founder-4.webp",
+    "avatar": "/art/founder-4-avatar.webp"
+  }
+]

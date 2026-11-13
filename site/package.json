@@ -1,19 +1,18 @@
 {
   "name": "cyano-website",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0 --webpack",
-    "build": "node scripts/preflight.mjs && next build --webpack && node scripts/scan.mjs",
+    "build": "node scripts/validate-v2.mjs && node scripts/subset-font.mjs && next build --webpack && node scripts/scan.mjs",
     "start": "next start --hostname 0.0.0.0",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:links": "node scripts/preflight.mjs"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.0",
-    "framer-motion": "^12.0.0",
     "lucide-react": "^0.468.0",
     "next": "^16.0.0",
-    "next-intl": "^4.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "tailwindcss": "^4.0.0",
