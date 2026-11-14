@@ -62,10 +62,6 @@ export function Home({ locale }: { locale: Locale }) {
             {pageCopy.c6ccf839c13[locale]}
             <ArrowDown size={14} />
           </a>
-          <div className="visual-coordinate">
-            
-            CYANO / ENTERPRISE AI
-          </div>
         </div>
       </section>
       <section className="trust-section" id="expertise">
