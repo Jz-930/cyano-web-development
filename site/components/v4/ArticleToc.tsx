@@ -33,14 +33,14 @@ export function ArticleToc({
   }, [items]);
 
   return (
-    <nav className="article-toc" aria-label={heading}>
+    <nav className="article-toc flex flex-col [gap:var(--sp-3)]" aria-label={heading}>
       <span className="label article-toc-title">{heading}</span>
-      <ul className="article-toc-list">
+      <ul className="article-toc-list flex flex-col list-none m-0 p-0 [border-left:1px_solid_var(--line)]">
         {items.map((it) => (
           <li key={it.id}>
             <a
               href={`#${it.id}`}
-              className="article-toc-link"
+              className="article-toc-link block [padding:var(--sp-2)_0_var(--sp-2)_var(--sp-4)] [margin-left:-1px] [transition:color_var(--qtf),border-color_var(--qtf)]"
               data-active={activeId === it.id ? "true" : undefined}
             >
               {it.label}

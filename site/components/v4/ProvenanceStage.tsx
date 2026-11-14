@@ -366,11 +366,11 @@ export function ProvenanceStage({ locale }: { locale: Locale }) {
     focusCite != null ? [focusCite - 1, focusCite + 2] : null;
 
   return (
-    <div ref={shellRef} className="mk-stage-shell">
-      <div className="mk-stage-frame">
+    <div ref={shellRef} className="mk-stage-shell relative">
+      <div className="mk-stage-frame relative [width:760px] [@media(max-width:800px)]:w-full [height:520px] [@media(max-width:800px)]:[height:auto]">
         <div
           ref={stageRef}
-          className="mk-stage glass edge-hero halo-host halo-stage"
+          className="mk-stage glass edge-hero halo-host halo-stage [width:760px] [@media(max-width:800px)]:w-full [height:520px] [@media(max-width:800px)]:[height:auto] [@media(max-width:800px)]:[padding:var(--sp-3)] isolate"
           data-scene={scene}
           data-step={effectiveStep}
           data-surface="dark"
@@ -382,30 +382,30 @@ export function ProvenanceStage({ locale }: { locale: Locale }) {
         >
           {/* Back layer: 3 source cards */}
           <div
-            className={`mk-source mk-source-1${focusCite === 1 ? " is-cite-focus" : " depth-back"}`}
+            className={`mk-source absolute [width:168px] [height:124px] [padding:var(--sp-3)] [border-radius:var(--r-card)] [background:var(--p2)] flex-col [gap:var(--sp-2)] mk-source-1${focusCite === 1 ? " is-cite-focus" : " depth-back"}`}
             aria-hidden="true"
           >
-            <span className="label mk-source-tag">
-              {card1Label ?? <span className="mk-skel mk-w-64" />}
+            <span className="label mk-source-tag [font-size:12px]">
+              {card1Label ?? <span className="mk-skel mk-w-64 block [border-radius:var(--r-chip)] [width:64%]" />}
             </span>
-            <span className="mk-skel mk-w-72 mk-h-10" />
-            <span className="mk-skel mk-w-92 mk-source-hl" />
-            <span className="mk-skel mk-w-80" />
-            <span className="mk-skel mk-w-64" />
+            <span className="mk-skel mk-w-72 mk-h-10 block [border-radius:var(--r-chip)] [width:72%]" />
+            <span className="mk-skel mk-w-92 mk-source-hl block [border-radius:var(--r-chip)] [width:92%]" />
+            <span className="mk-skel mk-w-80 block [border-radius:var(--r-chip)] [width:80%]" />
+            <span className="mk-skel mk-w-64 block [border-radius:var(--r-chip)] [width:64%]" />
           </div>
 
           <div
-            className={`mk-source mk-source-2${focusCite === 2 ? " is-cite-focus" : " depth-back"}`}
+            className={`mk-source absolute [width:168px] [height:124px] [padding:var(--sp-3)] [border-radius:var(--r-card)] [background:var(--p2)] flex-col [gap:var(--sp-2)] mk-source-2${focusCite === 2 ? " is-cite-focus" : " depth-back"}`}
             aria-hidden="true"
           >
-            <span className="label mk-source-tag">
-              {card2Label ?? <span className="mk-skel mk-w-64" />}
+            <span className="label mk-source-tag [font-size:12px]">
+              {card2Label ?? <span className="mk-skel mk-w-64 block [border-radius:var(--r-chip)] [width:64%]" />}
             </span>
-            <div className="mk-sheet-grid">
+            <div className="mk-sheet-grid grid [gap:var(--sp-1)] [margin-top:var(--sp-1)]">
               {[0, 1, 2, 3].map((r) => (
                 <div
                   key={r}
-                  className={`mk-sheet-row${r === 0 ? " is-head" : ""}${r === 1 ? " mk-source-hl" : ""}`}
+                  className={`mk-sheet-row grid [grid-template-columns:repeat(5,1fr)] [gap:var(--sp-1)] ${r === 0 ? " is-head" : ""}${r === 1 ? " mk-source-hl" : ""}`}
                 >
                   <i />
                   <i />
@@ -418,16 +418,16 @@ export function ProvenanceStage({ locale }: { locale: Locale }) {
           </div>
 
           <div
-            className={`mk-source mk-source-3${focusCite === 3 ? " is-cite-focus" : " depth-back"}`}
+            className={`mk-source absolute [width:168px] [height:124px] [padding:var(--sp-3)] [border-radius:var(--r-card)] [background:var(--p2)] flex-col [gap:var(--sp-2)] mk-source-3${focusCite === 3 ? " is-cite-focus" : " depth-back"}`}
             aria-hidden="true"
           >
-            <span className="label mk-source-tag">
-              {card3Label ?? <span className="mk-skel mk-w-64" />}
+            <span className="label mk-source-tag [font-size:12px]">
+              {card3Label ?? <span className="mk-skel mk-w-64 block [border-radius:var(--r-chip)] [width:64%]" />}
             </span>
-            <span className="mk-skel mk-w-64 mk-h-10" />
-            <span className="mk-skel mk-w-92 mk-source-hl" />
-            <span className="mk-skel mk-w-72" />
-            <span className="mk-source-chip" />
+            <span className="mk-skel mk-w-64 mk-h-10 block [border-radius:var(--r-chip)] [width:64%]" />
+            <span className="mk-skel mk-w-92 mk-source-hl block [border-radius:var(--r-chip)] [width:92%]" />
+            <span className="mk-skel mk-w-72 block [border-radius:var(--r-chip)] [width:72%]" />
+            <span className="mk-source-chip [margin-top:auto] [width:56px] [height:14px] [border-radius:var(--r-chip)] [background:var(--cyan-12)]" />
           </div>
 
           {/* Provenance 6-path overlay */}
@@ -440,10 +440,10 @@ export function ProvenanceStage({ locale }: { locale: Locale }) {
           />
 
           {/* Middle layer: Core ring */}
-          <span className="mk-core mk-stage-core" aria-hidden="true" />
+          <span className="mk-core mk-stage-core [width:22px] [height:22px] inline-flex items-center [gap:var(--sp-2)] [padding:var(--sp-2)_var(--sp-3)] whitespace-nowrap [left:248px] [top:260px] [z-index:var(--z-stage)]" aria-hidden="true" />
 
           {/* Middle layer: Main mockup window */}
-          <div className="mk-stage-win">
+          <div className="mk-stage-win absolute [@media(max-width:800px)]:relative [left:260px] [top:56px] [@media(max-width:800px)]:[left:auto] [@media(max-width:800px)]:[top:auto] [width:472px] [@media(max-width:800px)]:w-full [z-index:var(--z-stage)]">
             <MockupWindow
               system={meta.system}
               status={status}
@@ -478,7 +478,7 @@ export function ProvenanceStage({ locale }: { locale: Locale }) {
 
         {/* Front layer: sibling glass badge (avoids nested backdrop-filter) */}
         <div
-          className="stage-badge glass-badge"
+          className="stage-badge glass-badge absolute [@media(max-width:800px)]:relative [right:-32px] [bottom:-8px] [@media(max-width:800px)]:[right:auto] [@media(max-width:800px)]:[bottom:auto] [width:236px] [@media(max-width:800px)]:[width:auto] [@media(max-width:800px)]:[max-width:280px] grid [gap:var(--sp-1)] [z-index:5] [@media(max-width:800px)]:[margin-top:var(--sp-3)]"
           data-ready={effectiveStep >= 5 ? "true" : "false"}
         >
           <strong className="figure glow-number">{meta.stats[0].value}</strong>
@@ -490,7 +490,7 @@ export function ProvenanceStage({ locale }: { locale: Locale }) {
         {/* S1 Pause / Play control */}
         <button
           type="button"
-          className="stage-toggle"
+          className="stage-toggle absolute [right:var(--sp-3)] [bottom:var(--sp-3)] [z-index:6] [width:32px] [height:32px] p-0 [border-radius:var(--q50)] [place-items:center] cursor-pointer [transition:background-color_var(--qtf),color_var(--qtf),border-color_var(--qtf),transform_var(--qtp)]"
           aria-label={userPaused ? playLabel : pauseLabel}
           aria-pressed={userPaused}
           data-motion="transform"

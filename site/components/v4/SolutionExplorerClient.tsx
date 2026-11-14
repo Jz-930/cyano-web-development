@@ -114,14 +114,14 @@ export function SolutionExplorerClient({
   const stagePaths = pathsForInputCount(inputs.length);
 
   return (
-    <div className="solution-explorer" data-reveal="">
+    <div className="solution-explorer [grid-template-columns:minmax(0,5fr)_minmax(0,7fr)] [@media(max-width:1023px)]:[grid-template-columns:1fr] [gap:var(--sp-7)]" data-reveal="">
       <div
         ref={tablistRef}
-        className="solution-tabs"
+        className="solution-tabs relative flex flex-col [@media(max-width:1023px)]:flex-row [border-top:1px_solid_var(--line)] [@media(max-width:1023px)]:[border-top:0] [@media(max-width:1023px)]:[overflow-x:auto] [@media(max-width:1023px)]:[gap:var(--sp-2)] [@media(max-width:1023px)]:[padding-bottom:var(--sp-2)]"
         role="tablist"
         aria-label={t(locale, "解决方案", "Solutions")}
       >
-        <span className="tab-indicator" aria-hidden="true" />
+        <span className="tab-indicator absolute pointer-events-none" aria-hidden="true" />
         {items.map((s, i) => (
           <button
             key={s.slug}
@@ -134,7 +134,7 @@ export function SolutionExplorerClient({
             <span className="name">{s.name}</span>
             {s.dept || (s.before && s.after) ? (
               <span className="meta">
-                {s.dept ? <span className="tag">{s.dept}</span> : null}
+                {s.dept ? <span className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">{s.dept}</span> : null}
                 <TimeChip before={s.before} after={s.after} />
               </span>
             ) : null}
@@ -142,31 +142,31 @@ export function SolutionExplorerClient({
         ))}
       </div>
 
-      <div className="solution-right">
-        <div className="solution-stage">
-          <span className="dot-grid solution-stage-dots" aria-hidden="true" />
+      <div className="solution-right min-w-0">
+        <div className="solution-stage relative [border-radius:var(--r-panel)] [background:var(--p2)] [border:1px_solid_var(--line)] [padding:var(--sp-5)] overflow-hidden isolate">
+          <span className="dot-grid solution-stage-dots absolute inset-0 pointer-events-none [z-index:-1]" aria-hidden="true" />
           {runTick > 0 ? (
             <span
               key={runTick}
-              className="solution-runner"
+              className="solution-runner absolute [top:0] [left:0] [width:36px] [height:2px] [border-radius:var(--r-chip)] [background:var(--cyan)] [box-shadow:var(--glow-state)] pointer-events-none"
               aria-hidden="true"
             />
           ) : null}
 
-          <div className="solution-stage-inner">
+          <div className="solution-stage-inner grid [grid-template-columns:124px_72px_minmax(0,1fr)] [@media(max-width:800px)]:[grid-template-columns:1fr] items-center [gap:var(--sp-2)] [@media(max-width:800px)]:[gap:var(--sp-4)]">
             <div
-              className="solution-inputs"
+              className="solution-inputs flex flex-col [@media(max-width:800px)]:flex-row [gap:var(--sp-3)] [@media(max-width:800px)]:[gap:var(--sp-2)] [@media(max-width:800px)]:flex-wrap"
               data-phase={phase}
               data-motion="transform"
             >
               {inputs.map((inp, idx) => (
-                <span key={`${activeItem.slug}-${idx}`} className="tag">
+                <span key={`${activeItem.slug}-${idx}`} className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">
                   {inp}
                 </span>
               ))}
             </div>
 
-            <div className="solution-bridge" aria-hidden="true">
+            <div className="solution-bridge relative [width:72px] [height:220px] [@media(max-width:800px)]:hidden" aria-hidden="true">
               <ProvenanceLines
                 viewBox="0 0 72 220"
                 paths={stagePaths}
@@ -174,13 +174,13 @@ export function SolutionExplorerClient({
                 state={provState}
               />
               <span
-                className={`mk-core solution-core${coreGlow ? " glow-state" : ""}`}
+                className={`mk-core [width:22px] [height:22px] inline-flex items-center [gap:var(--sp-2)] [padding:var(--sp-2)_var(--sp-3)] whitespace-nowrap solution-core${coreGlow ? " glow-state" : ""}`}
                 data-surface="dark"
               />
             </div>
 
             <div
-              className="solution-win"
+              className="solution-win min-w-0"
               data-phase={phase}
               data-motion="transform"
             >
@@ -193,18 +193,18 @@ export function SolutionExplorerClient({
           </div>
         </div>
 
-        <div ref={panelsRef} className="tab-panels solution-copy">
+        <div ref={panelsRef} className="tab-panels solution-copy [margin-top:var(--sp-5)]">
           {items.map((s, i) => (
             <div
               key={s.slug}
               {...panelProps(i)}
               id={`solution-panel-${i}`}
               aria-labelledby={`solution-tab-${i}`}
-              className="solution-panel-body"
+              className="solution-panel-body grid [gap:var(--sp-3)]"
             >
               <h3 className="h3">{s.promise}</h3>
-              <p className="solution-intro">{s.intro}</p>
-              <p className="solution-outputs small">{s.outputs}</p>
+              <p className="solution-intro [font-size:16px] [line-height:1.75] [color:var(--muted)]">{s.intro}</p>
+              <p className="solution-outputs small [color:var(--muted)] [padding-top:var(--sp-3)] [border-top:1px_solid_var(--line-soft)]">{s.outputs}</p>
               <Link
                 className="text-link"
                 href={href(locale, `/services/${s.slug}`)}

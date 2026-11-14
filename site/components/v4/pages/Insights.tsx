@@ -29,8 +29,8 @@ export function Insights({ locale }: { locale: Locale }) {
         }
       />
 
-      <section className="paper insights-main-section" data-header="paper">
-        <div className="wrap insights-stack">
+      <section className="paper insights-main-section [padding-block:var(--section-y)]" data-header="paper">
+        <div className="wrap insights-stack flex flex-col [gap:var(--sp-7)]">
           {featured ? (
             <article
               className="card is-clickable insights-featured"
@@ -44,9 +44,9 @@ export function Insights({ locale }: { locale: Locale }) {
                 />
               </div>
 
-              <div className="insights-featured-body">
-                <div className="insights-meta">
-                  <span className="tag">{featured.category[locale]}</span>
+              <div className="insights-featured-body flex flex-col [align-items:flex-start] [gap:var(--sp-3)]">
+                <div className="insights-meta flex flex-wrap items-center [gap:var(--sp-2)_var(--sp-3)]">
+                  <span className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">{featured.category[locale]}</span>
                   <time dateTime={featured.dateIso} className="small">
                     {featured.dateDisplay[locale]}
                   </time>
@@ -62,11 +62,11 @@ export function Insights({ locale }: { locale: Locale }) {
                   </Link>
                 </h2>
 
-                <p className="insights-excerpt">
+                <p className="insights-excerpt m-0 [color:var(--muted)]">
                   {featured.metaDescription[locale]}
                 </p>
 
-                <span className="insights-cta" aria-hidden="true">
+                <span className="insights-cta [margin-top:auto] [padding-top:var(--sp-2)]" aria-hidden="true">
                   <ArrowUpRight size={18} />
                 </span>
               </div>
@@ -74,7 +74,7 @@ export function Insights({ locale }: { locale: Locale }) {
           ) : null}
 
           {rest.length > 0 ? (
-            <div className="insights-grid">
+            <div className="insights-grid grid [grid-template-columns:repeat(2,minmax(0,1fr))] [@media(max-width:960px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-6)]">
               {rest.map((ins, idx) => (
                 <article
                   key={ins.slug}
@@ -84,9 +84,9 @@ export function Insights({ locale }: { locale: Locale }) {
                 >
                   <InsightCover slug={ins.slug} locale={locale} size="card" />
 
-                  <div className="insights-card-body">
-                    <div className="insights-meta">
-                      <span className="tag">{ins.category[locale]}</span>
+                  <div className="insights-card-body flex flex-col [align-items:flex-start] [gap:var(--sp-3)] [flex:1]">
+                    <div className="insights-meta flex flex-wrap items-center [gap:var(--sp-2)_var(--sp-3)]">
+                      <span className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">{ins.category[locale]}</span>
                       <time dateTime={ins.dateIso} className="small">
                         {ins.dateDisplay[locale]}
                       </time>
@@ -102,11 +102,11 @@ export function Insights({ locale }: { locale: Locale }) {
                       </Link>
                     </h3>
 
-                    <p className="insights-excerpt">
+                    <p className="insights-excerpt m-0 [color:var(--muted)]">
                       {ins.metaDescription[locale]}
                     </p>
 
-                    <span className="insights-cta" aria-hidden="true">
+                    <span className="insights-cta [margin-top:auto] [padding-top:var(--sp-2)]" aria-hidden="true">
                       <ArrowUpRight size={18} />
                     </span>
                   </div>

@@ -61,11 +61,11 @@ export function CasesPage({ locale }: { locale: Locale }) {
           </>
         }
         visual={
-          <div className="cases-mosaic" aria-hidden="true">
+          <div className="cases-mosaic grid [gap:var(--sp-3)] w-full [padding-bottom:var(--sp-4)] [@media(max-width:800px)]:[padding-bottom:0]" aria-hidden="true">
             {MOSAIC_SCENES.map((sc, idx) => (
               <div
                 key={sc}
-                className="cases-mosaic-cell"
+                className="cases-mosaic-cell [aspect-ratio:360_/_225] overflow-hidden"
                 data-col={idx % 3}
                 data-idx={idx}
               >
@@ -76,9 +76,9 @@ export function CasesPage({ locale }: { locale: Locale }) {
         }
       />
 
-      <section className="paper cases-main-section" data-header="paper">
+      <section className="paper cases-main-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
-          <p className="cases-nda-note">{text("D.1", "保密说明（案例）", locale)}</p>
+          <p className="cases-nda-note [font-size:14px] [color:var(--muted)] [margin:0_0_var(--sp-6)]">{text("D.1", "保密说明（案例）", locale)}</p>
 
           <CaseFilters
             locale={locale}
@@ -86,8 +86,8 @@ export function CasesPage({ locale }: { locale: Locale }) {
             industries={allIndustries}
           />
 
-          <div className="cases-tail" data-reveal="">
-            <p className="conclusion">{text("D.5", "列表收尾", locale)}</p>
+          <div className="cases-tail [margin-top:var(--sp-9)] flex flex-col [align-items:flex-start] [gap:var(--sp-4)]" data-reveal="">
+            <p className="conclusion [padding-left:var(--sp-5)] [border-left:2px_solid_var(--cyan)] [font-size:18px] [line-height:1.7] [color:var(--ink)]">{text("D.5", "列表收尾", locale)}</p>
             <Link className="button" href={href(locale, "/contact#form")}>
               {pageCopy.book_a_confidential_demo[locale]}
             </Link>

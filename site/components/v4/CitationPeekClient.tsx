@@ -192,7 +192,7 @@ function SharedCitationPopover() {
       ref={cardRef}
       role="tooltip"
       id={active ? active.tooltipId : undefined}
-      className="cite-card glass-badge"
+      className="cite-card glass-badge fixed [inset:auto] [z-index:var(--z-toast)] [max-width:320px] m-0 [gap:var(--sp-1)] [font:400_14px_/_1.6_var(--sans)] [color:var(--light)] overflow-visible"
       data-surface="dark"
       data-open={active ? "true" : "false"}
       popover="manual"
@@ -215,7 +215,7 @@ function SharedCitationPopover() {
       {active ? (
         <>
           <span className="label cite-card-label">{active.labelText}</span>
-          <p className="cite-card-body">{active.note}</p>
+          <p className="cite-card-body m-0">{active.note}</p>
           {active.caseHref && active.caseLabel ? (
             <Link
               className="text-link cite-card-link"
@@ -260,6 +260,7 @@ export function CitationPeekClient({
   const tooltipId = `cite-${id}-${cleanUid}`;
   const btnRef = useRef<HTMLButtonElement | null>(null);
   const ownerSymbolRef = useRef<symbol | null>(null);
+  const openedByFocusAtRef = useRef(0);
   const active = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   useEffect(() => {
@@ -319,7 +320,10 @@ export function CitationPeekClient({
           scheduleClose(150);
         }}
         onFocus={() => {
-          if (btnRef.current) openNow(buildPayload(btnRef.current));
+          if (btnRef.current) {
+            if (!isThisOpen) openedByFocusAtRef.current = performance.now();
+            openNow(buildPayload(btnRef.current));
+          }
         }}
         onBlur={(e) => {
           const next = e.relatedTarget as HTMLElement | null;
@@ -328,7 +332,7 @@ export function CitationPeekClient({
         }}
         onClick={() => {
           if (!btnRef.current) return;
-          if (isThisOpen) {
+          if (isThisOpen && performance.now() - openedByFocusAtRef.current > 400) {
             closeImmediately(false);
           } else {
             openNow(buildPayload(btnRef.current));

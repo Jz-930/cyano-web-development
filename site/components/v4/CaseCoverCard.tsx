@@ -57,7 +57,7 @@ export function CaseCoverCard({
       data-reveal={reveal ? "" : undefined}
       style={mergedStyle}
     >
-      <div className="case-cover edge-pointer" data-surface="dark">
+      <div className="case-cover edge-pointer relative [aspect-ratio:16_/_10] [background:var(--n1)] [border-radius:var(--r-card)_var(--r-card)_0_0] overflow-visible [@media(max-width:700px)]:overflow-hidden isolate" data-surface="dark">
         <img
           className="field"
           src="/media/field/panel-720.webp"
@@ -72,7 +72,7 @@ export function CaseCoverCard({
           share="morph"
           default="none"
         >
-          <div className="case-cover-mk" data-motion="transform" aria-hidden="true">
+          <div className="case-cover-mk absolute [left:16%] [top:12%] [right:-12px] [bottom:-12px] [@media(max-width:700px)]:[right:0] [@media(max-width:700px)]:[bottom:-8px] [transition:transform_var(--dur-scene)_var(--ease-out)]" data-motion="transform" aria-hidden="true">
             <ScaledSceneMockup
               scene={item.mockup}
               locale={locale}
@@ -88,10 +88,10 @@ export function CaseCoverCard({
         />
       </div>
 
-      <div className="case-body">
-        <div className="case-meta-row">
-          <span className="tag">{item.industry}</span>
-          <span className="tag">{item.model}</span>
+      <div className="case-body [padding:var(--sp-5)_var(--sp-5)_var(--sp-6)] flex flex-col [gap:var(--sp-3)] [flex:1]">
+        <div className="case-meta-row flex flex-wrap items-center [gap:var(--sp-2)]">
+          <span className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">{item.industry}</span>
+          <span className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">{item.model}</span>
           <span className="small">{item.duration}</span>
         </div>
         <ViewTransition
@@ -109,7 +109,7 @@ export function CaseCoverCard({
           </h3>
         </ViewTransition>
         <TimeChip before={before} after={after} />
-        <span className="text-link case-cta" aria-hidden="true">
+        <span className="text-link case-cta [padding-top:var(--sp-2)] [font-size:14px]" aria-hidden="true">
           {ctaLabel}
           <ArrowUpRight size={16} />
         </span>

@@ -69,6 +69,6 @@ console.log(`${duplicates.length} duplicate selectors found.`);
 for (const d of duplicates) {
   console.log(`  [${d.locs.join(", ")}] ${d.key}`);
 }
-if (process.argv.includes("--strict") && duplicates.length > 0) {
+if (duplicates.length > 0) {
   process.exitCode = 1;
 }

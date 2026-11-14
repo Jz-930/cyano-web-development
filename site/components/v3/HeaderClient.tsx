@@ -278,7 +278,7 @@ export function Header({
 
   return (
     <header
-      className={`site-header${scrolled ? " is-scrolled" : ""}${open ? " menu-open" : ""}`}
+      className={`site-header fixed [inset:0_0_auto] [z-index:var(--z-header)] [transition:background-color_var(--qtb),border-color_var(--qtb),color_var(--qtb)] ${scrolled ? " is-scrolled" : ""}${open ? " menu-open" : ""}`}
       data-theme={theme}
     >
       <div className="header-inner">
@@ -289,7 +289,7 @@ export function Header({
           <Logo />
         </Link>
         <nav
-          className="desktop-nav"
+          className="desktop-nav flex [@media(max-width:800px)]:hidden items-center"
           aria-label={t(locale, "主导航", "Main navigation")}
         >
           {nav.map(([path, label]) => {
@@ -310,7 +310,7 @@ export function Header({
                 onKeyDown={(e) => handleDropdownKeyDown(e, path)}
                 onBlur={(e) => handleNavBlur(e, path)}
               >
-                <div className="nav-item-row">
+                <div className="nav-item-row flex items-center [gap:var(--sp-1)] [color:inherit]">
                   <Link
                     href={href(locale, "/" + path)}
                     aria-current={isCurrent ? "page" : undefined}
@@ -322,7 +322,7 @@ export function Header({
                         share="morph"
                         default="none"
                       >
-                        <span className="nav-indicator" />
+                        <span className="nav-indicator absolute [left:0] [right:0] [bottom:-2px] [height:2px] [border-radius:var(--qr2)] pointer-events-none" />
                       </ViewTransition>
                     )}
                   </Link>
@@ -348,7 +348,7 @@ export function Header({
                     ref={(el) => {
                       dropdownRefs.current[path] = el;
                     }}
-                    className="nav-dropdown"
+                    className="nav-dropdown absolute [top:calc(100%_+_12px)] [left:-16px] [min-width:340px] [padding:8px] [border-radius:var(--r-card)]"
                     data-open={isDropdownOpen ? "true" : "false"}
                     inert={!isDropdownOpen}
                   >
@@ -377,7 +377,7 @@ export function Header({
             );
           })}
         </nav>
-        <div className="header-actions">
+        <div className="header-actions flex items-center">
           <a
             className="language-switch"
             href={
@@ -402,7 +402,7 @@ export function Header({
           <button
             ref={toggleRef}
             type="button"
-            className="menu-toggle"
+            className="menu-toggle hidden [@media(max-width:800px)]:flex [padding:var(--sp-2)] [@media(max-width:800px)]:[padding:var(--sp-1)] [transition:background-color_var(--qtf),border-color_var(--qtf),color_var(--qtf),opacity_var(--qtf),transform_var(--qtp)]"
             aria-label={t(
               locale,
               open ? "关闭菜单" : "打开菜单",
@@ -416,7 +416,7 @@ export function Header({
         </div>
       </div>
       <nav
-        className="mobile-nav"
+        className="mobile-nav hidden [@media(max-width:800px)]:flex [@media(max-width:800px)]:flex-col [@media(max-width:800px)]:fixed [@media(max-width:800px)]:[left:0] [@media(max-width:800px)]:w-full [@media(max-width:800px)]:[background:var(--n1)] [@media(max-width:800px)]:[overflow:auto] [color:var(--light)]"
         data-open={open ? "true" : "false"}
         inert={!open}
         style={{ "--ox": ox } as CSSProperties}

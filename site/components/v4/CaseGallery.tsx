@@ -52,16 +52,16 @@ export function CaseGallery({
 
   return (
     <div
-      className={`case-gallery-grid${hasCaptions ? " has-captions" : ""}`}
+      className={`case-gallery-grid grid [gap:var(--sp-6)] [align-items:start] ${hasCaptions ? " has-captions" : ""}`}
       ref={hostRef}
     >
       {hasCaptions ? (
-        <ol className="case-gallery-list">
+        <ol className="case-gallery-list flex flex-col [gap:var(--sp-2)] list-none m-0 p-0">
           {captions.map((cap, i) => (
             <li key={images[i]}>
               <button
                 type="button"
-                className="case-gallery-item"
+                className="case-gallery-item w-full flex items-center [gap:var(--sp-3)] [padding:var(--sp-3)_var(--sp-4)] [border-radius:var(--r-control)] [font-size:14px] text-left cursor-pointer [transition:border-color_var(--qtf),color_var(--qtf),background-color_var(--qtf),transform_var(--qtp)]"
                 data-active={current === i ? "true" : undefined}
                 aria-pressed={current === i}
                 onClick={() => setCurrent(i)}
@@ -96,7 +96,7 @@ export function CaseGallery({
                 alt={`${system} — ${t(locale, "界面", "screen")} ${current + 1}`}
                 sizes="(max-width: 800px) 90vw, 880px"
               />
-              <span className="zoom-pill">
+              <span className="zoom-pill absolute [right:12px] [bottom:12px] inline-flex items-center [gap:6px] [padding:6px_10px] [border:0] [border-radius:var(--r-chip)] [background:var(--n1-58)] [color:var(--light)] [font-size:13px] [transition:opacity_var(--qtf),transform_var(--qtb)]">
                 <Search size={15} aria-hidden="true" />
                 {t(locale, "点击放大", "Click to enlarge")}
               </span>

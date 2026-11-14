@@ -41,7 +41,7 @@ export function V4StudyView() {
     <PageShell locale={locale} route="v4-study" closing={false}>
       {/* 1. Hero stage (LightField hero + ProvenanceStage S1 + CitationPeek S10) */}
       <section
-        className="home-hero dark grain"
+        className="home-hero dark grain isolate [height:auto] [min-height:min(860px,100svh)] [@media(max-width:800px)]:min-h-0 [padding:104px_0_0] [@media(max-width:800px)]:[padding-top:104px] flex flex-col [gap:0]"
         data-header="dark"
         style={{
           position: "relative",
@@ -66,7 +66,7 @@ export function V4StudyView() {
           }}
         >
           <div
-            className="hero-copy"
+            className="hero-copy relative [z-index:var(--z-stage)] [padding-right:var(--sp-6)] [@media(max-width:1023px)]:[padding-right:0]"
             style={{
               position: "relative",
               zIndex: "var(--z-stage)",
@@ -212,7 +212,7 @@ export function V4StudyView() {
             </div>
             <div style={{ padding: "var(--sp-5)", display: "grid", gap: "var(--sp-3)" }}>
               <div style={{ display: "flex", gap: "var(--sp-2)", flexWrap: "wrap" }}>
-                <span className="tag">{proposalCase.industry}</span>
+                <span className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">{proposalCase.industry}</span>
                 <TimeChip
                   before={copyIfApproved("H-3b02", locale)}
                   after={copyIfApproved("H-3a02", locale)}
@@ -232,7 +232,7 @@ export function V4StudyView() {
         </div>
       </section>
 
-      <hr className="rule-dot" />
+      <hr className="rule-dot relative [height:1px] [border:0] [background:var(--line-soft)] overflow-visible" />
 
       {/* 3. InsightCover (all 3 articles) */}
       <section className="section mist" data-header="paper">
@@ -297,7 +297,7 @@ export function V4StudyView() {
                 before={copyIfApproved("H-3b02", locale)}
                 after={copyIfApproved("H-3a02", locale)}
               />
-              <span className="halo-button">
+              <span className="halo-button isolate inline-flex">
                 <Link className="button" href={href(locale, "/contact")}>
                   {text("D.1", "主按钮", locale)}
                   <ArrowUpRight size={18} aria-hidden="true" />
@@ -331,7 +331,7 @@ export function V4StudyView() {
           </div>
 
           <div className="faq-list">
-            <details className="faq-item" open>
+            <details className="faq-item [border-bottom:1px_solid_var(--line)] [interpolate-size:allow-keywords]" open>
               <summary>
                 <span>{copyIfApproved("H-7q1", locale)}</span>
                 <ChevronDown className="faq-icon" size={18} aria-hidden="true" />

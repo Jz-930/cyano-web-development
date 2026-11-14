@@ -28,11 +28,11 @@ export function MockupWindow({
       aria-hidden="false"
     >
       {caption ? <figcaption className="sr-only">{caption}</figcaption> : null}
-      <header className="mk-bar">
-        <span className="label mk-system">{system}</span>
+      <header className="mk-bar flex justify-between items-center [height:40px] [padding:0_var(--sp-3)] [border-bottom:1px_solid_var(--dark-line-soft)]">
+        <span className="label mk-system [font-size:12px]">{system}</span>
         {status ? (
           <span
-            className="mk-status"
+            className="mk-status [font:500_12px/1_var(--mono)] [padding:var(--sp-1)_var(--sp-2)] [border-radius:var(--r-chip)] [transition:color_var(--qtb),border-color_var(--qtb),background-color_var(--qtb)]"
             data-tone={statusTone !== "default" ? statusTone : undefined}
           >
             {statusTone === "review" ? (

@@ -92,12 +92,12 @@ export function About({ locale }: { locale: Locale }) {
           </Link>
         }
         visual={
-          <div className="about-hero-visual" aria-hidden="true">
-            <div className="about-hero-portraits">
+          <div className="about-hero-visual flex flex-col [gap:var(--sp-2)] w-full [max-width:500px] [margin-left:auto] [@media(max-width:1023px)]:[margin-left:0]" aria-hidden="true">
+            <div className="about-hero-portraits grid [grid-template-columns:repeat(4,minmax(0,1fr))] [gap:var(--sp-3)]">
               {team.map((f) => (
-                <div key={f.id} className="mk-panel about-hero-portrait">
+                <div key={f.id} className="mk-panel about-hero-portrait [background:var(--n1)] [border:1px_solid_var(--dark-line-soft)] [padding:6px] [border-radius:var(--r-card)] overflow-hidden">
                   <img
-                    src={`/v3-materials/founder-${f.order}.webp`}
+                    src={`/v3-materials/founder-${f.order + 1}.webp`}
                     alt=""
                     width={120}
                     height={160}
@@ -109,7 +109,7 @@ export function About({ locale }: { locale: Locale }) {
 
             <svg
               viewBox="0 0 480 48"
-              className="about-hero-connectors"
+              className="about-hero-connectors w-full [height:44px]"
               focusable="false"
             >
               {/* Connect 4 portrait centers (60, 180, 300, 420) to 5 stage nodes (48, 144, 240, 336, 432) */}
@@ -130,10 +130,10 @@ export function About({ locale }: { locale: Locale }) {
               })}
             </svg>
 
-            <ol className="about-hero-stages">
+            <ol className="about-hero-stages grid [grid-template-columns:repeat(5,minmax(0,1fr))] [gap:var(--sp-2)] list-none m-0 p-0">
               {stageNames.map((st, idx) => (
-                <li key={st} className="about-stage-pill">
-                  <span className="about-stage-dot" />
+                <li key={st} className="about-stage-pill flex items-center justify-center [gap:6px] [padding:6px_8px] [border-radius:var(--r-chip)] [background:var(--n2)] [border:1px_solid_var(--dark-line)]">
+                  <span className="about-stage-dot [width:6px] [height:6px] [border-radius:var(--r-chip)] [background:var(--cyan)]" />
                   <span className="label">{`0${idx + 1}`}</span>
                 </li>
               ))}
@@ -143,9 +143,9 @@ export function About({ locale }: { locale: Locale }) {
       />
 
       {/* Section 2: Who we are (7 cols) + Team numbers (5 cols) */}
-      <section className="paper about-intro-section" data-header="paper">
-        <div className="wrap about-intro-grid">
-          <div className="about-who" data-reveal="">
+      <section className="paper about-intro-section [padding-block:var(--section-y)]" data-header="paper">
+        <div className="wrap about-intro-grid grid [grid-template-columns:minmax(0,7fr)_minmax(0,5fr)] [@media(max-width:1023px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-8)] [align-items:start]">
+          <div className="about-who flex flex-col [gap:var(--sp-4)]" data-reveal="">
             <p className="eyebrow">{pageCopy.our_background[locale]}</p>
             <h2 className="h2">
               <Phrase
@@ -157,29 +157,29 @@ export function About({ locale }: { locale: Locale }) {
             <p>{who2}</p>
           </div>
 
-          <div className="about-stats" data-reveal="">
+          <div className="about-stats flex flex-col [gap:var(--sp-3)]" data-reveal="">
             {teamStats.map((st, idx) => (
               <div key={st.label + idx} className="card about-stat-card">
-                <div className="about-stat-head">
+                <div className="about-stat-head flex items-baseline [gap:var(--sp-3)]">
                   {idx === 0 ? (
                     <CitationPeek
                       id="team-6y"
                       locale={locale}
                       className="about-stat-cite"
                     >
-                      <strong className="figure about-stat-val">
+                      <strong className="figure about-stat-val [font-size:32px] [line-height:1.05] [font-weight:650] [font-variant-numeric:tabular-nums]">
                         {st.value}
                       </strong>
                     </CitationPeek>
                   ) : (
-                    <strong className="figure about-stat-val">
+                    <strong className="figure about-stat-val [font-size:32px] [line-height:1.05] [font-weight:650] [font-variant-numeric:tabular-nums]">
                       {st.value}
                     </strong>
                   )}
-                  <span className="about-stat-lbl">{st.label}</span>
+                  <span className="about-stat-lbl [font-size:14px] [font-weight:500] [color:var(--ink)]">{st.label}</span>
                 </div>
                 {statExplains[idx] ? (
-                  <p className="small about-stat-exp">{statExplains[idx]}</p>
+                  <p className="small about-stat-exp m-0 [color:var(--muted)]">{statExplains[idx]}</p>
                 ) : null}
               </div>
             ))}
@@ -188,9 +188,9 @@ export function About({ locale }: { locale: Locale }) {
       </section>
 
       {/* Section 3: K-10 Responsibility Matrix + 4 Founder Cards */}
-      <section className="paper-2 about-team-section" data-header="paper">
+      <section className="paper-2 about-team-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
-          <div className="about-sec-head" data-reveal="">
+          <div className="about-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow">{pageCopy.founders[locale]}</p>
             <h2 className="h2">
               <Phrase
@@ -210,9 +210,9 @@ export function About({ locale }: { locale: Locale }) {
             stageNames={stageNames}
           />
 
-          <div className="about-founders-grid">
+          <div className="about-founders-grid grid [grid-template-columns:repeat(2,minmax(0,1fr))] [@media(max-width:1023px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-6)]">
             {team.map((f, idx) => {
-              const altObj = FOUNDER_ALTS[f.order] ?? FOUNDER_ALTS[1];
+              const altObj = FOUNDER_ALTS[f.order + 1] ?? FOUNDER_ALTS[1];
               return (
                 <article
                   key={f.id}
@@ -220,22 +220,22 @@ export function About({ locale }: { locale: Locale }) {
                   data-reveal=""
                   style={{ "--i": idx } as React.CSSProperties}
                 >
-                  <div className="about-founder-top">
+                  <div className="about-founder-top flex items-center [@media(max-width:600px)]:[align-items:flex-start] [gap:var(--sp-5)] [@media(max-width:600px)]:flex-col">
                     <img
-                      src={`/v3-materials/founder-${f.order}.webp`}
+                      src={`/v3-materials/founder-${f.order + 1}.webp`}
                       alt={t(locale, altObj.zh, altObj.en)}
                       width={128}
                       height={128}
                       loading="lazy"
                       decoding="async"
-                      className="about-founder-img"
+                      className="about-founder-img [width:128px] [max-width:160px] [height:128px] [max-height:160px] [border-radius:var(--r-card)] [object-fit:cover] [background:var(--p3)] shrink-0"
                     />
-                    <div className="about-founder-meta">
+                    <div className="about-founder-meta flex flex-col [gap:var(--sp-2)]">
                       <span className="label">{f.id}</span>
                       <h3 className="h3">{f.role}</h3>
-                      <div className="about-founder-tags">
+                      <div className="about-founder-tags flex flex-wrap [gap:var(--sp-2)]">
                         {f.tags.split(" · ").map((tg) => (
-                          <span key={tg} className="tag">
+                          <span key={tg} className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">
                             {tg}
                           </span>
                         ))}
@@ -243,12 +243,12 @@ export function About({ locale }: { locale: Locale }) {
                     </div>
                   </div>
 
-                  <p className="about-founder-motto">{f.motto}</p>
-                  <p className="about-founder-bio">{f.bio}</p>
+                  <p className="about-founder-motto m-0 [font-size:16px] [font-weight:600] [color:var(--ink)]">{f.motto}</p>
+                  <p className="about-founder-bio m-0 [font-size:15px] [color:var(--muted)]">{f.bio}</p>
 
-                  <div className="about-founder-stages">
+                  <div className="about-founder-stages flex flex-wrap [gap:var(--sp-2)] [margin-top:auto] [padding-top:var(--sp-3)] [border-top:1px_solid_var(--line-soft)]">
                     {f.stages.map((st) => (
-                      <span key={st} className="tag">
+                      <span key={st} className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">
                         {stageNames[st - 1]}
                       </span>
                     ))}
@@ -261,36 +261,36 @@ export function About({ locale }: { locale: Locale }) {
       </section>
 
       {/* Section 4: Service scope (.name-story) + Principles */}
-      <section className="paper about-scope-section" data-header="paper">
+      <section className="paper about-scope-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
           <div className="card name-story" data-reveal="">
-            <div className="name-story-head">
+            <div className="name-story-head flex flex-col [gap:var(--sp-3)]">
               <h2 className="h2">
                 {text("D.7", "名字的由来标题", locale)}
               </h2>
-              <p className="name-story-lead">
+              <p className="name-story-lead m-0 [font-size:20px] [font-weight:600] [line-height:1.4] [color:var(--ink)]">
                 <Phrase
                   text={pageCopy.designed_around_your_sources[locale]}
                   locale={locale}
                 />
               </p>
             </div>
-            <div className="name-story-body">
+            <div className="name-story-body flex flex-col [gap:var(--sp-4)]">
               <p>{text("D.7", "名字的由来正文", locale)}</p>
               <p>{pageCopy.sales_inquiries_need_specifications[locale]}</p>
             </div>
           </div>
 
-          <hr className="rule-dot about-rule" />
+          <hr className="rule-dot about-rule relative [height:1px] [border:0] [background:var(--line-soft)] overflow-visible [margin-block:var(--sp-9)]" />
 
-          <div className="about-sec-head" data-reveal="">
+          <div className="about-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow">{pageCopy.our_principles[locale]}</p>
             <h2 className="h2">
               <Phrase text={text("D.7", "原则标题", locale)} locale={locale} />
             </h2>
           </div>
 
-          <div className="about-principles-grid">
+          <div className="about-principles-grid grid [grid-template-columns:repeat(2,minmax(0,1fr))] [@media(max-width:1023px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-6)]">
             {principles.map((p, idx) => (
               <article
                 key={p.indexLabel}

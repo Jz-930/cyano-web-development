@@ -19,15 +19,49 @@ export type ConcernItem = {
 const TARGET_GATE_BY_TAB = [0, 1, 3, 2] as const;
 
 const SCATTER_COORDS = [
-  { sx: -18, sy: -10, dx: 4, dy: -3 },
-  { sx: 14, sy: -14, dx: -4, dy: 3 },
-  { sx: -12, sy: 12, dx: -3, dy: 4 },
-  { sx: 18, sy: 10, dx: 4, dy: 2 },
-  { sx: -16, sy: 14, dx: 3, dy: -4 },
-  { sx: 10, sy: -12, dx: -4, dy: -2 },
-  { sx: -10, sy: -8, dx: 4, dy: 3 },
-  { sx: 16, sy: 12, dx: -3, dy: -4 },
-];
+  { sx: -18, sy: -10, dx: 4, dy: -3, l: "16%", t: "18%", r: "-8deg" },
+  { sx: 14, sy: -14, dx: -4, dy: 3, l: "42%", t: "12%", r: "6deg" },
+  { sx: -12, sy: 12, dx: -3, dy: 4, l: "68%", t: "20%", r: "-4deg" },
+  { sx: 18, sy: 10, dx: 4, dy: 2, l: "26%", t: "48%", r: "9deg" },
+  { sx: -16, sy: 14, dx: 3, dy: -4, l: "56%", t: "44%", r: "-7deg" },
+  { sx: 10, sy: -12, dx: -4, dy: -2, l: "76%", t: "56%", r: "5deg" },
+  { sx: -10, sy: -8, dx: 4, dy: 3, l: "18%", t: "70%", r: "4deg" },
+  { sx: 16, sy: 12, dx: -3, dy: -4, l: "48%", t: "70%", r: "-6deg" },
+] as const;
+
+const CHUNK_COORDS = [
+  ["20%", "28%", 56],
+  ["52%", "26%", 56],
+  ["20%", "36%", 76],
+  ["60%", "18%", 76],
+  ["20%", "24%", 96],
+  ["48%", "30%", 96],
+  ["20%", "58%", 116],
+  ["18%", "30%", 152],
+  ["52%", "30%", 152],
+  ["22%", "26%", 174],
+  ["52%", "26%", 174],
+] as const;
+
+const FILTER_COORDS = [
+  ["22%", "56%", 64],
+  ["22%", "46%", 92],
+  ["22%", "52%", 120],
+  ["22%", "24%", 172],
+  ["50%", "24%", 172],
+  ["22%", "24%", 190],
+  ["50%", "24%", 190],
+  ["20%", "24%", 20],
+  ["52%", "24%", 20],
+  ["36%", "24%", 20],
+] as const;
+
+const PROMPT_CARDS = [
+  ["12%", 44, "rotate(-7deg)"],
+  ["34%", 38, "rotate(5deg)"],
+  ["56%", 46, "rotate(-4deg)"],
+  ["76%", 40, "rotate(8deg)"],
+] as const;
 
 export function ConcernPanel({
   locale,
@@ -123,7 +157,7 @@ export function ConcernPanel({
   return (
     <div
       ref={panelRef}
-      className="concern-panel dark halo-panel line-grid"
+      className="concern-panel dark halo-panel line-grid relative [border-radius:var(--r-panel)] [padding:var(--sp-6)_var(--sp-7)_var(--sp-7)] [@media(max-width:1023px)]:[padding:var(--sp-5)] grid [grid-template-columns:260px_minmax(0,1fr)] [@media(max-width:1023px)]:[grid-template-columns:1fr] [gap:var(--sp-5)_var(--sp-7)] overflow-hidden [background:var(--n1)] [border:1px_solid_var(--dark-line)]"
       data-surface="dark"
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
@@ -136,10 +170,10 @@ export function ConcernPanel({
     >
       <LightField preset="panel" focusSelector=".gate-row" />
 
-      <div className="concern-toolbar">
+      <div className="concern-toolbar [grid-column:1_/_-1] relative [z-index:var(--z-stage)] flex [justify-content:flex-end] [margin-bottom:calc(-1_*_var(--sp-2))]">
         <button
           type="button"
-          className="button-text concern-auto-toggle"
+          className="button-text concern-auto-toggle no-underline [min-height:36px] [padding:var(--sp-1)_var(--sp-3)] [border-radius:var(--r-chip)] [font-size:13px] [transition:background-color_var(--qtf),border-color_var(--qtf),color_var(--qtf),transform_var(--qtp)]"
           aria-pressed={autoPlay}
           onClick={() => setAutoPlay((v) => !v)}
         >
@@ -154,11 +188,11 @@ export function ConcernPanel({
 
       <div
         ref={tablistRef}
-        className="concern-tabs"
+        className="concern-tabs flex flex-col [@media(max-width:1023px)]:flex-row [gap:var(--sp-1)] relative [z-index:var(--z-content)] [padding-left:var(--sp-4)] [@media(max-width:1023px)]:[padding-left:0] [align-self:start] [@media(max-width:1023px)]:[overflow-x:auto]"
         role="tablist"
         aria-label={t(locale, "实施中需要处理的问题", "Implementation")}
       >
-        <span className="tab-indicator" aria-hidden="true" />
+        <span className="tab-indicator absolute pointer-events-none" aria-hidden="true" />
         {items.map((item, i) => (
           <button
             key={item.title}
@@ -180,7 +214,7 @@ export function ConcernPanel({
         ))}
       </div>
 
-      <div ref={panelsRef} className="concern-stage tab-panels">
+      <div ref={panelsRef} className="concern-stage tab-panels relative [z-index:var(--z-content)] min-w-0">
         {items.map((item, i) => {
           const isCurrent = selected === i;
           const pActive = isCurrent ? problemOn : true;
@@ -197,9 +231,9 @@ export function ConcernPanel({
               aria-labelledby={`concern-tab-${i}`}
               className="concern-tabpanel"
             >
-              <div className="concern-split">
+              <div className="concern-split relative grid [grid-template-columns:minmax(0,1fr)_1px_minmax(0,1fr)] [@media(max-width:800px)]:[grid-template-columns:1fr] [gap:var(--sp-6)] overflow-hidden">
                 <span
-                  className="concern-sweep"
+                  className="concern-sweep absolute [top:0] [bottom:0] [left:-140px] [width:120px] [z-index:var(--z-stage)] pointer-events-none [background:linear-gradient(90deg,transparent,var(--cyan-22),transparent)]"
                   data-sweep={isCurrent && sweeping ? "true" : undefined}
                   data-motion="transform"
                   aria-hidden="true"
@@ -211,7 +245,7 @@ export function ConcernPanel({
                     {t(locale, "目前的问题", "The problem")}
                   </span>
                   <div
-                    className={`concern-anim concern-anim-p-${i}`}
+                    className={`concern-anim relative [height:220px] [border-radius:var(--r-card)] [background:var(--n2)] [border:1px_solid_var(--dark-line-soft)] overflow-hidden concern-anim-p-${i}`}
                     data-active={pActive ? "true" : "false"}
                     aria-hidden="true"
                   >
@@ -219,10 +253,13 @@ export function ConcernPanel({
                       SCATTER_COORDS.map((c, k) => (
                         <i
                           key={k}
-                          className="s11-frag"
+                          className="s11-frag absolute [width:28px] [height:36px] [border-radius:var(--qr4)] [background:var(--n3)] [border:1px_solid_var(--dark-line)] [transition:transform_var(--dur-enter)_var(--ease-spring),opacity_var(--qtb),border-color_var(--qtb)]"
                           data-motion="transform"
                           style={
                             {
+                              left: c.l,
+                              top: c.t,
+                              "--r": c.r,
                               "--k": k,
                               "--dx": `${c.dx}px`,
                               "--dy": `${c.dy}px`,
@@ -232,22 +269,22 @@ export function ConcernPanel({
                       ))
                     ) : i === 1 ? (
                       <>
-                        <i className="s11-frame" />
-                        {Array.from({ length: 11 }).map((_, k) => (
+                        <i className="s11-frame absolute [left:16%] [right:16%] [top:44px] [height:120px] [border-radius:var(--r-control)]" />
+                        {CHUNK_COORDS.map(([left, width, top], k) => (
                           <i
                             key={k}
-                            className={`s11-chunk${k >= 7 ? " is-overflow" : ""}`}
+                            className={`s11-chunk absolute [height:12px] [border-radius:var(--qr4)] [transition:transform_var(--qte),opacity_var(--qte),border-color_var(--qtb)] ${k >= 7 ? " is-overflow" : ""}`}
                             data-motion="transform"
-                            style={{ "--k": k } as CSSProperties}
+                            style={{ left, width, top, "--k": k } as CSSProperties}
                           />
                         ))}
                       </>
                     ) : i === 2 ? (
-                      <div className="s11-doc-card">
-                        <i className="s11-line s11-w-82" />
-                        <i className="s11-line s11-w-92" />
+                      <div className="s11-doc-card absolute [left:14%] [right:14%] [top:42px] [padding:var(--sp-4)] [border-radius:var(--r-control)] [background:var(--n1)] grid [gap:var(--sp-2)]">
+                        <i className="s11-line s11-w-82 block [height:8px] [border-radius:var(--r-chip)] [background:var(--frost-15)] [width:82%]" />
+                        <i className="s11-line s11-w-92 block [height:8px] [border-radius:var(--r-chip)] [background:var(--frost-15)] [width:92%]" />
                         <svg
-                          className="s11-wave"
+                          className="s11-wave [width:140px] [height:12px] [margin-top:-4px]"
                           viewBox="0 0 140 12"
                           fill="none"
                         >
@@ -258,32 +295,35 @@ export function ConcernPanel({
                             pathLength="1"
                           />
                         </svg>
-                        <i className="s11-line s11-w-64" />
+                        <i className="s11-line s11-w-64 block [height:8px] [border-radius:var(--r-chip)] [background:var(--frost-15)] [width:64%]" />
                         {noSourceLabel ? (
-                          <span className="label s11-risk-tag">
+                          <span className="label s11-risk-tag [justify-self:start] [padding:2px_8px] [border-radius:var(--r-chip)] [background:var(--risk-12)] [border:1px_solid_var(--risk)]">
                             {noSourceLabel}
                           </span>
                         ) : null}
                       </div>
                     ) : (
                       <>
-                        {[0, 1, 2, 3].map((k) => (
+                        {PROMPT_CARDS.map(([left, top, transform], k) => (
                           <i
                             key={`card-${k}`}
-                            className={`s11-prompt-card s11-pc-${k}`}
+                            className="s11-prompt-card absolute [width:48px] [height:36px] [border-radius:var(--qr6)] [background:var(--n3)] [border:1px_solid_var(--dark-line)]"
                             data-motion="transform"
+                            style={{ left, top, transform }}
                           />
                         ))}
                         {[0, 1, 2, 3].map((k) => (
                           <i
                             key={`av-${k}`}
-                            className={`s11-avatar-dot s11-av-${k}`}
+                            className="s11-avatar-dot absolute [width:12px] [height:12px] [border-radius:var(--q50)] [bottom:28px] [margin-left:-6px] [background:var(--frost-15)] [border:1px_solid_var(--dark-line)]"
+                            style={{ left: `${(k + 1) * 20}%` }}
                           />
                         ))}
                         {[0, 1, 2, 3].map((k) => (
                           <i
                             key={`ln-${k}`}
-                            className={`s11-solo-link s11-sl-${k}`}
+                            className="s11-solo-link absolute [width:1px] [height:76px] [top:86px] [background:var(--dark-line-soft)]"
+                            style={{ left: `${(k + 1) * 20}%` }}
                           />
                         ))}
                       </>
@@ -292,28 +332,28 @@ export function ConcernPanel({
                   <p>{item.issue}</p>
                 </div>
 
-                <div className="split-line" aria-hidden="true" />
+                <div className="split-line [width:1px] [align-self:stretch] [background:linear-gradient(_180deg,transparent_0%,var(--cyan-40)_50%,transparent_100%_)]" aria-hidden="true" />
 
                 {/* Right: Cyano Core */}
                 <div className="concern-side is-core">
-                  <div className="gate-row" aria-hidden="true">
+                  <div className="gate-row flex flex-wrap items-center [gap:6px] [margin-bottom:var(--sp-3)]" aria-hidden="true">
                     {gates.map((gName, gIdx) => (
-                      <span key={gName} className="gate-item">
+                      <span key={gName} className="gate-item inline-flex items-center [gap:6px]">
                         <span
-                          className="gate"
+                          className="gate inline-flex items-center [padding:5px_10px] [border-radius:var(--r-chip)] [font-size:13px] [transition:color_var(--qtb),border-color_var(--qtb),box-shadow_var(--qtb)]"
                           data-on={currentLitGate === gIdx ? "true" : undefined}
                         >
                           {gName}
                         </span>
                         {gIdx < gates.length - 1 ? (
-                          <span className="gate-arrow" />
+                          <span className="gate-arrow [width:10px] [height:1px] [background:var(--dark-line)]" />
                         ) : null}
                       </span>
                     ))}
                   </div>
 
                   <div
-                    className={`concern-anim concern-anim-s-${i}`}
+                    className={`concern-anim relative [height:220px] [border-radius:var(--r-card)] [background:var(--n2)] [border:1px_solid_var(--dark-line-soft)] overflow-hidden concern-anim-s-${i}`}
                     data-solved={sActive ? "true" : "false"}
                     aria-hidden="true"
                   >
@@ -322,10 +362,12 @@ export function ConcernPanel({
                         {SCATTER_COORDS.map((c, k) => (
                           <i
                             key={k}
-                            className="s11-grid-frag"
+                            className="s11-grid-frag absolute [width:28px] [height:36px] [border-radius:var(--qr4)]"
                             data-motion="transform"
                             style={
                               {
+                                left: `calc(50% + ${(k % 4) * 40 - 76}px)`,
+                                top: k < 4 ? 58 : 112,
                                 "--k": k,
                                 "--sx": `${c.sx}px`,
                                 "--sy": `${c.sy}px`,
@@ -333,34 +375,34 @@ export function ConcernPanel({
                             }
                           />
                         ))}
-                        <span className="s11-lock">
+                        <span className="s11-lock absolute [right:calc(50%_-_92px)] [top:38px] [width:24px] [height:24px] [border-radius:var(--q50)] grid [place-items:center] [background:var(--n1)] [border:1px_solid_var(--cyan-60)] [color:var(--ice)] [transition:opacity_var(--qtb)]">
                           <Lock size={14} />
                         </span>
                       </>
                     ) : i === 1 ? (
                       <>
-                        <i className="s11-frame is-clean" />
-                        <i className="s11-sieve" data-motion="transform" />
-                        {Array.from({ length: 10 }).map((_, k) => (
+                        <i className="s11-frame is-clean absolute [left:16%] [right:16%] [top:44px] [height:120px] [border-radius:var(--r-control)]" />
+                        <i className="s11-sieve absolute [left:12%] [right:12%] [top:32px] [height:1px] [border-top:1.5px_dashed_var(--cyan)] [transition:transform_var(--dur-scene)_var(--ease-in-out),opacity_var(--qtb)]" data-motion="transform" />
+                        {FILTER_COORDS.map(([left, width, top], k) => (
                           <i
                             key={k}
-                            className={`s11-filter-chunk${k < 3 ? " is-kept" : " is-dropped"}`}
+                            className={`s11-filter-chunk absolute [height:12px] [border-radius:var(--qr4)] [transition:transform_var(--qte),opacity_var(--qte),border-color_var(--qtb)] ${k < 3 ? " is-kept" : " is-dropped"}`}
                             data-motion="transform"
-                            style={{ "--k": k } as CSSProperties}
+                            style={{ left, width, top, "--k": k } as CSSProperties}
                           />
                         ))}
                       </>
                     ) : i === 2 ? (
-                      <div className="s11-doc-card is-verified">
-                        <i className="s11-line s11-w-82" />
-                        <div className="s11-cited-row">
-                          <i className="s11-line s11-w-76" />
-                          <span className="mk-cite s11-cite-pop" data-motion="transform">
+                      <div className="s11-doc-card is-verified absolute [left:14%] [right:14%] [top:42px] [padding:var(--sp-4)] [border-radius:var(--r-control)] [background:var(--n1)] grid [gap:var(--sp-2)]">
+                        <i className="s11-line s11-w-82 block [height:8px] [border-radius:var(--r-chip)] [background:var(--frost-15)] [width:82%]" />
+                        <div className="s11-cited-row flex items-center [gap:var(--sp-2)]">
+                          <i className="s11-line s11-w-76 block [height:8px] [border-radius:var(--r-chip)] [background:var(--frost-15)] [width:76%]" />
+                          <span className="mk-cite s11-cite-pop inline-flex items-center justify-center [margin-left:var(--sp-1)] [padding:1px_6px] [min-width:20px] [min-height:20px] [border-radius:var(--r-control)] [font:500_12px/1.3_var(--mono)] [color:var(--ice)] [transition:transform_var(--dur-enter)_var(--ease-spring),opacity_var(--qtb)]" data-motion="transform">
                             [1]
                           </span>
                         </div>
-                        <i className="s11-line s11-w-64" />
-                        <span className="s11-amber-check">
+                        <i className="s11-line s11-w-64 block [height:8px] [border-radius:var(--r-chip)] [background:var(--frost-15)] [width:64%]" />
+                        <span className="s11-amber-check [width:26px] [height:26px] [border-radius:var(--q50)] [background:var(--amber-12)] [border:1px_solid_var(--amber)] grid">
                           <svg viewBox="0 0 20 20" fill="none">
                             <path
                               d="M5 10.5 L8.5 14 L15 6.5"
@@ -375,13 +417,13 @@ export function ConcernPanel({
                       </div>
                     ) : (
                       <>
-                        <div className="s11-playbook" data-motion="transform">
+                        <div className="s11-playbook absolute [left:50%] [top:34px] [width:156px] [margin-left:-78px] [padding:var(--sp-3)] [border-radius:var(--r-control)] [background:var(--n1)] [border:1px_solid_var(--cyan-60)] grid [gap:6px] [z-index:var(--z-content)] [transition:transform_var(--dur-enter)_var(--ease-spring),opacity_var(--qtb)]" data-motion="transform">
                           <span className="label">Playbook</span>
-                          <i className="s11-line s11-w-82" />
-                          <i className="s11-line s11-w-64" />
+                          <i className="s11-line s11-w-82 block [height:8px] [border-radius:var(--r-chip)] [background:var(--frost-15)] [width:82%]" />
+                          <i className="s11-line s11-w-64 block [height:8px] [border-radius:var(--r-chip)] [background:var(--frost-15)] [width:64%]" />
                         </div>
                         <svg
-                          className="s11-fan-svg"
+                          className="s11-fan-svg absolute inset-0 w-full h-full pointer-events-none"
                           viewBox="0 0 320 220"
                           fill="none"
                         >
@@ -413,7 +455,8 @@ export function ConcernPanel({
                         {[0, 1, 2, 3].map((k) => (
                           <i
                             key={k}
-                            className={`s11-team-dot s11-td-${k}`}
+                            className="s11-team-dot absolute [width:12px] [height:12px] [border-radius:var(--q50)] [bottom:28px] [margin-left:-6px] [background:var(--cyan-22)] [border:1.5px_solid_var(--cyan)]"
+                            style={{ left: `${(k + 1) * 20}%` }}
                           />
                         ))}
                       </>
@@ -427,7 +470,7 @@ export function ConcernPanel({
         })}
       </div>
 
-      <p className="concern-foot">
+      <p className="concern-foot [grid-column:1_/_-1] relative [z-index:var(--z-content)] flex flex-wrap justify-between items-center [gap:var(--sp-4)] [padding-top:var(--sp-5)] [border-top:1px_solid_var(--dark-line-soft)] [font-size:16px] [color:var(--light)]">
         {conclusion ? (
           <span className="callout-line-text">{conclusion}</span>
         ) : (

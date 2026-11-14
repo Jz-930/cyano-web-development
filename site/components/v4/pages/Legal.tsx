@@ -127,25 +127,25 @@ export function Legal({
 
   return (
     <>
-      <section className="paper legal-hero" data-header="paper">
+      <section className="paper legal-hero [padding-top:132px] [padding-bottom:var(--sp-6)] [@media(max-width:800px)]:[padding-top:112px] [border-bottom:1px_solid_var(--line-soft)]" data-header="paper">
         <div className="wrap">
-          <div className="legal-center">
+          <div className="legal-center [max-width:68ch] [margin-inline:auto]">
             <p className="eyebrow">CYANO</p>
-            <h1 className="h1-page legal-title">
+            <h1 className="h1-page legal-title [color:var(--ink)] [margin-top:var(--sp-2)]">
               <Phrase text={title} locale={locale} />
             </h1>
-            <p className="small legal-updated">
+            <p className="small legal-updated [margin:var(--sp-3)_0_0] [color:var(--muted)]">
               {pageCopy.updated_november_12_2026[locale]}
             </p>
           </div>
         </div>
       </section>
 
-      <section className="paper legal-body-section" data-header="paper">
+      <section className="paper legal-body-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
-          <article className="prose legal-center legal-prose">
+          <article className="prose legal-center legal-prose [max-width:68ch] [margin-inline:auto] flex flex-col [gap:var(--sp-6)]">
             {(locale === "zh" ? zh : en).map(([h, p]) => (
-              <section key={h} className="legal-sec">
+              <section key={h} className="legal-sec flex flex-col [gap:var(--sp-2)]">
                 <h2 className="h3">
                   <Phrase text={h} locale={locale} />
                 </h2>
@@ -153,7 +153,7 @@ export function Legal({
               </section>
             ))}
 
-            <div className="legal-foot">
+            <div className="legal-foot [padding-top:var(--sp-4)] [border-top:1px_solid_var(--line-soft)]">
               <Link className="text-link" href={href(locale, "/contact#form")}>
                 {pageCopy.contact_us[locale]}
                 <ArrowUpRight size={17} aria-hidden="true" />

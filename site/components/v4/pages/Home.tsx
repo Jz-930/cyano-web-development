@@ -106,7 +106,7 @@ function EvidenceStrip({
 
   if (h1Items.length === 0) {
     return (
-      <div className="evidence-strip wrap">
+      <div className="evidence-strip wrap relative [z-index:var(--z-content)] [margin-top:var(--sp-5)] [padding:var(--sp-4)_0_var(--sp-5)] [border-top:1px_solid_var(--dark-line-soft)]">
         <ul style={{ "--cols": 4 } as CSSProperties}>
           {trustStats.map((st, idx) => (
             <li key={idx}>
@@ -130,7 +130,7 @@ function EvidenceStrip({
   }
 
   return (
-    <div className="evidence-strip wrap">
+    <div className="evidence-strip wrap relative [z-index:var(--z-content)] [margin-top:var(--sp-5)] [padding:var(--sp-4)_0_var(--sp-5)] [border-top:1px_solid_var(--dark-line-soft)]">
       <ul style={{ "--cols": h1Items.length } as CSSProperties}>
         {h1Items.map((item) => (
           <li key={item.id}>
@@ -314,15 +314,15 @@ export function Home({ locale }: { locale: Locale }) {
   return (
     <>
       {/* 1. 首屏 + 证据条 + 三层舞台（K-01, S1） */}
-      <section className="home-hero dark" data-header="dark">
+      <section className="home-hero dark isolate [height:auto] [min-height:min(860px,100svh)] [@media(max-width:800px)]:min-h-0 [padding:104px_0_0] [@media(max-width:800px)]:[padding-top:104px] flex flex-col [gap:0]" data-header="dark">
         <LightField
           preset="hero"
           focusSelector=".mk-core"
           textEdgeSelector=".hero-copy"
           intro
         />
-        <div className="hero-grid">
-          <div className="hero-copy">
+        <div className="hero-grid relative [z-index:var(--z-content)] [width:min(var(--wrap),calc(100%_-_2_*_var(--gutter)))] [margin:0_auto] [flex:1] grid [grid-template-columns:minmax(0,5fr)_minmax(0,7fr)] [@media(max-width:1023px)]:[grid-template-columns:1fr] items-center [gap:0] [@media(max-width:1023px)]:[gap:var(--sp-6)]">
+          <div className="hero-copy relative [z-index:var(--z-stage)] [padding-right:var(--sp-6)] [@media(max-width:1023px)]:[padding-right:0]">
             <p className="eyebrow on-dark">
               {copyIfApproved("H-0", locale) ?? text("D.2", "Eyebrow", locale)}
             </p>
@@ -369,11 +369,11 @@ export function Home({ locale }: { locale: Locale }) {
             </div>
           </div>
 
-          <div className="hero-stage-col">
-            <div className="hero-stage-stack">
+          <div className="hero-stage-col [margin-left:-40px] [@media(max-width:1023px)]:[margin-left:0] relative [z-index:var(--z-content)] flex [justify-content:flex-end] [@media(max-width:1023px)]:justify-center">
+            <div className="hero-stage-stack flex flex-col [align-items:flex-start] [max-width:100%]">
               <ProvenanceStage locale={locale} />
               {stageNote ? (
-                <p className="stage-note label">{stageNote}</p>
+                <p className="stage-note label [padding-left:var(--sp-3)]">{stageNote}</p>
               ) : null}
             </div>
           </div>
@@ -384,11 +384,11 @@ export function Home({ locale }: { locale: Locale }) {
 
       {/* 2. 顾虑四问（K-02, S11） */}
       <section
-        className="home-concerns section halo-paper-leak"
+        className="home-concerns section halo-paper-leak [background-image:linear-gradient(180deg,var(--cyan-04),transparent_240px)] [background-repeat:no-repeat]"
         data-header="paper"
       >
         <div className="wrap">
-          <header className="section-head" data-reveal="">
+          <header className="section-head grid [grid-template-columns:minmax(0,1fr)_auto] [@media(max-width:800px)]:[grid-template-columns:1fr] [align-items:end] [gap:var(--sp-3)_var(--sp-6)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow">{pageCopy.implementation[locale]}</p>
             <h2 className="h2">
               <Phrase text={concernTitle} locale={locale} />
@@ -408,16 +408,16 @@ export function Home({ locale }: { locale: Locale }) {
       {/* 3. 几种做法怎么选（H-4） */}
       {showCompare && compareRows.length > 0 ? (
         <section className="home-compare mist" data-header="paper">
-          <hr className="rule-dot" />
+          <hr className="rule-dot relative [height:1px] [border:0] [background:var(--line-soft)] overflow-visible" />
           <div className="wrap section">
-            <header className="section-head" data-reveal="">
+            <header className="section-head grid [grid-template-columns:minmax(0,1fr)_auto] [@media(max-width:800px)]:[grid-template-columns:1fr] [align-items:end] [gap:var(--sp-3)_var(--sp-6)] [margin-bottom:var(--stack-heading)]" data-reveal="">
               <p className="eyebrow">{h4e}</p>
               <h2 className="h2">
                 <Phrase text={h4t!} locale={locale} />
               </h2>
             </header>
-            <div className="compare-table-wrap" data-reveal="">
-              <table className="compare-table">
+            <div className="compare-table-wrap [overflow-x:auto] [border-radius:var(--r-card)] [border:1px_solid_var(--line)] [background:var(--p2)]" data-reveal="" tabIndex={0}>
+              <table className="compare-table w-full [min-width:760px] [border-collapse:collapse] [font-size:15px]">
                 <thead>
                   <tr>
                     <th scope="col">
@@ -442,12 +442,12 @@ export function Home({ locale }: { locale: Locale }) {
                 </tbody>
               </table>
             </div>
-            <ul className="neq-list" data-reveal="">
+            <ul className="neq-list list-none p-0 grid [gap:var(--sp-5)]" data-reveal="">
               {[h4n1!, h4n2!, h4n3!].map((stmt, idx) => (
                 <li key={idx}>{renderNotEqual(stmt)}</li>
               ))}
             </ul>
-            <p className="conclusion" data-reveal="">
+            <p className="conclusion [padding-left:var(--sp-5)] [border-left:2px_solid_var(--cyan)] [font-size:18px] [line-height:1.7] [color:var(--ink)]" data-reveal="">
               {h4z}
             </p>
           </div>
@@ -457,7 +457,7 @@ export function Home({ locale }: { locale: Locale }) {
       {/* 4. 四类场景（K-03, S6） */}
       <section className="home-solutions section" data-header="paper">
         <div className="wrap">
-          <header className="section-head" data-reveal="">
+          <header className="section-head grid [grid-template-columns:minmax(0,1fr)_auto] [@media(max-width:800px)]:[grid-template-columns:1fr] [align-items:end] [gap:var(--sp-3)_var(--sp-6)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow">{pageCopy.what_we_do[locale]}</p>
             <h2 className="h2">
               <Phrase text={text("D.2", "解决方案区标题", locale)} locale={locale} />
@@ -474,7 +474,7 @@ export function Home({ locale }: { locale: Locale }) {
       {/* 5. 已交付的客户项目（K-06）+ 行业条 */}
       <section className="home-cases section mist" data-header="paper">
         <div className="wrap">
-          <header className="section-head" data-reveal="">
+          <header className="section-head grid [grid-template-columns:minmax(0,1fr)_auto] [@media(max-width:800px)]:[grid-template-columns:1fr] [align-items:end] [gap:var(--sp-3)_var(--sp-6)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow">{pageCopy.selected_work[locale]}</p>
             <h2 className="h2">
               <Phrase text={text("D.2", "精选案例标题", locale)} locale={locale} />
@@ -486,7 +486,7 @@ export function Home({ locale }: { locale: Locale }) {
             </Link>
           </header>
 
-          <div className="home-case-grid">
+          <div className="home-case-grid [gap:var(--sp-5)]">
             {featuredCases.map((c, i) => (
               <CaseCoverCard
                 key={c.slug}
@@ -503,7 +503,7 @@ export function Home({ locale }: { locale: Locale }) {
             {industryLabels.map((label, idx) => {
               const Icon = INDUSTRY_ICONS[idx] ?? Factory;
               return (
-                <span key={label} className="industry-item">
+                <span key={label} className="industry-item inline-flex items-center [gap:var(--sp-2)] [font-size:15px] [color:var(--muted)]">
                   <Icon size={18} strokeWidth={1.4} aria-hidden="true" />
                   <span>{label}</span>
                 </span>
@@ -516,7 +516,7 @@ export function Home({ locale }: { locale: Locale }) {
       {/* 6. 合作方式与落地路径（K-11） */}
       <section className="home-engagement section" data-header="paper">
         <div className="wrap">
-          <header className="section-head" data-reveal="">
+          <header className="section-head grid [grid-template-columns:minmax(0,1fr)_auto] [@media(max-width:800px)]:[grid-template-columns:1fr] [align-items:end] [gap:var(--sp-3)_var(--sp-6)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow">{pageCopy.engagement_options[locale]}</p>
             <h2 className="h2">
               <Phrase text={text("D.2", "合作区标题", locale)} locale={locale} />
@@ -537,10 +537,10 @@ export function Home({ locale }: { locale: Locale }) {
       <section className="home-team section mist" data-header="paper">
         <div className="wrap">
           <div
-            className={`home-team-top${anyH1Approved ? "" : " is-full"}`}
+            className={`home-team-top grid [gap:var(--sp-7)] [align-items:start] ${anyH1Approved ? "" : " is-full"}`}
             data-reveal=""
           >
-            <div className="home-manifesto">
+            <div className="home-manifesto grid [gap:var(--sp-4)] [align-content:start]">
               <p className="eyebrow">{pageCopy.who_we_are[locale]}</p>
               <h2 className="h2">
                 <Phrase
@@ -552,10 +552,10 @@ export function Home({ locale }: { locale: Locale }) {
                   locale={locale}
                 />
               </h2>
-              <p className="home-manifesto-p">
+              <p className="home-manifesto-p [font-size:16px] [line-height:1.8] [color:var(--muted)]">
                 {text("D.2", "宣言段 1", locale)}
               </p>
-              <p className="home-manifesto-p">
+              <p className="home-manifesto-p [font-size:16px] [line-height:1.8] [color:var(--muted)]">
                 {text("D.2", "宣言段 2", locale)}
               </p>
               <Link className="text-link" href={href(locale, "/about")}>
@@ -565,10 +565,10 @@ export function Home({ locale }: { locale: Locale }) {
             </div>
 
             {anyH1Approved ? (
-              <div className="home-trust-grid">
+              <div className="home-trust-grid grid [grid-template-columns:repeat(2,minmax(0,1fr))] [@media(max-width:700px)]:[grid-template-columns:1fr] [gap:var(--sp-5)]">
                 {trustStats.map((st, idx) => (
-                  <div key={idx} className="home-trust-item">
-                    <div className="home-trust-val">
+                  <div key={idx} className="home-trust-item [padding:var(--sp-5)] [border-radius:var(--r-card)] [background:var(--p2)] [border:1px_solid_var(--line)] grid [gap:var(--sp-2)] [align-content:start]">
+                    <div className="home-trust-val flex items-baseline [gap:var(--sp-2)] [color:var(--ink)]">
                       {idx === 0 ? (
                         <CitationPeek id="team-6y" locale={locale}>
                           <strong className="figure">{st.num}</strong>
@@ -577,12 +577,12 @@ export function Home({ locale }: { locale: Locale }) {
                         <strong className="figure">{st.num}</strong>
                       )}
                       {st.unit ? (
-                        <span className="stat-unit">{st.unit}</span>
+                        <span className="stat-unit [font-size:14px] [font-weight:500] [color:var(--muted)]">{st.unit}</span>
                       ) : null}
                     </div>
-                    <p className="home-trust-desc">{st.desc}</p>
+                    <p className="home-trust-desc [font-size:15px] [font-weight:500] [line-height:1.5] [color:var(--ink)]">{st.desc}</p>
                     {st.meaning ? (
-                      <p className="small home-trust-meaning">{st.meaning}</p>
+                      <p className="small home-trust-meaning [color:var(--muted)] [padding-top:var(--sp-2)] [border-top:1px_solid_var(--line-soft)]">{st.meaning}</p>
                     ) : null}
                   </div>
                 ))}
@@ -590,9 +590,9 @@ export function Home({ locale }: { locale: Locale }) {
             ) : null}
           </div>
 
-          <hr className="rule-dot home-team-rule" />
+          <hr className="rule-dot home-team-rule relative [height:1px] [border:0] [background:var(--line-soft)] overflow-visible [margin-block:var(--sp-8)]" />
 
-          <header className="section-head home-founders-head" data-reveal="">
+          <header className="section-head home-founders-head grid [grid-template-columns:minmax(0,1fr)_auto] [@media(max-width:800px)]:[grid-template-columns:1fr] [align-items:end] [gap:var(--sp-3)_var(--sp-6)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow">{pageCopy.our_team[locale]}</p>
             <h2 className="h2">{text("D.2", "团队区标题", locale)}</h2>
             <p className="lede">{text("D.2", "团队区导语", locale)}</p>
@@ -602,7 +602,7 @@ export function Home({ locale }: { locale: Locale }) {
             </Link>
           </header>
 
-          <div className="home-founder-grid">
+          <div className="home-founder-grid grid [gap:var(--sp-4)]">
             {teamMembers.map((f, i) => (
               <article
                 key={f.id}
@@ -610,7 +610,7 @@ export function Home({ locale }: { locale: Locale }) {
                 data-reveal=""
                 style={{ "--i": i } as CSSProperties}
               >
-                <div className="home-founder-avatar">
+                <div className="home-founder-avatar [width:64px] [height:64px] [border-radius:var(--q50)] overflow-hidden [background:var(--p3)] shrink-0">
                   <Picture
                     src={`/v3-materials/founder-${i + 1}.webp`}
                     alt={t(
@@ -622,9 +622,9 @@ export function Home({ locale }: { locale: Locale }) {
                     thumbnail
                   />
                 </div>
-                <div className="home-founder-info">
-                  <h3 className="home-founder-role">{f.role}</h3>
-                  <p className="home-founder-tags">{f.tags}</p>
+                <div className="home-founder-info min-w-0 grid [gap:var(--sp-1)]">
+                  <h3 className="home-founder-role [font:500_16px_/_1.4_var(--sans)] [color:var(--ink)] m-0">{f.role}</h3>
+                  <p className="home-founder-tags [font-size:14px] [line-height:1.55] [color:var(--muted)]">{f.tags}</p>
                 </div>
               </article>
             ))}
@@ -636,23 +636,23 @@ export function Home({ locale }: { locale: Locale }) {
       {showFaq ? (
         <section className="home-faq section" data-header="paper">
           <div className="wrap">
-            <header className="section-head" data-reveal="">
+            <header className="section-head grid [grid-template-columns:minmax(0,1fr)_auto] [@media(max-width:800px)]:[grid-template-columns:1fr] [align-items:end] [gap:var(--sp-3)_var(--sp-6)] [margin-bottom:var(--stack-heading)]" data-reveal="">
               <h2 className="h2">{h7t}</h2>
             </header>
-            <div className="faq" data-reveal="">
+            <div className="faq [border-top:1px_solid_var(--line)]" data-reveal="">
               {faqItems.map((item) => (
-                <details key={item.q} className="faq-item">
+                <details key={item.q} className="faq-item [border-bottom:1px_solid_var(--line)] [interpolate-size:allow-keywords]">
                   <summary>
                     <span>{item.q}</span>
                     <span className="faq-icon" aria-hidden="true" />
                   </summary>
-                  <div className="faq-a">
+                  <div className="faq-a [padding:0_0_24px_16px] [border-left:1px_solid_var(--line)] [margin-left:2px]">
                     <p>{item.a}</p>
                   </div>
                 </details>
               ))}
             </div>
-            <div className="home-faq-foot" data-reveal="">
+            <div className="home-faq-foot [margin-top:var(--sp-6)]" data-reveal="">
               <Link className="text-link" href={href(locale, "/engagement#faq")}>
                 {h7l}
                 <ArrowUpRight size={16} />
@@ -665,7 +665,7 @@ export function Home({ locale }: { locale: Locale }) {
       {/* 9. 洞察（K-12 封面） */}
       <section className="home-insights section mist" data-header="paper">
         <div className="wrap">
-          <header className="section-head" data-reveal="">
+          <header className="section-head grid [grid-template-columns:minmax(0,1fr)_auto] [@media(max-width:800px)]:[grid-template-columns:1fr] [align-items:end] [gap:var(--sp-3)_var(--sp-6)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow">{pageCopy.perspectives[locale]}</p>
             <h2 className="h2">
               <Phrase
@@ -679,7 +679,7 @@ export function Home({ locale }: { locale: Locale }) {
             </Link>
           </header>
 
-          <div className="home-insight-grid">
+          <div className="home-insight-grid grid [gap:var(--sp-5)]">
             {articleItems.map((a, i) => (
               <article
                 key={a.slug}
@@ -687,11 +687,11 @@ export function Home({ locale }: { locale: Locale }) {
                 data-reveal=""
                 style={{ "--i": i } as CSSProperties}
               >
-                <div className="home-insight-cover-wrap" data-motion="transform">
+                <div className="home-insight-cover-wrap [padding:var(--sp-3)_var(--sp-3)_0] [transition:transform_var(--dur-scene)_var(--ease-out)]" data-motion="transform">
                   <InsightCover slug={a.slug} locale={locale} size="card" />
                 </div>
-                <div className="home-insight-body">
-                  <span className="tag">{a.category}</span>
+                <div className="home-insight-body [padding:var(--sp-5)] flex flex-col [gap:var(--sp-3)] [flex:1]">
+                  <span className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">{a.category}</span>
                   <h3 className="h3">
                     <Link
                       className="card-link"

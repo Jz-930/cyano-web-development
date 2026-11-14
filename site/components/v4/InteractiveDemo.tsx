@@ -84,19 +84,19 @@ export function InteractiveDemo({
   }
 
   return (
-    <div className="v4-demo" data-demo="">
+    <div className="v4-demo [margin-top:var(--sp-7)]" data-demo="">
       <MockupWindow
         system={data ? "SmartDoc AI" : "Enterprise Wiki"}
         status={liveBadge ?? t(locale, "在线体验", "Interactive experience")}
         statusTone="ok"
         className="v4-demo-window"
       >
-        <div className="v4-demo-grid">
-          <aside className="mk-panel v4-demo-sidebar">
+        <div className="v4-demo-grid grid [grid-template-columns:minmax(220px,4fr)_minmax(0,8fr)] [@media(max-width:900px)]:[grid-template-columns:1fr] [gap:var(--sp-4)]">
+          <aside className="mk-panel v4-demo-sidebar [background:var(--n1)] [border:1px_solid_var(--dark-line-soft)] [padding:var(--sp-4)] flex flex-col [gap:var(--sp-3)]">
             <span className="eyebrow v4-demo-prompt">
               {t(locale, "试着问一个问题", "TRY A QUESTION")}
             </span>
-            <div className="v4-demo-chips">
+            <div className="v4-demo-chips flex flex-col [gap:var(--sp-2)]">
               {questions.map((q, i) => (
                 <button
                   type="button"
@@ -111,10 +111,10 @@ export function InteractiveDemo({
             </div>
           </aside>
 
-          <div className="mk-panel v4-demo-stage">
+          <div className="mk-panel v4-demo-stage [background:var(--n1)] [border:1px_solid_var(--dark-line-soft)] [padding:var(--sp-5)] [min-height:280px] flex flex-col justify-center">
             {selected < 0 ? (
-              <div className="v4-demo-welcome">
-                <div className="v4-demo-orb" aria-hidden="true">
+              <div className="v4-demo-welcome flex flex-col items-center text-center [gap:var(--sp-2)] [color:var(--on-dark)]">
+                <div className="v4-demo-orb [width:52px] [height:52px] [border-radius:var(--q50)] [background:var(--cyan-12)] [border:1px_solid_var(--cyan-40)] [color:var(--ice)] grid [place-items:center]" aria-hidden="true">
                   <Database size={26} />
                 </div>
                 <h3 className="h3">
@@ -129,23 +129,23 @@ export function InteractiveDemo({
                 </p>
               </div>
             ) : (
-              <div key={selected} className="v4-demo-result">
-                <div className="v4-demo-q-row">
-                  <p className="v4-demo-question">{questions[selected]}</p>
+              <div key={selected} className="v4-demo-result flex flex-col [gap:var(--sp-4)]">
+                <div className="v4-demo-q-row flex items-center justify-between [gap:var(--sp-3)] [padding-bottom:var(--sp-3)] [border-bottom:1px_solid_var(--dark-line-soft)]">
+                  <p className="v4-demo-question [font-size:16px] [font-weight:500]">{questions[selected]}</p>
                   {running ? (
-                    <span className="v4-demo-dots" aria-hidden="true">
+                    <span className="v4-demo-dots inline-flex items-center [gap:5px]" aria-hidden="true">
                       <i />
                       <i />
                       <i />
                     </span>
                   ) : null}
                 </div>
-                <div className="v4-demo-answer">{answer}</div>
+                <div className="v4-demo-answer [font-size:15px] [line-height:1.75] [color:var(--on-dark)]">{answer}</div>
 
                 {!running && data ? (
                   <>
-                    <div className="v4-demo-table-wrap">
-                      <table className="v4-demo-table">
+                    <div className="v4-demo-table-wrap [overflow-x:auto] [border-radius:var(--r-control)] [border:1px_solid_var(--dark-line)]" tabIndex={0}>
+                      <table className="v4-demo-table w-full [border-collapse:collapse] [font-size:14px] [font-variant-numeric:tabular-nums]">
                         <thead>
                           <tr>
                             {queryDemo[selected].columns[locale].map((c) => (
@@ -164,7 +164,7 @@ export function InteractiveDemo({
                         </tbody>
                       </table>
                     </div>
-                    <details className="v4-demo-sql">
+                    <details className="v4-demo-sql [border-radius:var(--r-control)] [border:1px_solid_var(--dark-line)] [background:var(--n2)] [padding:var(--sp-2)_var(--sp-3)]">
                       <summary>
                         {t(
                           locale,
@@ -178,7 +178,7 @@ export function InteractiveDemo({
                 ) : null}
 
                 {!running && !data ? (
-                  <div className="v4-demo-citation">
+                  <div className="v4-demo-citation inline-flex items-center [gap:var(--sp-2)] [padding:var(--sp-2)_var(--sp-3)] [border-radius:var(--r-control)] [background:var(--n2)] [border:1px_solid_var(--dark-line)] [font-size:13px] [color:var(--ice)]">
                     <ShieldCheck size={15} aria-hidden="true" />
                     <span>
                       {selected === 5
@@ -209,7 +209,7 @@ export function InteractiveDemo({
               )
             : ""}
         </p>
-        <p className="v4-demo-disclaimer">{disclaimer}</p>
+        <p className="v4-demo-disclaimer [font-size:13px] [line-height:1.5] [padding:0_var(--sp-1)]">{disclaimer}</p>
       </MockupWindow>
     </div>
   );

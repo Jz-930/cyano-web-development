@@ -117,7 +117,7 @@ export function Technology({ locale }: { locale: Locale }) {
         title={copy("T-1", locale)}
         lede={copy("T-1s", locale)}
         footNote={text("D.1", "技术页脚注", locale)}
-        overlay={<div className="line-grid tech-hero-grid" aria-hidden="true" />}
+        overlay={<div className="line-grid tech-hero-grid absolute inset-0 pointer-events-none [z-index:var(--z-field)]" aria-hidden="true" />}
         actions={
           <Link className="button" href={href(locale, "/contact#form")}>
             {pageCopy.talk_to_our_cto[locale]}
@@ -127,14 +127,14 @@ export function Technology({ locale }: { locale: Locale }) {
       />
 
       {/* Section 2: Cyano Core 4-layer architecture (K-09 + S2) */}
-      <section className="paper tech-arch-section" data-header="paper">
+      <section className="paper tech-arch-section [padding-top:var(--sp-10)] [padding-bottom:var(--section-y)]" data-header="paper">
         <div className="wrap">
-          <div className="tech-arch-head" data-reveal="">
+          <div className="tech-arch-head flex flex-col [gap:var(--sp-3)] [max-width:68ch] [margin-bottom:var(--sp-8)]" data-reveal="">
             <p className="eyebrow">{pageCopy.platform_functions[locale]}</p>
             <h2 className="h2">
               <Phrase text="Cyano Core" locale={locale} />
             </h2>
-            <p className="tech-arch-lead">
+            <p className="tech-arch-lead m-0 [font-size:18px] [line-height:1.7] [color:var(--muted)]">
               {text("D.6", "Cyano Core 定义", locale)}
             </p>
           </div>
@@ -145,11 +145,11 @@ export function Technology({ locale }: { locale: Locale }) {
 
       {/* Section 3: Context engineering + S3 ContextPacker + Benchmarks */}
       <section
-        className="dark halo-panel tech-context-section"
+        className="dark halo-panel tech-context-section [padding-block:var(--section-y)]"
         data-header="dark"
       >
         <div className="wrap">
-          <div className="tech-sec-head" data-reveal="">
+          <div className="tech-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow on-dark">
               {pageCopy.context_engineering[locale]}
             </p>
@@ -161,11 +161,11 @@ export function Technology({ locale }: { locale: Locale }) {
             </h2>
           </div>
 
-          <div className="tech-challenges-grid">
+          <div className="tech-challenges-grid grid [grid-template-columns:repeat(3,minmax(0,1fr))] [@media(max-width:1023px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-5)] [margin-bottom:var(--sp-7)]">
             {challenges.map((ch, idx) => (
               <article
                 key={ch.indexLabel}
-                className="mk-panel tech-challenge-card"
+                className="mk-panel tech-challenge-card [background:var(--n1)] [border:1px_solid_var(--dark-line-soft)] flex flex-col [gap:var(--sp-3)] [padding:var(--sp-6)] [border-radius:var(--r-card)]"
                 data-reveal=""
                 style={{ "--i": idx } as React.CSSProperties}
               >
@@ -179,28 +179,28 @@ export function Technology({ locale }: { locale: Locale }) {
           <ContextPacker locale={locale} />
 
           {/* Context window 4-segment profile bar (zero percentages printed) */}
-          <div className="tech-profile-block" data-reveal="">
-            <div className="tech-profile-bar" aria-hidden="true">
+          <div className="tech-profile-block flex flex-col [gap:var(--sp-3)] [margin-bottom:var(--sp-8)]" data-reveal="">
+            <div className="tech-profile-bar flex [height:14px] [border-radius:var(--r-chip)] overflow-hidden [border:1px_solid_var(--dark-line)]" aria-hidden="true">
               <i className="seg-0" />
               <i className="seg-1" />
               <i className="seg-2" />
               <i className="seg-3" />
             </div>
-            <ul className="tech-profile-legend">
+            <ul className="tech-profile-legend flex flex-wrap [gap:var(--sp-3)_var(--sp-6)] list-none m-0 p-0 [font-size:14px] [color:var(--on-dark)]">
               {pageCopy.core_instructions_preserved[locale].map((lbl, idx) => (
                 <li key={lbl}>
-                  <span className={`tech-legend-dot seg-${idx}`} aria-hidden="true" />
+                  <span className={`tech-legend-dot [width:10px] [height:10px] [border-radius:var(--r-chip)] seg-${idx}`} aria-hidden="true" />
                   <span>{lbl}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="tech-stats">
+          <div className="tech-stats grid [grid-template-columns:repeat(3,minmax(0,1fr))] [@media(max-width:800px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-6)] [padding-top:var(--sp-6)] [border-top:1px_solid_var(--dark-line-soft)]">
             {benchmarks.map((b, idx) => (
               <div
                 key={b.citeId}
-                className="tech-stat-cell"
+                className="tech-stat-cell flex flex-col [align-items:flex-start] [gap:var(--sp-2)]"
                 data-reveal=""
                 style={{ "--i": idx } as React.CSSProperties}
               >
@@ -209,25 +209,25 @@ export function Technology({ locale }: { locale: Locale }) {
                   locale={locale}
                   className="tech-stat-cite"
                 >
-                  <span className="figure glow-number tech-stat-figure">
+                  <span className="figure glow-number tech-stat-figure [font-size:clamp(34px,4vw,48px)] [line-height:1.05] [font-weight:650] [font-variant-numeric:tabular-nums]">
                     {b.value}
                   </span>
                 </CitationPeek>
-                <p className="tech-stat-label">{b.label}</p>
+                <p className="tech-stat-label m-0 [font-size:15px] [color:var(--on-dark)]">{b.label}</p>
               </div>
             ))}
           </div>
 
-          <p className="small tech-bench-note">
+          <p className="small tech-bench-note [margin:var(--sp-5)_0_0] [color:var(--on-dark)]">
             {text("D.1", "技术页脚注", locale)}
           </p>
         </div>
       </section>
 
       {/* Section 4: Unified management comparison table + inequalities */}
-      <section className="paper tech-compare-section" data-header="paper">
+      <section className="paper tech-compare-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
-          <div className="tech-sec-head" data-reveal="">
+          <div className="tech-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <h2 className="h2">
               <Phrase
                 text={text("D.6", "对比表标题", locale)}
@@ -236,8 +236,8 @@ export function Technology({ locale }: { locale: Locale }) {
             </h2>
           </div>
 
-          <div className="compare-scroll" data-reveal="">
-            <table className="compare-table tech-compare-table">
+          <div className="compare-scroll [overflow-x:auto] [border-radius:var(--r-card)] [border:1px_solid_var(--line)] [background:var(--p2)]" data-reveal="" tabIndex={0}>
+            <table className="compare-table tech-compare-table w-full [min-width:760px] [border-collapse:collapse] [font-size:15px] m-0">
               <thead>
                 <tr>
                   <th scope="col">
@@ -266,7 +266,7 @@ export function Technology({ locale }: { locale: Locale }) {
           </div>
 
           {neqItems.length > 0 ? (
-            <ul className="neq-list tech-neq-list" data-reveal="">
+            <ul className="neq-list tech-neq-list list-none p-0 grid [gap:var(--sp-5)]" data-reveal="">
               {neqItems.map((item) => (
                 <li key={item}>{renderBold(item)}</li>
               ))}
@@ -276,13 +276,13 @@ export function Technology({ locale }: { locale: Locale }) {
       </section>
 
       <div className="wrap">
-        <hr className="rule-dot" />
+        <hr className="rule-dot relative [height:1px] [border:0] [background:var(--line-soft)] overflow-visible" />
       </div>
 
       {/* Section 5: Supported models & systems */}
-      <section className="paper tech-compat-section" data-header="paper">
+      <section className="paper tech-compat-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
-          <div className="tech-sec-head" data-reveal="">
+          <div className="tech-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow">{pageCopy.designed_to_connect[locale]}</p>
             <h2 className="h2">
               <Phrase
@@ -292,27 +292,27 @@ export function Technology({ locale }: { locale: Locale }) {
             </h2>
           </div>
 
-          <div className="tech-compat-groups" data-reveal="">
-            <div className="tech-compat-row">
+          <div className="tech-compat-groups flex flex-col [gap:var(--sp-6)]" data-reveal="">
+            <div className="tech-compat-row grid [grid-template-columns:140px_minmax(0,1fr)] [@media(max-width:800px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-4)] [align-items:start]">
               <span className="label">
                 {t(locale, "模型", "Models")}
               </span>
-              <div className="tech-tag-wall">
+              <div className="tech-tag-wall flex flex-wrap [gap:var(--sp-2)]">
                 {models.map((m) => (
-                  <span key={m} className="tag">
+                  <span key={m} className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">
                     {m}
                   </span>
                 ))}
               </div>
             </div>
 
-            <div className="tech-compat-row">
+            <div className="tech-compat-row grid [grid-template-columns:140px_minmax(0,1fr)] [@media(max-width:800px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-4)] [align-items:start]">
               <span className="label">
                 {t(locale, "系统", "System")}
               </span>
-              <div className="tech-tag-wall">
+              <div className="tech-tag-wall flex flex-wrap [gap:var(--sp-2)]">
                 {systems.map((s) => (
-                  <span key={s} className="tag">
+                  <span key={s} className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">
                     {s}
                   </span>
                 ))}
@@ -323,11 +323,11 @@ export function Technology({ locale }: { locale: Locale }) {
       </section>
 
       {/* Section 6: Security & governance */}
-      <section className="paper-2 tech-security-section" data-header="paper">
+      <section className="paper-2 tech-security-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
           <div className="card tech-security-card" data-reveal="">
-            <div className="tech-security-head">
-              <span className="tech-security-icon" aria-hidden="true">
+            <div className="tech-security-head flex [align-items:flex-start] [gap:var(--sp-5)] [@media(max-width:800px)]:flex-col">
+              <span className="tech-security-icon [width:56px] [height:56px] [border-radius:var(--r-card)] [background:var(--p3)] [border:1px_solid_var(--cyan-40)] [color:var(--link)] grid [place-items:center] shrink-0" aria-hidden="true">
                 <ShieldCheck size={32} strokeWidth={1.5} />
               </span>
               <div>
@@ -337,21 +337,21 @@ export function Technology({ locale }: { locale: Locale }) {
                     locale={locale}
                   />
                 </h2>
-                <p className="tech-security-desc">
+                <p className="tech-security-desc [margin:var(--sp-2)_0_0] [color:var(--muted)]">
                   {pageCopy.the_system_includes_access[locale]}
                 </p>
               </div>
             </div>
 
             {securityQ && securityA ? (
-              <div className="tech-security-qa">
+              <div className="tech-security-qa [padding:var(--sp-5)] [border-radius:var(--r-card)] [background:var(--p1)] [border:1px_solid_var(--line-soft)]">
                 <h3 className="h3">{securityQ}</h3>
                 <p>{securityA}</p>
               </div>
             ) : null}
 
-            <div className="tech-security-foot">
-              <p className="conclusion">{text("D.6", "收尾", locale)}</p>
+            <div className="tech-security-foot flex flex-wrap items-center justify-between [gap:var(--sp-4)] [padding-top:var(--sp-4)] [border-top:1px_solid_var(--line-soft)]">
+              <p className="conclusion [padding-left:var(--sp-5)] [border-left:2px_solid_var(--cyan)] [font-size:18px] [line-height:1.7] [color:var(--ink)]">{text("D.6", "收尾", locale)}</p>
               <Link className="button" href={href(locale, "/contact#form")}>
                 {pageCopy.discuss_data_security_and[locale]}
               </Link>

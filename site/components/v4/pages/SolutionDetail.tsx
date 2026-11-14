@@ -97,7 +97,7 @@ export function SolutionDetail({
             caseSlug={sol.caseSlug}
             locale={locale}
             statsSlot={
-              <div className="glass-badge sol-hero-stats">
+              <div className="glass-badge sol-hero-stats flex flex-wrap items-center [gap:var(--sp-3)_var(--sp-5)] [padding:var(--sp-3)_var(--sp-4)] [border-radius:var(--r-card)]">
                 {repCase.stats.map((st, idx) => (
                   <CitationPeek
                     key={st.sourceId + idx}
@@ -105,10 +105,10 @@ export function SolutionDetail({
                     locale={locale}
                     className="sol-stat-pill"
                   >
-                    <strong className="sol-stat-val glow-number">
+                    <strong className="sol-stat-val glow-number [font-size:15px] [font-weight:650] [color:var(--ice)] [font-variant-numeric:tabular-nums]">
                       {st.value}
                     </strong>
-                    <span className="sol-stat-lbl">{st.label}</span>
+                    <span className="sol-stat-lbl [font-size:13px] [color:var(--on-dark)]">{st.label}</span>
                   </CitationPeek>
                 ))}
               </div>
@@ -118,13 +118,13 @@ export function SolutionDetail({
       />
 
       {/* Section 2: Representative case results */}
-      <section className="paper-2 sol-results-section" data-header="paper">
+      <section className="paper-2 sol-results-section [padding-block:var(--sp-8)]" data-header="paper">
         <div className="wrap">
-          <div className="result-grid">
+          <div className="result-grid [margin:50px_0_0] [@media(max-width:600px)]:[margin:35px_0_0] [gap:var(--sp-6)]">
             {repCase.stats.map((st, idx) => (
               <div
                 key={st.sourceId + idx}
-                className="result-cell"
+                className="result-cell flex flex-col [align-items:flex-start] [gap:var(--sp-2)] [padding-left:var(--sp-4)] [border-left:1px_solid_var(--line)]"
                 data-reveal=""
                 style={{ "--i": idx } as React.CSSProperties}
               >
@@ -133,11 +133,11 @@ export function SolutionDetail({
                   locale={locale}
                   className="result-cite-btn"
                 >
-                  <span className="figure result-figure">
+                  <span className="figure result-figure [font-size:48px] [line-height:1.05] [font-weight:650] [@media(max-width:720px)]:[font-size:38px] [font-variant-numeric:tabular-nums]">
                     {st.value}
                   </span>
                 </CitationPeek>
-                <p className="result-label">{st.label}</p>
+                <p className="result-label m-0 [color:var(--muted)] [font-size:15px]">{st.label}</p>
               </div>
             ))}
           </div>
@@ -145,9 +145,9 @@ export function SolutionDetail({
       </section>
 
       {/* Section 3: Pains & inequality */}
-      <section className="paper sol-pains-section" data-header="paper">
+      <section className="paper sol-pains-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
-          <div className="sol-sec-head" data-reveal="">
+          <div className="sol-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow">{pageCopy.the_challenge[locale]}</p>
             <h2 className="h2">
               <Phrase
@@ -157,7 +157,7 @@ export function SolutionDetail({
             </h2>
           </div>
 
-          <div className="sol-pains-grid">
+          <div className="sol-pains-grid grid [grid-template-columns:repeat(3,minmax(0,1fr))] [@media(max-width:1024px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-6)]">
             {sol.pains.map((p, i) => {
               const ans = isDocAuto
                 ? copyIfApproved(`S-3a${i + 1}`, locale)
@@ -169,20 +169,20 @@ export function SolutionDetail({
                   data-reveal=""
                   style={{ "--i": i } as React.CSSProperties}
                 >
-                  <div className="sol-pain-top">
+                  <div className="sol-pain-top flex items-center justify-between [gap:var(--sp-2)]">
                     <span className="label">{`0${i + 1}`}</span>
-                    <span className="tag">{p.metricTag[locale]}</span>
+                    <span className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">{p.metricTag[locale]}</span>
                   </div>
                   <h3 className="h3">{p.title[locale]}</h3>
-                  <p className="sol-pain-desc">{p.scenario[locale]}</p>
-                  {ans ? <div className="card-answer">{ans}</div> : null}
+                  <p className="sol-pain-desc m-0 [color:var(--muted)]">{p.scenario[locale]}</p>
+                  {ans ? <div className="card-answer [margin-top:auto] [padding-top:var(--sp-3)] [border-top:1px_solid_var(--line-soft)] [font-size:14px] [font-weight:500] [color:var(--link)]">{ans}</div> : null}
                 </article>
               );
             })}
           </div>
 
           {neq ? (
-            <p className="conclusion sol-neq" data-reveal="">
+            <p className="conclusion sol-neq [padding-left:var(--sp-5)] [border-left:2px_solid_var(--cyan)] [font-size:18px] [line-height:1.7] [color:var(--ink)]" data-reveal="">
               {renderBold(neq)}
             </p>
           ) : null}
@@ -190,13 +190,13 @@ export function SolutionDetail({
       </section>
 
       <div className="wrap">
-        <hr className="rule-dot" />
+        <hr className="rule-dot relative [height:1px] [border:0] [background:var(--line-soft)] overflow-visible" />
       </div>
 
       {/* Section 4: Workflow S5 */}
-      <section className="paper sol-workflow-section" data-header="paper">
+      <section className="paper sol-workflow-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
-          <div className="sol-sec-head" data-reveal="">
+          <div className="sol-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow">{pageCopy.the_approach[locale]}</p>
             <h2 className="h2">
               <Phrase
@@ -210,9 +210,9 @@ export function SolutionDetail({
       </section>
 
       {/* Section 5: Deliverables */}
-      <section className="paper-2 sol-deliverables-section" data-header="paper">
+      <section className="paper-2 sol-deliverables-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
-          <div className="sol-sec-head" data-reveal="">
+          <div className="sol-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <h2 className="h2">
               <Phrase
                 text={pageCopy.what_you_receive[locale]}
@@ -220,9 +220,9 @@ export function SolutionDetail({
               />
             </h2>
           </div>
-          <ul className="sol-deliverables-grid" data-reveal="">
+          <ul className="sol-deliverables-grid grid [grid-template-columns:repeat(2,minmax(0,1fr))] [@media(max-width:720px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-4)_var(--sp-7)] list-none m-0 p-0" data-reveal="">
             {deliverables.map((item) => (
-              <li key={item} className="sol-deliverable-item">
+              <li key={item} className="sol-deliverable-item flex [align-items:flex-start] [gap:var(--sp-3)] [padding:var(--sp-4)] [border-radius:var(--r-card)] [background:var(--p1)] [border:1px_solid_var(--line-soft)] [color:var(--ink)]">
                 <Check size={16} aria-hidden="true" />
                 <span>{item}</span>
               </li>
@@ -234,11 +234,11 @@ export function SolutionDetail({
       {/* Section 6: Representative case */}
       <section
         id="related-case"
-        className="paper sol-case-section"
+        className="paper sol-case-section [padding-block:var(--section-y)]"
         data-header="paper"
       >
         <div className="wrap">
-          <div className="sol-sec-head" data-reveal="">
+          <div className="sol-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow">{pageCopy.in_production[locale]}</p>
             <h2 className="h2">
               <Phrase
@@ -247,7 +247,7 @@ export function SolutionDetail({
               />
             </h2>
           </div>
-          <div className="sol-single-case">
+          <div className="sol-single-case [width:50%] [max-width:580px] [@media(max-width:1024px)]:w-full">
             <CaseCoverCard item={repCase} locale={locale} glassBadge />
           </div>
         </div>
@@ -256,7 +256,7 @@ export function SolutionDetail({
       {/* Section 7: Interactive Demo (knowledge-assistant & data-query) */}
       {hasInteractiveDemo ? (
         <section
-          className="dark halo-panel sol-demo-section"
+          className="dark halo-panel sol-demo-section [padding-block:var(--section-y)]"
           data-header="dark"
         >
           <div className="wrap">
@@ -271,13 +271,13 @@ export function SolutionDetail({
       ) : null}
 
       {/* Section 8: FAQ + T9 */}
-      <section className="paper-2 sol-faq-section" data-header="paper">
+      <section className="paper-2 sol-faq-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
-          <div className="sol-sec-head" data-reveal="">
+          <div className="sol-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <h2 className="h2">{pageCopy.common_questions[locale]}</h2>
           </div>
           <FAQ items={faqItems} openCount={0} />
-          <p className="conclusion sol-pilot-note" data-reveal="">
+          <p className="conclusion sol-pilot-note [padding-left:var(--sp-5)] [border-left:2px_solid_var(--cyan)] [font-size:18px] [line-height:1.7] [color:var(--ink)]" data-reveal="">
             {text("D.3", "合作提示（T9）", locale)}
           </p>
         </div>

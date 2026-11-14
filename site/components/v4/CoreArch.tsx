@@ -64,7 +64,7 @@ export function CoreArch({ layers }: { layers: CoreLayerItem[] }) {
   return (
     <div
       ref={rootRef}
-      className="core-arch dot-grid"
+      className="core-arch dot-grid relative [padding:var(--sp-6)] [border-radius:var(--r-panel)] [border:1px_solid_var(--line)]"
       data-hovering={hovered !== null ? "true" : undefined}
       onPointerLeave={() => setHovered(null)}
     >
@@ -81,35 +81,35 @@ export function CoreArch({ layers }: { layers: CoreLayerItem[] }) {
         className="core-arch-lines"
       />
 
-      <div className="core-arch-grid">
+      <div className="core-arch-grid relative [z-index:1] grid [gap:var(--sp-5)]">
         {layers.map((layer, idx) => {
           const lit = maxP >= thresholds[idx];
           const dimmed = hovered !== null && hovered !== idx;
           return (
             <article
               key={layer.indexLabel}
-              className="card core-arch-col"
+              className="card core-arch-col [transition:opacity_var(--qtf),border-color_var(--qtb),transform_var(--qtb)]"
               data-lit={lit ? "true" : "false"}
               data-dimmed={dimmed ? "true" : undefined}
               onPointerEnter={() => setHovered(idx)}
             >
-              <div className="core-arch-top">
+              <div className="core-arch-top flex items-center justify-between">
                 <span className="label">{layer.indexLabel}</span>
-                <span className="core-arch-lamp" aria-hidden="true" />
+                <span className="core-arch-lamp [width:8px] [height:8px] [border-radius:var(--r-chip)] [transition:background-color_var(--qtb)]" aria-hidden="true" />
               </div>
 
-              <div className="core-arch-diagram" aria-hidden="true">
+              <div className="core-arch-diagram [min-height:82px] flex items-center justify-center [padding:var(--sp-3)] [border-radius:var(--r-control)] [background:var(--p1)] [border:1px_solid_var(--line-soft)]" aria-hidden="true">
                 {idx === 0 ? (
-                  <div className="arch-d-sources">
-                    <span className="arch-chip">
+                  <div className="arch-d-sources flex [gap:var(--sp-2)] flex-wrap justify-center">
+                    <span className="arch-chip inline-flex items-center [gap:4px] [padding:4px_8px] [border-radius:var(--r-control)] [background:var(--p2)] [border:1px_solid_var(--line)] [color:var(--link)] [font:500_11px_/_1_var(--mono)]">
                       <FileText size={16} />
                       <i>PDF</i>
                     </span>
-                    <span className="arch-chip">
+                    <span className="arch-chip inline-flex items-center [gap:4px] [padding:4px_8px] [border-radius:var(--r-control)] [background:var(--p2)] [border:1px_solid_var(--line)] [color:var(--link)] [font:500_11px_/_1_var(--mono)]">
                       <Database size={16} />
                       <i>SQL</i>
                     </span>
-                    <span className="arch-chip">
+                    <span className="arch-chip inline-flex items-center [gap:4px] [padding:4px_8px] [border-radius:var(--r-control)] [background:var(--p2)] [border:1px_solid_var(--line)] [color:var(--link)] [font:500_11px_/_1_var(--mono)]">
                       <Plug size={16} />
                       <i>API</i>
                     </span>
@@ -117,7 +117,7 @@ export function CoreArch({ layers }: { layers: CoreLayerItem[] }) {
                 ) : idx === 1 ? (
                   <svg
                     viewBox="0 0 180 76"
-                    className="arch-d-funnel"
+                    className="arch-d-funnel w-full [max-width:180px] [height:auto]"
                     focusable="false"
                   >
                     {[0, 1, 2, 3, 4, 5, 6, 7].map((b) => (
@@ -150,21 +150,21 @@ export function CoreArch({ layers }: { layers: CoreLayerItem[] }) {
                     ))}
                   </svg>
                 ) : idx === 2 ? (
-                  <div className="arch-d-sop">
-                    <span className="arch-sop-node">SOP</span>
-                    <span className="arch-sop-connector" />
-                    <span className="arch-sop-node is-active">Playbook</span>
-                    <span className="arch-sop-connector" />
-                    <span className="arch-sop-node is-amber" />
+                  <div className="arch-d-sop flex items-center [gap:6px]">
+                    <span className="arch-sop-node [border-radius:var(--r-control)] [font:500_11px_/_1.2_var(--mono)] [color:var(--ink)]">SOP</span>
+                    <span className="arch-sop-connector [width:12px] [height:1.5px] [background:var(--brand)]" />
+                    <span className="arch-sop-node is-active [border-radius:var(--r-control)] [font:500_11px_/_1.2_var(--mono)] [color:var(--ink)]">Playbook</span>
+                    <span className="arch-sop-connector [width:12px] [height:1.5px] [background:var(--brand)]" />
+                    <span className="arch-sop-node is-amber [border-radius:var(--r-control)] [font:500_11px_/_1.2_var(--mono)] [color:var(--ink)]" />
                   </div>
                 ) : (
-                  <div className="arch-d-audit">
-                    <div className="arch-log-bars">
+                  <div className="arch-d-audit flex items-center justify-between [gap:var(--sp-3)] w-full">
+                    <div className="arch-log-bars [flex:1] flex flex-col [gap:6px]">
                       <i />
                       <i />
                       <i />
                     </div>
-                    <span className="arch-shield">
+                    <span className="arch-shield [width:36px] [height:36px] [border-radius:var(--r-chip)] [background:var(--p3)] [border:1px_solid_var(--cyan-40)] [color:var(--link)] grid [place-items:center]">
                       <ShieldCheck size={20} />
                     </span>
                   </div>
@@ -172,7 +172,7 @@ export function CoreArch({ layers }: { layers: CoreLayerItem[] }) {
               </div>
 
               <h3 className="h3">{layer.name}</h3>
-              <p className="core-arch-desc">{layer.desc}</p>
+              <p className="core-arch-desc m-0 [font-size:14px] [line-height:1.65] [color:var(--muted)]">{layer.desc}</p>
             </article>
           );
         })}

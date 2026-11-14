@@ -105,7 +105,7 @@ export function CaseDetail({
             share="morph"
             default="none"
           >
-            <div className="case-hero-shot">
+            <div className="case-hero-shot relative">
               <ScaledSceneMockup
                 scene={c.mockup}
                 locale={locale}
@@ -115,36 +115,36 @@ export function CaseDetail({
           </ViewTransition>
         }
       >
-        <div className="case-hero-stats">
+        <div className="case-hero-stats grid [grid-template-columns:repeat(3,minmax(0,1fr))] [@media(max-width:800px)]:[grid-template-columns:repeat(2,minmax(0,1fr))] [gap:var(--sp-5)] [margin-top:var(--sp-6)] [padding-top:var(--sp-5)] [border-top:1px_solid_var(--dark-line-soft)]">
           {c.stats.map((st, idx) => (
-            <div key={st.sourceId + idx} className="case-hero-stat">
+            <div key={st.sourceId + idx} className="case-hero-stat flex flex-col [align-items:flex-start] [gap:var(--sp-1)]">
               <CitationPeek
                 id={st.sourceId}
                 locale={locale}
                 className="case-stat-cite"
               >
-                <span className="figure glow-number case-hero-figure">
+                <span className="figure glow-number case-hero-figure [font-size:clamp(32px,3.6vw,48px)] [line-height:1.05] [font-weight:650] [font-variant-numeric:tabular-nums]">
                   {st.value}
                 </span>
               </CitationPeek>
-              <span className="case-hero-stat-label">{st.label}</span>
+              <span className="case-hero-stat-label [font-size:13px] [line-height:1.4] [color:var(--on-dark)]">{st.label}</span>
             </div>
           ))}
         </div>
       </PageHero>
 
       {/* Section 2: Time banner + 4-col project facts */}
-      <section className="paper case-facts-section" data-header="paper">
+      <section className="paper case-facts-section [padding-top:calc(var(--sp-9)_+_var(--sp-5))] [padding-bottom:var(--sp-8)] [@media(max-width:1023px)]:[padding-top:var(--section-y)]" data-header="paper">
         <div className="wrap">
           {timeBanner ? (
-            <p className="case-time-banner" data-reveal="">
+            <p className="case-time-banner [margin:0_0_var(--sp-7)] [font-size:clamp(22px,2.8vw,32px)] [line-height:1.25] [font-weight:500] [color:var(--muted)] [font-variant-numeric:tabular-nums]" data-reveal="">
               {renderBold(timeBanner)}
             </p>
           ) : null}
 
-          <dl className="case-facts" data-reveal="">
+          <dl className="case-facts grid [grid-template-columns:repeat(4,minmax(0,1fr))] [@media(max-width:800px)]:[grid-template-columns:repeat(2,minmax(0,1fr))] [gap:var(--sp-5)] m-0 [padding:var(--sp-5)_0]" data-reveal="">
             {facts.map(([k, v]) => (
-              <div key={k} className="case-fact-item">
+              <div key={k} className="case-fact-item flex flex-col [gap:var(--sp-1)]">
                 <dt className="eyebrow">{k}</dt>
                 <dd>{v}</dd>
               </div>
@@ -155,11 +155,11 @@ export function CaseDetail({
 
       {/* Section 3: Real system screenshots inside dark halo-panel */}
       <section
-        className="dark halo-panel case-gallery-section"
+        className="dark halo-panel case-gallery-section [padding-block:var(--section-y)]"
         data-header="dark"
       >
         <div className="wrap">
-          <div className="case-sec-head" data-reveal="">
+          <div className="case-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--sp-6)]" data-reveal="">
             <p className="eyebrow on-dark">
               {pageCopy.the_system_up_close[locale]}
             </p>
@@ -179,17 +179,17 @@ export function CaseDetail({
             captions={captions}
           />
 
-          <p className="case-gallery-nda">
+          <p className="case-gallery-nda [margin:var(--sp-5)_0_0] [font-size:13px] [color:var(--on-dark)]">
             {text("D.1", "保密说明（案例）", locale)}
           </p>
         </div>
       </section>
 
       {/* Section 4: Combined Before/After (S9 on proposal-generation) + Workflow S5 */}
-      <section className="paper case-ba-section" data-header="paper">
+      <section className="paper case-ba-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
           <div className="card dot-grid case-combined-card">
-            <div className="case-sec-head" data-reveal="">
+            <div className="case-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--sp-6)]" data-reveal="">
               <p className="eyebrow">{pageCopy.before_and_after[locale]}</p>
               <h2 className="h2">
                 <Phrase
@@ -206,24 +206,24 @@ export function CaseDetail({
                 afterText={c.after}
               />
             ) : (
-              <div className="case-ba-grid" data-reveal="">
-                <div className="case-ba-box is-before">
+              <div className="case-ba-grid grid [grid-template-columns:minmax(0,1fr)_auto_minmax(0,1fr)] [@media(max-width:800px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-5)] items-stretch" data-reveal="">
+                <div className="case-ba-box is-before flex flex-col [gap:var(--sp-3)] [padding:var(--sp-6)] [border-radius:var(--r-card)]">
                   <span className="eyebrow">{pageCopy.before[locale]}</span>
                   <p>{c.before}</p>
                 </div>
-                <div className="case-ba-arrow" aria-hidden="true">
+                <div className="case-ba-arrow flex items-center justify-center [color:var(--link)]" aria-hidden="true">
                   <ArrowRight size={22} />
                 </div>
-                <div className="case-ba-box is-after">
+                <div className="case-ba-box is-after flex flex-col [gap:var(--sp-3)] [padding:var(--sp-6)] [border-radius:var(--r-card)]">
                   <span className="eyebrow">{pageCopy.after[locale]}</span>
                   <p>{c.after}</p>
                 </div>
               </div>
             )}
 
-            <hr className="case-card-divider" />
+            <hr className="case-card-divider [margin-block:var(--sp-7)]" />
 
-            <div className="case-sec-head" data-reveal="">
+            <div className="case-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--sp-6)]" data-reveal="">
               <p className="eyebrow">{pageCopy.how_it_works[locale]}</p>
               <h2 className="h3">
                 <Phrase
@@ -241,7 +241,7 @@ export function CaseDetail({
       {/* Section 5: Interactive Demo (it-knowledge-assistant & nl-data-query) */}
       {hasInteractiveDemo ? (
         <section
-          className="dark halo-panel case-demo-section"
+          className="dark halo-panel case-demo-section [padding-block:var(--section-y)]"
           data-header="dark"
         >
           <div className="wrap">
@@ -256,16 +256,16 @@ export function CaseDetail({
       ) : null}
 
       {/* Section 6: Outcome summary + verification card */}
-      <section className="paper-2 case-outcome-section" data-header="paper">
-        <div className="wrap case-outcome-grid">
-          <div className="outcome-bar" data-reveal="">
+      <section className="paper-2 case-outcome-section [padding-block:var(--section-y)]" data-header="paper">
+        <div className="wrap case-outcome-grid grid [gap:var(--sp-7)] [align-items:start]">
+          <div className="outcome-bar flex flex-col [align-items:flex-start] [gap:var(--sp-4)] [padding-left:var(--sp-5)] [border-left:3px_solid_var(--brand)]" data-reveal="">
             <p className="eyebrow">{pageCopy.project_outcome[locale]}</p>
-            <p className="outcome-text">{c.outcome}</p>
-            <div className="outcome-tags">
+            <p className="outcome-text m-0 [font-size:18px] [line-height:1.7] [color:var(--ink)]">{c.outcome}</p>
+            <div className="outcome-tags flex flex-wrap [gap:var(--sp-2)]">
               {pageCopy.company_knowledge_workflow_orchestration[locale]
                 .split(" · ")
                 .map((tag) => (
-                  <span key={tag} className="tag">
+                  <span key={tag} className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">
                     {tag}
                   </span>
                 ))}
@@ -279,11 +279,11 @@ export function CaseDetail({
           {c3Title ? (
             <div className="card case-verify-card" data-reveal="">
               <h3 className="h3">{c3Title}</h3>
-              <ul className="case-verify-list">
+              <ul className="case-verify-list flex flex-col [gap:var(--sp-3)] list-none m-0 p-0">
                 {c3Live && c.demo ? (
                   <li>
                     <a
-                      className="case-verify-link"
+                      className="case-verify-link flex items-center justify-between [gap:var(--sp-3)] [padding:var(--sp-3)_var(--sp-4)] [border-radius:var(--r-control)] [background:var(--p1)] [font-size:14px] [font-weight:500] [transition:border-color_var(--qtf),color_var(--qtf),opacity_var(--qtp)]"
                       href={c.demo}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -295,7 +295,7 @@ export function CaseDetail({
                 {c3Nda ? (
                   <li>
                     <Link
-                      className="case-verify-link"
+                      className="case-verify-link flex items-center justify-between [gap:var(--sp-3)] [padding:var(--sp-3)_var(--sp-4)] [border-radius:var(--r-control)] [background:var(--p1)] [font-size:14px] [font-weight:500] [transition:border-color_var(--qtf),color_var(--qtf),opacity_var(--qtp)]"
                       href={href(locale, `/contact?case=${c.slug}#form`)}
                     >
                       <span>{c3Nda}</span>
@@ -306,7 +306,7 @@ export function CaseDetail({
                 {c3Book ? (
                   <li>
                     <Link
-                      className="case-verify-link"
+                      className="case-verify-link flex items-center justify-between [gap:var(--sp-3)] [padding:var(--sp-3)_var(--sp-4)] [border-radius:var(--r-control)] [background:var(--p1)] [font-size:14px] [font-weight:500] [transition:border-color_var(--qtf),color_var(--qtf),opacity_var(--qtp)]"
                       href={href(locale, "/contact?topic=casebook#form")}
                     >
                       <span>{c3Book}</span>
@@ -321,9 +321,9 @@ export function CaseDetail({
       </section>
 
       {/* Section 7: Related cases */}
-      <section className="paper case-more-section" data-header="paper">
+      <section className="paper case-more-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
-          <div className="case-sec-head" data-reveal="">
+          <div className="case-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--sp-6)]" data-reveal="">
             <p className="eyebrow">{pageCopy.more_work[locale]}</p>
             <h2 className="h2">
               <Phrase
@@ -332,7 +332,7 @@ export function CaseDetail({
               />
             </h2>
           </div>
-          <div className="case-more-grid">
+          <div className="case-more-grid grid [gap:var(--sp-6)]">
             {related.map((item, idx) => (
               <CaseCoverCard
                 key={item.slug}

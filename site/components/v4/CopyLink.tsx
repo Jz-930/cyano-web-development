@@ -12,7 +12,7 @@ export function CopyLink({ locale }: { locale: Locale }) {
   return (
     <button
       type="button"
-      className="button-secondary copy-link-btn"
+      className="button-secondary copy-link-btn [min-height:36px]"
       onClick={async () => {
         try {
           await navigator.clipboard.writeText(window.location.href);

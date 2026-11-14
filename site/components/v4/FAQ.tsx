@@ -16,7 +16,7 @@ export function FAQ({
   };
 
   return (
-    <div className="faq">
+    <div className="faq [border-top:1px_solid_var(--line)]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -24,12 +24,12 @@ export function FAQ({
         }}
       />
       {items.map((it, i) => (
-        <details key={it.q} open={i < openCount} className="faq-item">
+        <details key={it.q} open={i < openCount} className="faq-item [border-bottom:1px_solid_var(--line)] [interpolate-size:allow-keywords]">
           <summary>
             <span className="faq-q">{it.q}</span>
             <span className="faq-icon" aria-hidden="true" />
           </summary>
-          <div className="faq-a">
+          <div className="faq-a [padding:0_0_24px_16px] [border-left:1px_solid_var(--line)] [margin-left:2px]">
             <p>{it.a}</p>
           </div>
         </details>

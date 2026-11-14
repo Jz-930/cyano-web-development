@@ -197,7 +197,7 @@ export function ContactForm({
 
   return status === "success" ? (
     <div className="form-success card" role="status">
-      <span className="success-icon" aria-hidden="true">
+      <span className="success-icon [width:56px] [height:56px] [border-radius:var(--r-chip)] [background:var(--p3)] [border:1px_solid_var(--cyan-40)] [color:var(--link)] grid [place-items:center]" aria-hidden="true">
         <Check size={30} />
       </span>
       <h2 className="h2">{t(locale, "咨询已提交", "Inquiry submitted")}</h2>
@@ -222,14 +222,14 @@ export function ContactForm({
       <h2 className="h2">
         {t(locale, "聊聊你的业务场景", "Tell us what you want to change")}
       </h2>
-      <p className="form-intro">
+      <p className="form-intro [margin:calc(var(--sp-3)_*_-1)_0_0] [color:var(--muted)]">
         {t(
           locale,
           "请描述目前的工作方式和希望改进的部分。",
           "Describe how you do the work today and what you want to improve.",
         )}
       </p>
-      <div className="form-grid">
+      <div className="form-grid grid [grid-template-columns:repeat(2,minmax(0,1fr))] [@media(max-width:720px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-4)]">
         {(
           [
             ["name", "姓名", "Name", "text", true],
@@ -363,7 +363,7 @@ export function ContactForm({
           </p>
         ) : null}
       </label>
-      <div className="honey" aria-hidden="true">
+      <div className="honey absolute [width:1px] [height:1px] overflow-hidden" aria-hidden="true">
         <label>
           Website
           <input name="website" tabIndex={-1} autoComplete="off" />
@@ -397,13 +397,13 @@ export function ContactForm({
         </p>
       ) : null}
       {status === "error" ? (
-        <p className="form-error" role="alert">
+        <p className="form-error m-0 [padding:var(--sp-3)_var(--sp-4)] [border-radius:var(--r-control)] [background:var(--risk-12)] [border:1px_solid_var(--risk)] [color:var(--risk-ink)] [font-size:14px]" role="alert">
           {error}
         </p>
       ) : null}
       <button
         type="submit"
-        className="button form-submit"
+        className="button form-submit [align-self:flex-start]"
         disabled={status === "sending"}
       >
         {status === "sending" ? (
@@ -418,7 +418,7 @@ export function ContactForm({
           </>
         )}
       </button>
-      <p className="form-assurance">
+      <p className="form-assurance inline-flex items-center [gap:var(--sp-2)] m-0 [font-size:13px] [color:var(--muted)]">
         <ShieldCheck size={14} aria-hidden="true" />
         <span>
           {t(

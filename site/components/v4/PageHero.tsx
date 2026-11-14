@@ -65,9 +65,9 @@ export function PageHero({
         <FieldPoster preset={posterPreset} opacity={posterOpacity} />
       )}
       {overlay}
-      <div className="page-hero-grid wrap">
-        <div className="page-hero-copy">
-          <nav className="breadcrumb" aria-label={eyebrow}>
+      <div className="page-hero-grid wrap relative [z-index:var(--z-content)] grid [gap:var(--sp-7)] items-center">
+        <div className="page-hero-copy relative [z-index:var(--z-stage)] min-w-0">
+          <nav className="breadcrumb flex flex-wrap items-center [gap:var(--sp-2)] [font-size:14px]" aria-label={eyebrow}>
             <Link href={href(locale)}>{heroCopy.home[locale]}</Link>
             <span aria-hidden="true">/</span>
             {parentCrumb ? (
@@ -88,9 +88,9 @@ export function PageHero({
           {lede ? <p className="lede">{lede}</p> : null}
           {children}
           {actions ? <div className="hero-actions">{actions}</div> : null}
-          {footNote ? <p className="small page-hero-note">{footNote}</p> : null}
+          {footNote ? <p className="small page-hero-note [margin-top:var(--sp-4)] [color:var(--on-dark)]">{footNote}</p> : null}
         </div>
-        {visual ? <div className="page-hero-visual">{visual}</div> : null}
+        {visual ? <div className="page-hero-visual relative min-w-0 [justify-self:end] [@media(max-width:1023px)]:[justify-self:start] w-full [max-width:600px] [@media(max-width:1023px)]:[max-width:560px]">{visual}</div> : null}
       </div>
     </section>
   );

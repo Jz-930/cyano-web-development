@@ -73,7 +73,7 @@ export function ClosingCtaAction({
   };
 
   return (
-    <div ref={wrapRef} className="closing-action">
+    <div ref={wrapRef} className="closing-action relative [height:200px] [@media(max-width:1023px)]:[height:auto] flex items-center [justify-content:flex-end] [@media(max-width:1023px)]:[justify-content:flex-start]">
       <ProvenanceLines
         key={flowKey}
         viewBox="0 0 320 200"
@@ -82,7 +82,7 @@ export function ClosingCtaAction({
         state={provState}
         dotOnce={false}
       />
-      <span className="halo-button">
+      <span className="halo-button isolate inline-flex">
         <Link
           className="button"
           href={ctaHref}

@@ -57,22 +57,22 @@ export function ResponsibilityMatrix({
 
   return (
     <div
-      className="resp-matrix card"
+      className="resp-matrix card [margin-bottom:var(--sp-7)]"
       ref={ref}
       onPointerLeave={() => {
         setHoverRow(null);
         setHoverCol(null);
       }}
     >
-      <div className="resp-matrix-scroll">
-        <div className="resp-matrix-inner">
+      <div className="resp-matrix-scroll [overflow-x:auto]" tabIndex={0}>
+        <div className="resp-matrix-inner [min-width:680px]">
           {/* Header row: empty corner + 5 stages */}
-          <div className="resp-head-row">
+          <div className="resp-head-row grid [grid-template-columns:220px_repeat(5,minmax(0,1fr))] [border-bottom:1px_solid_var(--line)]">
             <div className="resp-corner" />
             {stageNames.map((st, cIdx) => (
               <div
                 key={st}
-                className="resp-stage-head"
+                className="resp-stage-head flex flex-col items-center [gap:4px] [padding:var(--sp-3)_var(--sp-2)] text-center [font-size:13px] [font-weight:500] [color:var(--ink)] [border-radius:var(--r-control)_var(--r-control)_0_0] [transition:background-color_var(--qtf)]"
                 data-highlight={hoverCol === cIdx ? "true" : undefined}
                 onPointerEnter={() => setHoverCol(cIdx)}
               >
@@ -83,9 +83,9 @@ export function ResponsibilityMatrix({
           </div>
 
           {/* Body: 4 founder rows x 5 stage cells, overlaid with ProvenanceLines */}
-          <div className="resp-body">
+          <div className="resp-body relative">
             {rowPaths.length > 0 ? (
-              <div className="resp-lines-wrap" aria-hidden="true">
+              <div className="resp-lines-wrap absolute [top:0] [bottom:0] [left:220px] [right:0] pointer-events-none [z-index:0]" aria-hidden="true">
                 <ProvenanceLines
                   viewBox={`0 0 500 ${founders.length * 60}`}
                   paths={rowPaths}
@@ -98,19 +98,19 @@ export function ResponsibilityMatrix({
             {founders.map((f, rIdx) => (
               <div
                 key={f.id}
-                className="resp-row"
+                className="resp-row relative [z-index:1] grid [grid-template-columns:220px_repeat(5,minmax(0,1fr))] [min-height:60px] [transition:background-color_var(--qtf)]"
                 data-highlight={hoverRow === rIdx ? "true" : undefined}
                 onPointerEnter={() => setHoverRow(rIdx)}
               >
-                <div className="resp-founder-cell">
+                <div className="resp-founder-cell flex items-center [gap:var(--sp-3)] [padding:var(--sp-2)_var(--sp-3)] [font-size:14px] [font-weight:500] [color:var(--ink)]">
                   <img
-                    src={`/v3-materials/founder-${f.order}.webp`}
+                    src={`/v3-materials/founder-${f.order + 1}.webp`}
                     alt=""
                     width={28}
                     height={28}
                     loading="lazy"
                     decoding="async"
-                    className="resp-mini-avatar"
+                    className="resp-mini-avatar [width:28px] [height:28px] [border-radius:var(--r-chip)] [object-fit:cover] [background:var(--p3)] shrink-0"
                   />
                   <span>{f.role}</span>
                 </div>
@@ -122,7 +122,7 @@ export function ResponsibilityMatrix({
                   return (
                     <div
                       key={st}
-                      className="resp-cell"
+                      className="resp-cell grid [place-items:center] [transition:background-color_var(--qtf)]"
                       data-highlight={cellHi ? "true" : undefined}
                       onPointerEnter={() => {
                         setHoverRow(rIdx);
@@ -131,7 +131,8 @@ export function ResponsibilityMatrix({
                     >
                       {active ? (
                         <span
-                          className="resp-dot"
+                          className="resp-dot [width:12px] [height:12px] [border-radius:var(--r-chip)] [background:var(--brand)] [box-shadow:0_0_0_4px_var(--p2)]"
+                          role="img"
                           aria-label={`${f.role} — ${st}`}
                         />
                       ) : null}

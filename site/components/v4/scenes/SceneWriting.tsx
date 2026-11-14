@@ -22,39 +22,39 @@ export function SceneWriting({
 
   return (
     <div
-      className={`mk-scene mk-scene-writing${size === "full" ? " is-split" : ""}`}
+      className={`mk-scene [font-size:13px] [line-height:1.55] mk-scene-writing${size === "full" ? " is-split" : ""}`}
     >
-      <div className="mk-panel mk-branch-tree">
+      <div className="mk-panel mk-branch-tree [background:var(--n1)] [border:1px_solid_var(--dark-line-soft)] relative [padding:var(--sp-4)]">
         <ProvenanceLines
           viewBox="0 0 240 260"
           paths={BRANCH_PATHS}
           surface="dark"
           state="rest"
         />
-        <div className="mk-node mk-node-main">
+        <div className="mk-node mk-node-main absolute inline-flex items-center [gap:var(--sp-2)] [padding:var(--sp-1)_var(--sp-3)] [border-radius:var(--r-chip)] [font-size:13px]">
           <i aria-hidden="true" />
-          <span>{main ?? <span className="mk-skel mk-w-40" />}</span>
+          <span>{main ?? <span className="mk-skel mk-w-40 block [border-radius:var(--r-chip)] [width:40%]" />}</span>
         </div>
-        <div className="mk-node mk-node-a is-active">
+        <div className="mk-node mk-node-a is-active absolute inline-flex items-center [gap:var(--sp-2)] [padding:var(--sp-1)_var(--sp-3)] [border-radius:var(--r-chip)] [font-size:13px]">
           <i aria-hidden="true" />
-          <span>{branchA ?? <span className="mk-skel mk-w-40" />}</span>
+          <span>{branchA ?? <span className="mk-skel mk-w-40 block [border-radius:var(--r-chip)] [width:40%]" />}</span>
         </div>
-        <div className="mk-node mk-node-b">
+        <div className="mk-node mk-node-b absolute inline-flex items-center [gap:var(--sp-2)] [padding:var(--sp-1)_var(--sp-3)] [border-radius:var(--r-chip)] [font-size:13px]">
           <i aria-hidden="true" />
-          <span>{branchB ?? <span className="mk-skel mk-w-40" />}</span>
+          <span>{branchB ?? <span className="mk-skel mk-w-40 block [border-radius:var(--r-chip)] [width:40%]" />}</span>
         </div>
       </div>
 
       {size === "full" ? (
-        <div className="mk-mem-drawer">
+        <div className="mk-mem-drawer grid [gap:var(--sp-2)]">
           {mems.map((m, idx) => (
-            <div key={idx} className="mk-paper mk-mem-card">
-              <div className="mk-mem-title">
-                {m ?? <span className="mk-skel mk-w-40" />}
+            <div key={idx} className="mk-paper mk-mem-card [background:var(--p2)] [color:var(--ink)] [border-radius:var(--r-control)] [padding:var(--sp-3)] grid [gap:var(--sp-2)]">
+              <div className="mk-mem-title [font-size:13px] [font-weight:500] [color:var(--ink)]">
+                {m ?? <span className="mk-skel mk-w-40 block [border-radius:var(--r-chip)] [width:40%]" />}
               </div>
-              <div className="mk-skel-group">
-                <span className="mk-skel mk-w-92" />
-                <span className="mk-skel mk-w-64" />
+              <div className="mk-skel-group grid [gap:var(--sp-2)]">
+                <span className="mk-skel mk-w-92 block [border-radius:var(--r-chip)] [width:92%]" />
+                <span className="mk-skel mk-w-64 block [border-radius:var(--r-chip)] [width:64%]" />
               </div>
             </div>
           ))}

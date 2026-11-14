@@ -51,14 +51,14 @@ export function Contact({ locale }: { locale: Locale }) {
         title={text("D.8", "Hero 标题", locale)}
         lede={heroLede}
         visual={
-          <div className="contact-timeline glass" data-surface="dark">
+          <div className="contact-timeline glass flex flex-col [gap:var(--sp-4)] [padding:var(--sp-6)] [border-radius:var(--r-window)]" data-surface="dark">
             <p className="eyebrow on-dark">
               {pageCopy.what_happens_next[locale]}
             </p>
-            <ol className="contact-timeline-list">
+            <ol className="contact-timeline-list flex flex-col [gap:var(--sp-4)] list-none m-0 p-0">
               {nextSteps.map((st, idx) => (
-                <li key={st.body} className="contact-timeline-step">
-                  <div className="contact-timeline-node">
+                <li key={st.body} className="contact-timeline-step flex flex-col [gap:var(--sp-1)]">
+                  <div className="contact-timeline-node inline-flex items-center [gap:var(--sp-2)] [color:var(--cyan)]">
                     <span className="label">{st.badge}</span>
                     {idx < nextSteps.length - 1 ? (
                       <ArrowRight size={14} aria-hidden="true" />
@@ -72,10 +72,10 @@ export function Contact({ locale }: { locale: Locale }) {
         }
       />
 
-      <section id="form" className="paper contact-main-section" data-header="paper">
-        <div className="wrap contact-main-grid">
-          <div className="contact-side" data-reveal="">
-            <div className="contact-side-head">
+      <section id="form" className="paper contact-main-section [padding-block:var(--section-y)]" data-header="paper">
+        <div className="wrap contact-main-grid grid [grid-template-columns:minmax(0,5fr)_minmax(0,7fr)] [@media(max-width:1023px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-7)] [align-items:start]">
+          <div className="contact-side flex flex-col [gap:var(--sp-4)]" data-reveal="">
+            <div className="contact-side-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--sp-2)]">
               <p className="eyebrow">{pageCopy.topics_to_discuss[locale]}</p>
               <h2 className="h2">
                 <Phrase
@@ -85,7 +85,7 @@ export function Contact({ locale }: { locale: Locale }) {
               </h2>
             </div>
 
-            <div className="contact-topics">
+            <div className="contact-topics flex flex-col [gap:var(--sp-3)]">
               {topics.map((tp) => (
                 <article key={tp.indexLabel} className="card contact-topic-card">
                   <span className="label">{tp.indexLabel}</span>
@@ -110,7 +110,7 @@ export function Contact({ locale }: { locale: Locale }) {
                 height={48}
                 loading="lazy"
                 decoding="async"
-                className="contact-responder-avatar"
+                className="contact-responder-avatar [width:48px] [height:48px] [border-radius:var(--r-chip)] [object-fit:cover] [background:var(--p3)] shrink-0"
               />
               <div>
                 <span className="label">{pageCopy.your_inquiry[locale]}</span>

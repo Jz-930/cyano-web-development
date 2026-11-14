@@ -69,16 +69,16 @@ export function CaseFilters({
   };
 
   return (
-    <div className="cases-filter-block">
+    <div className="cases-filter-block flex flex-col [gap:var(--sp-7)]">
       <div
         ref={groupRef}
-        className="chip-group cases-chips"
+        className="chip-group cases-chips relative flex flex-wrap [gap:8px] [margin-bottom:var(--sp-1)]"
         data-ready={ready ? "true" : undefined}
         style={indStyle}
         role="group"
         aria-label={t(locale, "按行业筛选案例", "Filter cases by industry")}
       >
-        <span className="chip-indicator" aria-hidden="true" />
+        <span className="chip-indicator absolute [left:0] [top:0] [height:var(--ih,36px)] [border-radius:var(--r-chip)] [background:var(--ink)] [z-index:0] pointer-events-none [width:var(--iw,0px)]" aria-hidden="true" />
         <button
           ref={(el) => {
             btnRefs.current[0] = el;
@@ -106,7 +106,7 @@ export function CaseFilters({
         ))}
       </div>
 
-      <div className="cases-grid">
+      <div className="cases-grid grid [grid-template-columns:repeat(2,minmax(0,1fr))] [@media(max-width:960px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-6)]">
         {visible.map((card) => (
           <ViewTransition
             key={card.slug}

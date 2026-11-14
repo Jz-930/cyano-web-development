@@ -37,7 +37,7 @@ export function Lightbox({
   return (
     <dialog
       ref={ref}
-      className="screen-dialog"
+      className="screen-dialog [border:0] p-0 [background:transparent] [max-width:min(1200px,92vw)] [max-height:92vh] overflow-visible [color:var(--light)]"
       aria-label={label}
       onCancel={(e) => {
         e.preventDefault();
@@ -57,13 +57,13 @@ export function Lightbox({
         }
       }}
     >
-      <button type="button" className="dialog-close" onClick={onClose}>
+      <button type="button" className="dialog-close [z-index:var(--z-stage)]" onClick={onClose}>
         {t(locale, "关闭 ×", "Close ×")}
       </button>
       <div key={current} className="dialog-media-frame">
         <Picture src={images[current]} alt={label} sizes="90vw" />
       </div>
-      <div className="dialog-controls">
+      <div className="dialog-controls relative [z-index:var(--z-stage)]">
         <button type="button" onClick={() => step(-1)}>
           {t(locale, "上一张", "Previous")}
         </button>

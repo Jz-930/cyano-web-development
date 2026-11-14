@@ -38,9 +38,9 @@ export function Article({ locale, slug }: { locale: Locale; slug: string }) {
 
   return (
     <>
-      <section className="paper article-hero" data-header="paper">
-        <div className="wrap article-hero-inner">
-          <nav className="breadcrumb article-crumb" aria-label={navInsights}>
+      <section className="paper article-hero [padding-top:132px] [padding-bottom:var(--sp-7)] [@media(max-width:800px)]:[padding-top:112px]" data-header="paper">
+        <div className="wrap article-hero-inner flex flex-col [align-items:flex-start] [gap:var(--sp-4)]">
+          <nav className="breadcrumb article-crumb flex flex-wrap items-center [gap:var(--sp-2)] [font-size:14px]" aria-label={navInsights}>
             <Link href={href(locale)}>{heroCopy.home[locale]}</Link>
             <span aria-hidden="true">/</span>
             <Link href={href(locale, "/insights")}>{navInsights}</Link>
@@ -48,38 +48,38 @@ export function Article({ locale, slug }: { locale: Locale; slug: string }) {
             <span>{ins.category[locale]}</span>
           </nav>
 
-          <div className="article-meta-bar">
-            <span className="tag">{ins.category[locale]}</span>
+          <div className="article-meta-bar flex flex-wrap items-center [gap:var(--sp-3)]">
+            <span className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">{ins.category[locale]}</span>
             <time dateTime={ins.dateIso} className="small">
               {ins.dateDisplay[locale]}
             </time>
             <span className="small">{ins.readingTime[locale]}</span>
           </div>
 
-          <h1 className="h1-page article-title">
+          <h1 className="h1-page article-title [color:var(--ink)] [max-width:22ch]">
             <Phrase text={ins.title[locale]} locale={locale} />
           </h1>
 
           <p className="lede article-lede">{ins.metaDescription[locale]}</p>
 
-          <div className="article-hero-cover">
+          <div className="article-hero-cover w-full [max-width:960px] [margin-top:var(--sp-4)]">
             <InsightCover slug={ins.slug} locale={locale} size="hero" />
           </div>
         </div>
       </section>
 
-      <section className="paper article-body-section" data-header="paper">
-        <div className="wrap article-grid">
-          <aside className="article-toc-col">
+      <section className="paper article-body-section [padding-top:var(--sp-6)] [padding-bottom:var(--section-y)]" data-header="paper">
+        <div className="wrap article-grid grid [grid-template-columns:repeat(12,minmax(0,1fr))] [gap:var(--sp-6)] [align-items:start]">
+          <aside className="article-toc-col [grid-column:1_/_span_3] sticky [top:108px] [@media(max-width:1023px)]:hidden">
             <ArticleToc
               heading={pageCopy.in_this_article[locale]}
               items={tocItems}
             />
           </aside>
 
-          <article className="prose article-prose">
+          <article className="prose article-prose [grid-column:5_/_span_8] [@media(max-width:1023px)]:[grid-column:1_/_-1] [max-width:68ch] flex flex-col [gap:var(--sp-7)]">
             {blocks.map((b, idx) => (
-              <section id={`part-${idx}`} key={idx} className="article-part">
+              <section id={`part-${idx}`} key={idx} className="article-part flex flex-col [gap:var(--sp-4)] [scroll-margin-top:108px]">
                 <h2 className="h2">
                   <Phrase text={b.q} locale={locale} />
                 </h2>
@@ -89,7 +89,7 @@ export function Article({ locale, slug }: { locale: Locale; slug: string }) {
               </section>
             ))}
 
-            <div className="article-share-row">
+            <div className="article-share-row [padding-top:var(--sp-4)] [border-top:1px_solid_var(--line-soft)]">
               <CopyLink locale={locale} />
             </div>
 
@@ -106,9 +106,9 @@ export function Article({ locale, slug }: { locale: Locale; slug: string }) {
         </div>
       </section>
 
-      <section className="paper-2 article-related-section" data-header="paper">
-        <div className="wrap article-related-stack">
-          <div className="article-related-pair">
+      <section className="paper-2 article-related-section [padding-block:var(--section-y)]" data-header="paper">
+        <div className="wrap article-related-stack flex flex-col [gap:var(--sp-7)]">
+          <div className="article-related-pair grid [grid-template-columns:repeat(2,minmax(0,1fr))] [@media(max-width:1023px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-6)]">
             <CaseCoverCard item={relatedCase} locale={locale} glassBadge />
 
             <article className="card is-clickable article-sol-card">
@@ -130,16 +130,16 @@ export function Article({ locale, slug }: { locale: Locale; slug: string }) {
           </div>
 
           {otherInsights.length > 0 ? (
-            <div className="article-other-grid">
+            <div className="article-other-grid grid [grid-template-columns:repeat(2,minmax(0,1fr))] [@media(max-width:1023px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-6)]">
               {otherInsights.map((other) => (
                 <article
                   key={other.slug}
                   className="card is-clickable insights-card"
                 >
                   <InsightCover slug={other.slug} locale={locale} size="card" />
-                  <div className="insights-card-body">
-                    <div className="insights-meta">
-                      <span className="tag">{other.category[locale]}</span>
+                  <div className="insights-card-body flex flex-col [align-items:flex-start] [gap:var(--sp-3)] [flex:1]">
+                    <div className="insights-meta flex flex-wrap items-center [gap:var(--sp-2)_var(--sp-3)]">
+                      <span className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">{other.category[locale]}</span>
                       <time dateTime={other.dateIso} className="label">
                         {other.dateDisplay[locale]}
                       </time>

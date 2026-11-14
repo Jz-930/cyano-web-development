@@ -23,7 +23,7 @@ function PermissionsDiagram({ locale }: { locale: Locale }) {
 
   return (
     <svg
-      className="cover-art"
+      className="cover-art w-full [height:auto] [max-height:100%] overflow-visible"
       viewBox="0 0 520 420"
       aria-hidden="true"
       focusable="false"
@@ -130,7 +130,7 @@ function ConvergenceDiagram() {
   const cards = [54, 168, 282];
   return (
     <svg
-      className="cover-art"
+      className="cover-art w-full [height:auto] [max-height:100%] overflow-visible"
       viewBox="0 0 520 420"
       aria-hidden="true"
       focusable="false"
@@ -302,7 +302,7 @@ function GanttThumbDiagram({ slug }: { slug: string }) {
 
   return (
     <svg
-      className="cover-art"
+      className="cover-art w-full [height:auto] [max-height:100%] overflow-visible"
       viewBox="0 0 520 420"
       aria-hidden="true"
       focusable="false"
@@ -489,7 +489,7 @@ export function InsightCover({
 
   return (
     <div className={cls} data-size={size} data-slug={slug} data-surface="dark">
-      <picture className="cover-bg" aria-hidden="true">
+      <picture className="cover-bg absolute inset-0 [z-index:var(--z-field)] pointer-events-none" aria-hidden="true">
         <source
           type="image/avif"
           srcSet="/media/field/panel-720.avif 720w, /media/field/panel.avif 1440w"
@@ -508,12 +508,12 @@ export function InsightCover({
         />
       </picture>
 
-      <div className="cover-copy">
-        <span className="eyebrow on-dark cover-category">{category}</span>
-        {keyword ? <strong className="cover-keyword">{keyword}</strong> : null}
+      <div className="cover-copy absolute [z-index:var(--z-content)] flex flex-col justify-between [align-items:flex-start] pointer-events-none">
+        <span className="eyebrow on-dark cover-category [font-size:clamp(12px,1.5cqi,18px)]">{category}</span>
+        {keyword ? <strong className="cover-keyword [color:var(--ice)] [max-width:100%] [text-wrap:balance]">{keyword}</strong> : null}
       </div>
 
-      <div className="cover-diagram" aria-hidden="true">
+      <div className="cover-diagram absolute [top:0] [right:0] [bottom:0] [width:50%] [z-index:var(--z-content)] flex items-center justify-center [padding:clamp(12px,3cqi,36px)_clamp(16px,4.5cqi,54px)_clamp(12px,3cqi,36px)_0] pointer-events-none" aria-hidden="true">
         {slug === "why-chatgpt-is-not-a-knowledge-base" ? (
           <PermissionsDiagram locale={locale} />
         ) : slug === "proposal-draft-in-15-minutes" ? (

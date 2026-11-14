@@ -148,11 +148,11 @@ export function WorkflowRun({ locale, slug }: WorkflowRunProps) {
     step === 0 ? "hidden" : step < 5 ? "flow" : "rest";
 
   return (
-    <div className="workflow-run" data-step={step} ref={rootRef}>
-      <div className="workflow-toolbar">
+    <div className="workflow-run relative flex flex-col [gap:var(--sp-3)]" data-step={step} ref={rootRef}>
+      <div className="workflow-toolbar flex [justify-content:flex-end]">
         <button
           type="button"
-          className="button-text workflow-rerun"
+          className="button-text workflow-rerun no-underline [min-height:36px] [padding:var(--sp-1)_var(--sp-3)] [border-radius:var(--r-chip)]"
           onClick={runFromStart}
         >
           <RotateCcw size={14} aria-hidden="true" />
@@ -160,21 +160,21 @@ export function WorkflowRun({ locale, slug }: WorkflowRunProps) {
         </button>
       </div>
 
-      <div className="workflow-track-area">
-        <div className="workflow-rail" aria-hidden="true">
+      <div className="workflow-track-area relative flex flex-col [gap:var(--sp-3)]">
+        <div className="workflow-rail relative [height:32px] flex [@media(max-width:800px)]:hidden items-center" aria-hidden="true">
           <ProvenanceLines
             viewBox="0 0 960 20"
             paths={["M16 10 L 944 10"]}
             surface="paper"
             state={lineState}
           />
-          <span className="workflow-token">
+          <span className="workflow-token absolute [top:2px] [left:0] [height:28px] [padding:0_var(--sp-3)] [border-radius:var(--r-chip)] [background:var(--p2)] [border:1px_solid_var(--link)] [box-shadow:var(--shadow)] [color:var(--link)] inline-flex items-center [gap:var(--sp-1)] pointer-events-none [transition:transform_var(--dur-enter)_var(--ease-in-out)]">
             <FileText size={13} aria-hidden="true" />
             <span className="label">{tokenLabel}</span>
           </span>
         </div>
 
-        <div className="workflow-steps">
+        <div className="workflow-steps grid [grid-template-columns:repeat(4,minmax(0,1fr))] [@media(max-width:800px)]:[grid-template-columns:1fr] [gap:var(--sp-4)]">
           {[0, 1, 2, 3].map((i) => {
             const active = step >= i + 1;
             const current = step === i + 1;
@@ -183,15 +183,15 @@ export function WorkflowRun({ locale, slug }: WorkflowRunProps) {
             return (
               <div
                 key={i}
-                className="workflow-card"
+                className="workflow-card [border-radius:var(--r-card)] [background:var(--p2)] [padding:var(--sp-5)] flex flex-col [gap:var(--sp-2)] [transition:border-color_var(--qtb),box-shadow_var(--qtb)]"
                 data-active={active ? "true" : "false"}
                 data-current={current ? "true" : undefined}
               >
-                <div className="workflow-card-top">
+                <div className="workflow-card-top flex items-center justify-between [gap:var(--sp-2)] [min-height:22px]">
                   <span className="label">{`0${i + 1}`}</span>
                   {showReview ? (
-                    <span className="workflow-review-badge">
-                      <span className="workflow-review-dot" aria-hidden="true">
+                    <span className="workflow-review-badge inline-flex items-center [gap:var(--sp-1)] [padding:2px_var(--sp-2)] [border-radius:var(--r-chip)] [background:var(--amber-12)] [border:1px_solid_var(--amber)] [color:var(--ink)]">
+                      <span className="workflow-review-dot [width:16px] [height:16px] [border-radius:var(--q50)] [background:var(--amber)] [color:var(--n1)] inline-grid [place-items:center]" aria-hidden="true">
                         <Check size={11} strokeWidth={2.2} />
                       </span>
                       <span className="eyebrow">{reviewLabel}</span>
@@ -199,9 +199,9 @@ export function WorkflowRun({ locale, slug }: WorkflowRunProps) {
                   ) : null}
                 </div>
                 <h3 className="h3 workflow-step-title">{titles[i]}</h3>
-                <div className="workflow-expand">
-                  <div className="workflow-expand-inner">
-                    <p className="workflow-detail">{details[i]}</p>
+                <div className="workflow-expand grid [transition:grid-template-rows_var(--qte)]">
+                  <div className="workflow-expand-inner overflow-hidden">
+                    <p className="workflow-detail [padding-top:var(--sp-2)] [margin-top:var(--sp-2)] [border-top:1px_solid_var(--line-soft)] [font-size:14px] [line-height:1.65]">{details[i]}</p>
                   </div>
                 </div>
               </div>

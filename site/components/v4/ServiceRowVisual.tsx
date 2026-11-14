@@ -22,10 +22,10 @@ export function ServiceRowMockup({
   const callouts = mkCallouts(solutionSlug, locale);
 
   return (
-    <div className="service-row-art">
+    <div className="service-row-art relative w-full">
       <ScaledSceneMockup scene={scene} locale={locale} size="full">
         {callouts.length > 0 ? (
-          <div className="service-callouts" aria-hidden="true">
+          <div className="service-callouts absolute inset-0 pointer-events-none" aria-hidden="true">
             {callouts.map((c) => (
               <Callout
                 key={c.n}
@@ -82,7 +82,7 @@ export function ServiceWorkflowBar({
   if (nodes.length < 4) return null;
 
   return (
-    <div className="service-wf-bar" ref={ref}>
+    <div className="service-wf-bar relative [padding-top:var(--sp-5)] [border-top:1px_solid_var(--line-soft)]" ref={ref}>
       <ProvenanceLines
         viewBox="0 0 900 20"
         paths={["M80 10 L 310 10", "M360 10 L 560 10", "M610 10 L 820 10"]}
@@ -90,11 +90,11 @@ export function ServiceWorkflowBar({
         state={drawn ? "draw" : "hidden"}
         className="service-wf-lines"
       />
-      <ol className="service-wf-nodes">
+      <ol className="service-wf-nodes relative [z-index:1] grid [gap:var(--sp-3)] list-none m-0 p-0">
         {nodes.map((node, idx) => (
           <li
             key={idx}
-            className={`service-wf-node${idx === 1 ? " is-core" : ""}`}
+            className={`service-wf-node flex flex-col [gap:var(--sp-1)] [padding:var(--sp-3)_var(--sp-4)] [border-radius:var(--r-control)] [font-size:13px] [font-weight:500] ${idx === 1 ? " is-core" : ""}`}
           >
             <span className="label">{`0${idx + 1}`}</span>
             <span>{node}</span>

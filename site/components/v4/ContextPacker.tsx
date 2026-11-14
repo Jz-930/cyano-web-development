@@ -142,10 +142,10 @@ export function ContextPacker({ locale }: { locale: Locale }) {
   };
 
   return (
-    <div className="context-packer" data-surface="dark">
-      <div className="packer-controls">
+    <div className="context-packer flex flex-col [gap:var(--sp-4)] [padding:var(--sp-6)] [border-radius:var(--r-window)] [background:var(--n1)] [border:1px_solid_var(--dark-line)] [margin-bottom:var(--sp-7)]" data-surface="dark">
+      <div className="packer-controls flex flex-wrap items-center justify-between [gap:var(--sp-3)]">
         <div
-          className="packer-modes"
+          className="packer-modes inline-flex flex-wrap [gap:4px] [padding:4px] [border-radius:var(--r-chip)] [background:var(--n2)] [border:1px_solid_var(--dark-line-soft)]"
           role="radiogroup"
           aria-label={m2}
         >
@@ -164,7 +164,7 @@ export function ContextPacker({ locale }: { locale: Locale }) {
               role="radio"
               aria-checked={mode === val}
               tabIndex={mode === val ? 0 : -1}
-              className="packer-radio"
+              className="packer-radio [min-height:34px] [padding:0_var(--sp-4)] [border-radius:var(--r-chip)] [font-size:13px] [font-weight:500] cursor-pointer [transition:color_var(--qtf),background-color_var(--qtf),border-color_var(--qtf),opacity_var(--qtp)]"
               onClick={() => changeMode(val)}
               onKeyDown={(e) =>
                 onRadioKey(
@@ -182,7 +182,7 @@ export function ContextPacker({ locale }: { locale: Locale }) {
         </div>
 
         <div
-          className="packer-stages"
+          className="packer-stages inline-flex flex-wrap [gap:4px] [padding:4px] [border-radius:var(--r-chip)] [background:var(--n2)] [border:1px_solid_var(--dark-line-soft)]"
           role="radiogroup"
           aria-label={t2}
         >
@@ -201,7 +201,7 @@ export function ContextPacker({ locale }: { locale: Locale }) {
               role="radio"
               aria-checked={stage === val}
               tabIndex={stage === val ? 0 : -1}
-              className="packer-radio"
+              className="packer-radio [min-height:34px] [padding:0_var(--sp-4)] [border-radius:var(--r-chip)] [font-size:13px] [font-weight:500] cursor-pointer [transition:color_var(--qtf),background-color_var(--qtf),border-color_var(--qtf),opacity_var(--qtp)]"
               onClick={() => changeStage(val)}
               onKeyDown={(e) =>
                 onRadioKey(
@@ -221,9 +221,9 @@ export function ContextPacker({ locale }: { locale: Locale }) {
 
       <div
         key={shakeKey}
-        className={`packer-window${isOverflow ? " is-overflow" : ""}`}
+        className={`packer-window flex flex-col [gap:var(--sp-4)] [padding:var(--sp-5)] [border-radius:var(--r-card)] [min-height:128px] [transition:border-color_var(--qtb)] ${isOverflow ? " is-overflow" : ""}`}
       >
-        <div className="packer-tokens">
+        <div className="packer-tokens flex flex-wrap [gap:var(--sp-2)]">
           {activeBlocks.map((b) => {
             const buried = isOverflow && b.kind === 4;
             return (
@@ -233,7 +233,7 @@ export function ContextPacker({ locale }: { locale: Locale }) {
                   if (el) itemRefs.current.set(b.id, el);
                   else itemRefs.current.delete(b.id);
                 }}
-                className="packer-block"
+                className="packer-block inline-flex items-center [padding:6px_12px] [border-radius:var(--r-control)] [font-size:13px] [font-weight:500]"
                 data-kind={b.kind}
                 data-buried={buried ? "true" : undefined}
               >
@@ -244,9 +244,9 @@ export function ContextPacker({ locale }: { locale: Locale }) {
         </div>
 
         {indexedBlocks.length > 0 ? (
-          <div className="packer-index" aria-hidden="true">
+          <div className="packer-index flex items-center [gap:var(--sp-3)] [padding-top:var(--sp-3)] [border-top:1px_solid_var(--dark-line-soft)]" aria-hidden="true">
             <span className="label">{idxLabel}</span>
-            <div className="packer-dots">
+            <div className="packer-dots inline-flex items-center [gap:8px]">
               {indexedBlocks.map((b) => (
                 <span
                   key={b.id}
@@ -254,7 +254,7 @@ export function ContextPacker({ locale }: { locale: Locale }) {
                     if (el) itemRefs.current.set(b.id, el);
                     else itemRefs.current.delete(b.id);
                   }}
-                  className="packer-dot"
+                  className="packer-dot [width:6px] [height:6px] [border-radius:var(--r-chip)] [background:var(--cyan)]"
                 />
               ))}
             </div>
@@ -262,7 +262,7 @@ export function ContextPacker({ locale }: { locale: Locale }) {
         ) : null}
       </div>
 
-      {illNote ? <p className="small packer-note">{illNote}</p> : null}
+      {illNote ? <p className="small packer-note m-0 [color:var(--on-dark)]">{illNote}</p> : null}
     </div>
   );
 }

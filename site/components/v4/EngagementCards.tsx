@@ -56,19 +56,19 @@ export function EngagementCards({
             data-motion="transform"
             style={{ "--i": pos } as CSSProperties}
           >
-            <div className="engagement-top">
+            <div className="engagement-top flex justify-between items-center">
               <span className="label">{`0${i + 1}`}</span>
               {angle ? <span className="label engagement-angle">{angle}</span> : null}
               {isRec && recBadge ? (
-                <span className="tag engagement-rec-badge">{recBadge}</span>
+                <span className="tag engagement-rec-badge inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">{recBadge}</span>
               ) : null}
             </div>
-            <span className="tag">{pageCopy.own_a_system[locale][i]}</span>
+            <span className="tag inline-flex [border-radius:var(--r-chip)] [padding:4px_10px]">{pageCopy.own_a_system[locale][i]}</span>
             <h3 className="h3">{pageCopy.full_custom_build[locale][i]}</h3>
             <p className="engagement-desc">
               {pageCopy.for_teams_with_clear[locale][i]}
             </p>
-            <div className="engagement-bottom">
+            <div className="engagement-bottom flex items-center justify-between [border-top:1px_solid_var(--line)] [margin-top:27px] [@media(max-width:480px)]:[margin-top:20px] [padding-top:21px] [@media(max-width:480px)]:[padding-top:var(--sp-4)]">
               <span className="small engagement-timing">{timing}</span>
               <Link
                 href={href(locale, "/contact#form")}

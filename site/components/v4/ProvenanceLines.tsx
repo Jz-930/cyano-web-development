@@ -87,9 +87,9 @@ export function ProvenanceLines({
         const isFocused = focusSet ? focusSet.has(i) : false;
         return (
           <g key={pathId} className={isFocused ? "is-focus" : undefined}>
-            <path id={pathId} className="prov-base" d={d} pathLength={1} />
-            <path className="prov-flow" d={d} pathLength={1} />
-            <circle className="prov-dot" r={2.5}>
+            <path id={pathId} className="prov-base [fill:none] [stroke-width:1.25] [vector-effect:non-scaling-stroke] [stroke-dasharray:1]" d={d} pathLength={1} />
+            <path className="prov-flow [fill:none] [stroke-width:1.5] [vector-effect:non-scaling-stroke] [stroke-linecap:round] [stroke-dasharray:0.06_1] [stroke-dashoffset:0.06]" d={d} pathLength={1} />
+            <circle className="prov-dot [fill:var(--cyan)]" r={2.5}>
               <animateMotion
                 dur="900ms"
                 begin="indefinite"

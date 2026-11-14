@@ -120,7 +120,7 @@ export function LightField({
   return (
     <div
       ref={ref}
-      className={`light-field field-${preset}`}
+      className={`light-field absolute inset-0 [z-index:var(--z-field)] pointer-events-none overflow-hidden [background:var(--n0)] field-${preset}`}
       data-preset={preset}
       data-intro={intro ? "true" : undefined}
       aria-hidden="true"

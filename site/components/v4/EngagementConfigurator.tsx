@@ -124,7 +124,7 @@ export function EngagementConfigurator({
   const modeOrder: EngagementMode[] = ["custom", "pilot", "managed"];
 
   return (
-    <div className="eng-Interactive-stack">
+    <div className="eng-Interactive-stack flex flex-col [gap:var(--sp-7)]">
       <div className="engagement-configurator card">
         {questions.map((q, idx) => {
           const checked = ans[idx as 0 | 1 | 2];
@@ -134,12 +134,12 @@ export function EngagementConfigurator({
               type="button"
               role="switch"
               aria-checked={checked}
-              className="eng-switch-btn"
+              className="eng-switch-btn flex items-center justify-between [gap:var(--sp-3)] [min-height:52px] [padding:var(--sp-3)_var(--sp-4)] [border-radius:var(--r-card)] [color:var(--ink)] [font-size:14px] [font-weight:500] text-left cursor-pointer [transition:border-color_var(--qtf),background-color_var(--qtf),opacity_var(--qtp)]"
               onClick={() => toggle(idx as 0 | 1 | 2)}
             >
               <span className="eng-switch-q">{q}</span>
-              <span className="eng-switch-track" aria-hidden="true">
-                <span className="eng-switch-thumb" />
+              <span className="eng-switch-track relative [width:40px] [height:24px] [border-radius:var(--r-chip)] shrink-0 [transition:background-color_var(--qtf)]" aria-hidden="true">
+                <span className="eng-switch-thumb absolute [top:3px] [left:3px] [width:18px] [height:18px] [border-radius:var(--r-chip)] [background:var(--p2)] [box-shadow:var(--shadow)] [transition:transform_var(--dur-base)_var(--ease-spring)]" />
               </span>
             </button>
           );
@@ -152,9 +152,9 @@ export function EngagementConfigurator({
         reorderOnRecommend
       />
 
-      <p className="conclusion eng-decision-note">{decisionNote}</p>
+      <p className="conclusion eng-decision-note [padding-left:var(--sp-5)] [border-left:2px_solid_var(--cyan)] [font-size:18px] [line-height:1.7] [color:var(--ink)]">{decisionNote}</p>
 
-      <div className="eng-gantt-wrap">
+      <div className="eng-gantt-wrap [padding:var(--sp-5)] [border-radius:var(--r-window)] [background:var(--p2)] [border:1px_solid_var(--line)]">
         <EngagementGantt
           locale={locale}
           variant="paper"
@@ -164,12 +164,12 @@ export function EngagementConfigurator({
       </div>
 
       <div
-        className="compare-scroll eng-compare-wrap"
+        className="compare-scroll eng-compare-wrap [overflow-x:auto] [border-radius:var(--r-card)] [border:1px_solid_var(--line)] [background:var(--p2)]"
         role="region"
         aria-label={t(locale, "合作方式比较", "Engagement comparison")}
         tabIndex={0}
       >
-        <table className="compare-table eng-compare-table">
+        <table className="compare-table eng-compare-table w-full [min-width:760px] [border-collapse:collapse] [font-size:15px]">
           <thead>
             <tr>
               <th scope="col">{pageCopy.compare[locale]}</th>

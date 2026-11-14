@@ -20,7 +20,7 @@ function SaasDeploySvg() {
   return (
     <svg
       viewBox="0 0 220 140"
-      className="eng-deploy-svg"
+      className="eng-deploy-svg [width:220px] [@media(max-width:720px)]:w-full [@media(max-width:720px)]:[max-width:240px] [height:140px] [border-radius:var(--r-card)]"
       aria-hidden="true"
       focusable="false"
     >
@@ -76,7 +76,7 @@ function PrivateDeploySvg({ dockerLabel }: { dockerLabel: string }) {
   return (
     <svg
       viewBox="0 0 220 140"
-      className="eng-deploy-svg"
+      className="eng-deploy-svg [width:220px] [@media(max-width:720px)]:w-full [@media(max-width:720px)]:[max-width:240px] [height:140px] [border-radius:var(--r-card)]"
       aria-hidden="true"
       focusable="false"
     >
@@ -152,7 +152,7 @@ export function Engagement({ locale }: { locale: Locale }) {
       title: pageCopy.assess_requirements[locale][i],
       desc: pageCopy.review_goals_workflows_and[locale][i],
       ownerRole: founder.role,
-      ownerAvatar: `/v3-materials/founder-${founder.order}.webp`,
+      ownerAvatar: `/v3-materials/founder-${founder.order + 1}.webp`,
     };
   });
 
@@ -268,7 +268,7 @@ export function Engagement({ locale }: { locale: Locale }) {
       />
 
       {/* Section 2: S7 Configurator + Cards + Gantt + Compare Table */}
-      <section className="paper eng-main-section" data-header="paper">
+      <section className="paper eng-main-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
           <EngagementConfigurator
             locale={locale}
@@ -278,17 +278,17 @@ export function Engagement({ locale }: { locale: Locale }) {
       </section>
 
       <div className="wrap">
-        <hr className="rule-dot" />
+        <hr className="rule-dot relative [height:1px] [border:0] [background:var(--line-soft)] overflow-visible" />
       </div>
 
       {/* Section 3: 5-step process with vertical provenance line + founder avatars */}
       <section
         id="diagnosis"
-        className="paper eng-process-section"
+        className="paper eng-process-section [padding-block:var(--section-y)]"
         data-header="paper"
       >
         <div className="wrap">
-          <div className="eng-sec-head" data-reveal="">
+          <div className="eng-sec-head flex flex-col [gap:var(--sp-2)] [margin-bottom:var(--stack-heading)]" data-reveal="">
             <p className="eyebrow">{pageCopy.project_process[locale]}</p>
             <h2 className="h2">
               <Phrase
@@ -303,12 +303,12 @@ export function Engagement({ locale }: { locale: Locale }) {
       </section>
 
       {/* Section 4: Deployment options (SaaS vs Private SVG diagrams) */}
-      <section className="paper-2 eng-deploy-section" data-header="paper">
+      <section className="paper-2 eng-deploy-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
-          <div className="eng-deploy-grid">
+          <div className="eng-deploy-grid grid [grid-template-columns:repeat(2,minmax(0,1fr))] [@media(max-width:1023px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-6)]">
             <article className="card eng-deploy-card" data-reveal="">
               <SaasDeploySvg />
-              <div className="eng-deploy-copy">
+              <div className="eng-deploy-copy flex flex-col [gap:var(--sp-2)]">
                 <h3 className="h3">
                   {t(locale, "SaaS 托管", "SaaS hosting")}
                 </h3>
@@ -322,7 +322,7 @@ export function Engagement({ locale }: { locale: Locale }) {
               style={{ "--i": 1 } as React.CSSProperties}
             >
               <PrivateDeploySvg dockerLabel={dockerLabel} />
-              <div className="eng-deploy-copy">
+              <div className="eng-deploy-copy flex flex-col [gap:var(--sp-2)]">
                 <h3 className="h3">
                   {t(locale, "私有化部署", "Private deployment")}
                 </h3>
@@ -334,9 +334,9 @@ export function Engagement({ locale }: { locale: Locale }) {
       </section>
 
       {/* Section 5: 9-item FAQ */}
-      <section id="faq" className="paper eng-faq-section" data-header="paper">
-        <div className="wrap eng-faq-grid">
-          <div className="eng-faq-side" data-reveal="">
+      <section id="faq" className="paper eng-faq-section [padding-block:var(--section-y)]" data-header="paper">
+        <div className="wrap eng-faq-grid grid [grid-template-columns:minmax(220px,4fr)_minmax(0,8fr)] [@media(max-width:1023px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-7)] [align-items:start]">
+          <div className="eng-faq-side sticky [@media(max-width:1023px)]:[position:static] [top:108px] flex flex-col [gap:var(--sp-2)]" data-reveal="">
             <p className="eyebrow">
               {copyIfApproved("E-5t", locale) ??
                 pageCopy.common_questions[locale]}
