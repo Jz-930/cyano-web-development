@@ -72,7 +72,7 @@ export function CaseCoverCard({
           share="morph"
           default="none"
         >
-          <div className="case-cover-mk" data-motion="transform">
+          <div className="case-cover-mk" data-motion="transform" aria-hidden="true">
             <ScaledSceneMockup
               scene={item.mockup}
               locale={locale}
@@ -92,7 +92,7 @@ export function CaseCoverCard({
         <div className="case-meta-row">
           <span className="tag">{item.industry}</span>
           <span className="tag">{item.model}</span>
-          <span className="label">{item.duration}</span>
+          <span className="small">{item.duration}</span>
         </div>
         <ViewTransition
           name={`case-title-${item.slug}`}

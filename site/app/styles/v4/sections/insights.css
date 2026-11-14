@@ -1,0 +1,68 @@
+/* 07 §9 — /insights 洞察列表 */
+
+.insights-main-section {
+  padding-block: var(--section-y);
+}
+
+.insights-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-7);
+}
+
+.insights-featured {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: var(--sp-7);
+  align-items: center;
+  padding: var(--sp-6);
+}
+
+.insights-featured-body,
+.insights-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-3);
+}
+
+.insights-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  padding: var(--sp-5);
+}
+
+.insights-card-body {
+  flex: 1;
+}
+
+.insights-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2) var(--sp-3);
+}
+
+.insights-excerpt {
+  margin: 0;
+  color: var(--muted);
+}
+
+.insights-cta {
+  margin-top: auto;
+  padding-top: var(--sp-2);
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-6);
+}
+
+@media (max-width: 960px) {
+  .insights-featured,
+  .insights-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

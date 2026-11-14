@@ -1,8 +1,102 @@
-.page-hero .hero-diagram,
-.page-hero .page-hero-shade {
-  z-index: var(--z-content);
+/* ---------- 0. 内页首屏统一结构 PageHero（07 §0） ---------- */
+.page-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: clamp(560px, 44vw, 640px);
+  padding: 132px 0 var(--sp-8);
+  display: flex;
+  align-items: center;
 }
-.page-hero-inner {
+
+.page-hero-grid {
+  position: relative;
+  z-index: var(--z-content);
+  display: grid;
+  grid-template-columns: minmax(0, 6fr) minmax(0, 6fr);
+  gap: var(--sp-7);
+  align-items: center;
+}
+
+.page-hero-grid:not(:has(.page-hero-visual)) {
+  grid-template-columns: minmax(0, 8fr);
+}
+
+.page-hero-copy {
   position: relative;
   z-index: var(--z-stage);
+  min-width: 0;
+}
+
+.page-hero-copy .eyebrow {
+  margin-bottom: var(--sp-4);
+}
+
+.page-hero-copy .lede {
+  margin-top: var(--sp-5);
+  color: var(--on-dark);
+}
+
+.page-hero-copy .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-4);
+  margin-top: var(--sp-6);
+}
+
+.page-hero-note {
+  margin-top: var(--sp-4);
+  color: var(--on-dark);
+}
+
+.page-hero-visual {
+  position: relative;
+  justify-self: end;
+  width: 100%;
+  max-width: 600px;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 14px;
+  color: var(--on-dark);
+  margin-bottom: var(--sp-5);
+}
+
+.breadcrumb a {
+  color: var(--on-dark);
+  transition:
+    color var(--dur-fast) var(--ease-out),
+    opacity var(--dur-press) var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .breadcrumb a:hover {
+    color: var(--light);
+  }
+}
+
+.breadcrumb a:active {
+  opacity: 0.78;
+}
+
+@media (max-width: 1023px) {
+  .page-hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .page-hero-visual {
+    justify-self: start;
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 800px) {
+  .page-hero {
+    min-height: 0;
+    padding: 112px 0 var(--sp-7);
+  }
 }

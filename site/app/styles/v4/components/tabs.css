@@ -31,7 +31,7 @@
   position: absolute;
   left: 0;
   width: 2px;
-  background: var(--cyan);
+  background: var(--link);
   top: 0;
   height: var(--th, 0px);
   transform: translateY(var(--ty, 0px));
@@ -39,6 +39,10 @@
   transition:
     transform var(--dur-base) var(--ease-spring),
     height var(--dur-base) var(--ease-spring);
+}
+.dark .tab-indicator,
+[data-surface="dark"] .tab-indicator {
+  background: var(--cyan);
 }
 .tablist-h .tab-indicator {
   top: auto;

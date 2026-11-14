@@ -75,6 +75,9 @@
   border-radius: var(--r-control);
   border: 1px solid var(--dark-line-soft);
 }
+.mk-panel p {
+  color: var(--light);
+}
 
 /* Skeleton lines */
 .mk-skel {
@@ -129,12 +132,18 @@
   border-bottom: 1px solid var(--cyan);
   border-radius: var(--r-control);
   font: 500 12px/1.3 var(--mono);
-  color: var(--link);
-  background: var(--cyan-12);
+  color: var(--ink);
+  background: var(--p3);
+  border-bottom-color: var(--link);
   transition:
     background-color var(--dur-fast) var(--ease-out),
     color var(--dur-fast) var(--ease-out),
     transform var(--dur-press) var(--ease-out);
+}
+.mk-panel .mk-cite {
+  color: var(--ice);
+  background: var(--cyan-18);
+  border-bottom-color: var(--cyan);
 }
 button.mk-cite {
   cursor: pointer;
@@ -883,7 +892,7 @@ html.js .mk-stage[data-step="7"] .mk-source-tag {
 .stage-badge {
   position: absolute;
   right: -32px;
-  bottom: 36px;
+  bottom: -8px;
   width: 236px;
   padding: var(--sp-3) var(--sp-4);
   display: grid;

@@ -27,6 +27,7 @@
 @import "./v4/components/cover.css" layer(v4-components);
 @import "./v4/components/citation.css" layer(v4-components);
 @import "./v4/components/callout.css" layer(v4-components);
+@import "./v4/components/workflow.css" layer(v4-components);
 @import "./v4/sections/header.css" layer(v4-sections);
 @import "./v4/sections/page-hero.css" layer(v4-sections);
 @import "./v4/sections/home.css" layer(v4-sections);

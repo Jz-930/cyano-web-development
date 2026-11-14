@@ -2,8 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import rawEngagementCopy from "@/content/v4/pages/EngagementCards.json";
-import type { Locale } from "@/lib/locale";
-import { copyNew } from "@/lib/mockups";
+import { t, type Locale } from "@/lib/locale";
 
 export type EngagementMode = "custom" | "pilot" | "managed";
 
@@ -126,19 +125,39 @@ export function EngagementGantt({
   }, [effectiveMode]);
 
   const rowTitles = rawEngagementCopy.full_custom_build[locale];
-  const g1 = copyNew("G-1", locale) ?? "Assessment";
-  const g2 = copyNew("G-2", locale) ?? "First release";
-  const g3 = copyNew("G-3", locale) ?? "First working version";
-  const g4 = copyNew("G-4", locale) ?? "First results";
-  const g5 = copyNew("G-5", locale) ?? "Ongoing delivery";
-  const g6 = copyNew("G-6", locale) ?? "Pilot";
-  const g7 = copyNew("G-7", locale) ?? "Human sign-off";
-  const gCap = copyNew("G-cap", locale);
-  const gNote = copyNew("G-note", locale);
+  const g1 = t(locale, "需求评估", "Assessment");
+  const g2 = t(locale, "首期上线", "First release");
+  const g3 = t(locale, "首个可用版本", "First working version");
+  const g4 = t(locale, "首批结果", "First results");
+  const g5 = t(locale, "按月 / 按批次持续交付", "Ongoing monthly or batch delivery");
+  const g6 = t(locale, "试点", "Pilot");
+  const g7 = t(locale, "人工验收", "Human sign-off");
+  const gCap = t(
+    locale,
+    "三种合作方式的典型周期对比",
+    "Typical timelines for the three engagement models",
+  );
+  const gNote = t(
+    locale,
+    "典型安排；具体范围与时间以需求评估和双方协议为准。",
+    "Typical schedule; scope and timing depend on the assessment and our agreement.",
+  );
 
-  const ownCustom = copyNew("E-4own.custom", locale);
-  const ownPilot = copyNew("E-4own.pilot", locale);
-  const ownManaged = copyNew("E-4own.managed", locale);
+  const ownCustom = t(
+    locale,
+    "系统归你 · 维护范围合作时约定",
+    "You own the system · Support scope agreed upfront",
+  );
+  const ownPilot = t(
+    locale,
+    "先验证效果 · 维护范围合作时约定",
+    "Check the results first · Support scope agreed upfront",
+  );
+  const ownManaged = t(
+    locale,
+    "Cyano 运行并交付结果",
+    "Cyano runs it and delivers results",
+  );
   const showOwnCol =
     !compact &&
     variant === "paper" &&

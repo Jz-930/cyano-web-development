@@ -1,6 +1,9 @@
 .field {
   position: relative;
 }
+.contact-form label > span {
+  color: var(--link);
+}
 .field-valid-icon {
   position: absolute;
   right: 12px;

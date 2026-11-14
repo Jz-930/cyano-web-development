@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import pageCopy from "@/content/v4/pages/EngagementCards.json";
 import { href, type Locale } from "@/lib/locale";
-import { copyNew } from "@/lib/mockups";
+import { copyNew } from "@/lib/copy-new-client";
 import type { EngagementMode } from "./EngagementGantt";
 
 const CARD_DEFS: Array<{

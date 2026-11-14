@@ -9,7 +9,8 @@ import {
   solutions,
   text,
 } from "@/lib/content-v4";
-import { mkCallouts, type SceneId } from "@/lib/mockups";
+import type { SceneId } from "@/lib/mockups";
+import { mkCallouts } from "@/lib/mockups-extra";
 import { LightField } from "./LightField";
 import { Phrase } from "./Phrase";
 import { ProvenanceStage } from "./ProvenanceStage";

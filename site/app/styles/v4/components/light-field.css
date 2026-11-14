@@ -1,3 +1,12 @@
+img.field {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: var(--z-field);
+}
 .light-field {
   position: absolute;
   inset: 0;
@@ -37,6 +46,7 @@
   }
   .light-field[data-preset="hero"] img {
     object-position: 70% 30%;
+    opacity: 0.55;
   }
 }
 @keyframes field-pan {

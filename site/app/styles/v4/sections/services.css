@@ -1,0 +1,303 @@
+/* 07 §1 — /services 解决方案总览 */
+
+.services-fan {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 310px;
+  margin-inline: auto;
+}
+
+.services-fan-item {
+  position: absolute;
+  width: 240px;
+  height: 150px;
+  border-radius: var(--r-card);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+
+.services-fan-item[data-fan="0"] {
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+  transform: rotate(-4deg);
+}
+
+.services-fan-item[data-fan="1"] {
+  top: 48px;
+  left: 72px;
+  z-index: 2;
+  transform: rotate(-1.5deg);
+}
+
+.services-fan-item[data-fan="2"] {
+  top: 94px;
+  left: 140px;
+  z-index: 3;
+  transform: rotate(1.5deg);
+}
+
+.services-fan-item[data-fan="3"] {
+  top: 140px;
+  left: 204px;
+  z-index: 4;
+  transform: rotate(4deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .services-fan:hover .services-fan-item[data-fan="0"] {
+    transform: translate3d(-8px, -6px, 0) rotate(-4deg);
+  }
+  .services-fan:hover .services-fan-item[data-fan="1"] {
+    transform: translate3d(-4px, -2px, 0) rotate(-1.5deg);
+  }
+  .services-fan:hover .services-fan-item[data-fan="2"] {
+    transform: translate3d(4px, 2px, 0) rotate(1.5deg);
+  }
+  .services-fan:hover .services-fan-item[data-fan="3"] {
+    transform: translate3d(8px, 6px, 0) rotate(4deg);
+  }
+}
+
+.services-opportunities {
+  padding-block: var(--section-y);
+}
+
+.services-opp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-6);
+}
+
+.services-opp-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding: var(--sp-7);
+}
+
+.services-opp-desc {
+  color: var(--muted);
+  margin: 0;
+}
+
+.services-opp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-top: auto;
+  padding-top: var(--sp-2);
+}
+
+.services-list-section {
+  padding-block: var(--section-y);
+}
+
+.services-rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-8);
+}
+
+.service-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+  padding: var(--sp-7);
+}
+
+.service-row-main {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--sp-7);
+  align-items: center;
+}
+
+.service-row-visual {
+  grid-column: span 6;
+}
+
+.service-row-copy {
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-4);
+}
+
+.service-row.is-even .service-row-visual {
+  order: 2;
+}
+
+.service-row.is-even .service-row-copy {
+  order: 1;
+}
+
+.service-row-art {
+  position: relative;
+  width: 100%;
+}
+
+.service-callouts {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.service-callouts .callout {
+  pointer-events: auto;
+}
+
+.service-row-head {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+.service-row-head .eyebrow {
+  margin: 0;
+}
+
+.service-row-intro {
+  color: var(--muted);
+  margin: 0;
+}
+
+.service-row-outputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2) var(--sp-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.service-row-outputs li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.service-row-outputs svg {
+  color: var(--link);
+  flex-shrink: 0;
+}
+
+.service-row-cta {
+  margin-top: var(--sp-1);
+}
+
+/* Bottom 4-node horizontal workflow bar inside K-04 */
+.service-wf-bar {
+  position: relative;
+  padding-top: var(--sp-5);
+  border-top: 1px solid var(--line-soft);
+}
+
+.service-wf-lines {
+  position: absolute;
+  top: calc(var(--sp-5) + 18px);
+  left: 0;
+  width: 100%;
+  height: 20px;
+  pointer-events: none;
+}
+
+.service-wf-nodes {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--sp-3);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.service-wf-node {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-control);
+  background: var(--p2);
+  border: 1px solid var(--line-soft);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.service-wf-node.is-core {
+  background: var(--p3);
+  border-color: var(--cyan-40);
+  color: var(--ink);
+}
+
+.services-tail {
+  margin-top: var(--sp-9);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-4);
+}
+
+@media (max-width: 960px) {
+  .services-opp-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .service-row-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .service-row-visual,
+  .service-row-copy,
+  .service-row.is-even .service-row-visual,
+  .service-row.is-even .service-row-copy {
+    grid-column: 1 / -1;
+    order: unset;
+  }
+
+  .service-wf-lines {
+    display: none;
+  }
+
+  .service-wf-nodes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .services-fan {
+    height: auto;
+    max-width: 340px;
+  }
+
+  .services-fan-item {
+    position: static;
+    width: 100%;
+    height: auto;
+    transform: none;
+  }
+
+  .services-fan-item:not([data-fan="0"]) {
+    display: none;
+  }
+
+  .service-callouts .callout-label,
+  .service-callouts .callout-line {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .service-row {
+    padding: var(--sp-5);
+  }
+
+  .service-wf-nodes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

@@ -1,4 +1,3 @@
-import { MessagesSquare, FileText, Network, ChartNoAxesCombined } from "lucide-react";
 import { BrandMark } from "@/components/v4/BrandMark";
 
 export function Logo() {
@@ -10,4 +9,3 @@ export function Logo() {
   );
 }
 
-export const solutionIcons = [MessagesSquare, FileText, Network, ChartNoAxesCombined];

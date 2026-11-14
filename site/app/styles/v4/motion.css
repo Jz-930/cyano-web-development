@@ -1,4 +1,4 @@
-:root {
+:where(:root) {
   --dur-press: 80ms;
   --dur-fast: 140ms;
   --dur-base: 220ms;

@@ -5,10 +5,7 @@ import dataRaw from "@/content/v4/mockups/data.json";
 import propertyRaw from "@/content/v4/mockups/property.json";
 import writingRaw from "@/content/v4/mockups/writing.json";
 import stageRaw from "@/content/v4/mockups/stage.json";
-import calloutsRaw from "@/content/v4/mockups/callouts.json";
-import inoutRaw from "@/content/v4/mockups/inout.json";
 import rawCases from "@/content/v4/cases.json";
-import rawCopyNew from "@/content/v4/copy-new.json";
 import demoQuestions from "@/content/v1/demo-questions.json";
 import queryDemo from "@/content/query-demo.json";
 import type { Locale } from "./locale";
@@ -37,12 +34,6 @@ const SCENE_TABLES: Record<SceneId, Record<string, LocalizedEntry>> = {
 };
 
 const stageTable = stageRaw as Record<string, LocalizedEntry>;
-const inoutTable = inoutRaw as Record<string, LocalizedEntry>;
-const copyNewTable = rawCopyNew as Record<string, LocalizedEntry>;
-const calloutsTable = calloutsRaw as Record<
-  string,
-  Array<{ x: number; y: number; zh: string; en: string; status: string }>
->;
 
 function isApproved(entry: LocalizedEntry | undefined): entry is LocalizedEntry {
   return Boolean(
@@ -65,36 +56,6 @@ export function mkStage(
   locale: Locale,
 ): string | null {
   const entry = stageTable[`stage.${sceneId}.card${cardIndex}`];
-  return isApproved(entry) ? entry[locale] : null;
-}
-
-export function mkCallouts(
-  solutionSlug: string,
-  locale: Locale,
-): Array<{ n: number; x: number; y: number; label: string }> {
-  const list = calloutsTable[solutionSlug] ?? [];
-  return list
-    .map((item, idx) =>
-      item.status === "approved" || item.status === "class-a"
-        ? { n: idx + 1, x: item.x, y: item.y, label: item[locale] }
-        : null,
-    )
-    .filter(
-      (x): x is { n: number; x: number; y: number; label: string } => x !== null,
-    );
-}
-
-export function mkInout(
-  solutionSlug: string,
-  index: 1 | 2 | 3,
-  locale: Locale,
-): string | null {
-  const entry = inoutTable[`inout.${solutionSlug}.src${index}`];
-  return isApproved(entry) ? entry[locale] : null;
-}
-
-export function copyNew(id: string, locale: Locale): string | null {
-  const entry = copyNewTable[id];
   return isApproved(entry) ? entry[locale] : null;
 }
 

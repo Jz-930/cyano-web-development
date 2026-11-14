@@ -4,7 +4,6 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import { ArrowUpRight, Lock, Pause, Play } from "lucide-react";
 import { href, t, type Locale } from "@/lib/locale";
-import { copyNew } from "@/lib/mockups";
 import { LightField } from "./LightField";
 import { usePointerHalo } from "./usePointerHalo";
 import { useTabs } from "./useTabs";
@@ -117,9 +116,9 @@ export function ConcernPanel({
     return () => window.clearInterval(id);
   }, [autoPlay, hovered, focusedInside, selected, items.length, select]);
 
-  const autoLabel = copyNew("S11-auto", locale) ?? "Auto-play";
-  const pauseLabel = copyNew("S1-pause", locale) ?? "Pause demo";
-  const noSourceLabel = copyNew("S11-l3", locale);
+  const autoLabel = t(locale, "自动播放", "Auto-play");
+  const pauseLabel = t(locale, "暂停演示", "Pause demo");
+  const noSourceLabel = t(locale, "来源不明", "No source");
 
   return (
     <div

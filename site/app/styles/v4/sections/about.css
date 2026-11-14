@@ -1,0 +1,408 @@
+/* 07 §7 + K-10 — /about 关于我们 */
+
+.about-hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+}
+
+.about-hero-portraits {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--sp-3);
+}
+
+.about-hero-portrait {
+  padding: 6px;
+  border-radius: var(--r-card);
+  overflow: hidden;
+}
+
+.about-hero-portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--r-control);
+}
+
+.about-hero-connectors {
+  width: 100%;
+  height: 44px;
+}
+
+.about-hero-stages {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--sp-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-stage-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: var(--r-chip);
+  background: var(--n2);
+  border: 1px solid var(--dark-line);
+}
+
+.about-stage-pill .label {
+  color: var(--ice);
+}
+
+.about-stage-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--r-chip);
+  background: var(--cyan);
+}
+
+/* Section 2: Who we are + Team numbers */
+.about-intro-section,
+.about-team-section,
+.about-scope-section {
+  padding-block: var(--section-y);
+}
+
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: var(--sp-8);
+  align-items: start;
+}
+
+.about-who {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.about-who p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.about-stats {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.about-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-4) var(--sp-5);
+}
+
+.about-stat-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-3);
+}
+
+.about-stat-cite {
+  padding: 0;
+}
+
+.about-stat-val {
+  font-size: 32px;
+  line-height: 1.05;
+  font-weight: 650;
+  color: var(--brand);
+  font-variant-numeric: tabular-nums;
+}
+
+.about-stat-lbl {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.about-stat-exp {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* Section 3: K-10 ResponsibilityMatrix + Founder cards */
+.about-sec-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin-bottom: var(--stack-heading);
+}
+
+.resp-matrix {
+  padding: var(--sp-5);
+  margin-bottom: var(--sp-7);
+}
+
+.resp-matrix-scroll {
+  overflow-x: auto;
+}
+
+.resp-matrix-inner {
+  min-width: 680px;
+}
+
+.resp-head-row {
+  display: grid;
+  grid-template-columns: 220px repeat(5, minmax(0, 1fr));
+  border-bottom: 1px solid var(--line);
+}
+
+.resp-stage-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: var(--sp-3) var(--sp-2);
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  border-radius: var(--r-control) var(--r-control) 0 0;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.resp-stage-head[data-highlight="true"] {
+  background: var(--p3);
+}
+
+.resp-body {
+  position: relative;
+}
+
+.resp-lines-wrap {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 220px;
+  right: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.resp-lines-wrap .prov {
+  width: 100%;
+  height: 100%;
+}
+
+.resp-row {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 220px repeat(5, minmax(0, 1fr));
+  min-height: 60px;
+  border-bottom: 1px solid var(--line-soft);
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.resp-row:last-child {
+  border-bottom: 0;
+}
+
+.resp-row[data-highlight="true"] {
+  background: var(--p3);
+}
+
+.resp-founder-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.resp-mini-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--r-chip);
+  object-fit: cover;
+  background: var(--p3);
+  flex-shrink: 0;
+}
+
+.resp-cell {
+  display: grid;
+  place-items: center;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+
+.resp-cell[data-highlight="true"] {
+  background: var(--p3);
+}
+
+.resp-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--r-chip);
+  background: var(--brand);
+  box-shadow: 0 0 0 4px var(--p2);
+}
+
+.about-founders-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-6);
+}
+
+.about-founder-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding: var(--sp-6);
+}
+
+.about-founder-top {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-5);
+}
+
+.about-founder-img {
+  width: 128px;
+  height: 128px;
+  max-width: 160px;
+  max-height: 160px;
+  border-radius: var(--r-card);
+  object-fit: cover;
+  background: var(--p3);
+  flex-shrink: 0;
+}
+
+.about-founder-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.about-founder-meta .h3 {
+  margin: 0;
+}
+
+.about-founder-tags,
+.about-founder-stages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.about-founder-stages {
+  margin-top: auto;
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--line-soft);
+}
+
+.about-founder-motto {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.about-founder-bio {
+  margin: 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* Section 4: Name story (>= 7:1 contrast) + Principles */
+.name-story {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--sp-7);
+  padding: var(--sp-7);
+  background: var(--p2);
+}
+
+.name-story-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.name-story-head .h2 {
+  color: var(--ink);
+  margin: 0;
+}
+
+.name-story-lead {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.name-story-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.name-story-body p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.about-rule {
+  margin-block: var(--sp-9);
+}
+
+.about-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-6);
+}
+
+.about-principle-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-6);
+}
+
+.about-principle-card .h3 {
+  margin: 0;
+}
+
+.about-principle-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 1023px) {
+  .about-hero-visual {
+    margin-left: 0;
+  }
+
+  .about-intro-grid,
+  .about-founders-grid,
+  .name-story,
+  .about-principles-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-founder-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .name-story {
+    padding: var(--sp-5);
+  }
+}

@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 import { MotionRuntime } from "@/components/v4/MotionRuntime";
 import { RouteFocus } from "@/components/v4/RouteFocus";
 import { RouteTransitions } from "@/components/v4/RouteTransitions";
-import { SiteFooter } from "@/components/v3/ui";
+import { SiteFooter } from "@/components/v4/SiteFooter";
 import { pick, siteCopy } from "@/lib/content";
 
 const manropeDisplay = localFont({

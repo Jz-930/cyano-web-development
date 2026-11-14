@@ -1,0 +1,285 @@
+/* 07 §2 — /services/[slug] 解决方案详情 */
+
+.sol-hero-stage {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  width: 100%;
+}
+
+.sol-inout-diagram {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(112px, 136px) auto minmax(0, 350px);
+  gap: var(--sp-4);
+  align-items: center;
+  justify-content: end;
+}
+
+.sol-inout-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sol-inout-sources {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.sol-src-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-control);
+}
+
+.sol-src-text {
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--ice);
+}
+
+.sol-inout-core {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mk-core {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-chip);
+  background: var(--n1);
+  border: 1px solid var(--cyan-40);
+  box-shadow: var(--glow-state);
+  white-space: nowrap;
+}
+
+.mk-core .label {
+  color: var(--ice);
+}
+
+.mk-core-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--r-chip);
+  background: var(--cyan);
+}
+
+.sol-inout-output {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 350px;
+}
+
+.sol-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3) var(--sp-5);
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-card);
+}
+
+.sol-stat-pill {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+  padding: 0;
+  text-align: left;
+}
+
+.sol-stat-val {
+  font-size: 15px;
+  font-weight: 650;
+  color: var(--ice);
+  font-variant-numeric: tabular-nums;
+}
+
+.sol-stat-lbl {
+  font-size: 13px;
+  color: var(--on-dark);
+}
+
+/* Section 2: Result grid */
+.sol-results-section {
+  padding-block: var(--sp-8);
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sp-6);
+}
+
+.result-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  padding-left: var(--sp-4);
+  border-left: 1px solid var(--line);
+}
+
+.result-cite-btn {
+  padding: 0;
+}
+
+.result-figure {
+  font-size: 48px;
+  line-height: 1.05;
+  font-weight: 650;
+  color: var(--brand);
+  font-variant-numeric: tabular-nums;
+}
+
+.result-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* Shared section spacing */
+.sol-pains-section,
+.sol-workflow-section,
+.sol-deliverables-section,
+.sol-case-section,
+.sol-demo-section,
+.sol-faq-section {
+  padding-block: var(--section-y);
+}
+
+.sol-sec-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin-bottom: var(--stack-heading);
+}
+
+.sol-pains-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--sp-6);
+}
+
+.sol-pain-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  padding: var(--sp-6);
+}
+
+.sol-pain-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+
+.sol-pain-desc {
+  margin: 0;
+  color: var(--muted);
+}
+
+.card-answer {
+  margin-top: auto;
+  padding-top: var(--sp-3);
+  border-top: 1px solid var(--line-soft);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--link);
+}
+
+.sol-neq {
+  margin-top: var(--sp-7);
+}
+
+.sol-deliverables-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-4) var(--sp-7);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sol-deliverable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+  border-radius: var(--r-card);
+  background: var(--p1);
+  border: 1px solid var(--line-soft);
+  color: var(--ink);
+}
+
+.sol-deliverable-item svg {
+  color: var(--link);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.sol-single-case {
+  width: 50%;
+  max-width: 580px;
+}
+
+.sol-pilot-note {
+  margin-top: var(--sp-6);
+}
+
+@media (max-width: 1024px) {
+  .sol-inout-diagram {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: stretch;
+  }
+
+  .sol-inout-lines {
+    display: none;
+  }
+
+  .sol-inout-sources {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sol-src-card {
+    flex: 1 1 140px;
+  }
+
+  .sol-inout-output {
+    max-width: 100%;
+  }
+
+  .sol-pains-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sol-single-case {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  .result-grid,
+  .sol-deliverables-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .result-figure {
+    font-size: 38px;
+  }
+}

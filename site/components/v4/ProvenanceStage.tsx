@@ -2,8 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Pause, Play } from "lucide-react";
-import type { Locale } from "@/lib/locale";
-import { caseMetaByMockup, copyNew, mk, mkStage } from "@/lib/mockups";
+import { t, type Locale } from "@/lib/locale";
+import { caseMetaByMockup, mk, mkStage } from "@/lib/mockups";
 import { MockupWindow } from "./MockupWindow";
 import { ProvenanceLines } from "./ProvenanceLines";
 import { SceneProposal } from "./scenes/SceneProposal";
@@ -359,8 +359,8 @@ export function ProvenanceStage({ locale }: { locale: Locale }) {
   const card2Label = mkStage(scene, 2, locale);
   const card3Label = mkStage(scene, 3, locale);
 
-  const pauseLabel = copyNew("S1-pause", locale) ?? "Pause demo";
-  const playLabel = copyNew("S1-play", locale) ?? "Play demo";
+  const pauseLabel = t(locale, "暂停演示", "Pause demo");
+  const playLabel = t(locale, "播放演示", "Play demo");
 
   const focusPaths =
     focusCite != null ? [focusCite - 1, focusCite + 2] : null;

@@ -32,7 +32,7 @@ import { EngagementGantt } from "@/components/v4/EngagementGantt";
 import { ProvenanceLines } from "@/components/v4/ProvenanceLines";
 import { InsightCover } from "@/components/v4/InsightCover";
 import { renderBold, renderNotEqual } from "@/components/v4/inlineFormat";
-import { Picture } from "@/components/v3/Picture";
+import { Picture } from "@/components/v4/Picture";
 
 const INDUSTRY_ICONS = [
   Factory,

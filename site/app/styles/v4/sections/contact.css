@@ -1,0 +1,255 @@
+/* 07 §8 — /contact 联系我们 */
+
+.contact-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  padding: var(--sp-6);
+  border-radius: var(--r-window);
+}
+
+.contact-timeline .eyebrow {
+  margin: 0;
+}
+
+.contact-timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-timeline-step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--dark-line-soft);
+}
+
+.contact-timeline-step:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.contact-timeline-node {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--cyan);
+}
+
+.contact-timeline-node .label {
+  color: var(--ice);
+}
+
+.contact-timeline-step p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--on-dark);
+}
+
+/* Main 5 / 7 split */
+.contact-main-section {
+  padding-block: var(--section-y);
+}
+
+.contact-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--sp-7);
+  align-items: start;
+}
+
+.contact-side {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.contact-side-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-2);
+}
+
+.contact-topics {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.contact-topic-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-5);
+}
+
+.contact-topic-card .h3 {
+  margin: 0;
+}
+
+.contact-topic-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.contact-bring-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding: var(--sp-5);
+  background: var(--p3);
+  border-color: var(--cyan-40);
+}
+
+.contact-bring-card .h3 {
+  margin: 0;
+}
+
+.contact-bring-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.contact-responder-card {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  padding: var(--sp-4) var(--sp-5);
+}
+
+.contact-responder-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r-chip);
+  object-fit: cover;
+  background: var(--p3);
+  flex-shrink: 0;
+}
+
+.contact-responder-card p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* Form card layout */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-5);
+  padding: var(--sp-7);
+}
+
+.contact-form .h2 {
+  margin: 0;
+}
+
+.form-intro {
+  margin: calc(var(--sp-3) * -1) 0 0;
+  color: var(--muted);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--sp-4);
+}
+
+.honey {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.form-submit {
+  align-self: flex-start;
+}
+
+.spin {
+  animation: v4-spin 900ms linear infinite;
+}
+
+@keyframes v4-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.form-assurance {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.form-assurance svg {
+  color: var(--link);
+  flex-shrink: 0;
+}
+
+.form-error {
+  margin: 0;
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--r-control);
+  background: var(--risk-12);
+  border: 1px solid var(--risk);
+  color: var(--risk-ink);
+  font-size: 14px;
+}
+
+.form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--sp-4);
+  padding: var(--sp-7);
+  animation: panel-in var(--dur-enter) var(--ease-out) both;
+}
+
+.success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--r-chip);
+  background: var(--p3);
+  border: 1px solid var(--cyan-40);
+  color: var(--link);
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 1023px) {
+  .contact-main-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .contact-form,
+  .form-success {
+    padding: var(--sp-5);
+  }
+
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin,
+  .form-success {
+    animation: none;
+  }
+}

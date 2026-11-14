@@ -1,4 +1,4 @@
-:root {
+:where(html) {
   --gutter: clamp(20px, 5.55vw, 80px);
   --wrap: 1280px;
 }
@@ -133,7 +133,8 @@ h2,
   letter-spacing: -0.02em;
   font-variant-numeric: tabular-nums;
 }
-.dark .figure {
+.dark .figure,
+[data-surface="dark"] .figure {
   color: var(--ice);
 }
 .dark {

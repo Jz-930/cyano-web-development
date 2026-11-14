@@ -1010,6 +1010,10 @@ html.js .concern-anim-s-3[data-solved="false"] .s11-fan-svg path {
   min-width: 0;
 }
 
+.case-cover .glass-badge.metric-badge {
+  background: var(--n0-88);
+}
+
 .case-cover .metric-badge strong {
   font-size: clamp(28px, 2.5vw, 38px);
 }
@@ -1342,6 +1346,9 @@ html.js .concern-anim-s-3[data-solved="false"] .s11-fan-svg path {
   .home-hero {
     padding-top: 104px;
     min-height: 0;
+  }
+  .hero-copy .lede {
+    color: var(--light);
   }
   .hero-copy .lede-sent {
     display: block;

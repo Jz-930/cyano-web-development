@@ -52,6 +52,9 @@
   border-radius: 2px;
   pointer-events: none;
 }
+.site-header[data-theme="paper"]:not(.menu-open) .nav-indicator {
+  background: var(--link);
+}
 .nav-item-row > button {
   display: inline-flex;
   align-items: center;
