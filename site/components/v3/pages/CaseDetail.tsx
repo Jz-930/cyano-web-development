@@ -1,6 +1,6 @@
 import pageCopy from "@/content/v3/pages/CaseDetail.json";
 import Link from "next/link";
-import { ArrowUpRight, Workflow, Quote } from "lucide-react";
+import { ArrowUpRight, Workflow } from "lucide-react";
 import { Locale, t, href, text, cases } from "@/lib/v1-content";
 import { Button, Eyebrow, SectionTitle, CaseCard, WorkflowDiagram, DemoLink } from "../ui";
 import {Gallery} from "../islands/Gallery";
@@ -89,8 +89,7 @@ export function CaseDetail({ locale, slug }: { locale: Locale; slug: string }) {
           {[2, 3].includes(c.index) && (
             <InteractiveDemo locale={locale} data={c.index === 3} />
           )}
-          <div className="outcome">
-            <Quote size={34} strokeWidth={1} />
+          <div className="outcome outcome-bar">
             <Eyebrow>{pageCopy.c8a71fc9bde[locale]}</Eyebrow>
             <h2>{c.outcome}</h2>
             <p>

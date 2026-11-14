@@ -208,7 +208,6 @@ export function CaseCard({
         </div>
         <div className="case-visual-footer">
           <span>{text("D.1", "“客户项目”标签", locale)}</span>
-          <span>{String(item.index + 1).padStart(2, "0")} / CYANO</span>
         </div>
       </Link>
       <div className="case-meta">

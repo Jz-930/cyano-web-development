@@ -37,3 +37,4 @@ html{background:var(--p0);scroll-padding-top:100px}body{font:var(--s16)/1.75 var
 .visual-coordinate{display:none!important}
 .mobile-nav>a.button{background:var(--ice);border-color:var(--ice);color:var(--n1)}.mobile-nav>a.button svg{color:var(--n1)}.mobile-nav>a.button:hover{background:var(--light)}
 @media (max-width:1200px) and (min-width:801px){:lang(zh-CN) .hero-content h1{font-size:clamp(34px,3.61vw,48px)}}
+.outcome.outcome-bar{border-left:2px solid var(--cyan);border-radius:0;padding:4px 0 4px 24px;background:none;box-shadow:none}.outcome.outcome-bar p{font-size:var(--s18);line-height:1.8;font-style:normal;color:var(--ink)}.outcome.outcome-bar p:before,.outcome.outcome-bar p:after{content:none}
