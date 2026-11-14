@@ -1,0 +1,2619 @@
+{
+  "totalFiles": 329,
+  "overThreshold": [
+    {
+      "file": "en-about-d-01.jpg",
+      "pct": 22.8873
+    },
+    {
+      "file": "en-about-d-02.jpg",
+      "pct": 14.6792
+    },
+    {
+      "file": "en-about-d-03.jpg",
+      "pct": 23.6296
+    },
+    {
+      "file": "en-about-d-04.jpg",
+      "pct": 17.8742
+    },
+    {
+      "file": "en-about-d-05.jpg",
+      "pct": 16.903
+    },
+    {
+      "file": "en-about-d-06.jpg",
+      "pct": 17.1963
+    },
+    {
+      "file": "en-about-d-07.jpg",
+      "pct": 14.5384
+    },
+    {
+      "file": "en-article-d-01.jpg",
+      "pct": 15.1499
+    },
+    {
+      "file": "en-article-d-02.jpg",
+      "pct": 14.1853
+    },
+    {
+      "file": "en-article-d-03.jpg",
+      "pct": 12.6809
+    },
+    {
+      "file": "en-article-d-04.jpg",
+      "pct": 13.2583
+    },
+    {
+      "file": "en-article-d-05.jpg",
+      "pct": 12.9362
+    },
+    {
+      "file": "en-article-d-06.jpg",
+      "pct": 21.4434
+    },
+    {
+      "file": "en-article-d-07.jpg",
+      "pct": 22.3549
+    },
+    {
+      "file": "en-article-d-08.jpg",
+      "pct": 13.4505
+    },
+    {
+      "file": "en-case-proposal-d-01.jpg",
+      "pct": 25.5386
+    },
+    {
+      "file": "en-case-proposal-d-02.jpg",
+      "pct": 19.1566
+    },
+    {
+      "file": "en-case-proposal-d-03.jpg",
+      "pct": 14.0843
+    },
+    {
+      "file": "en-case-proposal-d-04.jpg",
+      "pct": 10.05
+    },
+    {
+      "file": "en-case-proposal-d-05.jpg",
+      "pct": 9.728
+    },
+    {
+      "file": "en-case-proposal-d-06.jpg",
+      "pct": 23.8488
+    },
+    {
+      "file": "en-case-proposal-d-07.jpg",
+      "pct": 18.9851
+    },
+    {
+      "file": "en-case-proposal-d-08.jpg",
+      "pct": 13.8295
+    },
+    {
+      "file": "en-case-proposal-m-01.jpg",
+      "pct": 34.1026
+    },
+    {
+      "file": "en-case-proposal-m-02.jpg",
+      "pct": 16.6443
+    },
+    {
+      "file": "en-case-proposal-m-03.jpg",
+      "pct": 29.7752
+    },
+    {
+      "file": "en-case-proposal-m-04.jpg",
+      "pct": 24.4841
+    },
+    {
+      "file": "en-case-proposal-m-05.jpg",
+      "pct": 12.6718
+    },
+    {
+      "file": "en-case-proposal-m-06.jpg",
+      "pct": 13.9057
+    },
+    {
+      "file": "en-case-proposal-m-07.jpg",
+      "pct": 25.681
+    },
+    {
+      "file": "en-case-proposal-m-08.jpg",
+      "pct": 28.9968
+    },
+    {
+      "file": "en-case-proposal-m-09.jpg",
+      "pct": 26.1446
+    },
+    {
+      "file": "en-case-proposal-m-10.jpg",
+      "pct": 7.193
+    },
+    {
+      "file": "en-case-wiki-d-01.jpg",
+      "pct": 27.8788
+    },
+    {
+      "file": "en-case-wiki-d-02.jpg",
+      "pct": 21.3316
+    },
+    {
+      "file": "en-case-wiki-d-03.jpg",
+      "pct": 19.234
+    },
+    {
+      "file": "en-case-wiki-d-04.jpg",
+      "pct": 12.7457
+    },
+    {
+      "file": "en-case-wiki-d-05.jpg",
+      "pct": 23.5549
+    },
+    {
+      "file": "en-case-wiki-d-06.jpg",
+      "pct": 17.1657
+    },
+    {
+      "file": "en-case-wiki-d-07.jpg",
+      "pct": 21.1627
+    },
+    {
+      "file": "en-case-wiki-d-08.jpg",
+      "pct": 13.5792
+    },
+    {
+      "file": "en-cases-d-01.jpg",
+      "pct": 24.4894
+    },
+    {
+      "file": "en-cases-d-02.jpg",
+      "pct": 31.9469
+    },
+    {
+      "file": "en-cases-d-03.jpg",
+      "pct": 27.144
+    },
+    {
+      "file": "en-cases-d-04.jpg",
+      "pct": 16.6738
+    },
+    {
+      "file": "en-cases-d-05.jpg",
+      "pct": 13.5351
+    },
+    {
+      "file": "en-contact-d-01.jpg",
+      "pct": 17.9079
+    },
+    {
+      "file": "en-contact-d-02.jpg",
+      "pct": 17.9945
+    },
+    {
+      "file": "en-contact-d-03.jpg",
+      "pct": 21.4988
+    },
+    {
+      "file": "en-contact-m-01.jpg",
+      "pct": 15.2023
+    },
+    {
+      "file": "en-contact-m-02.jpg",
+      "pct": 25.8717
+    },
+    {
+      "file": "en-contact-m-03.jpg",
+      "pct": 18.9039
+    },
+    {
+      "file": "en-contact-m-04.jpg",
+      "pct": 13.1216
+    },
+    {
+      "file": "en-contact-m-05.jpg",
+      "pct": 23.2526
+    },
+    {
+      "file": "en-contact-m-06.jpg",
+      "pct": 3.2907
+    },
+    {
+      "file": "en-engagement-d-01.jpg",
+      "pct": 24.6237
+    },
+    {
+      "file": "en-engagement-d-02.jpg",
+      "pct": 13.1796
+    },
+    {
+      "file": "en-engagement-d-03.jpg",
+      "pct": 5.8172
+    },
+    {
+      "file": "en-engagement-d-04.jpg",
+      "pct": 6.7787
+    },
+    {
+      "file": "en-engagement-d-05.jpg",
+      "pct": 6.3573
+    },
+    {
+      "file": "en-engagement-d-06.jpg",
+      "pct": 4.7831
+    },
+    {
+      "file": "en-engagement-d-07.jpg",
+      "pct": 6.1632
+    },
+    {
+      "file": "en-engagement-d-08.jpg",
+      "pct": 14.61
+    },
+    {
+      "file": "en-engagement-m-01.jpg",
+      "pct": 21.1057
+    },
+    {
+      "file": "en-engagement-m-02.jpg",
+      "pct": 24.6097
+    },
+    {
+      "file": "en-engagement-m-03.jpg",
+      "pct": 45.9431
+    },
+    {
+      "file": "en-engagement-m-04.jpg",
+      "pct": 43.017
+    },
+    {
+      "file": "en-engagement-m-05.jpg",
+      "pct": 35.1873
+    },
+    {
+      "file": "en-engagement-m-06.jpg",
+      "pct": 37.767
+    },
+    {
+      "file": "en-engagement-m-07.jpg",
+      "pct": 39.4031
+    },
+    {
+      "file": "en-engagement-m-08.jpg",
+      "pct": 16.2944
+    },
+    {
+      "file": "en-engagement-m-09.jpg",
+      "pct": 34.5226
+    },
+    {
+      "file": "en-engagement-m-10.jpg",
+      "pct": 38.6003
+    },
+    {
+      "file": "en-engagement-m-11.jpg",
+      "pct": 6.2485
+    },
+    {
+      "file": "en-home-d-01.jpg",
+      "pct": 27.2374
+    },
+    {
+      "file": "en-home-d-02.jpg",
+      "pct": 18.7589
+    },
+    {
+      "file": "en-home-d-03.jpg",
+      "pct": 17.0579
+    },
+    {
+      "file": "en-home-d-04.jpg",
+      "pct": 14.2269
+    },
+    {
+      "file": "en-home-d-05.jpg",
+      "pct": 17.3025
+    },
+    {
+      "file": "en-home-d-06.jpg",
+      "pct": 13.7512
+    },
+    {
+      "file": "en-home-d-07.jpg",
+      "pct": 29.7317
+    },
+    {
+      "file": "en-home-d-08.jpg",
+      "pct": 12.1378
+    },
+    {
+      "file": "en-home-d-09.jpg",
+      "pct": 9.4411
+    },
+    {
+      "file": "en-home-d-10.jpg",
+      "pct": 16.0011
+    },
+    {
+      "file": "en-home-d-11.jpg",
+      "pct": 29.6591
+    },
+    {
+      "file": "en-home-d-12.jpg",
+      "pct": 15.1834
+    },
+    {
+      "file": "en-home-m-01.jpg",
+      "pct": 36.4681
+    },
+    {
+      "file": "en-home-m-02.jpg",
+      "pct": 25.2017
+    },
+    {
+      "file": "en-home-m-03.jpg",
+      "pct": 25.1065
+    },
+    {
+      "file": "en-home-m-04.jpg",
+      "pct": 14.7343
+    },
+    {
+      "file": "en-home-m-05.jpg",
+      "pct": 18.6862
+    },
+    {
+      "file": "en-home-m-06.jpg",
+      "pct": 22.3807
+    },
+    {
+      "file": "en-home-m-07.jpg",
+      "pct": 32.371
+    },
+    {
+      "file": "en-home-m-08.jpg",
+      "pct": 26.0197
+    },
+    {
+      "file": "en-home-m-09.jpg",
+      "pct": 15.1768
+    },
+    {
+      "file": "en-home-m-10.jpg",
+      "pct": 23.3174
+    },
+    {
+      "file": "en-home-m-11.jpg",
+      "pct": 27.5662
+    },
+    {
+      "file": "en-home-m-12.jpg",
+      "pct": 14.484
+    },
+    {
+      "file": "en-home-m-13.jpg",
+      "pct": 12.5417
+    },
+    {
+      "file": "en-home-m-14.jpg",
+      "pct": 29.893
+    },
+    {
+      "file": "en-home-m-15.jpg",
+      "pct": 44.3333
+    },
+    {
+      "file": "en-home-m-16.jpg",
+      "pct": 78.7151
+    },
+    {
+      "file": "en-home-m-17.jpg",
+      "pct": 53.5563
+    },
+    {
+      "file": "en-home-m-18.jpg",
+      "pct": 7.5415
+    },
+    {
+      "file": "en-home-m-19.jpg",
+      "pct": 3.2907
+    },
+    {
+      "file": "en-home-w1024-01.jpg",
+      "pct": 31.5563
+    },
+    {
+      "file": "en-home-w1024-02.jpg",
+      "pct": 24.9393
+    },
+    {
+      "file": "en-home-w1024-03.jpg",
+      "pct": 17.8866
+    },
+    {
+      "file": "en-home-w1024-04.jpg",
+      "pct": 10.7076
+    },
+    {
+      "file": "en-home-w1024-05.jpg",
+      "pct": 19.8788
+    },
+    {
+      "file": "en-home-w1024-06.jpg",
+      "pct": 21.7397
+    },
+    {
+      "file": "en-home-w1024-07.jpg",
+      "pct": 16.6303
+    },
+    {
+      "file": "en-home-w1024-08.jpg",
+      "pct": 12.1089
+    },
+    {
+      "file": "en-home-w1024-09.jpg",
+      "pct": 10.4959
+    },
+    {
+      "file": "en-home-w1024-10.jpg",
+      "pct": 7.7096
+    },
+    {
+      "file": "en-home-w1024-11.jpg",
+      "pct": 7.2812
+    },
+    {
+      "file": "en-home-w1024-12.jpg",
+      "pct": 8.5904
+    },
+    {
+      "file": "en-home-w1024-13.jpg",
+      "pct": 13.9959
+    },
+    {
+      "file": "en-home-w1280-01.jpg",
+      "pct": 27.6579
+    },
+    {
+      "file": "en-home-w1280-02.jpg",
+      "pct": 23.6364
+    },
+    {
+      "file": "en-home-w1280-03.jpg",
+      "pct": 16.5938
+    },
+    {
+      "file": "en-home-w1280-04.jpg",
+      "pct": 9.1527
+    },
+    {
+      "file": "en-home-w1280-05.jpg",
+      "pct": 18.2066
+    },
+    {
+      "file": "en-home-w1280-06.jpg",
+      "pct": 24.3692
+    },
+    {
+      "file": "en-home-w1280-07.jpg",
+      "pct": 13.7836
+    },
+    {
+      "file": "en-home-w1280-08.jpg",
+      "pct": 9.0604
+    },
+    {
+      "file": "en-home-w1280-09.jpg",
+      "pct": 10.5464
+    },
+    {
+      "file": "en-home-w1280-10.jpg",
+      "pct": 6.3495
+    },
+    {
+      "file": "en-home-w1280-11.jpg",
+      "pct": 6.1382
+    },
+    {
+      "file": "en-home-w1280-12.jpg",
+      "pct": 4.8997
+    },
+    {
+      "file": "en-home-w1280-13.jpg",
+      "pct": 15.7379
+    },
+    {
+      "file": "en-insights-d-01.jpg",
+      "pct": 21.3481
+    },
+    {
+      "file": "en-insights-d-02.jpg",
+      "pct": 23.6572
+    },
+    {
+      "file": "en-insights-d-03.jpg",
+      "pct": 22.1856
+    },
+    {
+      "file": "en-insights-d-04.jpg",
+      "pct": 13.4888
+    },
+    {
+      "file": "en-services-d-01.jpg",
+      "pct": 24.1876
+    },
+    {
+      "file": "en-services-d-02.jpg",
+      "pct": 20.3502
+    },
+    {
+      "file": "en-services-d-03.jpg",
+      "pct": 22.9237
+    },
+    {
+      "file": "en-services-d-04.jpg",
+      "pct": 31.5191
+    },
+    {
+      "file": "en-services-d-05.jpg",
+      "pct": 16.1603
+    },
+    {
+      "file": "en-services-d-06.jpg",
+      "pct": 20.1701
+    },
+    {
+      "file": "en-services-d-07.jpg",
+      "pct": 14.735
+    },
+    {
+      "file": "en-services-m-01.jpg",
+      "pct": 29.8723
+    },
+    {
+      "file": "en-services-m-02.jpg",
+      "pct": 21.8504
+    },
+    {
+      "file": "en-services-m-03.jpg",
+      "pct": 23.1925
+    },
+    {
+      "file": "en-services-m-04.jpg",
+      "pct": 15.5181
+    },
+    {
+      "file": "en-services-m-05.jpg",
+      "pct": 21.5452
+    },
+    {
+      "file": "en-services-m-06.jpg",
+      "pct": 28.381
+    },
+    {
+      "file": "en-services-m-07.jpg",
+      "pct": 21.1342
+    },
+    {
+      "file": "en-services-m-08.jpg",
+      "pct": 18.4924
+    },
+    {
+      "file": "en-services-m-09.jpg",
+      "pct": 21.0521
+    },
+    {
+      "file": "en-services-m-10.jpg",
+      "pct": 19.3743
+    },
+    {
+      "file": "en-services-m-11.jpg",
+      "pct": 5.998
+    },
+    {
+      "file": "en-services-m-12.jpg",
+      "pct": 3.2907
+    },
+    {
+      "file": "en-solution-doc-d-01.jpg",
+      "pct": 21.6721
+    },
+    {
+      "file": "en-solution-doc-d-02.jpg",
+      "pct": 12.5931
+    },
+    {
+      "file": "en-solution-doc-d-03.jpg",
+      "pct": 10.187
+    },
+    {
+      "file": "en-solution-doc-d-04.jpg",
+      "pct": 7.2319
+    },
+    {
+      "file": "en-solution-doc-d-05.jpg",
+      "pct": 7.0139
+    },
+    {
+      "file": "en-solution-doc-d-06.jpg",
+      "pct": 14.0945
+    },
+    {
+      "file": "en-solution-doc-d-07.jpg",
+      "pct": 13.6273
+    },
+    {
+      "file": "en-technology-d-01.jpg",
+      "pct": 24.2237
+    },
+    {
+      "file": "en-technology-d-02.jpg",
+      "pct": 16.4206
+    },
+    {
+      "file": "en-technology-d-03.jpg",
+      "pct": 18.8869
+    },
+    {
+      "file": "en-technology-d-04.jpg",
+      "pct": 19.0346
+    },
+    {
+      "file": "en-technology-d-05.jpg",
+      "pct": 8.1422
+    },
+    {
+      "file": "en-technology-d-06.jpg",
+      "pct": 20.4453
+    },
+    {
+      "file": "en-technology-d-07.jpg",
+      "pct": 13.9682
+    },
+    {
+      "file": "en-technology-m-01.jpg",
+      "pct": 29.4993
+    },
+    {
+      "file": "en-technology-m-02.jpg",
+      "pct": 20.3199
+    },
+    {
+      "file": "en-technology-m-03.jpg",
+      "pct": 23.8417
+    },
+    {
+      "file": "en-technology-m-04.jpg",
+      "pct": 17.8442
+    },
+    {
+      "file": "en-technology-m-05.jpg",
+      "pct": 22.6818
+    },
+    {
+      "file": "en-technology-m-06.jpg",
+      "pct": 15.6957
+    },
+    {
+      "file": "en-technology-m-07.jpg",
+      "pct": 21.2593
+    },
+    {
+      "file": "en-technology-m-08.jpg",
+      "pct": 12.1604
+    },
+    {
+      "file": "en-technology-m-09.jpg",
+      "pct": 16.4908
+    },
+    {
+      "file": "en-technology-m-10.jpg",
+      "pct": 24.4413
+    },
+    {
+      "file": "en-technology-m-11.jpg",
+      "pct": 7.3201
+    },
+    {
+      "file": "zh-about-d-01.jpg",
+      "pct": 21.5628
+    },
+    {
+      "file": "zh-about-d-02.jpg",
+      "pct": 12.2944
+    },
+    {
+      "file": "zh-about-d-03.jpg",
+      "pct": 25.7504
+    },
+    {
+      "file": "zh-about-d-04.jpg",
+      "pct": 15.5597
+    },
+    {
+      "file": "zh-about-d-05.jpg",
+      "pct": 26.4821
+    },
+    {
+      "file": "zh-about-d-06.jpg",
+      "pct": 13.6782
+    },
+    {
+      "file": "zh-about-m-01.jpg",
+      "pct": 27.0627
+    },
+    {
+      "file": "zh-about-m-02.jpg",
+      "pct": 27.4809
+    },
+    {
+      "file": "zh-about-m-03.jpg",
+      "pct": 19.6639
+    },
+    {
+      "file": "zh-about-m-04.jpg",
+      "pct": 20.9138
+    },
+    {
+      "file": "zh-about-m-05.jpg",
+      "pct": 27.409
+    },
+    {
+      "file": "zh-about-m-06.jpg",
+      "pct": 19.7413
+    },
+    {
+      "file": "zh-about-m-07.jpg",
+      "pct": 12.9533
+    },
+    {
+      "file": "zh-about-m-08.jpg",
+      "pct": 14.0988
+    },
+    {
+      "file": "zh-about-m-09.jpg",
+      "pct": 9.2226
+    },
+    {
+      "file": "zh-about-m-10.jpg",
+      "pct": 5.0641
+    },
+    {
+      "file": "zh-article-d-01.jpg",
+      "pct": 14.3377
+    },
+    {
+      "file": "zh-article-d-02.jpg",
+      "pct": 14.3458
+    },
+    {
+      "file": "zh-article-d-03.jpg",
+      "pct": 12.3409
+    },
+    {
+      "file": "zh-article-d-04.jpg",
+      "pct": 10.0402
+    },
+    {
+      "file": "zh-article-d-05.jpg",
+      "pct": 20.7857
+    },
+    {
+      "file": "zh-article-d-06.jpg",
+      "pct": 22.8167
+    },
+    {
+      "file": "zh-article-d-07.jpg",
+      "pct": 13.4661
+    },
+    {
+      "file": "zh-case-proposal-d-01.jpg",
+      "pct": 24.2592
+    },
+    {
+      "file": "zh-case-proposal-d-02.jpg",
+      "pct": 16.7582
+    },
+    {
+      "file": "zh-case-proposal-d-03.jpg",
+      "pct": 14.2089
+    },
+    {
+      "file": "zh-case-proposal-d-04.jpg",
+      "pct": 12.2222
+    },
+    {
+      "file": "zh-case-proposal-d-05.jpg",
+      "pct": 7.5844
+    },
+    {
+      "file": "zh-case-proposal-d-06.jpg",
+      "pct": 28.6364
+    },
+    {
+      "file": "zh-case-proposal-d-07.jpg",
+      "pct": 13.6872
+    },
+    {
+      "file": "zh-case-proposal-d-08.jpg",
+      "pct": 13.0032
+    },
+    {
+      "file": "zh-case-proposal-m-01.jpg",
+      "pct": 33.2823
+    },
+    {
+      "file": "zh-case-proposal-m-02.jpg",
+      "pct": 17.6789
+    },
+    {
+      "file": "zh-case-proposal-m-03.jpg",
+      "pct": 34.5229
+    },
+    {
+      "file": "zh-case-proposal-m-04.jpg",
+      "pct": 19.8366
+    },
+    {
+      "file": "zh-case-proposal-m-05.jpg",
+      "pct": 12.231
+    },
+    {
+      "file": "zh-case-proposal-m-06.jpg",
+      "pct": 16.283
+    },
+    {
+      "file": "zh-case-proposal-m-07.jpg",
+      "pct": 36.4595
+    },
+    {
+      "file": "zh-case-proposal-m-08.jpg",
+      "pct": 23.9543
+    },
+    {
+      "file": "zh-case-proposal-m-09.jpg",
+      "pct": 13.255
+    },
+    {
+      "file": "zh-cases-d-01.jpg",
+      "pct": 22.6418
+    },
+    {
+      "file": "zh-cases-d-02.jpg",
+      "pct": 31.8426
+    },
+    {
+      "file": "zh-cases-d-03.jpg",
+      "pct": 27.5292
+    },
+    {
+      "file": "zh-cases-d-04.jpg",
+      "pct": 17.6677
+    },
+    {
+      "file": "zh-cases-d-05.jpg",
+      "pct": 12.9973
+    },
+    {
+      "file": "zh-contact-d-01.jpg",
+      "pct": 16.8044
+    },
+    {
+      "file": "zh-contact-d-02.jpg",
+      "pct": 19.9754
+    },
+    {
+      "file": "zh-contact-d-03.jpg",
+      "pct": 19.0973
+    },
+    {
+      "file": "zh-engagement-d-01.jpg",
+      "pct": 23.8677
+    },
+    {
+      "file": "zh-engagement-d-02.jpg",
+      "pct": 11.6684
+    },
+    {
+      "file": "zh-engagement-d-03.jpg",
+      "pct": 4.5185
+    },
+    {
+      "file": "zh-engagement-d-04.jpg",
+      "pct": 3.4215
+    },
+    {
+      "file": "zh-engagement-d-05.jpg",
+      "pct": 5.3381
+    },
+    {
+      "file": "zh-engagement-d-06.jpg",
+      "pct": 3.471
+    },
+    {
+      "file": "zh-engagement-d-07.jpg",
+      "pct": 13.4639
+    },
+    {
+      "file": "zh-home-d-01.jpg",
+      "pct": 25.3596
+    },
+    {
+      "file": "zh-home-d-02.jpg",
+      "pct": 16.4565
+    },
+    {
+      "file": "zh-home-d-03.jpg",
+      "pct": 15.1598
+    },
+    {
+      "file": "zh-home-d-04.jpg",
+      "pct": 16.4293
+    },
+    {
+      "file": "zh-home-d-05.jpg",
+      "pct": 17.3519
+    },
+    {
+      "file": "zh-home-d-06.jpg",
+      "pct": 12.9688
+    },
+    {
+      "file": "zh-home-d-07.jpg",
+      "pct": 8.8211
+    },
+    {
+      "file": "zh-home-d-08.jpg",
+      "pct": 5.5394
+    },
+    {
+      "file": "zh-home-d-09.jpg",
+      "pct": 3.4178
+    },
+    {
+      "file": "zh-home-d-10.jpg",
+      "pct": 4.0575
+    },
+    {
+      "file": "zh-home-d-11.jpg",
+      "pct": 4.5454
+    },
+    {
+      "file": "zh-home-d-12.jpg",
+      "pct": 13.9129
+    },
+    {
+      "file": "zh-home-m-01.jpg",
+      "pct": 28.2734
+    },
+    {
+      "file": "zh-home-m-02.jpg",
+      "pct": 28.297
+    },
+    {
+      "file": "zh-home-m-03.jpg",
+      "pct": 22.8038
+    },
+    {
+      "file": "zh-home-m-04.jpg",
+      "pct": 16.3558
+    },
+    {
+      "file": "zh-home-m-05.jpg",
+      "pct": 29.518
+    },
+    {
+      "file": "zh-home-m-06.jpg",
+      "pct": 20.2098
+    },
+    {
+      "file": "zh-home-m-07.jpg",
+      "pct": 34.1477
+    },
+    {
+      "file": "zh-home-m-08.jpg",
+      "pct": 14.6304
+    },
+    {
+      "file": "zh-home-m-09.jpg",
+      "pct": 21.3725
+    },
+    {
+      "file": "zh-home-m-10.jpg",
+      "pct": 24.3751
+    },
+    {
+      "file": "zh-home-m-11.jpg",
+      "pct": 13.8502
+    },
+    {
+      "file": "zh-home-m-12.jpg",
+      "pct": 14.9265
+    },
+    {
+      "file": "zh-home-m-13.jpg",
+      "pct": 18.6323
+    },
+    {
+      "file": "zh-home-m-14.jpg",
+      "pct": 48.659
+    },
+    {
+      "file": "zh-home-m-15.jpg",
+      "pct": 53.5912
+    },
+    {
+      "file": "zh-home-m-16.jpg",
+      "pct": 23.6929
+    },
+    {
+      "file": "zh-home-m-17.jpg",
+      "pct": 3.399
+    },
+    {
+      "file": "zh-home-w1024-01.jpg",
+      "pct": 28.347
+    },
+    {
+      "file": "zh-home-w1024-02.jpg",
+      "pct": 23.5779
+    },
+    {
+      "file": "zh-home-w1024-03.jpg",
+      "pct": 16.9521
+    },
+    {
+      "file": "zh-home-w1024-04.jpg",
+      "pct": 17.725
+    },
+    {
+      "file": "zh-home-w1024-05.jpg",
+      "pct": 18.7084
+    },
+    {
+      "file": "zh-home-w1024-06.jpg",
+      "pct": 16.8313
+    },
+    {
+      "file": "zh-home-w1024-07.jpg",
+      "pct": 15.1825
+    },
+    {
+      "file": "zh-home-w1024-08.jpg",
+      "pct": 7.7512
+    },
+    {
+      "file": "zh-home-w1024-09.jpg",
+      "pct": 4.7618
+    },
+    {
+      "file": "zh-home-w1024-10.jpg",
+      "pct": 5.0467
+    },
+    {
+      "file": "zh-home-w1024-11.jpg",
+      "pct": 5.2727
+    },
+    {
+      "file": "zh-home-w1024-12.jpg",
+      "pct": 14.9192
+    },
+    {
+      "file": "zh-home-w1280-01.jpg",
+      "pct": 25.4742
+    },
+    {
+      "file": "zh-home-w1280-02.jpg",
+      "pct": 22.1981
+    },
+    {
+      "file": "zh-home-w1280-03.jpg",
+      "pct": 15.7087
+    },
+    {
+      "file": "zh-home-w1280-04.jpg",
+      "pct": 15.8393
+    },
+    {
+      "file": "zh-home-w1280-05.jpg",
+      "pct": 15.1085
+    },
+    {
+      "file": "zh-home-w1280-06.jpg",
+      "pct": 17.7425
+    },
+    {
+      "file": "zh-home-w1280-07.jpg",
+      "pct": 10.8637
+    },
+    {
+      "file": "zh-home-w1280-08.jpg",
+      "pct": 5.4136
+    },
+    {
+      "file": "zh-home-w1280-09.jpg",
+      "pct": 3.6482
+    },
+    {
+      "file": "zh-home-w1280-10.jpg",
+      "pct": 3.9224
+    },
+    {
+      "file": "zh-home-w1280-11.jpg",
+      "pct": 4.8636
+    },
+    {
+      "file": "zh-home-w1280-12.jpg",
+      "pct": 13.9648
+    },
+    {
+      "file": "zh-services-d-01.jpg",
+      "pct": 22.149
+    },
+    {
+      "file": "zh-services-d-02.jpg",
+      "pct": 19.9177
+    },
+    {
+      "file": "zh-services-d-03.jpg",
+      "pct": 27.0817
+    },
+    {
+      "file": "zh-services-d-04.jpg",
+      "pct": 28.3265
+    },
+    {
+      "file": "zh-services-d-05.jpg",
+      "pct": 15.6297
+    },
+    {
+      "file": "zh-services-d-06.jpg",
+      "pct": 14.711
+    },
+    {
+      "file": "zh-services-d-07.jpg",
+      "pct": 13.4398
+    },
+    {
+      "file": "zh-solution-doc-d-01.jpg",
+      "pct": 20.7559
+    },
+    {
+      "file": "zh-solution-doc-d-02.jpg",
+      "pct": 11.772
+    },
+    {
+      "file": "zh-solution-doc-d-03.jpg",
+      "pct": 8.9398
+    },
+    {
+      "file": "zh-solution-doc-d-04.jpg",
+      "pct": 7.182
+    },
+    {
+      "file": "zh-solution-doc-d-05.jpg",
+      "pct": 5.59
+    },
+    {
+      "file": "zh-solution-doc-d-06.jpg",
+      "pct": 13.5506
+    },
+    {
+      "file": "zh-solution-doc-d-07.jpg",
+      "pct": 13.4823
+    },
+    {
+      "file": "zh-technology-d-01.jpg",
+      "pct": 23.0306
+    },
+    {
+      "file": "zh-technology-d-02.jpg",
+      "pct": 17.4698
+    },
+    {
+      "file": "zh-technology-d-03.jpg",
+      "pct": 16.298
+    },
+    {
+      "file": "zh-technology-d-04.jpg",
+      "pct": 15.4717
+    },
+    {
+      "file": "zh-technology-d-05.jpg",
+      "pct": 8.4623
+    },
+    {
+      "file": "zh-technology-d-06.jpg",
+      "pct": 21.411
+    },
+    {
+      "file": "zh-technology-d-07.jpg",
+      "pct": 13.9126
+    },
+    {
+      "file": "zh-technology-w1024-01.jpg",
+      "pct": 29.5073
+    },
+    {
+      "file": "zh-technology-w1024-02.jpg",
+      "pct": 15.8624
+    },
+    {
+      "file": "zh-technology-w1024-03.jpg",
+      "pct": 19.5666
+    },
+    {
+      "file": "zh-technology-w1024-04.jpg",
+      "pct": 21.5112
+    },
+    {
+      "file": "zh-technology-w1024-05.jpg",
+      "pct": 11.559
+    },
+    {
+      "file": "zh-technology-w1024-06.jpg",
+      "pct": 21.2241
+    },
+    {
+      "file": "zh-technology-w1024-07.jpg",
+      "pct": 18.5636
+    },
+    {
+      "file": "zh-technology-w1024-08.jpg",
+      "pct": 14.0189
+    },
+    {
+      "file": "zh-technology-w1280-01.jpg",
+      "pct": 26.5524
+    },
+    {
+      "file": "zh-technology-w1280-02.jpg",
+      "pct": 18.0843
+    },
+    {
+      "file": "zh-technology-w1280-03.jpg",
+      "pct": 15.6058
+    },
+    {
+      "file": "zh-technology-w1280-04.jpg",
+      "pct": 18.3821
+    },
+    {
+      "file": "zh-technology-w1280-05.jpg",
+      "pct": 9.5949
+    },
+    {
+      "file": "zh-technology-w1280-06.jpg",
+      "pct": 20.0555
+    },
+    {
+      "file": "zh-technology-w1280-07.jpg",
+      "pct": 15.2615
+    },
+    {
+      "file": "zh-technology-w1280-08.jpg",
+      "pct": 13.36
+    }
+  ],
+  "all": [
+    {
+      "file": "en-about-d-01.jpg",
+      "pct": 22.8873
+    },
+    {
+      "file": "en-about-d-02.jpg",
+      "pct": 14.6792
+    },
+    {
+      "file": "en-about-d-03.jpg",
+      "pct": 23.6296
+    },
+    {
+      "file": "en-about-d-04.jpg",
+      "pct": 17.8742
+    },
+    {
+      "file": "en-about-d-05.jpg",
+      "pct": 16.903
+    },
+    {
+      "file": "en-about-d-06.jpg",
+      "pct": 17.1963
+    },
+    {
+      "file": "en-about-d-07.jpg",
+      "pct": 14.5384
+    },
+    {
+      "file": "en-article-d-01.jpg",
+      "pct": 15.1499
+    },
+    {
+      "file": "en-article-d-02.jpg",
+      "pct": 14.1853
+    },
+    {
+      "file": "en-article-d-03.jpg",
+      "pct": 12.6809
+    },
+    {
+      "file": "en-article-d-04.jpg",
+      "pct": 13.2583
+    },
+    {
+      "file": "en-article-d-05.jpg",
+      "pct": 12.9362
+    },
+    {
+      "file": "en-article-d-06.jpg",
+      "pct": 21.4434
+    },
+    {
+      "file": "en-article-d-07.jpg",
+      "pct": 22.3549
+    },
+    {
+      "file": "en-article-d-08.jpg",
+      "pct": 13.4505
+    },
+    {
+      "file": "en-case-proposal-d-01.jpg",
+      "pct": 25.5386
+    },
+    {
+      "file": "en-case-proposal-d-02.jpg",
+      "pct": 19.1566
+    },
+    {
+      "file": "en-case-proposal-d-03.jpg",
+      "pct": 14.0843
+    },
+    {
+      "file": "en-case-proposal-d-04.jpg",
+      "pct": 10.05
+    },
+    {
+      "file": "en-case-proposal-d-05.jpg",
+      "pct": 9.728
+    },
+    {
+      "file": "en-case-proposal-d-06.jpg",
+      "pct": 23.8488
+    },
+    {
+      "file": "en-case-proposal-d-07.jpg",
+      "pct": 18.9851
+    },
+    {
+      "file": "en-case-proposal-d-08.jpg",
+      "pct": 13.8295
+    },
+    {
+      "file": "en-case-proposal-m-01.jpg",
+      "pct": 34.1026
+    },
+    {
+      "file": "en-case-proposal-m-02.jpg",
+      "pct": 16.6443
+    },
+    {
+      "file": "en-case-proposal-m-03.jpg",
+      "pct": 29.7752
+    },
+    {
+      "file": "en-case-proposal-m-04.jpg",
+      "pct": 24.4841
+    },
+    {
+      "file": "en-case-proposal-m-05.jpg",
+      "pct": 12.6718
+    },
+    {
+      "file": "en-case-proposal-m-06.jpg",
+      "pct": 13.9057
+    },
+    {
+      "file": "en-case-proposal-m-07.jpg",
+      "pct": 25.681
+    },
+    {
+      "file": "en-case-proposal-m-08.jpg",
+      "pct": 28.9968
+    },
+    {
+      "file": "en-case-proposal-m-09.jpg",
+      "pct": 26.1446
+    },
+    {
+      "file": "en-case-proposal-m-10.jpg",
+      "pct": 7.193
+    },
+    {
+      "file": "en-case-proposal-m-11.jpg",
+      "pct": 0
+    },
+    {
+      "file": "en-case-wiki-d-01.jpg",
+      "pct": 27.8788
+    },
+    {
+      "file": "en-case-wiki-d-02.jpg",
+      "pct": 21.3316
+    },
+    {
+      "file": "en-case-wiki-d-03.jpg",
+      "pct": 19.234
+    },
+    {
+      "file": "en-case-wiki-d-04.jpg",
+      "pct": 12.7457
+    },
+    {
+      "file": "en-case-wiki-d-05.jpg",
+      "pct": 23.5549
+    },
+    {
+      "file": "en-case-wiki-d-06.jpg",
+      "pct": 17.1657
+    },
+    {
+      "file": "en-case-wiki-d-07.jpg",
+      "pct": 21.1627
+    },
+    {
+      "file": "en-case-wiki-d-08.jpg",
+      "pct": 13.5792
+    },
+    {
+      "file": "en-cases-d-01.jpg",
+      "pct": 24.4894
+    },
+    {
+      "file": "en-cases-d-02.jpg",
+      "pct": 31.9469
+    },
+    {
+      "file": "en-cases-d-03.jpg",
+      "pct": 27.144
+    },
+    {
+      "file": "en-cases-d-04.jpg",
+      "pct": 16.6738
+    },
+    {
+      "file": "en-cases-d-05.jpg",
+      "pct": 13.5351
+    },
+    {
+      "file": "en-contact-d-01.jpg",
+      "pct": 17.9079
+    },
+    {
+      "file": "en-contact-d-02.jpg",
+      "pct": 17.9945
+    },
+    {
+      "file": "en-contact-d-03.jpg",
+      "pct": 21.4988
+    },
+    {
+      "file": "en-contact-m-01.jpg",
+      "pct": 15.2023
+    },
+    {
+      "file": "en-contact-m-02.jpg",
+      "pct": 25.8717
+    },
+    {
+      "file": "en-contact-m-03.jpg",
+      "pct": 18.9039
+    },
+    {
+      "file": "en-contact-m-04.jpg",
+      "pct": 13.1216
+    },
+    {
+      "file": "en-contact-m-05.jpg",
+      "pct": 23.2526
+    },
+    {
+      "file": "en-contact-m-06.jpg",
+      "pct": 3.2907
+    },
+    {
+      "file": "en-engagement-d-01.jpg",
+      "pct": 24.6237
+    },
+    {
+      "file": "en-engagement-d-02.jpg",
+      "pct": 13.1796
+    },
+    {
+      "file": "en-engagement-d-03.jpg",
+      "pct": 5.8172
+    },
+    {
+      "file": "en-engagement-d-04.jpg",
+      "pct": 6.7787
+    },
+    {
+      "file": "en-engagement-d-05.jpg",
+      "pct": 6.3573
+    },
+    {
+      "file": "en-engagement-d-06.jpg",
+      "pct": 4.7831
+    },
+    {
+      "file": "en-engagement-d-07.jpg",
+      "pct": 6.1632
+    },
+    {
+      "file": "en-engagement-d-08.jpg",
+      "pct": 14.61
+    },
+    {
+      "file": "en-engagement-m-01.jpg",
+      "pct": 21.1057
+    },
+    {
+      "file": "en-engagement-m-02.jpg",
+      "pct": 24.6097
+    },
+    {
+      "file": "en-engagement-m-03.jpg",
+      "pct": 45.9431
+    },
+    {
+      "file": "en-engagement-m-04.jpg",
+      "pct": 43.017
+    },
+    {
+      "file": "en-engagement-m-05.jpg",
+      "pct": 35.1873
+    },
+    {
+      "file": "en-engagement-m-06.jpg",
+      "pct": 37.767
+    },
+    {
+      "file": "en-engagement-m-07.jpg",
+      "pct": 39.4031
+    },
+    {
+      "file": "en-engagement-m-08.jpg",
+      "pct": 16.2944
+    },
+    {
+      "file": "en-engagement-m-09.jpg",
+      "pct": 34.5226
+    },
+    {
+      "file": "en-engagement-m-10.jpg",
+      "pct": 38.6003
+    },
+    {
+      "file": "en-engagement-m-11.jpg",
+      "pct": 6.2485
+    },
+    {
+      "file": "en-engagement-m-12.jpg",
+      "pct": 0
+    },
+    {
+      "file": "en-home-d-01.jpg",
+      "pct": 27.2374
+    },
+    {
+      "file": "en-home-d-02.jpg",
+      "pct": 18.7589
+    },
+    {
+      "file": "en-home-d-03.jpg",
+      "pct": 17.0579
+    },
+    {
+      "file": "en-home-d-04.jpg",
+      "pct": 14.2269
+    },
+    {
+      "file": "en-home-d-05.jpg",
+      "pct": 17.3025
+    },
+    {
+      "file": "en-home-d-06.jpg",
+      "pct": 13.7512
+    },
+    {
+      "file": "en-home-d-07.jpg",
+      "pct": 29.7317
+    },
+    {
+      "file": "en-home-d-08.jpg",
+      "pct": 12.1378
+    },
+    {
+      "file": "en-home-d-09.jpg",
+      "pct": 9.4411
+    },
+    {
+      "file": "en-home-d-10.jpg",
+      "pct": 16.0011
+    },
+    {
+      "file": "en-home-d-11.jpg",
+      "pct": 29.6591
+    },
+    {
+      "file": "en-home-d-12.jpg",
+      "pct": 15.1834
+    },
+    {
+      "file": "en-home-m-01.jpg",
+      "pct": 36.4681
+    },
+    {
+      "file": "en-home-m-02.jpg",
+      "pct": 25.2017
+    },
+    {
+      "file": "en-home-m-03.jpg",
+      "pct": 25.1065
+    },
+    {
+      "file": "en-home-m-04.jpg",
+      "pct": 14.7343
+    },
+    {
+      "file": "en-home-m-05.jpg",
+      "pct": 18.6862
+    },
+    {
+      "file": "en-home-m-06.jpg",
+      "pct": 22.3807
+    },
+    {
+      "file": "en-home-m-07.jpg",
+      "pct": 32.371
+    },
+    {
+      "file": "en-home-m-08.jpg",
+      "pct": 26.0197
+    },
+    {
+      "file": "en-home-m-09.jpg",
+      "pct": 15.1768
+    },
+    {
+      "file": "en-home-m-10.jpg",
+      "pct": 23.3174
+    },
+    {
+      "file": "en-home-m-11.jpg",
+      "pct": 27.5662
+    },
+    {
+      "file": "en-home-m-12.jpg",
+      "pct": 14.484
+    },
+    {
+      "file": "en-home-m-13.jpg",
+      "pct": 12.5417
+    },
+    {
+      "file": "en-home-m-14.jpg",
+      "pct": 29.893
+    },
+    {
+      "file": "en-home-m-15.jpg",
+      "pct": 44.3333
+    },
+    {
+      "file": "en-home-m-16.jpg",
+      "pct": 78.7151
+    },
+    {
+      "file": "en-home-m-17.jpg",
+      "pct": 53.5563
+    },
+    {
+      "file": "en-home-m-18.jpg",
+      "pct": 7.5415
+    },
+    {
+      "file": "en-home-m-19.jpg",
+      "pct": 3.2907
+    },
+    {
+      "file": "en-home-w1024-01.jpg",
+      "pct": 31.5563
+    },
+    {
+      "file": "en-home-w1024-02.jpg",
+      "pct": 24.9393
+    },
+    {
+      "file": "en-home-w1024-03.jpg",
+      "pct": 17.8866
+    },
+    {
+      "file": "en-home-w1024-04.jpg",
+      "pct": 10.7076
+    },
+    {
+      "file": "en-home-w1024-05.jpg",
+      "pct": 19.8788
+    },
+    {
+      "file": "en-home-w1024-06.jpg",
+      "pct": 21.7397
+    },
+    {
+      "file": "en-home-w1024-07.jpg",
+      "pct": 16.6303
+    },
+    {
+      "file": "en-home-w1024-08.jpg",
+      "pct": 12.1089
+    },
+    {
+      "file": "en-home-w1024-09.jpg",
+      "pct": 10.4959
+    },
+    {
+      "file": "en-home-w1024-10.jpg",
+      "pct": 7.7096
+    },
+    {
+      "file": "en-home-w1024-11.jpg",
+      "pct": 7.2812
+    },
+    {
+      "file": "en-home-w1024-12.jpg",
+      "pct": 8.5904
+    },
+    {
+      "file": "en-home-w1024-13.jpg",
+      "pct": 13.9959
+    },
+    {
+      "file": "en-home-w1280-01.jpg",
+      "pct": 27.6579
+    },
+    {
+      "file": "en-home-w1280-02.jpg",
+      "pct": 23.6364
+    },
+    {
+      "file": "en-home-w1280-03.jpg",
+      "pct": 16.5938
+    },
+    {
+      "file": "en-home-w1280-04.jpg",
+      "pct": 9.1527
+    },
+    {
+      "file": "en-home-w1280-05.jpg",
+      "pct": 18.2066
+    },
+    {
+      "file": "en-home-w1280-06.jpg",
+      "pct": 24.3692
+    },
+    {
+      "file": "en-home-w1280-07.jpg",
+      "pct": 13.7836
+    },
+    {
+      "file": "en-home-w1280-08.jpg",
+      "pct": 9.0604
+    },
+    {
+      "file": "en-home-w1280-09.jpg",
+      "pct": 10.5464
+    },
+    {
+      "file": "en-home-w1280-10.jpg",
+      "pct": 6.3495
+    },
+    {
+      "file": "en-home-w1280-11.jpg",
+      "pct": 6.1382
+    },
+    {
+      "file": "en-home-w1280-12.jpg",
+      "pct": 4.8997
+    },
+    {
+      "file": "en-home-w1280-13.jpg",
+      "pct": 15.7379
+    },
+    {
+      "file": "en-insights-d-01.jpg",
+      "pct": 21.3481
+    },
+    {
+      "file": "en-insights-d-02.jpg",
+      "pct": 23.6572
+    },
+    {
+      "file": "en-insights-d-03.jpg",
+      "pct": 22.1856
+    },
+    {
+      "file": "en-insights-d-04.jpg",
+      "pct": 13.4888
+    },
+    {
+      "file": "en-services-d-01.jpg",
+      "pct": 24.1876
+    },
+    {
+      "file": "en-services-d-02.jpg",
+      "pct": 20.3502
+    },
+    {
+      "file": "en-services-d-03.jpg",
+      "pct": 22.9237
+    },
+    {
+      "file": "en-services-d-04.jpg",
+      "pct": 31.5191
+    },
+    {
+      "file": "en-services-d-05.jpg",
+      "pct": 16.1603
+    },
+    {
+      "file": "en-services-d-06.jpg",
+      "pct": 20.1701
+    },
+    {
+      "file": "en-services-d-07.jpg",
+      "pct": 14.735
+    },
+    {
+      "file": "en-services-m-01.jpg",
+      "pct": 29.8723
+    },
+    {
+      "file": "en-services-m-02.jpg",
+      "pct": 21.8504
+    },
+    {
+      "file": "en-services-m-03.jpg",
+      "pct": 23.1925
+    },
+    {
+      "file": "en-services-m-04.jpg",
+      "pct": 15.5181
+    },
+    {
+      "file": "en-services-m-05.jpg",
+      "pct": 21.5452
+    },
+    {
+      "file": "en-services-m-06.jpg",
+      "pct": 28.381
+    },
+    {
+      "file": "en-services-m-07.jpg",
+      "pct": 21.1342
+    },
+    {
+      "file": "en-services-m-08.jpg",
+      "pct": 18.4924
+    },
+    {
+      "file": "en-services-m-09.jpg",
+      "pct": 21.0521
+    },
+    {
+      "file": "en-services-m-10.jpg",
+      "pct": 19.3743
+    },
+    {
+      "file": "en-services-m-11.jpg",
+      "pct": 5.998
+    },
+    {
+      "file": "en-services-m-12.jpg",
+      "pct": 3.2907
+    },
+    {
+      "file": "en-solution-doc-d-01.jpg",
+      "pct": 21.6721
+    },
+    {
+      "file": "en-solution-doc-d-02.jpg",
+      "pct": 12.5931
+    },
+    {
+      "file": "en-solution-doc-d-03.jpg",
+      "pct": 10.187
+    },
+    {
+      "file": "en-solution-doc-d-04.jpg",
+      "pct": 7.2319
+    },
+    {
+      "file": "en-solution-doc-d-05.jpg",
+      "pct": 7.0139
+    },
+    {
+      "file": "en-solution-doc-d-06.jpg",
+      "pct": 14.0945
+    },
+    {
+      "file": "en-solution-doc-d-07.jpg",
+      "pct": 13.6273
+    },
+    {
+      "file": "en-technology-d-01.jpg",
+      "pct": 24.2237
+    },
+    {
+      "file": "en-technology-d-02.jpg",
+      "pct": 16.4206
+    },
+    {
+      "file": "en-technology-d-03.jpg",
+      "pct": 18.8869
+    },
+    {
+      "file": "en-technology-d-04.jpg",
+      "pct": 19.0346
+    },
+    {
+      "file": "en-technology-d-05.jpg",
+      "pct": 8.1422
+    },
+    {
+      "file": "en-technology-d-06.jpg",
+      "pct": 20.4453
+    },
+    {
+      "file": "en-technology-d-07.jpg",
+      "pct": 13.9682
+    },
+    {
+      "file": "en-technology-m-01.jpg",
+      "pct": 29.4993
+    },
+    {
+      "file": "en-technology-m-02.jpg",
+      "pct": 20.3199
+    },
+    {
+      "file": "en-technology-m-03.jpg",
+      "pct": 23.8417
+    },
+    {
+      "file": "en-technology-m-04.jpg",
+      "pct": 17.8442
+    },
+    {
+      "file": "en-technology-m-05.jpg",
+      "pct": 22.6818
+    },
+    {
+      "file": "en-technology-m-06.jpg",
+      "pct": 15.6957
+    },
+    {
+      "file": "en-technology-m-07.jpg",
+      "pct": 21.2593
+    },
+    {
+      "file": "en-technology-m-08.jpg",
+      "pct": 12.1604
+    },
+    {
+      "file": "en-technology-m-09.jpg",
+      "pct": 16.4908
+    },
+    {
+      "file": "en-technology-m-10.jpg",
+      "pct": 24.4413
+    },
+    {
+      "file": "en-technology-m-11.jpg",
+      "pct": 7.3201
+    },
+    {
+      "file": "en-technology-m-12.jpg",
+      "pct": 0
+    },
+    {
+      "file": "zh-about-d-01.jpg",
+      "pct": 21.5628
+    },
+    {
+      "file": "zh-about-d-02.jpg",
+      "pct": 12.2944
+    },
+    {
+      "file": "zh-about-d-03.jpg",
+      "pct": 25.7504
+    },
+    {
+      "file": "zh-about-d-04.jpg",
+      "pct": 15.5597
+    },
+    {
+      "file": "zh-about-d-05.jpg",
+      "pct": 26.4821
+    },
+    {
+      "file": "zh-about-d-06.jpg",
+      "pct": 13.6782
+    },
+    {
+      "file": "zh-about-m-01.jpg",
+      "pct": 27.0627
+    },
+    {
+      "file": "zh-about-m-02.jpg",
+      "pct": 27.4809
+    },
+    {
+      "file": "zh-about-m-03.jpg",
+      "pct": 19.6639
+    },
+    {
+      "file": "zh-about-m-04.jpg",
+      "pct": 20.9138
+    },
+    {
+      "file": "zh-about-m-05.jpg",
+      "pct": 27.409
+    },
+    {
+      "file": "zh-about-m-06.jpg",
+      "pct": 19.7413
+    },
+    {
+      "file": "zh-about-m-07.jpg",
+      "pct": 12.9533
+    },
+    {
+      "file": "zh-about-m-08.jpg",
+      "pct": 14.0988
+    },
+    {
+      "file": "zh-about-m-09.jpg",
+      "pct": 9.2226
+    },
+    {
+      "file": "zh-about-m-10.jpg",
+      "pct": 5.0641
+    },
+    {
+      "file": "zh-about-m-11.jpg",
+      "pct": 0
+    },
+    {
+      "file": "zh-article-d-01.jpg",
+      "pct": 14.3377
+    },
+    {
+      "file": "zh-article-d-02.jpg",
+      "pct": 14.3458
+    },
+    {
+      "file": "zh-article-d-03.jpg",
+      "pct": 12.3409
+    },
+    {
+      "file": "zh-article-d-04.jpg",
+      "pct": 10.0402
+    },
+    {
+      "file": "zh-article-d-05.jpg",
+      "pct": 20.7857
+    },
+    {
+      "file": "zh-article-d-06.jpg",
+      "pct": 22.8167
+    },
+    {
+      "file": "zh-article-d-07.jpg",
+      "pct": 13.4661
+    },
+    {
+      "file": "zh-case-proposal-d-01.jpg",
+      "pct": 24.2592
+    },
+    {
+      "file": "zh-case-proposal-d-02.jpg",
+      "pct": 16.7582
+    },
+    {
+      "file": "zh-case-proposal-d-03.jpg",
+      "pct": 14.2089
+    },
+    {
+      "file": "zh-case-proposal-d-04.jpg",
+      "pct": 12.2222
+    },
+    {
+      "file": "zh-case-proposal-d-05.jpg",
+      "pct": 7.5844
+    },
+    {
+      "file": "zh-case-proposal-d-06.jpg",
+      "pct": 28.6364
+    },
+    {
+      "file": "zh-case-proposal-d-07.jpg",
+      "pct": 13.6872
+    },
+    {
+      "file": "zh-case-proposal-d-08.jpg",
+      "pct": 13.0032
+    },
+    {
+      "file": "zh-case-proposal-m-01.jpg",
+      "pct": 33.2823
+    },
+    {
+      "file": "zh-case-proposal-m-02.jpg",
+      "pct": 17.6789
+    },
+    {
+      "file": "zh-case-proposal-m-03.jpg",
+      "pct": 34.5229
+    },
+    {
+      "file": "zh-case-proposal-m-04.jpg",
+      "pct": 19.8366
+    },
+    {
+      "file": "zh-case-proposal-m-05.jpg",
+      "pct": 12.231
+    },
+    {
+      "file": "zh-case-proposal-m-06.jpg",
+      "pct": 16.283
+    },
+    {
+      "file": "zh-case-proposal-m-07.jpg",
+      "pct": 36.4595
+    },
+    {
+      "file": "zh-case-proposal-m-08.jpg",
+      "pct": 23.9543
+    },
+    {
+      "file": "zh-case-proposal-m-09.jpg",
+      "pct": 13.255
+    },
+    {
+      "file": "zh-case-proposal-m-10.jpg",
+      "pct": 0
+    },
+    {
+      "file": "zh-cases-d-01.jpg",
+      "pct": 22.6418
+    },
+    {
+      "file": "zh-cases-d-02.jpg",
+      "pct": 31.8426
+    },
+    {
+      "file": "zh-cases-d-03.jpg",
+      "pct": 27.5292
+    },
+    {
+      "file": "zh-cases-d-04.jpg",
+      "pct": 17.6677
+    },
+    {
+      "file": "zh-cases-d-05.jpg",
+      "pct": 12.9973
+    },
+    {
+      "file": "zh-contact-d-01.jpg",
+      "pct": 16.8044
+    },
+    {
+      "file": "zh-contact-d-02.jpg",
+      "pct": 19.9754
+    },
+    {
+      "file": "zh-contact-d-03.jpg",
+      "pct": 19.0973
+    },
+    {
+      "file": "zh-engagement-d-01.jpg",
+      "pct": 23.8677
+    },
+    {
+      "file": "zh-engagement-d-02.jpg",
+      "pct": 11.6684
+    },
+    {
+      "file": "zh-engagement-d-03.jpg",
+      "pct": 4.5185
+    },
+    {
+      "file": "zh-engagement-d-04.jpg",
+      "pct": 3.4215
+    },
+    {
+      "file": "zh-engagement-d-05.jpg",
+      "pct": 5.3381
+    },
+    {
+      "file": "zh-engagement-d-06.jpg",
+      "pct": 3.471
+    },
+    {
+      "file": "zh-engagement-d-07.jpg",
+      "pct": 13.4639
+    },
+    {
+      "file": "zh-home-d-01.jpg",
+      "pct": 25.3596
+    },
+    {
+      "file": "zh-home-d-02.jpg",
+      "pct": 16.4565
+    },
+    {
+      "file": "zh-home-d-03.jpg",
+      "pct": 15.1598
+    },
+    {
+      "file": "zh-home-d-04.jpg",
+      "pct": 16.4293
+    },
+    {
+      "file": "zh-home-d-05.jpg",
+      "pct": 17.3519
+    },
+    {
+      "file": "zh-home-d-06.jpg",
+      "pct": 12.9688
+    },
+    {
+      "file": "zh-home-d-07.jpg",
+      "pct": 8.8211
+    },
+    {
+      "file": "zh-home-d-08.jpg",
+      "pct": 5.5394
+    },
+    {
+      "file": "zh-home-d-09.jpg",
+      "pct": 3.4178
+    },
+    {
+      "file": "zh-home-d-10.jpg",
+      "pct": 4.0575
+    },
+    {
+      "file": "zh-home-d-11.jpg",
+      "pct": 4.5454
+    },
+    {
+      "file": "zh-home-d-12.jpg",
+      "pct": 13.9129
+    },
+    {
+      "file": "zh-home-m-01.jpg",
+      "pct": 28.2734
+    },
+    {
+      "file": "zh-home-m-02.jpg",
+      "pct": 28.297
+    },
+    {
+      "file": "zh-home-m-03.jpg",
+      "pct": 22.8038
+    },
+    {
+      "file": "zh-home-m-04.jpg",
+      "pct": 16.3558
+    },
+    {
+      "file": "zh-home-m-05.jpg",
+      "pct": 29.518
+    },
+    {
+      "file": "zh-home-m-06.jpg",
+      "pct": 20.2098
+    },
+    {
+      "file": "zh-home-m-07.jpg",
+      "pct": 34.1477
+    },
+    {
+      "file": "zh-home-m-08.jpg",
+      "pct": 14.6304
+    },
+    {
+      "file": "zh-home-m-09.jpg",
+      "pct": 21.3725
+    },
+    {
+      "file": "zh-home-m-10.jpg",
+      "pct": 24.3751
+    },
+    {
+      "file": "zh-home-m-11.jpg",
+      "pct": 13.8502
+    },
+    {
+      "file": "zh-home-m-12.jpg",
+      "pct": 14.9265
+    },
+    {
+      "file": "zh-home-m-13.jpg",
+      "pct": 18.6323
+    },
+    {
+      "file": "zh-home-m-14.jpg",
+      "pct": 48.659
+    },
+    {
+      "file": "zh-home-m-15.jpg",
+      "pct": 53.5912
+    },
+    {
+      "file": "zh-home-m-16.jpg",
+      "pct": 23.6929
+    },
+    {
+      "file": "zh-home-m-17.jpg",
+      "pct": 3.399
+    },
+    {
+      "file": "zh-home-w1024-01.jpg",
+      "pct": 28.347
+    },
+    {
+      "file": "zh-home-w1024-02.jpg",
+      "pct": 23.5779
+    },
+    {
+      "file": "zh-home-w1024-03.jpg",
+      "pct": 16.9521
+    },
+    {
+      "file": "zh-home-w1024-04.jpg",
+      "pct": 17.725
+    },
+    {
+      "file": "zh-home-w1024-05.jpg",
+      "pct": 18.7084
+    },
+    {
+      "file": "zh-home-w1024-06.jpg",
+      "pct": 16.8313
+    },
+    {
+      "file": "zh-home-w1024-07.jpg",
+      "pct": 15.1825
+    },
+    {
+      "file": "zh-home-w1024-08.jpg",
+      "pct": 7.7512
+    },
+    {
+      "file": "zh-home-w1024-09.jpg",
+      "pct": 4.7618
+    },
+    {
+      "file": "zh-home-w1024-10.jpg",
+      "pct": 5.0467
+    },
+    {
+      "file": "zh-home-w1024-11.jpg",
+      "pct": 5.2727
+    },
+    {
+      "file": "zh-home-w1024-12.jpg",
+      "pct": 14.9192
+    },
+    {
+      "file": "zh-home-w1280-01.jpg",
+      "pct": 25.4742
+    },
+    {
+      "file": "zh-home-w1280-02.jpg",
+      "pct": 22.1981
+    },
+    {
+      "file": "zh-home-w1280-03.jpg",
+      "pct": 15.7087
+    },
+    {
+      "file": "zh-home-w1280-04.jpg",
+      "pct": 15.8393
+    },
+    {
+      "file": "zh-home-w1280-05.jpg",
+      "pct": 15.1085
+    },
+    {
+      "file": "zh-home-w1280-06.jpg",
+      "pct": 17.7425
+    },
+    {
+      "file": "zh-home-w1280-07.jpg",
+      "pct": 10.8637
+    },
+    {
+      "file": "zh-home-w1280-08.jpg",
+      "pct": 5.4136
+    },
+    {
+      "file": "zh-home-w1280-09.jpg",
+      "pct": 3.6482
+    },
+    {
+      "file": "zh-home-w1280-10.jpg",
+      "pct": 3.9224
+    },
+    {
+      "file": "zh-home-w1280-11.jpg",
+      "pct": 4.8636
+    },
+    {
+      "file": "zh-home-w1280-12.jpg",
+      "pct": 13.9648
+    },
+    {
+      "file": "zh-services-d-01.jpg",
+      "pct": 22.149
+    },
+    {
+      "file": "zh-services-d-02.jpg",
+      "pct": 19.9177
+    },
+    {
+      "file": "zh-services-d-03.jpg",
+      "pct": 27.0817
+    },
+    {
+      "file": "zh-services-d-04.jpg",
+      "pct": 28.3265
+    },
+    {
+      "file": "zh-services-d-05.jpg",
+      "pct": 15.6297
+    },
+    {
+      "file": "zh-services-d-06.jpg",
+      "pct": 14.711
+    },
+    {
+      "file": "zh-services-d-07.jpg",
+      "pct": 13.4398
+    },
+    {
+      "file": "zh-solution-doc-d-01.jpg",
+      "pct": 20.7559
+    },
+    {
+      "file": "zh-solution-doc-d-02.jpg",
+      "pct": 11.772
+    },
+    {
+      "file": "zh-solution-doc-d-03.jpg",
+      "pct": 8.9398
+    },
+    {
+      "file": "zh-solution-doc-d-04.jpg",
+      "pct": 7.182
+    },
+    {
+      "file": "zh-solution-doc-d-05.jpg",
+      "pct": 5.59
+    },
+    {
+      "file": "zh-solution-doc-d-06.jpg",
+      "pct": 13.5506
+    },
+    {
+      "file": "zh-solution-doc-d-07.jpg",
+      "pct": 13.4823
+    },
+    {
+      "file": "zh-technology-d-01.jpg",
+      "pct": 23.0306
+    },
+    {
+      "file": "zh-technology-d-02.jpg",
+      "pct": 17.4698
+    },
+    {
+      "file": "zh-technology-d-03.jpg",
+      "pct": 16.298
+    },
+    {
+      "file": "zh-technology-d-04.jpg",
+      "pct": 15.4717
+    },
+    {
+      "file": "zh-technology-d-05.jpg",
+      "pct": 8.4623
+    },
+    {
+      "file": "zh-technology-d-06.jpg",
+      "pct": 21.411
+    },
+    {
+      "file": "zh-technology-d-07.jpg",
+      "pct": 13.9126
+    },
+    {
+      "file": "zh-technology-w1024-01.jpg",
+      "pct": 29.5073
+    },
+    {
+      "file": "zh-technology-w1024-02.jpg",
+      "pct": 15.8624
+    },
+    {
+      "file": "zh-technology-w1024-03.jpg",
+      "pct": 19.5666
+    },
+    {
+      "file": "zh-technology-w1024-04.jpg",
+      "pct": 21.5112
+    },
+    {
+      "file": "zh-technology-w1024-05.jpg",
+      "pct": 11.559
+    },
+    {
+      "file": "zh-technology-w1024-06.jpg",
+      "pct": 21.2241
+    },
+    {
+      "file": "zh-technology-w1024-07.jpg",
+      "pct": 18.5636
+    },
+    {
+      "file": "zh-technology-w1024-08.jpg",
+      "pct": 14.0189
+    },
+    {
+      "file": "zh-technology-w1280-01.jpg",
+      "pct": 26.5524
+    },
+    {
+      "file": "zh-technology-w1280-02.jpg",
+      "pct": 18.0843
+    },
+    {
+      "file": "zh-technology-w1280-03.jpg",
+      "pct": 15.6058
+    },
+    {
+      "file": "zh-technology-w1280-04.jpg",
+      "pct": 18.3821
+    },
+    {
+      "file": "zh-technology-w1280-05.jpg",
+      "pct": 9.5949
+    },
+    {
+      "file": "zh-technology-w1280-06.jpg",
+      "pct": 20.0555
+    },
+    {
+      "file": "zh-technology-w1280-07.jpg",
+      "pct": 15.2615
+    },
+    {
+      "file": "zh-technology-w1280-08.jpg",
+      "pct": 13.36
+    }
+  ]
+}
