@@ -3,6 +3,7 @@ import {CountValue} from "./CountValue";
 import {EngineeringDiagram} from "./EngineeringDiagram";
 import { LightField } from "./LightField";
 import { Phrase } from "@/components/v4/Phrase";
+import { BrandMark } from "@/components/v4/BrandMark";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -97,7 +98,7 @@ export function SectionTitle({
 export function Logo() {
   return (
     <span className="brand">
-      <img src="/logo.png" width="32" height="32" alt="" />
+      <BrandMark size={32} />
       <span>CYANO</span>
     </span>
   );
