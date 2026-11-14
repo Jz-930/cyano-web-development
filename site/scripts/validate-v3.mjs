@@ -26,8 +26,6 @@ for(const row of json('content/query-demo.json'))for(const locale of ['zh','en']
 const baseline=json('content/v1/rendered-baseline.json');
 const numeric=[];
 for(const [route,{fragments}] of Object.entries(baseline))for(const text of fragments.filter(f=>/\d/.test(f)))numeric.push({route,text,sourceId:'v1-final-content',origin:'b9dcf94'});
-const illustration=json('content/latency-illustration.json');
-if(illustration.kind!=='illustration'||!illustration.source)throw Error('Chart provenance missing');
-fs.writeFileSync(path.join(root,'../content/numeric-register-v3.json'),JSON.stringify({baseline:'b9dcf94',entries:numeric,illustrativeChart:illustration},null,2)+'\n');
+fs.writeFileSync(path.join(root,'../content/numeric-register-v3.json'),JSON.stringify({baseline:'b9dcf94',entries:numeric,illustrativeChart:{status:'retired-in-v4-d19'}},null,2)+'\n');
 if(!sources.includes('## v1-final-content'))throw Error('Missing final-v1 provenance entry');
 console.log(`Validated v1 content, bilingual articles, metadata schemas and media references; ${numeric.length} numeric text occurrences registered.`);

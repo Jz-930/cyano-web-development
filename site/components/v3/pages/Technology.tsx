@@ -4,7 +4,6 @@ import { ArrowUpRight, ShieldCheck, Network, Workflow, Check, Database } from "l
 import { Locale, t, href, text } from "@/lib/v1-content";
 import { Button, Eyebrow, SectionTitle } from "../ui";
 import copy from "@/content/v1/copy.json";
-import { LatencyChart } from "../LatencyChart";
 import { PageHero } from "./PageHero";
 
 export function Technology({ locale }: { locale: Locale }) {
@@ -74,7 +73,6 @@ export function Technology({ locale }: { locale: Locale }) {
               );
             })}
           </div>
-          <LatencyChart locale={locale} />
           <div className="memory-layers">
             {[100, 75, 40, 15].map((v, i) => (
               <div key={v}>
