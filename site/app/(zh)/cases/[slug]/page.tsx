@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { CaseDetailView } from "@/components/PageTemplates";
+import { CaseDetailView } from "@/components/v3/views/CaseDetailView";
 import {
   buildPageMetadata,
   casesList,

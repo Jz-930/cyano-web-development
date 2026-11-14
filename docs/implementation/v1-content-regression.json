@@ -1,0 +1,241 @@
+{
+  "baseline": "b9dcf94",
+  "routes": 46,
+  "fragments": 3292,
+  "exceptions": [
+    "Technology: 10× ROI metric excluded by the approved v3 plan.",
+    "English technology: Qwen/Lark/DingTalk/WeCom use their English product names."
+  ],
+  "results": [
+    {
+      "route": "/",
+      "fragments": 131,
+      "missing": []
+    },
+    {
+      "route": "/services",
+      "fragments": 55,
+      "missing": []
+    },
+    {
+      "route": "/cases",
+      "fragments": 71,
+      "missing": []
+    },
+    {
+      "route": "/technology",
+      "fragments": 73,
+      "missing": []
+    },
+    {
+      "route": "/engagement",
+      "fragments": 87,
+      "missing": []
+    },
+    {
+      "route": "/about",
+      "fragments": 59,
+      "missing": []
+    },
+    {
+      "route": "/contact",
+      "fragments": 60,
+      "missing": []
+    },
+    {
+      "route": "/insights",
+      "fragments": 36,
+      "missing": []
+    },
+    {
+      "route": "/privacy",
+      "fragments": 36,
+      "missing": []
+    },
+    {
+      "route": "/terms",
+      "fragments": 35,
+      "missing": []
+    },
+    {
+      "route": "/services/sales-ai",
+      "fragments": 67,
+      "missing": []
+    },
+    {
+      "route": "/services/document-automation",
+      "fragments": 66,
+      "missing": []
+    },
+    {
+      "route": "/services/knowledge-assistant",
+      "fragments": 77,
+      "missing": []
+    },
+    {
+      "route": "/services/data-query",
+      "fragments": 77,
+      "missing": []
+    },
+    {
+      "route": "/cases/sales-consultant-ai",
+      "fragments": 75,
+      "missing": []
+    },
+    {
+      "route": "/cases/proposal-generation",
+      "fragments": 74,
+      "missing": []
+    },
+    {
+      "route": "/cases/it-knowledge-assistant",
+      "fragments": 87,
+      "missing": []
+    },
+    {
+      "route": "/cases/nl-data-query",
+      "fragments": 87,
+      "missing": []
+    },
+    {
+      "route": "/cases/property-management",
+      "fragments": 75,
+      "missing": []
+    },
+    {
+      "route": "/cases/writing-memory-engine",
+      "fragments": 75,
+      "missing": []
+    },
+    {
+      "route": "/insights/why-chatgpt-is-not-a-knowledge-base",
+      "fragments": 54,
+      "missing": []
+    },
+    {
+      "route": "/insights/proposal-draft-in-15-minutes",
+      "fragments": 53,
+      "missing": []
+    },
+    {
+      "route": "/insights/buy-pilot-or-managed",
+      "fragments": 55,
+      "missing": []
+    },
+    {
+      "route": "/en/",
+      "fragments": 141,
+      "missing": []
+    },
+    {
+      "route": "/en/services",
+      "fragments": 61,
+      "missing": []
+    },
+    {
+      "route": "/en/cases",
+      "fragments": 77,
+      "missing": []
+    },
+    {
+      "route": "/en/technology",
+      "fragments": 78,
+      "missing": []
+    },
+    {
+      "route": "/en/engagement",
+      "fragments": 94,
+      "missing": []
+    },
+    {
+      "route": "/en/about",
+      "fragments": 66,
+      "missing": []
+    },
+    {
+      "route": "/en/contact",
+      "fragments": 66,
+      "missing": []
+    },
+    {
+      "route": "/en/insights",
+      "fragments": 42,
+      "missing": []
+    },
+    {
+      "route": "/en/privacy",
+      "fragments": 41,
+      "missing": []
+    },
+    {
+      "route": "/en/terms",
+      "fragments": 40,
+      "missing": []
+    },
+    {
+      "route": "/en/services/sales-ai",
+      "fragments": 72,
+      "missing": []
+    },
+    {
+      "route": "/en/services/document-automation",
+      "fragments": 71,
+      "missing": []
+    },
+    {
+      "route": "/en/services/knowledge-assistant",
+      "fragments": 82,
+      "missing": []
+    },
+    {
+      "route": "/en/services/data-query",
+      "fragments": 82,
+      "missing": []
+    },
+    {
+      "route": "/en/cases/sales-consultant-ai",
+      "fragments": 85,
+      "missing": []
+    },
+    {
+      "route": "/en/cases/proposal-generation",
+      "fragments": 84,
+      "missing": []
+    },
+    {
+      "route": "/en/cases/it-knowledge-assistant",
+      "fragments": 96,
+      "missing": []
+    },
+    {
+      "route": "/en/cases/nl-data-query",
+      "fragments": 98,
+      "missing": []
+    },
+    {
+      "route": "/en/cases/property-management",
+      "fragments": 87,
+      "missing": []
+    },
+    {
+      "route": "/en/cases/writing-memory-engine",
+      "fragments": 87,
+      "missing": []
+    },
+    {
+      "route": "/en/insights/why-chatgpt-is-not-a-knowledge-base",
+      "fragments": 59,
+      "missing": []
+    },
+    {
+      "route": "/en/insights/proposal-draft-in-15-minutes",
+      "fragments": 58,
+      "missing": []
+    },
+    {
+      "route": "/en/insights/buy-pilot-or-managed",
+      "fragments": 60,
+      "missing": []
+    }
+  ]
+}

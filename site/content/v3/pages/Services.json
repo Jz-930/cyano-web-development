@@ -1,0 +1,34 @@
+{
+  "c8dd6daa6a7": {
+    "zh": "解决方案",
+    "en": "SOLUTIONS"
+  },
+  "cb06e9a23e9": {
+    "zh": [
+      "扩展客户服务",
+      "减少重复处理"
+    ],
+    "en": [
+      "Expand customer services",
+      "Reduce repetitive work"
+    ]
+  },
+  "ce42639c94b": {
+    "zh": [
+      "用产品资料和项目经验回答客户问题，按不同需求准备推荐方案与销售材料。",
+      "将资料整理、数据查询和常见客服问题交给工作流处理，减少手工录入和反复查找。"
+    ],
+    "en": [
+      "Use product documentation and project experience to answer questions and prepare recommendations for each customer.",
+      "Automate recurring document preparation, data queries and support questions to reduce manual entry and repeated searches."
+    ]
+  },
+  "cd04c0a8c0b": {
+    "zh": "探索解决方案",
+    "en": "Explore solution"
+  },
+  "c106ef4a857": {
+    "zh": "你的场景不在上面？",
+    "en": "Don’t see your use case?"
+  }
+}

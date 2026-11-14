@@ -1,52 +1,18 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import subsetFont from "subset-font";
+import { createHash } from "node:crypto";
 
 const root = path.resolve(import.meta.dirname, "..");
 const fontSource = path.join(root, "../assets/source/NotoSansSC-variable.ttf");
 
 const CJK_RE = /[\u2000-\u206f\u3000-\u303f\u3400-\u9fff\uff00-\uffef]/g;
 
-// 0. Ensure Latin subsets are compact (noHinting, static wght=500 on mono) so `/` total font bytes stay well under 150 KB
-try {
-  let ascii = "";
-  for (let cp = 32; cp <= 126; cp++) ascii += String.fromCodePoint(cp);
-  ascii += "·—–‘’“”…•→↗×≤≥±©®%°‑\u00A0";
-
-  const interPath = path.join(root, "app/fonts/inter-latin.woff2");
-  const interStat = await fs.stat(interPath);
-  if (interStat.size > 24000) {
-    const rawInter = await fs.readFile(interPath);
-    const slimInter = await subsetFont(rawInter, ascii, {
-      targetFormat: "woff2",
-      variationAxes: { wght: 450 },
-      keepFeatures: ["tnum"],
-      noHinting: true,
-      noLayoutClosure: true,
-    });
-    await fs.writeFile(interPath, slimInter);
-    console.log(
-      `✓ Slimmed inter-latin.woff2: ${(interStat.size / 1024).toFixed(1)} KB -> ${(slimInter.length / 1024).toFixed(1)} KB`
-    );
-  }
-
-  const monoPath = path.join(root, "app/fonts/jetbrains-mono-latin.woff2");
-  const monoStat = await fs.stat(monoPath);
-  if (monoStat.size > 16000) {
-    const rawMono = await fs.readFile(monoPath);
-    const slimMono = await subsetFont(rawMono, ascii, {
-      targetFormat: "woff2",
-      variationAxes: { wght: 500 },
-      keepFeatures: ["tnum"],
-      noHinting: true,
-      noLayoutClosure: true,
-    });
-    await fs.writeFile(monoPath, slimMono);
-    console.log(
-      `✓ Slimmed jetbrains-mono-latin.woff2: ${(monoStat.size / 1024).toFixed(1)} KB -> ${(slimMono.length / 1024).toFixed(1)} KB`
-    );
-  }
-} catch {}
+// Always subset the original variable Inter, never an already frozen subset.
+const latin = Array.from({length:95},(_,i)=>String.fromCharCode(i+32)).join('')+'·—–‘’“”…•→↗×≤≥±©®°‑§¥μ';
+const inter=await subsetFont(await fs.readFile(path.join(root,'public/fonts/inter.woff2')),latin,{targetFormat:'woff2',noHinting:true});
+await fs.writeFile(path.join(root,'app/fonts/inter-latin.woff2'),inter);
+// JetBrains Mono source is static 500 and is declared as 500 in both layouts.
 
 // 1. Collect exact homepage (`/`) + chrome glyphs so `/` downloads ONLY noto-sc-core.woff2 and stays <= 150 KB total fonts
 let coreText = " ，。、；：？！“”‘’（）《》【】—…·©↗→年月日周项级倍行秒分钟";
@@ -126,9 +92,21 @@ try {
     ["app/(zh)/layout.tsx", 999],
     ["app/(zh)/page.tsx", 999],
   ]) {
+    if (!(await fs.stat(path.join(root,rel)).catch(()=>null))) continue;
     const lines = (await fs.readFile(path.join(root, rel), "utf8")).split(/\r?\n/);
     coreText += "\n" + lines.slice(0, maxLines).join("\n");
   }
+  // v3 restores the complete v1 home, including inline content and shared chrome.
+  const baseline = JSON.parse(await fs.readFile(path.join(root,"content/v1/copy.json"),"utf8"));
+  coreText += JSON.stringify([baseline['D.1'],baseline['D.2']]);
+  for (const rel of ['components/v3/pages/Home.tsx','components/v3/pages/EngagementCards.tsx','components/v3/ui.tsx','components/v3/HeaderClient.tsx','components/v3/SolutionExplorerClient.tsx','components/v3/visuals.tsx','components/v3/ScreenshotZoom.tsx','lib/v1-content.ts']) {
+    coreText += await fs.readFile(path.join(root,rel),'utf8');
+  }
+  for (const rel of ['cases','founders']) coreText += await fs.readFile(path.join(root,`content/v1/${rel}.json`),'utf8');
+  // Exact initial home content keeps the core small; other pages use the extension.
+  const rendered=JSON.parse(await fs.readFile(path.join(root,'content/v1/rendered-baseline.json'),'utf8'));
+  coreText=rendered['/'].text+JSON.stringify(baseline['D.1'])+'跳转到主要内容全部解决方案展开关于我们关闭菜单打开菜单移动导航引用准确率插画形象';
+  for(const rel of ['components/v3/visuals.tsx','components/v3/ScreenshotZoom.tsx','components/v3/HeaderClient.tsx']) coreText+=await fs.readFile(path.join(root,rel),'utf8');
 } catch (err) {
   console.error("Error collecting coreText:", err);
   process.exit(1);
@@ -188,7 +166,7 @@ function toUnicodeRange(chars) {
 const rawFont = await fs.readFile(fontSource);
 const opts = {
   targetFormat: "woff2",
-  variationAxes: { wght: 400 },
+  variationAxes: { wght: { min: 300, max: 700 } },
   keepFeatures: [],
   noLayoutClosure: true,
   noHinting: true,
@@ -202,9 +180,11 @@ const extBuf =
 
 const pubFonts = path.join(root, "public/fonts");
 await fs.mkdir(pubFonts, { recursive: true });
-await fs.writeFile(path.join(pubFonts, "noto-sc-core.woff2"), coreBuf);
+const hash=buf=>createHash('sha256').update(buf).digest('hex').slice(0,10);
+const coreName=`noto-sc-core.${hash(coreBuf)}.woff2`,extName=`noto-sc-ext.${hash(extBuf)}.woff2`;
+await fs.writeFile(path.join(pubFonts,coreName),coreBuf);
 if (extBuf.length > 0) {
-  await fs.writeFile(path.join(pubFonts, "noto-sc-ext.woff2"), extBuf);
+  await fs.writeFile(path.join(pubFonts, extName), extBuf);
 }
 
 const stylesDir = path.join(root, "app/styles");
@@ -213,8 +193,8 @@ await fs.mkdir(stylesDir, { recursive: true });
 let css = `/* Auto-generated by scripts/subset-font.mjs — DO NOT EDIT MANUALLY */
 @font-face {
   font-family: "Noto Sans SC Subset";
-  src: url("/fonts/noto-sc-core.woff2") format("woff2");
-  font-weight: 400 700;
+  src: url("/fonts/${coreName}") format("woff2");
+  font-weight: 300 700;
   font-style: normal;
   font-display: swap;
   unicode-range: ${toUnicodeRange(coreChars)};
@@ -224,8 +204,8 @@ let css = `/* Auto-generated by scripts/subset-font.mjs — DO NOT EDIT MANUALLY
 if (extChars.length > 0) {
   css += `@font-face {
   font-family: "Noto Sans SC Subset";
-  src: url("/fonts/noto-sc-ext.woff2") format("woff2");
-  font-weight: 400 700;
+  src: url("/fonts/${extName}") format("woff2");
+  font-weight: 300 700;
   font-style: normal;
   font-display: swap;
   unicode-range: ${toUnicodeRange(extChars)};

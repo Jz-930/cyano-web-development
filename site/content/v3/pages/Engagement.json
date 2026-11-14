@@ -1,0 +1,82 @@
+{
+  "c07e2733746": {
+    "zh": "合作方式",
+    "en": "HOW WE WORK"
+  },
+  "c94eb35ef5a": {
+    "zh": "对比维度",
+    "en": "Compare"
+  },
+  "c8073196267": {
+    "zh": [
+      "完整定制开发",
+      "低启动试点",
+      "托管式服务"
+    ],
+    "en": [
+      "Full custom build",
+      "Pilot + service",
+      "Managed service"
+    ]
+  },
+  "cd417d93d37": {
+    "zh": [
+      "你得到什么",
+      "系统运营",
+      "适合谁"
+    ],
+    "en": [
+      "What you get",
+      "Operations",
+      "Best for"
+    ]
+  },
+  "c38832f88ff": {
+    "zh": "项目流程",
+    "en": "PROJECT PROCESS"
+  },
+  "c5abfe6869e": {
+    "zh": "从需求评估到上线维护",
+    "en": "Assessment, development and ongoing support"
+  },
+  "c819c53584b": {
+    "zh": [
+      "需求评估",
+      "价值评估",
+      "方案报价",
+      "开发与交付",
+      "上线维护与迭代"
+    ],
+    "en": [
+      "Assess requirements",
+      "Estimate costs and benefits",
+      "Propose",
+      "Build & deliver",
+      "Maintain and update"
+    ]
+  },
+  "c43bbf22736": {
+    "zh": [
+      "梳理目标、流程与数据，一周内给出评估结论。",
+      "估算人工、外包与返工成本，比较预期收益，确定开发顺序。",
+      "确认项目范围、合作方式、验收标准与报价。",
+      "按约定节奏交付工具、工作流或批量成果。",
+      "处理使用反馈与故障，按约定更新资料和功能。"
+    ],
+    "en": [
+      "Review goals, workflows and data, with an assessment within one week.",
+      "Estimate current costs and expected benefits to prioritize development.",
+      "Agree scope, engagement, acceptance criteria and price.",
+      "Deliver working tools, workflows or batch results on the agreed schedule.",
+      "Address user feedback and faults, and update sources and features as agreed."
+    ]
+  },
+  "ce7958d33de": {
+    "zh": "常见问题",
+    "en": "COMMON QUESTIONS"
+  },
+  "c6c5c0c27ab": {
+    "zh": "开始之前，\n你可能想知道",
+    "en": "Before we begin"
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "date": "2026-11-13",
+  "baseUrl": "http://127.0.0.1:3010",
+  "method": "CUA browser on production build; axe wcag2a/wcag2aa/wcag21aa. Functional implementation checks, not a review.",
+  "desktop": [
+    {
+      "path": "/",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "/en",
+      "width": 1440,
+      "violations": []
+    },
+    {
+      "path": "/en/services/document-automation",
+      "layout": {
+        "h1": "Proposal drafts in as little as 15 minutes",
+        "overflow": false,
+        "width": 1440
+      },
+      "violations": []
+    },
+    {
+      "path": "/cases/property-management",
+      "layout": {
+        "h1": "从沟通记录提取费用，按房产整理收支",
+        "overflow": false,
+        "width": 1440
+      },
+      "violations": []
+    },
+    {
+      "path": "/technology",
+      "layout": {
+        "h1": "我们如何开发和维护企业 AI 系统",
+        "overflow": false,
+        "width": 1440
+      },
+      "violations": []
+    },
+    {
+      "path": "/engagement",
+      "layout": {
+        "h1": "选择适合当前项目的合作方式",
+        "overflow": false,
+        "width": 1440
+      },
+      "violations": []
+    },
+    {
+      "path": "/contact",
+      "layout": {
+        "h1": "联系我们，讨论你的项目",
+        "overflow": false,
+        "width": 1440
+      },
+      "violations": []
+    },
+    {
+      "path": "/terms",
+      "layout": {
+        "h1": "使用条款",
+        "overflow": false,
+        "width": 1440
+      },
+      "violations": []
+    }
+  ],
+  "mobile": [
+    {
+      "path": "/en/services/document-automation",
+      "layout": {
+        "fonts": [
+          "12px",
+          "48px",
+          "16px",
+          "24px",
+          "32px",
+          "20px",
+          "14px"
+        ],
+        "overflow": false,
+        "width": 390
+      },
+      "violations": []
+    },
+    {
+      "path": "/cases/property-management",
+      "layout": {
+        "fonts": [
+          "12px",
+          "32px",
+          "16px",
+          "14px",
+          "24px",
+          "20px"
+        ],
+        "overflow": false,
+        "width": 390
+      },
+      "violations": []
+    },
+    {
+      "path": "/technology",
+      "layout": {
+        "fonts": [
+          "12px",
+          "32px",
+          "16px",
+          "18px",
+          "14px",
+          "20px"
+        ],
+        "overflow": false,
+        "width": 390
+      },
+      "violations": []
+    },
+    {
+      "path": "/engagement",
+      "layout": {
+        "fonts": [
+          "12px",
+          "32px",
+          "16px",
+          "20px",
+          "14px",
+          "18px",
+          "24px"
+        ],
+        "overflow": false,
+        "width": 390
+      },
+      "violations": []
+    },
+    {
+      "path": "/contact",
+      "layout": {
+        "fonts": [
+          "12px",
+          "32px",
+          "16px",
+          "20px",
+          "14px"
+        ],
+        "overflow": false,
+        "width": 390
+      },
+      "violations": []
+    },
+    {
+      "path": "/terms",
+      "layout": {
+        "fonts": [
+          "12px",
+          "32px",
+          "16px",
+          "24px"
+        ],
+        "overflow": false,
+        "width": 390
+      },
+      "violations": []
+    },
+    {
+      "path": "/",
+      "width": 390,
+      "violations": []
+    }
+  ],
+  "interactions": {
+    "problemTabArrowKeys": "Third tab and original v1 warning displayed",
+    "mobileMenu": "Opens; Escape closes and returns focus to toggle",
+    "heroDialog": "Opens original screenshot; Escape closes and returns focus",
+    "caseGallery": "Next changes 4/6 to 5/6; thumbnail selects 2/6; Escape closes",
+    "chart": "50 to 51 via ArrowRight; both markers share x=303.0303 and values update",
+    "contactRequiredFields": "Empty submit focuses name; name/company/email/message/consent invalid; no inquiry sent",
+    "noJavaScript": "H1 and all four problem narratives available; zero hidden motion cards",
+    "reducedMotion": "No canvas and no hidden motion cards in inspected state",
+    "englishFonts": "No noto resource requests observed"
+  },
+  "homeSizes": {
+    "zhDesktop": {
+      "width": 1440,
+      "viewportHeight": 900,
+      "pageHeight": 6561
+    },
+    "zhMobile": {
+      "width": 390,
+      "viewportHeight": 844,
+      "pageHeight": 9615
+    },
+    "enDesktop": {
+      "width": 1440,
+      "viewportHeight": 900,
+      "pageHeight": 7100
+    }
+  },
+  "limits": [
+    "Not all routes received axe checks.",
+    "No Lighthouse, scoring or blind review.",
+    "Playwright CI suite configured, not run locally.",
+    "No real contact delivery tested."
+  ]
+}

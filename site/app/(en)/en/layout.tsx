@@ -1,6 +1,7 @@
 import "../../styles/site.css";
 import localFont from "next/font/local";
 import { Header } from "@/components/Header";
+import { MotionRuntime } from "@/components/v3/MotionRuntime";
 import { pick, siteCopy } from "@/lib/content";
 
 const manropeDisplay = localFont({
@@ -21,7 +22,7 @@ const jetbrainsMono = localFont({
   src: "../../fonts/jetbrains-mono-latin.woff2",
   variable: "--font-mono",
   display: "swap",
-  weight: "100 800",
+  weight: "500",
   preload: false,
 });
 
@@ -40,6 +41,7 @@ export default function EnRootLayout({
           {pick("en", siteCopy.nav.skipToMain)}
         </a>
         <Header locale="en" />
+        <MotionRuntime />
         {children}
       </body>
     </html>

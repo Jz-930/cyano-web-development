@@ -1,0 +1,54 @@
+{
+  "ca4258756dc": {
+    "zh": [
+      "自有系统",
+      "小范围试用",
+      "按批次交付"
+    ],
+    "en": [
+      "OWN A SYSTEM",
+      "TEST A USE CASE",
+      "OUTSOURCE THE WORK"
+    ]
+  },
+  "cae79c93a25": {
+    "zh": [
+      "完整定制开发",
+      "低启动试点 + 持续服务",
+      "托管式 AI 服务"
+    ],
+    "en": [
+      "Full custom build",
+      "Pilot + ongoing service",
+      "Managed AI service"
+    ]
+  },
+  "c3df04afb52": {
+    "zh": [
+      "适合需求明确、使用频繁，需要拥有并长期使用系统的团队。",
+      "先开发一个范围较小的版本，根据实际效果决定是否扩展。",
+      "客户提供资料与质量标准，Cyano 运行工作流、审核并交付结果。"
+    ],
+    "en": [
+      "For teams with clear requirements and frequent use that want to own the system.",
+      "Start with a smaller working version and use the results to decide whether to expand.",
+      "You provide the sources and quality criteria. Cyano runs the workflow, reviews the output and delivers it."
+    ]
+  },
+  "ccc77638506": {
+    "zh": [
+      "6–12 周首期上线",
+      "2–6 周首个可用版本",
+      "首批结果 2 周内"
+    ],
+    "en": [
+      "First release in 6–12 weeks",
+      "Working version in 2–6 weeks",
+      "First results within 2 weeks"
+    ]
+  },
+  "c0ed5e080c6": {
+    "zh": "咨询合作方式",
+    "en": "Discuss engagement"
+  }
+}

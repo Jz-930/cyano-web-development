@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { EngagementView } from "@/components/PageTemplates";
+import { EngagementView } from "@/components/v3/views/EngagementView";
 import { buildPageMetadata, pick, siteCopy } from "@/lib/content";
 
 export const metadata: Metadata = buildPageMetadata({

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { TechnologyView } from "@/components/PageTemplates";
+import { TechnologyView } from "@/components/v3/views/TechnologyView";
 import { buildPageMetadata, pick, siteCopy } from "@/lib/content";
 
 export const metadata: Metadata = buildPageMetadata({

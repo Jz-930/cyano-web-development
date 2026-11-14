@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { LegalView } from "@/components/PageTemplates";
+import { LegalView } from "@/components/v3/views/LegalView";
 import { buildPageMetadata, pick, siteCopy } from "@/lib/content";
 
 export const metadata: Metadata = buildPageMetadata({

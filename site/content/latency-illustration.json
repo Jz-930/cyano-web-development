@@ -1,0 +1,36 @@
+{
+  "kind": "illustration",
+  "source": "Illustrative values for interaction only; not measured benchmarks.",
+  "points": [
+    {
+      "turn": 1,
+      "raw": 265,
+      "core": 148
+    },
+    {
+      "turn": 10,
+      "raw": 510,
+      "core": 164
+    },
+    {
+      "turn": 25,
+      "raw": 930,
+      "core": 181
+    },
+    {
+      "turn": 50,
+      "raw": 1615,
+      "core": 181
+    },
+    {
+      "turn": 75,
+      "raw": 2300,
+      "core": 181
+    },
+    {
+      "turn": 100,
+      "raw": 2990,
+      "core": 181
+    }
+  ]
+}

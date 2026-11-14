@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ServicesOverviewView } from "@/components/PageTemplates";
+import { ServicesOverviewView } from "@/components/v3/views/ServicesOverviewView";
 import { buildPageMetadata, pick, siteCopy } from "@/lib/content";
 
 export const metadata: Metadata = buildPageMetadata({

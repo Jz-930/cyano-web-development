@@ -1,0 +1,212 @@
+{
+  "why-chatgpt-is-not-a-knowledge-base": {
+    "zh": [
+      {
+        "q": "企业资料与模型知识的区别",
+        "a": "员工问“这份合同谁能审批”，答案取决于部门、金额、地区以及当前有效的制度。模型熟悉合同管理常识，也需要拿到这些资料，才能回答这家公司的具体问题。\n\n上传文件可以满足一次问答。多人长期使用时，还要处理文件更新、版本冲突、访问权限，以及答错后的追查。建设企业知识库，需要为这些日常维护工作安排流程和负责人。"
+      },
+      {
+        "q": "每次请求应该带上哪些资料",
+        "a": "一个问题可能只涉及制度中的几段。把整个历史档案一起发给模型，会增加处理费用，也会混入旧版本和无关内容。长对话积累的旧信息，同样可能影响当前回答。\n\n我们先将资料整理为可检索的内容，再根据问题、用户权限和任务阶段选择所需段落。文档的适用范围、生效状态和章节关系都参与筛选。若无法确定哪个版本有效，系统应说明缺少什么，并请知识负责人确认。"
+      },
+      {
+        "q": "检索之前的文档处理",
+        "a": "RAG，即检索增强生成，会先查找资料，再让模型据此回答。文档入库时需要处理扫描识别、表格行列关系和版本区分；拆分长文档时，也要保留理解条款所需的上下文。\n\n检索到段落后，还要判断它是否回答了整个问题、是否与其他规则冲突。资料不足时，可以继续查找或请用户补充条件；依据仍不充分的结论应留给负责人判断。用户应能在回答中看到所用来源，并打开核对。"
+      },
+      {
+        "q": "引用要对应到具体内容",
+        "a": "引用最好能定位到支持某项判断的条款、章节和有效版本。只放一份几十页文件的链接，读者仍需从头寻找依据。\n\n对于政策、费用和权限类问题，系统应保存实际使用的资料和处理记录。复核者据此判断是资料过期、检索遗漏，还是生成内容有误。资料没有说明的部分，也应在回答中标明。"
+      },
+      {
+        "q": "按员工权限检索",
+        "a": "系统先确认访问者的身份、组织和角色，再检索已授权的资料。跨部门共享需要明确范围和生效时间，账号离职、权限调整和文档撤回也要同步到知识库。\n\n日志另设访问权限，避免管理员在排查时接触不必要的敏感内容。私有化部署可以控制基础设施与数据所在环境；应用内的访问控制、审计和敏感信息处理仍需单独设计。"
+      },
+      {
+        "q": "哪些问题转给人工",
+        "a": "设备申请、常规账号操作和已有处理方法的故障，通常资料明确、重复频繁，适合自动回答。身份异常、权限提升、个体争议或制度冲突，需要交给有权限的人处理。\n\n转交时，将已确认的情况、查到的资料和尝试过的操作一并写入工单。人工接手后可以继续排查，用户也无需重复描述。验收时要检查转交条件，以及工单信息是否足够。"
+      },
+      {
+        "q": "第一版的验收方法",
+        "a": "从历史咨询中抽取问题，整理业务人员认可的答案及来源，用它们检查回答是否正确、引用是否有效、权限是否隔离、转人工是否完整。测试集应包含模糊问题、过期资料和没有答案的情况。\n\n在 Cyano 的 IT 知识库助手项目中，AI 自动处理了 80% 的常见咨询，平均响应时间低于 3 秒。新项目需根据自己的资料质量和问题分布另定验收标准，这组结果不代表其他项目也会达到同样指标。"
+      },
+      {
+        "q": "从一个团队开始",
+        "a": "先选一个团队、一类相对稳定的资料和一批重复问题，明确知识由谁更新、敏感答案由谁审核、未解决的问题交给谁。业务负责人、资料维护者和技术人员都需要参与。需求评估时，我们会检查资料质量、权限和现有操作方式，再判断能否启动试点，或是否需要先整理资料。"
+      }
+    ],
+    "en": [
+      {
+        "q": "Company sources and model knowledge",
+        "a": "An employee asking who can approve a contract needs the policy for their department, transaction value and region. A model may know general contract practices, but it still needs the company’s current policy to answer this question.\n\nUploading a file can serve a single inquiry. Ongoing use by a team also requires updates, version handling, access controls and a way to investigate wrong answers. Those tasks need defined processes and owners."
+      },
+      {
+        "q": "Choosing context for each request",
+        "a": "A question may require only a few paragraphs of a policy. Sending the full archive increases processing costs and includes outdated or irrelevant material. Old information accumulated in a long conversation can also affect the current answer.\n\nWe organize sources for retrieval and select passages according to the question, user permissions and task. Scope, effective version and document structure guide that selection. If the active version cannot be established, the system should explain the gap and ask the source owner to resolve it."
+      },
+      {
+        "q": "Preparing documents for retrieval",
+        "a": "Retrieval-augmented generation, or RAG, finds source material before generating an answer. Preparation includes reading scans, preserving table relationships and separating versions. Splitting a long document also requires retaining the context needed to understand its clauses.\n\nRetrieved passages need to be checked for coverage and conflicting rules. The workflow may retrieve more material or ask the user for missing details. Conclusions without sufficient support should go to a responsible reviewer. Users should be able to open the sources used in the answer."
+      },
+      {
+        "q": "Citations that support review",
+        "a": "A citation should identify the passage and effective version supporting a specific statement. A link to a lengthy policy manual leaves the reader to find the relevant clause.\n\nFor policy, expense and access questions, retain the sources and processing records. Reviewers can then distinguish an outdated source from a retrieval or generation error. The answer should identify details the available material does not establish."
+      },
+      {
+        "q": "Retrieval with employee permissions",
+        "a": "Identify the user, organization and role before retrieving authorized material. Cross-department sharing needs a defined scope and effective date. Departures, permission changes and withdrawn documents must be reflected in the knowledge base.\n\nLogs require separate access controls so troubleshooting does not expose unnecessary sensitive information. Private deployment controls the infrastructure and data environment; application permissions, auditing and sensitive-data handling still need to be designed."
+      },
+      {
+        "q": "When to hand a request to a person",
+        "a": "Equipment requests, routine account procedures and documented troubleshooting are frequent questions with established sources. Identity exceptions, elevated privileges, individual disputes and policy conflicts require an authorized person.\n\nA handoff should include the facts established, sources found and steps already tried. This lets support continue the investigation without asking the user to repeat it. Acceptance testing should check handoff conditions and whether the ticket contains enough information."
+      },
+      {
+        "q": "Testing the first version",
+        "a": "Use historical questions with agreed answers and sources to check accuracy, citations, permission boundaries and handoffs. Include ambiguous questions, outdated documents and requests for which no answer is available.\n\nIn Cyano’s IT knowledge assistant project, AI handled 80% of routine inquiries with an average response below three seconds. Each new project needs criteria based on its own source quality and workload; these figures are not a forecast for other implementations."
+      },
+      {
+        "q": "Start with one team",
+        "a": "Choose one team, a relatively stable set of sources and recurring questions. Assign owners for source updates, sensitive-answer review and unresolved requests. Business owners, source maintainers and engineers all need to participate. During assessment, we examine source quality, permissions and the existing process to decide whether a pilot can begin or whether the sources need preparation first."
+      }
+    ]
+  },
+  "proposal-draft-in-15-minutes": {
+    "zh": [
+      {
+        "q": "15 分钟生成的是什么",
+        "a": "系统生成可编辑的方案初稿，包含项目要求、引用资料和需要复核的假设。撰写者仍需检查论证与参数，完成审批后才能对外提交。\n\n在某专业咨询与投研机构的项目中，资料整理和初稿撰写原本约需两天。接入工作流后，初稿可在 15 分钟内生成，引用准确率达到 99%，并执行 7 项完整性检查。这些数字来自该项目；新场景的速度与质量需要另行测试。"
+      },
+      {
+        "q": "先确定审核标准",
+        "a": "开发前，我们会与业务团队一起查看模板、历史方案和审核意见，确认章节、报价、技术参数与引用的要求。同名文档在不同企业可能有不同审批标准，需要逐项确认。\n\n随后区分可复用的产品知识和仅适用于旧项目的内容。当前客户的约束、参数及关键假设都应有明确来源，避免生成时沿用旧方案中的条件。"
+      },
+      {
+        "q": "整理历史资料",
+        "a": "文档入库时保留章节、表格和附件的关联。技术参数要对应设备与版本，条款要保留适用条件，资料还需记录来源和更新时间。\n\n稳定的产品知识、历史论证材料与当前项目输入分开管理。生成前先确认本次项目的目标与限制，再检索相关内容。缺失的资料列成问题清单，由业务人员补充，尤其不能自行填入未经确认的数字。"
+      },
+      {
+        "q": "分步骤生成与检查",
+        "a": "方案中的技术路线、费用和实施计划相互影响。如果一开始误解需求，后续章节可能一同出错。分步骤处理便于在继续生成前发现问题。\n\n工作流依次确认诉求、提取约束、检索依据、拟定提纲、生成章节并检查完整性，在关键节点保留人工确认。不同章节可以使用不同的检索范围和校验规则，业务负责人也能看到每一步采用了哪些资料。"
+      },
+      {
+        "q": "参数与完整性检查",
+        "a": "先定义每个字段的单位、来源、版本和缺失值处理规则。需要计算的字段交给确定的计算程序，生成文档时保留参数来源，供审核人员核对。\n\n完整性检查按双方确认的清单执行，指出缺失章节、必填信息和论证材料。现有项目执行 7 项检查；其他企业应根据自身的交付标准制定清单。"
+      },
+      {
+        "q": "人工审核的范围",
+        "a": "最终承诺、商业条款、敏感假设和专业责任，由有权限的审核人员确认。审核界面应能直接打开相关引用与假设，方便核查。资料不足、来源冲突或必填参数缺失时，流程暂停并请求补充信息，再继续处理。"
+      },
+      {
+        "q": "上线前如何测试",
+        "a": "选取有代表性的历史项目，覆盖资料完整、资料缺失、条款冲突和约束复杂等情况。以人工认可的文件为参照，检查内容覆盖、参数一致性、引用与风险提示。\n\n同时记录审核人员修改的位置。如果同一章节反复出错，就检查检索结果和模板；如果每个项目都需要不同判断，就保留相应的人工输入。修改记录也用于比较上线前后的审核工作量。"
+      },
+      {
+        "q": "扩展到其他文档类型",
+        "a": "先做一种使用频繁、资料较齐全、审核标准明确的文档。确认团队愿意使用、审核时间确实减少后，再扩展相近类型。每增加一种文档，都要明确输入、结构、检查项和负责人。知识索引、系统接口和部分审核规则可以复用，但需要按新文档的要求重新测试。"
+      }
+    ],
+    "en": [
+      {
+        "q": "What the 15-minute draft contains",
+        "a": "The system produces an editable proposal draft containing project requirements, citations and assumptions for review. A writer still checks the reasoning and parameters, and the document needs approval before submission.\n\nAt a consulting and research firm, source preparation and first-draft writing previously took roughly two days. The workflow produced drafts in 15 minutes with 99% citation accuracy and seven completeness checks. These figures describe that project; new use cases require their own testing."
+      },
+      {
+        "q": "Agree on review criteria first",
+        "a": "We examine templates, previous proposals and reviewer comments with the business team. This establishes requirements for sections, pricing, specifications and citations. Documents with the same name may have different approval standards across companies.\n\nWe then separate reusable product knowledge from facts that apply only to a previous project. Current client constraints, parameters and assumptions need identifiable sources so old conditions are not carried into the new proposal."
+      },
+      {
+        "q": "Organize past material",
+        "a": "Ingestion preserves relationships between sections, tables and attachments. Parameters stay associated with the equipment and version they describe; clauses retain their scope. Records also include sources and update dates.\n\nProduct knowledge, prior arguments and current inputs are managed separately. The workflow confirms the new project’s goals and constraints before retrieving material. Missing information becomes a list of questions for the team, especially where a numerical value needs confirmation."
+      },
+      {
+        "q": "Generate and check in stages",
+        "a": "Technical choices, costs and implementation plans depend on one another. A misunderstood requirement can affect later sections. Processing in stages helps reveal the error before work continues.\n\nThe workflow confirms needs, extracts constraints, retrieves evidence, prepares an outline, drafts sections and checks completeness. People confirm important decisions. Each section can use a different retrieval scope and validation rules, with the sources visible to the reviewer."
+      },
+      {
+        "q": "Check parameters and completeness",
+        "a": "Define each field’s unit, source, version and treatment of missing values. Use deterministic calculation logic where needed and retain the parameter source in the draft for review.\n\nCompleteness checks follow the agreed checklist and identify missing sections, required fields and supporting material. The existing project uses seven checks; other organizations need a checklist based on their own delivery standards."
+      },
+      {
+        "q": "Human review",
+        "a": "Authorized reviewers confirm final commitments, commercial terms, sensitive assumptions and professional responsibilities. The review interface should open the relevant citations and assumptions directly. Missing sources, conflicting references or absent required parameters pause the workflow and prompt a request for information."
+      },
+      {
+        "q": "Testing before launch",
+        "a": "Select representative historical projects, covering complete and incomplete sources, conflicting clauses and complex constraints. Compare outputs with accepted documents and check coverage, parameter consistency, citations and risk flags.\n\nRecord where reviewers make changes. Repeated errors in one section suggest checking retrieval and templates. Decisions that vary by project need appropriate human inputs. These records also help compare review effort before and after implementation."
+      },
+      {
+        "q": "Adding document types",
+        "a": "Begin with a frequently used format that has adequate sources and clear review criteria. Confirm adoption and reduced review time before adding related types. Each new type needs defined inputs, structure, checks and an owner. Knowledge indexes, integrations and some review rules can be reused, but must be tested against the new requirements."
+      }
+    ]
+  },
+  "buy-pilot-or-managed": {
+    "zh": [
+      {
+        "q": "先看团队需要什么",
+        "a": "有的团队需要长期使用自有系统，有的需要测试一个场景是否值得投入，也有的希望把成批工作交给外部团队处理。这些需求对应不同的交付内容和维护责任。\n\n选择前，先看目标、现有流程、数据条件和使用频率。即使技术上可行，使用量过低或资料准备成本过高，也可能暂时不值得开发。"
+      },
+      {
+        "q": "完整定制开发",
+        "a": "需求明确、使用频繁，并且有业务负责人持续参与的项目，适合考虑定制开发。系统由客户拥有，用来保留业务数据、执行规则，并供员工长期使用。\n\n开发通常包括需求分析、产品设计、模型接入、工作流开发、部署与基础维护。首期一般为 6–12 周，具体以范围为准。开始前要约定数据接入条件、系统范围、验收标准和维护安排，客户也需指定人员维护业务规则并组织使用。"
+      },
+      {
+        "q": "试点要回答的问题",
+        "a": "试点需要检查：工作流能否处理实际资料，是否节省时间或减少返工，业务人员是否愿意使用。选择一个范围清楚的任务，在 2–6 周内交付首个可用版本。\n\n双方在开始前确定输入范围、评价指标和停止条件。拿到结果后，可以扩展、调整或结束试点。试点预算有限时，应相应缩小任务范围，避免承担完整项目的所有要求。"
+      },
+      {
+        "q": "托管式 AI 服务",
+        "a": "希望持续获得结果、但不准备招聘技术人员和维护系统的团队，可以选择托管服务。客户提供任务、资料和质量标准，Cyano 运行 AI 工作流并安排人工审核。\n\n常见任务包括批量文档处理、内容整理和审核标准固定的重复工作。首批结果通常在两周内交付，后续按月或按批次合作。约定中需要写明工作量、验收与修改方式、资料补充责任，以及超出范围后的报价办法。"
+      },
+      {
+        "q": "计算成本与预期收益",
+        "a": "记录现有流程中资料收集、沟通、撰写、审核和返工的用时，也要考虑等待时间。判断节省出的时间能否用于其他工作，以及更快完成任务是否会改善实际业务结果。\n\n再计算数据整理、系统接入、模型调用、人工审核和维护费用。难以量化的收益先作为假设，在试点中验证。使用自己的工作量和成本估算，比套用其他客户的回报数字更有参考价值。"
+      },
+      {
+        "q": "首次沟通准备什么",
+        "a": "带一份工作样本，说明当前操作步骤、常见问题和什么样的结果可以验收。有历史处理量、成本和审核意见，也可以一起提供。首次沟通不需要完整的技术需求书。\n\n请能决定业务规则的人和了解数据权限的人参与，确认资料由谁提供、规则由谁解释、结果由谁验收。这样才能据此安排开发和测试。"
+      },
+      {
+        "q": "上线后的维护分工",
+        "a": "定制开发包含基础维护，新增需求可以另行约定迭代范围。试点后持续服务中的维护纳入服务范围。托管服务由 Cyano 负责工作流运行与交付，客户继续提供规则变化和使用反馈。\n\n资料更新、权限调整、模型变化都可能影响输出。合作时应明确反馈入口和变更处理方式，区分故障修复、资料维护与新增功能。"
+      },
+      {
+        "q": "试点没有达到预期时",
+        "a": "先检查原因。缺少资料，就补充来源；操作不便，就调整流程；使用量或节省成本不足，则需要重新评估是否继续。验收标准与决策节点应在开发前确定。\n\n首次业务沟通通常为 30–45 分钟，一周内给出评估结论与合作建议。根据项目范围、投入和未解决的问题，再决定是否推进。"
+      }
+    ],
+    "en": [
+      {
+        "q": "Start with what the team needs",
+        "a": "Some teams need a system they can own and use over time. Others need to test a use case before committing. Others want batches of work handled by an outside team. These needs imply different deliverables and operating responsibilities.\n\nConsider goals, current processes, data and frequency of use. Even a technically feasible project may be premature if usage is low or preparing the sources costs too much."
+      },
+      {
+        "q": "Full custom development",
+        "a": "Consider a custom build when requirements are clear, use is frequent and a business owner can stay involved. The client owns the system, which stores business data, applies rules and supports employees’ recurring work.\n\nDevelopment typically includes requirements, product design, model integration, workflow development, deployment and basic maintenance. A first release usually takes 6–12 weeks, depending on scope. Agree data access, boundaries, acceptance criteria and maintenance before starting. The client also assigns people to maintain business rules and support adoption."
+      },
+      {
+        "q": "What a pilot should establish",
+        "a": "A pilot tests whether the workflow handles actual sources, saves time or reduces rework, and is useful to the people doing the job. Choose a defined task for a first working version in 2–6 weeks.\n\nAgree inputs, measures and stop conditions at the outset. Results may lead to expansion, revision or an end to the pilot. If the budget is small, narrow the task to match rather than retain the requirements of a full project."
+      },
+      {
+        "q": "Managed AI services",
+        "a": "Managed service suits teams that need recurring output without hiring engineers or operating the system. The client supplies tasks, sources and quality criteria; Cyano runs the AI workflow and arranges human review.\n\nTypical work includes batch document processing, content organization and recurring tasks with established review standards. First results are usually delivered within two weeks, followed by monthly or batch work. Agree volumes, acceptance, revisions, responsibility for missing sources and pricing for additional scope."
+      },
+      {
+        "q": "Costs and expected benefits",
+        "a": "Record time spent collecting sources, coordinating, drafting, reviewing and reworking, along with waiting time. Check whether saved hours can be used elsewhere and whether faster completion changes business results.\n\nInclude data preparation, integrations, model usage, human review and maintenance in the cost estimate. Benefits that cannot yet be measured remain hypotheses for the pilot. Your workload and costs provide a more useful estimate than another client’s return figures."
+      },
+      {
+        "q": "What to prepare for the first call",
+        "a": "Bring a work sample, the current steps, common problems and an example of an acceptable result. Historical volumes, costs and review comments are useful if available. A full technical requirements document can come later.\n\nInclude people who can decide business rules and explain data permissions. Establish who supplies material, interprets rules and accepts the result so development and testing can be planned."
+      },
+      {
+        "q": "Maintenance after launch",
+        "a": "Custom development includes basic maintenance; further changes can be agreed separately. Maintenance is included in the ongoing service following a pilot. In managed services, Cyano operates the workflow and delivers output, while the client supplies rule changes and feedback.\n\nSource updates, permission changes and model changes can affect results. Agree on a feedback channel and change process that distinguishes bug fixes, source maintenance and new features."
+      },
+      {
+        "q": "When a pilot falls short",
+        "a": "Identify the cause before deciding what to do. Incomplete sources call for additional material. Awkward operation calls for workflow changes. Low usage or limited savings may warrant stopping. Acceptance criteria and decision points should be agreed before development.\n\nAn initial business call usually takes 30–45 minutes, with an assessment and recommendation within a week. The decision to proceed depends on the scope, investment and unresolved questions."
+      }
+    ]
+  }
+}

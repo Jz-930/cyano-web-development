@@ -16,7 +16,7 @@ const config: NextConfig = {
   devIndicators: false,
   poweredByHeader: false,
   images: {
-    unoptimized: true,
+    unoptimized: false,
     formats: ["image/avif", "image/webp"],
   },
   async redirects() {
@@ -60,6 +60,10 @@ const config: NextConfig = {
             value: "public, max-age=31536000, immutable",
           },
         ],
+      },
+      {
+        source: "/media/v3/:path*",
+        headers: [{key:"Cache-Control",value:"public, max-age=31536000, immutable"}],
       },
       {
         source: "/art/:path*",

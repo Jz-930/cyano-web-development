@@ -1,5 +1,16 @@
 # 数字依据登记（内部）
 
+## v1-final-content
+- authority: `b9dcf94`，进入 v2 前最后定稿的完整 v1 快照；用户于 2026-11-13 明确要求恢复该版内容。
+- inventory: `content/numeric-register-v3.json` 逐页登记 v1 已渲染文本中含数字的全部片段；构建时从锁定的 `site/content/v1/rendered-baseline.json` 生成。
+- interpretation: 案例、团队、周期、文章日期等指标继续按下方各原始 sourceId 的口径解释；此登记只证明文案出处，不宣称第三方实测。页序号、日期、Demo 中的操作数字也纳入清单。
+- exceptions: 按已批准的 v3 计划不展示 10× 投入回报；表单不再自动发送回执，因此成功文案删除“确认邮件已发送”。法律正文不变。
+
+## latency-illustration-v3
+- value: 图表轮次 1 / 10 / 25 / 50 / 75 / 100；原始上下文延迟 265 / 510 / 930 / 1615 / 2300 / 2990 ms；Cyano Core 148 / 164 / 181 / 181 / 181 / 181 ms。
+- derivation: `site/content/latency-illustration.json`，仅为交互示意，非内部基准或客户测量值。
+- presentation: 曲线、圆点、滑块读数使用同一数据及线性插值；图表紧邻说明“不是内部基准测试结果，也不代表项目性能承诺”。
+
 本地预览依据用户提供的《Cyano官网重建方案.md》§0.3、§6.7 与附录 D。未把来源声明包装成第三方验证。
 
 ## team-experience
@@ -56,3 +67,8 @@
 - value: 2026-11-10、2026-11-03、2026-10-27。
 - derivation: 按方案 D.9 要求，以本地预览日期 2026-11-12 倒排 2、9、16 天。
 - salesAnswer: 当前为预览编排日期；正式发布前以实际发布日期复核。
+
+## owner-service-facts
+- value: 核心成员均参与过 AI 模型研发，并在多个行业交付过企业 AI 系统；提供配套培训；分阶段上线，每个环节等员工用熟、按反馈打磨后再推进下一步，不一次性推翻现有工作流程；服务跟进到项目落地。
+- derivation: 负责人于 2026-11-14 提供（v4 文案对照稿 H-4r7、E-5a8、E-5a9）。
+- salesAnswer: 描述服务方式，不含数字，不构成交付周期或效果承诺；培训的具体形式按项目约定。

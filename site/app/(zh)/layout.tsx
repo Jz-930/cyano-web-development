@@ -2,6 +2,7 @@ import "../styles/site.css";
 import "../styles/cjk-font.css";
 import localFont from "next/font/local";
 import { Header } from "@/components/Header";
+import { MotionRuntime } from "@/components/v3/MotionRuntime";
 import { pick, siteCopy } from "@/lib/content";
 
 const manropeDisplay = localFont({
@@ -22,7 +23,7 @@ const jetbrainsMono = localFont({
   src: "../fonts/jetbrains-mono-latin.woff2",
   variable: "--font-mono",
   display: "swap",
-  weight: "100 800",
+  weight: "500",
   preload: false,
 });
 
@@ -36,20 +37,12 @@ export default function ZhRootLayout({
       lang="zh-CN"
       className={`${manropeDisplay.variable} ${interLatin.variable} ${jetbrainsMono.variable}`}
     >
-      <head>
-        <link
-          rel="preload"
-          href="/fonts/noto-sc-core.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body>
         <a className="skip-link" href="#main">
           {pick("zh", siteCopy.nav.skipToMain)}
         </a>
         <Header locale="zh" />
+        <MotionRuntime />
         {children}
       </body>
     </html>

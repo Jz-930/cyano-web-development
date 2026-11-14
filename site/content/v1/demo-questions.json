@@ -1,0 +1,38 @@
+{
+  "knowledge": {
+    "zh": [
+      "如何重置 VPN 密码？",
+      "新员工如何申请电脑？",
+      "如何申请软件安装权限？",
+      "远程办公有哪些安全要求？",
+      "邮箱无法登录怎么办？",
+      "我遇到了其他问题"
+    ],
+    "en": [
+      "How do I reset my VPN password?",
+      "How do new employees request a laptop?",
+      "How can I request software installation?",
+      "What are the security rules for remote work?",
+      "I cannot access my email. What should I do?",
+      "I need help with something else"
+    ]
+  },
+  "data": {
+    "zh": [
+      "本月各区域销售额是多少？",
+      "哪些商品库存低于安全线？",
+      "近六个月销售趋势如何？",
+      "华东地区最畅销的商品？",
+      "哪些库存周转较慢？",
+      "本月销量与上月相比？"
+    ],
+    "en": [
+      "Sales by region this month?",
+      "Which items are below safety stock?",
+      "Sales trend over six months?",
+      "Top products in the East region?",
+      "Which inventory moves slowly?",
+      "Sales compared with last month?"
+    ]
+  }
+}

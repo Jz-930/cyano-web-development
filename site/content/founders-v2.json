@@ -6,21 +6,30 @@
       "en": "Chief Executive Officer"
     },
     "tags": [
-      { "zh": "业务收益测算", "en": "ROI modeling" },
-      { "zh": "范围与验收边界", "en": "Scope & acceptance" },
-      { "zh": "客户合作推进", "en": "Client partnerships" }
+      {
+        "zh": "企业战略",
+        "en": "Strategy"
+      },
+      {
+        "zh": "客户合作",
+        "en": "Partnerships"
+      },
+      {
+        "zh": "AI 商业化",
+        "en": "AI commercialization"
+      }
     ],
     "specialtyBadge": {
-      "zh": "专长：立项阶段的投入产出测算与验收指标制定",
-      "en": "Specialty: Pre‑build ROI sizing & acceptance criteria design"
+      "zh": "企业战略",
+      "en": "Strategy"
     },
     "focusDeliverable": {
-      "zh": "主导交付：价值评估报告、合作方案边界与阶段验收标准",
-      "en": "Owns: Value assessment, engagement scope & milestone acceptance"
+      "zh": "负责项目评估、客户合作与业务目标。",
+      "en": "Leads project assessment, client partnerships and business planning."
     },
     "bio": {
-      "zh": "曾在世界 500 强企业从事技术与业务管理工作，拥有 6 年以上软件开发经验，参与过 AI 模型研发与企业级业务系统建设。负责在立项前拆解人工、外包与返工成本，与客户共同确定可量化的验收标准与分期投入节奏。",
-      "en": "Engineering and commercial background at Fortune Global 500 companies, with 6+ years of software development and hands‑on AI model R&D. Leads pre‑project cost‑benefit analysis, scoping ambiguous workflows into measurable milestones and clear acceptance criteria."
+      "zh": "曾在世界 500 强企业从事技术与业务工作，拥有 6 年以上软件开发经验，参与过 AI 模型研发与企业系统项目。负责 Cyano 的战略与客户合作，与客户确定项目目标、预算和验收要求。",
+      "en": "Has worked in engineering and business roles at Fortune Global 500 companies, with over six years of software development and experience in AI model R&D and enterprise systems. Leads strategy and client partnerships, agreeing on project goals, budgets and acceptance criteria with clients."
     },
     "portrait": "/art/founder-1-natural.webp"
   },
@@ -31,21 +40,30 @@
       "en": "Chief Technology Officer"
     },
     "tags": [
-      { "zh": "上下文估值引擎", "en": "Context valuation" },
-      { "zh": "权限检索架构", "en": "ACL retrieval" },
-      { "zh": "多模型编排", "en": "Multi‑model routing" }
+      {
+        "zh": "大模型工程",
+        "en": "LLM engineering"
+      },
+      {
+        "zh": "上下文架构",
+        "en": "Context architecture"
+      },
+      {
+        "zh": "系统集成",
+        "en": "Integration"
+      }
     ],
     "specialtyBadge": {
-      "zh": "专长：长上下文记忆分层、带权限 RAG 与多模型切换架构",
-      "en": "Specialty: Long‑context memory tiering & permission‑aware RAG"
+      "zh": "大模型工程",
+      "en": "LLM engineering"
     },
     "focusDeliverable": {
-      "zh": "主导交付：Cyano Core 平台架构、检索准确率与安全审计底座",
-      "en": "Owns: Cyano Core platform, retrieval precision & audit architecture"
+      "zh": "负责模型接入、上下文管理与平台架构。",
+      "en": "Leads model integration, context management and platform architecture."
     },
     "bio": {
-      "zh": "曾任职于世界 500 强企业核心技术团队，拥有 6 年以上开发经验与深度 AI 模型研发经历。主导设计 Cyano Core 上下文估值引擎与四层治理架构，解决百轮级长对话成本、指令遗漏与企业级权限隔离问题。",
-      "en": "Former senior engineer at Fortune Global 500 companies with 6+ years of software engineering and deep AI model R&D experience. Architects Cyano Core, designing priority‑weighted context management, permission‑scoped retrieval and deterministic SQL/SOP guardrails."
+      "zh": "曾任职于世界 500 强企业，拥有 6 年以上开发经验，参与过 AI 模型研发与工程化。主导 Cyano Core 平台架构，负责长上下文管理、知识检索与 Agent 任务编排。",
+      "en": "Previously worked at Fortune Global 500 companies, with over six years of development experience and work in AI model R&D and deployment. Leads Cyano Core architecture, including long-context management, retrieval and agent orchestration."
     },
     "portrait": "/art/founder-2-natural.webp"
   },
@@ -56,21 +74,30 @@
       "en": "Head of Engineering Delivery"
     },
     "tags": [
-      { "zh": "私有化 Docker 部署", "en": "Private Docker delivery" },
-      { "zh": "自动化评测集", "en": "Regression evals" },
-      { "zh": "生产监控运维", "en": "Production SRE" }
+      {
+        "zh": "工程交付",
+        "en": "Delivery"
+      },
+      {
+        "zh": "上线运维",
+        "en": "Operations"
+      },
+      {
+        "zh": "质量保障",
+        "en": "Quality"
+      }
     ],
     "specialtyBadge": {
-      "zh": "专长：私有环境算力适配、上线回归评测与生产级稳定运行",
-      "en": "Specialty: On‑prem compute adaptation, regression evals & SRE"
+      "zh": "工程交付",
+      "en": "Delivery"
     },
     "focusDeliverable": {
-      "zh": "主导交付：生产环境部署包、历史样本测试集与持续运维迭代",
-      "en": "Owns: Production deployment, evaluation suites & post‑launch operations"
+      "zh": "负责开发测试、系统部署和上线运维。",
+      "en": "Leads development, testing, deployment and operations."
     },
     "bio": {
-      "zh": "拥有世界 500 强企业大规模系统工程背景与 6 年以上开发经验，参与过 AI 模型训练与推理优化。负责将复杂 AI 工作流拆解为可回归测试、可监控日志与可独立升级的生产服务，保障上线后的响应速度与稳定性。",
-      "en": "Large‑scale systems engineering background at Fortune Global 500 companies, with 6+ years of development and AI model inference optimization. Turns complex AI pipelines into testable, observable services with Docker on‑prem packaging and post‑launch incident SLAs."
+      "zh": "拥有世界 500 强企业工程背景和 6 年以上开发经验，参与过 AI 模型研发与大规模系统交付。负责项目开发、测试和上线运维，跟进故障处理与版本更新。",
+      "en": "Has an engineering background at Fortune Global 500 companies, over six years of development experience, and experience in AI model R&D and large-scale systems. Leads development, testing and operations, including incident handling and releases."
     },
     "portrait": "/art/founder-3-natural.webp"
   },
@@ -81,21 +108,30 @@
       "en": "Head of Product & Solutions"
     },
     "tags": [
-      { "zh": "业务流程诊断", "en": "Workflow diagnosis" },
-      { "zh": "人机协同复核界面", "en": "Human‑in‑the‑loop UX" },
-      { "zh": "SOP 规则拆解", "en": "SOP codification" }
+      {
+        "zh": "需求评估",
+        "en": "Requirements"
+      },
+      {
+        "zh": "产品设计",
+        "en": "Product design"
+      },
+      {
+        "zh": "解决方案",
+        "en": "Solutions"
+      }
     ],
     "specialtyBadge": {
-      "zh": "专长：复杂业务 SOP 梳理与“引用核查 + 人工复核”交互设计",
-      "en": "Specialty: SOP mapping & citation‑backed human review interfaces"
+      "zh": "需求评估",
+      "en": "Requirements"
     },
     "focusDeliverable": {
-      "zh": "主导交付：1 周业务诊断书、资料与审核清单、一线员工工作台",
-      "en": "Owns: 1‑week workflow diagnosis, review checklists & operator UI"
+      "zh": "负责需求梳理、产品设计和使用流程。",
+      "en": "Leads requirements, product design and user workflows."
     },
     "bio": {
-      "zh": "拥有世界 500 强企业产品与研发双重背景、6 年以上开发经验及 AI 模型研发经历。负责深入一线业务团队梳理现有文档来源、参数口径与审批节点，把 AI 嵌入员工顺手的日常审核界面。",
-      "en": "Product and engineering background at Fortune Global 500 companies, bringing 6+ years of software development and AI model R&D. Works directly with frontline operators to map document sources, parameter rules and human approval gates into practical interfaces."
+      "zh": "拥有世界 500 强企业的产品与技术背景、6 年以上开发经验及 AI 模型研发经验。负责需求评估与产品设计，梳理客户的操作步骤、资料来源和审核要求，并与使用者确认功能设计。",
+      "en": "Has a product and engineering background at Fortune Global 500 companies, over six years of development and experience in AI model R&D. Leads requirements and product design, reviewing client processes, sources and approval requirements with the people who will use the system."
     },
     "portrait": "/art/founder-4-natural.webp",
     "avatar": "/art/founder-4-avatar-natural.webp"

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { InsightArticleView } from "@/components/PageTemplates";
+import { InsightArticleView } from "@/components/v3/views/InsightArticleView";
 import {
   buildPageMetadata,
   getInsight,

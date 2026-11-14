@@ -1,0 +1,348 @@
+[
+  {
+    "columns": {
+      "zh": [
+        "区域",
+        "本月销售额",
+        "环比"
+      ],
+      "en": [
+        "Region",
+        "Monthly sales",
+        "MoM"
+      ]
+    },
+    "rows": {
+      "zh": [
+        [
+          "华东",
+          "¥486,200",
+          "+12%"
+        ],
+        [
+          "华南",
+          "¥372,800",
+          "+8%"
+        ],
+        [
+          "华北",
+          "¥295,400",
+          "+15%"
+        ],
+        [
+          "华中",
+          "¥218,600",
+          "+6%"
+        ],
+        [
+          "西部",
+          "¥164,900",
+          "+11%"
+        ]
+      ],
+      "en": [
+        [
+          "East",
+          "¥486,200",
+          "+12%"
+        ],
+        [
+          "South",
+          "¥372,800",
+          "+8%"
+        ],
+        [
+          "North",
+          "¥295,400",
+          "+15%"
+        ],
+        [
+          "Central",
+          "¥218,600",
+          "+6%"
+        ],
+        [
+          "West",
+          "¥164,900",
+          "+11%"
+        ]
+      ]
+    },
+    "sql": "SELECT region, SUM(revenue) AS monthly_sales FROM sales WHERE month = '2026-11' GROUP BY region;"
+  },
+  {
+    "columns": {
+      "zh": [
+        "商品",
+        "当前库存",
+        "安全库存"
+      ],
+      "en": [
+        "Product",
+        "In stock",
+        "Safety stock"
+      ]
+    },
+    "rows": {
+      "zh": [
+        [
+          "标准连接器",
+          "42",
+          "100"
+        ],
+        [
+          "精密过滤器",
+          "18",
+          "50"
+        ],
+        [
+          "工业传感器",
+          "26",
+          "60"
+        ]
+      ],
+      "en": [
+        [
+          "Standard connector",
+          "42",
+          "100"
+        ],
+        [
+          "Precision filter",
+          "18",
+          "50"
+        ],
+        [
+          "Industrial sensor",
+          "26",
+          "60"
+        ]
+      ]
+    },
+    "sql": "SELECT product_name, stock, safety_stock FROM inventory WHERE stock < safety_stock ORDER BY stock / safety_stock;"
+  },
+  {
+    "columns": {
+      "zh": [
+        "月份",
+        "销售额",
+        "趋势"
+      ],
+      "en": [
+        "Month",
+        "Sales",
+        "Trend"
+      ]
+    },
+    "rows": {
+      "zh": [
+        [
+          "6 月",
+          "¥1,084,000",
+          "—"
+        ],
+        [
+          "7 月",
+          "¥1,121,500",
+          "+3.5%"
+        ],
+        [
+          "8 月",
+          "¥1,205,300",
+          "+7.5%"
+        ],
+        [
+          "9 月",
+          "¥1,308,700",
+          "+8.6%"
+        ],
+        [
+          "10 月",
+          "¥1,394,200",
+          "+6.5%"
+        ],
+        [
+          "11 月",
+          "¥1,537,900",
+          "+10.3%"
+        ]
+      ],
+      "en": [
+        [
+          "June",
+          "¥1,084,000",
+          "—"
+        ],
+        [
+          "July",
+          "¥1,121,500",
+          "+3.5%"
+        ],
+        [
+          "August",
+          "¥1,205,300",
+          "+7.5%"
+        ],
+        [
+          "September",
+          "¥1,308,700",
+          "+8.6%"
+        ],
+        [
+          "October",
+          "¥1,394,200",
+          "+6.5%"
+        ],
+        [
+          "November",
+          "¥1,537,900",
+          "+10.3%"
+        ]
+      ]
+    },
+    "sql": "SELECT month, SUM(revenue) AS sales FROM sales WHERE month BETWEEN '2026-06' AND '2026-11' GROUP BY month ORDER BY month;"
+  },
+  {
+    "columns": {
+      "zh": [
+        "商品",
+        "华东销量",
+        "排名"
+      ],
+      "en": [
+        "Product",
+        "East units sold",
+        "Rank"
+      ]
+    },
+    "rows": {
+      "zh": [
+        [
+          "标准连接器",
+          "1,240",
+          "1"
+        ],
+        [
+          "工业传感器",
+          "860",
+          "2"
+        ],
+        [
+          "精密过滤器",
+          "635",
+          "3"
+        ]
+      ],
+      "en": [
+        [
+          "Standard connector",
+          "1,240",
+          "1"
+        ],
+        [
+          "Industrial sensor",
+          "860",
+          "2"
+        ],
+        [
+          "Precision filter",
+          "635",
+          "3"
+        ]
+      ]
+    },
+    "sql": "SELECT product_name, SUM(quantity) AS units FROM sales WHERE region = 'East' AND month = '2026-11' GROUP BY product_name ORDER BY units DESC LIMIT 3;"
+  },
+  {
+    "columns": {
+      "zh": [
+        "商品",
+        "库存量",
+        "库存周转天数"
+      ],
+      "en": [
+        "Product",
+        "In stock",
+        "Inventory days"
+      ]
+    },
+    "rows": {
+      "zh": [
+        [
+          "扩展模块",
+          "420",
+          "126 天"
+        ],
+        [
+          "备用控制器",
+          "185",
+          "98 天"
+        ],
+        [
+          "专用适配器",
+          "270",
+          "84 天"
+        ]
+      ],
+      "en": [
+        [
+          "Expansion module",
+          "420",
+          "126 days"
+        ],
+        [
+          "Spare controller",
+          "185",
+          "98 days"
+        ],
+        [
+          "Specialty adapter",
+          "270",
+          "84 days"
+        ]
+      ]
+    },
+    "sql": "SELECT product_name, stock, inventory_days FROM inventory WHERE inventory_days > 60 ORDER BY inventory_days DESC;"
+  },
+  {
+    "columns": {
+      "zh": [
+        "月份",
+        "销售数量",
+        "变化"
+      ],
+      "en": [
+        "Month",
+        "Units sold",
+        "Change"
+      ]
+    },
+    "rows": {
+      "zh": [
+        [
+          "10 月",
+          "8,420",
+          "基准"
+        ],
+        [
+          "11 月",
+          "9,280",
+          "+860（10.2%）"
+        ]
+      ],
+      "en": [
+        [
+          "October",
+          "8,420",
+          "Baseline"
+        ],
+        [
+          "November",
+          "9,280",
+          "+860 (10.2%)"
+        ]
+      ]
+    },
+    "sql": "SELECT month, SUM(quantity) AS units FROM sales WHERE month IN ('2026-10','2026-11') GROUP BY month ORDER BY month;"
+  }
+]

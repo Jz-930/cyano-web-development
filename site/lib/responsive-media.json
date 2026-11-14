@@ -1,0 +1,989 @@
+{
+  "/media/lnpe-sales-ai/lnpe-sales-consultant-01-public-assistant.webp": {
+    "width": 1600,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/758b13097307-160.avif",
+        "webp": "/media/v3/758b13097307-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/758b13097307-320.avif",
+        "webp": "/media/v3/758b13097307-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/758b13097307-640.avif",
+        "webp": "/media/v3/758b13097307-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/758b13097307-960.avif",
+        "webp": "/media/v3/758b13097307-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/758b13097307-1440.avif",
+        "webp": "/media/v3/758b13097307-1440.webp"
+      }
+    ]
+  },
+  "/media/lnpe-sales-ai/lnpe-sales-consultant-02-access-portal.webp": {
+    "width": 1600,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/66fdf1008ef6-160.avif",
+        "webp": "/media/v3/66fdf1008ef6-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/66fdf1008ef6-320.avif",
+        "webp": "/media/v3/66fdf1008ef6-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/66fdf1008ef6-640.avif",
+        "webp": "/media/v3/66fdf1008ef6-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/66fdf1008ef6-960.avif",
+        "webp": "/media/v3/66fdf1008ef6-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/66fdf1008ef6-1440.avif",
+        "webp": "/media/v3/66fdf1008ef6-1440.webp"
+      }
+    ]
+  },
+  "/media/lnpe-sales-ai/lnpe-sales-consultant-03-project-match.webp": {
+    "width": 1600,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/a4a20411a8e3-160.avif",
+        "webp": "/media/v3/a4a20411a8e3-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/a4a20411a8e3-320.avif",
+        "webp": "/media/v3/a4a20411a8e3-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/a4a20411a8e3-640.avif",
+        "webp": "/media/v3/a4a20411a8e3-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/a4a20411a8e3-960.avif",
+        "webp": "/media/v3/a4a20411a8e3-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/a4a20411a8e3-1440.avif",
+        "webp": "/media/v3/a4a20411a8e3-1440.webp"
+      }
+    ]
+  },
+  "/media/lnpe-sales-ai/lnpe-sales-consultant-04-price-reference.webp": {
+    "width": 1600,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/0d1920bbb293-160.avif",
+        "webp": "/media/v3/0d1920bbb293-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/0d1920bbb293-320.avif",
+        "webp": "/media/v3/0d1920bbb293-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/0d1920bbb293-640.avif",
+        "webp": "/media/v3/0d1920bbb293-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/0d1920bbb293-960.avif",
+        "webp": "/media/v3/0d1920bbb293-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/0d1920bbb293-1440.avif",
+        "webp": "/media/v3/0d1920bbb293-1440.webp"
+      }
+    ]
+  },
+  "/media/huisheng-proposal-ai/huisheng-proposal-ai-01-workflow-draft.webp": {
+    "width": 1600,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/f98bfd8b5082-160.avif",
+        "webp": "/media/v3/f98bfd8b5082-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/f98bfd8b5082-320.avif",
+        "webp": "/media/v3/f98bfd8b5082-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/f98bfd8b5082-640.avif",
+        "webp": "/media/v3/f98bfd8b5082-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/f98bfd8b5082-960.avif",
+        "webp": "/media/v3/f98bfd8b5082-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/f98bfd8b5082-1440.avif",
+        "webp": "/media/v3/f98bfd8b5082-1440.webp"
+      }
+    ]
+  },
+  "/media/huisheng-proposal-ai/huisheng-proposal-ai-02-start-draft.webp": {
+    "width": 1600,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/3464eadf2c05-160.avif",
+        "webp": "/media/v3/3464eadf2c05-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/3464eadf2c05-320.avif",
+        "webp": "/media/v3/3464eadf2c05-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/3464eadf2c05-640.avif",
+        "webp": "/media/v3/3464eadf2c05-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/3464eadf2c05-960.avif",
+        "webp": "/media/v3/3464eadf2c05-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/3464eadf2c05-1440.avif",
+        "webp": "/media/v3/3464eadf2c05-1440.webp"
+      }
+    ]
+  },
+  "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-01-dashboard.webp": {
+    "width": 1600,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/7b7f15dc258f-160.avif",
+        "webp": "/media/v3/7b7f15dc258f-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/7b7f15dc258f-320.avif",
+        "webp": "/media/v3/7b7f15dc258f-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/7b7f15dc258f-640.avif",
+        "webp": "/media/v3/7b7f15dc258f-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/7b7f15dc258f-960.avif",
+        "webp": "/media/v3/7b7f15dc258f-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/7b7f15dc258f-1440.avif",
+        "webp": "/media/v3/7b7f15dc258f-1440.webp"
+      }
+    ]
+  },
+  "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-02-articles.webp": {
+    "width": 1600,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/abcfb8f75f16-160.avif",
+        "webp": "/media/v3/abcfb8f75f16-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/abcfb8f75f16-320.avif",
+        "webp": "/media/v3/abcfb8f75f16-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/abcfb8f75f16-640.avif",
+        "webp": "/media/v3/abcfb8f75f16-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/abcfb8f75f16-960.avif",
+        "webp": "/media/v3/abcfb8f75f16-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/abcfb8f75f16-1440.avif",
+        "webp": "/media/v3/abcfb8f75f16-1440.webp"
+      }
+    ]
+  },
+  "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-03-article-detail.webp": {
+    "width": 1600,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/4945f2ae2ecd-160.avif",
+        "webp": "/media/v3/4945f2ae2ecd-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/4945f2ae2ecd-320.avif",
+        "webp": "/media/v3/4945f2ae2ecd-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/4945f2ae2ecd-640.avif",
+        "webp": "/media/v3/4945f2ae2ecd-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/4945f2ae2ecd-960.avif",
+        "webp": "/media/v3/4945f2ae2ecd-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/4945f2ae2ecd-1440.avif",
+        "webp": "/media/v3/4945f2ae2ecd-1440.webp"
+      }
+    ]
+  },
+  "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-04-ticket-detail.webp": {
+    "width": 1600,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/362795594579-160.avif",
+        "webp": "/media/v3/362795594579-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/362795594579-320.avif",
+        "webp": "/media/v3/362795594579-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/362795594579-640.avif",
+        "webp": "/media/v3/362795594579-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/362795594579-960.avif",
+        "webp": "/media/v3/362795594579-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/362795594579-1440.avif",
+        "webp": "/media/v3/362795594579-1440.webp"
+      }
+    ]
+  },
+  "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-05-analytics.webp": {
+    "width": 1600,
+    "height": 1000,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/225f520fe7ee-160.avif",
+        "webp": "/media/v3/225f520fe7ee-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/225f520fe7ee-320.avif",
+        "webp": "/media/v3/225f520fe7ee-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/225f520fe7ee-640.avif",
+        "webp": "/media/v3/225f520fe7ee-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/225f520fe7ee-960.avif",
+        "webp": "/media/v3/225f520fe7ee-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/225f520fe7ee-1440.avif",
+        "webp": "/media/v3/225f520fe7ee-1440.webp"
+      }
+    ]
+  },
+  "/media/smartdoc-ui-suite/smartdoc-ui-suite-01-dashboard-overview.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/55717a86aa93-160.avif",
+        "webp": "/media/v3/55717a86aa93-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/55717a86aa93-320.avif",
+        "webp": "/media/v3/55717a86aa93-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/55717a86aa93-640.avif",
+        "webp": "/media/v3/55717a86aa93-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/55717a86aa93-960.avif",
+        "webp": "/media/v3/55717a86aa93-960.webp"
+      }
+    ]
+  },
+  "/media/smartdoc-ui-suite/smartdoc-ui-suite-02-sql-control-center.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/f55a544e2b19-160.avif",
+        "webp": "/media/v3/f55a544e2b19-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/f55a544e2b19-320.avif",
+        "webp": "/media/v3/f55a544e2b19-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/f55a544e2b19-640.avif",
+        "webp": "/media/v3/f55a544e2b19-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/f55a544e2b19-960.avif",
+        "webp": "/media/v3/f55a544e2b19-960.webp"
+      }
+    ]
+  },
+  "/media/smartdoc-ui-suite/smartdoc-ui-suite-03-knowledge-base.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/76a35b93cd48-160.avif",
+        "webp": "/media/v3/76a35b93cd48-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/76a35b93cd48-320.avif",
+        "webp": "/media/v3/76a35b93cd48-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/76a35b93cd48-640.avif",
+        "webp": "/media/v3/76a35b93cd48-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/76a35b93cd48-960.avif",
+        "webp": "/media/v3/76a35b93cd48-960.webp"
+      }
+    ]
+  },
+  "/media/smartdoc-ui-suite/smartdoc-ui-suite-04-proposal-builder.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/84647fe0be23-160.avif",
+        "webp": "/media/v3/84647fe0be23-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/84647fe0be23-320.avif",
+        "webp": "/media/v3/84647fe0be23-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/84647fe0be23-640.avif",
+        "webp": "/media/v3/84647fe0be23-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/84647fe0be23-960.avif",
+        "webp": "/media/v3/84647fe0be23-960.webp"
+      }
+    ]
+  },
+  "/media/smartdoc-ui-suite/smartdoc-ui-suite-05-review-audit.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/4218feb001cd-160.avif",
+        "webp": "/media/v3/4218feb001cd-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/4218feb001cd-320.avif",
+        "webp": "/media/v3/4218feb001cd-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/4218feb001cd-640.avif",
+        "webp": "/media/v3/4218feb001cd-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/4218feb001cd-960.avif",
+        "webp": "/media/v3/4218feb001cd-960.webp"
+      }
+    ]
+  },
+  "/media/smartdoc-ui-suite/smartdoc-ui-suite-06-template-library.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/8412f1a08f0d-160.avif",
+        "webp": "/media/v3/8412f1a08f0d-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/8412f1a08f0d-320.avif",
+        "webp": "/media/v3/8412f1a08f0d-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/8412f1a08f0d-640.avif",
+        "webp": "/media/v3/8412f1a08f0d-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/8412f1a08f0d-960.avif",
+        "webp": "/media/v3/8412f1a08f0d-960.webp"
+      }
+    ]
+  },
+  "/media/alpha-house-ai/alpha-house-01-login.webp": {
+    "width": 1440,
+    "height": 969,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/b1d1985011da-160.avif",
+        "webp": "/media/v3/b1d1985011da-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/b1d1985011da-320.avif",
+        "webp": "/media/v3/b1d1985011da-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/b1d1985011da-640.avif",
+        "webp": "/media/v3/b1d1985011da-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/b1d1985011da-960.avif",
+        "webp": "/media/v3/b1d1985011da-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/b1d1985011da-1440.avif",
+        "webp": "/media/v3/b1d1985011da-1440.webp"
+      }
+    ]
+  },
+  "/media/alpha-house-ai/alpha-house-02-messages.webp": {
+    "width": 1440,
+    "height": 933,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/a6d9c55b1cae-160.avif",
+        "webp": "/media/v3/a6d9c55b1cae-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/a6d9c55b1cae-320.avif",
+        "webp": "/media/v3/a6d9c55b1cae-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/a6d9c55b1cae-640.avif",
+        "webp": "/media/v3/a6d9c55b1cae-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/a6d9c55b1cae-960.avif",
+        "webp": "/media/v3/a6d9c55b1cae-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/a6d9c55b1cae-1440.avif",
+        "webp": "/media/v3/a6d9c55b1cae-1440.webp"
+      }
+    ]
+  },
+  "/media/alpha-house-ai/alpha-house-03-work-order-chat.webp": {
+    "width": 1440,
+    "height": 879,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/9937fa6cac0c-160.avif",
+        "webp": "/media/v3/9937fa6cac0c-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/9937fa6cac0c-320.avif",
+        "webp": "/media/v3/9937fa6cac0c-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/9937fa6cac0c-640.avif",
+        "webp": "/media/v3/9937fa6cac0c-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/9937fa6cac0c-960.avif",
+        "webp": "/media/v3/9937fa6cac0c-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/9937fa6cac0c-1440.avif",
+        "webp": "/media/v3/9937fa6cac0c-1440.webp"
+      }
+    ]
+  },
+  "/media/alpha-house-ai/alpha-house-04-finance.webp": {
+    "width": 1440,
+    "height": 899,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/fab5df266a25-160.avif",
+        "webp": "/media/v3/fab5df266a25-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/fab5df266a25-320.avif",
+        "webp": "/media/v3/fab5df266a25-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/fab5df266a25-640.avif",
+        "webp": "/media/v3/fab5df266a25-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/fab5df266a25-960.avif",
+        "webp": "/media/v3/fab5df266a25-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/fab5df266a25-1440.avif",
+        "webp": "/media/v3/fab5df266a25-1440.webp"
+      }
+    ]
+  },
+  "/media/alpha-house-ai/alpha-house-05-contacts.webp": {
+    "width": 1440,
+    "height": 913,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/39350b04f464-160.avif",
+        "webp": "/media/v3/39350b04f464-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/39350b04f464-320.avif",
+        "webp": "/media/v3/39350b04f464-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/39350b04f464-640.avif",
+        "webp": "/media/v3/39350b04f464-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/39350b04f464-960.avif",
+        "webp": "/media/v3/39350b04f464-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/39350b04f464-1440.avif",
+        "webp": "/media/v3/39350b04f464-1440.webp"
+      }
+    ]
+  },
+  "/media/alpha-house-ai/alpha-house-06-reports.webp": {
+    "width": 1440,
+    "height": 923,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/6290364f4513-160.avif",
+        "webp": "/media/v3/6290364f4513-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/6290364f4513-320.avif",
+        "webp": "/media/v3/6290364f4513-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/6290364f4513-640.avif",
+        "webp": "/media/v3/6290364f4513-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/6290364f4513-960.avif",
+        "webp": "/media/v3/6290364f4513-960.webp"
+      },
+      {
+        "width": 1440,
+        "avif": "/media/v3/6290364f4513-1440.avif",
+        "webp": "/media/v3/6290364f4513-1440.webp"
+      }
+    ]
+  },
+  "/media/dme-writing-engine/dme-writing-engine-00-startup-loading.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/645e6c2ceb3f-160.avif",
+        "webp": "/media/v3/645e6c2ceb3f-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/645e6c2ceb3f-320.avif",
+        "webp": "/media/v3/645e6c2ceb3f-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/645e6c2ceb3f-640.avif",
+        "webp": "/media/v3/645e6c2ceb3f-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/645e6c2ceb3f-960.avif",
+        "webp": "/media/v3/645e6c2ceb3f-960.webp"
+      }
+    ]
+  },
+  "/media/dme-writing-engine/dme-writing-engine-01-chat-branch-switch.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/d71755879c3c-160.avif",
+        "webp": "/media/v3/d71755879c3c-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/d71755879c3c-320.avif",
+        "webp": "/media/v3/d71755879c3c-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/d71755879c3c-640.avif",
+        "webp": "/media/v3/d71755879c3c-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/d71755879c3c-960.avif",
+        "webp": "/media/v3/d71755879c3c-960.webp"
+      }
+    ]
+  },
+  "/media/dme-writing-engine/dme-writing-engine-02-chat-memory-drawer.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/1c0ec04ca8f4-160.avif",
+        "webp": "/media/v3/1c0ec04ca8f4-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/1c0ec04ca8f4-320.avif",
+        "webp": "/media/v3/1c0ec04ca8f4-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/1c0ec04ca8f4-640.avif",
+        "webp": "/media/v3/1c0ec04ca8f4-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/1c0ec04ca8f4-960.avif",
+        "webp": "/media/v3/1c0ec04ca8f4-960.webp"
+      }
+    ]
+  },
+  "/media/dme-writing-engine/dme-writing-engine-03-context-memory-stats.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/4faf55fcd9f7-160.avif",
+        "webp": "/media/v3/4faf55fcd9f7-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/4faf55fcd9f7-320.avif",
+        "webp": "/media/v3/4faf55fcd9f7-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/4faf55fcd9f7-640.avif",
+        "webp": "/media/v3/4faf55fcd9f7-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/4faf55fcd9f7-960.avif",
+        "webp": "/media/v3/4faf55fcd9f7-960.webp"
+      }
+    ]
+  },
+  "/media/dme-writing-engine/dme-writing-engine-04-note-editor-ai-panel.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/68005b2ae046-160.avif",
+        "webp": "/media/v3/68005b2ae046-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/68005b2ae046-320.avif",
+        "webp": "/media/v3/68005b2ae046-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/68005b2ae046-640.avif",
+        "webp": "/media/v3/68005b2ae046-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/68005b2ae046-960.avif",
+        "webp": "/media/v3/68005b2ae046-960.webp"
+      }
+    ]
+  },
+  "/media/dme-writing-engine/dme-writing-engine-05-fragments-library-bulk.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/b03a413a1cd3-160.avif",
+        "webp": "/media/v3/b03a413a1cd3-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/b03a413a1cd3-320.avif",
+        "webp": "/media/v3/b03a413a1cd3-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/b03a413a1cd3-640.avif",
+        "webp": "/media/v3/b03a413a1cd3-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/b03a413a1cd3-960.avif",
+        "webp": "/media/v3/b03a413a1cd3-960.webp"
+      }
+    ]
+  },
+  "/media/dme-writing-engine/dme-writing-engine-06-archive-pack-inspect.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/5c79e7eb59b5-160.avif",
+        "webp": "/media/v3/5c79e7eb59b5-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/5c79e7eb59b5-320.avif",
+        "webp": "/media/v3/5c79e7eb59b5-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/5c79e7eb59b5-640.avif",
+        "webp": "/media/v3/5c79e7eb59b5-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/5c79e7eb59b5-960.avif",
+        "webp": "/media/v3/5c79e7eb59b5-960.webp"
+      }
+    ]
+  },
+  "/media/dme-writing-engine/dme-writing-engine-07-connections-settings.webp": {
+    "width": 1280,
+    "height": 800,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/0a4f26c1665b-160.avif",
+        "webp": "/media/v3/0a4f26c1665b-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/0a4f26c1665b-320.avif",
+        "webp": "/media/v3/0a4f26c1665b-320.webp"
+      },
+      {
+        "width": 640,
+        "avif": "/media/v3/0a4f26c1665b-640.avif",
+        "webp": "/media/v3/0a4f26c1665b-640.webp"
+      },
+      {
+        "width": 960,
+        "avif": "/media/v3/0a4f26c1665b-960.avif",
+        "webp": "/media/v3/0a4f26c1665b-960.webp"
+      }
+    ]
+  },
+  "/v3-materials/proposal-focus.webp": {
+    "width": 440,
+    "height": 310,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/dd25c53f4a72-160.avif",
+        "webp": "/media/v3/dd25c53f4a72-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/dd25c53f4a72-320.avif",
+        "webp": "/media/v3/dd25c53f4a72-320.webp"
+      }
+    ]
+  },
+  "/v3-materials/wiki-focus.webp": {
+    "width": 440,
+    "height": 310,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/6db46c679258-160.avif",
+        "webp": "/media/v3/6db46c679258-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/6db46c679258-320.avif",
+        "webp": "/media/v3/6db46c679258-320.webp"
+      }
+    ]
+  },
+  "/v3-materials/founder-1.webp": {
+    "width": 320,
+    "height": 320,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/265c437df671-160.avif",
+        "webp": "/media/v3/265c437df671-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/265c437df671-320.avif",
+        "webp": "/media/v3/265c437df671-320.webp"
+      }
+    ]
+  },
+  "/v3-materials/founder-2.webp": {
+    "width": 320,
+    "height": 320,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/ec902e9939d0-160.avif",
+        "webp": "/media/v3/ec902e9939d0-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/ec902e9939d0-320.avif",
+        "webp": "/media/v3/ec902e9939d0-320.webp"
+      }
+    ]
+  },
+  "/v3-materials/founder-3.webp": {
+    "width": 320,
+    "height": 320,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/393ea7765fce-160.avif",
+        "webp": "/media/v3/393ea7765fce-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/393ea7765fce-320.avif",
+        "webp": "/media/v3/393ea7765fce-320.webp"
+      }
+    ]
+  },
+  "/v3-materials/founder-4.webp": {
+    "width": 320,
+    "height": 320,
+    "variants": [
+      {
+        "width": 160,
+        "avif": "/media/v3/25d55dcd7c58-160.avif",
+        "webp": "/media/v3/25d55dcd7c58-160.webp"
+      },
+      {
+        "width": 320,
+        "avif": "/media/v3/25d55dcd7c58-320.avif",
+        "webp": "/media/v3/25d55dcd7c58-320.webp"
+      }
+    ]
+  }
+}

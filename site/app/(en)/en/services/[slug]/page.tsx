@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { SolutionDetailView } from "@/components/PageTemplates";
+import { SolutionDetailView } from "@/components/v3/views/SolutionDetailView";
 import {
   buildPageMetadata,
   getSolution,

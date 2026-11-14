@@ -1,13 +1,19 @@
 {
   "name": "cyano-website",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "private": true,
+  "overrides": {
+    "minimatch": "^11.0.1"
+  },
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0 --webpack",
-    "build": "node scripts/validate-v2.mjs && node scripts/subset-font.mjs && next build --webpack && node scripts/scan.mjs",
+    "build": "node scripts/validate-v3.mjs && node scripts/build-v3-media.mjs && node scripts/subset-font.mjs && next build --webpack && node scripts/scan.mjs",
     "start": "next start --hostname 0.0.0.0",
     "typecheck": "tsc --noEmit",
-    "check:links": "node scripts/preflight.mjs"
+    "check:links": "node scripts/preflight.mjs",
+    "lint": "eslint app components lib next.config.ts playwright.config.ts tests",
+    "check:content": "node scripts/check-v1-content.mjs",
+    "test:smoke": "playwright test"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.0",
@@ -19,11 +25,15 @@
     "zod": "^4.0.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "sharp": "^0.34.0",
+    "eslint": "^10.14.0",
+    "sharp": "^0.35.5",
     "subset-font": "^2.9.0",
-    "typescript": "^5.7.0"
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.72.2"
   }
 }

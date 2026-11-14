@@ -1,0 +1,76 @@
+{
+  "c941685fd36": {
+    "zh": [
+      "销售现场查资料慢|产品问题太专业，客服无法独立回答|销售材料千篇一律，缺少针对性",
+      "历史方案分散，资料难以复用|每份初稿耗时，反复核对参数|关键条款容易遗漏，审核压力大",
+      "员工反复问同样的问题|知识更新后，旧答案仍在传播|权限不同，资料不能随意开放",
+      "查一个数字，要等 IT 导数|指标口径不统一，结果难核对|业务人员不会 SQL，无法自助分析"
+    ],
+    "en": [
+      "Product information takes too long to find|Support cannot answer specialist questions|Sales material lacks relevance",
+      "Past proposals are scattered|Drafting and parameter checks take days|Critical requirements get missed",
+      "Employees ask the same questions repeatedly|Old answers persist after policy updates|Different roles need different access",
+      "Every query goes through the IT queue|Inconsistent metrics make results hard to trust|Business users cannot write SQL"
+    ]
+  },
+  "c7d8027cf10": {
+    "zh": "查看相关案例",
+    "en": "See related work"
+  },
+  "c50d6ecf9ef": {
+    "zh": "使用场景",
+    "en": "THE CHALLENGE"
+  },
+  "c6371e120c5": {
+    "zh": "需要解决的日常问题",
+    "en": "Common problems in this workflow"
+  },
+  "cb2e80ebd0a": {
+    "zh": "我们怎么做",
+    "en": "THE APPROACH"
+  },
+  "c7b67845196": {
+    "zh": "系统如何处理任务",
+    "en": "How the system handles a task"
+  },
+  "c8e8a71c730": {
+    "zh": "你会得到什么",
+    "en": "What you receive"
+  },
+  "ccf14677e99": {
+    "zh": "上线维护与持续迭代",
+    "en": "Maintenance and ongoing iteration"
+  },
+  "c186c216c6e": {
+    "zh": "相关客户项目",
+    "en": "IN PRODUCTION"
+  },
+  "c2e9ee617bd": {
+    "zh": "查看相关系统与项目结果",
+    "en": "Related system and project results"
+  },
+  "c9f70c398fd": {
+    "zh": "常见问题",
+    "en": "Common questions"
+  },
+  "c7f1a4caa4e": {
+    "zh": "可以接入我们已有的系统吗？",
+    "en": "Can it connect to our existing systems?"
+  },
+  "cb9bc65b425": {
+    "zh": "可以。评估阶段会确认数据来源、接口和权限，优先使用现有数据库、文档与业务系统。",
+    "en": "Yes. The assessment covers data sources, interfaces and permissions, starting with the systems and documents you already use."
+  },
+  "c0d5ddd0cbb": {
+    "zh": "如何保证答案和结果可靠？",
+    "en": "How do you make results reliable?"
+  },
+  "c0b647bcc73": {
+    "zh": "使用企业自己的资料，结合引用溯源、规则校验和人工复核点。无法确认的任务交还业务负责人处理。",
+    "en": "We use your own sources, citations, validation rules and human review. Uncertain tasks return to a business owner."
+  },
+  "c1d935442b7": {
+    "zh": "多久能看到第一版？",
+    "en": "When can we try a first version?"
+  }
+}

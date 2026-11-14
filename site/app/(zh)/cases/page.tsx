@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CasesOverviewView } from "@/components/PageTemplates";
+import { CasesOverviewView } from "@/components/v3/views/CasesOverviewView";
 import { buildPageMetadata, pick, siteCopy } from "@/lib/content";
 
 export const metadata: Metadata = buildPageMetadata({

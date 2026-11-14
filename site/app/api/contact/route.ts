@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { createHash } from "crypto";
+import { createHash, randomUUID } from "crypto";
 export const runtime = "nodejs";
 const schema = z.object({
   name: z.string().trim().min(1).max(160),
@@ -15,7 +15,6 @@ const schema = z.object({
   website: z.string().max(200).optional(),
   locale: z.enum(["zh", "en"]),
 });
-const limits = new Map<string, { count: number; expires: number }>();
 export async function POST(request: Request) {
   const origin = request.headers.get("origin");
   let allowedOrigin = !origin;
@@ -71,25 +70,9 @@ export async function POST(request: Request) {
   const ip =
     request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "local";
   const key = createHash("sha256").update(ip).digest("hex");
-  const now = Date.now();
-  for (const [k, v] of limits) {
-    if (v.expires <= now) limits.delete(k);
-  }
-  const prev = limits.get(key);
-  if (prev && prev.count >= 5)
-    return NextResponse.json(
-      {
-        error:
-          locale === "zh"
-            ? "提交次数较多，请一小时后再试。"
-            : "Too many requests. Please try again in an hour.",
-      },
-      { status: 429 },
-    );
   if (
-    !process.env.RESEND_API_KEY ||
-    !process.env.LEAD_INBOX ||
-    !process.env.LEAD_FROM
+    !process.env.LEAD_GATEWAY_URL ||
+    !process.env.LEAD_GATEWAY_TOKEN
   )
     return NextResponse.json(
       {
@@ -100,82 +83,23 @@ export async function POST(request: Request) {
       },
       { status: 503 },
     );
-  limits.set(key, {
-    count: (prev?.count || 0) + 1,
-    expires: prev?.expires || now + 3600000,
-  });
   const data = parsed.data;
-  const safe = (s: string) =>
-    s.replace(
-      /[<>&"']/g,
-      (c) =>
-        ({
-          "<": "&lt;",
-          ">": "&gt;",
-          "&": "&amp;",
-          '"': "&quot;",
-          "'": "&#39;",
-        })[c]!,
-    );
+  // The gateway must atomically enforce the quota and persist the inquiry before
+  // acknowledging it. Mail delivery is a retryable notification after persistence.
+  // No visitor auto-reply is sent. This service is deliberately not wired in preview.
+  const inquiryId=randomUUID();
   try {
-    const payload = [
-      {
-        from: process.env.LEAD_FROM,
-        to: [process.env.LEAD_INBOX],
-        reply_to: data.email,
-        subject: "Cyano inquiry — " + data.company,
-        html: `<h1>New inquiry</h1><p>${safe(data.name)} · ${safe(data.company)}</p><p>${safe(data.email)}</p><p>Role: ${safe(data.role || "—")}</p><p>Phone / WeChat: ${safe(data.phone || "—")}</p><p>Preferred start: ${safe(data.start || "—")}</p><p>${safe(data.inquiry)}</p><p>${safe(data.message).replaceAll("\n", "<br>")}</p>`,
-      },
-      {
-        from: process.env.LEAD_FROM,
-        to: [data.email],
-        subject:
-          locale === "zh"
-            ? "Cyano 已收到你的咨询"
-            : "Cyano received your inquiry",
-        html:
-          locale === "zh"
-            ? "<p>谢谢你的咨询。我们的资深顾问将在 1 个工作日内回复。</p><p>Cyano Intelligence · 澜屿智创</p>"
-            : "<p>Thank you. A senior consultant will reply within one business day.</p><p>Cyano Intelligence</p>",
-      },
-    ];
-    const response = await fetch("https://api.resend.com/emails/batch", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(payload),
-      signal: AbortSignal.timeout(15000),
+    const response=await fetch(process.env.LEAD_GATEWAY_URL,{
+      method:"POST",
+      headers:{"Content-Type":"application/json",Authorization:`Bearer ${process.env.LEAD_GATEWAY_TOKEN}`},
+      body:JSON.stringify({id:inquiryId,rateLimit:{key,max:5,windowSeconds:3600},inquiry:data,createdAt:new Date().toISOString()}),
+      signal:AbortSignal.timeout(15000),
     });
-    if (!response.ok) throw new Error("Delivery failed");
-    if (process.env.LEAD_WEBHOOK) {
-      try {
-        await fetch(process.env.LEAD_WEBHOOK, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            msg_type: "text",
-            content: {
-              text: `New Cyano inquiry: ${data.company} · ${data.name} · ${data.email}`,
-            },
-          }),
-          signal: AbortSignal.timeout(5000),
-        });
-      } catch {
-        console.error("Lead notification unavailable");
-      }
-    }
-    return NextResponse.json({ ok: true });
+    if(response.status===429)return NextResponse.json({error:locale==="zh"?"提交次数较多，请一小时后再试。":"Too many requests. Please try again in an hour."},{status:429});
+    const receipt=await response.json();
+    if(!response.ok||receipt.persisted!==true||receipt.id!==inquiryId)throw new Error("Inquiry was not persisted");
+    return NextResponse.json({ok:true,id:inquiryId});
   } catch {
-    return NextResponse.json(
-      {
-        error:
-          locale === "zh"
-            ? "发送暂时失败，请稍后重试。"
-            : "Unable to send right now. Please try again later.",
-      },
-      { status: 502 },
-    );
+    return NextResponse.json({error:locale==="zh"?"暂时无法确认提交结果，请保留表单内容并稍后重试。":"We could not confirm submission. Keep your form details and try again later."},{status:502});
   }
 }

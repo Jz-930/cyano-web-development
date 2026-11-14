@@ -2,82 +2,82 @@
   "seo": {
     "home": {
       "title": {
-        "zh": "企业 AI 工程团队与定制 AI 系统开发",
-        "en": "Enterprise AI Engineering & Custom Workflow Systems"
+        "zh": "为企业开发日常工作用得上的 AI",
+        "en": "Custom AI for your everyday work"
       },
       "description": {
-        "zh": "Cyano（澜屿智创）为企业开发销售问答、标书方案自动化、内部知识库与自然语言数据查询系统，提供定制开发、2–6 周试点与托管式 AI 服务。",
-        "en": "Cyano builds production AI systems for sales inquiries, proposal drafting, permissioned knowledge bases and plain-language data queries—custom builds, pilots and managed services."
+        "zh": "我们为企业开发销售问答、标书生成、内部知识库和数据查询系统，也提供托管式 AI 服务。项目包括需求评估、开发部署和上线后的维护。",
+        "en": "We build AI systems for customer inquiries, proposal drafting, internal knowledge and data queries. We also offer managed AI services, with support from initial assessment through deployment and maintenance."
       }
     },
     "services": {
       "title": {
-        "zh": "企业 AI 解决方案：销售、标书、知识库与查数",
-        "en": "Enterprise AI Solutions: Sales, Proposals, Knowledge & Data"
+        "zh": "销售、文档、知识库与数据查询",
+        "en": "AI for sales, documents, knowledge and data"
       },
       "description": {
-        "zh": "围绕销售技术问答、标书与报告自动起草、带权限的企业知识库、自然语言数据库查询四类高频业务场景，提供可审计、可维护的 AI 系统。",
-        "en": "Explore four core enterprise AI workflows—sales technical Q&A, cited proposal drafting, permission-aware internal assistants and read-only SQL analytics."
+        "zh": "我们根据工作频率、资料条件和审核要求，评估哪些环节适合使用 AI。你可以选择定制系统、先做一个试点，或委托我们持续处理任务。",
+        "en": "We assess where AI can help by looking at task frequency, available sources and review requirements. We can build a system, start with a pilot or handle recurring work as a managed service."
       }
     },
     "cases": {
       "title": {
-        "zh": "客户项目案例：六个已交付生产系统与成果",
-        "en": "Case Studies: Six Enterprise AI Systems in Production"
+        "zh": "六个客户项目的界面与成果",
+        "en": "Six client projects: systems and results"
       },
       "description": {
-        "zh": "查看 Cyano 在工程制造、咨询投研、企业 IT、零售供应链、物业管理与内容生产六个行业的真实系统界面、工作流拆解与上线成效。",
-        "en": "Inspect real interfaces, workflow architectures and measured outcomes across six delivered systems in manufacturing, consulting, enterprise IT, retail, property and media."
+        "zh": "6 个客户项目 · 覆盖 6 个行业",
+        "en": "6 client projects across 6 industries"
       }
     },
     "technology": {
       "title": {
-        "zh": "方法与技术：Cyano Core 上下文编排与安全治理",
-        "en": "Technology: Cyano Core Context Engineering & Governance"
+        "zh": "我们如何开发和维护企业 AI 系统",
+        "en": "How we build and maintain enterprise AI"
       },
       "description": {
-        "zh": "了解 Cyano Core 如何通过权限前置检索、四级动态上下文预算、SOP Playbook 编排与完整处理日志，控制多轮长任务的成本、延迟与准确性。",
-        "en": "See how Cyano Core handles permissioned ingestion, four-tier context budgeting, SOP playbooks and audit logging to keep enterprise AI fast, cited and controllable."
+        "zh": "这里介绍资料检索、上下文管理和任务编排的处理方法，以及成本、响应速度、权限和部署的设计。",
+        "en": "Our approach covers retrieval, context management and task orchestration, along with cost, response time, access controls and deployment."
       }
     },
     "engagement": {
       "title": {
-        "zh": "合作方式：定制开发、2–6 周试点与托管式 AI 服务",
-        "en": "How We Work: Custom Builds, Pilots & Managed AI Services"
+        "zh": "选择适合当前项目的合作方式",
+        "en": "Choose how to work with us"
       },
       "description": {
-        "zh": "比较完整定制开发（6–12 周）、低启动试点（2–6 周）与托管式 AI 服务（2 周内首批交付）的权责边界、交付周期、部署选项与验收流程。",
-        "en": "Compare full custom development (6–12 weeks), scoped pilots (2–6 weeks) and managed AI services (< 2 weeks to first batch), including SaaS vs. private deployment."
+        "zh": "先评估现有流程的成本、使用频率和预期收益，再确定开发范围与合作方式。三种模式的交付内容和维护责任如下。",
+        "en": "We assess current costs, usage and expected benefits before agreeing on scope. The three options below differ in what you receive and who operates the system."
       }
     },
     "about": {
       "title": {
-        "zh": "关于我们：模型研发与世界 500 强工程背景团队",
-        "en": "About Cyano: AI Model R&D & Enterprise Software Team"
+        "zh": "为企业开发和维护 AI 工具",
+        "en": "Building and maintaining AI tools for businesses"
       },
       "description": {
-        "zh": "认识 Cyano（澜屿智创）四位核心创始人：全员具备 6 年以上软件开发经验、AI 模型研发背景与世界 500 强企业经历，服务中国与北美企业客户。",
-        "en": "Meet Cyano’s four founders—combining AI model R&D, Fortune Global 500 engineering experience and hands-on delivery for enterprises in China and North America."
+        "zh": "Cyano（澜屿智创）是一支企业 AI 工程团队，服务中国与北美的企业客户。我们为企业定制 AI 工具、AI 工作流与托管式 AI 服务，专注于把 AI 用进销售、文档、知识管理和数据分析等核心业务流程。",
+        "en": "Cyano is an enterprise AI engineering team serving clients in China and North America. We build custom AI tools, workflows and managed AI services that put AI to work in sales, documents, knowledge management and analytics."
       }
     },
     "insights": {
       "title": {
-        "zh": "工程洞察：知识库权限、标书自动化与项目选型",
-        "en": "Insights: Notes on Enterprise AI Design & Delivery"
+        "zh": "企业 AI 项目的\n设计与实施经验",
+        "en": "Notes on designing\nand implementing AI"
       },
       "description": {
-        "zh": "来自一线交付项目的实践笔记：企业知识库如何做检索前鉴权与维护、15 分钟标书初稿背后的分阶段校验，以及如何评估定制、试点与托管。",
-        "en": "Practical engineering notes from client deployments: permissioned RAG maintenance, staged proposal drafting with 7 QA checks, and choosing the right delivery model."
+        "zh": "介绍知识库建设、文档生成流程，以及定制、试点与托管服务的选择。",
+        "en": "Guides to knowledge systems, document generation and choosing between a custom build, pilot or managed service."
       }
     },
     "contact": {
       "title": {
-        "zh": "联系我们：预约 30–45 分钟项目评估或保密演示",
-        "en": "Contact Us: Book a 30–45 Minute Project Assessment"
+        "zh": "联系我们，讨论你的项目",
+        "en": "Contact us about your project"
       },
       "description": {
-        "zh": "带上一份工作样本与我们讨论现有流程、资料条件与改进目标。资深顾问将在 1 个工作日内回复，并在一周内给出评估结论与合作建议。",
-        "en": "Share a workflow or sample document to discuss scope, data readiness and expected ROI. A senior consultant replies within one business day."
+        "zh": "告诉我们目前如何完成这项工作、需要多少时间，以及希望改进什么。有现成的工作样本即可开始讨论，不必先写完整的需求文档。",
+        "en": "Tell us how you do the work today, how long it takes and what you want to improve. A work sample is enough to begin; a full requirements document can come later."
       }
     },
     "privacy": {
@@ -102,17 +102,50 @@
     }
   },
   "nav": {
-    "solutions": { "zh": "解决方案", "en": "Solutions" },
-    "cases": { "zh": "案例", "en": "Case Studies" },
-    "technology": { "zh": "方法与技术", "en": "Technology" },
-    "engagement": { "zh": "合作方式", "en": "How We Work" },
-    "about": { "zh": "关于我们", "en": "About" },
-    "team": { "zh": "团队介绍", "en": "Founding Team" },
-    "insights": { "zh": "洞察", "en": "Insights" },
-    "contact": { "zh": "联系我们", "en": "Contact" },
-    "allSolutions": { "zh": "查看全部解决方案", "en": "View all solutions" },
-    "primaryCta": { "zh": "预约项目咨询", "en": "Discuss your project" },
-    "skipToMain": { "zh": "跳转到主要内容", "en": "Skip to main content" }
+    "solutions": {
+      "zh": "解决方案",
+      "en": "Solutions"
+    },
+    "cases": {
+      "zh": "案例",
+      "en": "Case Studies"
+    },
+    "technology": {
+      "zh": "方法与技术",
+      "en": "Technology"
+    },
+    "engagement": {
+      "zh": "合作方式",
+      "en": "How We Work"
+    },
+    "about": {
+      "zh": "关于我们",
+      "en": "About"
+    },
+    "team": {
+      "zh": "团队介绍",
+      "en": "Founding Team"
+    },
+    "insights": {
+      "zh": "洞察",
+      "en": "Insights"
+    },
+    "contact": {
+      "zh": "联系我们",
+      "en": "Contact"
+    },
+    "allSolutions": {
+      "zh": "查看全部解决方案",
+      "en": "View all solutions"
+    },
+    "primaryCta": {
+      "zh": "预约项目咨询",
+      "en": "Discuss your project"
+    },
+    "skipToMain": {
+      "zh": "跳转到主要内容",
+      "en": "Skip to main content"
+    }
   },
   "footer": {
     "positioning": {
@@ -123,16 +156,22 @@
       "zh": "服务中国与北美企业，支持全球远程交付",
       "en": "Serving enterprises in China and North America, with remote delivery worldwide."
     },
-    "closingEyebrow": { "zh": "项目咨询", "en": "START A CONVERSATION" },
+    "closingEyebrow": {
+      "zh": "项目咨询",
+      "en": "START A CONVERSATION"
+    },
     "closingTitle": {
       "zh": "聊聊你希望改进的工作流程",
-      "en": "Tell us about the workflow you want to improve"
+      "en": "Tell us about your workflow"
     },
     "closingBody": {
-      "zh": "预约一次 30–45 分钟的业务沟通，结合一份现有工作样本，评估资料条件、实施周期与预期改善。",
-      "en": "Book a 30–45 minute call with a sample of your current work to assess source readiness, timeline and expected impact."
+      "zh": "预约一次 30–45 分钟的沟通，讨论现有流程、资料和项目目标。",
+      "en": "Book a 30–45 minute call to discuss your process, source material and project goals."
     },
-    "secondaryCta": { "zh": "比较三种合作方式", "en": "Compare engagement models" },
+    "secondaryCta": {
+      "zh": "比较三种合作方式",
+      "en": "Compare engagement models"
+    },
     "copyright": {
       "zh": "© 2026 Cyano Intelligence · 澜屿智创 版权所有",
       "en": "© 2026 Cyano Intelligence. All rights reserved."
@@ -144,332 +183,552 @@
       "en": "Try anonymized demo"
     },
     "publicNote": {
-      "zh": "公开演示使用预设脱敏数据展示交互逻辑；完整生产系统可在签署保密协议（NDA）后预约工程师演示。",
-      "en": "Public sandboxes run on anonymized sample data; full production systems can be demonstrated by an engineer under NDA."
+      "zh": "这些案例来自 Cyano 为企业客户交付的项目。界面中的客户信息与数据已按保密要求脱敏。签署保密协议后，可由工程师演示完整系统。",
+      "en": "These projects were built for enterprise clients. Client information and data in the screenshots have been anonymized. An engineer can demonstrate the full system under NDA."
     },
     "ndaButton": {
       "zh": "预约保密演示",
       "en": "Book an NDA walkthrough"
     },
     "interactiveDisclaimer": {
-      "zh": "本页交互演示使用预设问题与脱敏样本展示检索及只读校验流程，不连接任何真实客户生产库。",
-      "en": "This interactive walkthrough uses preset prompts and anonymized records to illustrate retrieval and read-only validation; no live client database is connected."
+      "zh": "本页使用预设问题和脱敏示例展示操作流程，不连接客户数据。",
+      "en": "This walkthrough uses preset questions and anonymized examples. It does not connect to client data."
     }
   },
   "home": {
     "eyebrow": {
-      "zh": "企业 AI 工程团队 · CYANO INTELLIGENCE",
+      "zh": "企业 AI 工程团队",
       "en": "ENTERPRISE AI ENGINEERING"
     },
     "title": {
-      "zh": "为企业开发日常工作用得上的 AI 系统",
-      "en": "Custom AI systems built for everyday work"
+      "zh": "为企业开发日常工作用得上的 AI",
+      "en": "Custom AI for your everyday work"
     },
     "subtitle": {
-      "zh": "我们为企业开发销售问答、标书生成、内部知识库和数据查询系统，也提供托管式 AI 服务。每个项目涵盖需求评估、资料治理、开发部署与上线后的持续维护。",
-      "en": "We build production AI systems for customer inquiries, proposal drafting, internal knowledge and data queries—and operate managed AI workflows, from initial assessment through deployment and maintenance."
+      "zh": "我们为企业开发销售问答、标书生成、内部知识库和数据查询系统，也提供托管式 AI 服务。项目包括需求评估、开发部署和上线后的维护。",
+      "en": "We build AI systems for customer inquiries, proposal drafting, internal knowledge and data queries. We also offer managed AI services, with support from initial assessment through deployment and maintenance."
     },
     "secondaryCta": {
-      "zh": "查看已交付案例",
-      "en": "See delivered systems"
+      "zh": "查看案例",
+      "en": "See our work"
     },
     "heroStage": {
       "zh": {
         "screenshot": "/media/huisheng-proposal-ai/huisheng-proposal-ai-01-workflow-draft.webp",
         "systemBadge": "智能标书与方案生成系统",
-        "projectTag": "已交付生产界面 · 咨询与投研机构",
-        "sourcesLabel": "已检索企业依据",
+        "projectTag": "界面示例",
+        "sourcesLabel": "界面内容",
         "sources": [
-          { "code": "SRC 01", "title": "产品与技术规格库 v4.2", "meta": "命中 12 项生效参数" },
-          { "code": "SRC 02", "title": "同行业历史交付档案 #18", "meta": "复用方法论与章节结构" },
-          { "code": "SRC 03", "title": "本次招标评分与约束表", "meta": "提取 7 项必填商务条款" }
+          {
+            "code": "01",
+            "title": "核心诉求",
+            "meta": "原始界面内容"
+          },
+          {
+            "code": "02",
+            "title": "盈利能力评估",
+            "meta": "原始界面内容"
+          },
+          {
+            "code": "03",
+            "title": "压力测试",
+            "meta": "原始界面内容"
+          }
         ],
-        "checkLabel": "完整性与引用校验",
-        "checkTotal": 7,
+        "checkLabel": "人工复核",
+        "checkTotal": 1,
         "checks": [
-          "必填商务与技术章节齐全",
-          "设备参数与现行规格库一致",
-          "关键结论均绑定源文档条款",
-          "待人工确认假设已单独高亮"
+          "生成内容可能有误，须由人工复核。"
         ],
         "outcomeValue": "2 天 → 15 分钟",
-        "outcomeDetail": "完成可编辑标书初稿 · 引用准确率 99% · 7/7 项校验通过"
+        "outcomeDetail": "方案初稿耗时 · 该项目成果"
       },
       "en": {
         "screenshot": "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-01-dashboard.webp",
         "systemBadge": "Enterprise Wiki IT Assistant",
-        "projectTag": "Production UI · Internal IT Operations",
-        "sourcesLabel": "Authorized sources matched",
+        "projectTag": "Interface example",
+        "sourcesLabel": "Visible in the interface",
         "sources": [
-          { "code": "SRC 01", "title": "IT Access & VPN Policy §4.2", "meta": "Active version · Staff scope" },
-          { "code": "SRC 02", "title": "Endpoint Troubleshooting SOP", "meta": "Verified steps & MFA check" },
-          { "code": "SRC 03", "title": "Directory Role Clearance", "meta": "Pre-query ACL passed" }
+          {
+            "code": "01",
+            "title": "Setup VPN on Windows",
+            "meta": "Original interface content"
+          },
+          {
+            "code": "02",
+            "title": "VPN Troubleshooting",
+            "meta": "Original interface content"
+          }
         ],
-        "checkLabel": "Policy & citation checks",
-        "checkTotal": 5,
+        "checkLabel": "Human review",
+        "checkTotal": 1,
         "checks": [
-          "Caller role & region permissions verified",
-          "Active policy version confirmed",
-          "Paragraph-level citation attached",
-          "Escalation rules armed for edge cases"
+          "Generated content can be wrong and needs review."
         ],
-        "outcomeValue": "80% routine tickets · < 3s",
-        "outcomeDetail": "Handled automatically with exact SOP citations · 24/7 support"
+        "outcomeValue": "80% · < 3s average",
+        "outcomeDetail": "Routine inquiries handled · Average response time"
       }
     },
     "outcomeMetrics": [
       {
-        "value": { "zh": "2 天 → 15 分钟", "en": "2 days → 15 min" },
-        "label": { "zh": "生成有引用的标书与方案初稿", "en": "To a cited, editable proposal draft" },
-        "scope": { "zh": "某专业咨询与投研机构交付项目 · 含 7 项完整性检查", "en": "Consulting & research firm system · 7 completeness checks" },
+        "value": {
+          "zh": "2 天 → 15 分钟",
+          "en": "2 days → 15 min"
+        },
+        "label": {
+          "zh": "生成方案初稿",
+          "en": "To a first proposal draft"
+        },
+        "scope": {
+          "zh": "某专业咨询与投研机构，方案与报告撰写量大、论证要求高",
+          "en": "A professional consulting and research firm producing high volumes of evidence-based proposals."
+        },
         "sourceId": "case-proposal-generation"
       },
       {
-        "value": { "zh": "80% · < 3s", "en": "80% · < 3s" },
-        "label": { "zh": "常见内部咨询自动解答与平均响应", "en": "Routine inquiries handled & avg response" },
-        "scope": { "zh": "某企业 IT 服务台知识助手项目 · 复杂问题带记录转人工", "en": "Enterprise IT helpdesk deployment · Context handoff built in" },
+        "value": {
+          "zh": "80% · < 3s",
+          "en": "80% · < 3s"
+        },
+        "label": {
+          "zh": "常见咨询自动处理",
+          "en": "Routine tickets handled"
+        },
+        "scope": {
+          "zh": "某大型企业 IT 部门，内部员工规模大、工单量高",
+          "en": "An enterprise IT department supporting a large internal workforce and a high volume of requests."
+        },
         "sourceId": "case-it-knowledge-assistant"
       },
       {
-        "value": { "zh": "0 行 SQL", "en": "0 lines of SQL" },
-        "label": { "zh": "一线业务直接查询库存与销售数据", "en": "Plain-language inventory & sales queries" },
-        "scope": { "zh": "某零售与供应链企业项目 · 只读权限校验秒级出表", "en": "Retail & supply chain system · Read-only verified queries" },
+        "value": {
+          "zh": "自然语言",
+          "en": "Plain language"
+        },
+        "label": {
+          "zh": "SQL 编写",
+          "en": "Lines of SQL to write"
+        },
+        "scope": {
+          "zh": "某零售与供应链企业，SKU 多、库存与销量数据量大",
+          "en": "A retail and supply chain business with a large SKU catalog and extensive inventory and sales data."
+        },
         "sourceId": "case-nl-data-query"
       }
     ],
     "credibilityLine": {
-      "badge": { "zh": "工程团队背景", "en": "TEAM CREDENTIALS" },
+      "badge": {
+        "zh": "工程团队背景",
+        "en": "TEAM CREDENTIALS"
+      },
       "text": {
-        "zh": "核心成员 100% 拥有世界 500 强企业工作经历与 AI 模型研发经验，全员具备 6 年以上软件工程经验，已在 6 个行业交付生产系统。",
-        "en": "100% of core team members have Fortune Global 500 engineering experience, hands-on AI model R&D backgrounds and 6+ years building software—with systems running across 6 industries."
+        "zh": "Cyano 的核心成员均有 6 年以上软件开发经验，参与过 AI 模型研发，并曾在世界 500 强企业工作。",
+        "en": "Every core member of Cyano has more than six years of software development experience, has worked on AI model R&D and has worked at a Fortune Global 500 company."
       }
     },
     "solutionsSection": {
-      "eyebrow": { "zh": "核心业务场景", "en": "CORE WORKFLOWS" },
-      "title": { "zh": "我们重点解决的四类企业问题", "en": "Four operational bottlenecks we engineer around" },
+      "eyebrow": {
+        "zh": "核心业务场景",
+        "en": "CORE WORKFLOWS"
+      },
+      "title": {
+        "zh": "我们解决的四类问题",
+        "en": "Four problems we solve"
+      },
       "description": {
-        "zh": "先看这项工作现在怎么流转、资料存在哪里、结果由谁把关，再把检索、校验与人工复核嵌进日常流程。",
-        "en": "We map where your documents live, how tasks move and who signs off—then wire retrieval, validation and human checkpoints into daily work."
+        "zh": "我们先了解一项工作现在如何完成、资料存在哪里、结果由谁审核，再设计系统。上线后继续维护知识库、处理使用反馈，并按业务变化调整流程。",
+        "en": "We first examine how a task is done, where its source material is stored and who reviews the result. After launch, we maintain the knowledge base, address user feedback and update workflows as the business changes."
       }
     },
     "casesSection": {
-      "eyebrow": { "zh": "生产系统实录", "en": "SYSTEMS IN PRODUCTION" },
-      "title": { "zh": "已交付的客户项目与真实界面", "en": "Delivered client systems, up close" },
-      "description": {
-        "zh": "查看真实脱敏界面、使用前后的流程耗时对比，以及每个项目对应的工作流设计。",
-        "en": "Inspect anonymized production screens, before-and-after cycle times and the workflow engineering behind each deployment."
+      "eyebrow": {
+        "zh": "生产系统实录",
+        "en": "SYSTEMS IN PRODUCTION"
       },
-      "viewAll": { "zh": "查看全部 6 个案例", "en": "View all 6 case studies" }
+      "title": {
+        "zh": "已交付的客户项目",
+        "en": "Client projects"
+      },
+      "description": {
+        "zh": "查看系统界面、使用流程和上线后的变化。",
+        "en": "See the interfaces, workflows and results of systems in use."
+      },
+      "viewAll": {
+        "zh": "查看全部 6 个案例",
+        "en": "View all 6 case studies"
+      }
     },
     "engineeringSection": {
-      "eyebrow": { "zh": "为什么通用聊天框不够用", "en": "WHY GENERIC CHAT FALLS SHORT" },
-      "title": { "zh": "把 AI 用进正式业务，必须解决四个工程问题", "en": "Four engineering gaps between a chat demo and production" },
-      "description": {
-        "zh": "点击下方任一环节，对比普通提示词对话与 Cyano Core 企业工程架构在真实业务中的处理差异。",
-        "en": "Select any stage below to compare ad-hoc prompt chatting against Cyano Core’s permissioned, auditable workflow architecture."
+      "eyebrow": {
+        "zh": "为什么通用聊天框不够用",
+        "en": "WHY GENERIC CHAT FALLS SHORT"
       },
-      "cta": { "zh": "深入了解 Cyano Core 架构", "en": "Explore Cyano Core architecture" },
+      "title": {
+        "zh": "企业使用 AI，需要处理哪些问题？",
+        "en": "What does AI need to work in a business?"
+      },
+      "description": {
+        "zh": "熟悉模型研发，也做过企业系统。",
+        "en": "Experience in AI models and enterprise software."
+      },
+      "cta": {
+        "zh": "深入了解 Cyano Core 架构",
+        "en": "Explore Cyano Core architecture"
+      },
       "items": [
         {
           "code": "01 / SOURCES",
-          "title": { "zh": "资料分散与权限隔离", "en": "Scattered sources & access boundaries" },
-          "rawLabel": { "zh": "普通聊天框做法", "en": "Ad-hoc chat approach" },
+          "title": {
+            "zh": "资料分散",
+            "en": "Scattered sources"
+          },
+          "rawLabel": {
+            "zh": "普通聊天框做法",
+            "en": "Ad-hoc chat approach"
+          },
           "rawState": {
-            "zh": "员工临时手工上传零散文件，新旧制度混杂，且无法按部门与职级隔离敏感价格或人事条款。",
-            "en": "Employees manually upload loose files; outdated and active policies mix, with no role clearance for sensitive pricing or HR rules."
+            "zh": "产品资料、业务记录和操作经验分布在不同文档与系统中。",
+            "en": "Product information, business records and procedures live in different documents and systems."
           },
-          "rawRisk": { "zh": "风险：引用过期版本或越权暴露内部资料", "en": "Risk: Outdated clauses or unauthorized data exposure" },
-          "engineeredLabel": { "zh": "Cyano Core 工程方案", "en": "Cyano Core architecture" },
+          "rawRisk": {
+            "zh": "现有工作方式",
+            "en": "Current workflow"
+          },
+          "engineeredLabel": {
+            "zh": "Cyano Core 工程方案",
+            "en": "Cyano Core architecture"
+          },
           "engineeredState": {
-            "zh": "连接 PDF、Wiki 与业务库建立动态索引，检索前先校验提问者角色、部门与文档生效状态。",
-            "en": "Connects PDFs, wikis and databases into a live index that verifies user role, department and active version before retrieval."
+            "zh": "接入并整理资料，建立按权限检索的索引。",
+            "en": "Connect and organize these sources for retrieval with access controls."
           },
-          "engineeredGain": { "zh": "保障：仅命中当前有效且已授权的企业资料", "en": "Outcome: Only active, role-authorized sources enter context" }
+          "engineeredGain": {
+            "zh": "工程处理方式",
+            "en": "Engineering approach"
+          }
         },
         {
           "code": "02 / CONTEXT",
-          "title": { "zh": "长对话的信息取舍与成本", "en": "Context selection, latency & token cost" },
-          "rawLabel": { "zh": "普通聊天框做法", "en": "Ad-hoc chat approach" },
+          "title": {
+            "zh": "信息取舍",
+            "en": "Context selection"
+          },
+          "rawLabel": {
+            "zh": "普通聊天框做法",
+            "en": "Ad-hoc chat approach"
+          },
           "rawState": {
-            "zh": "把整份长档案或几十轮对话原样塞进窗口，不仅调用费随轮次暴涨，核心禁令也容易被淹没。",
-            "en": "Dumping entire archives and raw chat history inflates API spend every turn and buries critical business instructions in noise."
+            "zh": "一次请求能容纳的信息有限，过多无关资料也会干扰回答。",
+            "en": "Each request has a size limit, and irrelevant material can distract from the question."
           },
-          "rawRisk": { "zh": "风险：越聊越慢、费用失控且遗漏关键规则", "en": "Risk: Rising latency, compounding cost & missed rules" },
-          "engineeredLabel": { "zh": "Cyano Core 工程方案", "en": "Cyano Core architecture" },
+          "rawRisk": {
+            "zh": "现有工作方式",
+            "en": "Current workflow"
+          },
+          "engineeredLabel": {
+            "zh": "Cyano Core 工程方案",
+            "en": "Cyano Core architecture"
+          },
           "engineeredState": {
-            "zh": "四级动态记忆分层：固定核心业务指令、提取结构化状态、压缩中间推理，在预算内精准拼装上下文。",
-            "en": "Four-tier memory pins core rules, extracts structured state and condenses intermediate traces within a strict token budget."
+            "zh": "Cyano Core 根据当前任务选择相关资料与上下文。",
+            "en": "Cyano Core selects sources and context for the current task."
           },
-          "engineeredGain": { "zh": "保障：第 100 轮仍保持 < 200ms* 拼装与最多 40%* 降本", "en": "Outcome: < 200ms* assembly at turn 100 & up to 40%* lower cost" }
+          "engineeredGain": {
+            "zh": "工程处理方式",
+            "en": "Engineering approach"
+          }
         },
         {
           "code": "03 / VERIFICATION",
-          "title": { "zh": "输出核查、计算与人工把关", "en": "Deterministic checks & human sign-off" },
-          "rawLabel": { "zh": "普通聊天框做法", "en": "Ad-hoc chat approach" },
+          "title": {
+            "zh": "结果核查",
+            "en": "Review requirements"
+          },
+          "rawLabel": {
+            "zh": "普通聊天框做法",
+            "en": "Ad-hoc chat approach"
+          },
           "rawState": {
-            "zh": "直接生成整篇文字而无具体条款定位，遇到缺失参数时甚至可能自行编造数字，人工复核需重翻全文。",
-            "en": "Generates unverified prose without clause links and may guess missing numbers, forcing reviewers to re-check every page by hand."
+            "zh": "生成内容可能有误，合同和财务等工作需要明确的审核程序。",
+            "en": "Generated content can be wrong, and work involving contracts or finances needs review."
           },
-          "rawRisk": { "zh": "风险：合同、报价与合规场景无法承担幻觉错误", "en": "Risk: Unacceptable errors in bids, contracts & finance" },
-          "engineeredLabel": { "zh": "Cyano Core 工程方案", "en": "Cyano Core architecture" },
+          "rawRisk": {
+            "zh": "现有工作方式",
+            "en": "Current workflow"
+          },
+          "engineeredLabel": {
+            "zh": "Cyano Core 工程方案",
+            "en": "Cyano Core architecture"
+          },
           "engineeredState": {
-            "zh": "数值交由确定性程序校验，段落绑定源文档出处，缺失条件自动暂停并在关键节点交由负责人确认。",
-            "en": "Runs deterministic math checks, binds claims to clickable source clauses, flags missing inputs and pauses at human review gates."
+            "zh": "在流程中加入规则校验、来源引用和人工审核。",
+            "en": "Add validation rules, source citations and human approval to the workflow."
           },
-          "engineeredGain": { "zh": "保障：每处结论有据可查，专业责任边界清晰", "en": "Outcome: Traceable evidence & explicit human accountability" }
+          "engineeredGain": {
+            "zh": "工程处理方式",
+            "en": "Engineering approach"
+          }
         },
         {
           "code": "04 / OPERATIONS",
-          "title": { "zh": "团队统一复用与持续维护", "en": "Shared SOP execution & post-launch upkeep" },
-          "rawLabel": { "zh": "普通聊天框做法", "en": "Ad-hoc chat approach" },
+          "title": {
+            "zh": "团队使用",
+            "en": "Team use"
+          },
+          "rawLabel": {
+            "zh": "普通聊天框做法",
+            "en": "Ad-hoc chat approach"
+          },
           "rawState": {
-            "zh": "每位员工各自摸索提示词，处理标准不一；制度更新或模型升级后，缺少审计记录与统一调优机制。",
-            "en": "Every employee writes personal prompts with uneven quality; when policies or models change, nothing updates systematically."
+            "zh": "员工各自编写提示词，处理方法和结果难以统一。",
+            "en": "Individually written prompts can produce inconsistent processes and results."
           },
-          "rawRisk": { "zh": "风险：难以在团队推广，三个月后沦为闲置工具", "en": "Risk: Uneven quality & rapid abandonment after launch" },
-          "engineeredLabel": { "zh": "Cyano Core 工程方案", "en": "Cyano Core architecture" },
+          "rawRisk": {
+            "zh": "现有工作方式",
+            "en": "Current workflow"
+          },
+          "engineeredLabel": {
+            "zh": "Cyano Core 工程方案",
+            "en": "Cyano Core architecture"
+          },
           "engineeredState": {
-            "zh": "把企业 SOP 固化为标准 Playbook，留存执行与修改日志，随业务规则和模型迭代持续更新知识与测试集。",
-            "en": "Codifies team SOPs into shared playbooks with execution logs, regression suites and ongoing source & model maintenance."
+            "zh": "按企业 SOP 设置操作步骤，保留执行记录，供团队重复使用。",
+            "en": "Define shared steps from your SOPs and retain execution records."
           },
-          "engineeredGain": { "zh": "保障：全员标准一致，系统随业务演进长期可用", "en": "Outcome: Consistent team execution & sustained adoption" }
+          "engineeredGain": {
+            "zh": "工程处理方式",
+            "en": "Engineering approach"
+          }
         }
       ]
     },
     "engagementSection": {
-      "eyebrow": { "zh": "三种合作模式", "en": "ENGAGEMENT MODELS" },
-      "title": { "zh": "按确定性与内部精力，选择定制、试点或托管", "en": "Start with a custom build, a scoped pilot or managed delivery" },
-      "description": {
-        "zh": "先评估现有流程工时、资料条件与预期改善，再决定开发范围。三种模式在交付周期与运维责任上清晰分工。",
-        "en": "We evaluate current hours, source quality and expected savings before scoping—so timeline, ownership and operations match your team."
+      "eyebrow": {
+        "zh": "三种合作模式",
+        "en": "ENGAGEMENT MODELS"
       },
-      "cta": { "zh": "查看详细对比与选型向导", "en": "Compare models & take the 3-step selector" }
+      "title": {
+        "zh": "定制开发、试点或托管服务",
+        "en": "Custom development, pilots and managed services"
+      },
+      "description": {
+        "zh": "需要长期使用自有系统，可以选择定制开发；还不确定效果，可以先做试点；希望委托我们按批次完成工作，可以选择托管服务。",
+        "en": "Choose a custom build for a system your team will own and use regularly, a pilot to test an uncertain use case, or a managed service for work you want us to deliver in batches."
+      },
+      "cta": {
+        "zh": "查看详细对比与选型向导",
+        "en": "Compare models & take the 3-step selector"
+      }
     },
     "foundersSection": {
-      "eyebrow": { "zh": "创始团队", "en": "FOUNDING TEAM" },
-      "title": { "zh": "四位创始人直接参与评估、架构与交付", "en": "Four founders leading architecture, product and delivery" },
-      "description": {
-        "zh": "分别负责业务合作与评估、AI 与上下文架构、工程交付与质量、产品设计与交互体验。",
-        "en": "Dedicated leads across business ROI assessment, AI & context architecture, production engineering and workflow UX."
+      "eyebrow": {
+        "zh": "创始团队",
+        "en": "FOUNDING TEAM"
       },
-      "cta": { "zh": "了解团队背景与工作原则", "en": "Meet the team & how we work" }
+      "title": {
+        "zh": "创始团队",
+        "en": "The founding team"
+      },
+      "description": {
+        "zh": "四位创始人分别负责客户合作、技术架构、工程交付和产品设计。",
+        "en": "Our four founders lead client partnerships, technical architecture, engineering delivery and product design."
+      },
+      "cta": {
+        "zh": "了解团队背景与工作原则",
+        "en": "Meet the team & how we work"
+      }
     },
     "insightsSection": {
-      "eyebrow": { "zh": "工程洞察", "en": "ENGINEERING INSIGHTS" },
-      "title": { "zh": "来自真实交付项目的技术与选型笔记", "en": "Practical notes from enterprise AI deployments" },
-      "viewAll": { "zh": "阅读全部洞察", "en": "Read all insights" }
+      "eyebrow": {
+        "zh": "工程洞察",
+        "en": "ENGINEERING INSIGHTS"
+      },
+      "title": {
+        "zh": "来自真实交付项目的技术与选型笔记",
+        "en": "Practical notes from enterprise AI deployments"
+      },
+      "viewAll": {
+        "zh": "阅读全部洞察",
+        "en": "Read all insights"
+      }
     }
   },
   "engagementModes": [
     {
       "key": "custom",
-      "badge": { "zh": "模式 01 · 资产归客户所有", "en": "MODEL 01 · CLIENT-OWNED SYSTEM" },
-      "name": { "zh": "完整定制开发", "en": "Full Custom Build" },
-      "duration": { "zh": "6–12 周交付首期", "en": "6–12 weeks to v1" },
+      "badge": {
+        "zh": "自有系统",
+        "en": "OWN A SYSTEM"
+      },
+      "name": {
+        "zh": "完整定制开发",
+        "en": "Full custom build"
+      },
+      "duration": {
+        "zh": "6–12 周首期上线",
+        "en": "First release in 6–12 weeks"
+      },
       "startWeek": 0,
       "endWeek": 10,
-      "milestoneLabel": { "zh": "评估 → 架构 → 开发联调 → 部署移交", "en": "Assess → Architect → Build → Deploy & own" },
-      "summary": {
-        "zh": "围绕明确且高频的核心流程定制完整系统，连接内部数据库与权限体系，系统资产归你长期所有。",
-        "en": "A complete production system tailored to high-frequency workflows, integrated with your databases and permissions, owned by your team."
+      "milestoneLabel": {
+        "zh": "6–12 周首期上线",
+        "en": "First release in 6–12 weeks"
       },
-      "bestFor": { "zh": "适合需求明确、高频使用、希望沉淀自有系统的企业", "en": "Best for clear requirements, daily usage and long-term ownership" }
+      "summary": {
+        "zh": "适合需求明确、使用频繁，需要拥有并长期使用系统的团队。",
+        "en": "For teams with clear requirements and frequent use that want to own the system."
+      },
+      "bestFor": {
+        "zh": "适合需求明确、使用频繁，需要拥有并长期使用系统的团队。",
+        "en": "For teams with clear requirements and frequent use that want to own the system."
+      }
     },
     {
       "key": "pilot",
-      "badge": { "zh": "模式 02 · 快速验证效果", "en": "MODEL 02 · VALIDATE ON REAL DATA" },
-      "name": { "zh": "低启动试点 + 持续服务", "en": "Scoped Pilot + Ongoing Service" },
-      "duration": { "zh": "2–6 周上线首版", "en": "2–6 weeks to working v1" },
+      "badge": {
+        "zh": "小范围试用",
+        "en": "TEST A USE CASE"
+      },
+      "name": {
+        "zh": "低启动试点 + 持续服务",
+        "en": "Pilot + ongoing service"
+      },
+      "duration": {
+        "zh": "2–6 周首个可用版本",
+        "en": "Working version in 2–6 weeks"
+      },
       "startWeek": 0,
       "endWeek": 5,
-      "milestoneLabel": { "zh": "样本对齐 → 核心场景验证 → 按效果扩展", "en": "Sample align → Working v1 → Expand or stop" },
-      "summary": {
-        "zh": "聚焦单一高价值任务，用真实业务资料测试省时效果与员工采纳度，拿到数据后再决定扩建或调整。",
-        "en": "Test one focused task against real company documents to verify time savings and team adoption before committing larger budget."
+      "milestoneLabel": {
+        "zh": "2–6 周首个可用版本",
+        "en": "Working version in 2–6 weeks"
       },
-      "bestFor": { "zh": "适合首次引入 AI 工作流、希望先低成本验证回报的团队", "en": "Best for proving ROI and adoption on a bounded workflow first" }
+      "summary": {
+        "zh": "先开发一个范围较小的版本，根据实际效果决定是否扩展。",
+        "en": "Start with a smaller working version and use the results to decide whether to expand."
+      },
+      "bestFor": {
+        "zh": "先开发一个范围较小的版本，根据实际效果决定是否扩展。",
+        "en": "Start with a smaller working version and use the results to decide whether to expand."
+      }
     },
     {
       "key": "managed",
-      "badge": { "zh": "模式 03 · 免建技术团队", "en": "MODEL 03 · OPERATED BY CYANO" },
-      "name": { "zh": "托管式 AI 服务", "en": "Managed AI Service" },
-      "duration": { "zh": "2 周内首批交付 · 按月/批次", "en": "< 2 weeks first batch · Ongoing" },
+      "badge": {
+        "zh": "按批次交付",
+        "en": "OUTSOURCE THE WORK"
+      },
+      "name": {
+        "zh": "托管式 AI 服务",
+        "en": "Managed AI service"
+      },
+      "duration": {
+        "zh": "首批结果 2 周内",
+        "en": "First results within 2 weeks"
+      },
       "startWeek": 0,
       "endWeek": 2,
-      "milestoneLabel": { "zh": "2 周首交付 → 按批次/按月持续运行与人工复核", "en": "< 2w first batch → Continuous Cyano ops + QA" },
-      "summary": {
-        "zh": "你提供资料与验收标准，Cyano 负责运行 AI 工作流并安排人工审核，直接按周或按批次交付可用成果。",
-        "en": "You supply materials and quality criteria; Cyano operates the AI workflow, performs human QA and delivers finished batches."
+      "milestoneLabel": {
+        "zh": "首批结果 2 周内",
+        "en": "First results within 2 weeks"
       },
-      "bestFor": { "zh": "适合需要稳定成批产出、暂不配置内部 AI 运维人员的团队", "en": "Best for recurring batch output without internal engineering ops" }
+      "summary": {
+        "zh": "客户提供资料与质量标准，Cyano 运行工作流、审核并交付结果。",
+        "en": "You provide the sources and quality criteria. Cyano runs the workflow, reviews the output and delivers it."
+      },
+      "bestFor": {
+        "zh": "客户提供资料与质量标准，Cyano 运行工作流、审核并交付结果。",
+        "en": "You provide the sources and quality criteria. Cyano runs the workflow, reviews the output and delivers it."
+      }
     }
   ],
   "technology": {
-    "eyebrow": { "zh": "平台与方法 · CYANO CORE", "en": "ENGINEERING PLATFORM · CYANO CORE" },
-    "title": { "zh": "我们如何开发、治理并维护企业 AI 系统", "en": "How we engineer, govern and maintain enterprise AI" },
-    "intro": {
-      "zh": "这里展示 Cyano Core 在资料权限接入、长上下文动态预算、SOP 任务编排，以及成本、延迟与审计治理上的工程做法。",
-      "en": "Inside Cyano Core: how we handle permission-aware ingestion, four-tier context budgets, SOP playbooks, latency control and audit governance."
+    "eyebrow": {
+      "zh": "平台与方法 · CYANO CORE",
+      "en": "ENGINEERING PLATFORM · CYANO CORE"
     },
-    "cta": { "zh": "与技术负责人讨论数据与部署", "en": "Talk to our CTO about data & deployment" },
+    "title": {
+      "zh": "我们如何开发和维护企业 AI 系统",
+      "en": "How we build and maintain enterprise AI"
+    },
+    "intro": {
+      "zh": "这里介绍资料检索、上下文管理和任务编排的处理方法，以及成本、响应速度、权限和部署的设计。",
+      "en": "Our approach covers retrieval, context management and task orchestration, along with cost, response time, access controls and deployment."
+    },
+    "cta": {
+      "zh": "与技术负责人讨论数据与部署",
+      "en": "Talk to our CTO about data & deployment"
+    },
     "coreDefinition": {
-      "zh": "Cyano Core 是我们用于客户项目交付的底层工程平台。它连接多源企业资料、在受控 Token 预算内拼装上下文、按 SOP 执行校验步骤，并完整留存输出依据供业务团队复核。",
-      "en": "Cyano Core is the engineering foundation behind our client deployments. It indexes company sources with role permissions, assembles task-specific context within strict budgets, executes SOP playbooks and logs every citation for review."
+      "zh": "Cyano Core 是我们用于项目开发的工程平台。它索引企业资料、按 SOP 执行任务，并记录输出所用的依据和处理步骤，供业务人员复核。",
+      "en": "Cyano Core is the engineering platform we use in our projects. It indexes company sources, runs tasks according to SOPs and records the evidence and steps behind outputs for review."
     },
     "layers": [
       {
         "id": "L1",
         "code": "LAYER 01 · INGESTION",
-        "name": { "zh": "多源知识摄入与权限索引", "en": "Permission-aware source ingestion" },
+        "name": {
+          "zh": "知识摄入",
+          "en": "Ingestion"
+        },
         "summary": {
-          "zh": "连接 PDF（含扫描件与复杂表格）、业务数据库与协作系统，保留章节层级、生效版本与部门访问权限。",
-          "en": "Connects PDFs (including OCR & complex tables), SQL databases and wikis while preserving section hierarchy, version status and role ACLs."
+          "zh": "连接 PDF、数据库、API 等多源数据，建立带权限管理的动态索引。",
+          "en": "Connects PDFs, databases and APIs into a permission-aware, continuously updated index."
         },
         "requestAction": {
-          "zh": "请求动作：核验提问者身份与组织角色，剔除已废止文档与未授权目录，定位候选条款。",
-          "en": "On request: Verifies caller identity & role clearance, excludes superseded versions and retrieves authorized candidate clauses."
+          "zh": "连接 PDF、数据库、API 等多源数据，建立带权限管理的动态索引。",
+          "en": "Connects PDFs, databases and APIs into a permission-aware, continuously updated index."
         },
         "auditOutput": "acl_verified=true · active_docs=14 · denied_scopes=2"
       },
       {
         "id": "L2",
         "code": "LAYER 02 · CONTEXT ENGINE",
-        "name": { "zh": "动态上下文预算与编排", "en": "Dynamic context budgeting" },
+        "name": {
+          "zh": "上下文编排",
+          "en": "Context orchestration"
+        },
         "summary": {
-          "zh": "拒绝原样堆砌长历史，按当前子任务从四级记忆层中挑选高价值上下文，控制 Token 开销与首字等待。",
-          "en": "Replaces raw chat-history dumping with four-tier selective assembly tailored to the active step—keeping latency flat and costs predictable."
+          "zh": "在有限的 Token 预算内，自动筛选并拼装最相关的信息。",
+          "en": "Selects and assembles only the most relevant information within the token budget."
         },
         "requestAction": {
-          "zh": "请求动作：固定加载核心业务禁令，注入结构化项目状态，压缩历史中间推理，丢弃无关噪音。",
-          "en": "On request: Pins core business rules, injects structured task state, condenses prior reasoning traces and drops irrelevant chatter."
+          "zh": "在有限的 Token 预算内，自动筛选并拼装最相关的信息。",
+          "en": "Selects and assembles only the most relevant information within the token budget."
         },
         "auditOutput": "budget_used=3,840/8,192 tok · assembly_ms=142ms · core_rules=100%"
       },
       {
         "id": "L3",
         "code": "LAYER 03 · SOP PLAYBOOKS",
-        "name": { "zh": "SOP 工作流与确定性校验", "en": "SOP playbooks & deterministic QA" },
+        "name": {
+          "zh": "任务执行",
+          "en": "Execution"
+        },
         "summary": {
-          "zh": "把企业标准作业流程拆解为可配置阶段，结合确定性数值校验、完整性清单与人工确认关卡。",
-          "en": "Structures enterprise SOPs into staged playbooks combining model generation, deterministic parameter validation and human sign-off gates."
+          "zh": "将 SOP 配置为 Playbook，定义操作步骤、校验规则和异常处理方式。",
+          "en": "Configure SOPs as playbooks with defined steps, validation rules and exception handling."
         },
         "requestAction": {
-          "zh": "请求动作：分步执行提取、生成与规则核对；若发现必填参数缺失或条款冲突，立即暂停并提示补充。",
-          "en": "On request: Runs staged extraction, drafting and checklist validation; pauses automatically if required figures are missing or conflict."
+          "zh": "将 SOP 配置为 Playbook，定义操作步骤、校验规则和异常处理方式。",
+          "en": "Configure SOPs as playbooks with defined steps, validation rules and exception handling."
         },
         "auditOutput": "playbook=proposal_v3 · checks_passed=7/7 · human_gate=ready"
       },
       {
         "id": "L4",
         "code": "LAYER 04 · GOVERNANCE",
-        "name": { "zh": "出处溯源、敏感过滤与审计", "en": "Citations, DLP filtering & audit logs" },
+        "name": {
+          "zh": "权限与审计",
+          "en": "Access and audit"
+        },
         "summary": {
-          "zh": "为关键结论绑定源文档章节链接，拦截敏感字段外泄，并独立记录全过程日志以便复盘调优。",
-          "en": "Links statements to exact source clauses, filters sensitive PII/commercial fields and writes permissioned audit logs for post-launch QA."
+          "zh": "记录处理日志、保留来源引用，并过滤敏感信息。",
+          "en": "Record processing logs, retain source citations and filter sensitive information."
         },
         "requestAction": {
-          "zh": "请求动作：执行输出敏感词与权限复检，生成可点击引用卡片，写入独立设权的审计与工单记录。",
-          "en": "On request: Re-verifies output clearance, attaches clickable clause citations and commits an immutable trace to the audit store."
+          "zh": "记录处理日志、保留来源引用，并过滤敏感信息。",
+          "en": "Record processing logs, retain source citations and filter sensitive information."
         },
         "auditOutput": "citations_bound=9 · dlp_flags=0 · trace_id=cy_98f4a2"
       }
@@ -477,397 +736,872 @@
     "contextTiers": [
       {
         "tier": "TIER 01",
-        "name": { "zh": "核心业务指令与合规红线", "en": "Pinned core instructions & constraints" },
-        "policy": { "zh": "100% 强制常驻 · 永不裁剪", "en": "100% retained · Never evicted" },
+        "name": {
+          "zh": "保留核心指令",
+          "en": "Core instructions, preserved"
+        },
+        "policy": {
+          "zh": "分层示意",
+          "en": "Illustrative tier"
+        },
         "sharePercent": 24,
-        "detail": { "zh": "审批权限边界、输出格式标准、严禁编造数值等铁律", "en": "Approval boundaries, schema rules & zero-fabrication policies" }
+        "detail": {
+          "zh": "保留核心指令",
+          "en": "Core instructions, preserved"
+        }
       },
       {
         "tier": "TIER 02",
-        "name": { "zh": "当前任务结构化关键状态", "en": "Structured active task state" },
-        "policy": { "zh": "键值结构同步 · 随阶段刷新", "en": "Schema-synced · Updated per stage" },
+        "name": {
+          "zh": "结构化关键状态",
+          "en": "Structured key states"
+        },
+        "policy": {
+          "zh": "分层示意",
+          "en": "Illustrative tier"
+        },
         "sharePercent": 32,
-        "detail": { "zh": "已确认客户参数、生效知识片段与当前章节约束", "en": "Confirmed client parameters, active clauses & section scope" }
+        "detail": {
+          "zh": "结构化关键状态",
+          "en": "Structured key states"
+        }
       },
       {
         "tier": "TIER 03",
-        "name": { "zh": "历史多轮中间推理摘要", "en": "Condensed multi-turn reasoning" },
-        "policy": { "zh": "按语义高密压缩 · 释放冗余窗口", "en": "Semantically compressed · Noise stripped" },
+        "name": {
+          "zh": "压缩中间推理记录",
+          "en": "Condensed reasoning records"
+        },
+        "policy": {
+          "zh": "分层示意",
+          "en": "Illustrative tier"
+        },
         "sharePercent": 26,
-        "detail": { "zh": "保留已定结论与修改脉络，剔除重复寒暄与废稿", "en": "Keeps settled decisions while pruning verbose draft chatter" }
+        "detail": {
+          "zh": "压缩中间推理记录",
+          "en": "Condensed reasoning records"
+        }
       },
       {
         "tier": "TIER 04",
-        "name": { "zh": "异常与校验未通过记录", "en": "Validation & fault-cause records" },
-        "policy": { "zh": "按需挂载 · 防止重复踩坑", "en": "Mounted on retry · Prevents repeat errors" },
+        "name": {
+          "zh": "保留故障原因记录",
+          "en": "Fault-cause records"
+        },
+        "policy": {
+          "zh": "分层示意",
+          "en": "Illustrative tier"
+        },
         "sharePercent": 18,
-        "detail": { "zh": "记录前序冲突原因或缺失字段，指导修正或转交人工", "en": "Tracks prior check failures so retries or handoffs stay accurate" }
+        "detail": {
+          "zh": "保留故障原因记录",
+          "en": "Fault-cause records"
+        }
       }
     ],
     "benchmarks": [
       {
-        "value": { "zh": "< 200ms", "en": "< 200ms" },
+        "value": {
+          "zh": "< 200ms",
+          "en": "< 200ms"
+        },
         "hasFootnote": true,
-        "label": { "zh": "上下文检索与拼装延迟", "en": "Context retrieval & assembly latency" },
+        "label": {
+          "zh": "响应延迟",
+          "en": "Response latency"
+        },
         "condition": {
-          "zh": "第 100 轮长任务与第 1 轮保持同级响应预算",
-          "en": "Consistent budget speed at turn 100 as at turn 1"
+          "zh": "第 1 轮与第 100 轮一样快",
+          "en": "As fast at turn 100 as at turn 1"
         },
         "sourceId": "core-benchmarks"
       },
       {
-        "value": { "zh": "100%", "en": "100%" },
+        "value": {
+          "zh": "100%",
+          "en": "100%"
+        },
         "hasFootnote": true,
-        "label": { "zh": "核心业务指令召回率", "en": "Core business instruction recall" },
+        "label": {
+          "zh": "核心指令召回",
+          "en": "Core instruction recall"
+        },
         "condition": {
-          "zh": "100 轮连续多步测试中固定规则未发生遗忘",
-          "en": "Pinned system rules retained across 100-turn runs"
+          "zh": "* 基于 Cyano 内部基准测试。",
+          "en": "* Based on Cyano internal benchmarks."
         },
         "sourceId": "core-benchmarks"
       },
       {
-        "value": { "zh": "最多 40%", "en": "Up to 40%" },
-        "hasFootnote": true,
-        "label": { "zh": "长对话 Token 调用成本降低", "en": "Lower multi-turn token cost" },
-        "condition": {
-          "zh": "对比每次重发完整原始对话历史的内部基准",
-          "en": "Measured against resending full raw conversation history"
+        "value": {
+          "zh": "最多 40%",
+          "en": "Up to 40%"
         },
-        "sourceId": "core-benchmarks"
-      },
-      {
-        "value": { "zh": "4 级", "en": "4 tiers" },
-        "hasFootnote": false,
-        "label": { "zh": "受控动态上下文记忆架构", "en": "Controlled dynamic memory hierarchy" },
+        "hasFootnote": true,
+        "label": {
+          "zh": "Token 成本最多降低",
+          "en": "Lower token cost, up to"
+        },
         "condition": {
-          "zh": "核心指令 · 关键状态 · 压缩推理 · 故障记录",
-          "en": "Core rules · Key state · Condensed trace · Fault log"
+          "zh": "* 基于 Cyano 内部基准测试。",
+          "en": "* Based on Cyano internal benchmarks."
         },
         "sourceId": "core-benchmarks"
       }
     ],
     "benchmarkFootnote": {
-      "zh": "* 基于 Cyano 内部基准测试（100 轮多步骤企业任务对比测试）；具体生产项目的延迟与成本表现因文档规模、所选模型与部署环境而异。",
-      "en": "* Based on Cyano internal 100-turn enterprise workflow benchmarks; production latency and cost savings vary by corpus size, model selection and deployment environment."
+      "zh": "* 基于 Cyano 内部基准测试。",
+      "en": "* Based on Cyano internal benchmarks."
     },
     "stackGroups": [
       {
-        "category": { "zh": "支持的模型接口（可按任务混用或切换）", "en": "Foundation models (mix or switch without rebuilding workflows)" },
+        "category": {
+          "zh": "模型",
+          "en": "Models"
+        },
         "items": [
-          { "zh": "OpenAI GPT", "en": "OpenAI GPT" },
-          { "zh": "Anthropic Claude", "en": "Anthropic Claude" },
-          { "zh": "Google Gemini", "en": "Google Gemini" },
-          { "zh": "DeepSeek", "en": "DeepSeek" },
-          { "zh": "通义千问（Qwen）", "en": "Alibaba Qwen" },
-          { "zh": "Meta Llama（本地/私有）", "en": "Meta Llama (Private)" }
+          {
+            "zh": "GPT",
+            "en": "GPT"
+          },
+          {
+            "zh": "Claude",
+            "en": "Claude"
+          },
+          {
+            "zh": "Gemini",
+            "en": "Gemini"
+          },
+          {
+            "zh": "DeepSeek",
+            "en": "DeepSeek"
+          },
+          {
+            "zh": "Qwen",
+            "en": "Qwen"
+          },
+          {
+            "zh": "Llama",
+            "en": "Llama"
+          }
         ]
       },
       {
-        "category": { "zh": "企业数据库与办公协作接入", "en": "Databases & enterprise collaboration systems" },
+        "category": {
+          "zh": "系统",
+          "en": "Systems"
+        },
         "items": [
-          { "zh": "PostgreSQL", "en": "PostgreSQL" },
-          { "zh": "MySQL", "en": "MySQL" },
-          { "zh": "飞书（Feishu / Lark）", "en": "Lark / Feishu" },
-          { "zh": "钉钉（DingTalk）", "en": "DingTalk" },
-          { "zh": "企业微信（WeCom）", "en": "WeCom" },
-          { "zh": "SharePoint", "en": "SharePoint" },
-          { "zh": "Confluence", "en": "Confluence" },
-          { "zh": "ERP / CRM REST API", "en": "ERP / CRM REST APIs" }
+          {
+            "zh": "飞书",
+            "en": "Lark"
+          },
+          {
+            "zh": "钉钉",
+            "en": "DingTalk"
+          },
+          {
+            "zh": "企业微信",
+            "en": "WeCom"
+          },
+          {
+            "zh": "ERP / CRM",
+            "en": "ERP / CRM"
+          }
         ]
       },
       {
-        "category": { "zh": "复杂业务文档与结构化数据格式", "en": "Document & structured data formats" },
+        "category": {
+          "zh": "资料",
+          "en": "Sources"
+        },
         "items": [
-          { "zh": "PDF（含扫描件 OCR 与跨页表格）", "en": "PDF (Scanned OCR & multi-page tables)" },
-          { "zh": "Word / DOCX 标书模板", "en": "Word / DOCX templates" },
-          { "zh": "Excel / CSV 台账与清单", "en": "Excel / CSV ledgers" },
-          { "zh": "Markdown / 企业 Wiki", "en": "Markdown / Internal Wiki" },
-          { "zh": "只读 SQL 视图与指标字典", "en": "Read-only SQL views & metric schemas" }
+          {
+            "zh": "PDF / Office",
+            "en": "PDF / Office"
+          },
+          {
+            "zh": "数据库 / API",
+            "en": "Databases / APIs"
+          }
         ]
       }
     ],
     "securityBanner": {
-      "title": { "zh": "安全治理与部署边界", "en": "Security governance & deployment options" },
+      "title": {
+        "zh": "安全与治理",
+        "en": "Security & governance"
+      },
       "body": {
-        "zh": "每个交付系统均内置角色权限隔离、段落级引用溯源、完整处理日志审计与敏感字段拦截；支持隔离云端 SaaS 托管或客户自有环境 Docker 私有化部署。",
-        "en": "Every deployment includes role-based access control, clause-level citations, complete processing audit logs and sensitive-data filtering—available via isolated SaaS hosting or Docker private deployment inside your environment."
+        "zh": "系统提供访问权限、来源引用、处理日志和敏感信息过滤。部署可选择 SaaS 托管或私有环境。",
+        "en": "The system includes access controls, citations, processing logs and sensitive-data filtering. Deployment is available through SaaS hosting or a private environment."
       }
+    },
+    "difficulties": [
+      {
+        "zh": "调用成本 —— 每次发送完整历史记录，会使长对话的 API 费用持续增加。",
+        "en": "API costs — Resending the full history increases costs as a conversation grows."
+      },
+      {
+        "zh": "响应等待 —— 输入内容越长，模型开始返回文字前的处理时间可能越久。",
+        "en": "Response time — Longer inputs can increase the wait before the model begins responding."
+      },
+      {
+        "zh": "指令遗漏 —— 资料过多时，模型可能忽略夹在中间的重要指令。",
+        "en": "Missed instructions — A model may overlook important instructions within a large body of material."
+      }
+    ],
+    "contextTitle": {
+      "zh": "根据任务选择上下文，控制长对话的成本与延迟。",
+      "en": "Select context for each task to control cost and latency in long conversations."
     }
   },
   "engagement": {
-    "eyebrow": { "zh": "合作方式", "en": "HOW WE WORK" },
-    "title": { "zh": "选择适合当前阶段的合作方式", "en": "Choose how to work with us" },
+    "eyebrow": {
+      "zh": "合作方式",
+      "en": "HOW WE WORK"
+    },
+    "title": {
+      "zh": "选择适合当前项目的合作方式",
+      "en": "Choose how to work with us"
+    },
     "intro": {
-      "zh": "先评估现有流程的工时成本、资料准备度与预期改善，再确定开发范围与合作模式。以下三种方案在资产归属与日常运维上清晰区分。",
-      "en": "We assess current hours, source readiness and expected gains before agreeing on scope. Our three models differ clearly in timeline, ownership and who runs operations."
+      "zh": "先评估现有流程的成本、使用频率和预期收益，再确定开发范围与合作方式。三种模式的交付内容和维护责任如下。",
+      "en": "We assess current costs, usage and expected benefits before agreeing on scope. The three options below differ in what you receive and who operates the system."
     },
     "recommender": {
-      "eyebrow": { "zh": "30 秒选型助手", "en": "INTERACTIVE FIT SELECTOR" },
-      "title": { "zh": "回答三个问题，查看建议起步方式", "en": "Answer three questions to see a recommended starting model" },
+      "eyebrow": {
+        "zh": "合作方式选择",
+        "en": "INTERACTIVE FIT SELECTOR"
+      },
+      "title": {
+        "zh": "回答三个问题，查看建议起步方式",
+        "en": "Answer three questions to see a recommended starting model"
+      },
       "questions": [
         {
           "id": "frequency",
-          "label": { "zh": "1. 这项工作在团队内的发生频率？", "en": "1. How often does your team run this workflow?" },
+          "label": {
+            "zh": "1. 这项工作在团队内的发生频率？",
+            "en": "1. How often does your team run this workflow?"
+          },
           "options": [
-            { "value": "daily", "label": { "zh": "每天高频发生，多人协同使用", "en": "Daily across multiple team members" }, "scores": { "custom": 3, "pilot": 1, "managed": 1 } },
-            { "value": "weekly", "label": { "zh": "每周或按项目周期成批发生", "en": "Weekly or in recurring project batches" }, "scores": { "custom": 1, "pilot": 2, "managed": 3 } },
-            { "value": "testing", "label": { "zh": "刚准备引入 AI，想先测一个场景", "en": "Exploring AI—want to validate one task first" }, "scores": { "custom": 0, "pilot": 3, "managed": 1 } }
+            {
+              "value": "daily",
+              "label": {
+                "zh": "每天高频发生，多人协同使用",
+                "en": "Daily across multiple team members"
+              },
+              "scores": {
+                "custom": 3,
+                "pilot": 1,
+                "managed": 1
+              }
+            },
+            {
+              "value": "weekly",
+              "label": {
+                "zh": "每周或按项目周期成批发生",
+                "en": "Weekly or in recurring project batches"
+              },
+              "scores": {
+                "custom": 1,
+                "pilot": 2,
+                "managed": 3
+              }
+            },
+            {
+              "value": "testing",
+              "label": {
+                "zh": "刚准备引入 AI，想先测一个场景",
+                "en": "Exploring AI—want to validate one task first"
+              },
+              "scores": {
+                "custom": 0,
+                "pilot": 3,
+                "managed": 1
+              }
+            }
           ]
         },
         {
           "id": "ops",
-          "label": { "zh": "2. 你们希望由谁来运行和维护系统？", "en": "2. Who should operate the workflow day to day?" },
+          "label": {
+            "zh": "2. 你们希望由谁来运行和维护系统？",
+            "en": "2. Who should operate the workflow day to day?"
+          },
           "options": [
-            { "value": "own", "label": { "zh": "希望沉淀自有系统，内部团队长期使用", "en": "We want our own system for internal staff" }, "scores": { "custom": 3, "pilot": 1, "managed": 0 } },
-            { "value": "hybrid", "label": { "zh": "先用轻量化服务跑通，有效再长期持有", "en": "Start lightweight, decide ownership after results" }, "scores": { "custom": 1, "pilot": 3, "managed": 1 } },
-            { "value": "outsource", "label": { "zh": "不设技术运维岗，直接把成批任务委托交付", "en": "No internal tech ops—deliver reviewed outputs to us" }, "scores": { "custom": 0, "pilot": 0, "managed": 4 } }
+            {
+              "value": "own",
+              "label": {
+                "zh": "希望沉淀自有系统，内部团队长期使用",
+                "en": "We want our own system for internal staff"
+              },
+              "scores": {
+                "custom": 3,
+                "pilot": 1,
+                "managed": 0
+              }
+            },
+            {
+              "value": "hybrid",
+              "label": {
+                "zh": "先用轻量化服务跑通，有效再长期持有",
+                "en": "Start lightweight, decide ownership after results"
+              },
+              "scores": {
+                "custom": 1,
+                "pilot": 3,
+                "managed": 1
+              }
+            },
+            {
+              "value": "outsource",
+              "label": {
+                "zh": "不设技术运维岗，直接把成批任务委托交付",
+                "en": "No internal tech ops—deliver reviewed outputs to us"
+              },
+              "scores": {
+                "custom": 0,
+                "pilot": 0,
+                "managed": 4
+              }
+            }
           ]
         },
         {
           "id": "readiness",
-          "label": { "zh": "3. 现有历史资料与验收标准的清晰程度？", "en": "3. How ready are your source documents and review rules?" },
+          "label": {
+            "zh": "3. 现有历史资料与验收标准的清晰程度？",
+            "en": "3. How ready are your source documents and review rules?"
+          },
           "options": [
-            { "value": "clear", "label": { "zh": "资料与审批标准较明确，可直接对接系统", "en": "Sources and approval rules are well defined" }, "scores": { "custom": 2, "pilot": 1, "managed": 2 } },
-            { "value": "partial", "label": { "zh": "有历史样本，但需先梳理规则并测算准确率", "en": "We have samples, but need to test accuracy first" }, "scores": { "custom": 0, "pilot": 3, "managed": 1 } }
+            {
+              "value": "clear",
+              "label": {
+                "zh": "资料与审批标准较明确，可直接对接系统",
+                "en": "Sources and approval rules are well defined"
+              },
+              "scores": {
+                "custom": 2,
+                "pilot": 1,
+                "managed": 2
+              }
+            },
+            {
+              "value": "partial",
+              "label": {
+                "zh": "有历史样本，但需先梳理规则并测算准确率",
+                "en": "We have samples, but need to test accuracy first"
+              },
+              "scores": {
+                "custom": 0,
+                "pilot": 3,
+                "managed": 1
+              }
+            }
           ]
         }
       ],
-      "applyCta": { "zh": "带此结果预约 30–45 分钟评估", "en": "Discuss this option in a 30–45 min call" }
+      "applyCta": {
+        "zh": "带此结果预约 30–45 分钟评估",
+        "en": "Discuss this option in a 30–45 min call"
+      }
     },
     "comparisonRows": [
       {
-        "dimension": { "zh": "典型交付周期", "en": "Typical timeline" },
-        "custom": { "zh": "首期 6–12 周（视范围与系统接口而定）", "en": "6–12 weeks for v1 (based on scope & integrations)" },
-        "pilot": { "zh": "2–6 周交付首个可用版本", "en": "2–6 weeks to first working version" },
-        "managed": { "zh": "2 周内首批交付，后续按周/月持续产出", "en": "First batch within 2 weeks, then monthly/batch" }
+        "dimension": {
+          "zh": "你得到什么",
+          "en": "What you get"
+        },
+        "custom": {
+          "zh": "完整业务系统，归你所有",
+          "en": "A complete system you own"
+        },
+        "pilot": {
+          "zh": "关键场景可用版本，按需扩展",
+          "en": "A working version, expanded as needed"
+        },
+        "managed": {
+          "zh": "按批次交付经过人工审核的结果",
+          "en": "Batch outputs reviewed by people"
+        }
       },
       {
-        "dimension": { "zh": "你获得的交付物", "en": "What you receive" },
-        "custom": { "zh": "完整业务应用、工作流配置、部署包与操作培训", "en": "Complete web/enterprise app, playbooks, deployment & training" },
-        "pilot": { "zh": "聚焦单一核心任务的可用系统与真实样本评测报告", "en": "Scoped working workflow + accuracy & time-savings report" },
-        "managed": { "zh": "经过 AI 处理与人工复核的成批文档、报表或结构化数据", "en": "Finished documents, reports or structured records reviewed by people" }
+        "dimension": {
+          "zh": "系统运营",
+          "en": "Operations"
+        },
+        "custom": {
+          "zh": "包含基础维护，可持续迭代",
+          "en": "Maintenance with ongoing iteration"
+        },
+        "pilot": {
+          "zh": "包含在持续服务中",
+          "en": "Included in the service"
+        },
+        "managed": {
+          "zh": "Cyano 负责运行与交付",
+          "en": "Fully run by Cyano"
+        }
       },
       {
-        "dimension": { "zh": "资产与数据归属", "en": "Ownership" },
-        "custom": { "zh": "业务系统与专有规则归客户所有", "en": "Client owns the custom system and business configurations" },
-        "pilot": { "zh": "试点期按服务使用，验证通过可平滑升级为自有定制系统", "en": "Service access during pilot; convertible into an owned custom build" },
-        "managed": { "zh": "客户拥有全部业务输入资料与最终交付成果", "en": "Client owns all source materials and delivered outputs" }
-      },
-      {
-        "dimension": { "zh": "日常运行与维护", "en": "Operations & upkeep" },
-        "custom": { "zh": "包含基础上线维护，新增功能可按约定迭代", "en": "Includes baseline maintenance; new features scoped on demand" },
-        "pilot": { "zh": "试点及持续服务周期内的维护由 Cyano 负责", "en": "Maintenance included throughout the active pilot service" },
-        "managed": { "zh": "Cyano 全程负责工作流运行、异常处理与质量把关", "en": "Operated end-to-end by Cyano with agreed SLA and QA" }
-      },
-      {
-        "dimension": { "zh": "适用团队画像", "en": "Best fit" },
-        "custom": { "zh": "流程清晰、日均使用频繁、需深度集成内部权限的企业", "en": "Teams with clear rules, daily usage and internal system integrations" },
-        "pilot": { "zh": "希望先控制预算、用真实工作样本验证回报的业务部门", "en": "Teams validating feasibility and ROI before scaling investment" },
-        "managed": { "zh": "关注稳定结果交付、不打算自建 AI 工程运维团队的企业", "en": "Teams needing reliable capacity without operating software internally" }
+        "dimension": {
+          "zh": "适合谁",
+          "en": "Best for"
+        },
+        "custom": {
+          "zh": "需要自有系统的团队",
+          "en": "Teams that need their own system"
+        },
+        "pilot": {
+          "zh": "需要先测试效果的团队",
+          "en": "Teams validating a use case"
+        },
+        "managed": {
+          "zh": "希望委托处理任务的团队",
+          "en": "Teams needing additional capacity"
+        }
       }
     ],
     "processSteps": [
       {
         "step": "01",
-        "title": { "zh": "需求评估", "en": "Assess requirements" },
-        "detail": { "zh": "结合工作样本梳理目标、操作步骤与数据条件，一周内给出书面评估结论。", "en": "Review a work sample, current steps and data readiness; deliver a written assessment within one week." },
+        "title": {
+          "zh": "需求评估",
+          "en": "Assess requirements"
+        },
+        "detail": {
+          "zh": "梳理目标、流程与数据，一周内给出评估结论。",
+          "en": "Review goals, workflows and data, with an assessment within one week."
+        },
         "ownerId": "F4"
       },
       {
         "step": "02",
-        "title": { "zh": "投入与收益测算", "en": "Estimate costs & ROI" },
-        "detail": { "zh": "核算现有人工、等待与返工成本，对比预期改善，确认是否值得启动开发。", "en": "Compare current drafting, waiting and rework hours against implementation costs to prioritize scope." },
+        "title": {
+          "zh": "价值评估",
+          "en": "Estimate costs and benefits"
+        },
+        "detail": {
+          "zh": "估算人工、外包与返工成本，比较预期收益，确定开发顺序。",
+          "en": "Estimate current costs and expected benefits to prioritize development."
+        },
         "ownerId": "F1"
       },
       {
         "step": "03",
-        "title": { "zh": "范围与验收约定", "en": "Agree scope & acceptance" },
-        "detail": { "zh": "明确合作方式、数据边界、评测集标准、人工复核节点与固定阶段报价。", "en": "Lock down delivery model, data boundaries, evaluation criteria, human gates and transparent pricing." },
+        "title": {
+          "zh": "方案报价",
+          "en": "Propose"
+        },
+        "detail": {
+          "zh": "确认项目范围、合作方式、验收标准与报价。",
+          "en": "Agree scope, engagement, acceptance criteria and price."
+        },
         "ownerId": "F4"
       },
       {
         "step": "04",
-        "title": { "zh": "工程开发与交付", "en": "Build, validate & launch" },
-        "detail": { "zh": "完成资料治理、工作流编排、历史样本对比测试与目标环境部署。", "en": "Execute source indexing, playbook orchestration, historical benchmark QA and environment deployment." },
+        "title": {
+          "zh": "开发与交付",
+          "en": "Build & deliver"
+        },
+        "detail": {
+          "zh": "按约定节奏交付工具、工作流或批量成果。",
+          "en": "Deliver working tools, workflows or batch results on the agreed schedule."
+        },
         "ownerId": "F2"
       },
       {
         "step": "05",
-        "title": { "zh": "上线维护与迭代", "en": "Maintain & iterate" },
-        "detail": { "zh": "持续跟踪员工使用反馈，随资料变更、制度修订与模型升级更新系统。", "en": "Track real user feedback and update indexes, rules and models as your business evolves." },
+        "title": {
+          "zh": "上线维护与迭代",
+          "en": "Maintain and update"
+        },
+        "detail": {
+          "zh": "处理使用反馈与故障，按约定更新资料和功能。",
+          "en": "Address user feedback and faults, and update sources and features as agreed."
+        },
         "ownerId": "F3"
       }
     ],
     "deployments": [
       {
         "key": "saas",
-        "badge": { "zh": "云端隔离环境", "en": "ISOLATED CLOUD" },
-        "title": { "zh": "SaaS 托管部署", "en": "Isolated SaaS Hosting" },
+        "badge": {
+          "zh": "云端隔离环境",
+          "en": "ISOLATED CLOUD"
+        },
+        "title": {
+          "zh": "SaaS 托管部署",
+          "en": "Isolated SaaS Hosting"
+        },
         "body": {
-          "zh": "在租户隔离的云端环境中使用系统，无需自备算力硬件，按实际使用量弹性扩展，适合快速启动试点与中小规模负载。",
-          "en": "Run in a tenant-isolated cloud environment with zero hardware setup and elastic capacity—ideal for fast pilots and lighter workloads."
+          "zh": "在隔离的云端环境中使用系统，按使用量扩展资源，适合试点和较轻的工作负载。",
+          "en": "Use the system in an isolated cloud environment, with resources scaled to usage. Suitable for pilots and lighter workloads."
         }
       },
       {
         "key": "private",
-        "badge": { "zh": "客户自有环境", "en": "CUSTOMER ENVIRONMENT" },
-        "title": { "zh": "Docker 私有化部署", "en": "Private Environment Deployment" },
+        "badge": {
+          "zh": "客户自有环境",
+          "en": "CUSTOMER ENVIRONMENT"
+        },
+        "title": {
+          "zh": "Docker 私有化部署",
+          "en": "Private Environment Deployment"
+        },
         "body": {
-          "zh": "应用、数据库与模型接口在你的自有环境中运行，数据不出内网边界；交付标准化容器配置并适配内部算力与权限体系。",
-          "en": "Run models, indexes and application services inside your own infrastructure. We deliver containerized configurations adapted to your security and compute rules."
+          "zh": "模型与数据在你的环境中运行。交付 Docker 部署配置，并适配本地算力；部署要求在项目开始前确认。",
+          "en": "Run models and data inside your environment. We provide Docker deployment configurations and adapt them to local compute, with requirements agreed before the project starts."
         }
       }
     ],
     "faqs": [
       {
-        "q": { "zh": "应该直接做完整定制，还是先从试点开始？", "en": "Should we start with a full build or a scoped pilot?" },
+        "q": {
+          "zh": "应该完整定制，还是从试点开始？",
+          "en": "Full build or pilot first?"
+        },
         "a": {
-          "zh": "当业务规则明确且团队每天高频使用时，可直接规划完整定制系统；若对资料质量、员工采纳度或节省工时还没有把握，建议先用 2–6 周试点在单一任务上验证，拿到真实数据后再决定是否扩展。",
-          "en": "Choose a full build when rules are clear and daily volume is high. If source quality, adoption or time savings remain uncertain, start with a 2–6 week pilot on one bounded task before expanding."
+          "zh": "需求明确且使用频繁时，可以规划完整系统。对效果或使用量还没有把握时，先用小范围试点测试，再决定是否扩展。",
+          "en": "A full build suits clear requirements and frequent use. If results or likely usage remain uncertain, test a smaller scope in a pilot before expanding."
         }
       },
       {
-        "q": { "zh": "什么情况下托管式 AI 服务比自建系统更划算？", "en": "When does a managed AI service make more sense than owning software?" },
+        "q": {
+          "zh": "什么时候适合托管式 AI 服务？",
+          "en": "When does managed service make sense?"
+        },
         "a": {
-          "zh": "适合需要按周或按批次稳定获得处理结果（如批量文档汇编、材料归档审核），但暂不打算配置内部技术人员维护系统的团队。你提供原始资料与验收标准，Cyano 运行 AI 工作流并完成人工复核。",
-          "en": "Managed service fits teams that want recurring batch outputs—such as proposal assembly or document structuring—without assigning internal staff to maintain software. You supply inputs and standards; Cyano runs the workflow and reviews output."
+          "zh": "适合希望按批次委托工作、暂不准备自行维护系统的团队。客户提供资料与标准，Cyano 运行 AI 工作流并审核结果。",
+          "en": "It suits teams that want to outsource recurring work without operating a system. You supply sources and criteria; Cyano runs the AI workflow and reviews the output."
         }
       },
       {
-        "q": { "zh": "前期的需求评估具体会产出什么？", "en": "What do we receive from the initial assessment?" },
+        "q": {
+          "zh": "需求评估会提供什么？",
+          "en": "What does the assessment provide?"
+        },
         "a": {
-          "zh": "我们会结合你提供的工作样本梳理现有步骤、资料来源与审核责任人，估算改造成本与预期节省工时，并在沟通后一周内提供建议范围、实施顺序与合作方案。",
-          "en": "We examine your sample workflow, data sources and sign-off owners, estimate implementation effort versus hours saved, and return a recommended scope, sequence and engagement model within one week."
+          "zh": "我们会梳理操作步骤、数据来源和参与人员，估算改造成本与预期收益，给出建议范围和实施顺序。",
+          "en": "We review the process, data sources and people involved, estimate costs and benefits, and recommend a scope and implementation sequence."
         }
       },
       {
-        "q": { "zh": "你们如何给出项目报价？", "en": "How do you scope and price a project?" },
+        "q": {
+          "zh": "如何获得适合自己的方案？",
+          "en": "How do we get a tailored proposal?"
+        },
         "a": {
-          "zh": "报价基于任务范围、数据源与系统对接复杂度、部署环境要求及维护周期透明核算。首次 30–45 分钟沟通后，我们会针对适合你的模式给出清晰的阶段交付物与费用明细。",
-          "en": "Pricing reflects workflow complexity, system integrations, deployment environment and support scope. Following our initial 30–45 minute call, we provide an itemized proposal with clear deliverables."
+          "zh": "联系我们后，我们会根据业务价值、技术复杂度、使用规模和上线节奏，给出贴合实际的建议与报价。",
+          "en": "Talk to us. We tailor the recommendation and quote to your business value, technical complexity, scale and timeline."
         }
       },
       {
-        "q": { "zh": "企业内部资料和敏感数据如何保障安全？", "en": "How are confidential documents and business data protected?" },
+        "q": {
+          "zh": "数据安全如何保障？",
+          "en": "How is our data protected?"
+        },
         "a": {
-          "zh": "支持私有化部署，核心业务资料保留在你的自有环境内；应用层内置基于角色的检索前权限隔离、敏感字段过滤与完整处理日志审计，客户业务资料绝不用于训练公共模型。",
-          "en": "Private deployment keeps sensitive records inside your environment. Every system enforces pre-retrieval role permissions, sensitive-field filtering and complete audit logging—and client data is never used to train public models."
+          "zh": "支持私有化部署，数据不出你的环境；系统内置权限控制、全链路日志审计与敏感信息拦截。",
+          "en": "Private deployment keeps data inside your environment. Every system includes access control, full audit logs and sensitive-data filtering."
         }
       },
       {
-        "q": { "zh": "系统上线之后由谁负责日常维护？", "en": "Who maintains the system after launch?" },
+        "q": {
+          "zh": "上线之后谁来维护？",
+          "en": "Who maintains it after launch?"
+        },
         "a": {
-          "zh": "三种模式均包含上线后的维护安排。完整定制包含基础维护期并可按需约定迭代；试点维护包含在持续服务期内；托管式服务由 Cyano 全程负责运行、更新与结果交付。",
-          "en": "All three models include post-launch support. Custom builds include baseline maintenance with optional iteration sprints; pilot upkeep is covered in ongoing service; managed workflows are operated continuously by Cyano."
+          "zh": "三种模式都包含上线后的维护。定制开发和试点的维护、迭代范围在合作时约定；托管服务的运行与交付由 Cyano 负责。",
+          "en": "All three options include maintenance. The scope of support and further development is agreed for builds and pilots; Cyano operates and delivers the managed service."
         }
       },
       {
-        "q": { "zh": "如果试点效果未达预期怎么办？", "en": "What happens if a pilot falls short of expectations?" },
+        "q": {
+          "zh": "如果效果不达预期怎么办？",
+          "en": "What if results fall short?"
+        },
         "a": {
-          "zh": "试点启动前双方会书面约定输入范围、评测指标与停止条件。验收时按实测数据复盘：若是资料缺口则补充来源，若是交互不便则调整流程，若业务回报不足则可按约定干净结束试点，避免盲目追加大额投入。",
-          "en": "We agree on inputs, evaluation metrics and stop conditions before starting. At review, we diagnose whether gaps stem from missing sources, workflow friction or low volume—so you can refine, expand or stop cleanly."
+          "zh": "试点开始前，双方约定验收标准。根据实际结果判断需要补充资料、调整流程还是停止试点，再决定是否扩大投入。",
+          "en": "Agree on acceptance criteria before the pilot. Use the results to decide whether to improve the sources, change the workflow or stop before investing further."
         }
       }
     ]
   },
   "about": {
-    "eyebrow": { "zh": "关于 CYANO · 澜屿智创", "en": "ABOUT CYANO" },
-    "title": { "zh": "为企业开发并长期维护真正用得起来的 AI 工具", "en": "Engineering and maintaining AI tools teams rely on every day" },
-    "intro": {
-      "zh": "服务中国与北美企业客户，把模型能力、上下文工程与企业软件规范结合进日常业务流程。",
-      "en": "Serving enterprise clients in China and North America by combining AI model R&D with disciplined software engineering."
+    "eyebrow": {
+      "zh": "关于 CYANO · 澜屿智创",
+      "en": "ABOUT CYANO"
     },
-    "whoWeAreTitle": { "zh": "模型研发背景与企业系统交付经验", "en": "AI model R&D paired with enterprise software delivery" },
+    "title": {
+      "zh": "为企业开发和维护 AI 工具",
+      "en": "Building and maintaining AI tools for businesses"
+    },
+    "intro": {
+      "zh": "Cyano（澜屿智创）提供企业 AI 定制开发、试点与托管服务。我们根据企业的资料和流程设计系统，并负责约定范围内的上线维护。",
+      "en": "Cyano provides custom enterprise AI development, pilots and managed services. We design systems around company sources and workflows, and maintain them within the agreed service scope."
+    },
+    "whoWeAreTitle": {
+      "zh": "模型研发背景与企业系统交付经验",
+      "en": "AI model R&D paired with enterprise software delivery"
+    },
     "whoWeAreP1": {
-      "zh": "Cyano（澜屿智创）是一支企业 AI 工程团队，服务中国与北美的企业客户。我们为企业定制 AI 工具、AI 工作流与托管式 AI 服务，专注于把 AI 用进销售问答、标书与报告起草、知识管理和数据分析等核心业务流程。",
-      "en": "Cyano is an enterprise AI engineering team serving clients in China and North America. We build custom AI tools, workflows and managed AI services that put AI to work in sales inquiries, proposal drafting, knowledge management and data analytics."
+      "zh": "Cyano（澜屿智创）是一支企业 AI 工程团队，服务中国与北美的企业客户。我们为企业定制 AI 工具、AI 工作流与托管式 AI 服务，专注于把 AI 用进销售、文档、知识管理和数据分析等核心业务流程。",
+      "en": "Cyano is an enterprise AI engineering team serving clients in China and North America. We build custom AI tools, workflows and managed AI services that put AI to work in sales, documents, knowledge management and analytics."
     },
     "whoWeAreP2": {
-      "zh": "每位核心成员都有 6 年以上软件开发经验，参与过 AI 模型研发，并曾在世界 500 强企业工作。四位创始人共同参与项目的需求评估、架构设计、工程交付与上线后维护。",
-      "en": "Every core member has more than six years of software engineering experience, hands-on AI model R&D background and Fortune Global 500 experience. All four founders stay directly involved from assessment through production maintenance."
+      "zh": "每位核心成员都有 6 年以上开发经验，参与过 AI 模型研发，并曾在世界 500 强企业工作。团队共同负责项目的需求分析、开发和上线维护。",
+      "en": "Every core member has more than six years of development experience, has worked on AI model R&D and has worked at a Fortune Global 500 company. The team handles requirements, development and post-launch maintenance."
     },
     "credentials": [
-      { "value": "6+", "unit": { "zh": "年", "en": "yrs" }, "label": { "zh": "每位核心成员最低软件开发经验", "en": "Minimum software engineering experience per core member" } },
-      { "value": "100%", "unit": { "zh": "", "en": "" }, "label": { "zh": "核心成员具备 AI 模型研发实战经验", "en": "Core members with hands-on AI model R&D experience" } },
-      { "value": "100%", "unit": { "zh": "", "en": "" }, "label": { "zh": "核心成员拥有世界 500 强企业工作经历", "en": "Core members with Fortune Global 500 experience" } },
-      { "value": "6", "unit": { "zh": "个行业", "en": "sectors" }, "label": { "zh": "已交付并稳定运行的客户生产系统行业覆盖", "en": "Industries with client systems running in production" } }
+      {
+        "value": "6+",
+        "unit": {
+          "zh": "年",
+          "en": "yrs"
+        },
+        "label": {
+          "zh": "每位核心成员的最低开发经验",
+          "en": "Minimum engineering experience"
+        }
+      },
+      {
+        "value": "100%",
+        "unit": {
+          "zh": "",
+          "en": ""
+        },
+        "label": {
+          "zh": "核心成员拥有 AI 模型研发经验",
+          "en": "Hands-on AI model R&D"
+        }
+      },
+      {
+        "value": "100%",
+        "unit": {
+          "zh": "",
+          "en": ""
+        },
+        "label": {
+          "zh": "核心成员拥有世界 500 强企业工作经历",
+          "en": "Fortune Global 500 experience"
+        }
+      },
+      {
+        "value": "6",
+        "unit": {
+          "zh": "个行业",
+          "en": "sectors"
+        },
+        "label": {
+          "zh": "已服务行业",
+          "en": "Industries in production"
+        }
+      }
     ],
-    "scopeEyebrow": { "zh": "设计方法", "en": "DESIGN DISCIPLINE" },
-    "scopeTitle": { "zh": "围绕你的真实资料与审核责任来设计系统", "en": "Designed around your actual sources and review gates" },
-    "scopeBody": {
-      "zh": "销售咨询需要准确绑定设备参数与历史项目记录；标书生成需要遵守章节模板、出处核对与完整性检查；数据查询需要统一指标口径并限制只读权限。我们按每项工作的约束条件构建系统，并在上线后持续维护。",
-      "en": "Sales inquiries demand exact product specs and past project records. Proposals require section templates, verified citations and completeness checks. Data queries need consistent metric definitions and read-only guardrails. We engineer around those constraints and maintain the system after launch."
+    "scopeEyebrow": {
+      "zh": "设计方法",
+      "en": "DESIGN DISCIPLINE"
     },
-    "principlesEyebrow": { "zh": "工作原则", "en": "OPERATING PRINCIPLES" },
-    "principlesTitle": { "zh": "我们在每个项目中坚持的四件事", "en": "Four commitments on every engagement" },
+    "scopeTitle": {
+      "zh": "按你的资料与流程，\n设计合适的系统。",
+      "en": "Designed around\nyour sources and process."
+    },
+    "scopeBody": {
+      "zh": "销售咨询需要产品参数与项目记录；标书生成需要模板、引用和审核要求；数据查询需要明确指标与访问权限。我们根据每类工作的条件设计系统，并在上线后维护。",
+      "en": "Sales inquiries need specifications and project records. Proposals need templates, sources and review criteria. Data queries need agreed metrics and access controls. We design for those requirements and maintain the system after launch."
+    },
+    "principlesEyebrow": {
+      "zh": "工作原则",
+      "en": "OPERATING PRINCIPLES"
+    },
+    "principlesTitle": {
+      "zh": "我们怎么工作",
+      "en": "How we work"
+    },
     "principles": [
       {
         "code": "01",
-        "title": { "zh": "先算清投入与预期改善", "en": "Assess costs and benefits first" },
-        "body": { "zh": "启动开发前先核对现有工时、资料准备成本与预期节省，不建议投入回报不匹配的盲目开发。", "en": "Review current workload, source-preparation effort and expected gains before writing code—and advise honestly when a build is premature." }
+        "title": {
+          "zh": "评估投入与收益",
+          "en": "Assess costs and benefits"
+        },
+        "body": {
+          "zh": "开发前核对工作量、资料条件和预期改善，确定是否值得投入。",
+          "en": "Review workload, source quality and expected improvements before committing to development."
+        }
       },
       {
         "code": "02",
-        "title": { "zh": "开发前约定明确验收标准", "en": "Agree on acceptance criteria upfront" },
-        "body": { "zh": "用历史真实问题与业务认可的答案建立评测基线，提前明确任务边界、人工复核点与上线条件。", "en": "Establish evaluation sets from real historical work, defining boundaries, human review gates and launch criteria before development." }
+        "title": {
+          "zh": "约定验收标准",
+          "en": "Agree on acceptance criteria"
+        },
+        "body": {
+          "zh": "在项目开始前明确系统要完成的任务、审核方式与上线条件。",
+          "en": "Define the tasks, review process and launch requirements before development."
+        }
       },
       {
         "code": "03",
-        "title": { "zh": "关键结论保留可核查依据", "en": "Keep every key statement traceable" },
-        "body": { "zh": "优先基于企业授权资料回答，将生成内容绑定到具体文档章节与版本，缺失信息明确提示补充。", "en": "Ground outputs in authorized company material, link claims to active document clauses and surface missing inputs instead of guessing." }
+        "title": {
+          "zh": "保留回答依据",
+          "en": "Keep source references"
+        },
+        "body": {
+          "zh": "使用企业提供的资料，并将关键结论与来源关联，方便核查。",
+          "en": "Use company material and link key statements to their sources for review."
+        }
       },
       {
         "code": "04",
-        "title": { "zh": "把上线后的维护纳入计划", "en": "Plan for post-launch maintenance" },
-        "body": { "zh": "资料更新、制度调整和模型迭代都会影响表现；每个项目都建立反馈处理与知识库持续更新机制。", "en": "Sources, policies and models evolve—so every deployment includes a clear process for source updates, regression checks and user feedback." }
+        "title": {
+          "zh": "安排后续维护",
+          "en": "Plan for maintenance"
+        },
+        "body": {
+          "zh": "根据资料、业务规则和模型变化更新系统，持续处理使用反馈。",
+          "en": "Update the system as sources, business rules and models change, and address user feedback."
+        }
       }
     ]
   },
   "contact": {
-    "eyebrow": { "zh": "预约沟通", "en": "LET’S TALK" },
-    "title": { "zh": "联系我们，讨论你的业务流程与项目需求", "en": "Contact us about your workflow and project goals" },
-    "intro": {
-      "zh": "告诉我们这项工作目前怎么完成、耗费多少时间，以及希望改进的环节。带一份脱敏工作样本即可开始评估，无需提前撰写完整技术需求书。",
-      "en": "Tell us how your team handles the task today, where hours go and what you want to improve. A single work sample is enough to begin—no formal technical spec required."
+    "eyebrow": {
+      "zh": "预约沟通",
+      "en": "LET’S TALK"
     },
-    "topicsEyebrow": { "zh": "可以沟通的主题", "en": "TOPICS WE COVER" },
-    "topicsTitle": { "zh": "需求评估、保密演示或技术架构交流", "en": "Scope assessment, NDA demos or architecture fit" },
+    "title": {
+      "zh": "联系我们，讨论你的项目",
+      "en": "Contact us about your project"
+    },
+    "intro": {
+      "zh": "告诉我们目前如何完成这项工作、需要多少时间，以及希望改进什么。有现成的工作样本即可开始讨论，不必先写完整的需求文档。",
+      "en": "Tell us how you do the work today, how long it takes and what you want to improve. A work sample is enough to begin; a full requirements document can come later."
+    },
+    "topicsEyebrow": {
+      "zh": "可以沟通的主题",
+      "en": "TOPICS WE COVER"
+    },
+    "topicsTitle": {
+      "zh": "需求评估、保密演示或技术架构交流",
+      "en": "Scope assessment, NDA demos or architecture fit"
+    },
     "topics": [
       {
         "code": "01",
-        "title": { "zh": "评估业务场景与投入产出", "en": "Assess workflow fit & ROI" },
-        "body": { "zh": "梳理目标、操作步骤、资料现状与工时成本，判断适合完整定制、2–6 周试点还是托管服务。", "en": "Review steps, data readiness and current hours to choose between a custom build, a 2–6 week pilot or managed delivery." }
+        "title": {
+          "zh": "评估业务需求",
+          "en": "Assess your needs"
+        },
+        "body": {
+          "zh": "一起梳理目标、操作步骤、数据条件和成本，判断适合定制、试点还是托管。",
+          "en": "review goals, process, data and costs to choose between a custom build, pilot or managed service."
+        }
       },
       {
         "code": "02",
-        "title": { "zh": "预约相近行业案例保密演示", "en": "Book an NDA system walkthrough" },
-        "body": { "zh": "除公开脱敏沙盒外，签署保密协议后可由工程师演示与你业务相近的完整生产系统工作流。", "en": "Beyond our public anonymized sandboxes, an engineer can walk through a relevant full workflow under NDA." }
+        "title": {
+          "zh": "了解已有项目",
+          "en": "See related projects"
+        },
+        "body": {
+          "zh": "可安排与你业务相近的案例演示，完整系统演示需签署保密协议。",
+          "en": "arrange a demo relevant to your business. Full system walkthroughs require an NDA."
+        }
       },
       {
         "code": "03",
-        "title": { "zh": "确认私有化部署与安全治理", "en": "Verify private deployment & security" },
-        "body": { "zh": "直接与技术负责人对齐数据库只读接入、角色权限同步、Docker 私有环境部署与后续维护。", "en": "Discuss read-only database access, directory ACL sync, containerized private deployment and maintenance directly with our technical lead." }
+        "title": {
+          "zh": "确认技术与部署",
+          "en": "Check technical fit"
+        },
+        "body": {
+          "zh": "数据接入、权限、私有化部署、模型选择和后续维护，都可以先聊。",
+          "en": "data access, permissions, private deployment, model choice and maintenance."
+        }
       }
     ],
-    "responderTitle": { "zh": "谁会阅读并回复你的咨询", "en": "Who reviews your inquiry" },
-    "responderBody": {
-      "zh": "产品与解决方案负责人及对应技术合伙人会直接阅读你的场景描述，并在 1 个工作日内通过邮件或你预留的方式联系确认。",
-      "en": "Our Head of Product & Solutions and technical leads review every submission directly and reply within one business day."
+    "responderTitle": {
+      "zh": "谁会阅读并回复你的咨询",
+      "en": "Who reviews your inquiry"
     },
-    "nextStepsTitle": { "zh": "提交后的三个步骤", "en": "What happens next" },
+    "responderBody": {
+      "zh": "资深顾问会阅读你的描述，并与你确认资料、时间和项目需求。",
+      "en": "A senior consultant will review your inquiry and follow up about source material, timing and project requirements."
+    },
+    "nextStepsTitle": {
+      "zh": "提交后的三个步骤",
+      "en": "What happens next"
+    },
     "nextSteps": [
-      { "zh": "1 个工作日内回复邮件，确认一次 30–45 分钟的业务沟通时间。", "en": "Reply within 1 business day to schedule a focused 30–45 minute call." },
-      { "zh": "沟通后一周内提供书面需求评估结论与合作模式建议。", "en": "Deliver a written feasibility assessment and recommended model within 1 week." },
-      { "zh": "由你决定是否推进；确认推进后提供明确边界、验收标准与报价。", "en": "You decide whether to proceed; if so, we provide itemized scope, acceptance criteria and pricing." }
+      {
+        "zh": "1 个工作日内回复，约一次 30–45 分钟的沟通。",
+        "en": "We reply within one business day to set up a 30–45 minute call."
+      },
+      {
+        "zh": "一周内给出需求评估结论和合作建议。",
+        "en": "Within a week, we provide an assessment and a recommended way to proceed."
+      },
+      {
+        "zh": "你决定是否推进，我们给出范围与报价。",
+        "en": "You decide whether to proceed; we provide scope and a quote."
+      }
     ]
   },
   "notFound": {
-    "title": { "zh": "没有找到这个页面", "en": "Page not found" },
-    "body": {
-      "zh": "你访问的链接不存在或页面路径已更新，可以从首页或案例列表继续浏览。",
-      "en": "The page you requested does not exist or has moved. Continue from our homepage or explore delivered client systems."
+    "title": {
+      "zh": "没有找到这个页面",
+      "en": "Page not found"
     },
-    "homeCta": { "zh": "返回首页", "en": "Back to home" },
-    "casesCta": { "zh": "查看客户案例", "en": "Explore case studies" }
+    "body": {
+      "zh": "你要找的页面不存在或已经移动。",
+      "en": "The page you're looking for doesn't exist or has moved."
+    },
+    "homeCta": {
+      "zh": "返回首页",
+      "en": "Back to home"
+    },
+    "casesCta": {
+      "zh": "查看客户案例",
+      "en": "Explore case studies"
+    }
+  },
+  "services": {
+    "title": {
+      "zh": "销售、文档、知识库与数据查询",
+      "en": "AI for sales, documents, knowledge and data"
+    },
+    "intro": {
+      "zh": "我们根据工作频率、资料条件和审核要求，评估哪些环节适合使用 AI。你可以选择定制系统、先做一个试点，或委托我们持续处理任务。",
+      "en": "We assess where AI can help by looking at task frequency, available sources and review requirements. We can build a system, start with a pilot or handle recurring work as a managed service."
+    },
+    "opportunities": [
+      {
+        "zh": "扩展客户服务 —— 根据产品资料与客户需求，提供个性化推荐、客户分析和销售材料。标签：客户筛选 · 客群分析 · 个性化销售材料 · 新增服务能力",
+        "en": "Expand customer services — use product information and customer needs to prepare recommendations, profiles and sales materials. Tags: Prospect selection · Customer analysis · Personalized sales materials · New services"
+      },
+      {
+        "zh": "减少重复处理 —— 将文档整理、审核、查询和客服等重复步骤接入 AI 工作流，减少手工操作与等待。标签：文档自动化 · 合同与合规审查 · 内部知识问答 · 数据查询与运营",
+        "en": "Reduce repetitive work — use AI workflows for recurring steps in document preparation, review, queries and support. Tags: Document automation · Contract & compliance review · Internal Q&A · Data & operations"
+      }
+    ],
+    "other": {
+      "zh": "我们也承接房产管理、长篇内容创作等行业定制项目。可以结合现有工作样本，讨论适合你的方案。",
+      "en": "We also build systems for property management, long-form writing and other specialized work. Bring a sample of your current work so we can discuss a suitable approach."
+    }
+  },
+  "cases": {
+    "title": {
+      "zh": "六个客户项目的界面与成果",
+      "en": "Six client projects: systems and results"
+    },
+    "intro": {
+      "zh": "这些案例来自 Cyano 为企业客户交付的项目。界面中的客户信息与数据已按保密要求脱敏。签署保密协议后，可由工程师演示完整系统。",
+      "en": "These projects were built for enterprise clients. Client information and data in the screenshots have been anonymized. An engineer can demonstrate the full system under NDA."
+    }
   }
 }
