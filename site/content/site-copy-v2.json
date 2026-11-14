@@ -86,7 +86,7 @@
         "en": "Privacy Policy"
       },
       "description": {
-        "zh": "了解 Cyano（澜屿智创）如何收集、使用、加密存储和保护你在业务咨询中提供的信息，以及你的查询与删除权利。",
+        "zh": "了解 Cyano（澜屿智创）如何收集、使用和保护你在业务咨询中提供的信息，以及你的查询与删除权利。",
         "en": "How Cyano Intelligence collects, uses, stores and protects inquiry information, along with retention periods and your data rights."
       }
     },
@@ -96,8 +96,8 @@
         "en": "Terms of Use"
       },
       "description": {
-        "zh": "查看 Cyano（澜屿智创）官方网站的内容说明、知识产权声明、合理使用规范与外部演示链接条款。",
-        "en": "Website terms of use, intellectual property notices, acceptable use guidelines and external sandbox disclaimers for Cyano Intelligence."
+        "zh": "查看 Cyano（澜屿智创）官方网站的内容说明、知识产权声明、合理使用规范与外部链接说明。",
+        "en": "Website terms of use, intellectual property notices, acceptable use guidelines and external link notices for Cyano Intelligence."
       }
     }
   },
