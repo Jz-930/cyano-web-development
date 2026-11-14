@@ -24,7 +24,7 @@ export function CaseDetail({ locale, slug }: { locale: Locale; slug: string }) {
         </Button>
         <DemoLink item={c} locale={locale} />
       </PageHero>
-      <section className="case-overview">
+      <section className="case-overview" data-header="paper">
         <div className="wrap">
           <div className="case-facts">
             {[
@@ -48,7 +48,7 @@ export function CaseDetail({ locale, slug }: { locale: Locale; slug: string }) {
           </div>
         </div>
       </section>
-      <section className="section mist">
+      <section className="section mist" data-header="paper">
         <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.the_system_up_close[locale]}
@@ -61,7 +61,7 @@ export function CaseDetail({ locale, slug }: { locale: Locale; slug: string }) {
           </p>
         </div>
       </section>
-      <section className="section">
+      <section className="section" data-header="paper">
         <div className="wrap">
           <div className="editorial-split">
             <Eyebrow>{pageCopy.before_and_after[locale]}</Eyebrow>

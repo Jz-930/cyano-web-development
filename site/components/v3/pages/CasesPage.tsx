@@ -15,7 +15,7 @@ export function CasesPage({ locale }: { locale: Locale }) {
         intro={text("D.5", "汇总一行", locale)}
         compact
       />
-      <section className="section">
+      <section className="section" data-header="paper">
         <div className="wrap">
           <p className="confidential-note">
             {text("D.1", "保密说明（案例）", locale)}

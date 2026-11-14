@@ -6,6 +6,7 @@
   border-radius: inherit;
   transition:
     border-color var(--dur-fast) var(--ease-out),
+    opacity var(--dur-press) var(--ease-out),
     transform var(--dur-press) var(--ease-out);
 }
 .zoomable img {
@@ -19,6 +20,7 @@
   align-items: center;
   gap: 6px;
   padding: 6px 10px;
+  border: 0;
   border-radius: var(--r-chip);
   background: var(--n1-58);
   -webkit-backdrop-filter: blur(12px);
@@ -41,6 +43,7 @@
   }
 }
 .zoomable:active {
+  opacity: 0.92;
   transform: scale(0.995);
 }
 .zoomable:focus-visible .zoom-pill {

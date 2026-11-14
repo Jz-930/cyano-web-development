@@ -129,7 +129,7 @@ export function Legal({
         )}
         compact
       />
-      <section className="section">
+      <section className="section" data-header="paper">
         <article className="legal-content">
           <p className="article-meta">
             {pageCopy.updated_november_12_2026[locale]}

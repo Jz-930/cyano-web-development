@@ -21,7 +21,7 @@ export function Technology({ locale }: { locale: Locale }) {
           {pageCopy.talk_to_our_cto[locale]}
         </Button>
       </PageHero>
-      <section className="section">
+      <section className="section" data-header="paper">
         <div className="wrap">
           <div className="editorial-split">
             <Eyebrow>
@@ -54,7 +54,7 @@ export function Technology({ locale }: { locale: Locale }) {
           </div>
         </div>
       </section>
-      <section className="section dark">
+      <section className="section dark" data-header="dark">
         <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.context_engineering[locale]}
@@ -102,7 +102,7 @@ export function Technology({ locale }: { locale: Locale }) {
           <p className="benchmark-note">{text("D.1", "技术页脚注", locale)}</p>
         </div>
       </section>
-      <section className="section">
+      <section className="section" data-header="paper">
         <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.designed_to_connect[locale]}

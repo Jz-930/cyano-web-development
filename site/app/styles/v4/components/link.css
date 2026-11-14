@@ -54,9 +54,14 @@
 .scroll-link,
 .article-toc a,
 .contact-form .consent a,
-.contact-form .check a {
+.contact-form .check a,
+.engagement-bottom a,
+.security-banner a,
+.demo-sql summary {
   transition:
     color var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
     opacity var(--dur-press) var(--ease-out);
 }
 @media (hover: hover) and (pointer: fine) {
@@ -67,8 +72,16 @@
   .paper-hero .breadcrumb a:hover,
   .article-toc a:hover,
   .contact-form .consent a:hover,
-  .contact-form .check a:hover {
+  .contact-form .check a:hover,
+  .engagement-bottom a:hover,
+  .security-banner a:hover,
+  .demo-sql summary:hover {
     color: var(--link);
+  }
+  .engagement-bottom a:hover,
+  .security-banner a:hover {
+    border-color: var(--ink-30);
+    background: var(--ink-06);
   }
   .footer a:hover {
     color: var(--ice);
@@ -79,10 +92,14 @@
 .scroll-link:active,
 .article-toc a:active,
 .contact-form .consent a:active,
-.contact-form .check a:active {
+.contact-form .check a:active,
+.engagement-bottom a:active,
+.security-banner a:active,
+.demo-sql summary:active {
   opacity: 0.72;
 }
 .copy-link,
+.interactive-demo aside button,
 .demo-questions button,
 .demo-tabs button,
 .demo-action {
@@ -94,6 +111,7 @@
 }
 @media (hover: hover) and (pointer: fine) {
   .copy-link:hover,
+  .interactive-demo aside button:hover,
   .demo-questions button:hover,
   .demo-tabs button:hover {
     border-color: var(--ink-30);
@@ -102,6 +120,7 @@
   }
 }
 .copy-link:active,
+.interactive-demo aside button:active,
 .demo-questions button:active,
 .demo-tabs button:active,
 .demo-action:active {
@@ -110,6 +129,7 @@
 @media (prefers-reduced-motion: reduce) {
   .text-link:hover svg,
   .copy-link:active,
+  .interactive-demo aside button:active,
   .demo-questions button:active,
   .demo-tabs button:active,
   .demo-action:active {

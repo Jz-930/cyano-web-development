@@ -14,7 +14,7 @@ export function About({ locale }: { locale: Locale }) {
         title={text("D.7", "使命句", locale)}
         compact
       />
-      <section className="section">
+      <section className="section" data-header="paper">
         <div className="wrap">
           <div className="about-intro">
             <div>
@@ -32,7 +32,7 @@ export function About({ locale }: { locale: Locale }) {
           <Stats locale={locale} />
         </div>
       </section>
-      <section className="section mist">
+      <section className="section mist" data-header="paper">
         <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.founders[locale]}
@@ -41,7 +41,7 @@ export function About({ locale }: { locale: Locale }) {
           <Team locale={locale} full />
         </div>
       </section>
-      <section className="section name-story">
+      <section className="section name-story" data-header="dark">
         <div className="wrap editorial-split">
           <Eyebrow light>{text("D.7", "名字的由来标题", locale)}</Eyebrow>
           <div>
@@ -54,7 +54,7 @@ export function About({ locale }: { locale: Locale }) {
           </div>
         </div>
       </section>
-      <section className="section">
+      <section className="section" data-header="paper">
         <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.our_principles[locale]}

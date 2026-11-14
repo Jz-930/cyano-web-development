@@ -39,7 +39,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  height: 36px;
+  height: var(--ih, 36px);
   border-radius: var(--r-chip);
   background: var(--ink);
   z-index: 0;

@@ -1,6 +1,6 @@
 import pageCopy from "@/content/v4/pages/PageHero.json";
 import Link from "next/link";
-import {CoreVisual} from "../CoreVisual";
+import { CoreVisual } from "../CoreVisual";
 import { Locale, href } from "@/lib/content-v4";
 import { Eyebrow } from "../ui";
 import { Phrase } from "@/components/v4/Phrase";
@@ -10,7 +10,6 @@ export function PageHero({
   eyebrow,
   title,
   intro,
-  art = "/art/hero.webp",
   children,
   compact = false,
   paper = false,
@@ -25,7 +24,10 @@ export function PageHero({
   paper?: boolean;
 }) {
   return (
-    <section className={`page-hero ${paper ? "paper-hero" : "dark"} ${compact ? "page-hero-compact" : ""}`}>
+    <section
+      className={`page-hero ${paper ? "paper-hero" : "dark"} ${compact ? "page-hero-compact" : ""}`}
+      data-header={paper ? "paper" : "dark"}
+    >
       {!paper && <CoreVisual locale={locale} />}
       <div className="page-hero-shade" />
       <div className="wrap page-hero-inner">
@@ -34,8 +36,10 @@ export function PageHero({
           <span>/</span>
           <span>{eyebrow}</span>
         </div>
-        <Eyebrow light>{eyebrow}</Eyebrow>
-        <h1><Phrase text={title} locale={locale} /></h1>
+        <Eyebrow light={!paper}>{eyebrow}</Eyebrow>
+        <h1 className="h1-page">
+          <Phrase text={title} locale={locale} />
+        </h1>
         {intro && <p>{intro}</p>}
         {children && <div className="hero-buttons">{children}</div>}
       </div>

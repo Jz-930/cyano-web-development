@@ -16,7 +16,7 @@ export function Contact({ locale }: { locale: Locale }) {
         intro={text("D.8", "Hero 导语", locale)}
         compact
       />
-      <section className="section contact-section">
+      <section className="section contact-section" data-header="paper">
         <div className="wrap contact-layout">
           <aside>
             <Eyebrow>

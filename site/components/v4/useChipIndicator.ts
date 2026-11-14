@@ -19,6 +19,7 @@ export function useChipIndicator(activeKey: string | number) {
       group.style.setProperty("--ix", `${active.offsetLeft}px`);
       group.style.setProperty("--iy", `${active.offsetTop}px`);
       group.style.setProperty("--iw", `${active.offsetWidth}px`);
+      group.style.setProperty("--ih", `${active.offsetHeight}px`);
     };
 
     update();

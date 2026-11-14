@@ -49,6 +49,8 @@ const verbatimSet = new Set([
   "Cyano home",
   "主导航",
   "Main navigation",
+  "移动导航",
+  "Mobile navigation",
   "展开解决方案",
   "Expand Solutions",
   "展开关于我们",
@@ -358,9 +360,14 @@ for (const locale of ["zh", "en"]) {
     const missingV1Items = [];
     if (baselineEntry) {
       for (const frag of baselineEntry.fragments) {
-        if (currentCompact.includes(frag)) continue;
-        if (routeExceptions.has(frag)) continue;
-        if (overriddenV1Fragments.has(frag)) continue;
+        const cleanFrag = frag.replace(/[↗→←↑↓]+$/g, "");
+        if (!cleanFrag || PURE_SYMBOL_OR_NUMBER_RE.test(cleanFrag)) continue;
+        if (currentCompact.includes(frag) || currentCompact.includes(cleanFrag))
+          continue;
+        if (routeExceptions.has(frag) || routeExceptions.has(cleanFrag))
+          continue;
+        if (overriddenV1Fragments.has(frag) || overriddenV1Fragments.has(cleanFrag))
+          continue;
         // Check if frag was part of an overridden v1 paragraph
         let coveredByOverride = false;
         for (const ov of overriddenV1Fragments) {

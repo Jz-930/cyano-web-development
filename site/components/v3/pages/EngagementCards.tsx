@@ -7,7 +7,12 @@ export function EngagementCards({ locale }: { locale: Locale }) {
   return (
     <div className="engagement-grid">
       {[KeyRound, Sprout, PackageCheck].map((Icon, i) => (
-        <article key={i} className={"engagement-card engagement-" + i}>
+        <article
+          key={i}
+          className={"engagement-card engagement-" + i}
+          data-reveal=""
+          style={{ "--i": i } as React.CSSProperties}
+        >
           <div className="engagement-top">
             <span>0{i + 1}</span>
             <Icon size={35} strokeWidth={1.2} />

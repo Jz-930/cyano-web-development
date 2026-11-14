@@ -69,10 +69,6 @@ h3 {
   background: var(--brand);
   color: var(--n1);
 }
-:focus-visible {
-  outline: 2px solid var(--muted);
-  outline-offset: 5px;
-}
 button:disabled {
   cursor: wait;
   opacity: 0.6;
@@ -110,26 +106,14 @@ button:disabled {
     box-shadow 0.2s;
   white-space: nowrap;
 }
-.button:hover {
-  background: var(--p3);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--line);
-}
 .button svg,
 .text-link svg {
   transition: transform 0.2s;
-}
-.button:hover svg,
-.text-link:hover svg {
-  transform: translate(2px, -2px);
 }
 .button-outline {
   background: transparent;
   border-color: var(--line);
   color: inherit;
-}
-.button-outline:hover {
-  background: var(--line);
 }
 .text-link {
   display: inline-flex;
@@ -142,14 +126,8 @@ button:disabled {
   background: none;
   padding: 0;
 }
-.text-link:hover {
-  color: var(--muted);
-}
 .light-link {
   color: var(--brand-mint);
-}
-.light-link:hover {
-  color: var(--p2);
 }
 .eyebrow {
   display: flex;
@@ -278,19 +256,6 @@ button:disabled {
   transition: color 0.2s;
   position: relative;
 }
-.nav-item-row > a.active,
-.nav-item-row > a:hover {
-  color: var(--p1);
-}
-.nav-item-row > a.active:after {
-  content: "";
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  width: 16px;
-  height: 2px;
-  background: var(--brand-mint);
-}
 .nav-item-row > button {
   display: flex;
   padding: 6px 0;
@@ -312,9 +277,6 @@ button:disabled {
   padding: 13px 15px;
   border-radius: 6px;
   font-size: var(--s12);
-}
-.nav-dropdown a:hover {
-  background: var(--n1);
 }
 .nav-dropdown strong {
   font-weight: 500;
@@ -353,9 +315,6 @@ button:disabled {
   font-weight: 500;
   padding: 12px 20px;
   white-space: nowrap;
-}
-.header-cta:hover {
-  background: var(--p3);
 }
 .menu-toggle {
   display: none;
@@ -437,26 +396,6 @@ button:disabled {
   align-items: center;
   gap: 30px;
   margin-top: 36px;
-}
-.hero-secondary {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: var(--s12);
-  color: var(--p1);
-}
-.hero-secondary > span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 35px;
-  height: 35px;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  transition: background 0.2s;
-}
-.hero-secondary:hover > span {
-  background: var(--line);
 }
 .hero-bottom {
   display: flex;
@@ -772,9 +711,6 @@ button:disabled {
     transparent 24px
   );
 }
-.case-visual:hover {
-  transform: translateY(-4px);
-}
 .visual-0 {
   background: linear-gradient(130deg, var(--p3), var(--brand));
 }
@@ -814,9 +750,6 @@ button:disabled {
   background: var(--p2);
   transform: perspective(900px) rotateY(-4deg) rotateX(3deg);
   transition: transform 0.4s;
-}
-.case-visual:hover .browser-frame {
-  transform: perspective(900px) rotateY(0) rotateX(0) translateY(-4px);
 }
 .browser-chrome {
   height: 17px;
@@ -876,9 +809,6 @@ button:disabled {
   font-size: var(--s24);
   line-height: 1.5;
   margin: 18px 0 10px;
-}
-.case-card h3 a:hover {
-  color: var(--brand-teal-700);
 }
 .case-card > p {
   font-size: var(--s12);
@@ -941,9 +871,6 @@ button:disabled {
   border-radius: 12px;
   background: var(--p1);
   transition: transform 0.2s;
-}
-.engagement-card:hover {
-  transform: translateY(-4px);
 }
 .engagement-card.engagement-1 {
   background: var(--p1);
@@ -1077,12 +1004,6 @@ button:disabled {
 .insight-2 img {
   transform: scaleX(-1);
 }
-.insight-image:hover img {
-  transform: scale(1.05);
-}
-.insight-2:hover img {
-  transform: scaleX(-1) scale(1.05);
-}
 .insight-image .tag {
   position: absolute;
   top: 17px;
@@ -1117,9 +1038,6 @@ button:disabled {
 .insight-card h3 {
   font-size: var(--s20);
   line-height: 1.55;
-}
-.insight-card h3 a:hover {
-  color: var(--brand-teal-700);
 }
 .closing {
   position: relative;
@@ -1192,9 +1110,6 @@ button:disabled {
   color: var(--brand);
   margin-bottom: 12px;
 }
-.footer-grid a:hover {
-  color: var(--p3);
-}
 .footer-location {
   font-size: var(--s12);
   display: block;
@@ -1263,9 +1178,6 @@ button:disabled {
   font-size: var(--s12);
   color: var(--muted);
   margin-bottom: 53px;
-}
-.breadcrumb a:hover {
-  color: var(--brand);
 }
 .page-hero h1 {
   font-size: clamp(var(--s32), 4.25vw, var(--s68));
@@ -2288,9 +2200,6 @@ button:disabled {
   color: var(--p1);
   border-color: var(--n1);
 }
-.form-submit:hover {
-  background: var(--muted);
-}
 .form-assurance {
   display: flex;
   align-items: center;
@@ -2556,9 +2465,6 @@ button:disabled {
   margin-bottom: 13px;
   color: var(--muted);
   line-height: 1.8;
-}
-.article-toc a:hover {
-  color: var(--muted);
 }
 .article-body {
   max-width: 760px;
@@ -3486,14 +3392,6 @@ button:disabled {
     min-height: 47px;
     padding: 12px 21px;
     gap: 22px;
-  }
-  .hero-secondary {
-    font-size: var(--s12);
-    gap: 10px;
-  }
-  .hero-secondary > span {
-    width: 31px;
-    height: 31px;
   }
   .hero-bottom {
     bottom: 25px;

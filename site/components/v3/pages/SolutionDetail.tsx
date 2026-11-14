@@ -31,7 +31,7 @@ export function SolutionDetail({
           {pageCopy.see_related_work[locale]}
         </Button>
       </PageHero>
-      <section className="section">
+      <section className="section" data-header="paper">
         <div className="wrap">
           <div className="result-grid">
             {c.stats.map((v) => (
@@ -55,7 +55,7 @@ export function SolutionDetail({
           </div>
         </div>
       </section>
-      <section className="section mist">
+      <section className="section mist" data-header="paper">
         <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.the_approach[locale]}
@@ -76,7 +76,7 @@ export function SolutionDetail({
           </div>
         </div>
       </section>
-      <section className="section">
+      <section className="section" data-header="paper">
         <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.in_production[locale]}

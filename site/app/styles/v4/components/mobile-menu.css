@@ -1,4 +1,5 @@
 .mobile-nav {
+  color: var(--light);
   clip-path: circle(0 at var(--ox, calc(100% - 36px)) -36px);
   visibility: hidden;
   pointer-events: none;

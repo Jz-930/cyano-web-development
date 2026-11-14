@@ -18,7 +18,7 @@ export function Article({ locale, slug }: { locale: Locale; slug: string }) {
         art={a.image}
         compact
       />
-      <section className="section article-section">
+      <section className="section article-section" data-header="paper">
         <div className="wrap">
           <div className="article-layout">
           <aside className="article-sidebar">

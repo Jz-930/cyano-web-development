@@ -36,7 +36,8 @@
 .contact-form input:not([type="checkbox"]):focus-visible,
 .contact-form select:focus-visible,
 .contact-form textarea:focus-visible {
-  outline: none;
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
   border-color: var(--link);
   box-shadow: var(--focus-ring);
 }
@@ -83,6 +84,13 @@
   font-size: 14px;
   color: var(--muted);
   transition: color var(--dur-fast) var(--ease-out);
+}
+.contact-form .check {
+  display: inline-flex;
+  margin-bottom: 21px;
+}
+.contact-form .check > span {
+  color: inherit;
 }
 @media (hover: hover) and (pointer: fine) {
   .check:hover {
@@ -135,6 +143,8 @@
   transform: scale(0.9);
 }
 .check input:focus-visible + .check-box {
+  outline: 2px solid var(--link);
+  outline-offset: 2px;
   box-shadow: var(--focus-ring);
   border-color: var(--link);
 }

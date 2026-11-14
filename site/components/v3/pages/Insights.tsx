@@ -13,7 +13,7 @@ export function Insights({ locale }: { locale: Locale }) {
         intro={pageCopy.guides_to_knowledge_systems[locale]}
         compact
       />
-      <section className="section">
+      <section className="section" data-header="paper">
         <div className="wrap">
           <InsightCards locale={locale} />
         </div>

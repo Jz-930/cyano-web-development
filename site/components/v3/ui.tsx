@@ -1,6 +1,7 @@
-import {Picture} from "./Picture";
-import {CountValue} from "./CountValue";
-import {EngineeringDiagram} from "./EngineeringDiagram";
+import type { CSSProperties } from "react";
+import { Picture } from "./Picture";
+import { CountValue } from "./CountValue";
+import { EngineeringDiagram } from "./EngineeringDiagram";
 import { LightField } from "./LightField";
 import { Phrase } from "@/components/v4/Phrase";
 import { BrandMark } from "@/components/v4/BrandMark";
@@ -16,11 +17,10 @@ import {
   PenTool,
   Layers3,
   ShieldCheck,
-  Workflow,
+  Network,
   Database,
   MessagesSquare,
   FileText,
-  Network,
   ChartNoAxesCombined,
 } from "lucide-react";
 import {
@@ -34,8 +34,14 @@ import {
   solutions,
 } from "@/lib/content-v4";
 import availability from "@/content/v1/availability.json";
+
+export function stripArrow(s: string): string {
+  return s.replace(/\s*[→↗]\s*$/, "");
+}
+
 export const Arrow = ({ diagonal = false }: { diagonal?: boolean }) =>
   diagonal ? <ArrowUpRight size={18} /> : <ArrowRight size={18} />;
+
 export function Button({
   children,
   to,
@@ -51,14 +57,15 @@ export function Button({
 }) {
   return (
     <Link
-      className={`button ${secondary ? "button-outline" : ""} ${className}`}
+      className={`${secondary ? "button-secondary" : "button"}${className ? " " + className : ""}`}
       href={to || href(locale, "/contact#form")}
     >
       {children}
-      <ArrowUpRight size={17} />
+      <ArrowUpRight size={18} />
     </Link>
   );
 }
+
 export function Eyebrow({
   children,
   light = false,
@@ -73,6 +80,7 @@ export function Eyebrow({
     </div>
   );
 }
+
 export function SectionTitle({
   eyebrow,
   title,
@@ -86,15 +94,18 @@ export function SectionTitle({
 }) {
   return (
     <div className="section-heading">
-      <div>
+      <div data-reveal="">
         <Eyebrow>{eyebrow}</Eyebrow>
-        <h2><Phrase text={title} /></h2>
+        <h2 className="h2">
+          <Phrase text={title} />
+        </h2>
         {description && <p>{description}</p>}
       </div>
       {children}
     </div>
   );
 }
+
 export function Logo() {
   return (
     <span className="brand">
@@ -103,6 +114,7 @@ export function Logo() {
     </span>
   );
 }
+
 export const industryIcons = [
   Factory,
   BriefcaseBusiness,
@@ -111,12 +123,14 @@ export const industryIcons = [
   BookOpen,
   PenTool,
 ];
+
 export const solutionIcons = [
   MessagesSquare,
   FileText,
   Network,
   ChartNoAxesCombined,
 ];
+
 export function Stats({
   locale,
   compact = false,
@@ -127,9 +141,14 @@ export function Stats({
   return (
     <div className={`stats-grid ${compact ? "compact" : ""}`}>
       {["6+", "100%", "100%", "6"].map((v, i) => (
-        <div className="stat" key={i}>
+        <div
+          className="stat"
+          key={i}
+          data-reveal=""
+          style={{ "--i": i } as CSSProperties}
+        >
           <div className="stat-value">
-            <CountValue value={v}/>
+            <CountValue value={v} />
             <span>
               {i === 0
                 ? t(locale, "年", "years")
@@ -160,6 +179,7 @@ export function Stats({
     </div>
   );
 }
+
 export function DemoLink({
   item,
   locale,
@@ -175,21 +195,29 @@ export function DemoLink({
       rel="noopener noreferrer"
       className="text-link"
     >
-      {text("D.1", "在线 Demo 按钮", locale)}
+      {stripArrow(text("D.1", "在线 Demo 按钮", locale))}
+      <ArrowUpRight size={16} />
     </a>
   ) : null;
 }
+
 export function CaseCard({
   item,
   locale,
   featured = false,
+  index = 0,
 }: {
   item: CaseStudy;
   locale: Locale;
   featured?: boolean;
+  index?: number;
 }) {
   return (
-    <article className={`case-card ${featured ? "case-featured" : ""}`}>
+    <article
+      className={`case-card ${featured ? "case-featured" : ""}`}
+      data-reveal=""
+      style={{ "--i": index } as CSSProperties}
+    >
       <Link
         href={href(locale, "/cases/" + item.slug)}
         className={`case-visual visual-${item.index}`}
@@ -206,7 +234,7 @@ export function CaseCard({
             <i />
             <span>{item.system}</span>
           </div>
-          <Picture src={item.images[item.main]} alt={item.system}/>
+          <Picture src={item.images[item.main]} alt={item.system} />
         </div>
         <div className="case-visual-footer">
           <span>{text("D.1", "“客户项目”标签", locale)}</span>
@@ -219,20 +247,21 @@ export function CaseCard({
           <small>{item.stats[0].label}</small>
         </span>
       </div>
-      <h3>
+      <h3 className="h3">
         <Link href={href(locale, "/cases/" + item.slug)}>{item.title}</Link>
       </h3>
       <p>{item.profile}</p>
       <div className="case-links">
         <Link className="text-link" href={href(locale, "/cases/" + item.slug)}>
           {t(locale, "阅读案例", "Read case study")}
-          <Arrow />
+          <ArrowUpRight size={16} />
         </Link>
         <DemoLink item={item} locale={locale} />
       </div>
     </article>
   );
 }
+
 export function Team({
   locale,
   full = false,
@@ -243,16 +272,24 @@ export function Team({
   return (
     <div className="team-grid">
       {founders(locale).map((f, i) => (
-        <article key={f.id} className="team-card">
+        <article
+          key={f.id}
+          className="team-card"
+          data-reveal=""
+          style={{ "--i": i } as CSSProperties}
+        >
           <div className={`portrait portrait-${i}`}>
-            <Picture src={`/v3-materials/founder-${i + 1}.webp`} alt={t(
+            <Picture
+              src={`/v3-materials/founder-${i + 1}.webp`}
+              alt={t(
                 locale,
                 `Cyano ${f.role}插画形象`,
                 `Illustrated Cyano ${f.role}`,
-              )}/>
+              )}
+            />
             <span className="portrait-number">0{i + 1}</span>
           </div>
-          <h3>{f.role}</h3>
+          <h3 className="h3">{f.role}</h3>
           <p className="team-tags">{f.tags}</p>
           {full && <p className="team-bio">{f.bio}</p>}
         </article>
@@ -260,17 +297,23 @@ export function Team({
     </div>
   );
 }
+
 export function InsightCards({ locale }: { locale: Locale }) {
   return (
     <div className="insight-grid">
       {insights(locale).map((a, i) => (
-        <article className="insight-card" key={a.slug}>
+        <article
+          className="insight-card"
+          key={a.slug}
+          data-reveal=""
+          style={{ "--i": i } as CSSProperties}
+        >
           <Link
             href={href(locale, "/insights/" + a.slug)}
             className={`insight-image insight-${i}`}
             aria-label={a.title}
           >
-            <EngineeringDiagram variant={i+2}/>
+            <EngineeringDiagram variant={i + 2} />
             <span className="tag">{a.category}</span>
             <span className="circle-link">
               <Arrow diagonal />
@@ -280,7 +323,7 @@ export function InsightCards({ locale }: { locale: Locale }) {
             <span>{a.date.replaceAll("-", ".")}</span>
             <span>{a.author.role}</span>
           </div>
-          <h3>
+          <h3 className="h3">
             <Link href={href(locale, "/insights/" + a.slug)}>{a.title}</Link>
           </h3>
         </article>
@@ -288,22 +331,18 @@ export function InsightCards({ locale }: { locale: Locale }) {
     </div>
   );
 }
+
 export function WorkflowDiagram({ locale }: { locale: Locale }) {
   return (
-    <div className="workflow-diagram">
+    <div className="workflow-diagram" data-reveal="">
       {[Database, Network, ShieldCheck, Layers3].map((Icon, i) => (
         <div key={i} className="workflow-step">
           <span className="step-no">0{i + 1}</span>
           <Icon size={28} strokeWidth={1.3} />
-          <h3>
+          <h3 className="h3">
             {t(
               locale,
-              [
-                "接入资料",
-                "检索与生成",
-                "校验与人工复核",
-                "交付结果",
-              ][i],
+              ["接入资料", "检索与生成", "校验与人工复核", "交付结果"][i],
               [
                 "Connect sources",
                 "Retrieve & generate",
@@ -335,26 +374,30 @@ export function WorkflowDiagram({ locale }: { locale: Locale }) {
     </div>
   );
 }
+
 export function ClosingCta({ locale }: { locale: Locale }) {
   return (
-    <section className="closing dark">
+    <section className="closing dark" data-header="dark">
       <LightField strength="closing" />
       <div className="wrap closing-inner">
-        <div>
-          <Eyebrow light>
-            {t(locale, "项目咨询", "CONTACT US")}
-          </Eyebrow>
-          <h2><Phrase text={text("D.1", "收尾 CTA 口号", locale)} locale={locale} /></h2>
+        <div data-reveal="">
+          <Eyebrow light>{t(locale, "项目咨询", "CONTACT US")}</Eyebrow>
+          <h2 className="h2">
+            <Phrase text={text("D.1", "收尾 CTA 口号", locale)} locale={locale} />
+          </h2>
           <p>{text("D.1", "收尾 CTA 副句", locale)}</p>
         </div>
-        <Button locale={locale}>{text("D.1", "主按钮", locale)}</Button>
+        <span className="halo-button">
+          <Button locale={locale}>{text("D.1", "主按钮", locale)}</Button>
+        </span>
       </div>
     </section>
   );
 }
+
 export function SiteFooter({ locale }: { locale: Locale }) {
   return (
-    <footer className="footer dark">
+    <footer className="footer dark" data-header="dark">
       <div className="wrap">
         <div className="footer-grid">
           <div className="footer-brand">

@@ -23,7 +23,7 @@ export function Engagement({ locale }: { locale: Locale }) {
         title={text("D.4", "Hero 标题", locale)}
         intro={text("D.4", "Hero 导语", locale)}
       />
-      <section className="section">
+      <section className="section" data-header="paper">
         <div className="wrap">
           <EngagementCards locale={locale} />
           <p className="decision-note">{text("D.4", "怎么选", locale)}</p>
@@ -93,7 +93,7 @@ export function Engagement({ locale }: { locale: Locale }) {
           </div>
         </div>
       </section>
-      <section className="section mist" id="diagnosis">
+      <section className="section mist" id="diagnosis" data-header="paper">
         <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.project_process[locale]}
@@ -132,13 +132,13 @@ export function Engagement({ locale }: { locale: Locale }) {
           </div>
         </div>
       </section>
-      <section className="section">
+      <section className="section" data-header="paper">
         <div className="wrap faq-layout">
           <div>
             <Eyebrow>{pageCopy.common_questions[locale]}</Eyebrow>
             <h2><Phrase text={pageCopy.before_we_begin[locale]} locale={locale} /></h2>
           </div>
-          <FAQ items={faq} />
+          <FAQ items={faq} openCount={3} />
         </div>
       </section>
     </>
