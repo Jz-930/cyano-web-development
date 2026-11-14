@@ -123,10 +123,22 @@ async function capturePageTiles(context, name, route, suffix, vw, vh) {
     });
   }
 
-  indexLines.push(
-    `${name}-${suffix}: ${route} viewport=${vw} scrollWidth=${metrics.scrollWidth} cssHeight=${metrics.scrollHeight} tiles=${stops.length}`,
-  );
   await page.close();
+  return `${name}-${suffix}: ${route} viewport=${vw} scrollWidth=${metrics.scrollWidth} cssHeight=${metrics.scrollHeight} tiles=${stops.length}`;
+}
+
+async function runPool(items, concurrency, fn) {
+  const results = new Array(items.length);
+  let next = 0;
+  const workers = Array.from({ length: Math.min(concurrency, items.length) }, async () => {
+    while (true) {
+      const idx = next++;
+      if (idx >= items.length) break;
+      results[idx] = await fn(items[idx], idx);
+    }
+  });
+  await Promise.all(workers);
+  return results;
 }
 
 async function captureHeroFrames(browser) {
@@ -206,48 +218,52 @@ async function compareDirectories(baseDir, currDir) {
 
 const browser = await chromium.launch({ channel: "chrome", headless: true });
 try {
-  const desktopCtx = await browser.newContext({
-    viewport: { width: 1440, height: 900 },
-    deviceScaleFactor: 1,
-  });
-  for (const [name, route] of DESKTOP_PAGES) {
-    await capturePageTiles(desktopCtx, name, route, "d", 1440, 900);
-  }
-  await desktopCtx.close();
+  indexLines.push(
+    ...(await runPool(DESKTOP_PAGES, 4, async ([name, route]) => {
+      const ctx = await browser.newContext({
+        viewport: { width: 1440, height: 900 },
+        deviceScaleFactor: 1,
+      });
+      try {
+        return await capturePageTiles(ctx, name, route, "d", 1440, 900);
+      } finally {
+        await ctx.close();
+      }
+    })),
+  );
 
-  const mobileCtx = await browser.newContext({
-    viewport: { width: 390, height: 844 },
-    deviceScaleFactor: 3,
-    isMobile: true,
-    hasTouch: true,
-    userAgent:
-      "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
-  });
-  const cdpPage = await mobileCtx.newPage();
-  const cdp = await mobileCtx.newCDPSession(cdpPage);
-  await cdp.send("Emulation.setDeviceMetricsOverride", {
-    width: 390,
-    height: 844,
-    deviceScaleFactor: 3,
-    mobile: true,
-  });
-  await cdp.send("Emulation.setTouchEmulationEnabled", { enabled: true });
-  await cdpPage.close();
-
-  for (const [name, route] of MOBILE_PAGES) {
-    await capturePageTiles(mobileCtx, name, route, "m", 390, 844);
-  }
-  await mobileCtx.close();
+  indexLines.push(
+    ...(await runPool(MOBILE_PAGES, 4, async ([name, route]) => {
+      const ctx = await browser.newContext({
+        viewport: { width: 390, height: 844 },
+        deviceScaleFactor: 3,
+        isMobile: true,
+        hasTouch: true,
+        userAgent:
+          "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+      });
+      try {
+        return await capturePageTiles(ctx, name, route, "m", 390, 844);
+      } finally {
+        await ctx.close();
+      }
+    })),
+  );
 
   for (const { tag, width, height } of EXTRA_WIDTHS) {
-    const extraCtx = await browser.newContext({
-      viewport: { width, height },
-      deviceScaleFactor: 1,
-    });
-    for (const [name, route] of EXTRA_PAGES) {
-      await capturePageTiles(extraCtx, name, route, tag, width, height);
-    }
-    await extraCtx.close();
+    indexLines.push(
+      ...(await runPool(EXTRA_PAGES, 3, async ([name, route]) => {
+        const ctx = await browser.newContext({
+          viewport: { width, height },
+          deviceScaleFactor: 1,
+        });
+        try {
+          return await capturePageTiles(ctx, name, route, tag, width, height);
+        } finally {
+          await ctx.close();
+        }
+      })),
+    );
   }
 
   if (!skipHeroFrames) {

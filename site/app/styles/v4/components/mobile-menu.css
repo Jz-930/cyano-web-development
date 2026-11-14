@@ -1,0 +1,11 @@
+.mobile-nav > a.button {
+  background: var(--ice);
+  border-color: var(--ice);
+  color: var(--n1);
+}
+.mobile-nav > a.button svg {
+  color: var(--n1);
+}
+.mobile-nav > a.button:hover {
+  background: var(--light);
+}

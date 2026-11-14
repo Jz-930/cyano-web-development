@@ -1,0 +1,17 @@
+.outcome.outcome-bar {
+  border-left: 2px solid var(--cyan);
+  border-radius: 0;
+  padding: 4px 0 4px 24px;
+  background: none;
+  box-shadow: none;
+}
+.outcome.outcome-bar p {
+  font-size: var(--s18);
+  line-height: 1.8;
+  font-style: normal;
+  color: var(--ink);
+}
+.outcome.outcome-bar p:before,
+.outcome.outcome-bar p:after {
+  content: none;
+}

@@ -1,0 +1,37 @@
+.hero-description {
+  font-size: var(--s18);
+  color: var(--on-dark);
+}
+@media (max-width: 800px) {
+  .hero-description {
+    font-size: var(--s16);
+  }
+  .home-hero .hero-bottom {
+    position: static;
+    inset: auto;
+    margin: 32px 0 0;
+    width: auto;
+    padding: 0;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1200px) and (min-width: 801px) {
+  :lang(zh-CN) .hero-content h1 {
+    font-size: clamp(34px, 3.61vw, 48px);
+  }
+}
+.home-case-grid .case-featured h3 {
+  font-size: var(--s24);
+  margin: 16px 0;
+}
+@media (max-width: 800px) {
+  .home-case-grid .case-card h3 {
+    margin: 0;
+  }
+}
+@media (max-width: 480px) {
+  .home-case-grid .case-card h3 {
+    margin: 12px 0;
+  }
+}

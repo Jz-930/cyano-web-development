@@ -1,0 +1,37 @@
+.contact-form .consent {
+  display: flex;
+  font-size: var(--s12);
+}
+.contact-form input:not([type="checkbox"]),
+.contact-form select,
+.contact-form textarea {
+  border: 1px solid var(--field-line);
+  background: var(--p2);
+  font-size: var(--s16);
+  transition:
+    border-color 140ms var(--ease),
+    box-shadow 140ms var(--ease);
+}
+.contact-form input:not([type="checkbox"]):hover,
+.contact-form select:hover,
+.contact-form textarea:hover {
+  border-color: var(--ink);
+}
+.contact-form input:not([type="checkbox"]):focus-visible,
+.contact-form select:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: none;
+  border-color: var(--link);
+  box-shadow: var(--focus-ring);
+}
+.contact-form [aria-invalid="true"],
+.contact-form [aria-invalid="true"]:hover,
+.contact-form [aria-invalid="true"]:focus-visible {
+  border-color: var(--risk-ink);
+}
+.field-error {
+  margin-top: 6px;
+  font-size: var(--s14);
+  line-height: 1.5;
+  color: var(--risk-ink);
+}

@@ -1,0 +1,22 @@
+.case-featured h3 {
+  font-size: var(--s32);
+  margin: 16px 0;
+}
+@media (max-width: 1000px) {
+  .case-featured h3 {
+    font-size: var(--s24);
+  }
+}
+@media (max-width: 800px) {
+  .case-featured h3 {
+    font-size: var(--s20);
+    margin: 18px 0 10px;
+  }
+}
+@media (max-width: 600px) {
+  .case-featured h3,
+  .case-card h3 {
+    font-size: var(--s24);
+    margin: 17px 0 10px;
+  }
+}
