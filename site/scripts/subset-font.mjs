@@ -4,138 +4,151 @@ import subsetFont from "subset-font";
 import { createHash } from "node:crypto";
 
 const root = path.resolve(import.meta.dirname, "..");
-const fontSource = path.join(root, "../assets/source/NotoSansSC-variable.ttf");
+const notoSource = path.join(root, "../assets/source/NotoSansSC-variable.ttf");
+const interSource = path.join(root, "../assets/source/inter-variable.woff2");
+const manropeSource = path.join(root, "../assets/source/manrope-variable.woff2");
 
 const CJK_RE = /[\u2000-\u206f\u3000-\u303f\u3400-\u9fff\uff00-\uffef]/g;
 
-// Always subset the original variable Inter, never an already frozen subset.
-const latin = Array.from({length:95},(_,i)=>String.fromCharCode(i+32)).join('')+'·—–‘’“”…•→↗×≤≥±©®°‑§¥μ';
-const inter=await subsetFont(await fs.readFile(path.join(root,'public/fonts/inter.woff2')),latin,{targetFormat:'woff2',noHinting:true});
-await fs.writeFile(path.join(root,'app/fonts/inter-latin.woff2'),inter);
-// JetBrains Mono source is static 500 and is declared as 500 in both layouts.
+// 1. Subset Latin variable fonts from assets/source/
+const latinGlyphs =
+  Array.from({ length: 95 }, (_, i) => String.fromCharCode(i + 32)).join("") +
+  "·—–‘’“”…•→↗×≤≥±©®°‑§¥μ≠";
+const interBuf = await subsetFont(await fs.readFile(interSource), latinGlyphs, {
+  targetFormat: "woff2",
+  noHinting: true,
+  variationAxes: { wght: { min: 400, max: 700 } },
+});
+await fs.writeFile(path.join(root, "app/fonts/inter-latin.woff2"), interBuf);
 
-// 1. Collect exact homepage (`/`) + chrome glyphs so `/` downloads ONLY noto-sc-core.woff2 and stays <= 150 KB total fonts
-let coreText = " ，。、；：？！“”‘’（）《》【】—…·©↗→年月日周项级倍行秒分钟";
-try {
-  const siteCopy = JSON.parse(await fs.readFile(path.join(root, "content/site-copy-v2.json"), "utf8"));
-  coreText += JSON.stringify([
-    siteCopy.brand,
-    siteCopy.seo.home,
-    siteCopy.seo.privacy,
-    siteCopy.seo.terms,
-    siteCopy.nav,
-    siteCopy.footer,
-    siteCopy.demo,
-    siteCopy.home,
-    siteCopy.engagementModes,
-  ]);
+const manropeBuf = await subsetFont(await fs.readFile(manropeSource), latinGlyphs, {
+  targetFormat: "woff2",
+  noHinting: true,
+  variationAxes: { wght: { min: 300, max: 700 } },
+});
+await fs.writeFile(path.join(root, "app/fonts/manrope-latin.woff2"), manropeBuf);
 
-  const solutions = JSON.parse(await fs.readFile(path.join(root, "content/solutions-v2.json"), "utf8"));
-  for (const s of solutions) {
-    coreText += JSON.stringify([
-      s.name.zh,
-      s.shortName.zh,
-      s.promise.zh,
-      s.intro.zh,
-      s.deliverables.map((d) => d.zh),
-      s.workflow,
-    ]);
-  }
-
-  const founders = JSON.parse(await fs.readFile(path.join(root, "content/founders-v2.json"), "utf8"));
-  for (const f of founders) {
-    coreText += JSON.stringify([
-      f.role.zh,
-      f.tags.map((x) => x.zh),
-      f.specialtyBadge.zh,
-      f.focusDeliverable.zh,
-    ]);
-  }
-
-  const cases = JSON.parse(await fs.readFile(path.join(root, "content/cases-v2.json"), "utf8"));
-  for (const c of cases.filter((x) => x.group === "core")) {
-    const mainImg = c.images[c.mainImageIndex] ?? c.images[0];
-    coreText += JSON.stringify([
-      c.industry.zh,
-      c.title.zh,
-      c.system.zh,
-      c.solutionLabel.zh,
-      c.profile.zh,
-      c.stats[0]?.value?.zh,
-      c.stats[0]?.label?.zh,
-      mainImg?.caption?.zh,
-    ]);
-  }
-
-  const insights = JSON.parse(await fs.readFile(path.join(root, "content/insights-v2.json"), "utf8"));
-  for (const ins of insights) {
-    coreText += JSON.stringify([
-      ins.title,
-      ins.metaDescription,
-      ins.category,
-      ins.dateDisplay,
-      ins.readingTime,
-      ins.coverMetric,
-      ins.coverNodes,
-    ]);
-  }
-
-  for (const [rel, maxLines] of [
-    ["components/Header.tsx", 999],
-    ["components/Footer.tsx", 999],
-    ["components/HeroProvenanceStage.tsx", 999],
-    ["components/HomeVisuals.tsx", 999],
-    ["components/CaseVisuals.tsx", 165],
-    ["components/EditorialVisuals.tsx", 290],
-    ["components/PageTemplates.tsx", 455],
-    ["lib/content.ts", 125],
-    ["app/(zh)/layout.tsx", 999],
-    ["app/(zh)/page.tsx", 999],
-  ]) {
-    if (!(await fs.stat(path.join(root,rel)).catch(()=>null))) continue;
-    const lines = (await fs.readFile(path.join(root, rel), "utf8")).split(/\r?\n/);
-    coreText += "\n" + lines.slice(0, maxLines).join("\n");
-  }
-  // v3 restores the complete v1 home, including inline content and shared chrome.
-  const baseline = JSON.parse(await fs.readFile(path.join(root,"content/v1/copy.json"),"utf8"));
-  coreText += JSON.stringify([baseline['D.1'],baseline['D.2']]);
-  for (const rel of ['components/v3/pages/Home.tsx','components/v3/pages/EngagementCards.tsx','components/v3/ui.tsx','components/v3/HeaderClient.tsx','components/v3/SolutionExplorerClient.tsx','components/v3/visuals.tsx','components/v3/ScreenshotZoom.tsx','lib/v1-content.ts']) {
-    coreText += await fs.readFile(path.join(root,rel),'utf8');
-  }
-  for (const rel of ['cases','founders']) coreText += await fs.readFile(path.join(root,`content/v1/${rel}.json`),'utf8');
-  // Exact initial home content keeps the core small; other pages use the extension.
-  const rendered=JSON.parse(await fs.readFile(path.join(root,'content/v1/rendered-baseline.json'),'utf8'));
-  coreText=rendered['/'].text+JSON.stringify(baseline['D.1'])+'跳转到主要内容全部解决方案展开关于我们关闭菜单打开菜单移动导航引用准确率插画形象';
-  for(const rel of ['components/v3/visuals.tsx','components/v3/ScreenshotZoom.tsx','components/v3/HeaderClient.tsx']) coreText+=await fs.readFile(path.join(root,rel),'utf8');
-} catch (err) {
-  console.error("Error collecting coreText:", err);
-  process.exit(1);
+function decodeEntities(str) {
+  return str
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&#x27;|&apos;/g, "'")
+    .replace(/&#x([0-9a-fA-F]+);/g, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)));
 }
 
-// 2. Collect ALL glyphs across entire site
-let allText = coreText;
-async function collect(dir) {
+function extractHtmlTextAndAttrs(html) {
+  const withoutCode = html
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ");
+  const attrs = [];
+  for (const m of withoutCode.matchAll(
+    /\b(?:alt|aria-label|title|placeholder|content)\s*=\s*(?:"([^"]*)"|'([^']*)')/gi,
+  )) {
+    attrs.push(m[1] ?? m[2] ?? "");
+  }
+  const bodyMatch = withoutCode.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i);
+  const bodyRaw = bodyMatch ? bodyMatch[1] : withoutCode;
+  const visible = bodyRaw.replace(/<[^>]+>/g, " ");
+  return decodeEntities(visible + "\n" + attrs.join("\n"));
+}
+
+async function walkFiles(dir, predicate, out = []) {
+  let entries = [];
   try {
-    const entries = await fs.readdir(dir, { withFileTypes: true });
-    for (const e of entries) {
-      if (e.name === "node_modules" || e.name === ".next") continue;
-      const p = path.join(dir, e.name);
-      if (e.isDirectory()) await collect(p);
-      else if (/\.(tsx?|json)$/.test(e.name)) {
-        allText += "\n" + (await fs.readFile(p, "utf8"));
-      }
-    }
+    entries = await fs.readdir(dir, { withFileTypes: true });
+  } catch {
+    return out;
+  }
+  for (const e of entries) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) await walkFiles(p, predicate, out);
+    else if (predicate(p, e.name)) out.push(p);
+  }
+  return out;
+}
+
+// 2. Collect core CJK charset from built zh homepage (.next/server/app/index.html) + Home header/tabs
+const appBuildDir = path.join(root, ".next/server/app");
+const homeHtml = await fs.readFile(path.join(appBuildDir, "index.html"), "utf8");
+let coreText = extractHtmlTextAndAttrs(homeHtml);
+
+for (const rel of [
+  "components/v3/HeaderClient.tsx",
+  "components/v3/SolutionExplorerClient.tsx",
+  "components/v3/ProblemTabs.tsx",
+]) {
+  try {
+    coreText += "\n" + (await fs.readFile(path.join(root, rel), "utf8"));
   } catch {}
 }
-for (const d of ["content", "components", "lib", "app"]) {
-  await collect(path.join(root, d));
+
+// 3. Collect /about and /technology subsets + remaining zh pages and v4/v1 JSON
+let aboutText = "";
+try {
+  aboutText = extractHtmlTextAndAttrs(
+    await fs.readFile(path.join(appBuildDir, "about.html"), "utf8"),
+  );
+} catch {}
+
+let techText = "";
+try {
+  techText = extractHtmlTextAndAttrs(
+    await fs.readFile(path.join(appBuildDir, "technology.html"), "utf8"),
+  );
+} catch {}
+
+let allText = coreText + "\n" + aboutText + "\n" + techText;
+
+const htmlFiles = await walkFiles(appBuildDir, (_p, name) => name.endsWith(".html"));
+for (const f of htmlFiles) {
+  const rel = path.relative(appBuildDir, f).replace(/\\/g, "/");
+  if (rel === "en.html" || rel.startsWith("en/")) continue;
+  const html = await fs.readFile(f, "utf8");
+  allText += "\n" + extractHtmlTextAndAttrs(html);
 }
-await collect(path.join(root, "../content/inputs"));
+
+for (const jsonDir of ["content/v4", "content/v1"]) {
+  const jsonFiles = await walkFiles(path.join(root, jsonDir), (_p, name) =>
+    name.endsWith(".json"),
+  );
+  for (const jf of jsonFiles) {
+    allText += "\n" + (await fs.readFile(jf, "utf8"));
+  }
+}
+
+for (const extraJson of ["content/legal-v1.json", "content/query-demo.json"]) {
+  try {
+    allText += "\n" + (await fs.readFile(path.join(root, extraJson), "utf8"));
+  } catch {}
+}
+
+const tsxFiles = await walkFiles(path.join(root, "components"), (_p, name) =>
+  /\.(tsx|ts)$/.test(name),
+);
+for (const tf of tsxFiles) {
+  allText += "\n" + (await fs.readFile(tf, "utf8"));
+}
 
 const coreSet = new Set(coreText.match(CJK_RE) || []);
+const aboutSet = new Set(
+  [...(aboutText.match(CJK_RE) || [])].filter((ch) => !coreSet.has(ch)),
+);
+const techSet = new Set(
+  [...(techText.match(CJK_RE) || [])].filter(
+    (ch) => !coreSet.has(ch) && !aboutSet.has(ch),
+  ),
+);
 const allSet = new Set(allText.match(CJK_RE) || []);
-const extChars = [...allSet].filter((ch) => !coreSet.has(ch)).sort();
+
 const coreChars = [...coreSet].sort();
+const aboutChars = [...aboutSet].sort();
+const techChars = [...techSet].sort();
+const extChars = [...allSet]
+  .filter((ch) => !coreSet.has(ch) && !aboutSet.has(ch) && !techSet.has(ch))
+  .sort();
 
 function toUnicodeRange(chars) {
   if (chars.length === 0) return "U+3000";
@@ -150,7 +163,7 @@ function toUnicodeRange(chars) {
       ranges.push(
         start === prev
           ? `U+${start.toString(16).toUpperCase()}`
-          : `U+${start.toString(16).toUpperCase()}-${prev.toString(16).toUpperCase()}`
+          : `U+${start.toString(16).toUpperCase()}-${prev.toString(16).toUpperCase()}`,
       );
       start = prev = codes[i];
     }
@@ -158,63 +171,73 @@ function toUnicodeRange(chars) {
   ranges.push(
     start === prev
       ? `U+${start.toString(16).toUpperCase()}`
-      : `U+${start.toString(16).toUpperCase()}-${prev.toString(16).toUpperCase()}`
+      : `U+${start.toString(16).toUpperCase()}-${prev.toString(16).toUpperCase()}`,
   );
   return ranges.join(",");
 }
 
-const rawFont = await fs.readFile(fontSource);
-const opts = {
+const rawNoto = await fs.readFile(notoSource);
+const cjkOpts = {
   targetFormat: "woff2",
-  variationAxes: { wght: { min: 300, max: 700 } },
+  variationAxes: { wght: { min: 400, max: 500 } },
   keepFeatures: [],
   noLayoutClosure: true,
   noHinting: true,
 };
 
-const coreBuf = await subsetFont(rawFont, " " + coreChars.join(""), opts);
-const extBuf =
-  extChars.length > 0
-    ? await subsetFont(rawFont, " " + extChars.join(""), opts)
-    : Buffer.alloc(0);
-
 const pubFonts = path.join(root, "public/fonts");
 await fs.mkdir(pubFonts, { recursive: true });
-const hash=buf=>createHash('sha256').update(buf).digest('hex').slice(0,10);
-const coreName=`noto-sc-core.${hash(coreBuf)}.woff2`,extName=`noto-sc-ext.${hash(extBuf)}.woff2`;
-await fs.writeFile(path.join(pubFonts,coreName),coreBuf);
-if (extBuf.length > 0) {
-  await fs.writeFile(path.join(pubFonts, extName), extBuf);
+for (const existing of await fs.readdir(pubFonts)) {
+  if (existing.startsWith("noto-sc-") && existing.endsWith(".woff2")) {
+    await fs.unlink(path.join(pubFonts, existing));
+  }
 }
 
-const stylesDir = path.join(root, "app/styles");
-await fs.mkdir(stylesDir, { recursive: true });
+const hash = (buf) => createHash("sha256").update(buf).digest("hex").slice(0, 10);
 
-let css = `/* Auto-generated by scripts/subset-font.mjs — DO NOT EDIT MANUALLY */
-@font-face {
-  font-family: "Noto Sans SC Subset";
-  src: url("/fonts/${coreName}") format("woff2");
-  font-weight: 300 700;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: ${toUnicodeRange(coreChars)};
-}
-`;
+const slices = [
+  { prefix: "noto-sc-core", chars: coreChars },
+  { prefix: "noto-sc-about", chars: aboutChars },
+  { prefix: "noto-sc-tech", chars: techChars },
+  { prefix: "noto-sc-ext", chars: extChars },
+];
 
-if (extChars.length > 0) {
+let css = `/* Auto-generated by scripts/subset-font.mjs — DO NOT EDIT MANUALLY */\n`;
+const summary = [];
+
+for (const slice of slices) {
+  if (slice.chars.length === 0) continue;
+  const buf = await subsetFont(rawNoto, " " + slice.chars.join(""), cjkOpts);
+  const fileName = `${slice.prefix}.${hash(buf)}.woff2`;
+  await fs.writeFile(path.join(pubFonts, fileName), buf);
   css += `@font-face {
   font-family: "Noto Sans SC Subset";
-  src: url("/fonts/${extName}") format("woff2");
-  font-weight: 300 700;
+  src: url("/fonts/${fileName}") format("woff2");
+  font-weight: 400 500;
   font-style: normal;
   font-display: swap;
-  unicode-range: ${toUnicodeRange(extChars)};
+  unicode-range: ${toUnicodeRange(slice.chars)};
 }
 `;
+  summary.push(
+    `${fileName} (${slice.chars.length} chars, ${(buf.length / 1024).toFixed(1)} KB)`,
+  );
 }
 
-await fs.writeFile(path.join(stylesDir, "cjk-font.css"), css);
+css += `@font-face {
+  font-family: "Noto Sans SC Fallback";
+  src: local("Microsoft YaHei"), local("PingFang SC"), local("Noto Sans CJK SC"), local("Source Han Sans SC");
+  ascent-override: 116%;
+  descent-override: 29%;
+  line-gap-override: 0%;
+  size-adjust: 100%;
+}
+`;
+
+await fs.writeFile(path.join(root, "app/styles/cjk-font.css"), css);
 
 console.log(
-  `✓ CJK subsets built: core=${coreChars.length} glyphs (${(coreBuf.length / 1024).toFixed(1)} KB), ext=${extChars.length} glyphs (${(extBuf.length / 1024).toFixed(1)} KB)`
+  `✓ CJK subsets (wght 400–500): ${summary.join(" + ")}; Latin: inter=${(
+    interBuf.length / 1024
+  ).toFixed(1)} KB, manrope=${(manropeBuf.length / 1024).toFixed(1)} KB.`,
 );

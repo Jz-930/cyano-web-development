@@ -50,7 +50,6 @@ h2,
 h3,
 h4 {
   letter-spacing: -0.02em;
-  text-wrap: balance;
 }
 h1 {
   font-size: var(--s68);
@@ -67,7 +66,6 @@ h3 {
 }
 p {
   color: var(--muted);
-  text-wrap: pretty;
 }
 strong,
 b {
@@ -442,7 +440,7 @@ svg {
 }
 .source-item small {
   display: block;
-  font: var(--s12) / 1.6 var(--mono);
+  font: 500 var(--s12) / 1.6 var(--mono);
   color: var(--on-dark);
   margin-bottom: 6px;
 }
@@ -595,7 +593,7 @@ svg {
   color: var(--link);
 }
 .solution-number {
-  font: var(--s14) var(--mono);
+  font: 500 var(--s14) var(--mono);
 }
 .solution-panel {
   background: var(--p2);
@@ -814,7 +812,7 @@ svg {
   border-color: var(--link);
 }
 .gallery-count {
-  font: var(--s14) var(--mono);
+  font: 500 var(--s14) var(--mono);
 }
 .before-after > div {
   background: var(--p2);
@@ -971,7 +969,7 @@ svg {
   line-height: 1.6;
 }
 .faq-list summary > span {
-  font: var(--s12) var(--mono);
+  font: 500 var(--s12) var(--mono);
 }
 .faq-list details p {
   font-size: var(--s16);
@@ -1196,7 +1194,7 @@ svg {
   font-size: var(--s16);
 }
 .architecture-layer > span {
-  font: var(--s14) var(--mono);
+  font: 500 var(--s14) var(--mono);
 }
 .architecture-layer > svg {
   color: var(--link);
@@ -1331,14 +1329,14 @@ svg {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font: var(--s12) / 1 var(--mono);
+  font: 500 var(--s12) / 1 var(--mono);
   color: var(--on-dark);
 }
 .chart-axis {
   display: flex;
   justify-content: space-between;
   margin: 12px 0 24px 48px;
-  font: var(--s12) var(--mono);
+  font: 500 var(--s12) var(--mono);
   color: var(--on-dark);
 }
 .chart-control {
@@ -1496,7 +1494,7 @@ svg {
   overflow: auto;
   background: var(--p3);
   padding: 20px;
-  font: var(--s12) / 1.8 var(--mono);
+  font: 500 var(--s12) / 1.8 var(--mono);
 }
 .closing {
   background: var(--n0);
@@ -2549,7 +2547,7 @@ svg {
   border-color: var(--dark-line);
 }
 .problem-tabs button > span {
-  font: var(--s14) var(--mono);
+  font: 500 var(--s14) var(--mono);
   color: var(--ice);
 }
 .problem-panel h3 {

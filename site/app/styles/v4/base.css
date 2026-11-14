@@ -17,3 +17,8 @@
 :lang(zh-CN) .phrase {
   display: inline-block;
 }
+h1,
+h2,
+.lede {
+  text-wrap: balance;
+}
