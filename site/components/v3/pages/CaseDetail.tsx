@@ -1,11 +1,12 @@
-import pageCopy from "@/content/v3/pages/CaseDetail.json";
+import pageCopy from "@/content/v4/pages/CaseDetail.json";
 import Link from "next/link";
 import { ArrowUpRight, Workflow } from "lucide-react";
-import { Locale, t, href, text, cases } from "@/lib/v1-content";
+import { Locale, t, href, text, cases } from "@/lib/content-v4";
 import { Button, Eyebrow, SectionTitle, CaseCard, WorkflowDiagram, DemoLink } from "../ui";
 import {Gallery} from "../islands/Gallery";
 import {InteractiveDemo} from "../islands/InteractiveDemo";
 import { PageHero } from "./PageHero";
+import { Phrase } from "@/components/v4/Phrase";
 
 export function CaseDetail({ locale, slug }: { locale: Locale; slug: string }) {
   const c = cases(locale).find((c) => c.slug === slug)!;
@@ -19,7 +20,7 @@ export function CaseDetail({ locale, slug }: { locale: Locale; slug: string }) {
         compact
       >
         <Button to={href(locale, "/contact?case=" + c.slug + "#form")}>
-          {pageCopy.c019a52a91a[locale]}
+          {pageCopy.book_a_confidential_demo[locale]}
         </Button>
         <DemoLink item={c} locale={locale} />
       </PageHero>
@@ -27,9 +28,9 @@ export function CaseDetail({ locale, slug }: { locale: Locale; slug: string }) {
         <div className="wrap">
           <div className="case-facts">
             {[
-              [pageCopy.c5b5b00425e[locale], c.system],
-              [pageCopy.c95ed31d988[locale], c.model],
-              [pageCopy.c184eaeaf4e[locale], c.duration],
+              [pageCopy.system[locale], c.system],
+              [pageCopy.engagement[locale], c.model],
+              [pageCopy.timeline[locale], c.duration],
             ].map(([label, value]) => (
               <div key={label}>
                 <small>{label}</small>
@@ -50,9 +51,9 @@ export function CaseDetail({ locale, slug }: { locale: Locale; slug: string }) {
       <section className="section mist">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.cde006ce3f7[locale]}
+            eyebrow={pageCopy.the_system_up_close[locale]}
             title={c.system}
-            description={pageCopy.cef3ba25bcb[locale]}
+            description={pageCopy.screenshots_show_the_main[locale]}
           />
           <Gallery item={c} locale={locale} />
           <p className="confidential-note gallery-note">
@@ -63,18 +64,18 @@ export function CaseDetail({ locale, slug }: { locale: Locale; slug: string }) {
       <section className="section">
         <div className="wrap">
           <div className="editorial-split">
-            <Eyebrow>{pageCopy.c102a9f05f7[locale]}</Eyebrow>
+            <Eyebrow>{pageCopy.before_and_after[locale]}</Eyebrow>
             <div>
               <h2>
-                {pageCopy.c7b5688bc57[locale]}
+                <Phrase text={pageCopy.what_changed_in_the[locale]} locale={locale} />
               </h2>
               <div className="before-after">
                 <div>
-                  <small>{pageCopy.cd46d21be8d[locale]}</small>
+                  <small>{pageCopy.before[locale]}</small>
                   <p>{c.before}</p>
                 </div>
                 <div>
-                  <small>{pageCopy.c080f33ef37[locale]}</small>
+                  <small>{pageCopy.after[locale]}</small>
                   <p>{c.after}</p>
                 </div>
               </div>
@@ -82,27 +83,27 @@ export function CaseDetail({ locale, slug }: { locale: Locale; slug: string }) {
           </div>
           <div className="section-divider" />
           <SectionTitle
-            eyebrow={pageCopy.c877641ab00[locale]}
-            title={pageCopy.c4600500e8f[locale]}
+            eyebrow={pageCopy.how_it_works[locale]}
+            title={pageCopy.processing_and_review_steps[locale]}
           />
           <WorkflowDiagram locale={locale} />
-          {[2, 3].includes(c.index) && (
-            <InteractiveDemo locale={locale} data={c.index === 3} />
+          {["it-knowledge-assistant", "nl-data-query"].includes(c.slug) && (
+            <InteractiveDemo locale={locale} data={c.slug === "nl-data-query"} />
           )}
           <div className="outcome outcome-bar">
-            <Eyebrow>{pageCopy.c8a71fc9bde[locale]}</Eyebrow>
-            <h2>{c.outcome}</h2>
+            <Eyebrow>{pageCopy.project_outcome[locale]}</Eyebrow>
+            <h2><Phrase text={c.outcome} locale={locale} /></h2>
             <p>
-              {pageCopy.c3b730cce7f[locale]}
+              {pageCopy.company_knowledge_workflow_orchestration[locale]}
             </p>
             <Link className="text-link" href={href(locale, "/technology")}>
-              {pageCopy.ca71b8bf131[locale]}
+              {pageCopy.explore_the_engineering[locale]}
               <ArrowUpRight size={18} />
             </Link>
           </div>
           <SectionTitle
-            eyebrow={pageCopy.c57d20e417b[locale]}
-            title={pageCopy.cdb7fcdbcc3[locale]}
+            eyebrow={pageCopy.more_work[locale]}
+            title={pageCopy.more_systems_in_production[locale]}
           />
           <div className="case-grid">
             {cases(locale)

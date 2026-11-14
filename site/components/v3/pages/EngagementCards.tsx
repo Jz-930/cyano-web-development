@@ -1,7 +1,7 @@
-import pageCopy from "@/content/v3/pages/EngagementCards.json";
+import pageCopy from "@/content/v4/pages/EngagementCards.json";
 import Link from "next/link";
 import { ArrowUpRight, KeyRound, Sprout, PackageCheck } from "lucide-react";
-import { Locale, t, href } from "@/lib/v1-content";
+import { Locale, t, href } from "@/lib/content-v4";
 
 export function EngagementCards({ locale }: { locale: Locale }) {
   return (
@@ -13,21 +13,21 @@ export function EngagementCards({ locale }: { locale: Locale }) {
             <Icon size={35} strokeWidth={1.2} />
           </div>
           <span className="tag">
-            {pageCopy.ca4258756dc[locale][i]}
+            {pageCopy.own_a_system[locale][i]}
           </span>
           <h3>
-            {pageCopy.cae79c93a25[locale][i]}
+            {pageCopy.full_custom_build[locale][i]}
           </h3>
           <p>
-            {pageCopy.c3df04afb52[locale][i]}
+            {pageCopy.for_teams_with_clear[locale][i]}
           </p>
           <div className="engagement-bottom">
             <span>
-              {pageCopy.ccc77638506[locale][i]}
+              {pageCopy.first_release_in_6[locale][i]}
             </span>
             <Link
               href={href(locale, "/contact#form")}
-              aria-label={pageCopy.c0ed5e080c6[locale]}
+              aria-label={pageCopy.discuss_engagement[locale]}
             >
               <ArrowUpRight size={20} />
             </Link>

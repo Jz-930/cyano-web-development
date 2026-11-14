@@ -1,0 +1,14 @@
+{
+  "D.4/如果效果不达预期怎么办？ / What if results fall short?": {
+    "zh": "试点开始前，双方先约定验收标准。如果结果不达预期，可以补充资料、调整流程，也可以停止试点，再决定是否加大投入。",
+    "en": "Before the pilot, we agree on acceptance criteria. If results fall short, we can add source material, adjust the workflow or stop the pilot, then decide whether to invest further.",
+    "status": "approved",
+    "ref": "09#E-3"
+  },
+  "D.4/数据安全如何保障？ / How is our data protected?": {
+    "zh": "支持私有化部署，数据不出你的环境；系统内置权限控制、日志审计与敏感信息拦截。",
+    "en": "Private deployment keeps data inside your environment. Every system includes access control, full audit logs and sensitive-data filtering.",
+    "status": "approved",
+    "ref": "09#D-20"
+  }
+}

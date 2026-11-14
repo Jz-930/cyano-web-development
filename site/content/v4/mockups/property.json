@@ -1,0 +1,27 @@
+{
+  "tag1": {
+    "zh": "租赁",
+    "en": "Rent",
+    "status": "approved"
+  },
+  "tag2": {
+    "zh": "维修",
+    "en": "Repairs",
+    "status": "approved"
+  },
+  "tag3": {
+    "zh": "管理费用",
+    "en": "Management fees",
+    "status": "approved"
+  },
+  "summary": {
+    "zh": "按房产查看",
+    "en": "By property",
+    "status": "approved"
+  },
+  "caption": {
+    "zh": "物业管理界面示意：从日常沟通中提取费用，按房产汇总。",
+    "en": "Property interface: costs extracted from messages and grouped by property.",
+    "status": "approved"
+  }
+}

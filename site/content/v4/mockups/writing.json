@@ -1,0 +1,37 @@
+{
+  "main": {
+    "zh": "主线",
+    "en": "Main",
+    "status": "approved"
+  },
+  "branchA": {
+    "zh": "分支 A",
+    "en": "Branch A",
+    "status": "approved"
+  },
+  "branchB": {
+    "zh": "分支 B",
+    "en": "Branch B",
+    "status": "approved"
+  },
+  "mem1": {
+    "zh": "人物设定",
+    "en": "Character profiles",
+    "status": "approved"
+  },
+  "mem2": {
+    "zh": "世界观",
+    "en": "World setting",
+    "status": "approved"
+  },
+  "mem3": {
+    "zh": "剧情节点",
+    "en": "Plot points",
+    "status": "approved"
+  },
+  "caption": {
+    "zh": "写作引擎界面示意：设定按需调用，分支互不干扰。",
+    "en": "Writing engine interface: retrieves story details as needed and keeps branches separate.",
+    "status": "approved"
+  }
+}

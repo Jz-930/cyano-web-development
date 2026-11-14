@@ -1,4 +1,4 @@
-import {type Locale} from "@/lib/v1-content";
+import {type Locale} from "@/lib/content-v4";
 import raw from "@/content/v1/copy.json";
 import {DemoIsland} from "../VisibleIslands";
 import {DemoPreview} from "../DemoPreview";

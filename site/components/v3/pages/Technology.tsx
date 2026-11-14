@@ -1,10 +1,11 @@
-import pageCopy from "@/content/v3/pages/Technology.json";
+import pageCopy from "@/content/v4/pages/Technology.json";
 import Link from "next/link";
 import { ArrowUpRight, ShieldCheck, Network, Workflow, Check, Database } from "lucide-react";
-import { Locale, t, href, text } from "@/lib/v1-content";
+import { Locale, t, href, text } from "@/lib/content-v4";
 import { Button, Eyebrow, SectionTitle } from "../ui";
 import copy from "@/content/v1/copy.json";
 import { PageHero } from "./PageHero";
+import { Phrase } from "@/components/v4/Phrase";
 
 export function Technology({ locale }: { locale: Locale }) {
   return (
@@ -17,17 +18,17 @@ export function Technology({ locale }: { locale: Locale }) {
         art="/art/technology.webp"
       >
         <Button locale={locale}>
-          {pageCopy.cc13c665d68[locale]}
+          {pageCopy.talk_to_our_cto[locale]}
         </Button>
       </PageHero>
       <section className="section">
         <div className="wrap">
           <div className="editorial-split">
             <Eyebrow>
-              {pageCopy.c6ba0963fc8[locale]}
+              {pageCopy.platform_functions[locale]}
             </Eyebrow>
             <div>
-              <h2>Cyano Core</h2>
+              <h2><Phrase text="Cyano Core" locale={locale} /></h2>
               <p className="large-copy">
                 {text("D.6", "Cyano Core 定义", locale)}
               </p>
@@ -56,7 +57,7 @@ export function Technology({ locale }: { locale: Locale }) {
       <section className="section dark">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.c60db7c1969[locale]}
+            eyebrow={pageCopy.context_engineering[locale]}
             title={text("D.6", "估值引擎标题", locale)}
           />
           <div className="three-columns">
@@ -77,7 +78,7 @@ export function Technology({ locale }: { locale: Locale }) {
             {[100, 75, 40, 15].map((v, i) => (
               <div key={v}>
                 <span>
-                  {pageCopy.c9a04516c09[locale][i]}
+                  {pageCopy.core_instructions_preserved[locale][i]}
                 </span>
                 <div>
                   <i style={{ width: v + "%" }} />
@@ -93,7 +94,7 @@ export function Technology({ locale }: { locale: Locale }) {
                   <sup>*</sup>
                 </strong>
                 <p>
-                  {pageCopy.c253678ad09[locale][i]}
+                  {pageCopy.response_latency[locale][i]}
                 </p>
               </div>
             ))}
@@ -104,7 +105,7 @@ export function Technology({ locale }: { locale: Locale }) {
       <section className="section">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.ce86d62dc6f[locale]}
+            eyebrow={pageCopy.designed_to_connect[locale]}
             title={text("D.6", "兼容区标题", locale)}
           />
           <div className="integration-tags">
@@ -113,13 +114,13 @@ export function Technology({ locale }: { locale: Locale }) {
               "Anthropic Claude",
               "Google Gemini",
               "DeepSeek",
-              pageCopy.c82e27d8604[locale],
+              pageCopy.qwen[locale],
               "Llama",
               "MySQL",
               "PostgreSQL",
-              pageCopy.c279540dd01[locale],
-              pageCopy.cd1f6713db3[locale],
-              pageCopy.c7b722df55d[locale],
+              pageCopy.lark[locale],
+              pageCopy.dingtalk[locale],
+              pageCopy.wecom[locale],
               "SharePoint",
               "Confluence",
               "ERP / CRM",
@@ -131,14 +132,14 @@ export function Technology({ locale }: { locale: Locale }) {
           <div className="security-banner">
             <ShieldCheck size={48} strokeWidth={1} />
             <div>
-              <h2>{text("D.6", "安全区标题", locale)}</h2>
+              <h2><Phrase text={text("D.6", "安全区标题", locale)} locale={locale} /></h2>
               <p>
-                {pageCopy.cd82b0e00a7[locale]}
+                {pageCopy.the_system_includes_access[locale]}
               </p>
             </div>
             <Link
               href={href(locale, "/contact#form")}
-              aria-label={pageCopy.cb7049dd516[locale]}
+              aria-label={pageCopy.discuss_data_security_and[locale]}
             >
               <ArrowUpRight size={28} />
             </Link>

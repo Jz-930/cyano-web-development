@@ -1,16 +1,17 @@
-import pageCopy from "@/content/v3/pages/Contact.json";
+import pageCopy from "@/content/v4/pages/Contact.json";
 import {Picture} from "../Picture";
-import { Locale, t, text } from "@/lib/v1-content";
+import { Locale, t, text } from "@/lib/content-v4";
 import { Eyebrow } from "../ui";
 import {ContactForm} from "../islands/ContactForm";
 import { PageHero } from "./PageHero";
+import { Phrase } from "@/components/v4/Phrase";
 
 export function Contact({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHero
         locale={locale}
-        eyebrow={pageCopy.cb59ac26ed1[locale]}
+        eyebrow={pageCopy.lets_talk[locale]}
         title={text("D.8", "Hero 标题", locale)}
         intro={text("D.8", "Hero 导语", locale)}
         compact
@@ -19,10 +20,10 @@ export function Contact({ locale }: { locale: Locale }) {
         <div className="wrap contact-layout">
           <aside>
             <Eyebrow>
-              {pageCopy.c7f81224b43[locale]}
+              {pageCopy.topics_to_discuss[locale]}
             </Eyebrow>
             <h2>
-              {pageCopy.c96f9dc04d9[locale]}
+              <Phrase text={pageCopy.requirements_projects_or_technical[locale]} locale={locale} />
             </h2>
             <div className="contact-starts">
               {[1, 2, 3].map((i) => {
@@ -42,17 +43,17 @@ export function Contact({ locale }: { locale: Locale }) {
             </div>
             <div className="contact-person">
               <div className="contact-avatar">
-                <Picture src="/v3-materials/founder-4.webp" alt={pageCopy.c400a667ac0[locale]}/>
+                <Picture src="/v3-materials/founder-4.webp" alt={pageCopy.head_of_product_solutions[locale]}/>
               </div>
               <div>
                 <h3>
-                  {pageCopy.cacf9ee0ac0[locale]}
+                  {pageCopy.your_inquiry[locale]}
                 </h3>
                 <p>{text("D.8", "谁会回复你", locale)}</p>
               </div>
             </div>
             <div className="next-steps">
-              <h3>{pageCopy.c8c2439250f[locale]}</h3>
+              <h3>{pageCopy.what_happens_next[locale]}</h3>
               {[1, 2, 3].map((i) => (
                 <p key={i}>
                   <span>{i}</span>

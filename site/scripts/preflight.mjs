@@ -4,7 +4,7 @@ import dns from "node:dns/promises";
 
 const root = path.resolve(import.meta.dirname, "..");
 const cases = JSON.parse(
-  await fs.readFile(path.join(root, "content/cases-v2.json"), "utf8")
+  await fs.readFile(path.join(root, "content/v4/cases.json"), "utf8")
 );
 
 const availability = { email: false, demos: {} };
@@ -14,20 +14,20 @@ try {
 
 const results = await Promise.all(
   cases
-    .filter((c) => c.demoUrl)
+    .filter((c) => c.demo)
     .map(async (c) => {
       try {
-        const response = await fetch(c.demoUrl, {
+        const response = await fetch(c.demo, {
           signal: AbortSignal.timeout(12000),
         });
         const html = await response.text();
         const ok =
           response.status === 200 && /<title>[^<]+<\/title>/i.test(html);
         availability.demos[c.slug] = ok;
-        return `${c.demoUrl} — HTTP ${response.status}; enabled=${ok}`;
+        return `${c.demo} — HTTP ${response.status}; enabled=${ok}`;
       } catch (e) {
         availability.demos[c.slug] = false;
-        return `${c.demoUrl} — disabled: ${e.message}`;
+        return `${c.demo} — disabled: ${e.message}`;
       }
     })
 );

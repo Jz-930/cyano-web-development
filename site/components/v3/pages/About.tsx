@@ -1,15 +1,16 @@
-import pageCopy from "@/content/v3/pages/About.json";
-import { Locale, t, text } from "@/lib/v1-content";
+import pageCopy from "@/content/v4/pages/About.json";
+import { Locale, t, text } from "@/lib/content-v4";
 import { Eyebrow, SectionTitle, Stats, Team } from "../ui";
 import {TeamDiagram} from "../TeamDiagram";
 import { PageHero } from "./PageHero";
+import { Phrase } from "@/components/v4/Phrase";
 
 export function About({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHero
         locale={locale}
-        eyebrow={pageCopy.c3a2700fd76[locale]}
+        eyebrow={pageCopy.about_cyano[locale]}
         title={text("D.7", "使命句", locale)}
         compact
       />
@@ -18,10 +19,10 @@ export function About({ locale }: { locale: Locale }) {
           <div className="about-intro">
             <div>
               <Eyebrow>
-                {pageCopy.cde7dfbce78[locale]}
+                {pageCopy.our_background[locale]}
               </Eyebrow>
               <h2>
-                {pageCopy.c8aa02c4d5b[locale]}
+                <Phrase text={pageCopy.ai_research_and_enterprise[locale]} locale={locale} />
               </h2>
               <p>{text("D.7", "我们是谁 1", locale)}</p>
               <p>{text("D.7", "我们是谁 2", locale)}</p>
@@ -34,7 +35,7 @@ export function About({ locale }: { locale: Locale }) {
       <section className="section mist">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.c6949dc8060[locale]}
+            eyebrow={pageCopy.founders[locale]}
             title={text("D.7", "创始团队标题", locale)}
           />
           <Team locale={locale} full />
@@ -45,10 +46,10 @@ export function About({ locale }: { locale: Locale }) {
           <Eyebrow light>{text("D.7", "名字的由来标题", locale)}</Eyebrow>
           <div>
             <h2>
-              {pageCopy.ccf8724750f[locale]}
+              <Phrase text={pageCopy.designed_around_your_sources[locale]} locale={locale} />
             </h2>
             <p>
-              {pageCopy.c6f5481fb45[locale]}
+              {pageCopy.sales_inquiries_need_specifications[locale]}
             </p>
           </div>
         </div>
@@ -56,7 +57,7 @@ export function About({ locale }: { locale: Locale }) {
       <section className="section">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.c16b9b0df26[locale]}
+            eyebrow={pageCopy.our_principles[locale]}
             title={text("D.7", "原则标题", locale)}
           />
           <div className="principles-grid">

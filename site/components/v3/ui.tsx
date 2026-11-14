@@ -2,6 +2,7 @@ import {Picture} from "./Picture";
 import {CountValue} from "./CountValue";
 import {EngineeringDiagram} from "./EngineeringDiagram";
 import { LightField } from "./LightField";
+import { Phrase } from "@/components/v4/Phrase";
 import Link from "next/link";
 import {
   ArrowUpRight,
@@ -30,7 +31,7 @@ import {
   founders,
   insights,
   solutions,
-} from "@/lib/v1-content";
+} from "@/lib/content-v4";
 import availability from "@/content/v1/availability.json";
 export const Arrow = ({ diagonal = false }: { diagonal?: boolean }) =>
   diagonal ? <ArrowUpRight size={18} /> : <ArrowRight size={18} />;
@@ -86,7 +87,7 @@ export function SectionTitle({
     <div className="section-heading">
       <div>
         <Eyebrow>{eyebrow}</Eyebrow>
-        <h2>{title}</h2>
+        <h2><Phrase text={title} /></h2>
         {description && <p>{description}</p>}
       </div>
       {children}
@@ -342,7 +343,7 @@ export function ClosingCta({ locale }: { locale: Locale }) {
           <Eyebrow light>
             {t(locale, "项目咨询", "CONTACT US")}
           </Eyebrow>
-          <h2>{text("D.1", "收尾 CTA 口号", locale)}</h2>
+          <h2><Phrase text={text("D.1", "收尾 CTA 口号", locale)} locale={locale} /></h2>
           <p>{text("D.1", "收尾 CTA 副句", locale)}</p>
         </div>
         <Button locale={locale}>{text("D.1", "主按钮", locale)}</Button>

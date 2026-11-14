@@ -1,0 +1,50 @@
+[
+  {
+    "id": "engineering",
+    "order": 0,
+    "label": {
+      "zh": "工程与制造",
+      "en": "Engineering & Manufacturing"
+    }
+  },
+  {
+    "id": "professional-services",
+    "order": 1,
+    "label": {
+      "zh": "专业服务与投研",
+      "en": "Professional Services & Research"
+    }
+  },
+  {
+    "id": "enterprise-services",
+    "order": 2,
+    "label": {
+      "zh": "企业服务",
+      "en": "Enterprise Services"
+    }
+  },
+  {
+    "id": "retail",
+    "order": 3,
+    "label": {
+      "zh": "零售与供应链",
+      "en": "Retail & Supply Chain"
+    }
+  },
+  {
+    "id": "real-estate",
+    "order": 4,
+    "label": {
+      "zh": "房地产与物业",
+      "en": "Real Estate & Property"
+    }
+  },
+  {
+    "id": "content-media",
+    "order": 5,
+    "label": {
+      "zh": "内容与传媒",
+      "en": "Content & Media"
+    }
+  }
+]

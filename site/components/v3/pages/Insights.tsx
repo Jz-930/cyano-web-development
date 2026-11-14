@@ -1,5 +1,5 @@
-import pageCopy from "@/content/v3/pages/Insights.json";
-import { Locale, t } from "@/lib/v1-content";
+import pageCopy from "@/content/v4/pages/Insights.json";
+import { Locale, t } from "@/lib/content-v4";
 import { InsightCards } from "../ui";
 import { PageHero } from "./PageHero";
 
@@ -8,9 +8,9 @@ export function Insights({ locale }: { locale: Locale }) {
     <>
       <PageHero
         locale={locale}
-        eyebrow={pageCopy.cc31ab3e384[locale]}
-        title={pageCopy.c263010915a[locale]}
-        intro={pageCopy.c43fe9d94f3[locale]}
+        eyebrow={pageCopy.insights[locale]}
+        title={pageCopy.notes_on_designing_and[locale]}
+        intro={pageCopy.guides_to_knowledge_systems[locale]}
         compact
       />
       <section className="section">

@@ -1,15 +1,13 @@
-import pageCopy from "@/content/v3/pages/Article.json";
-import { Locale, t, href, text, insights } from "@/lib/v1-content";
+import pageCopy from "@/content/v4/pages/Article.json";
+import { Locale, t, href, text, insights, getArticleBlocks } from "@/lib/content-v4";
 import { Button } from "../ui";
 import {CopyLink} from "../islands/CopyLink";
-import articles from "@/content/articles.json";
 import { PageHero } from "./PageHero";
+import { Phrase } from "@/components/v4/Phrase";
 
 export function Article({ locale, slug }: { locale: Locale; slug: string }) {
   const a = insights(locale).find((i) => i.slug === slug)!;
-  const blocks = (
-    articles as Record<string, Record<Locale, { q: string; a: string }[]>>
-  )[slug][locale];
+  const blocks = getArticleBlocks(slug, locale);
   return (
     <>
       <PageHero
@@ -26,10 +24,10 @@ export function Article({ locale, slug }: { locale: Locale; slug: string }) {
           <aside className="article-sidebar">
             <span>{a.date}</span>
             <h3>{a.author.role}</h3>
-            <p>{pageCopy.cc92632c3cd[locale]}</p>
+            <p>{pageCopy.cyano_founding_team[locale]}</p>
             <CopyLink locale={locale} />
             <div className="article-toc">
-              <h4>{pageCopy.cc98a765438[locale]}</h4>
+              <h4>{pageCopy.in_this_article[locale]}</h4>
               {blocks.map((b, i) => (
                 <a href={"#part-" + i} key={i}>
                   {b.q}
@@ -40,7 +38,7 @@ export function Article({ locale, slug }: { locale: Locale; slug: string }) {
           <article className="article-body">
             {blocks.map((b, i) => (
               <section id={"part-" + i} key={i}>
-                <h2>{b.q}</h2>
+                <h2><Phrase text={b.q} locale={locale} /></h2>
                 {b.a.split("\n\n").map((p, j) => (
                   <p key={j}>{p}</p>
                 ))}
@@ -48,10 +46,10 @@ export function Article({ locale, slug }: { locale: Locale; slug: string }) {
             ))}
             <div className="article-end">
               <h3>
-                {pageCopy.c6d9279dc73[locale]}
+                {pageCopy.discuss_a_similar_project[locale]}
               </h3>
               <p>
-                {pageCopy.cb0bcab9e81[locale]}
+                {pageCopy.bring_your_current_process[locale]}
               </p>
               <Button locale={locale}>{text("D.1", "主按钮", locale)}</Button>
             </div>

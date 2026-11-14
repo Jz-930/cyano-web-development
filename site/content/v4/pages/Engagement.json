@@ -1,13 +1,13 @@
 {
-  "c07e2733746": {
+  "how_we_work": {
     "zh": "合作方式",
     "en": "HOW WE WORK"
   },
-  "c94eb35ef5a": {
+  "compare": {
     "zh": "对比维度",
     "en": "Compare"
   },
-  "c8073196267": {
+  "full_custom_build": {
     "zh": [
       "完整定制开发",
       "低启动试点",
@@ -19,7 +19,7 @@
       "Managed service"
     ]
   },
-  "cd417d93d37": {
+  "what_you_get": {
     "zh": [
       "你得到什么",
       "系统运营",
@@ -31,15 +31,15 @@
       "Best for"
     ]
   },
-  "c38832f88ff": {
+  "project_process": {
     "zh": "项目流程",
     "en": "PROJECT PROCESS"
   },
-  "c5abfe6869e": {
+  "assessment_development_and_ongoing": {
     "zh": "从需求评估到上线维护",
     "en": "Assessment, development and ongoing support"
   },
-  "c819c53584b": {
+  "assess_requirements": {
     "zh": [
       "需求评估",
       "价值评估",
@@ -55,7 +55,7 @@
       "Maintain and update"
     ]
   },
-  "c43bbf22736": {
+  "review_goals_workflows_and": {
     "zh": [
       "梳理目标、流程与数据，一周内给出评估结论。",
       "估算人工、外包与返工成本，比较预期收益，确定开发顺序。",
@@ -71,11 +71,11 @@
       "Address user feedback and faults, and update sources and features as agreed."
     ]
   },
-  "ce7958d33de": {
+  "common_questions": {
     "zh": "常见问题",
     "en": "COMMON QUESTIONS"
   },
-  "c6c5c0c27ab": {
+  "before_we_begin": {
     "zh": "开始之前，\n你可能想知道",
     "en": "Before we begin"
   }

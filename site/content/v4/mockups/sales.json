@@ -1,0 +1,52 @@
+{
+  "q": {
+    "zh": "这类设备适合我们的工况吗？",
+    "en": "Is this equipment right for our operating conditions?",
+    "status": "approved"
+  },
+  "row1": {
+    "zh": "型号与参数已核对",
+    "en": "Model and specs checked",
+    "status": "approved"
+  },
+  "row2": {
+    "zh": "工况条件已匹配",
+    "en": "Operating conditions matched",
+    "status": "approved"
+  },
+  "row3": {
+    "zh": "已找到相似项目",
+    "en": "Comparable projects found",
+    "status": "approved"
+  },
+  "drawer": {
+    "zh": "引用来源",
+    "en": "Sources",
+    "status": "approved"
+  },
+  "src1": {
+    "zh": "产品资料",
+    "en": "Product documentation",
+    "status": "approved"
+  },
+  "src2": {
+    "zh": "项目记录",
+    "en": "Project records",
+    "status": "approved"
+  },
+  "similar": {
+    "zh": "相似项目",
+    "en": "Comparable project",
+    "status": "approved"
+  },
+  "input1": {
+    "zh": "客户提问",
+    "en": "Customer question",
+    "status": "approved"
+  },
+  "caption": {
+    "zh": "销售顾问界面示意：根据产品资料与项目记录回答客户问题。",
+    "en": "Sales advisor interface: answers customer questions using product documentation and project records.",
+    "status": "approved"
+  }
+}

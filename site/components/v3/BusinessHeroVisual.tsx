@@ -1,4 +1,4 @@
-import {type Locale,t,cases} from "@/lib/v1-content";
+import {type Locale,t,cases} from "@/lib/content-v4";
 import {LightField} from "./LightField";
 import {ScreenshotZoom} from "./ScreenshotZoom";
 export function BusinessHeroVisual({locale}:{locale:Locale}){

@@ -1,8 +1,9 @@
-import pageCopy from "@/content/v3/pages/PageHero.json";
+import pageCopy from "@/content/v4/pages/PageHero.json";
 import Link from "next/link";
 import {CoreVisual} from "../CoreVisual";
-import { Locale, t, href } from "@/lib/v1-content";
+import { Locale, href } from "@/lib/content-v4";
 import { Eyebrow } from "../ui";
+import { Phrase } from "@/components/v4/Phrase";
 
 export function PageHero({
   locale,
@@ -29,12 +30,12 @@ export function PageHero({
       <div className="page-hero-shade" />
       <div className="wrap page-hero-inner">
         <div className="breadcrumb">
-          <Link href={href(locale)}>{pageCopy.c76c92ba094[locale]}</Link>
+          <Link href={href(locale)}>{pageCopy.home[locale]}</Link>
           <span>/</span>
           <span>{eyebrow}</span>
         </div>
         <Eyebrow light>{eyebrow}</Eyebrow>
-        <h1>{title}</h1>
+        <h1><Phrase text={title} locale={locale} /></h1>
         {intro && <p>{intro}</p>}
         {children && <div className="hero-buttons">{children}</div>}
       </div>

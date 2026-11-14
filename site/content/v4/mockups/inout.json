@@ -1,0 +1,62 @@
+{
+  "inout.sales-ai.src1": {
+    "zh": "产品手册",
+    "en": "Product manual",
+    "status": "approved"
+  },
+  "inout.sales-ai.src2": {
+    "zh": "参数表",
+    "en": "Spec sheet",
+    "status": "approved"
+  },
+  "inout.sales-ai.src3": {
+    "zh": "项目记录",
+    "en": "Project records",
+    "status": "approved"
+  },
+  "inout.document-automation.src1": {
+    "zh": "招标文件",
+    "en": "Tender document",
+    "status": "approved"
+  },
+  "inout.document-automation.src2": {
+    "zh": "项目参数表",
+    "en": "Parameter sheet",
+    "status": "approved"
+  },
+  "inout.document-automation.src3": {
+    "zh": "历史方案",
+    "en": "Past proposal",
+    "status": "approved"
+  },
+  "inout.knowledge-assistant.src1": {
+    "zh": "内部制度",
+    "en": "Policies",
+    "status": "approved"
+  },
+  "inout.knowledge-assistant.src2": {
+    "zh": "操作手册",
+    "en": "How-to guides",
+    "status": "approved"
+  },
+  "inout.knowledge-assistant.src3": {
+    "zh": "工单记录",
+    "en": "Ticket history",
+    "status": "approved"
+  },
+  "inout.data-query.src1": {
+    "zh": "销售数据",
+    "en": "Sales data",
+    "status": "approved"
+  },
+  "inout.data-query.src2": {
+    "zh": "库存数据",
+    "en": "Inventory data",
+    "status": "approved"
+  },
+  "inout.data-query.src3": {
+    "zh": "提问",
+    "en": "Question",
+    "status": "approved"
+  }
+}

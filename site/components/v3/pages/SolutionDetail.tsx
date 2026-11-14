@@ -1,10 +1,11 @@
-import pageCopy from "@/content/v3/pages/SolutionDetail.json";
+import pageCopy from "@/content/v4/pages/SolutionDetail.json";
 import { Check } from "lucide-react";
-import { Locale, t, href, text, cases, solutions } from "@/lib/v1-content";
+import { Locale, t, href, text, cases, solutions } from "@/lib/content-v4";
 import { Button, SectionTitle, CaseCard, WorkflowDiagram } from "../ui";
 import {FAQ} from "../islands/FAQ";
 import {InteractiveDemo} from "../islands/InteractiveDemo";
 import { PageHero } from "./PageHero";
+import { Phrase } from "@/components/v4/Phrase";
 
 export function SolutionDetail({
   locale,
@@ -15,7 +16,7 @@ export function SolutionDetail({
 }) {
   const s = solutions(locale).find((s) => s.slug === slug)!;
   const c = cases(locale).find((c) => c.slug === s.caseSlug)!;
-  const pains = pageCopy.c941685fd36[locale][s.index].split("|");
+  const pains = pageCopy.product_information_takes_too[locale][s.index].split("|");
   return (
     <>
       <PageHero
@@ -27,7 +28,7 @@ export function SolutionDetail({
       >
         <Button locale={locale}>{text("D.1", "主按钮", locale)}</Button>
         <Button secondary to={href(locale, "/cases/" + c.slug)}>
-          {pageCopy.c7d8027cf10[locale]}
+          {pageCopy.see_related_work[locale]}
         </Button>
       </PageHero>
       <section className="section">
@@ -41,8 +42,8 @@ export function SolutionDetail({
             ))}
           </div>
           <SectionTitle
-            eyebrow={pageCopy.c50d6ecf9ef[locale]}
-            title={pageCopy.c6371e120c5[locale]}
+            eyebrow={pageCopy.the_challenge[locale]}
+            title={pageCopy.common_problems_in_this[locale]}
           />
           <div className="three-columns">
             {pains.map((p, i) => (
@@ -57,15 +58,15 @@ export function SolutionDetail({
       <section className="section mist">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.cb2e80ebd0a[locale]}
-            title={pageCopy.c7b67845196[locale]}
+            eyebrow={pageCopy.the_approach[locale]}
+            title={pageCopy.how_the_system_handles[locale]}
           />
           <WorkflowDiagram locale={locale} />
           <div className="deliverables">
-            <h3>{pageCopy.c8e8a71c730[locale]}</h3>
+            <h3>{pageCopy.what_you_receive[locale]}</h3>
             {[
               ...s.outputs.split(" · "),
-              pageCopy.ccf14677e99[locale],
+              pageCopy.maintenance_and_ongoing_iteration[locale],
             ].map((d) => (
               <span key={d}>
                 <Check size={17} />
@@ -78,29 +79,29 @@ export function SolutionDetail({
       <section className="section">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.c186c216c6e[locale]}
-            title={pageCopy.c2e9ee617bd[locale]}
+            eyebrow={pageCopy.in_production[locale]}
+            title={pageCopy.related_system_and_project[locale]}
           />
           <div className="single-case">
             <CaseCard item={c} locale={locale} />
           </div>
-          {[2, 3].includes(s.index) && (
-            <InteractiveDemo locale={locale} data={s.index === 3} />
+          {["knowledge-assistant", "data-query"].includes(s.slug) && (
+            <InteractiveDemo locale={locale} data={s.slug === "data-query"} />
           )}
           <div className="faq-section">
-            <h2>{pageCopy.c9f70c398fd[locale]}</h2>
+            <h2><Phrase text={pageCopy.common_questions[locale]} locale={locale} /></h2>
             <FAQ
               items={[
                 {
-                  q: pageCopy.c7f1a4caa4e[locale],
-                  a: pageCopy.cb9bc65b425[locale],
+                  q: pageCopy.can_it_connect_to[locale],
+                  a: pageCopy.yes_the_assessment_covers[locale],
                 },
                 {
-                  q: pageCopy.c0d5ddd0cbb[locale],
-                  a: pageCopy.c0b647bcc73[locale],
+                  q: pageCopy.how_do_you_make[locale],
+                  a: pageCopy.we_use_your_own[locale],
                 },
                 {
-                  q: pageCopy.c1d935442b7[locale],
+                  q: pageCopy.when_can_we_try[locale],
                   a: text("D.3", "合作提示（T9）", locale),
                 },
               ]}

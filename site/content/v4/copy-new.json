@@ -1,0 +1,1712 @@
+{
+  "F10-e1": {
+    "zh": "请填写这一项。",
+    "en": "Please fill in this field.",
+    "status": "class-a",
+    "ref": "09#F10-e1"
+  },
+  "F10-e2": {
+    "zh": "请填写有效的邮箱地址。",
+    "en": "Please enter a valid email address.",
+    "status": "class-a",
+    "ref": "09#F10-e2"
+  },
+  "F10-e3": {
+    "zh": "请先阅读并同意隐私政策。",
+    "en": "Please accept the Privacy Policy to continue.",
+    "status": "class-a",
+    "ref": "09#F10-e3"
+  },
+  "F12-1": {
+    "zh": "了解 Cyano（澜屿智创）如何收集、使用和保护你在业务咨询中提供的信息，以及你的查询与删除权利。",
+    "en": "How Cyano Intelligence collects, uses, stores and protects inquiry information, along with retention periods and your data rights.",
+    "status": "class-a",
+    "ref": "09#F12-1"
+  },
+  "F12-2": {
+    "zh": "查看 Cyano（澜屿智创）官方网站的内容说明、知识产权声明、合理使用规范与外部链接说明。",
+    "en": "Website terms of use, intellectual property notices, acceptable use guidelines and external link notices for Cyano Intelligence.",
+    "status": "class-a",
+    "ref": "09#F12-2"
+  },
+  "E-T1": {
+    "zh": "6–12 周完成首期上线",
+    "en": "First release in 6–12 weeks",
+    "status": "class-a",
+    "ref": "09#E-T1"
+  },
+  "E-T2": {
+    "zh": "2–6 周上线首个可用版本",
+    "en": "First working version in 2–6 weeks",
+    "status": "class-a",
+    "ref": "09#E-T2"
+  },
+  "E-T3": {
+    "zh": "首批结果 2 周内交付",
+    "en": "First results within 2 weeks",
+    "status": "class-a",
+    "ref": "09#E-T3"
+  },
+  "G-1": {
+    "zh": "需求评估",
+    "en": "Assessment",
+    "status": "class-a",
+    "ref": "09#G-1"
+  },
+  "G-2": {
+    "zh": "首期上线",
+    "en": "First release",
+    "status": "class-a",
+    "ref": "09#G-2"
+  },
+  "G-3": {
+    "zh": "首个可用版本",
+    "en": "First working version",
+    "status": "class-a",
+    "ref": "09#G-3"
+  },
+  "G-4": {
+    "zh": "首批结果",
+    "en": "First results",
+    "status": "class-a",
+    "ref": "09#G-4"
+  },
+  "G-5": {
+    "zh": "按月 / 按批次持续交付",
+    "en": "Ongoing monthly or batch delivery",
+    "status": "class-a",
+    "ref": "09#G-5"
+  },
+  "G-6": {
+    "zh": "试点",
+    "en": "Pilot",
+    "status": "class-a",
+    "ref": "09#G-6"
+  },
+  "G-7": {
+    "zh": "人工验收",
+    "en": "Human sign-off",
+    "status": "class-a",
+    "ref": "09#G-7"
+  },
+  "G-8": {
+    "zh": "Docker",
+    "en": "Docker",
+    "status": "class-a",
+    "ref": "09#G-8"
+  },
+  "G-cap": {
+    "zh": "三种合作方式的典型周期对比",
+    "en": "Typical timelines for the three engagement models",
+    "status": "class-a",
+    "ref": "09#G-cap"
+  },
+  "K-T1": {
+    "zh": "1 个工作日",
+    "en": "1 business day",
+    "status": "class-a",
+    "ref": "09#K-T1"
+  },
+  "K-T2": {
+    "zh": "1 周",
+    "en": "1 week",
+    "status": "class-a",
+    "ref": "09#K-T2"
+  },
+  "S1-pause": {
+    "zh": "暂停演示",
+    "en": "Pause demo",
+    "status": "class-a",
+    "ref": "09#S1-pause"
+  },
+  "S1-play": {
+    "zh": "播放演示",
+    "en": "Play demo",
+    "status": "class-a",
+    "ref": "09#S1-play"
+  },
+  "S3-ill": {
+    "zh": "示意图",
+    "en": "Illustration",
+    "status": "class-a",
+    "ref": "09#S3-ill"
+  },
+  "S3-idx": {
+    "zh": "索引",
+    "en": "Index",
+    "status": "class-a",
+    "ref": "09#S3-idx"
+  },
+  "S5-token": {
+    "zh": "任务",
+    "en": "Task",
+    "status": "class-a",
+    "ref": "09#S5-token"
+  },
+  "S5-review": {
+    "zh": "人工复核",
+    "en": "Human review",
+    "status": "class-a",
+    "ref": "09#S5-review"
+  },
+  "S5-rerun": {
+    "zh": "重新运行",
+    "en": "Run again",
+    "status": "class-a",
+    "ref": "09#S5-rerun"
+  },
+  "S7-badge": {
+    "zh": "推荐",
+    "en": "Recommended",
+    "status": "class-a",
+    "ref": "09#S7-badge"
+  },
+  "S9-label": {
+    "zh": "拖动对比过去与现在",
+    "en": "Drag to compare before and after",
+    "status": "class-a",
+    "ref": "09#S9-label"
+  },
+  "S9-before": {
+    "zh": "过去",
+    "en": "Before",
+    "status": "class-a",
+    "ref": "09#S9-before"
+  },
+  "S9-after": {
+    "zh": "现在",
+    "en": "After",
+    "status": "class-a",
+    "ref": "09#S9-after"
+  },
+  "S9-r1": {
+    "zh": "2 天",
+    "en": "2 days",
+    "status": "class-a",
+    "ref": "09#S9-r1"
+  },
+  "S9-r2": {
+    "zh": "15 分钟",
+    "en": "15 minutes",
+    "status": "class-a",
+    "ref": "09#S9-r2"
+  },
+  "S11-auto": {
+    "zh": "自动播放",
+    "en": "Auto-play",
+    "status": "class-a",
+    "ref": "09#S11-auto"
+  },
+  "T-3h1": {
+    "zh": "过去",
+    "en": "Before",
+    "status": "class-a",
+    "ref": "09#T-3h1"
+  },
+  "T-3h2": {
+    "zh": "现在",
+    "en": "With Cyano Core",
+    "status": "class-a",
+    "ref": "09#T-3h2"
+  },
+  "cite-label": {
+    "zh": "依据",
+    "en": "Source",
+    "status": "class-a",
+    "ref": "09#cite-label"
+  },
+  "cite-case": {
+    "zh": "查看案例",
+    "en": "View case",
+    "status": "class-a",
+    "ref": "09#cite-case"
+  },
+  "copied": {
+    "zh": "已复制",
+    "en": "Copied",
+    "status": "class-a",
+    "ref": "09#copied"
+  },
+  "H-0": {
+    "zh": "想让 AI 接手日常工作？",
+    "en": "Want AI to take on day-to-day work?",
+    "status": "approved",
+    "ref": "09#H-0"
+  },
+  "H-1a": {
+    "zh": "方案初稿 **2 天 → 15 分钟**",
+    "en": "Proposal drafts **2 days → 15 min**",
+    "status": "approved",
+    "ref": "09#H-1a"
+  },
+  "H-1b": {
+    "zh": "常见 IT 咨询 **80%** 由 AI 处理",
+    "en": "**80%** of routine IT inquiries handled by AI",
+    "status": "approved",
+    "ref": "09#H-1b"
+  },
+  "H-1c": {
+    "zh": "试点 **2–6 周**交付首个可用版本",
+    "en": "First working pilot in **2–6 weeks**",
+    "status": "approved",
+    "ref": "09#H-1c"
+  },
+  "H-1d": {
+    "zh": "**1 个工作日**内回复",
+    "en": "Reply within **1 business day**",
+    "status": "approved",
+    "ref": "09#H-1d"
+  },
+  "H-1n": {
+    "zh": "界面为重建示意，数据已脱敏",
+    "en": "Recreated interface; data anonymised",
+    "status": "approved",
+    "ref": "09#H-1n"
+  },
+  "H-2t": {
+    "zh": "用了 AI 工具，日常工作为什么还没变快？",
+    "en": "Why isn't day-to-day work getting faster with AI tools?",
+    "status": "approved",
+    "ref": "09#H-2t"
+  },
+  "H-2s": {
+    "zh": "模型之外，企业还常遇到下面四个问题。",
+    "en": "Beyond the model, companies often face these four issues.",
+    "status": "approved",
+    "ref": "09#H-2s"
+  },
+  "H-2k1": {
+    "zh": "找不到",
+    "en": "Can't find it",
+    "status": "approved",
+    "ref": "09#H-2k1"
+  },
+  "H-2k2": {
+    "zh": "说不准",
+    "en": "Can't rely on it",
+    "status": "approved",
+    "ref": "09#H-2k2"
+  },
+  "H-2k3": {
+    "zh": "不敢交",
+    "en": "Can't sign off",
+    "status": "approved",
+    "ref": "09#H-2k3"
+  },
+  "H-2k4": {
+    "zh": "各用各",
+    "en": "Everyone works their own way",
+    "status": "approved",
+    "ref": "09#H-2k4"
+  },
+  "H-2c": {
+    "zh": "资料、权限和审核流程，需要与模型一起设计。",
+    "en": "Sources, access controls and review steps have to be designed alongside the model.",
+    "status": "approved",
+    "ref": "09#H-2c"
+  },
+  "H-3d01": {
+    "zh": "方案·投标团队",
+    "en": "Bid team",
+    "status": "approved",
+    "ref": "09#H-3.01"
+  },
+  "H-3b01": {
+    "zh": "2 天",
+    "en": "2 days",
+    "status": "approved",
+    "ref": "09#H-3.01"
+  },
+  "H-3a01": {
+    "zh": "**15 分钟**",
+    "en": "**15 min**",
+    "status": "approved",
+    "ref": "09#H-3.01"
+  },
+  "H-3d02": {
+    "zh": "IT 支持",
+    "en": "IT support",
+    "status": "approved",
+    "ref": "09#H-3.02"
+  },
+  "H-3b02": {
+    "zh": "排队等回复",
+    "en": "Waiting in the queue",
+    "status": "approved",
+    "ref": "09#H-3.02"
+  },
+  "H-3a02": {
+    "zh": "**< 3 秒**",
+    "en": "**< 3 s**",
+    "status": "approved",
+    "ref": "09#H-3.02"
+  },
+  "H-3d03": {
+    "zh": "业务·运营",
+    "en": "Operations",
+    "status": "approved",
+    "ref": "09#H-3.03"
+  },
+  "H-3b03": {
+    "zh": "等 IT 导出数据一天以上",
+    "en": "A day or more for an IT export",
+    "status": "approved",
+    "ref": "09#H-3.03"
+  },
+  "H-3a03": {
+    "zh": "**秒级**",
+    "en": "**Seconds**",
+    "status": "approved",
+    "ref": "09#H-3.03"
+  },
+  "H-3d04": {
+    "zh": "销售·售前",
+    "en": "Sales",
+    "status": "approved",
+    "ref": "09#H-3.04"
+  },
+  "H-3b04": {
+    "zh": "等工程师回复",
+    "en": "Waiting for an engineer",
+    "status": "approved",
+    "ref": "09#H-3.04"
+  },
+  "H-3a04": {
+    "zh": "**7×24**",
+    "en": "**24/7**",
+    "status": "approved",
+    "ref": "09#H-3.04"
+  },
+  "H-3d05": {
+    "zh": "物业运营·财务",
+    "en": "Property ops",
+    "status": "approved",
+    "ref": "09#H-3.05"
+  },
+  "H-3b05": {
+    "zh": "手工整理",
+    "en": "Manual bookkeeping",
+    "status": "approved",
+    "ref": "09#H-3.05"
+  },
+  "H-3a05": {
+    "zh": "**自动生成账单**",
+    "en": "**Auto-generated statements**",
+    "status": "approved",
+    "ref": "09#H-3.05"
+  },
+  "H-3d06": {
+    "zh": "内容团队",
+    "en": "Content team",
+    "status": "approved",
+    "ref": "09#H-3.06"
+  },
+  "H-3b06": {
+    "zh": "AI 记混设定",
+    "en": "Mixed-up story details",
+    "status": "approved",
+    "ref": "09#H-3.06"
+  },
+  "H-3a06": {
+    "zh": "**分支互不干扰**",
+    "en": "**Branches stay separate**",
+    "status": "approved",
+    "ref": "09#H-3.06"
+  },
+  "H-4e": {
+    "zh": "怎么选",
+    "en": "Your options",
+    "status": "approved",
+    "ref": "09#H-4e"
+  },
+  "H-4t": {
+    "zh": "三种使用 AI 的做法，有什么区别？",
+    "en": "How do these three ways of using AI compare?",
+    "status": "approved",
+    "ref": "09#H-4t"
+  },
+  "H-4r0": {
+    "zh": "对比维度",
+    "en": "Compare",
+    "status": "approved",
+    "ref": "09#H-4r0"
+  },
+  "H-4c1": {
+    "zh": "员工各自使用通用 AI 工具",
+    "en": "Staff use general AI tools on their own",
+    "status": "approved",
+    "ref": "09#H-4c1"
+  },
+  "H-4c2": {
+    "zh": "企业自建团队",
+    "en": "Build it in-house",
+    "status": "approved",
+    "ref": "09#H-4c2"
+  },
+  "H-4c3": {
+    "zh": "Cyano：定制 + 持续维护",
+    "en": "Cyano: custom build + ongoing support",
+    "status": "approved",
+    "ref": "09#H-4c3"
+  },
+  "H-4r1": {
+    "zh": "资料从哪来",
+    "en": "Where sources come from",
+    "status": "approved",
+    "ref": "09#H-4r1"
+  },
+  "H-4r1c1": {
+    "zh": "员工手动提供",
+    "en": "Staff provide sources manually",
+    "status": "approved",
+    "ref": "09#H-4r1"
+  },
+  "H-4r1c2": {
+    "zh": "需自行搭建检索与权限管理",
+    "en": "You build retrieval and access controls",
+    "status": "approved",
+    "ref": "09#H-4r1"
+  },
+  "H-4r1c3": {
+    "zh": "按权限检索企业知识库",
+    "en": "Permission-aware search of your knowledge base",
+    "status": "approved",
+    "ref": "09#H-4r1"
+  },
+  "H-4r2": {
+    "zh": "怎么执行",
+    "en": "How the work runs",
+    "status": "approved",
+    "ref": "09#H-4r2"
+  },
+  "H-4r2c1": {
+    "zh": "各自编写提示词",
+    "en": "Everyone writes their own prompts",
+    "status": "approved",
+    "ref": "09#H-4r2"
+  },
+  "H-4r2c2": {
+    "zh": "需自行开发流程",
+    "en": "You build the workflows",
+    "status": "approved",
+    "ref": "09#H-4r2"
+  },
+  "H-4r2c3": {
+    "zh": "按 SOP 执行并记录步骤",
+    "en": "Runs your SOPs and records each step",
+    "status": "approved",
+    "ref": "09#H-4r2"
+  },
+  "H-4r3": {
+    "zh": "结果怎么核",
+    "en": "How results are checked",
+    "status": "approved",
+    "ref": "09#H-4r3"
+  },
+  "H-4r3c1": {
+    "zh": "靠个人判断",
+    "en": "Personal judgement",
+    "status": "approved",
+    "ref": "09#H-4r3"
+  },
+  "H-4r3c2": {
+    "zh": "需自行设计",
+    "en": "You design the checks",
+    "status": "approved",
+    "ref": "09#H-4r3"
+  },
+  "H-4r3c3": {
+    "zh": "规则校验 + 来源引用 + 人工审核",
+    "en": "Rule checks, citations and human review",
+    "status": "approved",
+    "ref": "09#H-4r3"
+  },
+  "H-4r4": {
+    "zh": "多久有可用版本",
+    "en": "Time to a working version",
+    "status": "rejected",
+    "ref": "09#H-4r4"
+  },
+  "H-4r4c1": {
+    "zh": "立即可用，但不接入业务资料",
+    "en": "Immediate, but without your business data",
+    "status": "rejected",
+    "ref": "09#H-4r4"
+  },
+  "H-4r4c3": {
+    "zh": "试点 2–6 周首个可用版本",
+    "en": "First working pilot in 2–6 weeks",
+    "status": "rejected",
+    "ref": "09#H-4r4"
+  },
+  "H-4r5": {
+    "zh": "换模型时",
+    "en": "When you switch models",
+    "status": "rejected",
+    "ref": "09#H-4r5"
+  },
+  "H-4r5c1": {
+    "zh": "逐项调整",
+    "en": "Adjust each item",
+    "status": "rejected",
+    "ref": "09#H-4r5"
+  },
+  "H-4r5c3": {
+    "zh": "保留知识与流程，测试后再切换",
+    "en": "Keep knowledge and workflows; switch after testing",
+    "status": "rejected",
+    "ref": "09#H-4r5"
+  },
+  "H-4r6": {
+    "zh": "上线后谁维护",
+    "en": "Who maintains it",
+    "status": "approved",
+    "ref": "09#H-4r6"
+  },
+  "H-4r6c1": {
+    "zh": "无人负责",
+    "en": "No one",
+    "status": "approved",
+    "ref": "09#H-4r6"
+  },
+  "H-4r6c2": {
+    "zh": "自有团队",
+    "en": "Your own team",
+    "status": "approved",
+    "ref": "09#H-4r6"
+  },
+  "H-4r6c3": {
+    "zh": "三种合作方式都包含上线维护",
+    "en": "Support is included in all three engagement models",
+    "status": "approved",
+    "ref": "09#H-4r6"
+  },
+  "H-4r7": {
+    "zh": "怎么推行到团队",
+    "en": "How it reaches your team",
+    "status": "approved",
+    "ref": "09#H-4r7"
+  },
+  "H-4r7c1": {
+    "zh": "各自摸索",
+    "en": "Everyone figures it out alone",
+    "status": "approved",
+    "ref": "09#H-4r7"
+  },
+  "H-4r7c2": {
+    "zh": "需自行安排培训与推广",
+    "en": "Training and rollout to organise yourself",
+    "status": "approved",
+    "ref": "09#H-4r7"
+  },
+  "H-4r7c3": {
+    "zh": "配套培训，分阶段上线，员工用熟一步再推进下一步",
+    "en": "Training included; staged rollout, one step at a time",
+    "status": "approved",
+    "ref": "09#H-4r7"
+  },
+  "H-4n1": {
+    "zh": "能聊天 ≠ 能上线",
+    "en": "Being able to chat ≠ being ready for production",
+    "status": "approved",
+    "ref": "09#H-4n1"
+  },
+  "H-4n2": {
+    "zh": "接入模型 ≠ 用上你的资料",
+    "en": "Connecting a model ≠ using your knowledge",
+    "status": "approved",
+    "ref": "09#H-4n2"
+  },
+  "H-4n3": {
+    "zh": "换模型 ≠ 推倒重来",
+    "en": "Switching models ≠ starting over",
+    "status": "approved",
+    "ref": "09#H-4n3"
+  },
+  "H-4z": {
+    "zh": "模型之外，还要看谁负责资料、流程和维护。",
+    "en": "Beyond the model, consider who manages the sources, workflows and ongoing maintenance.",
+    "status": "approved",
+    "ref": "09#H-4z"
+  },
+  "H-5a1": {
+    "zh": "买工具",
+    "en": "Own the tool",
+    "status": "approved",
+    "ref": "09#H-5a1"
+  },
+  "H-5a2": {
+    "zh": "买使用权",
+    "en": "Pay for access",
+    "status": "approved",
+    "ref": "09#H-5a2"
+  },
+  "H-5a3": {
+    "zh": "买结果",
+    "en": "Buy the outcome",
+    "status": "approved",
+    "ref": "09#H-5a3"
+  },
+  "E-2.1": {
+    "zh": "**1 周** 给出需求评估结论",
+    "en": "**1 week** — assessment findings",
+    "status": "approved",
+    "ref": "09#E-2.1"
+  },
+  "E-2.2": {
+    "zh": "**2–6 周** 试点上线首个可用版本",
+    "en": "**2–6 weeks** — first working pilot",
+    "status": "approved",
+    "ref": "09#E-2.2"
+  },
+  "E-2.3": {
+    "zh": "**按结果决定**：扩展、调整或停止",
+    "en": "**Decide based on results**: expand, adjust or stop",
+    "status": "approved",
+    "ref": "09#E-2.3"
+  },
+  "H-6.1": {
+    "zh": "需求、开发和上线后的维护，都由同一个资深核心团队负责。",
+    "en": "The same experienced core team handles requirements, development and post-launch support.",
+    "status": "approved",
+    "ref": "09#H-6.1"
+  },
+  "H-6.2": {
+    "zh": "我们了解模型的工作原理，也熟悉企业系统的上线要求。",
+    "en": "We understand how models work and what it takes to put enterprise systems into use.",
+    "status": "approved",
+    "ref": "09#H-6.2"
+  },
+  "H-6.3": {
+    "zh": "我们在大型组织工作过，熟悉其中的协作方式和系统上线要求。",
+    "en": "We have worked in large organisations and know how teams collaborate and what system rollouts require.",
+    "status": "approved",
+    "ref": "09#H-6.3"
+  },
+  "H-6.4": {
+    "zh": "工程制造、投研、物业、零售、企业服务、内容传媒。",
+    "en": "Manufacturing, investment research, property, retail, enterprise services and media.",
+    "status": "approved",
+    "ref": "09#H-6.4"
+  },
+  "H-7t": {
+    "zh": "常见问题",
+    "en": "Common questions",
+    "status": "approved",
+    "ref": "09#H-7t"
+  },
+  "H-7q1": {
+    "zh": "数据很敏感，能放在我们自己的环境吗？",
+    "en": "Our data is sensitive. Can it stay in our own environment?",
+    "status": "approved",
+    "ref": "09#H-7q1"
+  },
+  "H-7q2": {
+    "zh": "效果不好怎么办？",
+    "en": "What if it doesn't work well enough?",
+    "status": "approved",
+    "ref": "09#H-7q2"
+  },
+  "H-7q3": {
+    "zh": "先做试点，还是直接开发完整系统？",
+    "en": "Should we pilot first or build the full system?",
+    "status": "approved",
+    "ref": "09#H-7q3"
+  },
+  "H-7l": {
+    "zh": "查看全部问题",
+    "en": "See all questions",
+    "status": "approved",
+    "ref": "09#H-7l"
+  },
+  "H-8t": {
+    "zh": "先诊断，再交付，长期负责。",
+    "en": "Diagnose. Deliver. Sustain.",
+    "status": "approved",
+    "ref": "09#H-8t"
+  },
+  "H-8s": {
+    "zh": "带一份现在的工作样本来。30–45 分钟沟通，一周内给你需求评估结论和合作建议。",
+    "en": "Bring a sample of your current work for a 30–45 minute call. Within a week, we'll give you an assessment and recommend a way to work together.",
+    "status": "approved",
+    "ref": "09#H-8s"
+  },
+  "S-1": {
+    "zh": "哪一项工作，最该先交给 AI？",
+    "en": "Which part of the work should AI take on first?",
+    "status": "approved",
+    "ref": "09#S-1"
+  },
+  "S-2.1": {
+    "zh": "等工程师回复 → **7×24 即时应答**",
+    "en": "Waiting for an engineer → **24/7 instant answers**",
+    "status": "approved",
+    "ref": "09#S-2.1"
+  },
+  "S-2.2": {
+    "zh": "2 天 → **15 分钟**",
+    "en": "2 days → **15 min**",
+    "status": "approved",
+    "ref": "09#S-2.2"
+  },
+  "S-2.3": {
+    "zh": "排队等 IT → **< 3 秒带出处**",
+    "en": "Waiting for IT → **cited answers in < 3 s**",
+    "status": "approved",
+    "ref": "09#S-2.3"
+  },
+  "S-2.4": {
+    "zh": "等 IT 导出数据 → **秒级自助查询**",
+    "en": "Waiting for IT to export data → **self-service queries in seconds**",
+    "status": "approved",
+    "ref": "09#S-2.4"
+  },
+  "S-3a1": {
+    "zh": "→ 接入历史标书、知识文档和项目参数，统一检索。",
+    "en": "→ Past bids, knowledge documents and project parameters in one search.",
+    "status": "approved",
+    "ref": "09#S-3a1"
+  },
+  "S-3a2": {
+    "zh": "→ 15 分钟生成带引用、可编辑的初稿。",
+    "en": "→ An editable, cited draft in 15 minutes.",
+    "status": "approved",
+    "ref": "09#S-3a2"
+  },
+  "S-3a3": {
+    "zh": "→ 自动完成 7 项完整性检查，再交人工复核。",
+    "en": "→ 7 automatic completeness checks, then human review.",
+    "status": "approved",
+    "ref": "09#S-3a3"
+  },
+  "S-3neq.document-automation": {
+    "zh": "**生成一段文字 ≠ 完成一份可交付的初稿。** 初稿要有出处、查得出遗漏、改得动。在已交付的项目中，引用准确率为 99%，7 项完整性检查自动执行。",
+    "en": "**Generated text ≠ a draft ready for delivery.** A draft needs source citations, checks for missing information and editable text. In the delivered project, citation accuracy was 99%, with 7 completeness checks run automatically.",
+    "status": "approved",
+    "ref": "09#S-3neq.document-automation"
+  },
+  "S-3neq.sales-ai": {
+    "zh": "**能聊天 ≠ 能答专业参数。**",
+    "en": "**Chatting ≠ answering spec questions.**",
+    "status": "approved",
+    "ref": "09#S-3neq.sales-ai"
+  },
+  "S-3neq.knowledge-assistant": {
+    "zh": "**搜得到 ≠ 答得有出处。**",
+    "en": "**Finding information ≠ giving an answer with sources.**",
+    "status": "approved",
+    "ref": "09#S-3neq.knowledge-assistant"
+  },
+  "S-3neq.data-query": {
+    "zh": "**会写 SQL 的人 ≠ 要数的人。**",
+    "en": "**The people who can write SQL ≠ the people who need the numbers.**",
+    "status": "approved",
+    "ref": "09#S-3neq.data-query"
+  },
+  "S-4q1": {
+    "zh": "我们现在用的系统能直接接吗？",
+    "en": "Will it work with the systems we already use?",
+    "status": "approved",
+    "ref": "09#S-4q1"
+  },
+  "S-4q2": {
+    "zh": "AI 答错了怎么办？",
+    "en": "What happens when the AI gets it wrong?",
+    "status": "approved",
+    "ref": "09#S-4q2"
+  },
+  "S-4q3": {
+    "zh": "多久能先用起来？",
+    "en": "How soon can my team actually use it?",
+    "status": "approved",
+    "ref": "09#S-4q3"
+  },
+  "S-W.sales-ai.1": {
+    "zh": "产品资料与项目记录",
+    "en": "Product and project records",
+    "status": "approved",
+    "ref": "09#S-W.sales-ai"
+  },
+  "S-W.sales-ai.2": {
+    "zh": "Cyano Core",
+    "en": "Cyano Core",
+    "status": "class-a",
+    "ref": "09#S-W.sales-ai"
+  },
+  "S-W.sales-ai.3": {
+    "zh": "来源核对",
+    "en": "Source check",
+    "status": "approved",
+    "ref": "09#S-W.sales-ai"
+  },
+  "S-W.sales-ai.4": {
+    "zh": "即时回答与销售材料",
+    "en": "Answers and sales material",
+    "status": "approved",
+    "ref": "09#S-W.sales-ai"
+  },
+  "S-W.document-automation.1": {
+    "zh": "历史方案与项目参数",
+    "en": "Past proposals and parameters",
+    "status": "approved",
+    "ref": "09#S-W.document-automation"
+  },
+  "S-W.document-automation.2": {
+    "zh": "Cyano Core",
+    "en": "Cyano Core",
+    "status": "class-a",
+    "ref": "09#S-W.document-automation"
+  },
+  "S-W.document-automation.3": {
+    "zh": "完整性检查 · 人工复核",
+    "en": "Checks · human review",
+    "status": "approved",
+    "ref": "09#S-W.document-automation"
+  },
+  "S-W.document-automation.4": {
+    "zh": "可编辑初稿",
+    "en": "Editable draft",
+    "status": "approved",
+    "ref": "09#S-W.document-automation"
+  },
+  "S-W.knowledge-assistant.1": {
+    "zh": "内部文档与制度",
+    "en": "Internal documents and policies",
+    "status": "approved",
+    "ref": "09#S-W.knowledge-assistant"
+  },
+  "S-W.knowledge-assistant.2": {
+    "zh": "Cyano Core",
+    "en": "Cyano Core",
+    "status": "class-a",
+    "ref": "09#S-W.knowledge-assistant"
+  },
+  "S-W.knowledge-assistant.3": {
+    "zh": "权限与出处",
+    "en": "Permissions and sources",
+    "status": "approved",
+    "ref": "09#S-W.knowledge-assistant"
+  },
+  "S-W.knowledge-assistant.4": {
+    "zh": "带出处的回答",
+    "en": "Cited answers",
+    "status": "approved",
+    "ref": "09#S-W.knowledge-assistant"
+  },
+  "S-W.data-query.1": {
+    "zh": "自然语言提问",
+    "en": "Plain-language questions",
+    "status": "approved",
+    "ref": "09#S-W.data-query"
+  },
+  "S-W.data-query.2": {
+    "zh": "Cyano Core",
+    "en": "Cyano Core",
+    "status": "class-a",
+    "ref": "09#S-W.data-query"
+  },
+  "S-W.data-query.3": {
+    "zh": "查询可核对",
+    "en": "Reviewable query",
+    "status": "approved",
+    "ref": "09#S-W.data-query"
+  },
+  "S-W.data-query.4": {
+    "zh": "表格与图表",
+    "en": "Tables and charts",
+    "status": "approved",
+    "ref": "09#S-W.data-query"
+  },
+  "C-1.proposal-generation": {
+    "zh": "过去 **2 天** → 现在 **15 分钟**",
+    "en": "Before **2 days** → After **15 minutes**",
+    "status": "approved",
+    "ref": "09#C-1.proposal-generation"
+  },
+  "C-1.it-knowledge-assistant": {
+    "zh": "排队等 IT 回复 → **3 秒内**带出处回答",
+    "en": "Waiting for IT → cited answers in **under 3 seconds**",
+    "status": "approved",
+    "ref": "09#C-1.it-knowledge-assistant"
+  },
+  "C-1.nl-data-query": {
+    "zh": "等 IT 导出数据一天以上 → **秒级**",
+    "en": "A day or more for an export → **seconds**",
+    "status": "approved",
+    "ref": "09#C-1.nl-data-query"
+  },
+  "C-1.sales-consultant-ai": {
+    "zh": "等工程师回复 → **7×24** 即时回答",
+    "en": "Waiting for an engineer → **24/7** instant answers",
+    "status": "approved",
+    "ref": "09#C-1.sales-consultant-ai"
+  },
+  "C-3.1": {
+    "zh": "打开在线 Demo 试用 ↗",
+    "en": "Try the live demo ↗",
+    "status": "approved",
+    "ref": "09#C-3.1"
+  },
+  "C-3.2": {
+    "zh": "签署保密协议，由工程师演示完整系统",
+    "en": "Sign an NDA to see an engineer demonstrate the full system",
+    "status": "approved",
+    "ref": "09#C-3.2"
+  },
+  "C-3.3": {
+    "zh": "索取完整案例集，中英文均可",
+    "en": "Request the full case study collection in English or Chinese",
+    "status": "approved",
+    "ref": "09#C-3.3"
+  },
+  "C-3t": {
+    "zh": "你可以亲自验证",
+    "en": "See it for yourself",
+    "status": "approved",
+    "ref": "09#C-3t"
+  },
+  "S9.b1": {
+    "zh": "收集资料",
+    "en": "Gather sources",
+    "status": "approved",
+    "ref": "09#S9.b1"
+  },
+  "S9.b2": {
+    "zh": "起草",
+    "en": "Draft",
+    "status": "approved",
+    "ref": "09#S9.b2"
+  },
+  "S9.b3": {
+    "zh": "核对参数",
+    "en": "Check parameters",
+    "status": "approved",
+    "ref": "09#S9.b3"
+  },
+  "S9.b4": {
+    "zh": "修改",
+    "en": "Revise",
+    "status": "approved",
+    "ref": "09#S9.b4"
+  },
+  "E-1": {
+    "zh": "用一周评估 AI 是否适合你的业务。",
+    "en": "Find out in one week whether AI fits your business.",
+    "status": "approved",
+    "ref": "09#E-1"
+  },
+  "E-3": {
+    "zh": "试点开始前，双方先约定验收标准。如果结果不达预期，可以补充资料、调整流程，也可以停止试点，再决定是否加大投入。",
+    "en": "Before the pilot, we agree on acceptance criteria. If results fall short, we can add source material, adjust the workflow or stop the pilot, then decide whether to invest further.",
+    "status": "approved",
+    "ref": "09#E-3"
+  },
+  "E-4r1": {
+    "zh": "首期周期",
+    "en": "Initial timeline",
+    "status": "approved",
+    "ref": "09#E-4r1"
+  },
+  "E-4r1.1": {
+    "zh": "6–12 周",
+    "en": "6–12 weeks",
+    "status": "approved",
+    "ref": "09#E-4r1"
+  },
+  "E-4r1.2": {
+    "zh": "2–6 周",
+    "en": "2–6 weeks",
+    "status": "approved",
+    "ref": "09#E-4r1"
+  },
+  "E-4r1.3": {
+    "zh": "首批 2 周内",
+    "en": "First batch within 2 weeks",
+    "status": "approved",
+    "ref": "09#E-4r1"
+  },
+  "E-4r2": {
+    "zh": "你需要准备",
+    "en": "What you prepare",
+    "status": "approved",
+    "ref": "09#E-4r2"
+  },
+  "E-4r2.1": {
+    "zh": "明确的需求与验收人",
+    "en": "Clear requirements and an approver",
+    "status": "approved",
+    "ref": "09#E-4r2"
+  },
+  "E-4r2.2": {
+    "zh": "一个小范围场景与工作样本",
+    "en": "One narrow use case and work samples",
+    "status": "approved",
+    "ref": "09#E-4r2"
+  },
+  "E-4r2.3": {
+    "zh": "资料与质量标准",
+    "en": "Sources and quality standards",
+    "status": "approved",
+    "ref": "09#E-4r2"
+  },
+  "E-4own.custom": {
+    "zh": "系统归你 · 维护范围合作时约定",
+    "en": "You own the system · Support scope agreed upfront",
+    "status": "approved",
+    "ref": "09#E-4own.custom"
+  },
+  "E-4own.pilot": {
+    "zh": "先验证效果 · 维护范围合作时约定",
+    "en": "Check the results first · Support scope agreed upfront",
+    "status": "approved",
+    "ref": "09#E-4own.pilot"
+  },
+  "E-4own.managed": {
+    "zh": "Cyano 运行并交付结果",
+    "en": "Cyano runs it and delivers results",
+    "status": "approved",
+    "ref": "09#E-4own.managed"
+  },
+  "G-note": {
+    "zh": "典型安排；具体范围与时间以需求评估和双方协议为准。",
+    "en": "Typical schedule; scope and timing depend on the assessment and our agreement.",
+    "status": "approved",
+    "ref": "09#G-note"
+  },
+  "E-5t": {
+    "zh": "常见问题",
+    "en": "Common questions",
+    "status": "approved",
+    "ref": "09#E-5t"
+  },
+  "E-5q1": {
+    "zh": "先做试点，还是直接开发完整系统？",
+    "en": "Should we pilot first or build the full system?",
+    "status": "approved",
+    "ref": "09#E-5q1"
+  },
+  "E-5q2": {
+    "zh": "数据很敏感，能放在我们自己的环境吗？",
+    "en": "Our data is sensitive. Can it stay in our own environment?",
+    "status": "approved",
+    "ref": "09#E-5q2"
+  },
+  "E-5q3": {
+    "zh": "效果不好怎么办？",
+    "en": "What if it doesn't work well enough?",
+    "status": "approved",
+    "ref": "09#E-5q3"
+  },
+  "E-5q4": {
+    "zh": "我们不想自己维护系统。",
+    "en": "We don't want to maintain a system ourselves.",
+    "status": "approved",
+    "ref": "09#E-5q4"
+  },
+  "E-5q5": {
+    "zh": "上线以后出了问题找谁？",
+    "en": "Who do we call when something breaks after launch?",
+    "status": "approved",
+    "ref": "09#E-5q5"
+  },
+  "E-5q6": {
+    "zh": "大概要花多少钱？",
+    "en": "Roughly what will it cost?",
+    "status": "approved",
+    "ref": "09#E-5q6"
+  },
+  "E-5q7": {
+    "zh": "需求评估会给我们什么？",
+    "en": "What do we get from the assessment?",
+    "status": "approved",
+    "ref": "09#E-5q7"
+  },
+  "E-5q8": {
+    "zh": "我们 IT 也能自己搭，为什么找你们？",
+    "en": "Our IT team could build this. Why work with you?",
+    "status": "approved",
+    "ref": "09#E-5q8"
+  },
+  "E-5a8": {
+    "zh": "可以自己搭。区别在于经验：Cyano 每位核心成员都参与过 AI 模型研发，团队已在 6 个行业交付企业 AI 系统，清楚模型在实际业务里容易在哪里出错，也知道资料、权限和审核该怎么接入。我们交付的也不只是软件，而是一整套服务：从需求评估、开发、培训到上线后的跟进，一直跟到系统在日常工作里真正用起来。",
+    "en": "You can. The difference is experience: every Cyano core member has worked on AI model R&D, and the team has delivered enterprise AI systems in six industries. We know where models tend to fail in real work, and how sources, permissions and review steps should be connected. And we deliver a full service, not just software: assessment, build, training and follow-through until the system is part of everyday work.",
+    "status": "approved",
+    "ref": "09#E-5a8"
+  },
+  "E-5q9": {
+    "zh": "员工不会用怎么办？",
+    "en": "What if our staff struggle to adopt it?",
+    "status": "approved",
+    "ref": "09#E-5q9"
+  },
+  "E-5a9": {
+    "zh": "我们提供配套培训，并分阶段上线：一次只改一个环节，等员工用熟、我们根据反馈打磨好，再推进下一步。不会一次性推翻现有的工作流程。",
+    "en": "Training is included, and we roll out in stages: one part of the workflow at a time. Once your team is comfortable with it and we have refined it from their feedback, we move to the next step. We don't overturn your existing workflow in one go.",
+    "status": "approved",
+    "ref": "09#E-5a9"
+  },
+  "D-20": {
+    "zh": "支持私有化部署，数据不出你的环境；系统内置权限控制、日志审计与敏感信息拦截。",
+    "en": "Private deployment keeps data inside your environment. Every system includes access control, full audit logs and sensitive-data filtering.",
+    "status": "approved",
+    "ref": "09#D-20"
+  },
+  "S7.q1": {
+    "zh": "系统需要归你们所有吗？",
+    "en": "Do you need to own the system?",
+    "status": "approved",
+    "ref": "09#S7.q1"
+  },
+  "S7.q2": {
+    "zh": "想先在小范围内验证效果吗？",
+    "en": "Want to test it on a small scale first?",
+    "status": "approved",
+    "ref": "09#S7.q2"
+  },
+  "S7.q3": {
+    "zh": "希望由 Cyano 负责运行？",
+    "en": "Want Cyano to run it for you?",
+    "status": "approved",
+    "ref": "09#S7.q3"
+  },
+  "T-1": {
+    "zh": "到第 100 轮对话，响应仍在 200 毫秒以内。*",
+    "en": "Response time stays under 200 ms, even at turn 100.*",
+    "status": "approved",
+    "ref": "09#T-1"
+  },
+  "T-1s": {
+    "zh": "Cyano Core 按任务选择上下文：核心指令召回率 100%，Token 成本最多降低 40%。*",
+    "en": "Cyano Core selects context for each task: 100% recall of core instructions, up to 40% lower token cost.*",
+    "status": "approved",
+    "ref": "09#T-1s"
+  },
+  "T-2.1": {
+    "zh": "接入模型 ≠ 用上你的资料",
+    "en": "Connecting a model ≠ using your knowledge",
+    "status": "approved",
+    "ref": "09#T-2.1"
+  },
+  "T-2.2": {
+    "zh": "能对话 ≠ 能上线",
+    "en": "Being able to chat ≠ being ready for production",
+    "status": "approved",
+    "ref": "09#T-2.2"
+  },
+  "T-2.3": {
+    "zh": "换模型 ≠ 推倒重来",
+    "en": "Switching models ≠ starting over",
+    "status": "approved",
+    "ref": "09#T-2.3"
+  },
+  "T-4q": {
+    "zh": "数据能不能不出我们的环境？",
+    "en": "Can our data stay inside our environment?",
+    "status": "approved",
+    "ref": "09#T-4q"
+  },
+  "S3-m1": {
+    "zh": "发送完整历史",
+    "en": "Send full history",
+    "status": "approved",
+    "ref": "09#S3-m1"
+  },
+  "S3-m2": {
+    "zh": "按任务选择上下文",
+    "en": "Select context per task",
+    "status": "approved",
+    "ref": "09#S3-m2"
+  },
+  "S3-t1": {
+    "zh": "对话初期",
+    "en": "Early in the conversation",
+    "status": "approved",
+    "ref": "09#S3-t1"
+  },
+  "S3-t2": {
+    "zh": "长对话",
+    "en": "Long conversation",
+    "status": "approved",
+    "ref": "09#S3-t2"
+  },
+  "S3-l1": {
+    "zh": "用户",
+    "en": "User",
+    "status": "approved",
+    "ref": "09#S3-l1"
+  },
+  "S3-l2": {
+    "zh": "助手",
+    "en": "Assistant",
+    "status": "approved",
+    "ref": "09#S3-l2"
+  },
+  "S3-l3": {
+    "zh": "资料片段",
+    "en": "Source excerpt",
+    "status": "approved",
+    "ref": "09#S3-l3"
+  },
+  "S3-l4": {
+    "zh": "关键指令",
+    "en": "Core instruction",
+    "status": "approved",
+    "ref": "09#S3-l4"
+  },
+  "S11-l3": {
+    "zh": "来源不明",
+    "en": "No source",
+    "status": "approved",
+    "ref": "09#S11-l3"
+  },
+  "A-1.1": {
+    "zh": "需求、开发和上线后的维护，都由同一个资深核心团队负责。",
+    "en": "The same experienced core team handles requirements, development and post-launch support.",
+    "status": "approved",
+    "ref": "09#A-1.1"
+  },
+  "A-1.2": {
+    "zh": "我们了解模型的工作原理，也熟悉企业系统的上线要求。",
+    "en": "We understand how models work and what it takes to put enterprise systems into use.",
+    "status": "approved",
+    "ref": "09#A-1.2"
+  },
+  "A-1.3": {
+    "zh": "我们在大型组织工作过，熟悉其中的协作方式和系统上线要求。",
+    "en": "We have worked in large organisations and know how teams collaborate and what system rollouts require.",
+    "status": "approved",
+    "ref": "09#A-1.3"
+  },
+  "A-2.1": {
+    "zh": "开发前先算账",
+    "en": "We do the math before we build",
+    "status": "approved",
+    "ref": "09#A-2.1"
+  },
+  "A-2.2": {
+    "zh": "开工前先定验收标准",
+    "en": "We agree on acceptance criteria before work begins",
+    "status": "approved",
+    "ref": "09#A-2.2"
+  },
+  "A-2.3": {
+    "zh": "关键结论都有出处",
+    "en": "Key statements link to their sources",
+    "status": "approved",
+    "ref": "09#A-2.3"
+  },
+  "A-2.4": {
+    "zh": "上线后有人负责维护",
+    "en": "Someone is responsible for maintenance after launch",
+    "status": "approved",
+    "ref": "09#A-2.4"
+  },
+  "K-1": {
+    "zh": "不用先写需求文档。告诉我们三件事：现在怎么做、要花多久、想改进什么。",
+    "en": "No requirements document needed. Tell us three things: how the work is done today, how long it takes, and what you want to improve.",
+    "status": "approved",
+    "ref": "09#K-1"
+  },
+  "K-2": {
+    "zh": "一份现在的工作样本 · 用到的资料或系统 · 由谁审核结果",
+    "en": "A sample of the work · the sources or systems it uses · who reviews the result",
+    "status": "approved",
+    "ref": "09#K-2"
+  },
+  "K-2t": {
+    "zh": "带什么来",
+    "en": "What to bring",
+    "status": "approved",
+    "ref": "09#K-2t"
+  },
+  "K-13i1": {
+    "zh": "1 个工作日内回复",
+    "en": "Reply within 1 business day",
+    "status": "approved",
+    "ref": "09#K-13i1"
+  },
+  "K-13i2": {
+    "zh": "30–45 分钟沟通",
+    "en": "A 30–45 minute call",
+    "status": "approved",
+    "ref": "09#K-13i2"
+  },
+  "K-13i3": {
+    "zh": "可签署保密协议",
+    "en": "NDA available",
+    "status": "approved",
+    "ref": "09#K-13i3"
+  },
+  "G.sales-consultant-ai.1": {
+    "zh": "公开咨询助手",
+    "en": "Public assistant",
+    "status": "approved",
+    "ref": "09#G.sales-consultant-ai"
+  },
+  "G.sales-consultant-ai.2": {
+    "zh": "内部访问入口",
+    "en": "Internal access portal",
+    "status": "approved",
+    "ref": "09#G.sales-consultant-ai"
+  },
+  "G.sales-consultant-ai.3": {
+    "zh": "项目匹配",
+    "en": "Project matching",
+    "status": "approved",
+    "ref": "09#G.sales-consultant-ai"
+  },
+  "G.sales-consultant-ai.4": {
+    "zh": "价格参考",
+    "en": "Price reference",
+    "status": "approved",
+    "ref": "09#G.sales-consultant-ai"
+  },
+  "G.proposal-generation.1": {
+    "zh": "工作流与初稿",
+    "en": "Workflow and draft",
+    "status": "approved",
+    "ref": "09#G.proposal-generation"
+  },
+  "G.proposal-generation.2": {
+    "zh": "开始生成初稿",
+    "en": "Starting a draft",
+    "status": "approved",
+    "ref": "09#G.proposal-generation"
+  },
+  "G.it-knowledge-assistant.1": {
+    "zh": "总览",
+    "en": "Overview",
+    "status": "approved",
+    "ref": "09#G.it-knowledge-assistant"
+  },
+  "G.it-knowledge-assistant.2": {
+    "zh": "知识文章",
+    "en": "Articles",
+    "status": "approved",
+    "ref": "09#G.it-knowledge-assistant"
+  },
+  "G.it-knowledge-assistant.3": {
+    "zh": "文章详情",
+    "en": "Article detail",
+    "status": "approved",
+    "ref": "09#G.it-knowledge-assistant"
+  },
+  "G.it-knowledge-assistant.4": {
+    "zh": "工单详情",
+    "en": "Ticket detail",
+    "status": "approved",
+    "ref": "09#G.it-knowledge-assistant"
+  },
+  "G.it-knowledge-assistant.5": {
+    "zh": "数据分析",
+    "en": "Analytics",
+    "status": "approved",
+    "ref": "09#G.it-knowledge-assistant"
+  },
+  "G.nl-data-query.1": {
+    "zh": "总览",
+    "en": "Overview",
+    "status": "approved",
+    "ref": "09#G.nl-data-query"
+  },
+  "G.nl-data-query.2": {
+    "zh": "SQL 控制台",
+    "en": "SQL console",
+    "status": "approved",
+    "ref": "09#G.nl-data-query"
+  },
+  "G.nl-data-query.3": {
+    "zh": "知识库",
+    "en": "Knowledge base",
+    "status": "approved",
+    "ref": "09#G.nl-data-query"
+  },
+  "G.nl-data-query.4": {
+    "zh": "方案生成",
+    "en": "Proposal builder",
+    "status": "approved",
+    "ref": "09#G.nl-data-query"
+  },
+  "G.nl-data-query.5": {
+    "zh": "审核记录",
+    "en": "Review log",
+    "status": "approved",
+    "ref": "09#G.nl-data-query"
+  },
+  "G.nl-data-query.6": {
+    "zh": "模板库",
+    "en": "Template library",
+    "status": "approved",
+    "ref": "09#G.nl-data-query"
+  },
+  "G.property-management.1": {
+    "zh": "登录",
+    "en": "Sign-in",
+    "status": "approved",
+    "ref": "09#G.property-management"
+  },
+  "G.property-management.2": {
+    "zh": "消息",
+    "en": "Messages",
+    "status": "approved",
+    "ref": "09#G.property-management"
+  },
+  "G.property-management.3": {
+    "zh": "工单对话",
+    "en": "Work-order chat",
+    "status": "approved",
+    "ref": "09#G.property-management"
+  },
+  "G.property-management.4": {
+    "zh": "收支",
+    "en": "Finances",
+    "status": "approved",
+    "ref": "09#G.property-management"
+  },
+  "G.property-management.5": {
+    "zh": "联系人",
+    "en": "Contacts",
+    "status": "approved",
+    "ref": "09#G.property-management"
+  },
+  "G.property-management.6": {
+    "zh": "报告",
+    "en": "Reports",
+    "status": "approved",
+    "ref": "09#G.property-management"
+  },
+  "G.writing-memory-engine.1": {
+    "zh": "启动",
+    "en": "Start-up",
+    "status": "approved",
+    "ref": "09#G.writing-memory-engine"
+  },
+  "G.writing-memory-engine.2": {
+    "zh": "对话与分支切换",
+    "en": "Chat and branch switch",
+    "status": "approved",
+    "ref": "09#G.writing-memory-engine"
+  },
+  "G.writing-memory-engine.3": {
+    "zh": "记忆抽屉",
+    "en": "Memory drawer",
+    "status": "approved",
+    "ref": "09#G.writing-memory-engine"
+  },
+  "G.writing-memory-engine.4": {
+    "zh": "上下文记忆统计",
+    "en": "Context memory stats",
+    "status": "approved",
+    "ref": "09#G.writing-memory-engine"
+  },
+  "G.writing-memory-engine.5": {
+    "zh": "笔记编辑与 AI 面板",
+    "en": "Note editor and AI panel",
+    "status": "approved",
+    "ref": "09#G.writing-memory-engine"
+  },
+  "G.writing-memory-engine.6": {
+    "zh": "片段库",
+    "en": "Fragment library",
+    "status": "approved",
+    "ref": "09#G.writing-memory-engine"
+  },
+  "G.writing-memory-engine.7": {
+    "zh": "归档检查",
+    "en": "Archive inspection",
+    "status": "approved",
+    "ref": "09#G.writing-memory-engine"
+  },
+  "G.writing-memory-engine.8": {
+    "zh": "连接设置",
+    "en": "Connection settings",
+    "status": "approved",
+    "ref": "09#G.writing-memory-engine"
+  },
+  "S5.sales-ai.1": {
+    "zh": "接入产品资料与项目记录",
+    "en": "Product and project records connected",
+    "status": "approved",
+    "ref": "09#S5.sales-ai"
+  },
+  "S5.sales-ai.2": {
+    "zh": "按问题检索参数与相似项目",
+    "en": "Specs and comparable projects retrieved for the question",
+    "status": "approved",
+    "ref": "09#S5.sales-ai"
+  },
+  "S5.sales-ai.3": {
+    "zh": "回答附带资料来源，供核对",
+    "en": "Answers cite their sources for checking",
+    "status": "approved",
+    "ref": "09#S5.sales-ai"
+  },
+  "S5.sales-ai.4": {
+    "zh": "即时回答与客户专属材料",
+    "en": "Instant answers and material tailored to each customer",
+    "status": "approved",
+    "ref": "09#S5.sales-ai"
+  },
+  "S5.document-automation.1": {
+    "zh": "接入历史方案、知识文档和项目参数",
+    "en": "Past proposals, knowledge documents and project parameters connected",
+    "status": "approved",
+    "ref": "09#S5.document-automation"
+  },
+  "S5.document-automation.2": {
+    "zh": "检索相关段落，生成带引用的初稿",
+    "en": "Relevant passages retrieved; cited draft generated",
+    "status": "approved",
+    "ref": "09#S5.document-automation"
+  },
+  "S5.document-automation.3": {
+    "zh": "执行 7 项完整性检查，交人工复核",
+    "en": "7 completeness checks, then human review",
+    "status": "approved",
+    "ref": "09#S5.document-automation"
+  },
+  "S5.document-automation.4": {
+    "zh": "可编辑的方案初稿",
+    "en": "An editable proposal draft",
+    "status": "approved",
+    "ref": "09#S5.document-automation"
+  },
+  "S5.knowledge-assistant.1": {
+    "zh": "按权限接入内部文档与制度",
+    "en": "Internal documents and policies connected with access controls",
+    "status": "approved",
+    "ref": "09#S5.knowledge-assistant"
+  },
+  "S5.knowledge-assistant.2": {
+    "zh": "检索相关条目，生成带出处的回答",
+    "en": "Entries retrieved; cited answer generated",
+    "status": "approved",
+    "ref": "09#S5.knowledge-assistant"
+  },
+  "S5.knowledge-assistant.3": {
+    "zh": "复杂问题转人工处理",
+    "en": "Complex cases handed to staff",
+    "status": "approved",
+    "ref": "09#S5.knowledge-assistant"
+  },
+  "S5.knowledge-assistant.4": {
+    "zh": "员工直接获得带出处的答案",
+    "en": "Employees get cited answers",
+    "status": "approved",
+    "ref": "09#S5.knowledge-assistant"
+  },
+  "S5.data-query.1": {
+    "zh": "连接业务数据库，配置可查询范围",
+    "en": "Databases connected with query scope set",
+    "status": "approved",
+    "ref": "09#S5.data-query"
+  },
+  "S5.data-query.2": {
+    "zh": "把自然语言问题转换为查询",
+    "en": "Question converted into a query",
+    "status": "approved",
+    "ref": "09#S5.data-query"
+  },
+  "S5.data-query.3": {
+    "zh": "查询语句与结果可供核对",
+    "en": "Query and results open for review",
+    "status": "approved",
+    "ref": "09#S5.data-query"
+  },
+  "S5.data-query.4": {
+    "zh": "返回表格与图表",
+    "en": "Tables and charts returned",
+    "status": "approved",
+    "ref": "09#S5.data-query"
+  },
+  "cover.why-chatgpt-is-not-a-knowledge-base": {
+    "zh": "知识库",
+    "en": "Knowledge base",
+    "status": "approved",
+    "ref": "09#cover.why-chatgpt-is-not-a-knowledge-base"
+  },
+  "cover.proposal-draft-in-15-minutes": {
+    "zh": "15 分钟",
+    "en": "15 min",
+    "status": "approved",
+    "ref": "09#cover.proposal-draft-in-15-minutes"
+  },
+  "cover.buy-pilot-or-managed": {
+    "zh": "定制 · 试点 · 托管",
+    "en": "Build · Pilot · Managed",
+    "status": "approved",
+    "ref": "09#cover.buy-pilot-or-managed"
+  },
+  "cover.layers.1": {
+    "zh": "公开",
+    "en": "Public",
+    "status": "approved",
+    "ref": "09#cover.layers"
+  },
+  "cover.layers.2": {
+    "zh": "部门",
+    "en": "Department",
+    "status": "approved",
+    "ref": "09#cover.layers"
+  },
+  "cover.layers.3": {
+    "zh": "项目",
+    "en": "Project",
+    "status": "approved",
+    "ref": "09#cover.layers"
+  },
+  "cover.layers.4": {
+    "zh": "个人",
+    "en": "Personal",
+    "status": "approved",
+    "ref": "09#cover.layers"
+  },
+  "cite.case-proposal-15min": {
+    "zh": "指生成可编辑、待人工复核的初稿所需时间，来自已交付项目。",
+    "en": "Time to an editable draft awaiting human review, in a delivered project.",
+    "status": "approved",
+    "ref": "09#cite.case-proposal-15min"
+  },
+  "cite.case-proposal-99": {
+    "zh": "该项目的引用准确率，不代表所有生成内容的准确率。",
+    "en": "Citation accuracy in this project, not accuracy of all generated text.",
+    "status": "approved",
+    "ref": "09#cite.case-proposal-99"
+  },
+  "cite.case-wiki-80": {
+    "zh": "该项目中常见工单由 AI 处理的比例；新项目另设验收标准。",
+    "en": "Share of routine tickets handled by AI in this project; new projects set their own targets.",
+    "status": "approved",
+    "ref": "09#cite.case-wiki-80"
+  },
+  "cite.case-wiki-3s": {
+    "zh": "该项目的平均响应时间。",
+    "en": "Average response time in this project.",
+    "status": "approved",
+    "ref": "09#cite.case-wiki-3s"
+  },
+  "cite.core-200ms": {
+    "zh": "100 轮长对话的内部基准测试结果，不是所有任务的端到端延迟承诺。",
+    "en": "Internal benchmark over a 100-turn conversation; not an end-to-end latency guarantee.",
+    "status": "approved",
+    "ref": "09#cite.core-200ms"
+  },
+  "cite.core-100": {
+    "zh": "同一内部基准测试中核心指令的召回率。",
+    "en": "Core-instruction recall in the same internal benchmark.",
+    "status": "approved",
+    "ref": "09#cite.core-100"
+  },
+  "cite.core-40": {
+    "zh": "同一内部基准测试中 Token 成本的最大降幅。",
+    "en": "Maximum token-cost reduction in the same internal benchmark.",
+    "status": "approved",
+    "ref": "09#cite.core-40"
+  },
+  "cite.team-6y": {
+    "zh": "指每位核心成员的最低开发年限，不是公司成立年限。",
+    "en": "The minimum development experience of each core member, not company age.",
+    "status": "approved",
+    "ref": "09#cite.team-6y"
+  }
+}

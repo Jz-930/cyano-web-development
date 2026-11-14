@@ -1,24 +1,25 @@
-import pageCopy from "@/content/v3/pages/Engagement.json";
+import pageCopy from "@/content/v4/pages/Engagement.json";
 import { Network } from "lucide-react";
-import { Locale, t, text, founders } from "@/lib/v1-content";
+import { Locale, t, text, founderForStage } from "@/lib/content-v4";
 import { Eyebrow, SectionTitle } from "../ui";
 import {FAQ} from "../islands/FAQ";
 import copy from "@/content/v1/copy.json";
 import { PageHero } from "./PageHero";
 import { EngagementCards } from "./EngagementCards";
+import { Phrase } from "@/components/v4/Phrase";
 
 export function Engagement({ locale }: { locale: Locale }) {
   const faq = Object.entries(copy["D.4"])
     .filter(([k]) => k.includes("?") || k.includes("？"))
-    .map(([q, a]) => ({
+    .map(([q]) => ({
       q: q.split(" / ")[locale === "zh" ? 0 : 1],
-      a: a[locale],
+      a: text("D.4", q, locale),
     }));
   return (
     <>
       <PageHero
         locale={locale}
-        eyebrow={pageCopy.c07e2733746[locale]}
+        eyebrow={pageCopy.how_we_work[locale]}
         title={text("D.4", "Hero 标题", locale)}
         intro={text("D.4", "Hero 导语", locale)}
       />
@@ -30,10 +31,10 @@ export function Engagement({ locale }: { locale: Locale }) {
             <table className="comparison-table">
               <thead>
                 <tr>
-                  <th>{pageCopy.c94eb35ef5a[locale]}</th>
+                  <th>{pageCopy.compare[locale]}</th>
                   {[0, 1, 2].map((i) => (
                     <th key={i}>
-                      {pageCopy.c8073196267[locale][i]}
+                      {pageCopy.full_custom_build[locale][i]}
                     </th>
                   ))}
                 </tr>
@@ -42,7 +43,7 @@ export function Engagement({ locale }: { locale: Locale }) {
                 {[0, 1, 2].map((i) => (
                   <tr key={i}>
                     <th>
-                      {pageCopy.cd417d93d37[locale][i]}
+                      {pageCopy.what_you_get[locale][i]}
                     </th>
                     {[0, 1, 2].map((j) => (
                       <td key={j}>
@@ -95,21 +96,21 @@ export function Engagement({ locale }: { locale: Locale }) {
       <section className="section mist" id="diagnosis">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.c38832f88ff[locale]}
-            title={pageCopy.c5abfe6869e[locale]}
+            eyebrow={pageCopy.project_process[locale]}
+            title={pageCopy.assessment_development_and_ongoing[locale]}
           />
           <div className="process-list">
             {[0, 1, 2, 3, 4].map((i) => (
               <div key={i}>
                 <span>0{i + 1}</span>
                 <h3>
-                  {pageCopy.c819c53584b[locale][i]}
+                  {pageCopy.assess_requirements[locale][i]}
                 </h3>
                 <p>
-                  {pageCopy.c43bbf22736[locale][i]}
+                  {pageCopy.review_goals_workflows_and[locale][i]}
                 </p>
                 <span className="process-owner">
-                  {founders(locale)[[3, 0, 3, 1, 2][i]].role}
+                  {founderForStage(i + 1, locale).role}
                 </span>
               </div>
             ))}
@@ -134,8 +135,8 @@ export function Engagement({ locale }: { locale: Locale }) {
       <section className="section">
         <div className="wrap faq-layout">
           <div>
-            <Eyebrow>{pageCopy.ce7958d33de[locale]}</Eyebrow>
-            <h2>{pageCopy.c6c5c0c27ab[locale]}</h2>
+            <Eyebrow>{pageCopy.common_questions[locale]}</Eyebrow>
+            <h2><Phrase text={pageCopy.before_we_begin[locale]} locale={locale} /></h2>
           </div>
           <FAQ items={faq} />
         </div>

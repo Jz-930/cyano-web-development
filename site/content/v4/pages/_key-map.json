@@ -1,0 +1,142 @@
+{
+  "About.json": {
+    "c3a2700fd76": "about_cyano",
+    "cde7dfbce78": "our_background",
+    "c8aa02c4d5b": "ai_research_and_enterprise",
+    "c6949dc8060": "founders",
+    "ccf8724750f": "designed_around_your_sources",
+    "c6f5481fb45": "sales_inquiries_need_specifications",
+    "c16b9b0df26": "our_principles"
+  },
+  "Article.json": {
+    "cc92632c3cd": "cyano_founding_team",
+    "cc98a765438": "in_this_article",
+    "c6d9279dc73": "discuss_a_similar_project",
+    "cb0bcab9e81": "bring_your_current_process"
+  },
+  "CaseDetail.json": {
+    "c019a52a91a": "book_a_confidential_demo",
+    "c5b5b00425e": "system",
+    "c95ed31d988": "engagement",
+    "c184eaeaf4e": "timeline",
+    "cde006ce3f7": "the_system_up_close",
+    "cef3ba25bcb": "screenshots_show_the_main",
+    "c102a9f05f7": "before_and_after",
+    "c7b5688bc57": "what_changed_in_the",
+    "cd46d21be8d": "before",
+    "c080f33ef37": "after",
+    "c877641ab00": "how_it_works",
+    "c4600500e8f": "processing_and_review_steps",
+    "c8a71fc9bde": "project_outcome",
+    "c3b730cce7f": "company_knowledge_workflow_orchestration",
+    "ca71b8bf131": "explore_the_engineering",
+    "c57d20e417b": "more_work",
+    "cdb7fcdbcc3": "more_systems_in_production"
+  },
+  "CasesPage.json": {
+    "c44c4e65242": "our_work",
+    "ca85726a4c7": "client_projects",
+    "c019a52a91a": "book_a_confidential_demo"
+  },
+  "Contact.json": {
+    "cb59ac26ed1": "lets_talk",
+    "c7f81224b43": "topics_to_discuss",
+    "c96f9dc04d9": "requirements_projects_or_technical",
+    "c400a667ac0": "head_of_product_solutions",
+    "cacf9ee0ac0": "your_inquiry",
+    "c8c2439250f": "what_happens_next"
+  },
+  "Engagement.json": {
+    "c07e2733746": "how_we_work",
+    "c94eb35ef5a": "compare",
+    "c8073196267": "full_custom_build",
+    "cd417d93d37": "what_you_get",
+    "c38832f88ff": "project_process",
+    "c5abfe6869e": "assessment_development_and_ongoing",
+    "c819c53584b": "assess_requirements",
+    "c43bbf22736": "review_goals_workflows_and",
+    "ce7958d33de": "common_questions",
+    "c6c5c0c27ab": "before_we_begin"
+  },
+  "EngagementCards.json": {
+    "ca4258756dc": "own_a_system",
+    "cae79c93a25": "full_custom_build",
+    "c3df04afb52": "for_teams_with_clear",
+    "ccc77638506": "first_release_in_6",
+    "c0ed5e080c6": "discuss_engagement"
+  },
+  "Home.json": {
+    "cacaceaf63e": "see_our_work",
+    "cbb17f6527c": "custom_development_pilots_managed",
+    "c6ccf839c13": "scroll_to_explore",
+    "c0f6248ce56": "industries_we_serve",
+    "cd7bd9f82f5": "who_we_are",
+    "cd0d27acf18": "meet_cyano",
+    "c2b5c56be3e": "what_we_do",
+    "c4d147ffe9f": "all_solutions",
+    "c15b3e47a84": "selected_work",
+    "ce637340fe2": "view_all_case_studies",
+    "c4fe4a61a4a": "implementation",
+    "ceeb05ca333": "sources_access_controls_and",
+    "c6c4a9d30a1": "engagement_options",
+    "c8bb0541485": "our_team",
+    "c52c0b6a904": "perspectives",
+    "c99ef98cdfe": "project_notes_and_implementation",
+    "cb2e805c42d": "all_insights"
+  },
+  "Insights.json": {
+    "cc31ab3e384": "insights",
+    "c263010915a": "notes_on_designing_and",
+    "c43fe9d94f3": "guides_to_knowledge_systems"
+  },
+  "Legal.json": {
+    "ca3e2396ff3": "updated_november_12_2026",
+    "c3d1bb514d5": "contact_us"
+  },
+  "Missing.json": {
+    "c515d0524d2": "back_to_home",
+    "cacaceaf63e": "see_our_work"
+  },
+  "PageHero.json": {
+    "c76c92ba094": "home"
+  },
+  "Services.json": {
+    "c8dd6daa6a7": "solutions",
+    "cb06e9a23e9": "expand_customer_services",
+    "ce42639c94b": "use_product_documentation_and",
+    "cd04c0a8c0b": "explore_solution",
+    "c106ef4a857": "dont_see_your_use"
+  },
+  "SolutionDetail.json": {
+    "c941685fd36": "product_information_takes_too",
+    "c7d8027cf10": "see_related_work",
+    "c50d6ecf9ef": "the_challenge",
+    "c6371e120c5": "common_problems_in_this",
+    "cb2e80ebd0a": "the_approach",
+    "c7b67845196": "how_the_system_handles",
+    "c8e8a71c730": "what_you_receive",
+    "ccf14677e99": "maintenance_and_ongoing_iteration",
+    "c186c216c6e": "in_production",
+    "c2e9ee617bd": "related_system_and_project",
+    "c9f70c398fd": "common_questions",
+    "c7f1a4caa4e": "can_it_connect_to",
+    "cb9bc65b425": "yes_the_assessment_covers",
+    "c0d5ddd0cbb": "how_do_you_make",
+    "c0b647bcc73": "we_use_your_own",
+    "c1d935442b7": "when_can_we_try"
+  },
+  "Technology.json": {
+    "cc13c665d68": "talk_to_our_cto",
+    "c6ba0963fc8": "platform_functions",
+    "c60db7c1969": "context_engineering",
+    "c9a04516c09": "core_instructions_preserved",
+    "c253678ad09": "response_latency",
+    "ce86d62dc6f": "designed_to_connect",
+    "c82e27d8604": "qwen",
+    "c279540dd01": "lark",
+    "cd1f6713db3": "dingtalk",
+    "c7b722df55d": "wecom",
+    "cd82b0e00a7": "the_system_includes_access",
+    "cb7049dd516": "discuss_data_security_and"
+  }
+}

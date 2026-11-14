@@ -1,0 +1,94 @@
+{
+  "sales-ai": [
+    {
+      "x": 30,
+      "y": 22,
+      "zh": "客户问题",
+      "en": "Customer question",
+      "status": "approved"
+    },
+    {
+      "x": 45,
+      "y": 62,
+      "zh": "按产品资料回答",
+      "en": "Answered from product data",
+      "status": "approved"
+    },
+    {
+      "x": 86,
+      "y": 30,
+      "zh": "引用来源",
+      "en": "Sources",
+      "status": "approved"
+    }
+  ],
+  "document-automation": [
+    {
+      "x": 40,
+      "y": 32,
+      "zh": "带引用的段落",
+      "en": "Cited paragraph",
+      "status": "approved"
+    },
+    {
+      "x": 55,
+      "y": 88,
+      "zh": "完整性检查",
+      "en": "Completeness checks",
+      "status": "approved"
+    },
+    {
+      "x": 88,
+      "y": 10,
+      "zh": "复核状态",
+      "en": "Review status",
+      "status": "approved"
+    }
+  ],
+  "knowledge-assistant": [
+    {
+      "x": 45,
+      "y": 10,
+      "zh": "员工提问",
+      "en": "Employee question",
+      "status": "approved"
+    },
+    {
+      "x": 50,
+      "y": 55,
+      "zh": "带出处的回答",
+      "en": "Cited answer",
+      "status": "approved"
+    },
+    {
+      "x": 30,
+      "y": 90,
+      "zh": "转人工",
+      "en": "Hand-off",
+      "status": "approved"
+    }
+  ],
+  "data-query": [
+    {
+      "x": 30,
+      "y": 10,
+      "zh": "一句话提问",
+      "en": "Plain-language question",
+      "status": "approved"
+    },
+    {
+      "x": 50,
+      "y": 42,
+      "zh": "生成的查询",
+      "en": "Generated query",
+      "status": "approved"
+    },
+    {
+      "x": 50,
+      "y": 80,
+      "zh": "结果",
+      "en": "Results",
+      "status": "approved"
+    }
+  ]
+}

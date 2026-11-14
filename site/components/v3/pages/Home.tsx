@@ -1,9 +1,9 @@
 import {ProblemTabs} from "../ProblemTabs";
-import pageCopy from "@/content/v3/pages/Home.json";
+import pageCopy from "@/content/v4/pages/Home.json";
 import Link from "next/link";
 import {BusinessHeroVisual} from "../BusinessHeroVisual";
 import { ArrowDown, ArrowUpRight, ShieldCheck, Layers3, Workflow, Database } from "lucide-react";
-import { Locale, t, href, text, cases, solutions, insights } from "@/lib/v1-content";
+import { Locale, t, href, text, cases, solutions, insights } from "@/lib/content-v4";
 import { Button, Eyebrow, SectionTitle, Stats, CaseCard, Team, InsightCards, industryIcons } from "../ui";
 import {SolutionExplorer} from "../islands/SolutionExplorer";
 import copy from "@/content/v1/copy.json";
@@ -41,7 +41,7 @@ export function Home({ locale }: { locale: Locale }) {
           <div className="hero-buttons">
             <Button locale={locale}>{text("D.1", "主按钮", locale)}</Button>
             <Link className="hero-secondary" href={href(locale, "/cases")}>
-              {pageCopy.cacaceaf63e[locale]}
+              {pageCopy.see_our_work[locale]}
               <span>
                 <ArrowUpRight size={20} />
               </span>
@@ -52,10 +52,10 @@ export function Home({ locale }: { locale: Locale }) {
         <div className="wrap hero-bottom">
           <div className="hero-caption">
             <span className="status-dot" />
-            {pageCopy.cbb17f6527c[locale]}
+            {pageCopy.custom_development_pilots_managed[locale]}
           </div>
           <a href="#expertise" className="scroll-link">
-            {pageCopy.c6ccf839c13[locale]}
+            {pageCopy.scroll_to_explore[locale]}
             <ArrowDown size={14} />
           </a>
         </div>
@@ -64,7 +64,7 @@ export function Home({ locale }: { locale: Locale }) {
         <div className="wrap">
           <Stats locale={locale} />
           <div className="industry-strip">
-            <span>{pageCopy.c0f6248ce56[locale]}</span>
+            <span>{pageCopy.industries_we_serve[locale]}</span>
             {[0, 1, 4, 3, 2, 5].map((i) => {
               const Icon = industryIcons[i];
               return (
@@ -80,7 +80,7 @@ export function Home({ locale }: { locale: Locale }) {
       <section className="manifesto">
         <div className="manifesto-contours" />
         <div className="wrap manifesto-grid">
-          <Eyebrow light>{pageCopy.cd7bd9f82f5[locale]}</Eyebrow>
+          <Eyebrow light>{pageCopy.who_we_are[locale]}</Eyebrow>
           <div>
             <h2>
               {locale === "zh" ? (
@@ -107,7 +107,7 @@ export function Home({ locale }: { locale: Locale }) {
               href={href(locale, "/about")}
               className="text-link light-link"
             >
-              {pageCopy.cd0d27acf18[locale]}
+              {pageCopy.meet_cyano[locale]}
               <ArrowUpRight size={17} />
             </Link>
           </div>
@@ -116,11 +116,11 @@ export function Home({ locale }: { locale: Locale }) {
       <section className="section solutions-section">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.c2b5c56be3e[locale]}
+            eyebrow={pageCopy.what_we_do[locale]}
             title={text("D.2", "解决方案区标题", locale)}
           >
             <Link className="text-link" href={href(locale, "/services")}>
-              {pageCopy.c4d147ffe9f[locale]}
+              {pageCopy.all_solutions[locale]}
               <ArrowUpRight size={18} />
             </Link>
           </SectionTitle>
@@ -130,12 +130,12 @@ export function Home({ locale }: { locale: Locale }) {
       <section className="section cases-section mist">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.c15b3e47a84[locale]}
+            eyebrow={pageCopy.selected_work[locale]}
             title={text("D.2", "精选案例标题", locale)}
             description={text("D.2", "精选案例导语", locale)}
           >
             <Link href={href(locale, "/cases")} className="text-link">
-              {pageCopy.ce637340fe2[locale]}
+              {pageCopy.view_all_case_studies[locale]}
               <ArrowUpRight size={18} />
             </Link>
           </SectionTitle>
@@ -154,9 +154,9 @@ export function Home({ locale }: { locale: Locale }) {
       <section className="section dark difference-section">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.c4fe4a61a4a[locale]}
+            eyebrow={pageCopy.implementation[locale]}
             title={text("D.2", "痛点区标题", locale)}
-            description={pageCopy.ceeb05ca333[locale]}
+            description={pageCopy.sources_access_controls_and[locale]}
           />
           <ProblemTabs locale={locale} items={[1,2,3,4].map(i=>{const [before,answer]=text("D.2","痛点 "+i,locale).split("→");const [title,...body]=before.split(locale==="zh"?" —— ":" —");return {title,issue:body.join(locale==="zh"?" —— ":" —"),answer:answer.trim()};})}/>
           <Link
@@ -170,7 +170,7 @@ export function Home({ locale }: { locale: Locale }) {
       <section className="section">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.c6c4a9d30a1[locale]}
+            eyebrow={pageCopy.engagement_options[locale]}
             title={text("D.2", "合作区标题", locale)}
           >
             <Link className="text-link" href={href(locale, "/engagement")}>
@@ -183,7 +183,7 @@ export function Home({ locale }: { locale: Locale }) {
       <section className="section team-section mist">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.c8bb0541485[locale]}
+            eyebrow={pageCopy.our_team[locale]}
             title={text("D.2", "团队区标题", locale)}
             description={text("D.2", "团队区导语", locale)}
           >
@@ -197,11 +197,11 @@ export function Home({ locale }: { locale: Locale }) {
       <section className="section">
         <div className="wrap">
           <SectionTitle
-            eyebrow={pageCopy.c52c0b6a904[locale]}
-            title={pageCopy.c99ef98cdfe[locale]}
+            eyebrow={pageCopy.perspectives[locale]}
+            title={pageCopy.project_notes_and_implementation[locale]}
           >
             <Link className="text-link" href={href(locale, "/insights")}>
-              {pageCopy.cb2e805c42d[locale]}
+              {pageCopy.all_insights[locale]}
               <ArrowUpRight size={18} />
             </Link>
           </SectionTitle>

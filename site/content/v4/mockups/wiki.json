@@ -1,0 +1,47 @@
+{
+  "question": {
+    "zh": "远程办公有哪些安全要求？",
+    "en": "What are the security rules for remote work?",
+    "status": "class-a"
+  },
+  "answer": {
+    "zh": "使用公司批准的 VPN 和设备，开启磁盘加密与自动锁屏。不要把业务资料同步到个人云盘；共享文件前核对接收人的访问权限。",
+    "en": "Use approved devices and VPN, enable disk encryption and auto-lock. Keep company files out of personal cloud drives and verify sharing permissions.",
+    "status": "class-a"
+  },
+  "src1": {
+    "zh": "远程办公制度",
+    "en": "Remote work policy",
+    "status": "approved"
+  },
+  "src2": {
+    "zh": "信息安全手册",
+    "en": "Information security handbook",
+    "status": "approved"
+  },
+  "perm": {
+    "zh": "按权限检索",
+    "en": "Search with access controls",
+    "status": "approved"
+  },
+  "handoff": {
+    "zh": "转人工",
+    "en": "Contact IT",
+    "status": "approved"
+  },
+  "statusDone": {
+    "zh": "已回答",
+    "en": "Answered",
+    "status": "approved"
+  },
+  "input1": {
+    "zh": "员工提问",
+    "en": "Employee question",
+    "status": "approved"
+  },
+  "caption": {
+    "zh": "IT 知识助手界面示意：回答附带出处，复杂问题转人工。",
+    "en": "IT assistant interface: cited answers, with complex cases handed to staff.",
+    "status": "approved"
+  }
+}

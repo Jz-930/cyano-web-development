@@ -1,5 +1,5 @@
 import {EngineeringDiagram} from "./EngineeringDiagram";
-import {type Locale,t,cases,founders} from "@/lib/v1-content";
+import {type Locale,t,cases,founders} from "@/lib/content-v4";
 import {LightField} from "./LightField";
 import {ScreenshotZoom} from "./ScreenshotZoom";
 

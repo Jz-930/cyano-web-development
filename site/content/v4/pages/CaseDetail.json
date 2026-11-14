@@ -1,69 +1,69 @@
 {
-  "c019a52a91a": {
+  "book_a_confidential_demo": {
     "zh": "预约保密演示",
     "en": "Book a confidential demo"
   },
-  "c5b5b00425e": {
+  "system": {
     "zh": "系统",
     "en": "System"
   },
-  "c95ed31d988": {
+  "engagement": {
     "zh": "合作方式",
     "en": "Engagement"
   },
-  "c184eaeaf4e": {
+  "timeline": {
     "zh": "项目周期",
     "en": "Timeline"
   },
-  "cde006ce3f7": {
+  "the_system_up_close": {
     "zh": "真实界面",
     "en": "THE SYSTEM, UP CLOSE"
   },
-  "cef3ba25bcb": {
+  "screenshots_show_the_main": {
     "zh": "以下界面展示系统的主要功能与操作步骤。",
     "en": "Screenshots show the main functions and operating steps."
   },
-  "c102a9f05f7": {
+  "before_and_after": {
     "zh": "使用前后",
     "en": "BEFORE AND AFTER"
   },
-  "c7b5688bc57": {
+  "what_changed_in_the": {
     "zh": "这项工作如何改变",
     "en": "What changed in the workflow"
   },
-  "cd46d21be8d": {
+  "before": {
     "zh": "过去",
     "en": "BEFORE"
   },
-  "c080f33ef37": {
+  "after": {
     "zh": "现在",
     "en": "AFTER"
   },
-  "c877641ab00": {
+  "how_it_works": {
     "zh": "解决路径",
     "en": "HOW IT WORKS"
   },
-  "c4600500e8f": {
+  "processing_and_review_steps": {
     "zh": "资料处理与审核步骤",
     "en": "Processing and review steps"
   },
-  "c8a71fc9bde": {
+  "project_outcome": {
     "zh": "项目成果摘要",
     "en": "PROJECT OUTCOME"
   },
-  "c3b730cce7f": {
+  "company_knowledge_workflow_orchestration": {
     "zh": "企业知识 · 工作流编排 · 权限与审计",
     "en": "Company knowledge · Workflow orchestration · Access & audit"
   },
-  "ca71b8bf131": {
+  "explore_the_engineering": {
     "zh": "了解背后的工程方法",
     "en": "Explore the engineering"
   },
-  "c57d20e417b": {
+  "more_work": {
     "zh": "继续探索",
     "en": "MORE WORK"
   },
-  "cdb7fcdbcc3": {
+  "more_systems_in_production": {
     "zh": "其他正在运行的系统",
     "en": "More systems in production"
   }

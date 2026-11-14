@@ -1,5 +1,5 @@
 {
-  "ca4258756dc": {
+  "own_a_system": {
     "zh": [
       "自有系统",
       "小范围试用",
@@ -11,7 +11,7 @@
       "OUTSOURCE THE WORK"
     ]
   },
-  "cae79c93a25": {
+  "full_custom_build": {
     "zh": [
       "完整定制开发",
       "低启动试点 + 持续服务",
@@ -23,7 +23,7 @@
       "Managed AI service"
     ]
   },
-  "c3df04afb52": {
+  "for_teams_with_clear": {
     "zh": [
       "适合需求明确、使用频繁，需要拥有并长期使用系统的团队。",
       "先开发一个范围较小的版本，根据实际效果决定是否扩展。",
@@ -35,7 +35,7 @@
       "You provide the sources and quality criteria. Cyano runs the workflow, reviews the output and delivers it."
     ]
   },
-  "ccc77638506": {
+  "first_release_in_6": {
     "zh": [
       "6–12 周首期上线",
       "2–6 周首个可用版本",
@@ -47,7 +47,7 @@
       "First results within 2 weeks"
     ]
   },
-  "c0ed5e080c6": {
+  "discuss_engagement": {
     "zh": "咨询合作方式",
     "en": "Discuss engagement"
   }

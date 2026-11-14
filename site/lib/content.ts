@@ -1,32 +1,38 @@
 import "server-only";
 import baselineLegal from "@/content/legal-v1.json";
 import type { Metadata } from "next";
+import { type Locale, type Bilingual } from "./schema";
 import {
-  type Locale,
-  type Bilingual,
-  type CaseItem,
-  type SolutionItem,
-  type FounderItem,
-  type InsightItem,
-} from "./schema";
-import rawCases from "@/content/cases-v2.json";
-import rawSolutions from "@/content/solutions-v2.json";
-import rawFounders from "@/content/founders-v2.json";
-import rawInsights from "@/content/insights-v2.json";
-import siteCopyData from "@/content/site-copy-v2.json";
-import rawArticles from "@/content/articles.json";
+  allCases,
+  allIndustries,
+  allInsights,
+  allSolutions,
+  allTeam,
+  getArticleBlocks,
+  siteCopy,
+} from "./content-v4";
 import rawAvailability from "@/content/availability.json";
 import mediaManifestData from "./media-manifest.json";
 import ogImage from "./og-image.json";
 
-export type { Locale, Bilingual, CaseItem, SolutionItem, FounderItem, InsightItem };
+export type { Locale, Bilingual };
+export { getArticleBlocks, siteCopy };
 
-// Schemas run in the build gate; content never enters a client module.
-export const casesList = rawCases as CaseItem[];
-export const solutionsList = rawSolutions as SolutionItem[];
-export const foundersList = rawFounders as FounderItem[];
-export const insightsList = rawInsights as InsightItem[];
-export const siteCopy = siteCopyData;
+export const casesList = allCases.map((c) => ({
+  ...c,
+  metaDescription: c.outcome,
+}));
+export type CaseRouteItem = (typeof casesList)[number];
+
+export const solutionsList = allSolutions;
+export type SolutionRouteItem = (typeof solutionsList)[number];
+
+export const foundersList = allTeam;
+export type FounderRouteItem = (typeof foundersList)[number];
+
+export const insightsList = allInsights;
+export type InsightRouteItem = (typeof insightsList)[number];
+
 export const availability = rawAvailability;
 
 export type MediaMeta = {
@@ -58,31 +64,20 @@ export function href(locale: Locale, routePath = ""): string {
   return clean || "/";
 }
 
-export function getCase(slug: string): CaseItem | undefined {
+export function getCase(slug: string): CaseRouteItem | undefined {
   return casesList.find((c) => c.slug === slug);
 }
 
-export function getSolution(slug: string): SolutionItem | undefined {
+export function getSolution(slug: string): SolutionRouteItem | undefined {
   return solutionsList.find((s) => s.slug === slug);
 }
 
-export function getFounder(id: FounderItem["id"]): FounderItem {
+export function getFounder(id: FounderRouteItem["id"]): FounderRouteItem {
   return foundersList.find((f) => f.id === id) ?? foundersList[0];
 }
 
-export function getInsight(slug: string): InsightItem | undefined {
+export function getInsight(slug: string): InsightRouteItem | undefined {
   return insightsList.find((i) => i.slug === slug);
-}
-
-export function getArticleBlocks(
-  slug: string,
-  locale: Locale
-): { q: string; a: string }[] {
-  const table = rawArticles as Record<
-    string,
-    Record<Locale, { q: string; a: string }[]>
-  >;
-  return table[slug]?.[locale] ?? [];
 }
 
 export function isDemoEnabled(slug: string): boolean {
@@ -90,16 +85,15 @@ export function isDemoEnabled(slug: string): boolean {
   return Boolean(map[slug]);
 }
 
-export const industriesList: { key: CaseItem["industryKey"]; label: Bilingual }[] = [
-  { key: "manufacturing", label: { zh: "工程与制造", en: "Engineering & Manufacturing" } },
-  { key: "consulting", label: { zh: "专业服务与投研", en: "Professional Services & Research" } },
-  { key: "enterprise-it", label: { zh: "企业服务", en: "Enterprise Services" } },
-  { key: "retail", label: { zh: "零售与供应链", en: "Retail & Supply Chain" } },
-  { key: "real-estate", label: { zh: "房地产与物业", en: "Real Estate & Property" } },
-  { key: "media", label: { zh: "内容与传媒", en: "Content & Media" } },
-];
+export const industriesList = allIndustries.map((ind) => ({
+  key: ind.id,
+  label: ind.label,
+}));
 
-export const legalCopy = { ...baselineLegal, updatedDisplay: { zh: "更新日期：2026 年 11 月 12 日", en: "Updated November 12, 2026" } };
+export const legalCopy = {
+  ...baselineLegal,
+  updatedDisplay: { zh: "更新日期：2026 年 11 月 12 日", en: "Updated November 12, 2026" },
+};
 
 export const baseRoutes = [
   "",
@@ -133,7 +127,7 @@ export function buildPageMetadata({
   publishedTime,
 }: {
   locale: Locale;
-  routePath: string; // "" for home, "services/sales-ai" etc. (no leading slash)
+  routePath: string;
   title: string;
   description: string;
   ogType?: "website" | "article";
@@ -213,7 +207,7 @@ export function websiteJsonLd(locale: Locale) {
 
 export function breadcrumbJsonLd(
   locale: Locale,
-  items: { name: string; path: string }[]
+  items: { name: string; path: string }[],
 ) {
   return {
     "@context": "https://schema.org",
@@ -227,7 +221,7 @@ export function breadcrumbJsonLd(
   };
 }
 
-export function serviceJsonLd(locale: Locale, sol: SolutionItem) {
+export function serviceJsonLd(locale: Locale, sol: SolutionRouteItem) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -242,8 +236,7 @@ export function serviceJsonLd(locale: Locale, sol: SolutionItem) {
   };
 }
 
-export function articleJsonLd(locale: Locale, ins: InsightItem) {
-  const author = getFounder(ins.authorId);
+export function articleJsonLd(locale: Locale, ins: InsightRouteItem) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -255,7 +248,7 @@ export function articleJsonLd(locale: Locale, ins: InsightItem) {
     author: {
       "@type": "Organization",
       name: locale === "zh" ? "Cyano 创始团队" : "Cyano founding team",
-      url: `${SITE_ORIGIN}${href(locale,"/about")}`,
+      url: `${SITE_ORIGIN}${href(locale, "/about")}`,
     },
     publisher: {
       "@type": "Organization",
@@ -271,7 +264,7 @@ export function articleJsonLd(locale: Locale, ins: InsightItem) {
 
 export function faqJsonLd(
   locale: Locale,
-  faqs: { q: Bilingual; a: Bilingual }[]
+  faqs: { q: Bilingual; a: Bilingual }[],
 ) {
   return {
     "@context": "https://schema.org",

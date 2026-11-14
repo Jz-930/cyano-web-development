@@ -1,8 +1,9 @@
-import pageCopy from "@/content/v3/pages/Legal.json";
+import pageCopy from "@/content/v4/pages/Legal.json";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { Locale, t, href, text } from "@/lib/v1-content";
+import { Locale, t, href, text } from "@/lib/content-v4";
 import { PageHero } from "./PageHero";
+import { Phrase } from "@/components/v4/Phrase";
 
 export function Legal({
   locale,
@@ -131,16 +132,16 @@ export function Legal({
       <section className="section">
         <article className="legal-content">
           <p className="article-meta">
-            {pageCopy.ca3e2396ff3[locale]}
+            {pageCopy.updated_november_12_2026[locale]}
           </p>
           {(locale === "zh" ? zh : en).map(([h, p]) => (
             <section key={h}>
-              <h2>{h}</h2>
+              <h2><Phrase text={h} locale={locale} /></h2>
               <p>{p}</p>
             </section>
           ))}
           <Link className="text-link" href={href(locale, "/contact#form")}>
-            {pageCopy.c3d1bb514d5[locale]}
+            {pageCopy.contact_us[locale]}
             <ArrowUpRight size={17} />
           </Link>
         </article>

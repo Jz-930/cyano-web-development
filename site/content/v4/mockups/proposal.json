@@ -1,0 +1,87 @@
+{
+  "docTitle": {
+    "zh": "方案初稿",
+    "en": "Proposal draft",
+    "status": "approved"
+  },
+  "statusDraft": {
+    "zh": "草稿",
+    "en": "Draft",
+    "status": "approved"
+  },
+  "statusReviewed": {
+    "zh": "已复核",
+    "en": "Reviewed",
+    "status": "approved"
+  },
+  "h1": {
+    "zh": "一、项目背景",
+    "en": "1. Background",
+    "status": "approved"
+  },
+  "s1": {
+    "zh": "本方案依据招标文件的技术要求，结合同类项目经验编写。",
+    "en": "This proposal follows the tender's technical requirements and draws on experience from similar projects.",
+    "status": "approved"
+  },
+  "h2": {
+    "zh": "二、技术方案",
+    "en": "2. Technical approach",
+    "status": "approved"
+  },
+  "s2": {
+    "zh": "关键参数与已交付项目保持一致，差异项单独列出。",
+    "en": "Key parameters match delivered projects; differences are listed separately.",
+    "status": "approved"
+  },
+  "h3": {
+    "zh": "三、实施计划",
+    "en": "3. Delivery plan",
+    "status": "approved"
+  },
+  "s3": {
+    "zh": "实施节点与验收标准见附件。",
+    "en": "Milestones and acceptance criteria are in the appendix.",
+    "status": "approved"
+  },
+  "checks": {
+    "zh": "完整性检查",
+    "en": "Completeness checks",
+    "status": "approved"
+  },
+  "src1": {
+    "zh": "历史方案",
+    "en": "Past proposals",
+    "status": "approved"
+  },
+  "src2": {
+    "zh": "知识文档",
+    "en": "Knowledge documents",
+    "status": "approved"
+  },
+  "src3": {
+    "zh": "项目参数",
+    "en": "Project parameters",
+    "status": "approved"
+  },
+  "input1": {
+    "zh": "历史方案",
+    "en": "Past proposals",
+    "status": "approved"
+  },
+  "input2": {
+    "zh": "知识文档",
+    "en": "Knowledge documents",
+    "status": "approved"
+  },
+  "input3": {
+    "zh": "项目参数",
+    "en": "Project parameters",
+    "status": "approved"
+  },
+  "caption": {
+    "zh": "方案初稿界面示意：段落附带引用，完成完整性检查后交人工复核。",
+    "en": "Proposal draft interface: paragraphs include citations; completeness checks come before human review.",
+    "status": "approved"
+  }
+}

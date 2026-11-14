@@ -1,0 +1,32 @@
+{
+  "stage.proposal.card1": {
+    "zh": "招标文件",
+    "en": "Tender document",
+    "status": "approved"
+  },
+  "stage.proposal.card2": {
+    "zh": "项目参数表",
+    "en": "Parameter sheet",
+    "status": "approved"
+  },
+  "stage.proposal.card3": {
+    "zh": "历史方案",
+    "en": "Past proposal",
+    "status": "approved"
+  },
+  "stage.wiki.card1": {
+    "zh": "远程办公制度",
+    "en": "Remote work policy",
+    "status": "approved"
+  },
+  "stage.wiki.card2": {
+    "zh": "工单记录",
+    "en": "Ticket history",
+    "status": "approved"
+  },
+  "stage.wiki.card3": {
+    "zh": "信息安全手册",
+    "en": "Security handbook",
+    "status": "approved"
+  }
+}

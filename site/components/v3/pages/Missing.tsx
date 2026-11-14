@@ -1,5 +1,5 @@
-import pageCopy from "@/content/v3/pages/Missing.json";
-import { Locale, t, href, text, cases } from "@/lib/v1-content";
+import pageCopy from "@/content/v4/pages/Missing.json";
+import { Locale, t, href, text, cases } from "@/lib/content-v4";
 import { Button } from "../ui";
 import { PageHero } from "./PageHero";
 
@@ -11,9 +11,9 @@ export function Missing({ locale }: { locale: Locale }) {
       title={text("D.9", "标题", locale)}
       intro={text("D.9", "正文", locale)}
     >
-      <Button to={href(locale)}>{pageCopy.c515d0524d2[locale]}</Button>
+      <Button to={href(locale)}>{pageCopy.back_to_home[locale]}</Button>
       <Button secondary to={href(locale, "/cases")}>
-        {pageCopy.cacaceaf63e[locale]}
+        {pageCopy.see_our_work[locale]}
       </Button>
     </PageHero>
   );

@@ -1,5 +1,5 @@
 {
-  "c941685fd36": {
+  "product_information_takes_too": {
     "zh": [
       "销售现场查资料慢|产品问题太专业，客服无法独立回答|销售材料千篇一律，缺少针对性",
       "历史方案分散，资料难以复用|每份初稿耗时，反复核对参数|关键条款容易遗漏，审核压力大",
@@ -13,63 +13,63 @@
       "Every query goes through the IT queue|Inconsistent metrics make results hard to trust|Business users cannot write SQL"
     ]
   },
-  "c7d8027cf10": {
+  "see_related_work": {
     "zh": "查看相关案例",
     "en": "See related work"
   },
-  "c50d6ecf9ef": {
+  "the_challenge": {
     "zh": "使用场景",
     "en": "THE CHALLENGE"
   },
-  "c6371e120c5": {
+  "common_problems_in_this": {
     "zh": "需要解决的日常问题",
     "en": "Common problems in this workflow"
   },
-  "cb2e80ebd0a": {
+  "the_approach": {
     "zh": "我们怎么做",
     "en": "THE APPROACH"
   },
-  "c7b67845196": {
+  "how_the_system_handles": {
     "zh": "系统如何处理任务",
     "en": "How the system handles a task"
   },
-  "c8e8a71c730": {
+  "what_you_receive": {
     "zh": "你会得到什么",
     "en": "What you receive"
   },
-  "ccf14677e99": {
+  "maintenance_and_ongoing_iteration": {
     "zh": "上线维护与持续迭代",
     "en": "Maintenance and ongoing iteration"
   },
-  "c186c216c6e": {
+  "in_production": {
     "zh": "相关客户项目",
     "en": "IN PRODUCTION"
   },
-  "c2e9ee617bd": {
+  "related_system_and_project": {
     "zh": "查看相关系统与项目结果",
     "en": "Related system and project results"
   },
-  "c9f70c398fd": {
+  "common_questions": {
     "zh": "常见问题",
     "en": "Common questions"
   },
-  "c7f1a4caa4e": {
+  "can_it_connect_to": {
     "zh": "可以接入我们已有的系统吗？",
     "en": "Can it connect to our existing systems?"
   },
-  "cb9bc65b425": {
+  "yes_the_assessment_covers": {
     "zh": "可以。评估阶段会确认数据来源、接口和权限，优先使用现有数据库、文档与业务系统。",
     "en": "Yes. The assessment covers data sources, interfaces and permissions, starting with the systems and documents you already use."
   },
-  "c0d5ddd0cbb": {
+  "how_do_you_make": {
     "zh": "如何保证答案和结果可靠？",
     "en": "How do you make results reliable?"
   },
-  "c0b647bcc73": {
+  "we_use_your_own": {
     "zh": "使用企业自己的资料，结合引用溯源、规则校验和人工复核点。无法确认的任务交还业务负责人处理。",
     "en": "We use your own sources, citations, validation rules and human review. Uncertain tasks return to a business owner."
   },
-  "c1d935442b7": {
+  "when_can_we_try": {
     "zh": "多久能看到第一版？",
     "en": "When can we try a first version?"
   }

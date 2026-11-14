@@ -1,0 +1,17 @@
+{
+  "question": {
+    "zh": "本月各区域销售额是多少？",
+    "en": "Sales by region this month?",
+    "status": "class-a"
+  },
+  "input1": {
+    "zh": "自然语言提问",
+    "en": "Plain-language question",
+    "status": "approved"
+  },
+  "caption": {
+    "zh": "数据查询界面示意：一句话提问，生成查询并返回结果。演示数据。",
+    "en": "Data query interface: a plain-language question becomes a query that returns results. Demo data.",
+    "status": "approved"
+  }
+}

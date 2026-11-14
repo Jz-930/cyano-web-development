@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, ArrowRight, ChevronDown, Menu, X, Plus, Minus, ChevronLeft, ChevronRight, Check, LoaderCircle, Send, Globe, ShieldCheck, Search, Database } from "lucide-react";
 import { type Locale, t, href } from "@/lib/locale";
-import type { CaseStudy, solutions } from "@/lib/v1-content";
+import type { CaseStudy, solutions } from "@/lib/content-v4";
 import { Logo, solutionIcons } from "./client-shared";
 type LocalCopy = Record<string,Record<string,string>>;
 export function CopyLink({ locale }: { locale: Locale }) {

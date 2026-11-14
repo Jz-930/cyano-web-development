@@ -1,0 +1,810 @@
+[
+  {
+    "slug": "sales-ai",
+    "order": 0,
+    "name": {
+      "zh": "销售与客户咨询 AI",
+      "en": "Sales & Customer AI"
+    },
+    "shortName": {
+      "zh": "销售与客户咨询 AI",
+      "en": "Sales & Customer AI"
+    },
+    "promise": {
+      "zh": "根据产品资料，回答客户问题",
+      "en": "Answer customer questions using your product knowledge"
+    },
+    "intro": {
+      "zh": "根据产品资料、技术参数和历史项目回答客户问题，并准备对应的推荐方案与销售材料。",
+      "en": "Use product documentation and project records to answer customer questions and prepare relevant recommendations and sales materials."
+    },
+    "outputs": {
+      "zh": "专业咨询 · 项目匹配 · 销售材料",
+      "en": "Expert answers · Project matching · Sales content"
+    },
+    "metaDescription": {
+      "zh": "根据产品资料、技术参数和历史项目回答客户问题，并准备对应的推荐方案与销售材料。",
+      "en": "Use product documentation and project records to answer customer questions and prepare relevant recommendations and sales materials."
+    },
+    "deliverables": [
+      {
+        "zh": "专业咨询",
+        "en": "Expert answers"
+      },
+      {
+        "zh": "项目匹配",
+        "en": "Project matching"
+      },
+      {
+        "zh": "销售材料",
+        "en": "Sales content"
+      },
+      {
+        "zh": "上线维护与持续迭代",
+        "en": "Maintenance and ongoing iteration"
+      }
+    ],
+    "capabilities": [],
+    "caseSlug": "sales-consultant-ai",
+    "pains": [
+      {
+        "title": {
+          "zh": "销售现场查资料慢",
+          "en": "Product information takes too long to find"
+        },
+        "scenario": {
+          "zh": "销售现场查资料慢",
+          "en": "Product information takes too long to find"
+        },
+        "metricTag": {
+          "zh": "当前工作中的问题",
+          "en": "Current workflow issue"
+        }
+      },
+      {
+        "title": {
+          "zh": "产品问题太专业，客服无法独立回答",
+          "en": "Support cannot answer specialist questions"
+        },
+        "scenario": {
+          "zh": "产品问题太专业，客服无法独立回答",
+          "en": "Support cannot answer specialist questions"
+        },
+        "metricTag": {
+          "zh": "当前工作中的问题",
+          "en": "Current workflow issue"
+        }
+      },
+      {
+        "title": {
+          "zh": "销售材料千篇一律，缺少针对性",
+          "en": "Sales material lacks relevance"
+        },
+        "scenario": {
+          "zh": "销售材料千篇一律，缺少针对性",
+          "en": "Sales material lacks relevance"
+        },
+        "metricTag": {
+          "zh": "当前工作中的问题",
+          "en": "Current workflow issue"
+        }
+      }
+    ],
+    "workflow": [
+      {
+        "stage": {
+          "zh": "步骤 1",
+          "en": "Step 1"
+        },
+        "title": {
+          "zh": "接入资料",
+          "en": "Connect sources"
+        },
+        "detail": {
+          "zh": "资料、数据库与现有系统",
+          "en": "Documents, databases, systems"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": false
+      },
+      {
+        "stage": {
+          "zh": "步骤 2",
+          "en": "Step 2"
+        },
+        "title": {
+          "zh": "检索与生成",
+          "en": "Retrieve & generate"
+        },
+        "detail": {
+          "zh": "检索、编排与任务处理",
+          "en": "Retrieval, orchestration, tasks"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": false
+      },
+      {
+        "stage": {
+          "zh": "步骤 3",
+          "en": "Step 3"
+        },
+        "title": {
+          "zh": "校验与人工复核",
+          "en": "Validate & review"
+        },
+        "detail": {
+          "zh": "引用、规则与权限检查",
+          "en": "Sources, rules, permissions"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": true
+      },
+      {
+        "stage": {
+          "zh": "步骤 4",
+          "en": "Step 4"
+        },
+        "title": {
+          "zh": "交付结果",
+          "en": "Deliver results"
+        },
+        "detail": {
+          "zh": "查看、编辑或导出结果",
+          "en": "View, edit or export results"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": false
+      }
+    ],
+    "faqs": [
+      {
+        "q": {
+          "zh": "可以接入我们已有的系统吗？",
+          "en": "Can it connect to our existing systems?"
+        },
+        "a": {
+          "zh": "可以。评估阶段会确认数据来源、接口和权限，优先使用现有数据库、文档与业务系统。",
+          "en": "Yes. The assessment covers data sources, interfaces and permissions, starting with the systems and documents you already use."
+        }
+      },
+      {
+        "q": {
+          "zh": "如何保证答案和结果可靠？",
+          "en": "How do you make results reliable?"
+        },
+        "a": {
+          "zh": "使用企业自己的资料，结合引用溯源、规则校验和人工复核点。无法确认的任务交还业务负责人处理。",
+          "en": "We use your own sources, citations, validation rules and human review. Uncertain tasks return to a business owner."
+        }
+      },
+      {
+        "q": {
+          "zh": "多久能看到第一版？",
+          "en": "When can we try a first version?"
+        },
+        "a": {
+          "zh": "试点通常在 2–6 周内交付首个可用版本，具体周期取决于范围与数据接入条件。",
+          "en": "A pilot typically delivers a first working version in 2–6 weeks, depending on scope and data access."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "document-automation",
+    "order": 1,
+    "name": {
+      "zh": "文档、标书与方案自动化",
+      "en": "Document & Proposal Automation"
+    },
+    "shortName": {
+      "zh": "文档、标书与方案自动化",
+      "en": "Document & Proposal Automation"
+    },
+    "promise": {
+      "zh": "标书与方案初稿，最快 15 分钟",
+      "en": "Proposal drafts in as little as 15 minutes"
+    },
+    "intro": {
+      "zh": "把分散的历史标书、知识文档和项目参数连接起来，生成有引用、可编辑、经过完整性检查的方案初稿。",
+      "en": "Connect past proposals, reference documents and project parameters into editable, cited drafts with built-in completeness checks."
+    },
+    "outputs": {
+      "zh": "标书初稿 · 方案报告 · 完整性检查",
+      "en": "Proposal drafts · Research reports · Validation"
+    },
+    "metaDescription": {
+      "zh": "把分散的历史标书、知识文档和项目参数连接起来，生成有引用、可编辑、经过完整性检查的方案初稿。",
+      "en": "Connect past proposals, reference documents and project parameters into editable, cited drafts with built-in completeness checks."
+    },
+    "deliverables": [
+      {
+        "zh": "标书初稿",
+        "en": "Proposal drafts"
+      },
+      {
+        "zh": "方案报告",
+        "en": "Research reports"
+      },
+      {
+        "zh": "完整性检查",
+        "en": "Validation"
+      },
+      {
+        "zh": "上线维护与持续迭代",
+        "en": "Maintenance and ongoing iteration"
+      }
+    ],
+    "capabilities": [],
+    "caseSlug": "proposal-generation",
+    "pains": [
+      {
+        "title": {
+          "zh": "历史方案分散，资料难以复用",
+          "en": "Past proposals are scattered"
+        },
+        "scenario": {
+          "zh": "历史方案分散，资料难以复用",
+          "en": "Past proposals are scattered"
+        },
+        "metricTag": {
+          "zh": "当前工作中的问题",
+          "en": "Current workflow issue"
+        }
+      },
+      {
+        "title": {
+          "zh": "每份初稿耗时，反复核对参数",
+          "en": "Drafting and parameter checks take days"
+        },
+        "scenario": {
+          "zh": "每份初稿耗时，反复核对参数",
+          "en": "Drafting and parameter checks take days"
+        },
+        "metricTag": {
+          "zh": "当前工作中的问题",
+          "en": "Current workflow issue"
+        }
+      },
+      {
+        "title": {
+          "zh": "关键条款容易遗漏，审核压力大",
+          "en": "Critical requirements get missed"
+        },
+        "scenario": {
+          "zh": "关键条款容易遗漏，审核压力大",
+          "en": "Critical requirements get missed"
+        },
+        "metricTag": {
+          "zh": "当前工作中的问题",
+          "en": "Current workflow issue"
+        }
+      }
+    ],
+    "workflow": [
+      {
+        "stage": {
+          "zh": "步骤 1",
+          "en": "Step 1"
+        },
+        "title": {
+          "zh": "接入资料",
+          "en": "Connect sources"
+        },
+        "detail": {
+          "zh": "资料、数据库与现有系统",
+          "en": "Documents, databases, systems"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": false
+      },
+      {
+        "stage": {
+          "zh": "步骤 2",
+          "en": "Step 2"
+        },
+        "title": {
+          "zh": "检索与生成",
+          "en": "Retrieve & generate"
+        },
+        "detail": {
+          "zh": "检索、编排与任务处理",
+          "en": "Retrieval, orchestration, tasks"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": false
+      },
+      {
+        "stage": {
+          "zh": "步骤 3",
+          "en": "Step 3"
+        },
+        "title": {
+          "zh": "校验与人工复核",
+          "en": "Validate & review"
+        },
+        "detail": {
+          "zh": "引用、规则与权限检查",
+          "en": "Sources, rules, permissions"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": true
+      },
+      {
+        "stage": {
+          "zh": "步骤 4",
+          "en": "Step 4"
+        },
+        "title": {
+          "zh": "交付结果",
+          "en": "Deliver results"
+        },
+        "detail": {
+          "zh": "查看、编辑或导出结果",
+          "en": "View, edit or export results"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": false
+      }
+    ],
+    "faqs": [
+      {
+        "q": {
+          "zh": "可以接入我们已有的系统吗？",
+          "en": "Can it connect to our existing systems?"
+        },
+        "a": {
+          "zh": "可以。评估阶段会确认数据来源、接口和权限，优先使用现有数据库、文档与业务系统。",
+          "en": "Yes. The assessment covers data sources, interfaces and permissions, starting with the systems and documents you already use."
+        }
+      },
+      {
+        "q": {
+          "zh": "如何保证答案和结果可靠？",
+          "en": "How do you make results reliable?"
+        },
+        "a": {
+          "zh": "使用企业自己的资料，结合引用溯源、规则校验和人工复核点。无法确认的任务交还业务负责人处理。",
+          "en": "We use your own sources, citations, validation rules and human review. Uncertain tasks return to a business owner."
+        }
+      },
+      {
+        "q": {
+          "zh": "多久能看到第一版？",
+          "en": "When can we try a first version?"
+        },
+        "a": {
+          "zh": "试点通常在 2–6 周内交付首个可用版本，具体周期取决于范围与数据接入条件。",
+          "en": "A pilot typically delivers a first working version in 2–6 weeks, depending on scope and data access."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "knowledge-assistant",
+    "order": 2,
+    "name": {
+      "zh": "企业知识库与内部助手",
+      "en": "Knowledge & Internal Assistants"
+    },
+    "shortName": {
+      "zh": "企业知识库与内部助手",
+      "en": "Knowledge & Internal Assistants"
+    },
+    "promise": {
+      "zh": "查询内部资料，回答附带出处",
+      "en": "Find internal information with source citations"
+    },
+    "intro": {
+      "zh": "连接 Wiki、操作规范与工单系统。常见问题附带来源回答，复杂请求转交支持团队。",
+      "en": "Connect your wiki, SOPs and ticketing system to answer routine questions with sources and route complex requests to the support team."
+    },
+    "outputs": {
+      "zh": "知识问答 · 引用溯源 · 工单分流",
+      "en": "Knowledge Q&A · Source citations · Ticket routing"
+    },
+    "metaDescription": {
+      "zh": "连接 Wiki、操作规范与工单系统。常见问题附带来源回答，复杂请求转交支持团队。",
+      "en": "Connect your wiki, SOPs and ticketing system to answer routine questions with sources and route complex requests to the support team."
+    },
+    "deliverables": [
+      {
+        "zh": "知识问答",
+        "en": "Knowledge Q&A"
+      },
+      {
+        "zh": "引用溯源",
+        "en": "Source citations"
+      },
+      {
+        "zh": "工单分流",
+        "en": "Ticket routing"
+      },
+      {
+        "zh": "上线维护与持续迭代",
+        "en": "Maintenance and ongoing iteration"
+      }
+    ],
+    "capabilities": [],
+    "caseSlug": "it-knowledge-assistant",
+    "pains": [
+      {
+        "title": {
+          "zh": "员工反复问同样的问题",
+          "en": "Employees ask the same questions repeatedly"
+        },
+        "scenario": {
+          "zh": "员工反复问同样的问题",
+          "en": "Employees ask the same questions repeatedly"
+        },
+        "metricTag": {
+          "zh": "当前工作中的问题",
+          "en": "Current workflow issue"
+        }
+      },
+      {
+        "title": {
+          "zh": "知识更新后，旧答案仍在传播",
+          "en": "Old answers persist after policy updates"
+        },
+        "scenario": {
+          "zh": "知识更新后，旧答案仍在传播",
+          "en": "Old answers persist after policy updates"
+        },
+        "metricTag": {
+          "zh": "当前工作中的问题",
+          "en": "Current workflow issue"
+        }
+      },
+      {
+        "title": {
+          "zh": "权限不同，资料不能随意开放",
+          "en": "Different roles need different access"
+        },
+        "scenario": {
+          "zh": "权限不同，资料不能随意开放",
+          "en": "Different roles need different access"
+        },
+        "metricTag": {
+          "zh": "当前工作中的问题",
+          "en": "Current workflow issue"
+        }
+      }
+    ],
+    "workflow": [
+      {
+        "stage": {
+          "zh": "步骤 1",
+          "en": "Step 1"
+        },
+        "title": {
+          "zh": "接入资料",
+          "en": "Connect sources"
+        },
+        "detail": {
+          "zh": "资料、数据库与现有系统",
+          "en": "Documents, databases, systems"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": false
+      },
+      {
+        "stage": {
+          "zh": "步骤 2",
+          "en": "Step 2"
+        },
+        "title": {
+          "zh": "检索与生成",
+          "en": "Retrieve & generate"
+        },
+        "detail": {
+          "zh": "检索、编排与任务处理",
+          "en": "Retrieval, orchestration, tasks"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": false
+      },
+      {
+        "stage": {
+          "zh": "步骤 3",
+          "en": "Step 3"
+        },
+        "title": {
+          "zh": "校验与人工复核",
+          "en": "Validate & review"
+        },
+        "detail": {
+          "zh": "引用、规则与权限检查",
+          "en": "Sources, rules, permissions"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": true
+      },
+      {
+        "stage": {
+          "zh": "步骤 4",
+          "en": "Step 4"
+        },
+        "title": {
+          "zh": "交付结果",
+          "en": "Deliver results"
+        },
+        "detail": {
+          "zh": "查看、编辑或导出结果",
+          "en": "View, edit or export results"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": false
+      }
+    ],
+    "faqs": [
+      {
+        "q": {
+          "zh": "可以接入我们已有的系统吗？",
+          "en": "Can it connect to our existing systems?"
+        },
+        "a": {
+          "zh": "可以。评估阶段会确认数据来源、接口和权限，优先使用现有数据库、文档与业务系统。",
+          "en": "Yes. The assessment covers data sources, interfaces and permissions, starting with the systems and documents you already use."
+        }
+      },
+      {
+        "q": {
+          "zh": "如何保证答案和结果可靠？",
+          "en": "How do you make results reliable?"
+        },
+        "a": {
+          "zh": "使用企业自己的资料，结合引用溯源、规则校验和人工复核点。无法确认的任务交还业务负责人处理。",
+          "en": "We use your own sources, citations, validation rules and human review. Uncertain tasks return to a business owner."
+        }
+      },
+      {
+        "q": {
+          "zh": "多久能看到第一版？",
+          "en": "When can we try a first version?"
+        },
+        "a": {
+          "zh": "试点通常在 2–6 周内交付首个可用版本，具体周期取决于范围与数据接入条件。",
+          "en": "A pilot typically delivers a first working version in 2–6 weeks, depending on scope and data access."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "data-query",
+    "order": 3,
+    "name": {
+      "zh": "业务数据查询与分析",
+      "en": "Data Query & Analytics"
+    },
+    "shortName": {
+      "zh": "业务数据查询与分析",
+      "en": "Data Query & Analytics"
+    },
+    "promise": {
+      "zh": "直接提问，查询库存和销量",
+      "en": "Query inventory and sales in plain language"
+    },
+    "intro": {
+      "zh": "连接现有数据库，用自然语言查询库存、销量和经营数据。权限、查询校验与结果解释贯穿整个过程。",
+      "en": "Query inventory, sales and operations in plain language, with permissions, query validation and clear explanations built in."
+    },
+    "outputs": {
+      "zh": "自然语言查询 · 数据报表 · 趋势分析",
+      "en": "Plain-language queries · Reports · Trend analysis"
+    },
+    "metaDescription": {
+      "zh": "连接现有数据库，用自然语言查询库存、销量和经营数据。权限、查询校验与结果解释贯穿整个过程。",
+      "en": "Query inventory, sales and operations in plain language, with permissions, query validation and clear explanations built in."
+    },
+    "deliverables": [
+      {
+        "zh": "自然语言查询",
+        "en": "Plain-language queries"
+      },
+      {
+        "zh": "数据报表",
+        "en": "Reports"
+      },
+      {
+        "zh": "趋势分析",
+        "en": "Trend analysis"
+      },
+      {
+        "zh": "上线维护与持续迭代",
+        "en": "Maintenance and ongoing iteration"
+      }
+    ],
+    "capabilities": [],
+    "caseSlug": "nl-data-query",
+    "pains": [
+      {
+        "title": {
+          "zh": "查一个数字，要等 IT 导数",
+          "en": "Every query goes through the IT queue"
+        },
+        "scenario": {
+          "zh": "查一个数字，要等 IT 导数",
+          "en": "Every query goes through the IT queue"
+        },
+        "metricTag": {
+          "zh": "当前工作中的问题",
+          "en": "Current workflow issue"
+        }
+      },
+      {
+        "title": {
+          "zh": "指标口径不统一，结果难核对",
+          "en": "Inconsistent metrics make results hard to trust"
+        },
+        "scenario": {
+          "zh": "指标口径不统一，结果难核对",
+          "en": "Inconsistent metrics make results hard to trust"
+        },
+        "metricTag": {
+          "zh": "当前工作中的问题",
+          "en": "Current workflow issue"
+        }
+      },
+      {
+        "title": {
+          "zh": "业务人员不会 SQL，无法自助分析",
+          "en": "Business users cannot write SQL"
+        },
+        "scenario": {
+          "zh": "业务人员不会 SQL，无法自助分析",
+          "en": "Business users cannot write SQL"
+        },
+        "metricTag": {
+          "zh": "当前工作中的问题",
+          "en": "Current workflow issue"
+        }
+      }
+    ],
+    "workflow": [
+      {
+        "stage": {
+          "zh": "步骤 1",
+          "en": "Step 1"
+        },
+        "title": {
+          "zh": "接入资料",
+          "en": "Connect sources"
+        },
+        "detail": {
+          "zh": "资料、数据库与现有系统",
+          "en": "Documents, databases, systems"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": false
+      },
+      {
+        "stage": {
+          "zh": "步骤 2",
+          "en": "Step 2"
+        },
+        "title": {
+          "zh": "检索与生成",
+          "en": "Retrieve & generate"
+        },
+        "detail": {
+          "zh": "检索、编排与任务处理",
+          "en": "Retrieval, orchestration, tasks"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": false
+      },
+      {
+        "stage": {
+          "zh": "步骤 3",
+          "en": "Step 3"
+        },
+        "title": {
+          "zh": "校验与人工复核",
+          "en": "Validate & review"
+        },
+        "detail": {
+          "zh": "引用、规则与权限检查",
+          "en": "Sources, rules, permissions"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": true
+      },
+      {
+        "stage": {
+          "zh": "步骤 4",
+          "en": "Step 4"
+        },
+        "title": {
+          "zh": "交付结果",
+          "en": "Deliver results"
+        },
+        "detail": {
+          "zh": "查看、编辑或导出结果",
+          "en": "View, edit or export results"
+        },
+        "badge": {
+          "zh": "流程示意",
+          "en": "Illustration"
+        },
+        "humanReview": false
+      }
+    ],
+    "faqs": [
+      {
+        "q": {
+          "zh": "可以接入我们已有的系统吗？",
+          "en": "Can it connect to our existing systems?"
+        },
+        "a": {
+          "zh": "可以。评估阶段会确认数据来源、接口和权限，优先使用现有数据库、文档与业务系统。",
+          "en": "Yes. The assessment covers data sources, interfaces and permissions, starting with the systems and documents you already use."
+        }
+      },
+      {
+        "q": {
+          "zh": "如何保证答案和结果可靠？",
+          "en": "How do you make results reliable?"
+        },
+        "a": {
+          "zh": "使用企业自己的资料，结合引用溯源、规则校验和人工复核点。无法确认的任务交还业务负责人处理。",
+          "en": "We use your own sources, citations, validation rules and human review. Uncertain tasks return to a business owner."
+        }
+      },
+      {
+        "q": {
+          "zh": "多久能看到第一版？",
+          "en": "When can we try a first version?"
+        },
+        "a": {
+          "zh": "试点通常在 2–6 周内交付首个可用版本，具体周期取决于范围与数据接入条件。",
+          "en": "A pilot typically delivers a first working version in 2–6 weeks, depending on scope and data access."
+        }
+      }
+    ]
+  }
+]

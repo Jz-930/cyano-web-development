@@ -1,17 +1,17 @@
 {
-  "cc13c665d68": {
+  "talk_to_our_cto": {
     "zh": "与技术负责人聊聊",
     "en": "Talk to our CTO"
   },
-  "c6ba0963fc8": {
+  "platform_functions": {
     "zh": "平台功能",
     "en": "PLATFORM FUNCTIONS"
   },
-  "c60db7c1969": {
+  "context_engineering": {
     "zh": "长上下文工程",
     "en": "CONTEXT ENGINEERING"
   },
-  "c9a04516c09": {
+  "core_instructions_preserved": {
     "zh": [
       "保留核心指令",
       "结构化关键状态",
@@ -25,7 +25,7 @@
       "Fault-cause records"
     ]
   },
-  "c253678ad09": {
+  "response_latency": {
     "zh": [
       "响应延迟",
       "核心指令召回",
@@ -37,31 +37,31 @@
       "Lower token cost, up to"
     ]
   },
-  "ce86d62dc6f": {
+  "designed_to_connect": {
     "zh": "融入现有系统",
     "en": "DESIGNED TO CONNECT"
   },
-  "c82e27d8604": {
+  "qwen": {
     "zh": "通义千问",
     "en": "Qwen"
   },
-  "c279540dd01": {
+  "lark": {
     "zh": "飞书",
     "en": "Lark"
   },
-  "cd1f6713db3": {
+  "dingtalk": {
     "zh": "钉钉",
     "en": "DingTalk"
   },
-  "c7b722df55d": {
+  "wecom": {
     "zh": "企业微信",
     "en": "WeCom"
   },
-  "cd82b0e00a7": {
+  "the_system_includes_access": {
     "zh": "系统提供访问权限、来源引用、处理日志和敏感信息过滤。部署可选择 SaaS 托管或私有环境。",
     "en": "The system includes access controls, citations, processing logs and sensitive-data filtering. Deployment is available through SaaS hosting or a private environment."
   },
-  "cb7049dd516": {
+  "discuss_data_security_and": {
     "zh": "咨询数据安全与部署",
     "en": "Discuss data security and deployment"
   }
