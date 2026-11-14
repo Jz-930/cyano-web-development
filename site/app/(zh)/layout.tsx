@@ -1,6 +1,7 @@
 import "../styles/site.css";
 import "../styles/cjk-font.css";
 import localFont from "next/font/local";
+import cjkPreload from "../fonts/cjk-preload.json";
 import { Header } from "@/components/Header";
 import { MotionRuntime } from "@/components/v3/MotionRuntime";
 import { SiteFooter } from "@/components/v3/ui";
@@ -38,6 +39,15 @@ export default function ZhRootLayout({
       lang="zh-CN"
       className={`${manropeDisplay.variable} ${interLatin.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        <link
+          rel="preload"
+          href={cjkPreload.core}
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <a className="skip-link" href="#main">
           {pick("zh", siteCopy.nav.skipToMain)}

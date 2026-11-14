@@ -75,7 +75,7 @@ copy: LocalCopy;
     }, 30);
   }
   return (
-    <div className="interactive-demo">
+    <div className="interactive-demo" data-demo="">
       <div className="demo-top">
         <span className="demo-brand">
           <Database size={19} />

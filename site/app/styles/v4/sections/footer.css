@@ -1,6 +1,3 @@
-.footer .brand svg {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
-  color: var(--ice);
+.footer-bottom {
+  font-size: 12px;
 }

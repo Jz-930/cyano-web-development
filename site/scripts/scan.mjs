@@ -49,13 +49,17 @@ for (const m of cjkCss.matchAll(/U\+([0-9A-F]+)(?:-([0-9A-F]+))?/gi)) {
   for (let cp = start; cp <= end; cp++) covered.add(cp);
 }
 
-// Verify Chinese homepage (index.html) only uses core subset glyphs so it never downloads noto-sc-ext.woff2
-const coreBlock = cjkCss.split("@font-face")[1] || "";
+// Verify Chinese homepage (index.html) only uses core/home subset glyphs so it never downloads noto-sc-ext.woff2
+const homeBlocks = cjkCss
+  .split("@font-face")
+  .filter((b) => /noto-sc-(?:core|home)\./.test(b));
 const coreCovered = new Set();
-for (const m of coreBlock.matchAll(/U\+([0-9A-F]+)(?:-([0-9A-F]+))?/gi)) {
-  const start = parseInt(m[1], 16);
-  const end = m[2] ? parseInt(m[2], 16) : start;
-  for (let cp = start; cp <= end; cp++) coreCovered.add(cp);
+for (const block of homeBlocks) {
+  for (const m of block.matchAll(/U\+([0-9A-F]+)(?:-([0-9A-F]+))?/gi)) {
+    const start = parseInt(m[1], 16);
+    const end = m[2] ? parseInt(m[2], 16) : start;
+    for (let cp = start; cp <= end; cp++) coreCovered.add(cp);
+  }
 }
 const homeHtmlPath = path.join(root, ".next/server/app/index.html");
 let homeHtml = await fs.readFile(homeHtmlPath, "utf8");

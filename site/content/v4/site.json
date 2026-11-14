@@ -62,8 +62,8 @@
     },
     "insights": {
       "title": {
-        "zh": "企业 AI 项目的\n设计与实施经验",
-        "en": "Notes on designing\nand implementing AI"
+        "zh": "企业 AI 项目的设计与实施经验",
+        "en": "Notes on designing and implementing AI"
       },
       "description": {
         "zh": "介绍知识库建设、文档生成流程，以及定制、试点与托管服务的选择。",

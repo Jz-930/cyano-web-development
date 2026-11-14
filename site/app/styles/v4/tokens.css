@@ -1,4 +1,5 @@
 :root {
+  --s12: 13px;
   --sans: var(--font-sans), "Noto Sans SC Subset", "Noto Sans SC Fallback", sans-serif;
   --display: var(--font-display), "Noto Sans SC Subset", "Noto Sans SC Fallback", sans-serif;
   --mono: var(--font-mono), var(--sans);

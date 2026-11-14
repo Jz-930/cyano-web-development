@@ -4,6 +4,18 @@ import subsetFont from "subset-font";
 import { createHash } from "node:crypto";
 
 const root = path.resolve(import.meta.dirname, "..");
+
+async function writeFileSafe(filePath, data) {
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      await fs.writeFile(filePath, data);
+      return;
+    } catch (err) {
+      if (attempt === 4) throw err;
+      await new Promise((r) => setTimeout(r, 120 * (attempt + 1)));
+    }
+  }
+}
 const notoSource = path.join(root, "../assets/source/NotoSansSC-variable.ttf");
 const interSource = path.join(root, "../assets/source/inter-variable.woff2");
 const manropeSource = path.join(root, "../assets/source/manrope-variable.woff2");
@@ -17,14 +29,14 @@ const latinGlyphs =
 const interBuf = await subsetFont(await fs.readFile(interSource), latinGlyphs, {
   targetFormat: "woff2",
   noHinting: true,
-  variationAxes: { wght: { min: 400, max: 700 } },
+  variationAxes: { wght: { min: 400, max: 500 } },
 });
 await fs.writeFile(path.join(root, "app/fonts/inter-latin.woff2"), interBuf);
 
 const manropeBuf = await subsetFont(await fs.readFile(manropeSource), latinGlyphs, {
   targetFormat: "woff2",
   noHinting: true,
-  variationAxes: { wght: { min: 300, max: 700 } },
+  variationAxes: { wght: { min: 300, max: 500 } },
 });
 await fs.writeFile(path.join(root, "app/fonts/manrope-latin.woff2"), manropeBuf);
 
@@ -70,20 +82,18 @@ async function walkFiles(dir, predicate, out = []) {
   return out;
 }
 
-// 2. Collect core CJK charset from built zh homepage (.next/server/app/index.html) + Home header/tabs
+// 2. Collect core CJK charset from first 2 screens of built zh homepage (02 §6.1: header + first 2 sections)
 const appBuildDir = path.join(root, ".next/server/app");
 const homeHtml = await fs.readFile(path.join(appBuildDir, "index.html"), "utf8");
-let coreText = extractHtmlTextAndAttrs(homeHtml);
-
-for (const rel of [
-  "components/v3/HeaderClient.tsx",
-  "components/v3/SolutionExplorerClient.tsx",
-  "components/v3/ProblemTabs.tsx",
-]) {
-  try {
-    coreText += "\n" + (await fs.readFile(path.join(root, rel), "utf8"));
-  } catch {}
-}
+const headerBlock = (homeHtml.match(/<header\b[\s\S]*?<\/header>/i) || [""])[0];
+const firstTwoSections = [...homeHtml.matchAll(/<section\b[\s\S]*?<\/section>/gi)]
+  .slice(0, 2)
+  .map((m) => m[0])
+  .join("\n");
+let coreText = extractHtmlTextAndAttrs(
+  firstTwoSections ? `<body>${headerBlock}\n${firstTwoSections}</body>` : homeHtml,
+);
+const fullHomeText = extractHtmlTextAndAttrs(homeHtml);
 
 // 3. Collect /about and /technology subsets + remaining zh pages and v4/v1 JSON
 let aboutText = "";
@@ -100,7 +110,7 @@ try {
   );
 } catch {}
 
-let allText = coreText + "\n" + aboutText + "\n" + techText;
+let allText = coreText + "\n" + fullHomeText + "\n" + aboutText + "\n" + techText;
 
 const htmlFiles = await walkFiles(appBuildDir, (_p, name) => name.endsWith(".html"));
 for (const f of htmlFiles) {
@@ -133,21 +143,45 @@ for (const tf of tsxFiles) {
 }
 
 const coreSet = new Set(coreText.match(CJK_RE) || []);
-const aboutSet = new Set(
-  [...(aboutText.match(CJK_RE) || [])].filter((ch) => !coreSet.has(ch)),
+const aboutRawChars = new Set(aboutText.match(CJK_RE) || []);
+const techRawChars = new Set(techText.match(CJK_RE) || []);
+// Promote Home-rest chars that also appear on /about or /technology into coreSet so neither /about nor /technology fetches noto-sc-home
+for (const ch of fullHomeText.match(CJK_RE) || []) {
+  if (aboutRawChars.has(ch) || techRawChars.has(ch)) {
+    coreSet.add(ch);
+  }
+}
+const homeRestSet = new Set(
+  [...(fullHomeText.match(CJK_RE) || [])].filter((ch) => !coreSet.has(ch)),
 );
-const techSet = new Set(
-  [...(techText.match(CJK_RE) || [])].filter(
-    (ch) => !coreSet.has(ch) && !aboutSet.has(ch),
-  ),
+const rawAboutSet = new Set(
+  [...aboutRawChars].filter((ch) => !coreSet.has(ch) && !homeRestSet.has(ch)),
 );
+const rawTechSet = new Set(
+  [...techRawChars].filter((ch) => !coreSet.has(ch) && !homeRestSet.has(ch)),
+);
+// Promote chars shared between /about and /technology into coreSet so neither page fetches the other's slice
+for (const ch of rawAboutSet) {
+  if (rawTechSet.has(ch)) {
+    coreSet.add(ch);
+  }
+}
+const aboutSet = new Set([...rawAboutSet].filter((ch) => !coreSet.has(ch)));
+const techSet = new Set([...rawTechSet].filter((ch) => !coreSet.has(ch)));
 const allSet = new Set(allText.match(CJK_RE) || []);
 
 const coreChars = [...coreSet].sort();
+const homeRestChars = [...homeRestSet].sort();
 const aboutChars = [...aboutSet].sort();
 const techChars = [...techSet].sort();
 const extChars = [...allSet]
-  .filter((ch) => !coreSet.has(ch) && !aboutSet.has(ch) && !techSet.has(ch))
+  .filter(
+    (ch) =>
+      !coreSet.has(ch) &&
+      !homeRestSet.has(ch) &&
+      !aboutSet.has(ch) &&
+      !techSet.has(ch),
+  )
   .sort();
 
 function toUnicodeRange(chars) {
@@ -197,6 +231,7 @@ const hash = (buf) => createHash("sha256").update(buf).digest("hex").slice(0, 10
 
 const slices = [
   { prefix: "noto-sc-core", chars: coreChars },
+  { prefix: "noto-sc-home", chars: homeRestChars },
   { prefix: "noto-sc-about", chars: aboutChars },
   { prefix: "noto-sc-tech", chars: techChars },
   { prefix: "noto-sc-ext", chars: extChars },
@@ -204,11 +239,13 @@ const slices = [
 
 let css = `/* Auto-generated by scripts/subset-font.mjs — DO NOT EDIT MANUALLY */\n`;
 const summary = [];
+let coreHref = "";
 
 for (const slice of slices) {
   if (slice.chars.length === 0) continue;
   const buf = await subsetFont(rawNoto, " " + slice.chars.join(""), cjkOpts);
   const fileName = `${slice.prefix}.${hash(buf)}.woff2`;
+  if (slice.prefix === "noto-sc-core") coreHref = `/fonts/${fileName}`;
   await fs.writeFile(path.join(pubFonts, fileName), buf);
   css += `@font-face {
   font-family: "Noto Sans SC Subset";
@@ -234,7 +271,11 @@ css += `@font-face {
 }
 `;
 
-await fs.writeFile(path.join(root, "app/styles/cjk-font.css"), css);
+await writeFileSafe(path.join(root, "app/styles/cjk-font.css"), css);
+await writeFileSafe(
+  path.join(root, "app/fonts/cjk-preload.json"),
+  JSON.stringify({ core: coreHref }, null, 2) + "\n",
+);
 
 console.log(
   `✓ CJK subsets (wght 400–500): ${summary.join(" + ")}; Latin: inter=${(

@@ -22,3 +22,9 @@ h2,
 .lede {
   text-wrap: balance;
 }
+main > section:nth-child(n + 3),
+.closing,
+.footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 640px;
+}
