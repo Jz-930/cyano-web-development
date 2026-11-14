@@ -61,8 +61,14 @@
   transition:
     color var(--dur-fast) var(--ease-out),
     background-color var(--dur-fast) var(--ease-out),
+    background-size var(--dur-base) var(--ease-out),
     border-color var(--dur-fast) var(--ease-out),
     opacity var(--dur-press) var(--ease-out);
+}
+.paper-hero .breadcrumb a,
+[data-header="paper"] .breadcrumb a {
+  color: var(--muted);
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
 }
 @media (hover: hover) and (pointer: fine) {
   .breadcrumb a:hover,
@@ -70,6 +76,10 @@
     color: var(--ice);
   }
   .paper-hero .breadcrumb a:hover,
+  [data-header="paper"] .breadcrumb a:hover {
+    color: var(--link);
+    background-size: 100% 1px;
+  }
   .article-toc a:hover,
   .contact-form .consent a:hover,
   .contact-form .check a:hover,

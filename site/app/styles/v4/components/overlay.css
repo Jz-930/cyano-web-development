@@ -54,6 +54,13 @@
 .dialog-media-frame {
   animation: panel-in var(--dur-base) var(--ease-out) both;
 }
+.dialog-close {
+  z-index: var(--z-stage);
+}
+.dialog-controls {
+  position: relative;
+  z-index: var(--z-stage);
+}
 .dialog-close,
 .dialog-controls button {
   color: var(--light);

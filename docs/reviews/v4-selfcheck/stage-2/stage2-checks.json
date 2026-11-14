@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-14T13:46:33.459Z",
+  "checks": {
+    "dropdown": {
+      "closedOnBriefHover": true,
+      "openedAfter80ms": true,
+      "stayedOpenWithin150ms": true,
+      "closedAfter150ms": true,
+      "firstHref": "/services/sales-ai",
+      "lastHref": "/services/data-query",
+      "escReturnedToChevron": true
+    },
+    "noJsFaq": {
+      "initialOpenCount": 3,
+      "fourthOpenedNoJs": true,
+      "answerVisibleNoJs": true
+    },
+    "reducedMotion": {
+      "colorChangedOnHover": true,
+      "noButtonHoverTransform": true,
+      "noSvgHoverTransform": true,
+      "noActiveScaleTransform": true
+    }
+  },
+  "recordings": [
+    "micro-interactions-1440.webm",
+    "micro-interactions-1440-reduced.webm"
+  ]
+}
