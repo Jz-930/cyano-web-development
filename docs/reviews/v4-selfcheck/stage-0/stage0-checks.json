@@ -1,0 +1,36 @@
+{
+  "F01_/": {
+    "overlaps": false,
+    "gap": 72,
+    "canvasCount": 0
+  },
+  "F01_/en": {
+    "overlaps": false,
+    "gap": 72,
+    "canvasCount": 0
+  },
+  "F02_contrast": 14.38,
+  "F03_/about": 14.05,
+  "F03_/en/about": 14.05,
+  "F05_1440": 2,
+  "F05_1280": 2,
+  "F05_1024": 2,
+  "F05_390": 2,
+  "F06_casesBadgeCount": 0,
+  "F06_all12CaseDetailsClean": true,
+  "F10": {
+    "borderContrast": 5.85,
+    "afterEsc": true,
+    "afterBtn": true
+  },
+  "F11": "clean",
+  "F12": "clean",
+  "F14_domOrder": "verified",
+  "F15_recalcPerSec": 0,
+  "videos": [
+    "nav-roundtrip-1440.webm",
+    "nav-roundtrip-1440-reduced.webm",
+    "nav-roundtrip-390.webm",
+    "nav-roundtrip-390-reduced.webm"
+  ]
+}
