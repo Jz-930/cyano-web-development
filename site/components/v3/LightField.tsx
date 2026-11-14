@@ -10,6 +10,7 @@ export function LightField({strength="hero"}:{strength?:"hero"|"panel"|"closing"
       if(!entry.isIntersecting||cancelled)return;
       observer.disconnect();
       if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+      if(matchMedia("(max-width: 800px), (pointer: coarse)").matches)return;
       const {mountField}=await import("./light-field.js");
       if(!cancelled)dispose=mountField(host);
     },{rootMargin:"120px"});
