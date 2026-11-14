@@ -28,8 +28,11 @@ for (const file of htmlFiles) {
     .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
     .replace(/<svg\b[^>]*>[\s\S]*?<\/svg>/gi, " ")
     .replace(/<[^>]+>/g, " ");
-  // Preserve this exact approved v1 FAQ while rejecting newly added jargon.
-  const match = html.replace("支持私有化部署，数据不出你的环境；系统内置权限控制、全链路日志审计与敏感信息拦截。", "").match(forbidden);
+  // Preserve exact approved copy (v1 FAQ prior to D-20 migration & 09#mk.proposal.s1 tender sentence) while rejecting leaked doc prose or jargon.
+  const match = html
+    .replaceAll("支持私有化部署，数据不出你的环境；系统内置权限控制、全链路日志审计与敏感信息拦截。", "")
+    .replaceAll("本方案依据招标文件的技术要求，结合同类项目经验编写。", "")
+    .match(forbidden);
   if (match) {
     fails.push({ file: path.relative(root, file), match: match[0] });
   }

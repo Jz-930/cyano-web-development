@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-11-14T14:27:27.288Z",
+  "threshold": 4.5,
+  "framesPerRoute": 50,
+  "intervalMs": 200,
+  "routes": [
+    {
+      "route": "/v4-study",
+      "framesChecked": 50,
+      "targetsChecked": 4,
+      "minContrast": 11.65,
+      "worstTarget": {
+        "frame": 0,
+        "role": "lede",
+        "text": "我们为企业开发销售问答、标书生成、内部知识库和数据查询系",
+        "ratio": 11.65
+      }
+    },
+    {
+      "route": "/en",
+      "framesChecked": 50,
+      "targetsChecked": 4,
+      "minContrast": 11.22,
+      "worstTarget": {
+        "frame": 8,
+        "role": "lede",
+        "text": "We build AI systems for cust",
+        "ratio": 11.22
+      }
+    },
+    {
+      "route": "/technology",
+      "framesChecked": 50,
+      "targetsChecked": 3,
+      "minContrast": 11.48,
+      "worstTarget": {
+        "frame": 0,
+        "role": "lede",
+        "text": "这里介绍资料检索、上下文管理和任务编排的处理方法，以及成",
+        "ratio": 11.48
+      }
+    },
+    {
+      "route": "/en/technology",
+      "framesChecked": 50,
+      "targetsChecked": 3,
+      "minContrast": 11.51,
+      "worstTarget": {
+        "frame": 0,
+        "role": "lede",
+        "text": "Our approach covers retrieva",
+        "ratio": 11.51
+      }
+    }
+  ],
+  "failingFramesCount": 0,
+  "failures": []
+}

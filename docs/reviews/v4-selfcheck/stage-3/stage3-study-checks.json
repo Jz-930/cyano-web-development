@@ -1,0 +1,21 @@
+{
+  "checkedAt": "2026-11-14T14:25:53.506Z",
+  "checks": {
+    "studyStatus": 200,
+    "mockupDom": {
+      "windowCount": 8,
+      "captionCount": 8,
+      "selectableTextCount": 8,
+      "robots": "noindex, nofollow"
+    },
+    "inSitemap": false,
+    "prodBuildStudyStatus": 404,
+    "prodSitemapContainsStudy": false
+  },
+  "recordings": [
+    "v4-study-1440.webm",
+    "v4-study-1440-reduced.webm",
+    "v4-study-390.webm",
+    "v4-study-390-reduced.webm"
+  ]
+}
