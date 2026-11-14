@@ -212,8 +212,8 @@ for (const route of fontRoutes) {
   await context.close();
 }
 
-// 3. CLS sweep across all 22 desktop routes (10 §5.1) + logo.png zero-request check
-const clsRoutes = [
+// 3. CLS sweep across all sitemap routes (10 §7.2: 全部页面 ≤ 0.05) + logo.png zero-request check
+let clsRoutes = [
   "/",
   "/en",
   "/services",
@@ -237,6 +237,15 @@ const clsRoutes = [
   "/contact",
   "/en/contact",
 ];
+try {
+  const xml = await (await fetch(`${baseUrl}/sitemap.xml`)).text();
+  const discovered = [...xml.matchAll(/<loc>https?:\/\/[^<]+?(\/[^<]*|)<\/loc>/g)].map(
+    (m) => m[1] || "/",
+  );
+  if (discovered.length >= clsRoutes.length) {
+    clsRoutes = [...new Set([...clsRoutes, ...discovered])];
+  }
+} catch {}
 
 const clsByRoute = {};
 const logoRequests = [];
@@ -269,6 +278,73 @@ await Promise.all(Array.from({ length: sweepConcurrency }, () => sweepWorker()))
 await sweepCtx.close();
 await browser.close();
 
+// 4. Desktop "/" GPU frame time median via headed Chrome CDP Tracing (10 §7.2: ≤ 4ms)
+let desktopGpu = {
+  route: "/",
+  frameCount: 0,
+  medianGpuFrameMs: 0,
+  p95GpuFrameMs: 0,
+};
+{
+  const gpuBrowser = await chromium.launch({ channel: "chrome", headless: false });
+  const gpuCtx = await gpuBrowser.newContext({
+    viewport: { width: 1440, height: 900 },
+    deviceScaleFactor: 1,
+  });
+  const gpuPage = await gpuCtx.newPage();
+  await gpuPage.goto(`${baseUrl}/`, { waitUntil: "load", timeout: 60000 });
+  await gpuPage.waitForTimeout(1500);
+
+  const cdp = await gpuCtx.newCDPSession(gpuPage);
+  const traceEvents = [];
+  cdp.on("Tracing.dataCollected", (ev) => {
+    if (Array.isArray(ev.value)) traceEvents.push(...ev.value);
+  });
+  const donePromise = new Promise((resolve) => cdp.once("Tracing.tracingComplete", resolve));
+  await cdp.send("Tracing.start", {
+    categories:
+      "devtools.timeline,disabled-by-default-devtools.timeline,disabled-by-default-devtools.timeline.frame",
+    transferMode: "ReportEvents",
+  });
+  await gpuPage.waitForTimeout(3000);
+  await cdp.send("Tracing.end");
+  await donePromise;
+
+  // Determine actual display vsync interval from BeginFrame events (e.g. 8333us @ 120Hz, 16667us @ 60Hz)
+  const beginFrames = traceEvents
+    .filter((ev) => ev.name === "BeginFrame" && typeof ev.ts === "number")
+    .map((ev) => ev.ts)
+    .sort((a, b) => a - b);
+  const bfDeltas = beginFrames
+    .slice(1)
+    .map((ts, idx) => ts - beginFrames[idx])
+    .filter((d) => d >= 3000 && d <= 35000);
+  const vsyncUs = bfDeltas.length ? median(bfDeltas) : 16667;
+
+  // Sum GPUTask durations (in microseconds) per actual rendered frame vsync bucket
+  const buckets = new Map();
+  for (const ev of traceEvents) {
+    if (ev.name === "GPUTask" && typeof ev.dur === "number" && typeof ev.ts === "number") {
+      const slot = Math.floor(ev.ts / vsyncUs);
+      buckets.set(slot, (buckets.get(slot) || 0) + ev.dur / 1000);
+    }
+  }
+  const frameGpuMs = [...buckets.values()].filter((v) => v > 0).sort((a, b) => a - b);
+  const medGpu = Number(median(frameGpuMs).toFixed(3));
+  const p95Gpu = frameGpuMs.length
+    ? Number(frameGpuMs[Math.min(frameGpuMs.length - 1, Math.floor(frameGpuMs.length * 0.95))].toFixed(3))
+    : 0;
+  desktopGpu = {
+    route: "/",
+    vsyncMs: Number((vsyncUs / 1000).toFixed(3)),
+    frameCount: frameGpuMs.length,
+    medianGpuFrameMs: medGpu,
+    p95GpuFrameMs: p95Gpu,
+  };
+  await gpuCtx.close();
+  await gpuBrowser.close();
+}
+
 const maxCls = Math.max(
   ...Object.values(clsByRoute),
   ...Object.values(mobileResults).map((m) => m.medianCls),
@@ -296,6 +372,9 @@ for (const [route, f] of Object.entries(fontResults)) {
 if (maxCls > 0.05) {
   failures.push(`Max CLS = ${maxCls} (> 0.05)`);
 }
+if (desktopGpu.medianGpuFrameMs > 4) {
+  failures.push(`Desktop / GPU median frame time = ${desktopGpu.medianGpuFrameMs}ms (> 4ms)`);
+}
 if (logoRequests.length > 0) {
   failures.push(`/logo.png requested on ${logoRequests.length} page(s)`);
 }
@@ -305,6 +384,7 @@ const report = {
   runsPerMobilePage: RUNS,
   mobile: mobileResults,
   firstScreenFonts: fontResults,
+  desktopGpu,
   maxCls,
   clsByRoute,
   logoRequests,
@@ -330,5 +410,5 @@ console.log(
     .map(([r, m]) => `${r}=${m.medianTbtMs}ms`)
     .join(", ")}], fonts [${Object.entries(fontResults)
     .map(([r, f]) => `${r}=${f.encodedKB}KB`)
-    .join(", ")}], maxCLS=${maxCls}, logoRequests=0.`,
+    .join(", ")}], gpuMedian=${desktopGpu.medianGpuFrameMs}ms, maxCLS=${maxCls}, logoRequests=0.`,
 );
