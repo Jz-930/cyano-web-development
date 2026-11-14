@@ -8,34 +8,40 @@
 :root {
   /* High-Contrast Nocturnal & Gallery Surfaces */
   --bg-obsidian: #000000;
-  --bg-obsidian-elevated: #030B12;
-  --bg-closing-gradient: linear-gradient(128deg, #000000 0%, #03131E 48%, #072436 80%, #0D1D38 100%);
+  --bg-obsidian-elevated: #030b12;
+  --bg-closing-gradient: linear-gradient(
+    128deg,
+    #000000 0%,
+    #03131e 48%,
+    #072436 80%,
+    #0d1d38 100%
+  );
 
   /* Light Gallery Surfaces */
-  --bg-canvas: #FFFFFF;
-  --bg-mist: #F6FAFC;
-  --bg-card: #FFFFFF;
+  --bg-canvas: #ffffff;
+  --bg-mist: #f6fafc;
+  --bg-card: #ffffff;
 
   /* Crisp Architectural Ink */
-  --ink-strong: #0B1520;
-  --ink-body: #2C3A47;
-  --ink-muted: #52606D;
+  --ink-strong: #0b1520;
+  --ink-body: #2c3a47;
+  --ink-muted: #52606d;
 
   /* Light Text on Nocturnal Stages */
-  --text-on-dark-strong: #FFFFFF;
+  --text-on-dark-strong: #ffffff;
   --text-on-dark-body: rgba(255, 255, 255, 0.84);
   --text-on-dark-muted: rgba(255, 255, 255, 0.6);
 
   /* Cyano-Anchored Polychromatic Spectrum (AA-compliant ink + luminous dark pairs) */
-  --accent-cyano-ink: #0B7A8C;
-  --accent-cyan: #22D3EE;
-  --accent-cobalt-ink: #1D4ED8;
-  --accent-cobalt: #60A5FA;
-  --accent-violet-ink: #6D28D9;
-  --accent-violet: #A78BFA;
-  --accent-amber-ink: #B45309;
-  --accent-amber: #FBBF24;
-  --accent-signal-rose: #E11D48;
+  --accent-cyano-ink: #0b7a8c;
+  --accent-cyan: #22d3ee;
+  --accent-cobalt-ink: #1d4ed8;
+  --accent-cobalt: #60a5fa;
+  --accent-violet-ink: #6d28d9;
+  --accent-violet: #a78bfa;
+  --accent-amber-ink: #b45309;
+  --accent-amber: #fbbf24;
+  --accent-signal-rose: #e11d48;
 
   /* Swiss-Modernist 1px Hairlines */
   --border-light: rgba(11, 21, 32, 0.1);
@@ -44,23 +50,23 @@
   --border-dark-accent: rgba(34, 211, 238, 0.38);
 
   /* Accessible Focus Rings */
-  --focus-ring-light: #0B7A8C;
-  --focus-ring-dark: #22D3EE;
+  --focus-ring-light: #0b7a8c;
+  --focus-ring-dark: #22d3ee;
 
   /* Modular Typography Scale (>= 12px everywhere) */
-  --fs-xs: 0.75rem;                       /* 12px */
-  --fs-sm: 0.8125rem;                     /* 13px */
-  --fs-meta: 0.875rem;                    /* 14px */
-  --fs-body: 1rem;                        /* 16px */
-  --fs-lead: 1.125rem;                    /* 18px */
+  --fs-xs: 0.75rem; /* 12px */
+  --fs-sm: 0.8125rem; /* 13px */
+  --fs-meta: 0.875rem; /* 14px */
+  --fs-body: 1rem; /* 16px */
+  --fs-lead: 1.125rem; /* 18px */
   --fs-h3: clamp(1.35rem, 1.85vw, 1.65rem);
   --fs-h2: clamp(2rem, 3.4vw, 3rem);
   --fs-2xl: clamp(2rem, 3.4vw, 3rem);
   --fs-display: clamp(2.6rem, 4.9vw, 4.3rem);
 
   /* Generous Gallery Vertical Rhythm */
-  --section-py-desktop: 9.25rem;          /* 148px */
-  --section-py-mobile: 5.75rem;           /* 92px */
+  --section-py-desktop: 9.25rem; /* 148px */
+  --section-py-mobile: 5.75rem; /* 92px */
 
   /* Radii & Subtle Studio Shadows */
   --radius-sm: 0.5rem;
