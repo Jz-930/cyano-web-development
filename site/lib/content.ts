@@ -12,7 +12,6 @@ import {
   siteCopy,
 } from "./content-v4";
 import rawAvailability from "@/content/availability.json";
-import mediaManifestData from "./media-manifest.json";
 import ogImage from "./og-image.json";
 
 export type { Locale, Bilingual };
@@ -34,19 +33,6 @@ export const insightsList = allInsights;
 export type InsightRouteItem = (typeof insightsList)[number];
 
 export const availability = rawAvailability;
-
-export type MediaMeta = {
-  width: number;
-  height: number;
-  blurDataURL: string;
-};
-
-const manifest = mediaManifestData as Record<string, MediaMeta>;
-
-export function getMediaMeta(src: string): MediaMeta {
-  if (!manifest[src]) throw new Error(`Media manifest entry missing: ${src}`);
-  return manifest[src];
-}
 
 export function t(locale: Locale, zh: string, en: string): string {
   return locale === "zh" ? zh : en;
@@ -176,6 +162,7 @@ export function buildPageMetadata({
     },
     icons: {
       icon: "/icon.svg",
+      shortcut: "/favicon.ico",
       apple: "/apple-touch-icon.png",
     },
   };

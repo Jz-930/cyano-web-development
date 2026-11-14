@@ -1,99 +1,95 @@
-[
-  {
-    "id": "F1",
-    "order": 0,
-    "role": {
-      "zh": "首席执行官",
-      "en": "Chief Executive Officer"
+﻿[
+    {
+        "id":  "F1",
+        "order":  0,
+        "role":  {
+                     "zh":  "é¦–å¸­æ‰§è¡Œå®˜",
+                     "en":  "Chief Executive Officer"
+                 },
+        "tags":  {
+                     "zh":  "ä¼ä¸šæˆ˜ç•¥ Â· å®¢æˆ·åˆä½œ Â· AI å•†ä¸šåŒ–",
+                     "en":  "Strategy Â· Partnerships Â· AI commercialization"
+                 },
+        "motto":  {
+                      "zh":  "è´Ÿè´£é¡¹ç›®è¯„ä¼°ã€å®¢æˆ·åˆä½œä¸Žä¸šåŠ¡ç›®æ ‡ã€‚",
+                      "en":  "Leads project assessment, client partnerships and business planning."
+                  },
+        "bio":  {
+                    "zh":  "æ›¾åœ¨ä¸–ç•Œ 500 å¼ºä¼ä¸šä»Žäº‹æŠ€æœ¯ä¸Žä¸šåŠ¡å·¥ä½œï¼Œæ‹¥æœ‰ 6 å¹´ä»¥ä¸Šè½¯ä»¶å¼€å‘ç»éªŒï¼Œå‚ä¸Žè¿‡ AI æ¨¡åž‹ç ”å‘ä¸Žä¼ä¸šç³»ç»Ÿé¡¹ç›®ã€‚è´Ÿè´£ Cyano çš„æˆ˜ç•¥ä¸Žå®¢æˆ·åˆä½œï¼Œä¸Žå®¢æˆ·ç¡®å®šé¡¹ç›®ç›®æ ‡ã€é¢„ç®—å’ŒéªŒæ”¶è¦æ±‚ã€‚",
+                    "en":  "Has worked in engineering and business roles at Fortune Global 500 companies, with over six years of software development and experience in AI model R\u0026D and enterprise systems. Leads strategy and client partnerships, agreeing on project goals, budgets and acceptance criteria with clients."
+                },
+        "stages":  [
+                       2
+                   ]
     },
-    "tags": {
-      "zh": "企业战略 · 客户合作 · AI 商业化",
-      "en": "Strategy · Partnerships · AI commercialization"
+    {
+        "id":  "F2",
+        "order":  1,
+        "role":  {
+                     "zh":  "é¦–å¸­æŠ€æœ¯å®˜",
+                     "en":  "Chief Technology Officer"
+                 },
+        "tags":  {
+                     "zh":  "å¤§æ¨¡åž‹å·¥ç¨‹ Â· ä¸Šä¸‹æ–‡æž¶æž„ Â· ç³»ç»Ÿé›†æˆ",
+                     "en":  "LLM engineering Â· Context architecture Â· Integration"
+                 },
+        "motto":  {
+                      "zh":  "è´Ÿè´£æ¨¡åž‹æŽ¥å…¥ã€ä¸Šä¸‹æ–‡ç®¡ç†ä¸Žå¹³å°æž¶æž„ã€‚",
+                      "en":  "Leads model integration, context management and platform architecture."
+                  },
+        "bio":  {
+                    "zh":  "æ›¾ä»»èŒäºŽä¸–ç•Œ 500 å¼ºä¼ä¸šï¼Œæ‹¥æœ‰ 6 å¹´ä»¥ä¸Šå¼€å‘ç»éªŒï¼Œå‚ä¸Žè¿‡ AI æ¨¡åž‹ç ”å‘ä¸Žå·¥ç¨‹åŒ–ã€‚ä¸»å¯¼ Cyano Core å¹³å°æž¶æž„ï¼Œè´Ÿè´£é•¿ä¸Šä¸‹æ–‡ç®¡ç†ã€çŸ¥è¯†æ£€ç´¢ä¸Ž Agent ä»»åŠ¡ç¼–æŽ’ã€‚",
+                    "en":  "Previously worked at Fortune Global 500 companies, with over six years of development experience and work in AI model R\u0026D and deployment. Leads Cyano Core architecture, including long-context management, retrieval and agent orchestration."
+                },
+        "stages":  [
+                       4
+                   ]
     },
-    "motto": {
-      "zh": "负责项目评估、客户合作与业务目标。",
-      "en": "Leads project assessment, client partnerships and business planning."
+    {
+        "id":  "F3",
+        "order":  2,
+        "role":  {
+                     "zh":  "å·¥ç¨‹äº¤ä»˜è´Ÿè´£äºº",
+                     "en":  "Head of Engineering Delivery"
+                 },
+        "tags":  {
+                     "zh":  "å·¥ç¨‹äº¤ä»˜ Â· ä¸Šçº¿è¿ç»´ Â· è´¨é‡ä¿éšœ",
+                     "en":  "Delivery Â· Operations Â· Quality"
+                 },
+        "motto":  {
+                      "zh":  "è´Ÿè´£å¼€å‘æµ‹è¯•ã€ç³»ç»Ÿéƒ¨ç½²å’Œä¸Šçº¿è¿ç»´ã€‚",
+                      "en":  "Leads development, testing, deployment and operations."
+                  },
+        "bio":  {
+                    "zh":  "æ‹¥æœ‰ä¸–ç•Œ 500 å¼ºä¼ä¸šå·¥ç¨‹èƒŒæ™¯å’Œ 6 å¹´ä»¥ä¸Šå¼€å‘ç»éªŒï¼Œå‚ä¸Žè¿‡ AI æ¨¡åž‹ç ”å‘ä¸Žå¤§è§„æ¨¡ç³»ç»Ÿäº¤ä»˜ã€‚è´Ÿè´£é¡¹ç›®å¼€å‘ã€æµ‹è¯•å’Œä¸Šçº¿è¿ç»´ï¼Œè·Ÿè¿›æ•…éšœå¤„ç†ä¸Žç‰ˆæœ¬æ›´æ–°ã€‚",
+                    "en":  "Has an engineering background at Fortune Global 500 companies, over six years of development experience, and experience in AI model R\u0026D and large-scale systems. Leads development, testing and operations, including incident handling and releases."
+                },
+        "stages":  [
+                       5
+                   ]
     },
-    "bio": {
-      "zh": "曾在世界 500 强企业从事技术与业务工作，拥有 6 年以上软件开发经验，参与过 AI 模型研发与企业系统项目。负责 Cyano 的战略与客户合作，与客户确定项目目标、预算和验收要求。",
-      "en": "Has worked in engineering and business roles at Fortune Global 500 companies, with over six years of software development and experience in AI model R&D and enterprise systems. Leads strategy and client partnerships, agreeing on project goals, budgets and acceptance criteria with clients."
-    },
-    "portrait": "/art/founder-1.webp",
-    "stages": [
-      2
-    ]
-  },
-  {
-    "id": "F2",
-    "order": 1,
-    "role": {
-      "zh": "首席技术官",
-      "en": "Chief Technology Officer"
-    },
-    "tags": {
-      "zh": "大模型工程 · 上下文架构 · 系统集成",
-      "en": "LLM engineering · Context architecture · Integration"
-    },
-    "motto": {
-      "zh": "负责模型接入、上下文管理与平台架构。",
-      "en": "Leads model integration, context management and platform architecture."
-    },
-    "bio": {
-      "zh": "曾任职于世界 500 强企业，拥有 6 年以上开发经验，参与过 AI 模型研发与工程化。主导 Cyano Core 平台架构，负责长上下文管理、知识检索与 Agent 任务编排。",
-      "en": "Previously worked at Fortune Global 500 companies, with over six years of development experience and work in AI model R&D and deployment. Leads Cyano Core architecture, including long-context management, retrieval and agent orchestration."
-    },
-    "portrait": "/art/founder-2.webp",
-    "stages": [
-      4
-    ]
-  },
-  {
-    "id": "F3",
-    "order": 2,
-    "role": {
-      "zh": "工程交付负责人",
-      "en": "Head of Engineering Delivery"
-    },
-    "tags": {
-      "zh": "工程交付 · 上线运维 · 质量保障",
-      "en": "Delivery · Operations · Quality"
-    },
-    "motto": {
-      "zh": "负责开发测试、系统部署和上线运维。",
-      "en": "Leads development, testing, deployment and operations."
-    },
-    "bio": {
-      "zh": "拥有世界 500 强企业工程背景和 6 年以上开发经验，参与过 AI 模型研发与大规模系统交付。负责项目开发、测试和上线运维，跟进故障处理与版本更新。",
-      "en": "Has an engineering background at Fortune Global 500 companies, over six years of development experience, and experience in AI model R&D and large-scale systems. Leads development, testing and operations, including incident handling and releases."
-    },
-    "portrait": "/art/founder-3.webp",
-    "stages": [
-      5
-    ]
-  },
-  {
-    "id": "F4",
-    "order": 3,
-    "role": {
-      "zh": "产品与解决方案负责人",
-      "en": "Head of Product & Solutions"
-    },
-    "tags": {
-      "zh": "需求评估 · 产品设计 · 解决方案",
-      "en": "Requirements · Product design · Solutions"
-    },
-    "motto": {
-      "zh": "负责需求梳理、产品设计和使用流程。",
-      "en": "Leads requirements, product design and user workflows."
-    },
-    "bio": {
-      "zh": "拥有世界 500 强企业的产品与技术背景、6 年以上开发经验及 AI 模型研发经验。负责需求评估与产品设计，梳理客户的操作步骤、资料来源和审核要求，并与使用者确认功能设计。",
-      "en": "Has a product and engineering background at Fortune Global 500 companies, over six years of development and experience in AI model R&D. Leads requirements and product design, reviewing client processes, sources and approval requirements with the people who will use the system."
-    },
-    "portrait": "/art/founder-4.webp",
-    "stages": [
-      1,
-      3
-    ]
-  }
+    {
+        "id":  "F4",
+        "order":  3,
+        "role":  {
+                     "zh":  "äº§å“ä¸Žè§£å†³æ–¹æ¡ˆè´Ÿè´£äºº",
+                     "en":  "Head of Product \u0026 Solutions"
+                 },
+        "tags":  {
+                     "zh":  "éœ€æ±‚è¯„ä¼° Â· äº§å“è®¾è®¡ Â· è§£å†³æ–¹æ¡ˆ",
+                     "en":  "Requirements Â· Product design Â· Solutions"
+                 },
+        "motto":  {
+                      "zh":  "è´Ÿè´£éœ€æ±‚æ¢³ç†ã€äº§å“è®¾è®¡å’Œä½¿ç”¨æµç¨‹ã€‚",
+                      "en":  "Leads requirements, product design and user workflows."
+                  },
+        "bio":  {
+                    "zh":  "æ‹¥æœ‰ä¸–ç•Œ 500 å¼ºä¼ä¸šçš„äº§å“ä¸ŽæŠ€æœ¯èƒŒæ™¯ã€6 å¹´ä»¥ä¸Šå¼€å‘ç»éªŒåŠ AI æ¨¡åž‹ç ”å‘ç»éªŒã€‚è´Ÿè´£éœ€æ±‚è¯„ä¼°ä¸Žäº§å“è®¾è®¡ï¼Œæ¢³ç†å®¢æˆ·çš„æ“ä½œæ­¥éª¤ã€èµ„æ–™æ¥æºå’Œå®¡æ ¸è¦æ±‚ï¼Œå¹¶ä¸Žä½¿ç”¨è€…ç¡®è®¤åŠŸèƒ½è®¾è®¡ã€‚",
+                    "en":  "Has a product and engineering background at Fortune Global 500 companies, over six years of development and experience in AI model R\u0026D. Leads requirements and product design, reviewing client processes, sources and approval requirements with the people who will use the system."
+                },
+        "stages":  [
+                       1,
+                       3
+                   ]
+    }
 ]

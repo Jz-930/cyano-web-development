@@ -140,7 +140,6 @@ export const TeamMemberSchema = z.object({
   tags: L,
   motto: L,
   bio: L,
-  portrait: z.string().min(1),
   stages: z.array(z.number().int().min(1).max(5)).min(1),
 });
 
@@ -258,7 +257,6 @@ export function founders(locale: Locale) {
     tags: f.tags[locale],
     motto: f.motto[locale],
     bio: f.bio[locale],
-    image: f.portrait,
     stages: f.stages,
   }));
 }
