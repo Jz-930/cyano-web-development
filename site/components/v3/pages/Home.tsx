@@ -20,13 +20,9 @@ export function Home({ locale }: { locale: Locale }) {
           <h1>
             {locale === "zh" ? (
               <>
-                
-                为企业开发
+                为企业开发日常工作
                 <br />
-                
-                日常工作用得上的
-                <br />
-                <span>AI</span>
+                用得上的 <span>AI</span>
                 <span className="headline-period">。</span>
               </>
             ) : (

@@ -36,3 +36,4 @@ html{background:var(--p0);scroll-padding-top:100px}body{font:var(--s16)/1.75 var
 @media (max-width:800px){.home-hero .hero-bottom{position:static;inset:auto;margin:32px 0 0;width:auto;padding:0;gap:16px;flex-wrap:wrap}}
 .visual-coordinate{display:none!important}
 .mobile-nav>a.button{background:var(--ice);border-color:var(--ice);color:var(--n1)}.mobile-nav>a.button svg{color:var(--n1)}.mobile-nav>a.button:hover{background:var(--light)}
+@media (max-width:1200px) and (min-width:801px){:lang(zh-CN) .hero-content h1{font-size:clamp(34px,3.61vw,48px)}}
