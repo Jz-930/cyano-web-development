@@ -29,12 +29,26 @@ const context = await browser.newContext({
   deviceScaleFactor: 1,
   reducedMotion: "no-preference",
 });
+await context.addInitScript(() => {
+  window.__frameDiffHoldT0 = true;
+  let frozenNow = 0;
+  const origRAF = window.requestAnimationFrame.bind(window);
+  window.requestAnimationFrame = (cb) =>
+    origRAF((now) => {
+      if (window.__frameDiffHoldT0) {
+        if (!frozenNow) frozenNow = now || 16;
+        cb(frozenNow);
+      } else {
+        cb(now);
+      }
+    });
+});
 const page = await context.newPage();
 
 await page.goto(`${baseUrl}${routePath}`, { waitUntil: "domcontentloaded" });
-// Capture frame at t=0s (immediately once canvas/layout mounts so intro=0->1 & flow bands sweep)
+// Capture frame at exact t=0s (hold rAF timestamp during Playwright screenshot IPC)
 await page.waitForSelector(selector, { timeout: 10000 });
-await page.waitForTimeout(40);
+await page.waitForSelector(".light-field canvas.ready", { timeout: 5000 }).catch(() => {});
 
 const stageBox = await page.evaluate((sel) => {
   const el = document.querySelector(sel);
@@ -54,6 +68,9 @@ if (!stageBox) {
 }
 
 const frame0Png = await page.screenshot({ type: "png" });
+await page.evaluate(() => {
+  window.__frameDiffHoldT0 = false;
+});
 await page.waitForTimeout(5000);
 const frame5Png = await page.screenshot({ type: "png" });
 

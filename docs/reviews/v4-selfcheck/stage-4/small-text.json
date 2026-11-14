@@ -1,0 +1,1657 @@
+{
+  "thresholdPct": 8,
+  "checkedCount": 84,
+  "worst": {
+    "route": "/",
+    "viewport": "1440x900",
+    "smallChars": 171,
+    "totalChars": 2433,
+    "ratioPct": 7.03,
+    "buckets": {
+      "16px": 641,
+      "24px": 10,
+      "14px": 487,
+      "15px": 267,
+      "13px": 355,
+      "52px": 16,
+      "19px": 149,
+      "12px": 171,
+      "32px": 4,
+      "20px": 73,
+      "18px": 65,
+      "36px": 87,
+      "22px": 82,
+      "56px": 11,
+      "23px": 7,
+      "18.4px": 8
+    }
+  },
+  "violationCount": 0,
+  "violations": [],
+  "results": [
+    {
+      "route": "/",
+      "viewport": "1440x900",
+      "smallChars": 171,
+      "totalChars": 2433,
+      "ratioPct": 7.03,
+      "buckets": {
+        "16px": 641,
+        "24px": 10,
+        "14px": 487,
+        "15px": 267,
+        "13px": 355,
+        "52px": 16,
+        "19px": 149,
+        "12px": 171,
+        "32px": 4,
+        "20px": 73,
+        "18px": 65,
+        "36px": 87,
+        "22px": 82,
+        "56px": 11,
+        "23px": 7,
+        "18.4px": 8
+      }
+    },
+    {
+      "route": "/",
+      "viewport": "390x844",
+      "smallChars": 166,
+      "totalChars": 2665,
+      "ratioPct": 6.23,
+      "buckets": {
+        "16px": 703,
+        "24px": 10,
+        "14px": 503,
+        "13px": 358,
+        "34px": 16,
+        "15px": 423,
+        "12px": 166,
+        "32px": 4,
+        "20px": 188,
+        "18px": 93,
+        "28px": 103,
+        "17px": 87,
+        "40px": 11
+      }
+    },
+    {
+      "route": "/en",
+      "viewport": "1440x900",
+      "smallChars": 352,
+      "totalChars": 6466,
+      "ratioPct": 5.44,
+      "buckets": {
+        "17px": 667,
+        "24px": 10,
+        "14px": 1259,
+        "15px": 766,
+        "13px": 1047,
+        "68px": 28,
+        "20px": 631,
+        "12px": 352,
+        "16px": 1039,
+        "32px": 5,
+        "18px": 189,
+        "44px": 188,
+        "36px": 45,
+        "22px": 192,
+        "56px": 11,
+        "23px": 18,
+        "18.4px": 19
+      }
+    },
+    {
+      "route": "/en",
+      "viewport": "390x844",
+      "smallChars": 339,
+      "totalChars": 7310,
+      "ratioPct": 4.64,
+      "buckets": {
+        "17px": 667,
+        "24px": 10,
+        "14px": 1301,
+        "13px": 1164,
+        "44px": 28,
+        "16px": 1218,
+        "15px": 1251,
+        "12px": 339,
+        "32px": 229,
+        "20px": 501,
+        "18px": 546,
+        "28px": 45,
+        "40px": 11
+      }
+    },
+    {
+      "route": "/cases",
+      "viewport": "390x844",
+      "smallChars": 2,
+      "totalChars": 496,
+      "ratioPct": 0.4,
+      "buckets": {
+        "16px": 41,
+        "24px": 33,
+        "14px": 259,
+        "13px": 42,
+        "32px": 41,
+        "11.2px": 2,
+        "15px": 36,
+        "28px": 12,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/cases",
+      "viewport": "1440x900",
+      "smallChars": 2,
+      "totalChars": 604,
+      "ratioPct": 0.33,
+      "buckets": {
+        "16px": 54,
+        "24px": 18,
+        "14px": 290,
+        "15px": 42,
+        "13px": 68,
+        "44px": 12,
+        "18px": 13,
+        "32px": 29,
+        "11.2px": 2,
+        "22px": 34,
+        "36px": 12,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/en/cases",
+      "viewport": "390x844",
+      "smallChars": 2,
+      "totalChars": 1012,
+      "ratioPct": 0.2,
+      "buckets": {
+        "17px": 17,
+        "24px": 65,
+        "14px": 635,
+        "13px": 28,
+        "40px": 35,
+        "16px": 32,
+        "32px": 37,
+        "11.2px": 2,
+        "15px": 90,
+        "18px": 71
+      }
+    },
+    {
+      "route": "/en/cases",
+      "viewport": "1440x900",
+      "smallChars": 2,
+      "totalChars": 1575,
+      "ratioPct": 0.13,
+      "buckets": {
+        "17px": 17,
+        "24px": 19,
+        "14px": 729,
+        "15px": 108,
+        "13px": 205,
+        "56px": 35,
+        "18px": 32,
+        "48px": 14,
+        "11.2px": 2,
+        "22px": 102,
+        "16px": 163,
+        "32px": 55,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/services",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 851,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 7,
+        "24px": 19,
+        "14px": 286,
+        "15px": 48,
+        "13px": 70,
+        "44px": 14,
+        "18px": 301,
+        "32px": 64,
+        "36px": 12,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/en/services/sales-ai",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1523,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 111,
+        "14px": 561,
+        "15px": 119,
+        "13px": 52,
+        "56px": 48,
+        "18px": 203,
+        "48px": 29,
+        "16px": 289,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/services/sales-ai",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 627,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 127,
+        "24px": 48,
+        "14px": 218,
+        "15px": 48,
+        "13px": 35,
+        "44px": 13,
+        "18px": 73,
+        "48px": 10,
+        "36px": 21,
+        "32px": 4,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/en/services",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 2220,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 30,
+        "14px": 762,
+        "15px": 123,
+        "13px": 138,
+        "56px": 37,
+        "18px": 815,
+        "32px": 204,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/services/document-automation",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 635,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 127,
+        "24px": 50,
+        "14px": 213,
+        "15px": 48,
+        "13px": 39,
+        "44px": 14,
+        "18px": 80,
+        "48px": 9,
+        "36px": 21,
+        "32px": 4,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/en/services/document-automation",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1490,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 98,
+        "14px": 539,
+        "15px": 119,
+        "13px": 74,
+        "56px": 35,
+        "18px": 201,
+        "48px": 24,
+        "16px": 289,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/en/services/data-query",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1850,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 130,
+        "14px": 816,
+        "15px": 119,
+        "13px": 58,
+        "56px": 37,
+        "18px": 205,
+        "48px": 36,
+        "16px": 338,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/en/services/knowledge-assistant",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1910,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 137,
+        "14px": 848,
+        "15px": 119,
+        "13px": 76,
+        "56px": 42,
+        "18px": 214,
+        "48px": 25,
+        "16px": 338,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/services/data-query",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 773,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 146,
+        "24px": 61,
+        "14px": 319,
+        "15px": 48,
+        "13px": 35,
+        "44px": 12,
+        "18px": 89,
+        "48px": 8,
+        "36px": 21,
+        "32px": 4,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/services/knowledge-assistant",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 765,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 146,
+        "24px": 56,
+        "14px": 313,
+        "15px": 48,
+        "13px": 37,
+        "44px": 13,
+        "18px": 87,
+        "48px": 10,
+        "36px": 21,
+        "32px": 4,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/en/cases/sales-consultant-ai",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1616,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 10,
+        "14px": 687,
+        "15px": 108,
+        "13px": 131,
+        "56px": 50,
+        "18px": 286,
+        "16px": 43,
+        "48px": 14,
+        "32px": 176,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/en/cases/proposal-generation",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1540,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 10,
+        "14px": 666,
+        "15px": 108,
+        "13px": 139,
+        "56px": 52,
+        "18px": 260,
+        "16px": 48,
+        "48px": 9,
+        "32px": 137,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/cases/proposal-generation",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 599,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 25,
+        "24px": 10,
+        "14px": 279,
+        "15px": 42,
+        "13px": 45,
+        "44px": 15,
+        "18px": 79,
+        "48px": 9,
+        "32px": 53,
+        "36px": 12,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/cases/sales-consultant-ai",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 624,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 25,
+        "24px": 10,
+        "14px": 285,
+        "15px": 42,
+        "13px": 41,
+        "44px": 19,
+        "18px": 89,
+        "48px": 10,
+        "32px": 61,
+        "36px": 12,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/cases/it-knowledge-assistant",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 748,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 67,
+        "24px": 20,
+        "14px": 372,
+        "15px": 42,
+        "13px": 39,
+        "44px": 20,
+        "18px": 91,
+        "48px": 10,
+        "32px": 45,
+        "36px": 12,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/en/cases/it-knowledge-assistant",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 2404,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 40,
+        "14px": 1012,
+        "15px": 108,
+        "13px": 294,
+        "56px": 53,
+        "18px": 270,
+        "16px": 282,
+        "48px": 10,
+        "32px": 122,
+        "22px": 102,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/en/cases/nl-data-query",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 2324,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 40,
+        "14px": 979,
+        "15px": 108,
+        "13px": 294,
+        "56px": 37,
+        "18px": 263,
+        "16px": 257,
+        "48px": 21,
+        "32px": 112,
+        "22px": 102,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/cases/nl-data-query",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 734,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 52,
+        "24px": 20,
+        "14px": 376,
+        "15px": 42,
+        "13px": 43,
+        "44px": 16,
+        "18px": 83,
+        "48px": 8,
+        "32px": 52,
+        "36px": 12,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/en/cases/property-management",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1546,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 10,
+        "14px": 667,
+        "15px": 108,
+        "13px": 119,
+        "56px": 54,
+        "18px": 261,
+        "16px": 49,
+        "48px": 29,
+        "32px": 138,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/cases/property-management",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 626,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 34,
+        "24px": 10,
+        "14px": 284,
+        "15px": 42,
+        "13px": 43,
+        "44px": 17,
+        "18px": 88,
+        "48px": 10,
+        "32px": 56,
+        "36px": 12,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/cases/writing-memory-engine",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 593,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 23,
+        "24px": 10,
+        "14px": 280,
+        "15px": 42,
+        "13px": 41,
+        "44px": 17,
+        "18px": 77,
+        "48px": 10,
+        "32px": 51,
+        "36px": 12,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/en/cases/writing-memory-engine",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1475,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 10,
+        "14px": 661,
+        "15px": 108,
+        "13px": 107,
+        "56px": 54,
+        "18px": 238,
+        "16px": 38,
+        "48px": 31,
+        "32px": 117,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/technology",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 923,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 311,
+        "24px": 40,
+        "14px": 240,
+        "15px": 44,
+        "13px": 41,
+        "44px": 15,
+        "18px": 155,
+        "32px": 14,
+        "48px": 13,
+        "36px": 20,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/en/technology",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 2085,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 100,
+        "14px": 584,
+        "15px": 99,
+        "13px": 72,
+        "56px": 33,
+        "18px": 419,
+        "32px": 28,
+        "16px": 601,
+        "48px": 13,
+        "44px": 48,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/en/engagement",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 3519,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 89,
+        "14px": 586,
+        "15px": 87,
+        "13px": 91,
+        "56px": 21,
+        "18px": 457,
+        "16px": 1985,
+        "20px": 150,
+        "32px": 13,
+        "44px": 23
+      }
+    },
+    {
+      "route": "/engagement",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1396,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 768,
+        "24px": 44,
+        "14px": 230,
+        "15px": 36,
+        "13px": 39,
+        "44px": 13,
+        "18px": 189,
+        "20px": 24,
+        "32px": 11,
+        "36px": 12,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/about",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 741,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 117,
+        "24px": 35,
+        "14px": 194,
+        "15px": 36,
+        "13px": 42,
+        "44px": 12,
+        "32px": 28,
+        "18px": 229,
+        "36px": 18,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/en/about",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1853,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 95,
+        "14px": 492,
+        "15px": 87,
+        "13px": 79,
+        "56px": 42,
+        "48px": 41,
+        "18px": 574,
+        "32px": 36,
+        "44px": 32,
+        "16px": 287,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/insights",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 360,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 7,
+        "24px": 10,
+        "14px": 167,
+        "15px": 6,
+        "13px": 66,
+        "44px": 14,
+        "18px": 31,
+        "22px": 59
+      }
+    },
+    {
+      "route": "/en/insights/why-chatgpt-is-not-a-knowledge-base",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 4675,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 32,
+        "14px": 669,
+        "15px": 105,
+        "13px": 52,
+        "56px": 59,
+        "18px": 3347,
+        "32px": 213,
+        "16px": 87,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/insights/proposal-draft-in-15-minutes",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1571,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 37,
+        "24px": 19,
+        "14px": 258,
+        "15px": 42,
+        "13px": 15,
+        "44px": 23,
+        "18px": 1073,
+        "32px": 62,
+        "36px": 12,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/en/insights",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 880,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 10,
+        "14px": 401,
+        "15px": 18,
+        "13px": 164,
+        "56px": 33,
+        "18px": 96,
+        "22px": 141
+      }
+    },
+    {
+      "route": "/insights/why-chatgpt-is-not-a-knowledge-base",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1716,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 37,
+        "24px": 19,
+        "14px": 269,
+        "15px": 42,
+        "13px": 15,
+        "44px": 18,
+        "18px": 1201,
+        "32px": 73,
+        "36px": 12,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/en/insights/proposal-draft-in-15-minutes",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 4327,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 32,
+        "14px": 634,
+        "15px": 105,
+        "13px": 36,
+        "56px": 38,
+        "18px": 3106,
+        "32px": 178,
+        "16px": 87,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/insights/buy-pilot-or-managed",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1652,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 37,
+        "24px": 19,
+        "14px": 259,
+        "15px": 42,
+        "13px": 15,
+        "44px": 18,
+        "18px": 1157,
+        "32px": 63,
+        "36px": 12,
+        "19px": 30
+      }
+    },
+    {
+      "route": "/en/insights/buy-pilot-or-managed",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 4475,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 32,
+        "14px": 638,
+        "15px": 105,
+        "13px": 44,
+        "56px": 44,
+        "18px": 3232,
+        "32px": 182,
+        "16px": 87,
+        "44px": 23,
+        "20px": 71
+      }
+    },
+    {
+      "route": "/en/contact",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 1616,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 10,
+        "14px": 478,
+        "15px": 29,
+        "13px": 47,
+        "56px": 25,
+        "18px": 130,
+        "32px": 66,
+        "20px": 76,
+        "16px": 738
+      }
+    },
+    {
+      "route": "/contact",
+      "viewport": "1440x900",
+      "smallChars": 0,
+      "totalChars": 647,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 285,
+        "24px": 10,
+        "14px": 195,
+        "15px": 10,
+        "13px": 29,
+        "44px": 11,
+        "18px": 58,
+        "32px": 18,
+        "20px": 31
+      }
+    },
+    {
+      "route": "/services",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 826,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 308,
+        "24px": 83,
+        "14px": 223,
+        "13px": 114,
+        "32px": 14,
+        "15px": 42,
+        "28px": 12,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/en/services",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 2158,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 234,
+        "14px": 577,
+        "13px": 279,
+        "40px": 37,
+        "16px": 815,
+        "15px": 105,
+        "32px": 23,
+        "18px": 71
+      }
+    },
+    {
+      "route": "/services/sales-ai",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 700,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 193,
+        "24px": 43,
+        "14px": 181,
+        "13px": 90,
+        "32px": 17,
+        "15px": 42,
+        "28px": 32,
+        "20px": 38,
+        "18px": 34,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/en/services/sales-ai",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1749,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 78,
+        "14px": 452,
+        "13px": 228,
+        "40px": 48,
+        "16px": 498,
+        "15px": 101,
+        "20px": 101,
+        "32px": 68,
+        "18px": 158
+      }
+    },
+    {
+      "route": "/en/services/knowledge-assistant",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 2118,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 76,
+        "14px": 727,
+        "13px": 241,
+        "40px": 42,
+        "16px": 547,
+        "15px": 101,
+        "20px": 127,
+        "32px": 68,
+        "18px": 172
+      }
+    },
+    {
+      "route": "/en/services/document-automation",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1725,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 76,
+        "14px": 451,
+        "13px": 230,
+        "40px": 35,
+        "16px": 501,
+        "15px": 101,
+        "20px": 88,
+        "32px": 68,
+        "18px": 158
+      }
+    },
+    {
+      "route": "/services/knowledge-assistant",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 740,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 191,
+        "24px": 20,
+        "14px": 265,
+        "13px": 60,
+        "32px": 17,
+        "15px": 42,
+        "28px": 21,
+        "20px": 46,
+        "18px": 48,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/services/document-automation",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 710,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 205,
+        "24px": 38,
+        "14px": 182,
+        "13px": 89,
+        "32px": 18,
+        "15px": 42,
+        "28px": 32,
+        "20px": 40,
+        "18px": 34,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/services/data-query",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 840,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 221,
+        "24px": 36,
+        "14px": 275,
+        "13px": 93,
+        "32px": 16,
+        "15px": 42,
+        "28px": 32,
+        "20px": 51,
+        "18px": 44,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/en/services/data-query",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 2031,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 69,
+        "14px": 695,
+        "13px": 213,
+        "40px": 37,
+        "16px": 543,
+        "15px": 101,
+        "20px": 120,
+        "32px": 68,
+        "18px": 168
+      }
+    },
+    {
+      "route": "/en/cases/sales-consultant-ai",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1568,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 176,
+        "14px": 577,
+        "13px": 254,
+        "40px": 50,
+        "16px": 235,
+        "15px": 90,
+        "32px": 47,
+        "18px": 122
+      }
+    },
+    {
+      "route": "/cases/sales-consultant-ai",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 603,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 80,
+        "24px": 73,
+        "14px": 243,
+        "13px": 86,
+        "32px": 27,
+        "15px": 36,
+        "18px": 16,
+        "28px": 12,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/en/cases/proposal-generation",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1492,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 132,
+        "14px": 582,
+        "13px": 241,
+        "40px": 52,
+        "16px": 209,
+        "15px": 90,
+        "32px": 47,
+        "18px": 122
+      }
+    },
+    {
+      "route": "/cases/proposal-generation",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 578,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 70,
+        "24px": 64,
+        "14px": 243,
+        "13px": 84,
+        "32px": 23,
+        "15px": 36,
+        "18px": 16,
+        "28px": 12,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/en/cases/it-knowledge-assistant",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1855,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 118,
+        "14px": 891,
+        "13px": 228,
+        "40px": 53,
+        "16px": 254,
+        "15px": 90,
+        "32px": 47,
+        "18px": 136,
+        "20px": 21
+      }
+    },
+    {
+      "route": "/en/cases/nl-data-query",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1775,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 119,
+        "14px": 833,
+        "13px": 228,
+        "40px": 37,
+        "16px": 251,
+        "15px": 90,
+        "32px": 47,
+        "18px": 132,
+        "20px": 21
+      }
+    },
+    {
+      "route": "/cases/it-knowledge-assistant",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 727,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 87,
+        "24px": 57,
+        "14px": 362,
+        "13px": 75,
+        "32px": 28,
+        "15px": 36,
+        "18px": 30,
+        "20px": 10,
+        "28px": 12,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/cases/nl-data-query",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 713,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 83,
+        "24px": 62,
+        "14px": 351,
+        "13px": 79,
+        "32px": 24,
+        "15px": 36,
+        "18px": 26,
+        "20px": 10,
+        "28px": 12,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/en/cases/property-management",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1498,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 153,
+        "14px": 583,
+        "13px": 222,
+        "40px": 54,
+        "16px": 210,
+        "15px": 90,
+        "32px": 47,
+        "18px": 122
+      }
+    },
+    {
+      "route": "/cases/property-management",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 605,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 79,
+        "24px": 68,
+        "14px": 252,
+        "13px": 87,
+        "32px": 25,
+        "15px": 36,
+        "18px": 16,
+        "28px": 12,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/en/cases/writing-memory-engine",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1427,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 134,
+        "14px": 572,
+        "13px": 204,
+        "40px": 54,
+        "16px": 187,
+        "15px": 90,
+        "32px": 47,
+        "18px": 122
+      }
+    },
+    {
+      "route": "/technology",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 898,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 398,
+        "24px": 10,
+        "14px": 221,
+        "13px": 41,
+        "32px": 42,
+        "15px": 38,
+        "18px": 86,
+        "20px": 12,
+        "28px": 20,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/cases/writing-memory-engine",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 572,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 68,
+        "24px": 63,
+        "14px": 241,
+        "13px": 81,
+        "32px": 25,
+        "15px": 36,
+        "18px": 16,
+        "28px": 12,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/en/technology",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 2023,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 10,
+        "14px": 540,
+        "13px": 72,
+        "40px": 33,
+        "16px": 865,
+        "15px": 81,
+        "32px": 89,
+        "18px": 278,
+        "20px": 38
+      }
+    },
+    {
+      "route": "/en/engagement",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 3233,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 38,
+        "14px": 863,
+        "13px": 73,
+        "40px": 21,
+        "16px": 1588,
+        "20px": 94,
+        "18px": 395,
+        "32px": 75,
+        "15px": 69
+      }
+    },
+    {
+      "route": "/engagement",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1319,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 603,
+        "24px": 21,
+        "14px": 389,
+        "13px": 32,
+        "32px": 24,
+        "20px": 40,
+        "18px": 138,
+        "28px": 12,
+        "17px": 30,
+        "15px": 30
+      }
+    },
+    {
+      "route": "/about",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 716,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 117,
+        "24px": 35,
+        "14px": 148,
+        "13px": 69,
+        "32px": 40,
+        "18px": 229,
+        "28px": 18,
+        "17px": 30,
+        "15px": 30
+      }
+    },
+    {
+      "route": "/en/about",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1791,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 95,
+        "14px": 357,
+        "13px": 170,
+        "40px": 42,
+        "48px": 41,
+        "18px": 645,
+        "32px": 68,
+        "16px": 287,
+        "15px": 69
+      }
+    },
+    {
+      "route": "/insights",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 335,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 38,
+        "24px": 10,
+        "14px": 148,
+        "13px": 66,
+        "32px": 14,
+        "20px": 59
+      }
+    },
+    {
+      "route": "/en/insights",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 728,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 10,
+        "14px": 357,
+        "13px": 118,
+        "40px": 33,
+        "16px": 96,
+        "20px": 97
+      }
+    },
+    {
+      "route": "/en/insights/why-chatgpt-is-not-a-knowledge-base",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 4613,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 245,
+        "14px": 625,
+        "13px": 52,
+        "40px": 59,
+        "18px": 93,
+        "16px": 3412,
+        "15px": 87,
+        "32px": 23
+      }
+    },
+    {
+      "route": "/insights/why-chatgpt-is-not-a-knowledge-base",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1691,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 1233,
+        "24px": 92,
+        "14px": 250,
+        "13px": 15,
+        "32px": 18,
+        "18px": 5,
+        "15px": 36,
+        "28px": 12,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/en/insights/proposal-draft-in-15-minutes",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 4265,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 210,
+        "14px": 590,
+        "13px": 36,
+        "40px": 38,
+        "18px": 96,
+        "16px": 3168,
+        "15px": 87,
+        "32px": 23
+      }
+    },
+    {
+      "route": "/insights/proposal-draft-in-15-minutes",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1546,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 1103,
+        "24px": 81,
+        "14px": 239,
+        "13px": 15,
+        "32px": 23,
+        "18px": 7,
+        "15px": 36,
+        "28px": 12,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/en/insights/buy-pilot-or-managed",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 4413,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 214,
+        "14px": 594,
+        "13px": 44,
+        "40px": 44,
+        "18px": 92,
+        "16px": 3298,
+        "15px": 87,
+        "32px": 23
+      }
+    },
+    {
+      "route": "/insights/buy-pilot-or-managed",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1627,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 1189,
+        "24px": 82,
+        "14px": 240,
+        "13px": 15,
+        "32px": 18,
+        "18px": 5,
+        "15px": 36,
+        "28px": 12,
+        "17px": 30
+      }
+    },
+    {
+      "route": "/contact",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 622,
+      "ratioPct": 0,
+      "buckets": {
+        "16px": 343,
+        "24px": 10,
+        "14px": 176,
+        "13px": 29,
+        "32px": 29,
+        "20px": 31,
+        "15px": 4
+      }
+    },
+    {
+      "route": "/en/contact",
+      "viewport": "390x844",
+      "smallChars": 0,
+      "totalChars": 1554,
+      "ratioPct": 0,
+      "buckets": {
+        "17px": 17,
+        "24px": 10,
+        "14px": 434,
+        "13px": 47,
+        "40px": 25,
+        "16px": 868,
+        "32px": 66,
+        "20px": 76,
+        "15px": 11
+      }
+    }
+  ]
+}

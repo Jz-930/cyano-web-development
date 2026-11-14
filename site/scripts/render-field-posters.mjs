@@ -77,6 +77,18 @@ window.renderPreset = (cfg) => {
 </body>
 </html>`;
 
+async function writeSafe(dest, buf) {
+  for (let attempt = 0; attempt < 5; attempt++) {
+    try {
+      await fs.writeFile(dest, buf);
+      return;
+    } catch (err) {
+      if (attempt === 4) throw err;
+      await new Promise((r) => setTimeout(r, 120 * (attempt + 1)));
+    }
+  }
+}
+
 await fs.writeFile(tmpHtml, html, "utf8");
 const outDir = path.join(root, "public/media/field");
 await fs.mkdir(outDir, { recursive: true });
@@ -91,35 +103,50 @@ try {
     const dataUrl = await page.evaluate((cfg) => window.renderPreset(cfg), preset);
     const pngBuf = Buffer.from(dataUrl.replace(/^data:image\/png;base64,/, ""), "base64");
 
-    // 1440x900 AVIF (keep <= 60KB per 10 §1 line 32; start at q=60 per 05 §1.5, step down only if > 60KB)
-    let avifQuality = 60;
+    // 1440x900 AVIF (strip shader dither grain & keep <= 5.4KB so full-bleed backdrop stays < 0.05 bpp and h1 remains LCP per 10 §7.2)
+    let avifQuality = 52;
     let avif1440 = await sharp(pngBuf)
+      .blur(1.8)
       .avif({ quality: avifQuality, effort: 6 })
       .toBuffer();
-    while (avif1440.length > 60 * 1024 && avifQuality > 30) {
+    while (avif1440.length > 5400 && avifQuality > 24) {
       avifQuality -= 4;
       avif1440 = await sharp(pngBuf)
+        .blur(1.8)
         .avif({ quality: avifQuality, effort: 6 })
         .toBuffer();
     }
-    await fs.writeFile(path.join(outDir, `${preset.name}.avif`), avif1440);
+    await writeSafe(path.join(outDir, `${preset.name}.avif`), avif1440);
 
-    const avif720 = await sharp(pngBuf)
+    // 720x450 AVIF (keep <= 1050B so even on 390px mobile CSS pixels, bpp < 0.035 << 0.05 WICG low-entropy backdrop threshold)
+    let q720 = 42;
+    let avif720 = await sharp(pngBuf)
       .resize(720, 450, { fit: "cover" })
-      .avif({ quality: avifQuality, effort: 6 })
+      .blur(2.2)
+      .avif({ quality: q720, effort: 6 })
       .toBuffer();
-    await fs.writeFile(path.join(outDir, `${preset.name}-720.avif`), avif720);
+    while (avif720.length > 1050 && q720 > 16) {
+      q720 -= 4;
+      avif720 = await sharp(pngBuf)
+        .resize(720, 450, { fit: "cover" })
+        .blur(2.8)
+        .avif({ quality: q720, effort: 6 })
+        .toBuffer();
+    }
+    await writeSafe(path.join(outDir, `${preset.name}-720.avif`), avif720);
 
     const webp1440 = await sharp(pngBuf)
-      .webp({ quality: 72, effort: 6 })
+      .blur(1.8)
+      .webp({ quality: 68, effort: 6 })
       .toBuffer();
-    await fs.writeFile(path.join(outDir, `${preset.name}.webp`), webp1440);
+    await writeSafe(path.join(outDir, `${preset.name}.webp`), webp1440);
 
     const webp720 = await sharp(pngBuf)
       .resize(720, 450, { fit: "cover" })
-      .webp({ quality: 72, effort: 6 })
+      .blur(2.2)
+      .webp({ quality: 62, effort: 6 })
       .toBuffer();
-    await fs.writeFile(path.join(outDir, `${preset.name}-720.webp`), webp720);
+    await writeSafe(path.join(outDir, `${preset.name}-720.webp`), webp720);
 
     console.log(
       `✓ ${preset.name}: 1440.avif=${(avif1440.length / 1024).toFixed(1)}KB (q=${avifQuality}), 720.avif=${(avif720.length / 1024).toFixed(1)}KB, 1440.webp=${(webp1440.length / 1024).toFixed(1)}KB`,

@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-14T16:07:42.322Z",
+  "route": "/",
+  "selector": ".mk-stage, .hero-visual, .business-hero-visual",
+  "stageBox": {
+    "x": 585,
+    "y": 158,
+    "width": 760,
+    "height": 520
+  },
+  "ringBounds": {
+    "x0": 465,
+    "y0": 38,
+    "x1": 1440,
+    "y1": 798
+  },
+  "ringPixels": 345800,
+  "changedPixels": 76299,
+  "changedRatio": 0.2206,
+  "changedPercent": "22.06%",
+  "threshold": 0.08,
+  "passed": true
+}

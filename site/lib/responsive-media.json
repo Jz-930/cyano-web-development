@@ -890,38 +890,6 @@
       }
     ]
   },
-  "/v3-materials/proposal-focus.webp": {
-    "width": 440,
-    "height": 310,
-    "variants": [
-      {
-        "width": 160,
-        "avif": "/media/v3/dd25c53f4a72-160.avif",
-        "webp": "/media/v3/dd25c53f4a72-160.webp"
-      },
-      {
-        "width": 320,
-        "avif": "/media/v3/dd25c53f4a72-320.avif",
-        "webp": "/media/v3/dd25c53f4a72-320.webp"
-      }
-    ]
-  },
-  "/v3-materials/wiki-focus.webp": {
-    "width": 440,
-    "height": 310,
-    "variants": [
-      {
-        "width": 160,
-        "avif": "/media/v3/6db46c679258-160.avif",
-        "webp": "/media/v3/6db46c679258-160.webp"
-      },
-      {
-        "width": 320,
-        "avif": "/media/v3/6db46c679258-320.avif",
-        "webp": "/media/v3/6db46c679258-320.webp"
-      }
-    ]
-  },
   "/v3-materials/founder-1.webp": {
     "width": 320,
     "height": 320,

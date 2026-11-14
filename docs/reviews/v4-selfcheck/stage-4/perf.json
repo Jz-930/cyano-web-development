@@ -1,0 +1,363 @@
+{
+  "measuredAt": "2026-11-14T16:11:47.915Z",
+  "runsPerMobilePage": 5,
+  "mobile": {
+    "/": {
+      "medianTbtMs": 169,
+      "medianLcpMs": 1168,
+      "medianCls": 0.0001,
+      "lcpTag": "h1",
+      "lcpSelector": "h1.h1-home",
+      "samples": [
+        {
+          "fcpMs": 1236,
+          "lcpMs": 1236,
+          "lcpTag": "h1",
+          "lcpSelector": "h1.h1-home",
+          "tbtMs": 169,
+          "cls": 0.0001
+        },
+        {
+          "fcpMs": 1152,
+          "lcpMs": 1152,
+          "lcpTag": "h1",
+          "lcpSelector": "h1.h1-home",
+          "tbtMs": 169,
+          "cls": 0.0001
+        },
+        {
+          "fcpMs": 1180,
+          "lcpMs": 1180,
+          "lcpTag": "h1",
+          "lcpSelector": "h1.h1-home",
+          "tbtMs": 167,
+          "cls": 0.0001
+        },
+        {
+          "fcpMs": 1168,
+          "lcpMs": 1168,
+          "lcpTag": "h1",
+          "lcpSelector": "h1.h1-home",
+          "tbtMs": 163,
+          "cls": 0.0001
+        },
+        {
+          "fcpMs": 1152,
+          "lcpMs": 1152,
+          "lcpTag": "h1",
+          "lcpSelector": "h1.h1-home",
+          "tbtMs": 172,
+          "cls": 0.0001
+        }
+      ]
+    },
+    "/en": {
+      "medianTbtMs": 88,
+      "medianLcpMs": 872,
+      "medianCls": 0,
+      "lcpTag": "h1",
+      "lcpSelector": "h1.h1-home",
+      "samples": [
+        {
+          "fcpMs": 888,
+          "lcpMs": 888,
+          "lcpTag": "h1",
+          "lcpSelector": "h1.h1-home",
+          "tbtMs": 88,
+          "cls": 0
+        },
+        {
+          "fcpMs": 872,
+          "lcpMs": 872,
+          "lcpTag": "h1",
+          "lcpSelector": "h1.h1-home",
+          "tbtMs": 98,
+          "cls": 0
+        },
+        {
+          "fcpMs": 872,
+          "lcpMs": 872,
+          "lcpTag": "h1",
+          "lcpSelector": "h1.h1-home",
+          "tbtMs": 90,
+          "cls": 0
+        },
+        {
+          "fcpMs": 892,
+          "lcpMs": 892,
+          "lcpTag": "h1",
+          "lcpSelector": "h1.h1-home",
+          "tbtMs": 84,
+          "cls": 0
+        },
+        {
+          "fcpMs": 872,
+          "lcpMs": 872,
+          "lcpTag": "h1",
+          "lcpSelector": "h1.h1-home",
+          "tbtMs": 83,
+          "cls": 0
+        }
+      ]
+    },
+    "/technology": {
+      "medianTbtMs": 70,
+      "medianLcpMs": 1112,
+      "medianCls": 0,
+      "lcpTag": "p",
+      "lcpSelector": "p.large-copy",
+      "samples": [
+        {
+          "fcpMs": 1152,
+          "lcpMs": 1152,
+          "lcpTag": "p",
+          "lcpSelector": "p.large-copy",
+          "tbtMs": 70,
+          "cls": 0
+        },
+        {
+          "fcpMs": 1108,
+          "lcpMs": 1108,
+          "lcpTag": "p",
+          "lcpSelector": "p.large-copy",
+          "tbtMs": 70,
+          "cls": 0
+        },
+        {
+          "fcpMs": 1128,
+          "lcpMs": 1128,
+          "lcpTag": "p",
+          "lcpSelector": "p.large-copy",
+          "tbtMs": 71,
+          "cls": 0
+        },
+        {
+          "fcpMs": 1104,
+          "lcpMs": 1104,
+          "lcpTag": "p",
+          "lcpSelector": "p.large-copy",
+          "tbtMs": 68,
+          "cls": 0
+        },
+        {
+          "fcpMs": 1112,
+          "lcpMs": 1112,
+          "lcpTag": "p",
+          "lcpSelector": "p.large-copy",
+          "tbtMs": 63,
+          "cls": 0
+        }
+      ]
+    },
+    "/cases/proposal-generation": {
+      "medianTbtMs": 73,
+      "medianLcpMs": 1140,
+      "medianCls": 0,
+      "lcpTag": "p",
+      "lcpSelector": "p",
+      "samples": [
+        {
+          "fcpMs": 1144,
+          "lcpMs": 1144,
+          "lcpTag": "p",
+          "lcpSelector": "p",
+          "tbtMs": 75,
+          "cls": 0
+        },
+        {
+          "fcpMs": 1160,
+          "lcpMs": 1160,
+          "lcpTag": "p",
+          "lcpSelector": "p",
+          "tbtMs": 73,
+          "cls": 0
+        },
+        {
+          "fcpMs": 1140,
+          "lcpMs": 1140,
+          "lcpTag": "p",
+          "lcpSelector": "p",
+          "tbtMs": 73,
+          "cls": 0
+        },
+        {
+          "fcpMs": 1136,
+          "lcpMs": 1136,
+          "lcpTag": "p",
+          "lcpSelector": "p",
+          "tbtMs": 70,
+          "cls": 0
+        },
+        {
+          "fcpMs": 1116,
+          "lcpMs": 1116,
+          "lcpTag": "p",
+          "lcpSelector": "p",
+          "tbtMs": 74,
+          "cls": 0
+        }
+      ]
+    }
+  },
+  "firstScreenFonts": {
+    "/": {
+      "transferBytes": 152844,
+      "transferKB": 149.3,
+      "encodedBytes": 151344,
+      "encodedKB": 147.8,
+      "lcpMs": 260,
+      "files": [
+        {
+          "url": "/fonts/noto-sc-core.30a73f16d3.woff2",
+          "initiatorType": "link",
+          "startTime": 8,
+          "transferSize": 79756,
+          "encodedBodySize": 79456
+        },
+        {
+          "url": "/_next/static/media/ae068b8ac0b39b1b-s.p.woff2",
+          "initiatorType": "css",
+          "startTime": 24,
+          "transferSize": 11348,
+          "encodedBodySize": 11048
+        },
+        {
+          "url": "/_next/static/media/15541ff5d58b6da7-s.p.woff2",
+          "initiatorType": "css",
+          "startTime": 24,
+          "transferSize": 10404,
+          "encodedBodySize": 10104
+        },
+        {
+          "url": "/_next/static/media/520a6afe0774d85d-s.woff2",
+          "initiatorType": "css",
+          "startTime": 25,
+          "transferSize": 5532,
+          "encodedBodySize": 5232
+        },
+        {
+          "url": "/fonts/noto-sc-home.a76b1c0158.woff2",
+          "initiatorType": "css",
+          "startTime": 89,
+          "transferSize": 45804,
+          "encodedBodySize": 45504
+        }
+      ]
+    },
+    "/about": {
+      "transferBytes": 111380,
+      "transferKB": 108.8,
+      "encodedBytes": 109880,
+      "encodedKB": 107.3,
+      "lcpMs": 92,
+      "files": [
+        {
+          "url": "/fonts/noto-sc-core.30a73f16d3.woff2",
+          "initiatorType": "link",
+          "startTime": 6,
+          "transferSize": 79756,
+          "encodedBodySize": 79456
+        },
+        {
+          "url": "/_next/static/media/15541ff5d58b6da7-s.p.woff2",
+          "initiatorType": "css",
+          "startTime": 21,
+          "transferSize": 10404,
+          "encodedBodySize": 10104
+        },
+        {
+          "url": "/_next/static/media/ae068b8ac0b39b1b-s.p.woff2",
+          "initiatorType": "css",
+          "startTime": 23,
+          "transferSize": 11348,
+          "encodedBodySize": 11048
+        },
+        {
+          "url": "/_next/static/media/520a6afe0774d85d-s.woff2",
+          "initiatorType": "css",
+          "startTime": 23,
+          "transferSize": 5532,
+          "encodedBodySize": 5232
+        },
+        {
+          "url": "/fonts/noto-sc-about.d730e5c3f3.woff2",
+          "initiatorType": "css",
+          "startTime": 70,
+          "transferSize": 4340,
+          "encodedBodySize": 4040
+        }
+      ]
+    },
+    "/technology": {
+      "transferBytes": 119320,
+      "transferKB": 116.5,
+      "encodedBytes": 117820,
+      "encodedKB": 115.1,
+      "lcpMs": 96,
+      "files": [
+        {
+          "url": "/fonts/noto-sc-core.30a73f16d3.woff2",
+          "initiatorType": "link",
+          "startTime": 6,
+          "transferSize": 79756,
+          "encodedBodySize": 79456
+        },
+        {
+          "url": "/_next/static/media/ae068b8ac0b39b1b-s.p.woff2",
+          "initiatorType": "css",
+          "startTime": 19,
+          "transferSize": 11348,
+          "encodedBodySize": 11048
+        },
+        {
+          "url": "/_next/static/media/15541ff5d58b6da7-s.p.woff2",
+          "initiatorType": "css",
+          "startTime": 19,
+          "transferSize": 10404,
+          "encodedBodySize": 10104
+        },
+        {
+          "url": "/_next/static/media/520a6afe0774d85d-s.woff2",
+          "initiatorType": "css",
+          "startTime": 19,
+          "transferSize": 5532,
+          "encodedBodySize": 5232
+        },
+        {
+          "url": "/fonts/noto-sc-tech.f74e2fd07f.woff2",
+          "initiatorType": "css",
+          "startTime": 72,
+          "transferSize": 12280,
+          "encodedBodySize": 11980
+        }
+      ]
+    }
+  },
+  "maxCls": 0.0002,
+  "clsByRoute": {
+    "/services": 0,
+    "/en/services": 0.0001,
+    "/en": 0.0002,
+    "/": 0.0002,
+    "/en/services/document-automation": 0,
+    "/services/document-automation": 0,
+    "/en/cases": 0,
+    "/cases": 0,
+    "/en/cases/proposal-generation": 0,
+    "/cases/proposal-generation": 0,
+    "/en/cases/it-knowledge-assistant": 0,
+    "/technology": 0,
+    "/en/technology": 0,
+    "/en/engagement": 0,
+    "/about": 0,
+    "/engagement": 0,
+    "/en/about": 0,
+    "/en/insights": 0,
+    "/en/insights/proposal-draft-in-15-minutes": 0,
+    "/insights/proposal-draft-in-15-minutes": 0,
+    "/contact": 0,
+    "/en/contact": 0
+  },
+  "logoRequests": [],
+  "failures": []
+}

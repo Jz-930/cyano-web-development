@@ -16,29 +16,29 @@ async function writeFileSafe(filePath, data) {
     }
   }
 }
+
 const notoSource = path.join(root, "../assets/source/NotoSansSC-variable.ttf");
 const interSource = path.join(root, "../assets/source/inter-variable.woff2");
 const manropeSource = path.join(root, "../assets/source/manrope-variable.woff2");
 
 const CJK_RE = /[\u2000-\u206f\u3000-\u303f\u3400-\u9fff\uff00-\uffef]/g;
 
-// 1. Subset Latin variable fonts from assets/source/
+// 1. Subset Latin variable fonts (wght 400–500 per 02 §6.1 & 03 §5)
 const latinGlyphs =
   Array.from({ length: 95 }, (_, i) => String.fromCharCode(i + 32)).join("") +
   "·—–‘’“”…•→↗×≤≥±©®°‑§¥μ≠";
-const interBuf = await subsetFont(await fs.readFile(interSource), latinGlyphs, {
+const latinOpts = {
   targetFormat: "woff2",
-  noHinting: true,
   variationAxes: { wght: { min: 400, max: 500 } },
-});
-await fs.writeFile(path.join(root, "app/fonts/inter-latin.woff2"), interBuf);
-
-const manropeBuf = await subsetFont(await fs.readFile(manropeSource), latinGlyphs, {
-  targetFormat: "woff2",
+  keepFeatures: [],
+  noLayoutClosure: true,
   noHinting: true,
-  variationAxes: { wght: { min: 300, max: 500 } },
-});
-await fs.writeFile(path.join(root, "app/fonts/manrope-latin.woff2"), manropeBuf);
+};
+const interBuf = await subsetFont(await fs.readFile(interSource), latinGlyphs, latinOpts);
+await writeFileSafe(path.join(root, "app/fonts/inter-latin.woff2"), interBuf);
+
+const manropeBuf = await subsetFont(await fs.readFile(manropeSource), latinGlyphs, latinOpts);
+await writeFileSafe(path.join(root, "app/fonts/manrope-latin.woff2"), manropeBuf);
 
 function decodeEntities(str) {
   return str
@@ -82,26 +82,52 @@ async function walkFiles(dir, predicate, out = []) {
   return out;
 }
 
-// 2. Collect core CJK charset from first 2 screens of built zh homepage (02 §6.1: header + first 2 sections)
+// 2. Collect route-specific CJK charsets for /, /about, /technology (including client interactive states)
 const appBuildDir = path.join(root, ".next/server/app");
 const homeHtml = await fs.readFile(path.join(appBuildDir, "index.html"), "utf8");
 const headerBlock = (homeHtml.match(/<header\b[\s\S]*?<\/header>/i) || [""])[0];
-const firstTwoSections = [...homeHtml.matchAll(/<section\b[\s\S]*?<\/section>/gi)]
-  .slice(0, 2)
-  .map((m) => m[0])
-  .join("\n");
-let coreText = extractHtmlTextAndAttrs(
-  firstTwoSections ? `<body>${headerBlock}\n${firstTwoSections}</body>` : homeHtml,
-);
-const fullHomeText = extractHtmlTextAndAttrs(homeHtml);
+const headerChars = new Set(extractHtmlTextAndAttrs(headerBlock).match(CJK_RE) || []);
 
-// 3. Collect /about and /technology subsets + remaining zh pages and v4/v1 JSON
+let fullHomeText = extractHtmlTextAndAttrs(homeHtml);
+for (const scene of ["proposal", "wiki", "sales", "data", "stage"]) {
+  try {
+    const mj = JSON.parse(
+      await fs.readFile(path.join(root, `content/v4/mockups/${scene}.json`), "utf8"),
+    );
+    for (const val of Object.values(mj)) {
+      if (val?.zh) fullHomeText += "\n" + val.zh;
+    }
+  } catch {}
+}
+
+const copyNew = JSON.parse(
+  await fs.readFile(path.join(root, "content/v4/copy-new.json"), "utf8"),
+);
+for (const [k, v] of Object.entries(copyNew)) {
+  if (v.status !== "approved" && v.status !== "class-a") continue;
+  if (
+    /^(S1-|S11-|cite\.(case-proposal-15min|case-wiki-80|team-6y)$|cite-)/.test(k) &&
+    v.zh
+  ) {
+    fullHomeText += "\n" + v.zh;
+  }
+}
+
 let aboutText = "";
 try {
   aboutText = extractHtmlTextAndAttrs(
     await fs.readFile(path.join(appBuildDir, "about.html"), "utf8"),
   );
 } catch {}
+for (const [k, v] of Object.entries(copyNew)) {
+  if (
+    (v.status === "approved" || v.status === "class-a") &&
+    /^(cite\.team-6y$|cite-)/.test(k) &&
+    v.zh
+  ) {
+    aboutText += "\n" + v.zh;
+  }
+}
 
 let techText = "";
 try {
@@ -109,8 +135,18 @@ try {
     await fs.readFile(path.join(appBuildDir, "technology.html"), "utf8"),
   );
 } catch {}
+for (const [k, v] of Object.entries(copyNew)) {
+  if (
+    (v.status === "approved" || v.status === "class-a") &&
+    /^(cite\.core-|cite-)/.test(k) &&
+    v.zh
+  ) {
+    techText += "\n" + v.zh;
+  }
+}
 
-let allText = coreText + "\n" + fullHomeText + "\n" + aboutText + "\n" + techText;
+// 3. Collect all site-wide CJK chars across HTML, JSON, and TSX
+let allText = fullHomeText + "\n" + aboutText + "\n" + techText;
 
 const htmlFiles = await walkFiles(appBuildDir, (_p, name) => name.endsWith(".html"));
 for (const f of htmlFiles) {
@@ -142,47 +178,33 @@ for (const tf of tsxFiles) {
   allText += "\n" + (await fs.readFile(tf, "utf8"));
 }
 
-const coreSet = new Set(coreText.match(CJK_RE) || []);
-const aboutRawChars = new Set(aboutText.match(CJK_RE) || []);
-const techRawChars = new Set(techText.match(CJK_RE) || []);
-// Promote Home-rest chars that also appear on /about or /technology into coreSet so neither /about nor /technology fetches noto-sc-home
-for (const ch of fullHomeText.match(CJK_RE) || []) {
-  if (aboutRawChars.has(ch) || techRawChars.has(ch)) {
-    coreSet.add(ch);
-  }
-}
-const homeRestSet = new Set(
-  [...(fullHomeText.match(CJK_RE) || [])].filter((ch) => !coreSet.has(ch)),
-);
-const rawAboutSet = new Set(
-  [...aboutRawChars].filter((ch) => !coreSet.has(ch) && !homeRestSet.has(ch)),
-);
-const rawTechSet = new Set(
-  [...techRawChars].filter((ch) => !coreSet.has(ch) && !homeRestSet.has(ch)),
-);
-// Promote chars shared between /about and /technology into coreSet so neither page fetches the other's slice
-for (const ch of rawAboutSet) {
-  if (rawTechSet.has(ch)) {
-    coreSet.add(ch);
-  }
-}
-const aboutSet = new Set([...rawAboutSet].filter((ch) => !coreSet.has(ch)));
-const techSet = new Set([...rawTechSet].filter((ch) => !coreSet.has(ch)));
+const homeAllSet = new Set(fullHomeText.match(CJK_RE) || []);
+const aboutAllSet = new Set(aboutText.match(CJK_RE) || []);
+const techAllSet = new Set(techText.match(CJK_RE) || []);
 const allSet = new Set(allText.match(CJK_RE) || []);
 
+// Core = header chars + any char shared by >= 2 of (Home, About, Technology) -> guarantees pairwise disjoint route slices!
+const coreSet = new Set(headerChars);
+for (const ch of new Set([...homeAllSet, ...aboutAllSet, ...techAllSet])) {
+  const count =
+    (homeAllSet.has(ch) ? 1 : 0) +
+    (aboutAllSet.has(ch) ? 1 : 0) +
+    (techAllSet.has(ch) ? 1 : 0);
+  if (count >= 2) coreSet.add(ch);
+}
+
+const homeRestChars = [...homeAllSet].filter((ch) => !coreSet.has(ch)).sort();
+const aboutChars = [...aboutAllSet].filter((ch) => !coreSet.has(ch)).sort();
+const techChars = [...techAllSet].filter((ch) => !coreSet.has(ch)).sort();
 const coreChars = [...coreSet].sort();
-const homeRestChars = [...homeRestSet].sort();
-const aboutChars = [...aboutSet].sort();
-const techChars = [...techSet].sort();
-const extChars = [...allSet]
-  .filter(
-    (ch) =>
-      !coreSet.has(ch) &&
-      !homeRestSet.has(ch) &&
-      !aboutSet.has(ch) &&
-      !techSet.has(ch),
-  )
-  .sort();
+
+const coveredByPrimary = new Set([
+  ...coreChars,
+  ...homeRestChars,
+  ...aboutChars,
+  ...techChars,
+]);
+const extChars = [...allSet].filter((ch) => !coveredByPrimary.has(ch)).sort();
 
 function toUnicodeRange(chars) {
   if (chars.length === 0) return "U+3000";
@@ -246,7 +268,7 @@ for (const slice of slices) {
   const buf = await subsetFont(rawNoto, " " + slice.chars.join(""), cjkOpts);
   const fileName = `${slice.prefix}.${hash(buf)}.woff2`;
   if (slice.prefix === "noto-sc-core") coreHref = `/fonts/${fileName}`;
-  await fs.writeFile(path.join(pubFonts, fileName), buf);
+  await writeFileSafe(path.join(pubFonts, fileName), buf);
   css += `@font-face {
   font-family: "Noto Sans SC Subset";
   src: url("/fonts/${fileName}") format("woff2");

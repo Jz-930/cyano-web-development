@@ -1,0 +1,18 @@
+{
+  "/": {
+    "wrapRight": 1360,
+    "stageRight": 1360,
+    "rightEdgeDelta": 0,
+    "evidenceBottom": 860,
+    "h1Top": 282.5,
+    "h1Bottom": 417.6
+  },
+  "/en": {
+    "wrapRight": 1360,
+    "stageRight": 1360,
+    "rightEdgeDelta": 0,
+    "evidenceBottom": 860,
+    "h1Top": 202,
+    "h1Bottom": 418.2
+  }
+}

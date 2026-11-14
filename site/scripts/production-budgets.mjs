@@ -51,11 +51,6 @@ fs.writeFileSync(
   path.join(root, "reports/budgets.json"),
   JSON.stringify(report, null, 2) + "\n",
 );
-fs.mkdirSync(path.join(root, "../docs/implementation"), { recursive: true });
-fs.writeFileSync(
-  path.join(root, "../docs/implementation/v3-build-budgets.json"),
-  JSON.stringify(report, null, 2) + "\n",
-);
 
 for (const r of results) {
   console.log(

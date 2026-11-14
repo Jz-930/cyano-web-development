@@ -1,0 +1,36 @@
+{
+  "summaryByWidth": {
+    "390": {
+      "minLeft": 21.64,
+      "maxLeft": 21.64,
+      "delta": 0,
+      "pagesChecked": 22
+    },
+    "800": {
+      "minLeft": 44.41,
+      "maxLeft": 44.41,
+      "delta": 0,
+      "pagesChecked": 22
+    },
+    "1024": {
+      "minLeft": 56.83,
+      "maxLeft": 56.83,
+      "delta": 0,
+      "pagesChecked": 22
+    },
+    "1280": {
+      "minLeft": 71.05,
+      "maxLeft": 71.05,
+      "delta": 0,
+      "pagesChecked": 22
+    },
+    "1440": {
+      "minLeft": 80,
+      "maxLeft": 80,
+      "delta": 0,
+      "pagesChecked": 22
+    }
+  },
+  "issueCount": 0,
+  "issues": []
+}

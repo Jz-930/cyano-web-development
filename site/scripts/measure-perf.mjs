@@ -282,6 +282,9 @@ for (const [route, m] of Object.entries(mobileResults)) {
   if (m.medianLcpMs > 2500) {
     failures.push(`Mobile LCP ${route} = ${m.medianLcpMs}ms (> 2500ms)`);
   }
+  if ((route === "/" || route === "/en") && m.lcpTag !== "h1") {
+    failures.push(`LCP element on ${route} = ${m.lcpTag} (expected h1)`);
+  }
 }
 for (const [route, f] of Object.entries(fontResults)) {
   if (f.encodedBytes > 150 * 1024) {

@@ -47,7 +47,7 @@ for (const route of routes) {
   await page.goto(`${baseUrl}${route}`, { waitUntil: "networkidle" });
   const pageHits = await page.evaluate(() => {
     const NUM_RE =
-      /(?:<\s*)?\d+(?:[.,:×/–-]\d+)*[%+]?(?:[\s-]*(?:个工作日|个月|分钟|毫秒|小时|年|周|天|秒|项|个|份|轮|级|行|(?:business days?|minutes?|months?|weeks?|hours?|days?|years?|min|ms|s)(?![A-Za-z])))?/g;
+      /(?:W(?=\d)|<\s*)?\d+(?:[.,:×/–-]\d+)*[%+]?(?:[\s-]*(?:个工作日|个月|分钟|毫秒|小时|年|周|天|秒|项|个|份|轮|级|行|(?:business days?|minutes?|months?|weeks?|hours?|days?|years?|min|ms|s)(?![A-Za-z])))?/g;
 
     function selectorOf(el) {
       if (!el || el.nodeType !== 1) return "unknown";

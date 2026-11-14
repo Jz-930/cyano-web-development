@@ -157,15 +157,18 @@ for (const [key, entry] of Object.entries(rawOverrides)) {
 // 3. Approved new copy + mockups (02 §9.1)
 const rawNew = readJson("content/v4/copy-new.json");
 const newSet = new Set();
+const stripMdBold = (s) => String(s).replace(/\*\*/g, "");
 for (const entry of Object.values(rawNew)) {
   if (entry.status === "approved" || entry.status === "class-a") {
     if (entry.zh) {
-      newSet.add(norm(entry.zh));
-      for (const line of entry.zh.split(/\n+/)) if (norm(line)) newSet.add(norm(line));
+      const z = stripMdBold(entry.zh);
+      newSet.add(norm(z));
+      for (const line of z.split(/\n+/)) if (norm(line)) newSet.add(norm(line));
     }
     if (entry.en) {
-      newSet.add(norm(entry.en));
-      for (const line of entry.en.split(/\n+/)) if (norm(line)) newSet.add(norm(line));
+      const e = stripMdBold(entry.en);
+      newSet.add(norm(e));
+      for (const line of e.split(/\n+/)) if (norm(line)) newSet.add(norm(line));
     }
   }
 }
@@ -358,7 +361,78 @@ for (const locale of ["zh", "en"]) {
     ]);
 
     const missingV1Items = [];
-    if (baselineEntry) {
+    if (pageName === "Home") {
+      // 06-首页.md §11 explicit Home v1 checklist
+      const isNewApproved = (id) => {
+        const e = rawNew[id];
+        return Boolean(e && (e.status === "approved" || e.status === "class-a"));
+      };
+      const v1Text = (sec, k) => {
+        const ov = rawOverrides[`${sec}/${k}`];
+        if (ov && (ov.status === "approved" || ov.status === "class-a")) {
+          return ov[locale];
+        }
+        return v1Copy[sec][k][locale];
+      };
+      const requireSubstring = (label, rawExpected) => {
+        const cleanExp = compact(String(rawExpected).replace(/\s*[→↗]\s*$/g, ""));
+        if (cleanExp && !currentCompact.includes(cleanExp)) {
+          missingV1Items.push(`${label}: ${rawExpected}`);
+        }
+      };
+
+      requireSubstring("D.1/主按钮", v1Text("D.1", "主按钮"));
+      if (!isNewApproved("H-0")) {
+        requireSubstring("D.2/Eyebrow", v1Text("D.2", "Eyebrow"));
+      }
+      requireSubstring("D.2/主标题", v1Text("D.2", "主标题"));
+      requireSubstring("D.2/副标题", v1Text("D.2", "副标题"));
+      const btnParts = v1Text("D.2", "按钮").split(" · ");
+      if (btnParts[1]) requireSubstring("D.2/按钮[1]", btnParts[1]);
+
+      const dashSep = locale === "zh" ? " —— " : " — ";
+      for (const n of [1, 2, 3, 4]) {
+        const [left = "", ...rest] = v1Text("D.2", `信任条数字 ${n}`).split(dashSep);
+        requireSubstring(`D.2/信任条数字 ${n}[val]`, left);
+        requireSubstring(`D.2/信任条数字 ${n}[desc]`, rest.join(dashSep));
+      }
+      for (const ind of v1Text("D.2", "行业名").split(" · ")) {
+        requireSubstring("D.2/行业名", ind);
+      }
+      requireSubstring("D.2/宣言句", v1Text("D.2", "宣言句"));
+      requireSubstring("D.2/宣言段 1", v1Text("D.2", "宣言段 1"));
+      requireSubstring("D.2/宣言段 2", v1Text("D.2", "宣言段 2"));
+      requireSubstring("D.2/解决方案区标题", v1Text("D.2", "解决方案区标题"));
+      requireSubstring("D.2/精选案例标题", v1Text("D.2", "精选案例标题"));
+      requireSubstring("D.2/精选案例导语", v1Text("D.2", "精选案例导语"));
+
+      if (!isNewApproved("H-2t")) {
+        requireSubstring("D.2/痛点区标题", v1Text("D.2", "痛点区标题"));
+      }
+      for (const n of [1, 2, 3, 4]) {
+        const [before = "", answer = ""] = v1Text("D.2", `痛点 ${n}`).split("→");
+        const [title = "", ...issueParts] = before.split(dashSep);
+        requireSubstring(`D.2/痛点 ${n}[title]`, title);
+        requireSubstring(`D.2/痛点 ${n}[issue]`, issueParts.join(dashSep));
+        requireSubstring(`D.2/痛点 ${n}[answer]`, answer);
+      }
+      requireSubstring("D.2/痛点区链接", v1Text("D.2", "痛点区链接"));
+      requireSubstring("D.2/合作区标题", v1Text("D.2", "合作区标题"));
+      requireSubstring("D.2/合作区链接", v1Text("D.2", "合作区链接"));
+      requireSubstring("D.2/团队区标题", v1Text("D.2", "团队区标题"));
+      requireSubstring("D.2/团队区导语", v1Text("D.2", "团队区导语"));
+      requireSubstring("D.2/团队区链接", v1Text("D.2", "团队区链接"));
+      requireSubstring("D.3/销售 Hero", v1Text("D.3", "销售 Hero"));
+      requireSubstring("D.3/文档 Hero", v1Text("D.3", "文档 Hero"));
+      requireSubstring("D.3/知识库 Hero", v1Text("D.3", "知识库 Hero"));
+      requireSubstring("D.3/数据 Hero", v1Text("D.3", "数据 Hero"));
+      if (!isNewApproved("H-8t")) {
+        requireSubstring("D.1/收尾 CTA 口号", v1Text("D.1", "收尾 CTA 口号"));
+      }
+      if (!isNewApproved("H-8s")) {
+        requireSubstring("D.1/收尾 CTA 副句", v1Text("D.1", "收尾 CTA 副句"));
+      }
+    } else if (baselineEntry) {
       for (const frag of baselineEntry.fragments) {
         const cleanFrag = frag.replace(/[↗→←↑↓]+$/g, "");
         if (!cleanFrag || PURE_SYMBOL_OR_NUMBER_RE.test(cleanFrag)) continue;

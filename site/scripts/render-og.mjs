@@ -249,10 +249,19 @@ try {
       });
 
       const outFile = path.join(outDir, `${ins.slug}-${locale}.png`);
-      await sharp(buf)
+      const pngOut = await sharp(buf)
         .extract({ left: 0, top: 22, width: 1200, height: 630 })
         .png({ compressionLevel: 9 })
-        .toFile(outFile);
+        .toBuffer();
+      for (let attempt = 0; attempt < 5; attempt++) {
+        try {
+          await fs.writeFile(outFile, pngOut);
+          break;
+        } catch (err) {
+          if (attempt === 4) throw err;
+          await new Promise((r) => setTimeout(r, 120 * (attempt + 1)));
+        }
+      }
     }
   }
 
