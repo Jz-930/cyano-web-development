@@ -65,6 +65,13 @@
   gap: var(--sp-1);
   min-width: 160px;
 }
+.metric-badge-solid {
+  background: var(--n1);
+  border: 1px solid var(--white-08);
+  box-shadow: var(--inner-highlight), var(--badge-shadow);
+  border-radius: var(--r-card);
+  padding: var(--sp-3) var(--sp-4);
+}
 .metric-badge strong {
   font-size: 48px;
 }

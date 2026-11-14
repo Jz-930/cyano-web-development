@@ -122,18 +122,19 @@ export function LightField({
       ref={ref}
       className={`light-field field-${preset}`}
       data-preset={preset}
+      data-intro={intro ? "true" : undefined}
       aria-hidden="true"
     >
       <picture>
         <source
           type="image/avif"
           srcSet={`${p.avif720} 720w, ${p.avif1440} 1440w`}
-          sizes="100vw"
+          sizes="(max-width: 800px) 240px, 100vw"
         />
         <source
           type="image/webp"
           srcSet={`${p.webp720} 720w, ${p.webp1440} 1440w`}
-          sizes="100vw"
+          sizes="(max-width: 800px) 240px, 100vw"
         />
         <img
           src={p.webp1440}

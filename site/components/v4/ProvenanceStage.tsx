@@ -58,10 +58,10 @@ export function ProvenanceStage({ locale }: { locale: Locale }) {
   useEffect(() => {
     const shell = shellRef.current;
     if (!shell) return;
-    const syncScale = () => {
+    const syncScale = (widthHint?: number) => {
       const vw = window.innerWidth;
       if (vw > 800 && vw < 1024) {
-        const w = shell.clientWidth;
+        const w = widthHint ?? shell.clientWidth;
         const k = Math.min(1, w / 760);
         shell.style.setProperty("--stage-k", k.toFixed(4));
         shell.style.height = `${Math.round(520 * k)}px`;
@@ -70,13 +70,15 @@ export function ProvenanceStage({ locale }: { locale: Locale }) {
         shell.style.removeProperty("height");
       }
     };
-    const ro = new ResizeObserver(syncScale);
+    const ro = new ResizeObserver((entries) => {
+      syncScale(entries[0]?.contentRect.width);
+    });
     ro.observe(shell);
-    window.addEventListener("resize", syncScale, { passive: true });
-    syncScale();
+    const onWinResize = () => syncScale();
+    window.addEventListener("resize", onWinResize, { passive: true });
     return () => {
       ro.disconnect();
-      window.removeEventListener("resize", syncScale);
+      window.removeEventListener("resize", onWinResize);
     };
   }, []);
 

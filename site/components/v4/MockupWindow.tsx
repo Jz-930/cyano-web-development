@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Check } from "lucide-react";
 
 export type MockupWindowProps = {
   system: string;
@@ -34,7 +35,9 @@ export function MockupWindow({
             className="mk-status"
             data-tone={statusTone !== "default" ? statusTone : undefined}
           >
-            {statusTone === "review" ? "✓ " : ""}
+            {statusTone === "review" ? (
+              <Check size={10} aria-hidden="true" style={{ marginRight: 2, verticalAlign: "-1px" }} />
+            ) : null}
             {status}
           </span>
         ) : null}

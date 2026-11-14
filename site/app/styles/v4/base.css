@@ -7,9 +7,6 @@
   width: min(var(--wrap), calc(100% - 2 * var(--gutter)));
   margin-inline: auto;
 }
-.home-hero {
-  padding-inline: max(var(--gutter), calc((100% - var(--wrap)) / 2));
-}
 .wrap-wide {
   width: min(1440px, calc(100% - 2 * var(--gutter)));
   margin-inline: auto;
@@ -185,8 +182,16 @@ html.js [data-reveal]:not(.is-in) {
   animation: vt-in 180ms var(--ease-out) both;
 }
 ::view-transition-group(.morph) {
-  animation-duration: 240ms;
-  animation-timing-function: var(--ease-spring);
+  animation-duration: 320ms;
+  animation-timing-function: var(--ease-in-out);
+}
+::view-transition-image-pair(.morph) {
+  animation-name: vt-via-blur;
+}
+@keyframes vt-via-blur {
+  30% {
+    filter: blur(3px);
+  }
 }
 @keyframes vt-out {
   to {

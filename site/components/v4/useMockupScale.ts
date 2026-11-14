@@ -15,25 +15,26 @@ export function useMockupScale(
     const el = ref.current;
     if (!el) return;
 
-    const update = () => {
-      const w = el.clientWidth;
+    const applyWidth = (w: number) => {
       if (!w) return;
       const fullK = Math.min(1, w / designWidth);
       if (designWidth > compactWidth && fullK < 0.62) {
-        setCompactFallback(true);
+        setCompactFallback((prev) => (prev ? prev : true));
         const ck = Math.min(1, w / compactWidth);
         el.style.setProperty("--mk-k", ck.toFixed(4));
         el.style.height = `${Math.round(compactHeight * ck)}px`;
       } else {
-        setCompactFallback(false);
+        setCompactFallback((prev) => (prev ? false : prev));
         el.style.setProperty("--mk-k", fullK.toFixed(4));
         el.style.height = `${Math.round(designHeight * fullK)}px`;
       }
     };
 
-    const ro = new ResizeObserver(update);
+    const ro = new ResizeObserver((entries) => {
+      const w = entries[0]?.contentRect.width || el.clientWidth;
+      applyWidth(w);
+    });
     ro.observe(el);
-    update();
 
     return () => ro.disconnect();
   }, [designWidth, designHeight, compactWidth, compactHeight]);

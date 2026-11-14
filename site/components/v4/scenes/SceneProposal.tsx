@@ -1,4 +1,4 @@
-import { FileText, FolderKanban, SlidersHorizontal } from "lucide-react";
+import { Check, FileText, FolderKanban, SlidersHorizontal } from "lucide-react";
 import type { Locale } from "@/lib/locale";
 import { mk } from "@/lib/mockups";
 
@@ -122,7 +122,7 @@ export function SceneProposal({
         <div className="mk-checks" data-done={step >= 4 ? "true" : "false"}>
           <span className="mk-checks-label">
             <span className="mk-checks-tick" aria-hidden="true">
-              ✓
+              <Check size={10} aria-hidden="true" />
             </span>
             {checksLabel ?? <span className="mk-skel mk-w-40" />}
           </span>

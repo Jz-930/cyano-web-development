@@ -61,17 +61,16 @@
   border-color: var(--dark-line);
   box-shadow: none;
 }
-/* Transitional hover feedback on legacy v3 cards until Stage 4/5 replaces them */
-.case-card,
-.insight-card,
-.engagement-card {
+/* Transitional hover feedback on legacy v3 cards until Stage 5 replaces them */
+.case-card:not(.card),
+.insight-card:not(.card) {
   transition:
     transform var(--dur-base) var(--ease-out),
     box-shadow var(--dur-base) var(--ease-out),
     border-color var(--dur-fast) var(--ease-out);
 }
-.case-card h3 a,
-.insight-card h3 a,
+.case-card:not(.card) h3 a,
+.insight-card:not(.card) h3 a,
 .case-visual,
 .insight-image {
   transition:
@@ -80,15 +79,14 @@
     transform var(--dur-base) var(--ease-out);
 }
 @media (hover: hover) and (pointer: fine) {
-  .case-card:hover,
-  .insight-card:hover,
-  .engagement-card:hover {
+  .case-card:not(.card):hover,
+  .insight-card:not(.card):hover {
     transform: translateY(var(--lift-1));
     box-shadow: var(--shadow-hover);
     border-color: var(--ink-20);
   }
-  .case-card h3 a:hover,
-  .insight-card h3 a:hover {
+  .case-card:not(.card) h3 a:hover,
+  .insight-card:not(.card) h3 a:hover {
     color: var(--link);
   }
   .case-visual:hover,
@@ -96,8 +94,8 @@
     opacity: 0.94;
   }
 }
-.case-card h3 a:active,
-.insight-card h3 a:active,
+.case-card:not(.card) h3 a:active,
+.insight-card:not(.card) h3 a:active,
 .case-visual:active,
 .insight-image:active {
   opacity: 0.8;

@@ -21,6 +21,9 @@
   opacity: 0;
   transition: opacity var(--dur-scene) var(--ease-out);
 }
+.light-field[data-intro="true"] canvas {
+  transition: none;
+}
 .light-field canvas.ready {
   opacity: 1;
 }
