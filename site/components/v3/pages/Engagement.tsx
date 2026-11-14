@@ -23,7 +23,7 @@ export function Engagement({ locale }: { locale: Locale }) {
         intro={text("D.4", "Hero 导语", locale)}
       />
       <section className="section">
-        <div className="container">
+        <div className="wrap">
           <EngagementCards locale={locale} />
           <p className="decision-note">{text("D.4", "怎么选", locale)}</p>
           <div className="comparison-wrap" role="region" aria-label={t(locale,"合作方式比较","Engagement comparison")} tabIndex={0}>
@@ -93,7 +93,7 @@ export function Engagement({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="section mist" id="diagnosis">
-        <div className="container">
+        <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.c38832f88ff[locale]}
             title={pageCopy.c5abfe6869e[locale]}
@@ -132,7 +132,7 @@ export function Engagement({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="section">
-        <div className="container faq-layout">
+        <div className="wrap faq-layout">
           <div>
             <Eyebrow>{pageCopy.ce7958d33de[locale]}</Eyebrow>
             <h2>{pageCopy.c6c5c0c27ab[locale]}</h2>

@@ -77,10 +77,6 @@ button:disabled {
   cursor: wait;
   opacity: 0.6;
 }
-.container {
-  width: min(1280px, calc(100% - 112px));
-  margin-inline: auto;
-}
 .section {
   padding: 112px 0;
 }
@@ -257,8 +253,6 @@ button:disabled {
 }
 .header-inner {
   height: 88px;
-  width: min(1440px, calc(100% - 88px));
-  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1485,7 +1479,7 @@ button:disabled {
   font-size: var(--s12);
   margin-top: 12px;
 }
-.section > .container > .result-grid:first-child {
+.section > .wrap > .result-grid:first-child {
   margin: 0 0 85px;
 }
 .gallery-main {
@@ -2081,7 +2075,7 @@ button:disabled {
   background: none center/cover;
   opacity: 0.09;
 }
-.name-story > .container {
+.name-story > .wrap {
   position: relative;
 }
 .name-story h2 {
@@ -2650,16 +2644,12 @@ button:disabled {
   }
   .header-inner {
     gap: 20px;
-    width: calc(100% - 60px);
   }
   .header-actions {
     gap: 18px;
   }
   .nav-item-row {
     font-size: var(--s12);
-  }
-  .container {
-    width: calc(100% - 80px);
   }
   .brand > span {
     font-size: var(--s20);
@@ -2740,9 +2730,6 @@ button:disabled {
   }
   .brand {
     gap: 7px;
-  }
-  .container {
-    width: calc(100% - 64px);
   }
   .hero-content h1 {
     font-size: var(--s48);
@@ -2930,7 +2917,6 @@ button:disabled {
   }
   .header-inner {
     height: 74px;
-    width: calc(100% - 40px);
   }
   .header-actions {
     margin-left: auto;
@@ -3427,14 +3413,10 @@ button:disabled {
   }
 }
 @media (max-width: 600px) {
-  .container {
-    width: calc(100% - 40px);
-  }
   .section {
     padding: 72px 0;
   }
   .header-inner {
-    width: calc(100% - 36px);
     height: 70px;
   }
   .brand > span {
@@ -4130,7 +4112,7 @@ button:disabled {
   .deliverables span {
     font-size: var(--s12);
   }
-  .section > .container > .result-grid:first-child {
+  .section > .wrap > .result-grid:first-child {
     margin: 0 0 55px;
   }
   .faq-section {

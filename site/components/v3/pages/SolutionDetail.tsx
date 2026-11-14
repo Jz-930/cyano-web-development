@@ -31,7 +31,7 @@ export function SolutionDetail({
         </Button>
       </PageHero>
       <section className="section">
-        <div className="container">
+        <div className="wrap">
           <div className="result-grid">
             {c.stats.map((v) => (
               <div key={v.label}>
@@ -55,7 +55,7 @@ export function SolutionDetail({
         </div>
       </section>
       <section className="section mist">
-        <div className="container">
+        <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.cb2e80ebd0a[locale]}
             title={pageCopy.c7b67845196[locale]}
@@ -76,7 +76,7 @@ export function SolutionDetail({
         </div>
       </section>
       <section className="section">
-        <div className="container">
+        <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.c186c216c6e[locale]}
             title={pageCopy.c2e9ee617bd[locale]}

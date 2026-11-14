@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function ZhError({ reset }: { reset: () => void }) {
   return (
     <main id="main" className="site-section surface-light min-h-[65vh]">
-      <div className="site-container max-w-2xl py-16">
+      <div className="site-wrap max-w-2xl py-16">
         <span className="eyebrow-badge">ERROR</span>
         <h1 className="mt-4 text-[length:var(--fs-display)] text-[#111111]">
           页面加载遇到临时问题

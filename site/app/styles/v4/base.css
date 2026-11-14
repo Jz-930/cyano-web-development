@@ -1,0 +1,16 @@
+:root {
+  --gutter: clamp(20px, 5.55vw, 80px);
+  --wrap: 1280px;
+}
+.wrap,
+.header-inner {
+  width: min(var(--wrap), calc(100% - 2 * var(--gutter)));
+  margin-inline: auto;
+}
+.home-hero {
+  padding-inline: max(var(--gutter), calc((100% - var(--wrap)) / 2));
+}
+.wrap-wide {
+  width: min(1440px, calc(100% - 2 * var(--gutter)));
+  margin-inline: auto;
+}

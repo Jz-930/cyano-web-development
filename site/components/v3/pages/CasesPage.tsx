@@ -15,7 +15,7 @@ export function CasesPage({ locale }: { locale: Locale }) {
         compact
       />
       <section className="section">
-        <div className="container">
+        <div className="wrap">
           <p className="confidential-note">
             {text("D.1", "保密说明（案例）", locale)}
           </p>

@@ -27,7 +27,7 @@ export function PageHero({
     <section className={`page-hero ${paper ? "paper-hero" : "dark"} ${compact ? "page-hero-compact" : ""}`}>
       {!paper && <CoreVisual locale={locale} />}
       <div className="page-hero-shade" />
-      <div className="container page-hero-inner">
+      <div className="wrap page-hero-inner">
         <div className="breadcrumb">
           <Link href={href(locale)}>{pageCopy.c76c92ba094[locale]}</Link>
           <span>/</span>

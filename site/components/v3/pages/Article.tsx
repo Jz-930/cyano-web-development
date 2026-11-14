@@ -21,7 +21,8 @@ export function Article({ locale, slug }: { locale: Locale; slug: string }) {
         compact
       />
       <section className="section article-section">
-        <div className="container article-layout">
+        <div className="wrap">
+          <div className="article-layout">
           <aside className="article-sidebar">
             <span>{a.date}</span>
             <h3>{a.author.role}</h3>
@@ -55,6 +56,7 @@ export function Article({ locale, slug }: { locale: Locale; slug: string }) {
               <Button locale={locale}>{text("D.1", "主按钮", locale)}</Button>
             </div>
           </article>
+          </div>
         </div>
       </section>
     </>

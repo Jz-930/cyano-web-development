@@ -14,7 +14,7 @@ export function Insights({ locale }: { locale: Locale }) {
         compact
       />
       <section className="section">
-        <div className="container">
+        <div className="wrap">
           <InsightCards locale={locale} />
         </div>
       </section>

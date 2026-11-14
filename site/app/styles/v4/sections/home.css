@@ -1,8 +1,15 @@
+.home-hero .hero-content {
+  width: auto;
+  margin: 0;
+}
 .hero-description {
   font-size: var(--s18);
   color: var(--on-dark);
 }
 @media (max-width: 800px) {
+  .home-hero {
+    padding-inline: var(--gutter);
+  }
   .hero-description {
     font-size: var(--s16);
   }

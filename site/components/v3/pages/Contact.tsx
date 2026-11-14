@@ -16,7 +16,7 @@ export function Contact({ locale }: { locale: Locale }) {
         compact
       />
       <section className="section contact-section">
-        <div className="container contact-layout">
+        <div className="wrap contact-layout">
           <aside>
             <Eyebrow>
               {pageCopy.c7f81224b43[locale]}

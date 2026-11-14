@@ -337,7 +337,7 @@ export function ClosingCta({ locale }: { locale: Locale }) {
   return (
     <section className="closing dark">
       <LightField strength="closing" />
-      <div className="container closing-inner">
+      <div className="wrap closing-inner">
         <div>
           <Eyebrow light>
             {t(locale, "项目咨询", "CONTACT US")}
@@ -353,7 +353,7 @@ export function ClosingCta({ locale }: { locale: Locale }) {
 export function SiteFooter({ locale }: { locale: Locale }) {
   return (
     <footer className="footer dark">
-      <div className="container">
+      <div className="wrap">
         <div className="footer-grid">
           <div className="footer-brand">
             <Link href={href(locale)} aria-label="Cyano">

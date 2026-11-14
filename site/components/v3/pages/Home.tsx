@@ -15,7 +15,7 @@ export function Home({ locale }: { locale: Locale }) {
     <>
       <section className="home-hero dark">
         <div className="hero-business-backdrop" />
-        <div className="container hero-content">
+        <div className="wrap hero-content">
           <Eyebrow light>{text("D.2", "Eyebrow", locale)}</Eyebrow>
           <h1>
             {locale === "zh" ? (
@@ -49,7 +49,7 @@ export function Home({ locale }: { locale: Locale }) {
           </div>
         </div>
         <BusinessHeroVisual locale={locale} />
-        <div className="container hero-bottom">
+        <div className="wrap hero-bottom">
           <div className="hero-caption">
             <span className="status-dot" />
             {pageCopy.cbb17f6527c[locale]}
@@ -61,7 +61,7 @@ export function Home({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="trust-section" id="expertise">
-        <div className="container">
+        <div className="wrap">
           <Stats locale={locale} />
           <div className="industry-strip">
             <span>{pageCopy.c0f6248ce56[locale]}</span>
@@ -79,7 +79,7 @@ export function Home({ locale }: { locale: Locale }) {
       </section>
       <section className="manifesto">
         <div className="manifesto-contours" />
-        <div className="container manifesto-grid">
+        <div className="wrap manifesto-grid">
           <Eyebrow light>{pageCopy.cd7bd9f82f5[locale]}</Eyebrow>
           <div>
             <h2>
@@ -114,7 +114,7 @@ export function Home({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="section solutions-section">
-        <div className="container">
+        <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.c2b5c56be3e[locale]}
             title={text("D.2", "解决方案区标题", locale)}
@@ -128,7 +128,7 @@ export function Home({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="section cases-section mist">
-        <div className="container">
+        <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.c15b3e47a84[locale]}
             title={text("D.2", "精选案例标题", locale)}
@@ -152,7 +152,7 @@ export function Home({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="section dark difference-section">
-        <div className="container">
+        <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.c4fe4a61a4a[locale]}
             title={text("D.2", "痛点区标题", locale)}
@@ -168,7 +168,7 @@ export function Home({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="section">
-        <div className="container">
+        <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.c6c4a9d30a1[locale]}
             title={text("D.2", "合作区标题", locale)}
@@ -181,7 +181,7 @@ export function Home({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="section team-section mist">
-        <div className="container">
+        <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.c8bb0541485[locale]}
             title={text("D.2", "团队区标题", locale)}
@@ -195,7 +195,7 @@ export function Home({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="section">
-        <div className="container">
+        <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.c52c0b6a904[locale]}
             title={pageCopy.c99ef98cdfe[locale]}

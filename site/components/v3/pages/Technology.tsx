@@ -21,7 +21,7 @@ export function Technology({ locale }: { locale: Locale }) {
         </Button>
       </PageHero>
       <section className="section">
-        <div className="container">
+        <div className="wrap">
           <div className="editorial-split">
             <Eyebrow>
               {pageCopy.c6ba0963fc8[locale]}
@@ -54,7 +54,7 @@ export function Technology({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="section dark">
-        <div className="container">
+        <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.c60db7c1969[locale]}
             title={text("D.6", "估值引擎标题", locale)}
@@ -102,7 +102,7 @@ export function Technology({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="section">
-        <div className="container">
+        <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.ce86d62dc6f[locale]}
             title={text("D.6", "兼容区标题", locale)}

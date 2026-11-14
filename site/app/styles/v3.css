@@ -73,9 +73,6 @@ strong,
 b {
   font-weight: 650;
 }
-.container {
-  width: min(1280px, calc(100% - 11.1vw));
-}
 .section {
   padding-block: 80px;
 }
@@ -181,7 +178,6 @@ svg {
 }
 .header-inner {
   height: 80px;
-  width: min(1280px, calc(100% - 11.1vw));
   gap: 24px;
 }
 .brand > span {
@@ -852,10 +848,8 @@ svg {
 }
 .difference-section {
   background: var(--p0);
-  padding-inline: 5.55vw;
 }
-.difference-section > .container {
-  width: min(1280px, 100%);
+.difference-section > .wrap {
   background: var(--n1);
   padding: 48px;
   border: 1px solid var(--dark-line);
@@ -1209,11 +1203,9 @@ svg {
 }
 .section.dark:not(.difference-section) {
   background: var(--p0);
-  padding-inline: 5.55vw;
 }
-.section.dark:not(.difference-section) > .container {
+.section.dark:not(.difference-section) > .wrap {
   background: var(--n1);
-  width: min(1280px, 100%);
   padding: 48px;
   border: 1px solid var(--dark-line);
   border-radius: var(--r-panel);
@@ -1692,10 +1684,6 @@ svg {
   }
 }
 @media (max-width: 800px) {
-  .container,
-  .header-inner {
-    width: calc(100% - 40px);
-  }
   .header-inner {
     height: 72px;
   }
@@ -1896,12 +1884,8 @@ svg {
   .case-links .text-link {
     font-size: var(--s14);
   }
-  .difference-section,
-  .section.dark:not(.difference-section) {
-    padding-inline: 20px;
-  }
-  .difference-section > .container,
-  .section.dark:not(.difference-section) > .container {
+  .difference-section > .wrap,
+  .section.dark:not(.difference-section) > .wrap {
     padding: 32px 24px;
   }
   .difference-section .section-heading h2 {
@@ -2239,8 +2223,8 @@ svg {
     margin-top: 12px;
     padding-top: 12px;
   }
-  .difference-section > .container,
-  .section.dark:not(.difference-section) > .container {
+  .difference-section > .wrap,
+  .section.dark:not(.difference-section) > .wrap {
     padding: 28px 20px;
   }
   .engagement-grid {

@@ -14,7 +14,7 @@ export function About({ locale }: { locale: Locale }) {
         compact
       />
       <section className="section">
-        <div className="container">
+        <div className="wrap">
           <div className="about-intro">
             <div>
               <Eyebrow>
@@ -32,7 +32,7 @@ export function About({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="section mist">
-        <div className="container">
+        <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.c6949dc8060[locale]}
             title={text("D.7", "创始团队标题", locale)}
@@ -41,7 +41,7 @@ export function About({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="section name-story">
-        <div className="container editorial-split">
+        <div className="wrap editorial-split">
           <Eyebrow light>{text("D.7", "名字的由来标题", locale)}</Eyebrow>
           <div>
             <h2>
@@ -54,7 +54,7 @@ export function About({ locale }: { locale: Locale }) {
         </div>
       </section>
       <section className="section">
-        <div className="container">
+        <div className="wrap">
           <SectionTitle
             eyebrow={pageCopy.c16b9b0df26[locale]}
             title={text("D.7", "原则标题", locale)}

@@ -18,7 +18,7 @@ export function Services({ locale }: { locale: Locale }) {
         <Button locale={locale}>{text("D.1", "主按钮", locale)}</Button>
       </PageHero>
       <section className="section">
-        <div className="container">
+        <div className="wrap">
           <div className="opportunity-grid">
             {[0, 1].map((i) => (
               <div key={i}>
