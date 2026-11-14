@@ -3,6 +3,7 @@ import "../styles/cjk-font.css";
 import localFont from "next/font/local";
 import { Header } from "@/components/Header";
 import { MotionRuntime } from "@/components/v3/MotionRuntime";
+import { SiteFooter } from "@/components/v3/ui";
 import { pick, siteCopy } from "@/lib/content";
 
 const manropeDisplay = localFont({
@@ -44,6 +45,7 @@ export default function ZhRootLayout({
         <Header locale="zh" />
         <MotionRuntime />
         {children}
+        <SiteFooter locale="zh" />
       </body>
     </html>
   );

@@ -2,6 +2,7 @@ import "../../styles/site.css";
 import localFont from "next/font/local";
 import { Header } from "@/components/Header";
 import { MotionRuntime } from "@/components/v3/MotionRuntime";
+import { SiteFooter } from "@/components/v3/ui";
 import { pick, siteCopy } from "@/lib/content";
 
 const manropeDisplay = localFont({
@@ -43,6 +44,7 @@ export default function EnRootLayout({
         <Header locale="en" />
         <MotionRuntime />
         {children}
+        <SiteFooter locale="en" />
       </body>
     </html>
   );

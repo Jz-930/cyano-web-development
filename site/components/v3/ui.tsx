@@ -333,98 +333,100 @@ export function WorkflowDiagram({ locale }: { locale: Locale }) {
     </div>
   );
 }
-export function Footer({ locale }: { locale: Locale }) {
+export function ClosingCta({ locale }: { locale: Locale }) {
   return (
-    <>
-      <section className="closing dark">
-        <LightField strength="closing" />
-        <div className="container closing-inner">
-          <div>
-            <Eyebrow light>
-              {t(locale, "项目咨询", "CONTACT US")}
-            </Eyebrow>
-            <h2>{text("D.1", "收尾 CTA 口号", locale)}</h2>
-            <p>{text("D.1", "收尾 CTA 副句", locale)}</p>
-          </div>
-          <Button locale={locale}>{text("D.1", "主按钮", locale)}</Button>
+    <section className="closing dark">
+      <LightField strength="closing" />
+      <div className="container closing-inner">
+        <div>
+          <Eyebrow light>
+            {t(locale, "项目咨询", "CONTACT US")}
+          </Eyebrow>
+          <h2>{text("D.1", "收尾 CTA 口号", locale)}</h2>
+          <p>{text("D.1", "收尾 CTA 副句", locale)}</p>
         </div>
-      </section>
-      <footer className="footer dark">
-        <div className="container">
-          <div className="footer-grid">
-            <div className="footer-brand">
-              <Link href={href(locale)} aria-label="Cyano">
-                <Logo />
-              </Link>
-              <p>{text("D.1", "页脚定位句", locale)}</p>
-              <span>{text("D.1", "页脚服务地区", locale)}</span>
-            </div>
-            <div>
-              <h3>{t(locale, "解决方案", "Solutions")}</h3>
-              {solutions(locale).map((s) => (
-                <Link key={s.slug} href={href(locale, "/services/" + s.slug)}>
-                  {s.name}
-                </Link>
-              ))}
-            </div>
-            <div>
-              <h3>{t(locale, "公司", "Company")}</h3>
-              {["about", "cases", "technology", "engagement", "insights"].map(
-                (p, i) => (
-                  <Link key={p} href={href(locale, "/" + p)}>
-                    {t(
-                      locale,
-                      ["关于我们", "案例", "方法与技术", "合作方式", "洞察"][i],
-                      [
-                        "About",
-                        "Case studies",
-                        "Technology",
-                        "How we work",
-                        "Insights",
-                      ][i],
-                    )}
-                  </Link>
-                ),
-              )}
-            </div>
-            <div>
-              <h3>{t(locale, "联系", "Contact")}</h3>
-              <Link href={href(locale, "/contact#form")}>
-                {text("D.1", "主按钮", locale)} ↗
-              </Link>
-              {availability.email && (
-                <a href="mailto:hello@cyano.app">hello@cyano.app</a>
-              )}
-              <span className="footer-location">
-                <span className="status-dot" />
-                {t(
-                  locale,
-                  "中国 · 北美 · 全球远程交付",
-                  "China · North America · Worldwide",
-                )}
-              </span>
-            </div>
+        <Button locale={locale}>{text("D.1", "主按钮", locale)}</Button>
+      </div>
+    </section>
+  );
+}
+export function SiteFooter({ locale }: { locale: Locale }) {
+  return (
+    <footer className="footer dark">
+      <div className="container">
+        <div className="footer-grid">
+          <div className="footer-brand">
+            <Link href={href(locale)} aria-label="Cyano">
+              <Logo />
+            </Link>
+            <p>{text("D.1", "页脚定位句", locale)}</p>
+            <span>{text("D.1", "页脚服务地区", locale)}</span>
           </div>
-          <div className="footer-bottom">
-            <span>
+          <div>
+            <h3>{t(locale, "解决方案", "Solutions")}</h3>
+            {solutions(locale).map((s) => (
+              <Link key={s.slug} href={href(locale, "/services/" + s.slug)}>
+                {s.name}
+              </Link>
+            ))}
+          </div>
+          <div>
+            <h3>{t(locale, "公司", "Company")}</h3>
+            {["about", "cases", "technology", "engagement", "insights"].map(
+              (p, i) => (
+                <Link key={p} href={href(locale, "/" + p)}>
+                  {t(
+                    locale,
+                    ["关于我们", "案例", "方法与技术", "合作方式", "洞察"][i],
+                    [
+                      "About",
+                      "Case studies",
+                      "Technology",
+                      "How we work",
+                      "Insights",
+                    ][i],
+                  )}
+                </Link>
+              ),
+            )}
+          </div>
+          <div>
+            <h3>{t(locale, "联系", "Contact")}</h3>
+            <Link href={href(locale, "/contact#form")}>
+              {text("D.1", "主按钮", locale)} ↗
+            </Link>
+            {availability.email && (
+              <a href="mailto:hello@cyano.app">hello@cyano.app</a>
+            )}
+            <span className="footer-location">
+              <span className="status-dot" />
               {t(
                 locale,
-                "© 2026 Cyano Intelligence · 澜屿智创 版权所有",
-                "© 2026 Cyano Intelligence. All rights reserved.",
+                "中国 · 北美 · 全球远程交付",
+                "China · North America · Worldwide",
               )}
             </span>
-            <div>
-              <Link href={href(locale, "/privacy")}>
-                {t(locale, "隐私政策", "Privacy Policy")}
-              </Link>
-              <Link href={href(locale, "/terms")}>
-                {t(locale, "使用条款", "Terms of Use")}
-              </Link>
-              <span>CYANO INTELLIGENCE</span>
-            </div>
           </div>
         </div>
-      </footer>
-    </>
+        <div className="footer-bottom">
+          <span>
+            {t(
+              locale,
+              "© 2026 Cyano Intelligence · 澜屿智创 版权所有",
+              "© 2026 Cyano Intelligence. All rights reserved.",
+            )}
+          </span>
+          <div>
+            <Link href={href(locale, "/privacy")}>
+              {t(locale, "隐私政策", "Privacy Policy")}
+            </Link>
+            <Link href={href(locale, "/terms")}>
+              {t(locale, "使用条款", "Terms of Use")}
+            </Link>
+            <span>CYANO INTELLIGENCE</span>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 }

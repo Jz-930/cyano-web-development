@@ -45,7 +45,8 @@ for(const locale of ['zh','en']){
    baseline['/'+route(r)]={text:old.replace(/<[^>]+>/g,' '),fragments};
    if(baselineOnly)continue;
    const current=normal(clean(fs.readFileSync(htmlfile,'utf8')).replace(/<[^>]+>/g,''));
-   const exceptions=name==='Technology'?['10×','投入回报最高可达','Returnoninvestment,upto',...(locale==='en'?['通义千问','企业微信']:[])]:[];
+   const sharedRemoved=['CYANO/ENTERPRISEAI','01/CYANO','02/CYANO','03/CYANO','04/CYANO','05/CYANO','06/CYANO'];
+   const exceptions=[...sharedRemoved,...(name==='Technology'?['10×','投入回报最高可达','Returnoninvestment,upto',...(locale==='en'?['通义千问','企业微信']:[])]:[]),...(name==='Contact'?['项目咨询','聊聊你希望改进的工作流程','预约一次30–45分钟的沟通，讨论现有流程、资料和项目目标。','CONTACTUS','Tellusaboutyourworkflow','Booka30–45minutecalltodiscussyourprocess,sourcematerialandprojectgoals.']:[])];
    const missing=fragments.filter(s=>!current.includes(s)&&!exceptions.includes(s));
    results.push({route:'/'+route(r),fragments:fragments.length,missing});
  }

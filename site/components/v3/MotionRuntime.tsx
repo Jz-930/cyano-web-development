@@ -4,6 +4,11 @@ import {usePathname} from "next/navigation";
 export function MotionRuntime(){
  const pathname=usePathname();
  useEffect(()=>{
+  const onAnchor=(event:MouseEvent)=>{const a=(event.target as Element|null)?.closest?.('a[href^="#"]') as HTMLAnchorElement|null;if(!a||a.classList.contains('skip-link'))return;const id=a.getAttribute('href')?.slice(1);if(!id)return;const el=document.getElementById(id);if(!el)return;event.preventDefault();el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});history.pushState(null,'','#'+id);};
+  document.addEventListener('click',onAnchor);
+  return()=>document.removeEventListener('click',onAnchor);
+ },[]);
+ useEffect(()=>{
   const media=matchMedia('(prefers-reduced-motion: reduce)');if(media.matches)return;
   const cards=document.querySelectorAll<HTMLElement>('.case-card,.engagement-card,.team-card,.plain-card');
   const visible=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.remove('motion-pending');visible.unobserve(e.target);}}),{threshold:.08});
