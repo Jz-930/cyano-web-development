@@ -3,7 +3,9 @@ import "../styles/cjk-font.css";
 import localFont from "next/font/local";
 import cjkPreload from "../fonts/cjk-preload.json";
 import { Header } from "@/components/Header";
-import { MotionRuntime } from "@/components/v3/MotionRuntime";
+import { MotionRuntime } from "@/components/v4/MotionRuntime";
+import { RouteFocus } from "@/components/v4/RouteFocus";
+import { RouteTransitions } from "@/components/v4/RouteTransitions";
 import { SiteFooter } from "@/components/v3/ui";
 import { pick, siteCopy } from "@/lib/content";
 
@@ -37,9 +39,15 @@ export default function ZhRootLayout({
   return (
     <html
       lang="zh-CN"
+      suppressHydrationWarning
       className={`${manropeDisplay.variable} ${interLatin.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
         <link
           rel="preload"
           href={cjkPreload.core}
@@ -53,8 +61,9 @@ export default function ZhRootLayout({
           {pick("zh", siteCopy.nav.skipToMain)}
         </a>
         <Header locale="zh" />
+        <RouteFocus />
         <MotionRuntime />
-        {children}
+        <RouteTransitions>{children}</RouteTransitions>
         <SiteFooter locale="zh" />
       </body>
     </html>

@@ -1,0 +1,92 @@
+.screen-dialog {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: min(1200px, 92vw);
+  max-height: 92vh;
+  overflow: visible;
+  color: var(--light);
+  opacity: 0;
+  transform: scale(0.96);
+  transition:
+    opacity var(--dur-enter-out) var(--ease-exit),
+    transform var(--dur-enter-out) var(--ease-exit),
+    overlay var(--dur-enter-out) allow-discrete,
+    display var(--dur-enter-out) allow-discrete;
+}
+.screen-dialog::backdrop {
+  background: var(--n0-70);
+  -webkit-backdrop-filter: blur(0);
+  backdrop-filter: blur(0);
+  transition:
+    backdrop-filter var(--dur-enter) var(--ease-out),
+    background-color var(--dur-enter) var(--ease-out),
+    overlay var(--dur-enter) allow-discrete,
+    display var(--dur-enter) allow-discrete;
+}
+.screen-dialog[open] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity var(--dur-enter) var(--ease-out),
+    transform var(--dur-enter) var(--ease-out),
+    overlay var(--dur-enter) allow-discrete,
+    display var(--dur-enter) allow-discrete;
+}
+.screen-dialog[open]::backdrop {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+@starting-style {
+  .screen-dialog[open] {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  .screen-dialog[open]::backdrop {
+    background: transparent;
+    backdrop-filter: blur(0);
+  }
+}
+.screen-dialog img {
+  border-radius: var(--r-window);
+  box-shadow: var(--glass-shadow);
+}
+.dialog-media-frame {
+  animation: panel-in var(--dur-base) var(--ease-out) both;
+}
+.dialog-close,
+.dialog-controls button {
+  color: var(--light);
+  background: var(--white-06);
+  border: 1px solid var(--white-08);
+  border-radius: var(--r-control);
+  min-height: 40px;
+  padding: 0 14px;
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    transform var(--dur-press) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .dialog-close:hover,
+  .dialog-controls button:hover {
+    background: var(--white-10);
+  }
+}
+.dialog-close:active,
+.dialog-controls button:active {
+  transform: scale(0.97);
+}
+.screen-dialog :focus-visible {
+  outline-color: var(--cyan);
+}
+@media (prefers-reduced-motion: reduce) {
+  .screen-dialog,
+  .screen-dialog[open],
+  .dialog-close:active,
+  .dialog-controls button:active {
+    transform: none;
+  }
+  .dialog-media-frame {
+    animation: none;
+  }
+}

@@ -1,7 +1,9 @@
 import "../../styles/site.css";
 import localFont from "next/font/local";
 import { Header } from "@/components/Header";
-import { MotionRuntime } from "@/components/v3/MotionRuntime";
+import { MotionRuntime } from "@/components/v4/MotionRuntime";
+import { RouteFocus } from "@/components/v4/RouteFocus";
+import { RouteTransitions } from "@/components/v4/RouteTransitions";
 import { SiteFooter } from "@/components/v3/ui";
 import { pick, siteCopy } from "@/lib/content";
 
@@ -35,15 +37,24 @@ export default function EnRootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${manropeDisplay.variable} ${interLatin.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "document.documentElement.classList.add('js')",
+          }}
+        />
+      </head>
       <body>
         <a className="skip-link" href="#main">
           {pick("en", siteCopy.nav.skipToMain)}
         </a>
         <Header locale="en" />
+        <RouteFocus />
         <MotionRuntime />
-        {children}
+        <RouteTransitions>{children}</RouteTransitions>
         <SiteFooter locale="en" />
       </body>
     </html>

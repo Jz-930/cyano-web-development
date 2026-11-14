@@ -1,0 +1,78 @@
+.zoomable {
+  position: relative;
+  display: block;
+  cursor: zoom-in;
+  overflow: hidden;
+  border-radius: inherit;
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    transform var(--dur-press) var(--ease-out);
+}
+.zoomable img {
+  transition: transform var(--dur-scene) var(--ease-out);
+}
+.zoom-pill {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: var(--r-chip);
+  background: var(--n1-58);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: var(--light);
+  font-size: 13px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .zoomable:hover img {
+    transform: scale(1.02);
+  }
+  .zoomable:hover .zoom-pill {
+    opacity: 1;
+    transform: none;
+  }
+}
+.zoomable:active {
+  transform: scale(0.995);
+}
+.zoomable:focus-visible .zoom-pill {
+  opacity: 1;
+  transform: none;
+}
+@media (hover: none) {
+  .zoom-pill {
+    opacity: 1;
+    transform: none;
+  }
+}
+.gallery-thumbs button {
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-press) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .gallery-thumbs button:hover {
+    border-color: var(--link);
+    opacity: 1;
+  }
+}
+.gallery-thumbs button:active {
+  transform: scale(0.96);
+}
+@media (prefers-reduced-motion: reduce) {
+  .zoomable:hover img,
+  .zoomable:active,
+  .zoom-pill,
+  .gallery-thumbs button:active {
+    transform: none;
+  }
+}

@@ -1,0 +1,116 @@
+.nav-item > a,
+.nav-item-row > a {
+  position: relative;
+  padding: 8px 0;
+  color: inherit;
+  opacity: 0.82;
+  transition:
+    opacity var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out);
+}
+.nav-item > a::after,
+.nav-item-row > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--cyan);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .nav-item > a:hover,
+  .nav-item-row > a:hover {
+    opacity: 1;
+  }
+  .nav-item > a:not([aria-current="page"]):hover::after,
+  .nav-item-row > a:not([aria-current="page"]):hover::after {
+    transform: scaleX(0.5);
+  }
+}
+.nav-item > a:active,
+.nav-item-row > a:active {
+  opacity: 0.68;
+}
+.nav-item > a[aria-current="page"],
+.nav-item-row > a[aria-current="page"] {
+  opacity: 1;
+}
+.nav-indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: var(--cyan);
+  border-radius: 2px;
+  pointer-events: none;
+}
+.nav-item-row > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--r-control);
+  background: transparent;
+  color: inherit;
+  opacity: 0.78;
+  transition:
+    opacity var(--dur-fast) var(--ease-out),
+    background-color var(--dur-fast) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+.nav-item-row > button svg {
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.nav-item-row > button[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+@media (hover: hover) and (pointer: fine) {
+  .nav-item-row > button:hover {
+    opacity: 1;
+    background: var(--white-06);
+  }
+  .site-header[data-theme="paper"] .nav-item-row > button:hover {
+    background: var(--ink-06);
+  }
+}
+.nav-item-row > button:active {
+  transform: scale(0.92);
+}
+.language-switch,
+.menu-toggle {
+  transition:
+    background-color var(--dur-fast) var(--ease-out),
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    opacity var(--dur-fast) var(--ease-out),
+    transform var(--dur-press) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .language-switch:hover,
+  .menu-toggle:hover {
+    background: var(--white-06);
+    border-color: var(--frost-15);
+  }
+  .site-header[data-theme="paper"] .language-switch:hover,
+  .site-header[data-theme="paper"] .menu-toggle:hover {
+    background: var(--ink-06);
+    border-color: var(--ink-20);
+  }
+}
+.language-switch:active,
+.menu-toggle:active {
+  transform: scale(0.96);
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-item-row > button:active,
+  .language-switch:active,
+  .menu-toggle:active {
+    transform: none;
+  }
+}
