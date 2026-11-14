@@ -122,6 +122,8 @@ collectStrings(readJson("content/legal-v1.json"), verbatimSet);
 collectStrings(readJson("content/v4/site.json"), verbatimSet);
 collectStrings(readJson("content/v4/solutions.json"), verbatimSet);
 collectStrings(readJson("content/v4/insights.json"), verbatimSet);
+collectStrings(readJson("content/v4/team.json"), verbatimSet);
+collectStrings(readJson("content/v4/cases.json"), verbatimSet);
 for (const pageFile of fs.readdirSync(path.join(root, "content/v4/pages"))) {
   if (pageFile.endsWith(".json") && pageFile !== "_key-map.json") {
     collectStrings(readJson(`content/v4/pages/${pageFile}`), verbatimSet);
@@ -238,6 +240,8 @@ function classifyTextOrAttr(rawStr) {
 const cases = readJson("content/v4/cases.json");
 const solutions = readJson("content/v4/solutions.json");
 const insights = readJson("content/v4/insights.json");
+const team = readJson("content/v4/team.json");
+const legal = readJson("content/legal-v1.json");
 
 const baseTasks = [
   ["", "Home"],
@@ -326,61 +330,37 @@ for (const locale of ["zh", "en"]) {
       if (textVal) recordCheck("text", textVal);
     }
 
-    // 4. Verify v1 baseline fragments are not lost
-    const baselineEntry = baselineByRoute[routeKey];
+    // 4. Verify required v1 copy per 06-首页.md & 07-内页.md is not lost
     const currentCompact = compact(cleanedBody.replace(/<[^>]+>/g, ""));
-    const sharedRemoved = [
-      "CYANO/ENTERPRISEAI",
-      "01/CYANO",
-      "02/CYANO",
-      "03/CYANO",
-      "04/CYANO",
-      "05/CYANO",
-      "06/CYANO",
-    ];
-    const routeExceptions = new Set([
-      ...sharedRemoved,
-      ...(pageName === "Technology"
-        ? [
-            "10×",
-            "投入回报最高可达",
-            "Returnoninvestment,upto",
-            ...(locale === "en" ? ["通义千问", "企业微信"] : []),
-          ]
-        : []),
-      ...(pageName === "Contact"
-        ? [
-            "项目咨询",
-            "聊聊你希望改进的工作流程",
-            "预约一次30–45分钟的沟通，讨论现有流程、资料和项目目标。",
-            "CONTACTUS",
-            "Tellusaboutyourworkflow",
-            "Booka30–45minutecalltodiscussyourprocess,sourcematerialandprojectgoals.",
-          ]
-        : []),
-    ]);
-
     const missingV1Items = [];
-    if (pageName === "Home") {
-      // 06-首页.md §11 explicit Home v1 checklist
-      const isNewApproved = (id) => {
-        const e = rawNew[id];
-        return Boolean(e && (e.status === "approved" || e.status === "class-a"));
-      };
-      const v1Text = (sec, k) => {
-        const ov = rawOverrides[`${sec}/${k}`];
-        if (ov && (ov.status === "approved" || ov.status === "class-a")) {
-          return ov[locale];
-        }
-        return v1Copy[sec][k][locale];
-      };
-      const requireSubstring = (label, rawExpected) => {
-        const cleanExp = compact(String(rawExpected).replace(/\s*[→↗]\s*$/g, ""));
-        if (cleanExp && !currentCompact.includes(cleanExp)) {
-          missingV1Items.push(`${label}: ${rawExpected}`);
-        }
-      };
 
+    const isNewApproved = (id) => {
+      const e = rawNew[id];
+      return Boolean(e && (e.status === "approved" || e.status === "class-a"));
+    };
+    const v1Text = (sec, k) => {
+      const ov = rawOverrides[`${sec}/${k}`];
+      if (ov && (ov.status === "approved" || ov.status === "class-a")) {
+        return ov[locale];
+      }
+      return v1Copy[sec][k][locale];
+    };
+    const requireSubstring = (label, rawExpected) => {
+      const cleanExp = compact(String(rawExpected).replace(/\s*[→↗]\s*$/g, ""));
+      if (cleanExp && !currentCompact.includes(cleanExp)) {
+        missingV1Items.push(`${label}: ${rawExpected}`);
+      }
+    };
+    const dashSep = locale === "zh" ? " —— " : " — ";
+
+    // Global SiteFooter v1 copy on every route
+    requireSubstring("D.1/页脚定位句", v1Text("D.1", "页脚定位句"));
+    requireSubstring("D.1/页脚服务地区", v1Text("D.1", "页脚服务地区"));
+    for (const lnk of v1Text("D.1", "页脚法律链接").split(" · ")) {
+      requireSubstring("D.1/页脚法律链接", lnk);
+    }
+
+    if (pageName === "Home") {
       requireSubstring("D.1/主按钮", v1Text("D.1", "主按钮"));
       if (!isNewApproved("H-0")) {
         requireSubstring("D.2/Eyebrow", v1Text("D.2", "Eyebrow"));
@@ -390,7 +370,6 @@ for (const locale of ["zh", "en"]) {
       const btnParts = v1Text("D.2", "按钮").split(" · ");
       if (btnParts[1]) requireSubstring("D.2/按钮[1]", btnParts[1]);
 
-      const dashSep = locale === "zh" ? " —— " : " — ";
       for (const n of [1, 2, 3, 4]) {
         const [left = "", ...rest] = v1Text("D.2", `信任条数字 ${n}`).split(dashSep);
         requireSubstring(`D.2/信任条数字 ${n}[val]`, left);
@@ -432,26 +411,171 @@ for (const locale of ["zh", "en"]) {
       if (!isNewApproved("H-8s")) {
         requireSubstring("D.1/收尾 CTA 副句", v1Text("D.1", "收尾 CTA 副句"));
       }
-    } else if (baselineEntry) {
-      for (const frag of baselineEntry.fragments) {
-        const cleanFrag = frag.replace(/[↗→←↑↓]+$/g, "");
-        if (!cleanFrag || PURE_SYMBOL_OR_NUMBER_RE.test(cleanFrag)) continue;
-        if (currentCompact.includes(frag) || currentCompact.includes(cleanFrag))
-          continue;
-        if (routeExceptions.has(frag) || routeExceptions.has(cleanFrag))
-          continue;
-        if (overriddenV1Fragments.has(frag) || overriddenV1Fragments.has(cleanFrag))
-          continue;
-        // Check if frag was part of an overridden v1 paragraph
-        let coveredByOverride = false;
-        for (const ov of overriddenV1Fragments) {
-          if (ov.includes(frag) || frag.includes(ov)) {
-            coveredByOverride = true;
-            break;
+    } else if (pageName === "Services") {
+      if (!isNewApproved("S-1")) {
+        requireSubstring("D.3/总览 Hero 标题", v1Text("D.3", "总览 Hero 标题"));
+      }
+      requireSubstring("D.3/总览 Hero 导语", v1Text("D.3", "总览 Hero 导语"));
+      requireSubstring("D.3/不在清单上？", v1Text("D.3", "不在清单上？"));
+      for (const sol of solutions) {
+        requireSubstring(`sol/${sol.slug}/name`, sol.name[locale]);
+        requireSubstring(`sol/${sol.slug}/promise`, sol.promise[locale]);
+        requireSubstring(`sol/${sol.slug}/intro`, sol.intro[locale]);
+      }
+      requireSubstring("D.1/收尾 CTA 口号", v1Text("D.1", "收尾 CTA 口号"));
+      requireSubstring("D.1/收尾 CTA 副句", v1Text("D.1", "收尾 CTA 副句"));
+    } else if (pageName === "SolutionDetail") {
+      const slug = sub.split("/")[1];
+      const sol = solutions.find((s) => s.slug === slug);
+      if (sol) {
+        requireSubstring(`sol/${slug}/name`, sol.name[locale]);
+        requireSubstring(`sol/${slug}/promise`, sol.promise[locale]);
+        requireSubstring(`sol/${slug}/intro`, sol.intro[locale]);
+      }
+      requireSubstring("D.3/合作提示（T9）", v1Text("D.3", "合作提示（T9）"));
+      requireSubstring("D.1/收尾 CTA 口号", v1Text("D.1", "收尾 CTA 口号"));
+      requireSubstring("D.1/收尾 CTA 副句", v1Text("D.1", "收尾 CTA 副句"));
+    } else if (pageName === "CasesPage") {
+      requireSubstring("D.5/列表 Hero 标题", v1Text("D.5", "列表 Hero 标题"));
+      requireSubstring("D.5/汇总一行", v1Text("D.5", "汇总一行"));
+      requireSubstring("D.5/案例集按钮", v1Text("D.5", "案例集按钮"));
+      requireSubstring("D.1/保密说明（案例）", v1Text("D.1", "保密说明（案例）"));
+      requireSubstring("D.5/列表收尾", v1Text("D.5", "列表收尾"));
+      for (const c of cases) {
+        requireSubstring(`case/${c.slug}/title`, c.title[locale]);
+      }
+      requireSubstring("D.1/收尾 CTA 口号", v1Text("D.1", "收尾 CTA 口号"));
+      requireSubstring("D.1/收尾 CTA 副句", v1Text("D.1", "收尾 CTA 副句"));
+    } else if (pageName === "CaseDetail") {
+      const slug = sub.split("/")[1];
+      const c = cases.find((x) => x.slug === slug);
+      if (c) {
+        requireSubstring(`case/${slug}/title`, c.title[locale]);
+        requireSubstring(`case/${slug}/profile`, c.profile[locale]);
+        requireSubstring(`case/${slug}/system`, c.system[locale]);
+        requireSubstring(`case/${slug}/before`, c.before[locale]);
+        requireSubstring(`case/${slug}/after`, c.after[locale]);
+        requireSubstring(`case/${slug}/outcome`, c.outcome[locale]);
+      }
+      requireSubstring("D.1/保密说明（案例）", v1Text("D.1", "保密说明（案例）"));
+      requireSubstring("D.1/收尾 CTA 口号", v1Text("D.1", "收尾 CTA 口号"));
+      requireSubstring("D.1/收尾 CTA 副句", v1Text("D.1", "收尾 CTA 副句"));
+    } else if (pageName === "Technology") {
+      if (!isNewApproved("T-1")) {
+        requireSubstring("D.6/Hero 标题", v1Text("D.6", "Hero 标题"));
+      }
+      if (!isNewApproved("T-1s")) {
+        requireSubstring("D.6/Hero 导语", v1Text("D.6", "Hero 导语"));
+      }
+      requireSubstring("D.6/Cyano Core 定义", v1Text("D.6", "Cyano Core 定义"));
+      for (const n of [1, 2, 3, 4]) {
+        const [name = "", ...rest] = v1Text("D.6", `第 ${n} 层`).split(dashSep);
+        requireSubstring(`D.6/第 ${n} 层[name]`, name);
+        requireSubstring(`D.6/第 ${n} 层[desc]`, rest.join(dashSep));
+      }
+      for (const n of [1, 2, 3]) {
+        const [title = "", ...rest] = v1Text("D.6", `难题 ${n}`).split(dashSep);
+        requireSubstring(`D.6/难题 ${n}[title]`, title);
+        requireSubstring(`D.6/难题 ${n}[desc]`, rest.join(dashSep));
+      }
+      requireSubstring("D.6/估值引擎标题", v1Text("D.6", "估值引擎标题"));
+      for (const n of [1, 2, 3]) {
+        const [val = "", ...rest] = v1Text("D.6", `指标 ${n}`).split(dashSep);
+        requireSubstring(`D.6/指标 ${n}[val]`, val);
+        requireSubstring(`D.6/指标 ${n}[desc]`, rest.join(dashSep));
+      }
+      requireSubstring("D.1/技术页脚注", v1Text("D.1", "技术页脚注"));
+      requireSubstring("D.6/对比表标题", v1Text("D.6", "对比表标题"));
+      requireSubstring("D.6/兼容区标题", v1Text("D.6", "兼容区标题"));
+      requireSubstring("D.6/安全区标题", v1Text("D.6", "安全区标题"));
+      requireSubstring("D.6/收尾", v1Text("D.6", "收尾"));
+      requireSubstring("D.1/收尾 CTA 口号", v1Text("D.1", "收尾 CTA 口号"));
+      requireSubstring("D.1/收尾 CTA 副句", v1Text("D.1", "收尾 CTA 副句"));
+    } else if (pageName === "Engagement") {
+      if (!isNewApproved("E-1")) {
+        requireSubstring("D.4/Hero 标题", v1Text("D.4", "Hero 标题"));
+      }
+      requireSubstring("D.4/Hero 导语", v1Text("D.4", "Hero 导语"));
+      requireSubstring("D.4/怎么选", v1Text("D.4", "怎么选"));
+      requireSubstring("D.4/SaaS 托管", v1Text("D.4", "SaaS 托管"));
+      requireSubstring("D.4/私有化部署", v1Text("D.4", "私有化部署"));
+      for (const fqKey of [
+        "应该完整定制，还是从试点开始？ / Full build or pilot first?",
+        "什么时候适合托管式 AI 服务？ / When does managed service make sense?",
+        "需求评估会提供什么？ / What does the assessment provide?",
+        "如何获得适合自己的方案？ / How do we get a tailored proposal?",
+        "数据安全如何保障？ / How is our data protected?",
+        "上线之后谁来维护？ / Who maintains it after launch?",
+        "如果效果不达预期怎么办？ / What if results fall short?",
+      ]) {
+        requireSubstring(`D.4/${fqKey}`, v1Text("D.4", fqKey));
+      }
+      requireSubstring("D.1/收尾 CTA 口号", v1Text("D.1", "收尾 CTA 口号"));
+      requireSubstring("D.1/收尾 CTA 副句", v1Text("D.1", "收尾 CTA 副句"));
+    } else if (pageName === "About") {
+      requireSubstring("D.7/使命句", v1Text("D.7", "使命句"));
+      requireSubstring("D.7/我们是谁 1", v1Text("D.7", "我们是谁 1"));
+      requireSubstring("D.7/我们是谁 2", v1Text("D.7", "我们是谁 2"));
+      requireSubstring("D.7/名字的由来标题", v1Text("D.7", "名字的由来标题"));
+      requireSubstring("D.7/名字的由来正文", v1Text("D.7", "名字的由来正文"));
+      requireSubstring("D.7/创始团队标题", v1Text("D.7", "创始团队标题"));
+      for (const f of team) {
+        requireSubstring(`team/${f.id}/role`, f.role[locale]);
+        requireSubstring(`team/${f.id}/motto`, f.motto[locale]);
+        requireSubstring(`team/${f.id}/bio`, f.bio[locale]);
+      }
+      requireSubstring("D.7/原则标题", v1Text("D.7", "原则标题"));
+      for (const n of [1, 2, 3, 4]) {
+        const [, ...rest] = v1Text("D.7", `原则 ${n}`).split(dashSep);
+        requireSubstring(`D.7/原则 ${n}[desc]`, rest.join(dashSep));
+      }
+      requireSubstring("D.1/收尾 CTA 口号", v1Text("D.1", "收尾 CTA 口号"));
+      requireSubstring("D.1/收尾 CTA 副句", v1Text("D.1", "收尾 CTA 副句"));
+    } else if (pageName === "Contact") {
+      requireSubstring("D.8/Hero 标题", v1Text("D.8", "Hero 标题"));
+      if (!isNewApproved("K-1")) {
+        requireSubstring("D.8/Hero 导语", v1Text("D.8", "Hero 导语"));
+      }
+      for (const n of [1, 2, 3]) {
+        const [title = "", ...rest] = v1Text("D.8", `起点 ${n}`).split(dashSep);
+        requireSubstring(`D.8/起点 ${n}[title]`, title);
+        requireSubstring(`D.8/起点 ${n}[body]`, rest.join(dashSep));
+      }
+      requireSubstring("D.8/隐私同意", v1Text("D.8", "隐私同意"));
+      requireSubstring("D.8/提交按钮", v1Text("D.8", "提交按钮"));
+      requireSubstring("D.8/谁会回复你", v1Text("D.8", "谁会回复你"));
+      for (const n of [1, 2, 3]) {
+        const [title = "", ...rest] = v1Text("D.8", `接下来 ${n}`).split(dashSep);
+        requireSubstring(`D.8/接下来 ${n}[title]`, title);
+        requireSubstring(`D.8/接下来 ${n}[body]`, rest.join(dashSep));
+      }
+    } else if (pageName === "Insights") {
+      for (const ins of insights) {
+        requireSubstring(`insight/${ins.slug}/title`, ins.title[locale]);
+        requireSubstring(`insight/${ins.slug}/meta`, ins.metaDescription[locale]);
+      }
+      requireSubstring("D.1/收尾 CTA 口号", v1Text("D.1", "收尾 CTA 口号"));
+      requireSubstring("D.1/收尾 CTA 副句", v1Text("D.1", "收尾 CTA 副句"));
+    } else if (pageName === "Article") {
+      const slug = sub.split("/")[1];
+      const ins = insights.find((i) => i.slug === slug);
+      if (ins) {
+        requireSubstring(`article/${slug}/title`, ins.title[locale]);
+        for (const blk of ins.blocks[locale]) {
+          requireSubstring(`article/${slug}/q`, blk.q);
+          for (const p of blk.a.split(/\n\n+/).map((s) => s.trim()).filter(Boolean)) {
+            requireSubstring(`article/${slug}/p`, p);
           }
         }
-        if (!coveredByOverride) {
-          missingV1Items.push(frag);
+      }
+      requireSubstring("D.1/收尾 CTA 口号", v1Text("D.1", "收尾 CTA 口号"));
+      requireSubstring("D.1/收尾 CTA 副句", v1Text("D.1", "收尾 CTA 副句"));
+    } else if (pageName === "Legal") {
+      const doc = legal[sub];
+      if (doc && Array.isArray(doc[locale])) {
+        for (const [heading, body] of doc[locale]) {
+          requireSubstring(`legal/${sub}/h`, heading);
+          requireSubstring(`legal/${sub}/p`, body);
         }
       }
     }

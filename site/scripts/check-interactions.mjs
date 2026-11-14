@@ -107,10 +107,6 @@ async function measureFocusRingContrast(pngBuffer, boxInClip) {
 }
 
 const browser = await chromium.launch({ channel: "chrome" });
-const context = await browser.newContext({
-  viewport: { width: 1440, height: 900 },
-  hasTouch: false,
-});
 
 const noFeedback = [];
 const zeroMsSwitch = [];
@@ -125,6 +121,10 @@ const concurrency = 4;
 let routeIdx = 0;
 
 async function worker() {
+  const context = await browser.newContext({
+    viewport: { width: 1440, height: 900 },
+    hasTouch: false,
+  });
   const page = await context.newPage();
   while (routeIdx < routes.length) {
     const route = routes[routeIdx++];
@@ -217,7 +217,7 @@ async function worker() {
         if (!el) return;
         const r = el.getBoundingClientRect();
         if (r.top < 96 || r.bottom > window.innerHeight - 24) {
-          window.scrollBy(0, r.top - 240);
+          window.scrollBy({ top: r.top - 240, behavior: "instant" });
         }
       }, i);
       await page.mouse.move(2, 2);
@@ -469,6 +469,7 @@ async function worker() {
     }
   }
   await page.close();
+  await context.close();
 }
 
 await Promise.all(Array.from({ length: concurrency }, () => worker()));
