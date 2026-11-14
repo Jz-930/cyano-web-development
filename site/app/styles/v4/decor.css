@@ -1,0 +1,298 @@
+/* ---------- 磨砂玻璃（03 §7） ---------- */
+.glass {
+  background: var(--n1-58);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid var(--white-08);
+  box-shadow: var(--inner-highlight), var(--glass-shadow);
+  border-radius: var(--r-panel);
+}
+.glass-badge {
+  background: var(--n1-58);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid var(--white-08);
+  box-shadow: var(--inner-highlight), var(--badge-shadow);
+  border-radius: var(--r-card);
+  padding: var(--sp-3) var(--sp-4);
+}
+.glass-header-dark {
+  background: var(--n1-58);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  backdrop-filter: blur(20px) saturate(150%);
+  border-bottom: 1px solid var(--white-06);
+}
+.glass-header-paper {
+  background: var(--p0-72);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: 1px solid var(--ink-08);
+}
+.glass-scrim {
+  background: var(--n0-70);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass,
+  .glass-badge,
+  .glass-header-dark {
+    background: var(--n1);
+  }
+  .glass-header-paper {
+    background: var(--p0);
+  }
+  .glass-scrim {
+    background: var(--n0-88);
+  }
+}
+
+/* ---------- 背景光晕（03 §8） ---------- */
+.halo-host {
+  position: relative;
+  isolation: isolate;
+}
+.halo-stage::before {
+  content: "";
+  position: absolute;
+  inset: -120px;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(60% 55% at 35% 70%, var(--cyan-10), transparent 70%);
+  transform: scale(var(--breath, 1));
+  transition: transform var(--dur-story) var(--ease-in-out);
+}
+.halo-paper-leak {
+  background-image: linear-gradient(180deg, var(--cyan-04), transparent 240px);
+  background-repeat: no-repeat;
+}
+.halo-panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.halo-panel::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  left: calc(var(--hx, 75%) - 300px);
+  top: calc(var(--hy, 0%) - 200px);
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(closest-side, var(--cyan-12), transparent);
+}
+.halo-button {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+}
+.halo-button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 160px;
+  height: 160px;
+  margin: -80px 0 0 -80px;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(closest-side, var(--cyan-18), transparent);
+  transform: scale(1);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.halo-button:hover::before,
+.halo-button:focus-within::before {
+  transform: scale(1.375);
+}
+
+/* ---------- 渐变描边与渐变线（03 §9） ---------- */
+.edge-hero,
+.edge-closing,
+.edge-pointer {
+  position: relative;
+}
+.edge-hero::after,
+.edge-closing::after,
+.edge-pointer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  pointer-events: none;
+  -webkit-mask:
+    linear-gradient(var(--mask-opaque) 0 0) content-box,
+    linear-gradient(var(--mask-opaque) 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(var(--mask-opaque) 0 0) content-box,
+    linear-gradient(var(--mask-opaque) 0 0);
+  mask-composite: exclude;
+}
+.edge-hero::after {
+  background: linear-gradient(
+    135deg,
+    var(--cyan-45) 0%,
+    var(--white-08) 35%,
+    var(--white-04) 100%
+  );
+}
+.edge-closing::after {
+  background: linear-gradient(
+    90deg,
+    var(--white-06) 0%,
+    var(--cyan-35) 70%,
+    var(--white-06) 100%
+  );
+}
+.edge-pointer::after {
+  background: radial-gradient(
+    180px circle at var(--mx, 50%) var(--my, 50%),
+    var(--cyan-50),
+    var(--frost-10) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease-out);
+}
+.edge-pointer:hover::after {
+  opacity: 1;
+}
+.split-line {
+  width: 1px;
+  align-self: stretch;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--cyan-40) 50%,
+    transparent 100%
+  );
+}
+
+/* ---------- 景深与发光（03 §11） ---------- */
+.depth-back {
+  filter: blur(2px);
+  opacity: 0.7;
+  transform: scale(0.96);
+}
+.glow-state {
+  box-shadow: var(--glow-state);
+}
+.glow-number {
+  text-shadow: var(--glow-text);
+}
+
+/* ---------- 分隔线（03 §12） ---------- */
+.rule {
+  height: 1px;
+  border: 0;
+  background: var(--line-soft);
+  margin: 0;
+}
+.dark .rule {
+  background: var(--dark-line-soft);
+}
+.rule-dot {
+  position: relative;
+  height: 1px;
+  border: 0;
+  background: var(--line-soft);
+  margin: 0;
+  overflow: visible;
+}
+.rule-dot::before {
+  content: "";
+  position: absolute;
+  left: 80px;
+  top: -2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+.rule-dot::after {
+  content: "";
+  position: absolute;
+  left: 80px;
+  top: 0;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  opacity: 0;
+  transform: translateX(0);
+}
+html.js .rule-dot.is-in::after {
+  animation: rule-run 900ms var(--ease-in-out) 1 forwards;
+}
+@keyframes rule-run {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(calc(100vw - 200px));
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html.js .rule-dot.is-in::after {
+    animation: none;
+  }
+}
+
+/* ---------- 点阵与线网格（03 §13） ---------- */
+.dot-grid {
+  background-image: radial-gradient(var(--ink-06) 1px, transparent 1.2px);
+  background-size: 24px 24px;
+  background-position: center;
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 50%,
+    var(--mask-opaque) 60%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 80% 80% at 50% 50%,
+    var(--mask-opaque) 60%,
+    transparent 100%
+  );
+}
+.line-grid {
+  position: relative;
+  isolation: isolate;
+}
+.line-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--frost-04) 1px, transparent 1px),
+    linear-gradient(90deg, var(--frost-04) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.line-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--frost-07) 1px, transparent 1px),
+    linear-gradient(90deg, var(--frost-07) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(
+    40% 50% at var(--gx, 75%) var(--gy, 40%),
+    var(--mask-opaque),
+    transparent
+  );
+  mask-image: radial-gradient(
+    40% 50% at var(--gx, 75%) var(--gy, 40%),
+    var(--mask-opaque),
+    transparent
+  );
+}
