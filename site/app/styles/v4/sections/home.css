@@ -1,6 +1,15 @@
 .home-hero .hero-content {
+  position: relative;
+  z-index: var(--z-stage);
   width: auto;
   margin: 0;
+}
+.home-hero .hero-stage-wrap {
+  position: relative;
+  z-index: var(--z-content);
+}
+.home-hero .hero-bottom {
+  z-index: var(--z-stage);
 }
 .hero-description {
   font-size: var(--s18);

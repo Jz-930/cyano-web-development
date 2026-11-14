@@ -2,7 +2,7 @@ import type { CSSProperties } from "react";
 import { Picture } from "./Picture";
 import { CountValue } from "./CountValue";
 import { EngineeringDiagram } from "./EngineeringDiagram";
-import { LightField } from "./LightField";
+import { LightField } from "@/components/v4/LightField";
 import { Phrase } from "@/components/v4/Phrase";
 import { BrandMark } from "@/components/v4/BrandMark";
 import Link from "next/link";
@@ -378,7 +378,7 @@ export function WorkflowDiagram({ locale }: { locale: Locale }) {
 export function ClosingCta({ locale }: { locale: Locale }) {
   return (
     <section className="closing dark" data-header="dark">
-      <LightField strength="closing" />
+      <LightField preset="closing" focusSelector=".closing .button" />
       <div className="wrap closing-inner">
         <div data-reveal="">
           <Eyebrow light>{t(locale, "项目咨询", "CONTACT US")}</Eyebrow>

@@ -1,0 +1,8 @@
+.page-hero .hero-diagram,
+.page-hero .page-hero-shade {
+  z-index: var(--z-content);
+}
+.page-hero-inner {
+  position: relative;
+  z-index: var(--z-stage);
+}
