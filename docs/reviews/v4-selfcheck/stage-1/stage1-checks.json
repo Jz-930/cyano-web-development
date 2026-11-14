@@ -1,0 +1,38 @@
+{
+  "stage": "v4/01-foundation",
+  "cssFormatParityCommit": "a45f6f5 (235/235 screenshots <= 0.5% diff vs stage-0, maxDiff = 0.1403%)",
+  "expectedStage1DiffSources": [
+    "F-09: .wrap unified gutter clamp(20px, 5.55vw, 80px) replacing legacy .container widths",
+    "W4-01: removal of manual \\n in copy and semantic <Phrase> Chinese break points",
+    "W4-03: CJK font weight narrowed to 400-500, removal of text-wrap: pretty",
+    "W4-04: inline BrandMark SVG replacing /logo.png raster img",
+    "W4-06: --s12 bumped from 12px to 13px outside .footer-bottom"
+  ],
+  "checks": {
+    "importantInLegacyCss": 0,
+    "containerClassInTsx": 0,
+    "checkGutters": "0 inconsistencies (22 pages x 5 widths)",
+    "checkZhBreaks": "0 issues (23 zh routes x 3 widths)",
+    "checkUnusedPublic": "0 unused (355 public files)",
+    "v3MaterialsZhHtmlStatus": 404,
+    "logoPngRequests": 0,
+    "checkContent": "46 pages: verbatim=4846, approvedOverride=13, approvedNew=0, unregistered=0, missingV1=0",
+    "checkNumbers": "0 unregistered numbers (42 routes)",
+    "checkSmallText": "worst /cases @ 390x844 = 0.42% <= 8% (0 violations across 84 route/viewports)",
+    "measurePerf": {
+      "mobileTbtMedianMs": {
+        "/": 95,
+        "/en": 97,
+        "/technology": 150,
+        "/cases/proposal-generation": 90
+      },
+      "firstScreenFontsKB": {
+        "/": 137.3,
+        "/about": 116.4,
+        "/technology": 130.2
+      },
+      "maxCls": 0.0004,
+      "logoRequests": 0
+    }
+  }
+}
