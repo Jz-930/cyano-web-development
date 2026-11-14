@@ -1,0 +1,10 @@
+{
+  "case-proposal-15min": { "sourceId": "case-proposal-generation", "caseSlug": "proposal-generation" },
+  "case-proposal-99": { "sourceId": "case-proposal-generation", "caseSlug": "proposal-generation" },
+  "case-wiki-80": { "sourceId": "case-it-knowledge-assistant", "caseSlug": "it-knowledge-assistant" },
+  "case-wiki-3s": { "sourceId": "case-it-knowledge-assistant", "caseSlug": "it-knowledge-assistant" },
+  "core-200ms": { "sourceId": "core-benchmarks" },
+  "core-100": { "sourceId": "core-benchmarks" },
+  "core-40": { "sourceId": "core-benchmarks" },
+  "team-6y": { "sourceId": "team-experience" }
+}

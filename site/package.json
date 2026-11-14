@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0 --webpack",
-    "build": "node scripts/validate-v4.mjs && node scripts/build-v3-media.mjs && next build --webpack && node scripts/subset-font.mjs && next build --webpack && node scripts/scan.mjs",
+    "build": "node scripts/validate-v4.mjs && node scripts/build-v3-media.mjs && next build --webpack && node scripts/subset-font.mjs && next build --webpack && node scripts/render-og.mjs && node scripts/scan.mjs",
     "start": "next start --hostname 0.0.0.0",
     "typecheck": "tsc --noEmit",
     "check:links": "node scripts/preflight.mjs",

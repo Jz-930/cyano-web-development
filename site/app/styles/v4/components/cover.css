@@ -1,0 +1,78 @@
+/* ---------- 文章封面 InsightCover（05 §7 / K-12） ---------- */
+.cover {
+  position: relative;
+  container-type: inline-size;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--r-card);
+  background: var(--n0);
+  border: 1px solid var(--dark-line);
+  overflow: hidden;
+  isolation: isolate;
+  color: var(--ice);
+}
+.cover[data-size="hero"] {
+  max-width: 1200px;
+  border-radius: var(--r-window);
+}
+.cover-bg {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-field);
+  pointer-events: none;
+}
+.cover-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+}
+.cover-copy {
+  position: absolute;
+  inset: clamp(18px, 5.33cqi, 64px);
+  right: 50%;
+  z-index: var(--z-content);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+}
+.cover-category {
+  font-size: clamp(12px, 1.5cqi, 18px);
+  color: var(--ice);
+}
+.cover-keyword {
+  font: 300 clamp(20px, 6cqi, 72px) / 1.08 var(--display);
+  letter-spacing: -0.02em;
+  color: var(--ice);
+  max-width: 100%;
+  text-wrap: balance;
+}
+:lang(zh-CN) .cover-keyword {
+  font-weight: 400;
+  line-height: 1.22;
+  letter-spacing: 0;
+}
+.cover[data-slug="buy-pilot-or-managed"] .cover-keyword {
+  font-size: clamp(18px, 4.8cqi, 58px);
+}
+.cover-diagram {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  z-index: var(--z-content);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(12px, 3cqi, 36px) clamp(16px, 4.5cqi, 54px) clamp(12px, 3cqi, 36px) 0;
+  pointer-events: none;
+}
+.cover-art {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  overflow: visible;
+}

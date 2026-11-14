@@ -245,7 +245,32 @@ for (const sourceKey of Object.keys(allowlist)) {
   }
 }
 
-// 6. Validate query-demo.json table dimensions
+// 6. Validate citations.json (05 §8.1)
+if (fs.existsSync(path.join(root, "content/v4/citations.json"))) {
+  const citations = z
+    .record(
+      z.string().min(1),
+      z.object({
+        sourceId: z.string().min(1),
+        caseSlug: z.string().min(1).optional(),
+      }),
+    )
+    .parse(readJson("content/v4/citations.json"));
+  for (const [cid, entry] of Object.entries(citations)) {
+    if (!sourcesMd.includes(`## ${entry.sourceId}`)) {
+      throw new Error(
+        `citations.json "${cid}" references missing source "## ${entry.sourceId}" in content/sources.md`,
+      );
+    }
+    if (entry.caseSlug && !caseSlugs.has(entry.caseSlug)) {
+      throw new Error(
+        `citations.json "${cid}" references unknown case "${entry.caseSlug}"`,
+      );
+    }
+  }
+}
+
+// 7. Validate query-demo.json table dimensions
 for (const row of readJson("content/query-demo.json")) {
   for (const locale of ["zh", "en"]) {
     for (const cells of row.rows[locale]) {

@@ -104,6 +104,21 @@ export const routes = baseRoutes.flatMap((r) => [
 
 const SITE_ORIGIN = "https://cyano.app";
 
+const INSIGHT_OG_IMAGES: Record<string, Record<Locale, string>> = {
+  "why-chatgpt-is-not-a-knowledge-base": {
+    zh: "/og/why-chatgpt-is-not-a-knowledge-base-zh.png",
+    en: "/og/why-chatgpt-is-not-a-knowledge-base-en.png",
+  },
+  "proposal-draft-in-15-minutes": {
+    zh: "/og/proposal-draft-in-15-minutes-zh.png",
+    en: "/og/proposal-draft-in-15-minutes-en.png",
+  },
+  "buy-pilot-or-managed": {
+    zh: "/og/buy-pilot-or-managed-zh.png",
+    en: "/og/buy-pilot-or-managed-en.png",
+  },
+};
+
 export function buildPageMetadata({
   locale,
   routePath,
@@ -124,6 +139,10 @@ export function buildPageMetadata({
   const enUrl = clean ? `${SITE_ORIGIN}/en/${clean}` : `${SITE_ORIGIN}/en`;
   const canonical = locale === "zh" ? zhUrl : enUrl;
   const fullTitle = `${title} | Cyano`;
+  const insightSlug = clean.startsWith("insights/")
+    ? clean.slice("insights/".length)
+    : "";
+  const resolvedOgSrc = INSIGHT_OG_IMAGES[insightSlug]?.[locale] ?? ogImage.src;
 
   return {
     title: fullTitle,
@@ -147,7 +166,7 @@ export function buildPageMetadata({
       ...(publishedTime ? { publishedTime } : {}),
       images: [
         {
-          url: ogImage.src,
+          url: resolvedOgSrc,
           width: 1200,
           height: 630,
           alt: `Cyano Intelligence — ${title}`,
@@ -158,7 +177,7 @@ export function buildPageMetadata({
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [ogImage.src],
+      images: [resolvedOgSrc],
     },
     icons: {
       icon: "/icon.svg",
