@@ -90,6 +90,13 @@ export const CaseSchema = z.object({
     "property",
     "writing",
   ]),
+  story: z
+    .object({
+      background: L,
+      challenges: z.array(L).length(3),
+      approach: z.array(L).length(4),
+    })
+    .optional(),
 });
 
 export const allCases = z
@@ -238,6 +245,13 @@ export function cases(locale: Locale) {
       before: c.before[locale],
       after: c.after[locale],
       outcome: c.outcome[locale],
+      story: c.story
+        ? {
+            background: c.story.background[locale],
+            challenges: c.story.challenges.map((x) => x[locale]),
+            approach: c.story.approach.map((x) => x[locale]),
+          }
+        : null,
       duration: c.duration[locale],
       model: c.model[locale],
       images: c.images,

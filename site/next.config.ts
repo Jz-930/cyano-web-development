@@ -2,7 +2,12 @@ import type { NextConfig } from "next";
 
 const cspHeader = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  // `next dev` (React Refresh) evaluates code at runtime; without
+  // 'unsafe-eval' the page never hydrates in development. Production keeps
+  // the strict policy.
+  process.env.NODE_ENV === "development"
+    ? "script-src 'self' 'unsafe-inline' 'unsafe-eval'"
+    : "script-src 'self' 'unsafe-inline'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: blob:",
   "font-src 'self' data:",

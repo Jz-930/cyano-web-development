@@ -228,8 +228,8 @@
     "ref": "09#copied"
   },
   "H-0": {
-    "zh": "想让 AI 接手日常工作？",
-    "en": "Want AI to take on day-to-day work?",
+    "zh": "企业 AI 工程团队",
+    "en": "ENTERPRISE AI ENGINEERING",
     "status": "approved",
     "ref": "09#H-0"
   },
@@ -276,25 +276,25 @@
     "ref": "09#H-2s"
   },
   "H-2k1": {
-    "zh": "找不到",
+    "zh": "资料找不到",
     "en": "Can't find it",
     "status": "approved",
     "ref": "09#H-2k1"
   },
   "H-2k2": {
-    "zh": "说不准",
+    "zh": "回答不准",
     "en": "Can't rely on it",
     "status": "approved",
     "ref": "09#H-2k2"
   },
   "H-2k3": {
-    "zh": "不敢交",
+    "zh": "结果不敢用",
     "en": "Can't sign off",
     "status": "approved",
     "ref": "09#H-2k3"
   },
   "H-2k4": {
-    "zh": "各用各",
+    "zh": "各用各的",
     "en": "Everyone works their own way",
     "status": "approved",
     "ref": "09#H-2k4"
@@ -498,7 +498,7 @@
     "ref": "09#H-4r2"
   },
   "H-4r3": {
-    "zh": "结果怎么核",
+    "zh": "结果怎么核对",
     "en": "How results are checked",
     "status": "approved",
     "ref": "09#H-4r3"
@@ -600,7 +600,7 @@
     "ref": "09#H-4r7"
   },
   "H-4r7c3": {
-    "zh": "配套培训，分阶段上线，员工用熟一步再推进下一步",
+    "zh": "提供培训，分阶段上线，每一步用顺了再推进",
     "en": "Training included; staged rollout, one step at a time",
     "status": "approved",
     "ref": "09#H-4r7"
@@ -1170,8 +1170,8 @@
     "ref": "09#S7.q3"
   },
   "T-1": {
-    "zh": "到第 100 轮对话，响应仍在 200 毫秒以内。*",
-    "en": "Response time stays under 200 ms, even at turn 100.*",
+    "zh": "工程能力不是装饰，是稳定交付的底座",
+    "en": "Engineering isn't decoration. It's what makes delivery reliable.",
     "status": "approved",
     "ref": "09#T-1"
   },

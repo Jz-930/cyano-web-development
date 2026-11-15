@@ -99,12 +99,12 @@
       "en": "ENTERPRISE AI ENGINEERING"
     },
     "主标题": {
-      "zh": "为企业开发日常工作用得上的 AI",
+      "zh": "将企业知识，转化为可交付的 AI 生产力",
       "en": "Custom AI for your everyday work"
     },
     "副标题": {
-      "zh": "我们为企业开发销售问答、标书生成、内部知识库和数据查询系统，也提供托管式 AI 服务。项目包括需求评估、开发部署和上线后的维护。",
-      "en": "We build AI systems for customer inquiries, proposal drafting, internal knowledge and data queries. We also offer managed AI services, with support from initial assessment through deployment and maintenance."
+      "zh": "Cyano 为企业定制销售问答、标书生成、内部知识库和数据查询等 AI 系统，也提供托管式 AI 服务。从需求评估、开发部署到上线后的维护，都由同一个团队负责。",
+      "en": "Cyano builds custom AI systems for customer inquiries, proposal drafting, internal knowledge and data queries, and runs managed AI services. One team owns everything from assessment and deployment to long-term maintenance."
     },
     "按钮": {
       "zh": "预约项目咨询 · 查看案例",
@@ -159,20 +159,20 @@
       "en": "What does AI need to work in a business?"
     },
     "痛点 1": {
-      "zh": "资料分散 —— 产品资料、业务记录和操作经验分布在不同文档与系统中。→ 接入并整理资料，建立按权限检索的索引。",
+      "zh": "散在各个系统 —— 产品资料、业务记录和操作经验分布在不同文档与系统中。→ 接入并整理资料，建立按权限检索的索引。",
       "en": "Scattered sources — Product information, business records and procedures live in different documents and systems. → Connect and organize these sources for retrieval with access controls."
     },
     "痛点 2": {
-      "zh": "信息取舍 —— 一次请求能容纳的信息有限，过多无关资料也会干扰回答。→ Cyano Core 根据当前任务选择相关资料与上下文。",
-      "en": "Context selection — Each request has a size limit, and irrelevant material can distract from the question. → Cyano Core selects sources and context for the current task."
+      "zh": "信息给不全 —— 一次请求能容纳的信息有限，过多无关资料也会干扰回答。→ Cyano Core 根据当前任务选择相关资料与上下文。",
+      "en": "Incomplete context — Each request has a size limit, and irrelevant material can distract from the question. → Cyano Core selects sources and context for the current task."
     },
     "痛点 3": {
-      "zh": "结果核查 —— 生成内容可能有误，合同和财务等工作需要明确的审核程序。→ 在流程中加入规则校验、来源引用和人工审核。",
-      "en": "Review requirements — Generated content can be wrong, and work involving contracts or finances needs review. → Add validation rules, source citations and human approval to the workflow."
+      "zh": "缺少核对机制 —— 生成内容可能有误，合同和财务等工作需要明确的审核程序。→ 在流程中加入规则校验、来源引用和人工审核。",
+      "en": "No way to verify — Generated content can be wrong, and work involving contracts or finances needs review. → Add validation rules, source citations and human approval to the workflow."
     },
     "痛点 4": {
-      "zh": "团队使用 —— 员工各自编写提示词，处理方法和结果难以统一。→ 按企业 SOP 设置操作步骤，保留执行记录，供团队重复使用。",
-      "en": "Team use — Individually written prompts can produce inconsistent processes and results. → Define shared steps from your SOPs and retain execution records."
+      "zh": "没形成团队能力 —— 员工各自编写提示词，处理方法和结果难以统一。→ 按企业 SOP 设置操作步骤，保留执行记录，供团队重复使用。",
+      "en": "No shared practice — Individually written prompts can produce inconsistent processes and results. → Define shared steps from your SOPs and retain execution records."
     },
     "痛点区链接": {
       "zh": "了解 Cyano Core →",
@@ -305,8 +305,8 @@
   },
   "D.5": {
     "列表 Hero 标题": {
-      "zh": "六个客户项目的界面与成果",
-      "en": "Six client projects: systems and results"
+      "zh": "每一个案例，都是一套正在运行的系统",
+      "en": "Every case here is a system in production"
     },
     "汇总一行": {
       "zh": "6 个客户项目 · 覆盖 6 个行业",
@@ -413,8 +413,8 @@
   },
   "D.7": {
     "使命句": {
-      "zh": "为企业开发和维护 AI 工具",
-      "en": "Building and maintaining AI tools for businesses"
+      "zh": "让企业知识流动起来，变成每天在用的 AI 系统",
+      "en": "We make company knowledge flow into AI systems your team uses every day"
     },
     "我们是谁 1": {
       "zh": "Cyano（澜屿智创）是一支企业 AI 工程团队，服务中国与北美的企业客户。我们为企业定制 AI 工具、AI 工作流与托管式 AI 服务，专注于把 AI 用进销售、文档、知识管理和数据分析等核心业务流程。",

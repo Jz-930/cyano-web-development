@@ -329,21 +329,19 @@ export function Home({ locale }: { locale: Locale }) {
             <h1 className="h1-home">
               {locale === "zh" ? (
                 <>
-                  <span className="phrase">为企业开发</span>
-                  <span className="phrase">日常工作</span>
+                  <span className="phrase">将企业知识，</span>
+                  <br />
+                  <span className="phrase">转化为可交付的</span>
                   <br />
                   <span className="phrase">
-                    用得上的 <span className="h1-accent">AI</span>
-                    <span className="headline-period">。</span>
+                    <span className="h1-accent">AI 生产力</span>
                   </span>
                 </>
               ) : (
                 <>
-                  Custom AI
+                  Turn company knowledge
                   <br />
-                  for your
-                  <br />
-                  <span className="h1-accent">everyday work.</span>
+                  into <span className="h1-accent">AI that ships.</span>
                 </>
               )}
             </h1>
@@ -624,7 +622,14 @@ export function Home({ locale }: { locale: Locale }) {
                 </div>
                 <div className="home-founder-info min-w-0 grid [gap:var(--sp-1)]">
                   <h3 className="home-founder-role [font:500_16px_/_1.4_var(--sans)] [color:var(--ink)] m-0">{f.role}</h3>
-                  <p className="home-founder-tags [font-size:14px] [line-height:1.55] [color:var(--muted)]">{f.tags}</p>
+                  <p className="home-founder-tags [font-size:14px] [line-height:1.55] [color:var(--muted)]">
+                    {String(f.tags).split(" · ").map((tg, ti) => (
+                      <span key={tg}>
+                        {ti > 0 ? " · " : null}
+                        <span className="[white-space:nowrap]">{tg}</span>
+                      </span>
+                    ))}
+                  </p>
                 </div>
               </article>
             ))}

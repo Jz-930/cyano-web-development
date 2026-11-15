@@ -49,7 +49,7 @@ export function SceneProposal({
               data-active={focusCite === n ? "true" : undefined}
             >
               <Icon size={14} aria-hidden="true" />
-              <span className="mk-rail-name [flex:1] min-w-0">
+              <span className="mk-rail-name [flex:1] min-w-0 [white-space:nowrap]">
                 {label ?? <span className="mk-skel mk-w-72 block [border-radius:var(--r-chip)] [width:72%]" />}
               </span>
               <span className="mk-cite inline-flex items-center justify-center [margin-left:var(--sp-1)] [padding:1px_6px] [min-width:20px] [min-height:20px] [border-radius:var(--r-control)] [font:500_12px/1.3_var(--mono)]" data-active={focusCite === n ? "true" : undefined}>

@@ -30,7 +30,7 @@ export function Contact({ locale }: { locale: Locale }) {
   const nextSteps = [
     { badge: kt1, body: text("D.8", "接下来 1", locale) },
     { badge: kt2, body: text("D.8", "接下来 2", locale) },
-    { badge: "03", body: text("D.8", "接下来 3", locale) },
+    { badge: locale === "zh" ? "之后" : "Then", body: text("D.8", "接下来 3", locale) },
   ];
 
   const k2Title = copyIfApproved("K-2t", locale);

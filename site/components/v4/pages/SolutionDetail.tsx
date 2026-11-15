@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Check } from "lucide-react";
+import { ArrowUpRight, Check } from "lucide-react";
 import pageCopy from "@/content/v4/pages/SolutionDetail.json";
 import type { Locale } from "@/lib/content";
 import {
@@ -49,9 +49,13 @@ export function SolutionDetail({
     sol.slug,
   );
 
+  // The content already lists maintenance for every solution; de-duplicate
+  // so it is not rendered twice.
   const deliverables = [
-    ...sol.deliverables.map((d) => d[locale]),
-    pageCopy.maintenance_and_ongoing_iteration[locale],
+    ...new Set([
+      ...sol.deliverables.map((d) => d[locale]),
+      pageCopy.maintenance_and_ongoing_iteration[locale],
+    ]),
   ];
 
   const faqItems = [
@@ -105,7 +109,7 @@ export function SolutionDetail({
                     locale={locale}
                     className="sol-stat-pill"
                   >
-                    <strong className="sol-stat-val glow-number [font-size:15px] [font-weight:650] [color:var(--ice)] [font-variant-numeric:tabular-nums]">
+                    <strong className="sol-stat-val glow-number [font-size:15px] [font-weight:500] [color:var(--ice)] [font-variant-numeric:tabular-nums]">
                       {st.value}
                     </strong>
                     <span className="sol-stat-lbl [font-size:13px] [color:var(--on-dark)]">{st.label}</span>
@@ -133,7 +137,7 @@ export function SolutionDetail({
                   locale={locale}
                   className="result-cite-btn"
                 >
-                  <span className="figure result-figure [font-size:48px] [line-height:1.05] [font-weight:650] [@media(max-width:720px)]:[font-size:38px] [font-variant-numeric:tabular-nums]">
+                  <span className="figure result-figure [font-size:48px] [line-height:1.05] [font-weight:500] [@media(max-width:720px)]:[font-size:38px] [font-variant-numeric:tabular-nums]">
                     {st.value}
                   </span>
                 </CitationPeek>
@@ -247,8 +251,25 @@ export function SolutionDetail({
               />
             </h2>
           </div>
-          <div className="sol-single-case [width:50%] [max-width:580px] [@media(max-width:1024px)]:w-full">
+          <div className="sol-single-case grid [grid-template-columns:minmax(0,1fr)_minmax(0,1fr)] [@media(max-width:1024px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-7)] [align-items:center]">
             <CaseCoverCard item={repCase} locale={locale} glassBadge />
+            <div className="grid [gap:var(--sp-4)] [align-content:start]" data-reveal="">
+              <p className="eyebrow">{repCase.system}</p>
+              <p className="m-0 [color:var(--muted)]">{repCase.profile}</p>
+              <p className="m-0 [font-size:18px] [line-height:1.75] [color:var(--ink)]">{repCase.outcome}</p>
+              <dl className="grid [grid-template-columns:repeat(3,minmax(0,1fr))] [gap:var(--sp-4)] m-0 [padding-top:var(--sp-4)] [border-top:1px_solid_var(--line)]">
+                {repCase.stats.map((st, idx) => (
+                  <div key={st.sourceId + idx} className="grid [gap:var(--sp-1)]">
+                    <dt className="[order:2] [font-size:13px] [line-height:1.5] [color:var(--muted)]">{st.label}</dt>
+                    <dd className="m-0 [font-size:22px] [line-height:1.2] [font-weight:500] [color:var(--link)]">{st.value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <Link className="text-link" href={href(locale, `/cases/${repCase.slug}`)}>
+                {locale === "zh" ? "阅读完整案例" : "Read the full case"}
+                <ArrowUpRight size={16} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -277,9 +298,6 @@ export function SolutionDetail({
             <h2 className="h2">{pageCopy.common_questions[locale]}</h2>
           </div>
           <FAQ items={faqItems} openCount={0} />
-          <p className="conclusion sol-pilot-note [padding-left:var(--sp-5)] [border-left:2px_solid_var(--cyan)] [font-size:18px] [line-height:1.7] [color:var(--ink)]" data-reveal="">
-            {text("D.3", "合作提示（T9）", locale)}
-          </p>
         </div>
       </section>
     </>

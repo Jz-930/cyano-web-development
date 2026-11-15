@@ -15,6 +15,7 @@ export function SceneSales({
   const src1 = mk("sales", "src1", locale);
   const src2 = mk("sales", "src2", locale);
   const similar = mk("sales", "similar", locale);
+  const answer = mk("sales", "a", locale);
 
   return (
     <div
@@ -26,10 +27,9 @@ export function SceneSales({
         </div>
 
         <div className="mk-paper mk-chat-a [background:var(--p2)] [color:var(--ink)] [border-radius:var(--r-control)] [padding:var(--sp-4)] grid [gap:var(--sp-3)] [flex:1]">
-          <div className="mk-skel-group grid [gap:var(--sp-2)]">
-            <span className="mk-skel mk-w-92 block [border-radius:var(--r-chip)] [width:92%]" />
-            <span className="mk-skel mk-w-64 block [border-radius:var(--r-chip)] [width:64%]" />
-          </div>
+          {answer ? (
+            <p className="mk-answer m-0 [font-size:13px] [line-height:1.65] [color:var(--ink)]">{answer}</p>
+          ) : null}
           <ul className="mk-checklist list-none m-0 p-0 grid [gap:var(--sp-2)]">
             {rows.map((r, idx) => (
               <li key={idx}>

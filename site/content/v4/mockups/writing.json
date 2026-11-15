@@ -33,5 +33,20 @@
     "zh": "写作引擎界面示意：设定按需调用，分支互不干扰。",
     "en": "Writing engine interface: retrieves story details as needed and keeps branches separate.",
     "status": "approved"
+  },
+  "mem1d": {
+    "zh": "林岚：前刑警，左手有旧伤，说话简短。",
+    "en": "Lin Lan: ex-detective, old injury on her left hand, speaks in short sentences.",
+    "status": "approved"
+  },
+  "mem2d": {
+    "zh": "海港城：雨季漫长，老城区与新港区靠轮渡相连。",
+    "en": "Harbour city: long rainy seasons; the old town and new port are linked by ferry.",
+    "status": "approved"
+  },
+  "mem3d": {
+    "zh": "林岚在码头收到第二封匿名信。",
+    "en": "Lin Lan receives a second anonymous letter at the docks.",
+    "status": "approved"
   }
 }

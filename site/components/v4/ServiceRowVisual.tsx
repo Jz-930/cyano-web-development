@@ -21,6 +21,8 @@ export function ServiceRowMockup({
   const [activeCallout, setActiveCallout] = useState<number | null>(null);
   const callouts = mkCallouts(solutionSlug, locale);
 
+  // Labels used to be drawn on top of the mockup and covered its text. The
+  // mockup now only carries numbered dots; the labels live in a legend below.
   return (
     <div className="service-row-art relative w-full">
       <ScaledSceneMockup scene={scene} locale={locale} size="full">
@@ -32,15 +34,32 @@ export function ServiceRowMockup({
                 n={c.n}
                 x={c.x}
                 y={c.y}
-                label={c.label}
-                showLabel
                 active={activeCallout === c.n}
-                onHover={setActiveCallout}
               />
             ))}
           </div>
         ) : null}
       </ScaledSceneMockup>
+      {callouts.length > 0 ? (
+        <ol className="service-callout-legend flex flex-wrap list-none m-0 p-0 [gap:var(--sp-2)_var(--sp-5)] [margin-top:var(--sp-4)]">
+          {callouts.map((c) => (
+            <li
+              key={c.n}
+              className="inline-flex items-center [gap:var(--sp-2)] [font-size:14px] [line-height:1.4] [color:var(--muted)]"
+              onPointerEnter={() => setActiveCallout(c.n)}
+              onPointerLeave={() => setActiveCallout(null)}
+            >
+              <span
+                className="grid [place-items:center] [width:22px] [height:22px] [border-radius:var(--r-chip)] [font:500_12px_/_1_var(--mono)] [color:var(--link)] [border:1px_solid_var(--cyan-40)] [background:var(--cyan-08)] shrink-0"
+                aria-hidden="true"
+              >
+                {c.n}
+              </span>
+              {c.label}
+            </li>
+          ))}
+        </ol>
+      ) : null}
     </div>
   );
 }

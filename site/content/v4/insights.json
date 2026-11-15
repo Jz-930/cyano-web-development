@@ -6,8 +6,8 @@
       "en": "Retrieval, permissions and maintenance for a company knowledge base"
     },
     "metaDescription": {
-      "zh": "员工问“这份合同谁能审批”，答案取决于部门、金额、地区以及当前有效的制度。模型熟悉合同管理常识，也需要拿到这些资料，才能回答这家公司的具体问题。\n\n上传文件可以满足一次问答。多人长期使用时，还要处理文件更新、版本冲突、访问权限，以及答错后的追查。建设企业知识库，需要为这些日常维护工作安排流程和负责人。",
-      "en": "An employee asking who can approve a contract needs the policy for their department, transaction value and region. A model may know general contract practices, but it still needs the company’s current policy to answer this question.\n\nUploading a file can serve a single inquiry. Ongoing use by a team also requires updates, version handling, access controls and a way to investigate wrong answers. Those tasks need defined processes and owners."
+      "zh": "通用模型懂常识，却不知道你们公司的制度、权限和最新版本。企业知识库要解决的，是检索、权限和维护这三件事。",
+      "en": "A general model knows common sense, not your policies, permissions or which version is current. A company knowledge base has to solve retrieval, access control and maintenance."
     },
     "category": {
       "zh": "知识管理",
@@ -126,8 +126,8 @@
       "en": "A proposal draft in 15 minutes: how we built it"
     },
     "metaDescription": {
-      "zh": "系统生成可编辑的方案初稿，包含项目要求、引用资料和需要复核的假设。撰写者仍需检查论证与参数，完成审批后才能对外提交。\n\n在某专业咨询与投研机构的项目中，资料整理和初稿撰写原本约需两天。接入工作流后，初稿可在 15 分钟内生成，引用准确率达到 99%，并执行 7 项完整性检查。这些数字来自该项目；新场景的速度与质量需要另行测试。",
-      "en": "The system produces an editable proposal draft containing project requirements, citations and assumptions for review. A writer still checks the reasoning and parameters, and the document needs approval before submission.\n\nAt a consulting and research firm, source preparation and first-draft writing previously took roughly two days. The workflow produced drafts in 15 minutes with 99% citation accuracy and seven completeness checks. These figures describe that project; new use cases require their own testing."
+      "zh": "一套智能标书系统如何把方案初稿从两天缩短到 15 分钟：资料怎么整理、流程怎么拆分，哪些环节必须留给人。",
+      "en": "How a proposal system cut first drafts from two days to 15 minutes: preparing source material, splitting the workflow, and deciding what stays with people."
     },
     "category": {
       "zh": "工程实践",
@@ -246,8 +246,8 @@
       "en": "Choosing a custom build, pilot or managed AI service"
     },
     "metaDescription": {
-      "zh": "有的团队需要长期使用自有系统，有的需要测试一个场景是否值得投入，也有的希望把成批工作交给外部团队处理。这些需求对应不同的交付内容和维护责任。\n\n选择前，先看目标、现有流程、数据条件和使用频率。即使技术上可行，使用量过低或资料准备成本过高，也可能暂时不值得开发。",
-      "en": "Some teams need a system they can own and use over time. Others need to test a use case before committing. Others want batches of work handled by an outside team. These needs imply different deliverables and operating responsibilities.\n\nConsider goals, current processes, data and frequency of use. Even a technically feasible project may be premature if usage is low or preparing the sources costs too much."
+      "zh": "完整定制、低启动试点和托管服务分别适合什么情况？用几个问题判断你的项目该从哪里开始。",
+      "en": "When does a full build, a low-cost pilot or a managed service make sense? A few questions to decide where your project should start."
     },
     "category": {
       "zh": "合作指南",

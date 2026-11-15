@@ -12,6 +12,8 @@ export function SceneProperty({
 }) {
   const tags = [1, 2, 3].map((n) => mk("property", `tag${n}`, locale));
   const summary = mk("property", "summary", locale);
+  const msgs = [1, 2, 3].map((n) => mk("property", `msg${n}`, locale));
+  const period = mk("property", "period", locale);
 
   return (
     <div
@@ -22,9 +24,8 @@ export function SceneProperty({
           {tags.map((tag, idx) => (
             <div key={idx} className="mk-panel mk-msg-row [background:var(--n1)] [border:1px_solid_var(--dark-line-soft)] flex items-center [gap:var(--sp-2)] [padding:var(--sp-3)]">
               <span className="mk-avatar-dot [width:10px] [height:10px] [border-radius:var(--q50)] [background:var(--cyan)] shrink-0" aria-hidden="true" />
-              <div className="mk-msg-lines [flex:1] grid [gap:var(--sp-1)]">
-                <span className="mk-skel mk-w-92 block [border-radius:var(--r-chip)] [width:92%]" />
-                <span className="mk-skel mk-w-64 block [border-radius:var(--r-chip)] [width:64%]" />
+              <div className="mk-msg-lines [flex:1] [min-width:0] [font-size:13px] [line-height:1.5] [color:var(--on-dark)]">
+                {msgs[idx]}
               </div>
               {tag ? (
                 <span className="mk-fee-tag [padding:2px_var(--sp-2)] [border-radius:var(--r-chip)] [background:var(--cyan-12)] [border:1px_solid_var(--cyan-40)] [color:var(--ice)] [font-size:13px] whitespace-nowrap">{tag}</span>
@@ -41,7 +42,9 @@ export function SceneProperty({
           <span className="mk-prop-label [font-size:14px] [font-weight:500] [color:var(--ink)]">
             {summary ?? <span className="mk-skel mk-w-40 block [border-radius:var(--r-chip)] [width:40%]" />}
           </span>
-          <span className="mk-skel mk-w-40 mk-h-10 block [border-radius:var(--r-chip)] [width:40%]" />
+          {period ? (
+            <span className="mk-prop-period [font-size:12px] [color:var(--muted)]">{period}</span>
+          ) : null}
         </div>
         <div className="mk-prop-rows grid [gap:var(--sp-3)]">
           {tags.map((tag, idx) => (

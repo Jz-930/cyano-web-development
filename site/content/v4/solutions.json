@@ -53,12 +53,12 @@
           "en": "Product information takes too long to find"
         },
         "scenario": {
-          "zh": "销售现场查资料慢",
-          "en": "Product information takes too long to find"
+          "zh": "客户在现场追问型号和参数，销售要翻手册、找工程师，往往要等到第二天才能答复。",
+          "en": "When a prospect asks about models and specs on site, sales has to dig through manuals or wait for an engineer — often until the next day."
         },
         "metricTag": {
-          "zh": "当前工作中的问题",
-          "en": "Current workflow issue"
+          "zh": "销售团队",
+          "en": "Sales"
         }
       },
       {
@@ -67,12 +67,12 @@
           "en": "Support cannot answer specialist questions"
         },
         "scenario": {
-          "zh": "产品问题太专业，客服无法独立回答",
-          "en": "Support cannot answer specialist questions"
+          "zh": "工况、选型、价格这类问题需要工程背景，客服只能转给技术人员，客户等待时间长。",
+          "en": "Questions about operating conditions, sizing and pricing need engineering knowledge, so support hands them off and customers wait."
         },
         "metricTag": {
-          "zh": "当前工作中的问题",
-          "en": "Current workflow issue"
+          "zh": "客服团队",
+          "en": "Support"
         }
       },
       {
@@ -81,12 +81,12 @@
           "en": "Sales material lacks relevance"
         },
         "scenario": {
-          "zh": "销售材料千篇一律，缺少针对性",
-          "en": "Sales material lacks relevance"
+          "zh": "同一份产品介绍发给所有客户，没有结合对方的行业、工况和过往合作。",
+          "en": "Every prospect gets the same brochure, with nothing about their industry, conditions or past projects."
         },
         "metricTag": {
-          "zh": "当前工作中的问题",
-          "en": "Current workflow issue"
+          "zh": "市场团队",
+          "en": "Marketing"
         }
       }
     ],
@@ -255,12 +255,12 @@
           "en": "Past proposals are scattered"
         },
         "scenario": {
-          "zh": "历史方案分散，资料难以复用",
-          "en": "Past proposals are scattered"
+          "zh": "历史标书和方案散在个人电脑和共享盘里，写新方案时找不到可以直接复用的段落。",
+          "en": "Past bids live on personal laptops and shared drives, so reusable sections are hard to find when a new proposal starts."
         },
         "metricTag": {
-          "zh": "当前工作中的问题",
-          "en": "Current workflow issue"
+          "zh": "投标团队",
+          "en": "Bid team"
         }
       },
       {
@@ -269,12 +269,12 @@
           "en": "Drafting and parameter checks take days"
         },
         "scenario": {
-          "zh": "每份初稿耗时，反复核对参数",
-          "en": "Drafting and parameter checks take days"
+          "zh": "每份初稿都要从头拼凑，再逐项核对参数，一份方案常常要花两天。",
+          "en": "Each draft is pieced together from scratch and checked line by line — two days per proposal is common."
         },
         "metricTag": {
-          "zh": "当前工作中的问题",
-          "en": "Current workflow issue"
+          "zh": "方案撰写",
+          "en": "Proposal writers"
         }
       },
       {
@@ -283,12 +283,12 @@
           "en": "Critical requirements get missed"
         },
         "scenario": {
-          "zh": "关键条款容易遗漏，审核压力大",
-          "en": "Critical requirements get missed"
+          "zh": "招标要求条目多，人工核对容易漏项，审核压力集中在截止日前。",
+          "en": "Tenders carry long requirement lists; manual checks miss items and review pressure piles up before the deadline."
         },
         "metricTag": {
-          "zh": "当前工作中的问题",
-          "en": "Current workflow issue"
+          "zh": "审核负责人",
+          "en": "Reviewers"
         }
       }
     ],
@@ -457,12 +457,12 @@
           "en": "Employees ask the same questions repeatedly"
         },
         "scenario": {
-          "zh": "员工反复问同样的问题",
-          "en": "Employees ask the same questions repeatedly"
+          "zh": "VPN、报销、权限申请这类问题每天重复出现，支持人员大量时间花在复制粘贴答案上。",
+          "en": "VPN, expenses, access requests — the same questions arrive daily and support staff spend hours repeating answers."
         },
         "metricTag": {
-          "zh": "当前工作中的问题",
-          "en": "Current workflow issue"
+          "zh": "IT 与行政",
+          "en": "IT & admin"
         }
       },
       {
@@ -471,12 +471,12 @@
           "en": "Old answers persist after policy updates"
         },
         "scenario": {
-          "zh": "知识更新后，旧答案仍在传播",
-          "en": "Old answers persist after policy updates"
+          "zh": "制度更新后，旧版本仍在群聊和个人收藏里流传，员工不知道哪一份才是最新的。",
+          "en": "After a policy changes, old versions keep circulating in chats and bookmarks, and nobody knows which one is current."
         },
         "metricTag": {
-          "zh": "当前工作中的问题",
-          "en": "Current workflow issue"
+          "zh": "制度负责人",
+          "en": "Policy owners"
         }
       },
       {
@@ -485,12 +485,12 @@
           "en": "Different roles need different access"
         },
         "scenario": {
-          "zh": "权限不同，资料不能随意开放",
-          "en": "Different roles need different access"
+          "zh": "不同岗位能看的资料不同，不能把所有文档都放进一个对所有人开放的问答工具。",
+          "en": "Different roles may see different documents, so you cannot drop everything into a Q&A tool that everyone can query."
         },
         "metricTag": {
-          "zh": "当前工作中的问题",
-          "en": "Current workflow issue"
+          "zh": "信息安全",
+          "en": "Security"
         }
       }
     ],
@@ -659,12 +659,12 @@
           "en": "Every query goes through the IT queue"
         },
         "scenario": {
-          "zh": "查一个数字，要等 IT 导数",
-          "en": "Every query goes through the IT queue"
+          "zh": "想看一个库存或销量数字，要先给 IT 提需求，等导出的表格往往要一天以上。",
+          "en": "Checking a stock or sales figure means filing a request with IT and waiting a day or more for the export."
         },
         "metricTag": {
-          "zh": "当前工作中的问题",
-          "en": "Current workflow issue"
+          "zh": "业务团队",
+          "en": "Business teams"
         }
       },
       {
@@ -673,12 +673,12 @@
           "en": "Inconsistent metrics make results hard to trust"
         },
         "scenario": {
-          "zh": "指标口径不统一，结果难核对",
-          "en": "Inconsistent metrics make results hard to trust"
+          "zh": "同一个指标在不同报表里算法不同，结果对不上，大家不敢直接用。",
+          "en": "The same metric is calculated differently across reports, so numbers do not match and people stop trusting them."
         },
         "metricTag": {
-          "zh": "当前工作中的问题",
-          "en": "Current workflow issue"
+          "zh": "数据团队",
+          "en": "Data team"
         }
       },
       {
@@ -687,12 +687,12 @@
           "en": "Business users cannot write SQL"
         },
         "scenario": {
-          "zh": "业务人员不会 SQL，无法自助分析",
-          "en": "Business users cannot write SQL"
+          "zh": "业务人员不会写 SQL，只能看固定报表，临时想到的问题没法马上验证。",
+          "en": "Without SQL, business users are limited to fixed reports and cannot test a new question on the spot."
         },
         "metricTag": {
-          "zh": "当前工作中的问题",
-          "en": "Current workflow issue"
+          "zh": "运营管理",
+          "en": "Operations"
         }
       }
     ],

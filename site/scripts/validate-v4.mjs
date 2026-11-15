@@ -83,6 +83,13 @@ const cases = z
       main: z.number().int().nonnegative(),
       demo: z.string().url().optional(),
       mockup: z.enum(["sales", "proposal", "wiki", "data", "property", "writing"]),
+      story: z
+        .object({
+          background: L,
+          challenges: z.array(L).length(3),
+          approach: z.array(L).length(4),
+        })
+        .optional(),
     }),
   )
   .min(6)

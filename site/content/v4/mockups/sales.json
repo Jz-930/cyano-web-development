@@ -48,5 +48,10 @@
     "zh": "销售顾问界面示意：根据产品资料与项目记录回答客户问题。",
     "en": "Sales advisor interface: answers customer questions using product documentation and project records.",
     "status": "approved"
+  },
+  "a": {
+    "zh": "推荐采用气流粉碎加精密分级的组合工艺。同类正极材料产线已稳定运行，粒度与产能都能满足你们的工况。",
+    "en": "We recommend a jet-milling plus precision-classifying line. The same setup already runs on comparable cathode-material lines and meets your particle-size and throughput needs.",
+    "status": "approved"
   }
 }

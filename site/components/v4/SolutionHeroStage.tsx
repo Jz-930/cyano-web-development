@@ -69,9 +69,8 @@ export function SolutionHeroStage({
         </div>
 
         <div className="sol-inout-core relative [z-index:1] flex justify-center" aria-hidden="true">
-          <div className="mk-core [width:22px] [height:22px] inline-flex items-center [gap:var(--sp-2)] [padding:var(--sp-2)_var(--sp-3)] whitespace-nowrap">
+          <div className="mk-core [width:22px] [height:22px] inline-flex items-center justify-center">
             <span className="mk-core-dot [width:7px] [height:7px] [border-radius:var(--r-chip)] [background:var(--cyan)]" />
-            <span className="label">Cyano Core</span>
           </div>
         </div>
 

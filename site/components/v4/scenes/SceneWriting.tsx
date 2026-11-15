@@ -19,6 +19,7 @@ export function SceneWriting({
   const branchA = mk("writing", "branchA", locale);
   const branchB = mk("writing", "branchB", locale);
   const mems = [1, 2, 3].map((n) => mk("writing", `mem${n}`, locale));
+  const memDetails = [1, 2, 3].map((n) => mk("writing", `mem${n}d`, locale));
 
   return (
     <div
@@ -52,10 +53,9 @@ export function SceneWriting({
               <div className="mk-mem-title [font-size:13px] [font-weight:500] [color:var(--ink)]">
                 {m ?? <span className="mk-skel mk-w-40 block [border-radius:var(--r-chip)] [width:40%]" />}
               </div>
-              <div className="mk-skel-group grid [gap:var(--sp-2)]">
-                <span className="mk-skel mk-w-92 block [border-radius:var(--r-chip)] [width:92%]" />
-                <span className="mk-skel mk-w-64 block [border-radius:var(--r-chip)] [width:64%]" />
-              </div>
+              {memDetails[idx] ? (
+                <p className="m-0 [font-size:12px] [line-height:1.55] [color:var(--muted)]">{memDetails[idx]}</p>
+              ) : null}
             </div>
           ))}
         </div>

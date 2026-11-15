@@ -2,12 +2,12 @@
   "seo": {
     "home": {
       "title": {
-        "zh": "为企业开发日常工作用得上的 AI",
+        "zh": "将企业知识，转化为可交付的 AI 生产力",
         "en": "Custom AI for your everyday work"
       },
       "description": {
-        "zh": "我们为企业开发销售问答、标书生成、内部知识库和数据查询系统，也提供托管式 AI 服务。项目包括需求评估、开发部署和上线后的维护。",
-        "en": "We build AI systems for customer inquiries, proposal drafting, internal knowledge and data queries. We also offer managed AI services, with support from initial assessment through deployment and maintenance."
+        "zh": "Cyano 为企业定制销售问答、标书生成、内部知识库和数据查询等 AI 系统，也提供托管式 AI 服务。从需求评估、开发部署到上线后的维护，都由同一个团队负责。",
+        "en": "Cyano builds custom AI systems for customer inquiries, proposal drafting, internal knowledge and data queries, and runs managed AI services. One team owns everything from assessment and deployment to long-term maintenance."
       }
     },
     "services": {
@@ -22,8 +22,8 @@
     },
     "cases": {
       "title": {
-        "zh": "六个客户项目的界面与成果",
-        "en": "Six client projects: systems and results"
+        "zh": "每一个案例，都是一套正在运行的系统",
+        "en": "Every case here is a system in production"
       },
       "description": {
         "zh": "6 个客户项目 · 覆盖 6 个行业",
@@ -52,8 +52,8 @@
     },
     "about": {
       "title": {
-        "zh": "为企业开发和维护 AI 工具",
-        "en": "Building and maintaining AI tools for businesses"
+        "zh": "让企业知识流动起来，变成每天在用的 AI 系统",
+        "en": "We make company knowledge flow into AI systems your team uses every day"
       },
       "description": {
         "zh": "Cyano（澜屿智创）是一支企业 AI 工程团队，服务中国与北美的企业客户。我们为企业定制 AI 工具、AI 工作流与托管式 AI 服务，专注于把 AI 用进销售、文档、知识管理和数据分析等核心业务流程。",
@@ -201,12 +201,12 @@
       "en": "ENTERPRISE AI ENGINEERING"
     },
     "title": {
-      "zh": "为企业开发日常工作用得上的 AI",
+      "zh": "将企业知识，转化为可交付的 AI 生产力",
       "en": "Custom AI for your everyday work"
     },
     "subtitle": {
-      "zh": "我们为企业开发销售问答、标书生成、内部知识库和数据查询系统，也提供托管式 AI 服务。项目包括需求评估、开发部署和上线后的维护。",
-      "en": "We build AI systems for customer inquiries, proposal drafting, internal knowledge and data queries. We also offer managed AI services, with support from initial assessment through deployment and maintenance."
+      "zh": "Cyano 为企业定制销售问答、标书生成、内部知识库和数据查询等 AI 系统，也提供托管式 AI 服务。从需求评估、开发部署到上线后的维护，都由同一个团队负责。",
+      "en": "Cyano builds custom AI systems for customer inquiries, proposal drafting, internal knowledge and data queries, and runs managed AI services. One team owns everything from assessment and deployment to long-term maintenance."
     },
     "secondaryCta": {
       "zh": "查看案例",
@@ -379,7 +379,7 @@
         {
           "code": "01 / SOURCES",
           "title": {
-            "zh": "资料分散",
+            "zh": "散在各个系统",
             "en": "Scattered sources"
           },
           "rawLabel": {
@@ -410,8 +410,8 @@
         {
           "code": "02 / CONTEXT",
           "title": {
-            "zh": "信息取舍",
-            "en": "Context selection"
+            "zh": "信息给不全",
+            "en": "Incomplete context"
           },
           "rawLabel": {
             "zh": "普通聊天框做法",
@@ -441,8 +441,8 @@
         {
           "code": "03 / VERIFICATION",
           "title": {
-            "zh": "结果核查",
-            "en": "Review requirements"
+            "zh": "缺少核对机制",
+            "en": "No way to verify"
           },
           "rawLabel": {
             "zh": "普通聊天框做法",
@@ -472,8 +472,8 @@
         {
           "code": "04 / OPERATIONS",
           "title": {
-            "zh": "团队使用",
-            "en": "Team use"
+            "zh": "没形成团队能力",
+            "en": "No shared practice"
           },
           "rawLabel": {
             "zh": "普通聊天框做法",
@@ -1337,8 +1337,8 @@
       "en": "ABOUT CYANO"
     },
     "title": {
-      "zh": "为企业开发和维护 AI 工具",
-      "en": "Building and maintaining AI tools for businesses"
+      "zh": "让企业知识流动起来，变成每天在用的 AI 系统",
+      "en": "We make company knowledge flow into AI systems your team uses every day"
     },
     "intro": {
       "zh": "Cyano（澜屿智创）提供企业 AI 定制开发、试点与托管服务。我们根据企业的资料和流程设计系统，并负责约定范围内的上线维护。",
@@ -1596,8 +1596,8 @@
   },
   "cases": {
     "title": {
-      "zh": "六个客户项目的界面与成果",
-      "en": "Six client projects: systems and results"
+      "zh": "每一个案例，都是一套正在运行的系统",
+      "en": "Every case here is a system in production"
     },
     "intro": {
       "zh": "这些案例来自 Cyano 为企业客户交付的项目。界面中的客户信息与数据已按保密要求脱敏。签署保密协议后，可由工程师演示完整系统。",

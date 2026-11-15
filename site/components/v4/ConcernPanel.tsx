@@ -242,7 +242,7 @@ export function ConcernPanel({
                 {/* Left: Problem */}
                 <div className="concern-side is-problem">
                   <span className="label">
-                    {t(locale, "目前的问题", "The problem")}
+                    {t(locale, "现在的情况", "Today")}
                   </span>
                   <div
                     className={`concern-anim relative [height:220px] [border-radius:var(--r-card)] [background:var(--n2)] [border:1px_solid_var(--dark-line-soft)] overflow-hidden concern-anim-p-${i}`}

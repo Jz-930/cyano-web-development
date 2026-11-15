@@ -190,11 +190,11 @@ export function WorkflowRun({ locale, slug }: WorkflowRunProps) {
                 <div className="workflow-card-top flex items-center justify-between [gap:var(--sp-2)] [min-height:22px]">
                   <span className="label">{`0${i + 1}`}</span>
                   {showReview ? (
-                    <span className="workflow-review-badge inline-flex items-center [gap:var(--sp-1)] [padding:2px_var(--sp-2)] [border-radius:var(--r-chip)] [background:var(--amber-12)] [border:1px_solid_var(--amber)] [color:var(--ink)]">
+                    <span className="workflow-review-badge inline-flex items-center [gap:6px] [height:22px] [padding:0_var(--sp-2)_0_3px] [border-radius:var(--r-chip)] [background:var(--amber-12)] [border:1px_solid_var(--amber)] [color:var(--ink)]">
                       <span className="workflow-review-dot [width:16px] [height:16px] [border-radius:var(--q50)] [background:var(--amber)] [color:var(--n1)] inline-grid [place-items:center]" aria-hidden="true">
                         <Check size={11} strokeWidth={2.2} />
                       </span>
-                      <span className="eyebrow">{reviewLabel}</span>
+                      <span className="[font-size:12px] [line-height:1] [font-weight:500] [color:var(--amber-ink)] [white-space:nowrap]">{reviewLabel}</span>
                     </span>
                   ) : null}
                 </div>

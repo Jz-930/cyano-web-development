@@ -100,14 +100,14 @@ export function WipeCompare({
           data-active={pct >= 50 ? "true" : undefined}
         >
           <span className="eyebrow">{beforeLabel}</span>
-          <strong className="wipe-time [font-size:24px] [font-weight:650] [font-variant-numeric:tabular-nums]">{r1}</strong>
+          <strong className="wipe-time [font-size:24px] [font-weight:500] [font-variant-numeric:tabular-nums]">{r1}</strong>
         </div>
         <div
           className="wipe-readout is-after inline-flex items-baseline [gap:var(--sp-2)] [transition:opacity_var(--qtf)]"
           data-active={pct <= 50 ? "true" : undefined}
         >
           <span className="eyebrow">{afterLabel}</span>
-          <strong className="wipe-time is-accent [font-size:24px] [font-weight:650] [font-variant-numeric:tabular-nums]">{r2}</strong>
+          <strong className="wipe-time is-accent [font-size:24px] [font-weight:500] [font-variant-numeric:tabular-nums]">{r2}</strong>
         </div>
       </div>
 
@@ -120,7 +120,7 @@ export function WipeCompare({
         onPointerCancel={onPointerUp}
       >
         {/* Base layer: After (15-min cited draft) */}
-        <div className="wipe-pane wipe-pane-after flex flex-col justify-between [gap:var(--sp-4)] [padding:var(--sp-6)] [background:var(--n1)] [color:var(--on-dark)]" data-surface="dark">
+        <div className="wipe-pane wipe-pane-after flex flex-col justify-between [gap:var(--sp-4)] [padding:var(--sp-6)_var(--sp-6)_var(--sp-6)_calc(var(--wipe)*1%_+_var(--sp-6))] [@media(max-width:800px)]:[padding:var(--sp-5)] [background:var(--n1)] [color:var(--on-dark)]" data-surface="dark">
           <div className="wipe-pane-badge inline-flex items-center [align-self:flex-start] [gap:var(--sp-2)] [padding:var(--sp-1)_var(--sp-3)] [border-radius:var(--r-chip)]">
             <Check size={13} aria-hidden="true" />
             <span className="eyebrow">
@@ -147,10 +147,6 @@ export function WipeCompare({
                 <li key={idx} className="wipe-manual-card flex flex-col [gap:var(--sp-1)] [padding:var(--sp-3)] [border-radius:var(--r-control)] [background:var(--p0)] [border:1px_dashed_var(--line)] [font-size:14px] [font-weight:500] [color:var(--ink)]">
                   <span className="label">{`0${idx + 1}`}</span>
                   <span>{st}</span>
-                  <span className="wipe-manual-lines flex flex-col [gap:4px] [margin-top:var(--sp-1)]">
-                    <i />
-                    <i />
-                  </span>
                 </li>
               ))}
             </ol>

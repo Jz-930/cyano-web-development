@@ -209,7 +209,7 @@ export function Technology({ locale }: { locale: Locale }) {
                   locale={locale}
                   className="tech-stat-cite"
                 >
-                  <span className="figure glow-number tech-stat-figure [font-size:clamp(34px,4vw,48px)] [line-height:1.05] [font-weight:650] [font-variant-numeric:tabular-nums]">
+                  <span className="figure glow-number tech-stat-figure [font-size:clamp(34px,4vw,48px)] [line-height:1.05] [font-weight:500] [font-variant-numeric:tabular-nums]">
                     {b.value}
                   </span>
                 </CitationPeek>

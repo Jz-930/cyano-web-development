@@ -79,7 +79,45 @@
     ],
     "main": 2,
     "demo": "https://lnpe-2026.vercel.app/",
-    "mockup": "sales"
+    "mockup": "sales",
+    "story": {
+      "background": {
+        "zh": "客户是一家粉体工程装备企业，产品覆盖粉碎、分级和成套产线，型号与技术参数繁多。客户的问题常常涉及物料特性、产能和工况，过去需要工程师结合以往项目才能回答。",
+        "en": "The client builds powder-processing equipment — milling, classifying and complete production lines — with a large catalogue of models and specifications. Customer questions usually involve material properties, throughput and operating conditions, and used to require an engineer who knew past projects."
+      },
+      "challenges": [
+        {
+          "zh": "选型问题依赖少数资深工程师，回复慢",
+          "en": "Sizing questions depended on a few senior engineers, so replies were slow"
+        },
+        {
+          "zh": "产品手册、参数表和项目记录分散在不同系统",
+          "en": "Manuals, spec sheets and project records lived in separate systems"
+        },
+        {
+          "zh": "销售材料没有结合客户的行业和工况",
+          "en": "Sales material ignored the customer's industry and conditions"
+        }
+      ],
+      "approach": [
+        {
+          "zh": "整理产品手册、参数表和历史项目，建立按型号与物料检索的知识库",
+          "en": "Organised manuals, spec sheets and past projects into a knowledge base searchable by model and material"
+        },
+        {
+          "zh": "对外咨询入口按问题引导对话，回答附带资料来源",
+          "en": "A customer-facing assistant guides each conversation and cites its sources"
+        },
+        {
+          "zh": "内部工作台为销售匹配相似项目和报价参考",
+          "en": "An internal workbench matches sales with comparable projects and pricing references"
+        },
+        {
+          "zh": "按客户行业与工况生成一客一稿的方案材料",
+          "en": "Generates proposal material tailored to each customer's industry and conditions"
+        }
+      ]
+    }
   },
   {
     "slug": "proposal-generation",
@@ -159,7 +197,45 @@
     ],
     "main": 0,
     "demo": "https://research-bp-writing.vercel.app/",
-    "mockup": "proposal"
+    "mockup": "proposal",
+    "story": {
+      "background": {
+        "zh": "客户是一家专业咨询与投研机构，每月要完成大量方案和研究报告。每份报告都要整理甲方诉求、行业资料和财务测算，过去一份初稿通常需要两天。",
+        "en": "The client is a consulting and investment-research firm that produces a steady stream of proposals and research reports. Each one combines client requirements, industry research and financial analysis, and a first draft used to take about two days."
+      },
+      "challenges": [
+        {
+          "zh": "历史报告和调研资料分散，难以复用",
+          "en": "Past reports and research were scattered and hard to reuse"
+        },
+        {
+          "zh": "论证框架依赖个人经验，质量不稳定",
+          "en": "Argument structure depended on individual experience, so quality varied"
+        },
+        {
+          "zh": "提交前缺少系统化的完整性检查",
+          "en": "There was no systematic completeness check before submission"
+        }
+      ],
+      "approach": [
+        {
+          "zh": "按甲方沟通、调研、论证、输出梳理项目工作流",
+          "en": "Mapped the workflow into client briefing, research, analysis and output stages"
+        },
+        {
+          "zh": "AI 助手整理沟通记录，提取核心诉求并写入报告草稿",
+          "en": "An AI assistant structures meeting notes, extracts key requirements and writes them into the draft"
+        },
+        {
+          "zh": "从七个维度自动检查报告完整性，并标出关键假设的风险",
+          "en": "Checks every draft against seven completeness criteria and flags risky assumptions"
+        },
+        {
+          "zh": "初稿可编辑、可追溯，由分析师复核后定稿",
+          "en": "Drafts stay editable and traceable; analysts review and sign off"
+        }
+      ]
+    }
   },
   {
     "slug": "it-knowledge-assistant",
@@ -241,7 +317,45 @@
       "/media/enterprise-wiki-ai/enterprise-wiki-it-assistant-05-analytics.webp"
     ],
     "main": 0,
-    "mockup": "wiki"
+    "mockup": "wiki",
+    "story": {
+      "background": {
+        "zh": "客户是一家大型企业的 IT 部门。员工规模大，日常咨询集中在账号、设备、网络和安全制度上，大量重复问题占用了支持团队的时间。",
+        "en": "The client is the IT department of a large enterprise. Most day-to-day questions are about accounts, devices, networks and security policy, and repeat questions were eating up the support team's time."
+      },
+      "challenges": [
+        {
+          "zh": "重复咨询多，工单持续积压",
+          "en": "Repeat questions kept the ticket queue full"
+        },
+        {
+          "zh": "制度更新后，旧答案仍在流传",
+          "en": "Outdated answers kept circulating after policy updates"
+        },
+        {
+          "zh": "不同岗位能查看的资料范围不同",
+          "en": "Different roles were allowed to see different documents"
+        }
+      ],
+      "approach": [
+        {
+          "zh": "接入内部 Wiki、制度文档和工单系统，按权限建立索引",
+          "en": "Connected the internal wiki, policy documents and ticketing system, indexed with access controls"
+        },
+        {
+          "zh": "回答附带制度出处，员工可直接查看原文",
+          "en": "Every answer cites the policy it came from, with a link to the original"
+        },
+        {
+          "zh": "无法确认的问题自动生成工单摘要，转给 IT 工程师",
+          "en": "Questions it cannot confirm become ticket summaries routed to IT engineers"
+        },
+        {
+          "zh": "看板跟踪拦截率、响应时间和热门问题，持续补充知识库",
+          "en": "A dashboard tracks deflection rate, response time and top questions to keep the knowledge base current"
+        }
+      ]
+    }
   },
   {
     "slug": "nl-data-query",
@@ -324,7 +438,45 @@
       "/media/smartdoc-ui-suite/smartdoc-ui-suite-06-template-library.webp"
     ],
     "main": 1,
-    "mockup": "data"
+    "mockup": "data",
+    "story": {
+      "background": {
+        "zh": "客户是一家零售与供应链企业，SKU 多、销售区域多，业务团队每天都要查看库存和销量。过去所有临时查询都要提交给 IT 导数。",
+        "en": "The client is a retail and supply-chain business with many SKUs and regions. Business teams check stock and sales every day, and every ad-hoc question used to go to IT as a data-export request."
+      },
+      "challenges": [
+        {
+          "zh": "临时查询要排队，常常等一天以上",
+          "en": "Ad-hoc questions waited in a queue, often for more than a day"
+        },
+        {
+          "zh": "同一指标在不同报表中口径不一",
+          "en": "The same metric was defined differently across reports"
+        },
+        {
+          "zh": "业务人员不会写 SQL，只能看固定报表",
+          "en": "Business users could not write SQL and were limited to fixed reports"
+        }
+      ],
+      "approach": [
+        {
+          "zh": "梳理常用指标口径，建立统一的数据字典",
+          "en": "Defined common metrics once in a shared data dictionary"
+        },
+        {
+          "zh": "用自然语言提问，系统生成查询并展示可核对的 SQL",
+          "en": "Users ask in plain language; the system writes the query and shows SQL that can be checked"
+        },
+        {
+          "zh": "按角色控制可查询的数据范围",
+          "en": "Role-based access controls what each user can query"
+        },
+        {
+          "zh": "结果以表格和图表返回，可导出到报表",
+          "en": "Results come back as tables and charts, ready to export"
+        }
+      ]
+    }
   },
   {
     "slug": "property-management",
@@ -408,7 +560,45 @@
     ],
     "main": 3,
     "demo": "https://alphahouse-demo.vercel.app/",
-    "mockup": "property"
+    "mockup": "property",
+    "story": {
+      "background": {
+        "zh": "客户管理多套出租物业，与租客、维修工和物业的沟通都在手机上完成。租金、维修费和管理费散落在聊天记录里，月底对账全靠手工整理。",
+        "en": "The client manages a portfolio of rental properties and handles tenants, repair technicians and building offices from a phone. Rent, repair costs and management fees were buried in chat threads, and month-end reconciliation was done by hand."
+      },
+      "challenges": [
+        {
+          "zh": "费用信息散落在聊天和转账记录中",
+          "en": "Cost details were scattered across chats and payment records"
+        },
+        {
+          "zh": "手工对账耗时，容易遗漏",
+          "en": "Manual reconciliation was slow and error-prone"
+        },
+        {
+          "zh": "屋主难以看清每套房产的真实收益",
+          "en": "Owners could not see the true return of each property"
+        }
+      ],
+      "approach": [
+        {
+          "zh": "在手机端统一管理与租客、维修工和物业的沟通",
+          "en": "One mobile app for conversations with tenants, technicians and building offices"
+        },
+        {
+          "zh": "AI 从消息中识别租金、维修和管理费用",
+          "en": "AI picks out rent, repair and management costs from messages"
+        },
+        {
+          "zh": "自动生成每套房产的账单明细",
+          "en": "Itemised statements are generated for every property"
+        },
+        {
+          "zh": "按月汇总收支与出租情况，形成投资表现报告",
+          "en": "Monthly income, costs and occupancy roll up into a performance report"
+        }
+      ]
+    }
   },
   {
     "slug": "writing-memory-engine",
@@ -493,6 +683,44 @@
       "/media/dme-writing-engine/dme-writing-engine-07-connections-settings.webp"
     ],
     "main": 1,
-    "mockup": "writing"
+    "mockup": "writing",
+    "story": {
+      "background": {
+        "zh": "客户是一个长期创作长篇小说与剧本的内容团队。一部作品动辄几十万到上百万字，人物设定、世界观和剧情分支数量庞大。",
+        "en": "The client is a content studio that writes long-form fiction and scripts. A single work can run from hundreds of thousands to over a million words, with large numbers of characters, world details and plot branches."
+      },
+      "challenges": [
+        {
+          "zh": "长对话中，AI 会混淆人物设定",
+          "en": "In long sessions, AI mixed up character details"
+        },
+        {
+          "zh": "多条剧情分支互相干扰",
+          "en": "Plot branches bled into each other"
+        },
+        {
+          "zh": "通用工具无法控制哪些内容进入上下文",
+          "en": "General-purpose tools gave no control over what entered the context"
+        }
+      ],
+      "approach": [
+        {
+          "zh": "建立可控记忆层，按人物、世界观和剧情节点分类管理设定",
+          "en": "A controllable memory layer organises characters, world settings and plot points"
+        },
+        {
+          "zh": "当前对话只载入需要的设定片段，并显示上下文占用",
+          "en": "Each session loads only the details it needs and shows context usage"
+        },
+        {
+          "zh": "剧情分支独立存档，切换时互不影响",
+          "en": "Plot branches are saved separately and never contaminate each other"
+        },
+        {
+          "zh": "兼容主流模型，也可接入专门训练的私有写作模型",
+          "en": "Works with mainstream models or a privately trained writing model"
+        }
+      ]
+    }
   }
 ]

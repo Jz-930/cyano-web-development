@@ -130,11 +130,11 @@ export function About({ locale }: { locale: Locale }) {
               })}
             </svg>
 
-            <ol className="about-hero-stages grid [grid-template-columns:repeat(5,minmax(0,1fr))] [gap:var(--sp-2)] list-none m-0 p-0">
-              {stageNames.map((st, idx) => (
+            <ol className="about-hero-stages flex flex-wrap justify-center [gap:var(--sp-2)] list-none m-0 p-0">
+              {stageNames.map((st) => (
                 <li key={st} className="about-stage-pill flex items-center justify-center [gap:6px] [padding:6px_8px] [border-radius:var(--r-chip)] [background:var(--n2)] [border:1px_solid_var(--dark-line)]">
                   <span className="about-stage-dot [width:6px] [height:6px] [border-radius:var(--r-chip)] [background:var(--cyan)]" />
-                  <span className="label">{`0${idx + 1}`}</span>
+                  <span className="label [white-space:nowrap] [color:var(--on-dark)]">{st}</span>
                 </li>
               ))}
             </ol>
@@ -167,12 +167,12 @@ export function About({ locale }: { locale: Locale }) {
                       locale={locale}
                       className="about-stat-cite"
                     >
-                      <strong className="figure about-stat-val [font-size:32px] [line-height:1.05] [font-weight:650] [font-variant-numeric:tabular-nums]">
+                      <strong className="figure about-stat-val [font-size:32px] [line-height:1.05] [font-weight:500] [font-variant-numeric:tabular-nums]">
                         {st.value}
                       </strong>
                     </CitationPeek>
                   ) : (
-                    <strong className="figure about-stat-val [font-size:32px] [line-height:1.05] [font-weight:650] [font-variant-numeric:tabular-nums]">
+                    <strong className="figure about-stat-val [font-size:32px] [line-height:1.05] [font-weight:500] [font-variant-numeric:tabular-nums]">
                       {st.value}
                     </strong>
                   )}
@@ -231,7 +231,7 @@ export function About({ locale }: { locale: Locale }) {
                       className="about-founder-img [width:128px] [max-width:160px] [height:128px] [max-height:160px] [border-radius:var(--r-card)] [object-fit:cover] [background:var(--p3)] shrink-0"
                     />
                     <div className="about-founder-meta flex flex-col [gap:var(--sp-2)]">
-                      <span className="label">{f.id}</span>
+                      
                       <h3 className="h3">{f.role}</h3>
                       <div className="about-founder-tags flex flex-wrap [gap:var(--sp-2)]">
                         {f.tags.split(" · ").map((tg) => (
@@ -243,7 +243,7 @@ export function About({ locale }: { locale: Locale }) {
                     </div>
                   </div>
 
-                  <p className="about-founder-motto m-0 [font-size:16px] [font-weight:600] [color:var(--ink)]">{f.motto}</p>
+                  <p className="about-founder-motto m-0 [font-size:16px] [font-weight:500] [color:var(--ink)]">{f.motto}</p>
                   <p className="about-founder-bio m-0 [font-size:15px] [color:var(--muted)]">{f.bio}</p>
 
                   <div className="about-founder-stages flex flex-wrap [gap:var(--sp-2)] [margin-top:auto] [padding-top:var(--sp-3)] [border-top:1px_solid_var(--line-soft)]">
@@ -268,7 +268,7 @@ export function About({ locale }: { locale: Locale }) {
               <h2 className="h2">
                 {text("D.7", "名字的由来标题", locale)}
               </h2>
-              <p className="name-story-lead m-0 [font-size:20px] [font-weight:600] [line-height:1.4] [color:var(--ink)]">
+              <p className="name-story-lead m-0 [font-size:20px] [font-weight:500] [line-height:1.4] [color:var(--ink)]">
                 <Phrase
                   text={pageCopy.designed_around_your_sources[locale]}
                   locale={locale}

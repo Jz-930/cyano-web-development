@@ -23,5 +23,25 @@
     "zh": "物业管理界面示意：从日常沟通中提取费用，按房产汇总。",
     "en": "Property interface: costs extracted from messages and grouped by property.",
     "status": "approved"
+  },
+  "msg1": {
+    "zh": "租客：本月房租已转账，请查收。",
+    "en": "Tenant: This month's rent has been transferred.",
+    "status": "approved"
+  },
+  "msg2": {
+    "zh": "维修工：热水器已更换，材料和人工费见附件。",
+    "en": "Technician: Water heater replaced. Parts and labour invoice attached.",
+    "status": "approved"
+  },
+  "msg3": {
+    "zh": "物业：下季度管理费账单已出，月底前缴纳。",
+    "en": "Building office: Next quarter's management fee is due by month-end.",
+    "status": "approved"
+  },
+  "period": {
+    "zh": "本月收支已自动归集",
+    "en": "This month's income and costs, reconciled",
+    "status": "approved"
   }
 }

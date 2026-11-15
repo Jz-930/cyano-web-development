@@ -115,6 +115,13 @@ export function ScaledSceneMockup({
   } else if (scene === "wiki") {
     status = step >= 5 ? mk("wiki", "statusDone", locale) : null;
     statusTone = step >= 5 ? "ok" : "default";
+  } else if (scene === "data") {
+    // The first stat ("0 行" / "0 lines") reads oddly as a window badge.
+    status = locale === "zh" ? "已生成查询" : "Query ready";
+    statusTone = "ok";
+  } else if (scene === "property") {
+    status = locale === "zh" ? "已自动归集" : "Reconciled";
+    statusTone = "ok";
   } else {
     status = meta.stats[0]?.value ?? null;
     statusTone = "ok";

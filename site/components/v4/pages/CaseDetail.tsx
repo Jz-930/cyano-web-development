@@ -123,7 +123,7 @@ export function CaseDetail({
                 locale={locale}
                 className="case-stat-cite"
               >
-                <span className="figure glow-number case-hero-figure [font-size:clamp(32px,3.6vw,48px)] [line-height:1.05] [font-weight:650] [font-variant-numeric:tabular-nums]">
+                <span className="figure glow-number case-hero-figure [font-size:clamp(32px,3.6vw,48px)] [line-height:1.05] [font-weight:500] [font-variant-numeric:tabular-nums]">
                   {st.value}
                 </span>
               </CitationPeek>
@@ -150,6 +150,45 @@ export function CaseDetail({
               </div>
             ))}
           </dl>
+
+          {c.story ? (
+            <div
+              className="case-story grid [grid-template-columns:minmax(0,1fr)_minmax(0,1fr)] [@media(max-width:900px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-7)] [margin-top:var(--sp-7)]"
+              data-reveal=""
+            >
+              <div className="grid [gap:var(--sp-6)] [align-content:start]">
+                <div className="grid [gap:var(--sp-3)]">
+                  <h2 className="h3">{locale === "zh" ? "项目背景" : "Background"}</h2>
+                  <p className="m-0 [color:var(--muted)] [line-height:1.8]">{c.story.background}</p>
+                </div>
+                <div className="grid [gap:var(--sp-3)]">
+                  <h2 className="h3">{locale === "zh" ? "主要挑战" : "Challenges"}</h2>
+                  <ul className="list-none m-0 p-0 grid [gap:var(--sp-2)]">
+                    {c.story.challenges.map((item) => (
+                      <li key={item} className="flex [gap:var(--sp-3)] [color:var(--muted)] [line-height:1.7]">
+                        <span className="shrink-0 [margin-top:0.7em] [width:6px] [height:6px] [border-radius:var(--r-chip)] [background:var(--amber)]" aria-hidden="true" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="grid [gap:var(--sp-3)] [align-content:start]">
+                <h2 className="h3">{locale === "zh" ? "我们的做法" : "What we built"}</h2>
+                <ol className="list-none m-0 p-0 grid [gap:var(--sp-3)]">
+                  {c.story.approach.map((item, i) => (
+                    <li
+                      key={item}
+                      className="flex [gap:var(--sp-4)] [padding:var(--sp-4)] [border-radius:var(--r-card)] [background:var(--p2)] [border:1px_solid_var(--line)] [line-height:1.7]"
+                    >
+                      <span className="label shrink-0 [color:var(--link)]">{String(i + 1).padStart(2, "0")}</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          ) : null}
         </div>
       </section>
 
