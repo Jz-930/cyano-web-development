@@ -1,108 +1,164 @@
 // Paper field (v4): a single fixed WebGL2 canvas behind every paper (light)
 // surface of the site. Dark sections are opaque and simply cover it.
 //
-// Per-frame render graph (live mode):
-//   sim      particles advected along the curl of the terrain (transform feedback)
-//   trails   screen-space trail buffer: scroll-shifted decay + instanced segments
-//   emit     half-res emission: dense gradient isolines + trails
-//   bloom    separable Gaussian at 1/4 res (glow) and again at 1/8 res (frost)
-//   compose  sharp isolines + glow + trails + survey grid; behind live text the
-//            sharp layer is swapped for the 1/8 blur under a white veil, i.e. a
-//            frosted-glass pane computed on the GPU, with no DOM boxes and no
-//            per-frame backdrop-filter cost.
-// Text panes come from a document-space mask baked from measured text blocks.
+// Motif: mathematical line families, drawn as real instanced geometry.
+//   ribbons   cubic Bézier spines, each carrying a helix of hairline strands
+//             (a twisted ruled surface seen flat), control points slowly drifting
+//   accents   in the gutters, alternating: a phyllotaxis rosette of counter-rotating
+//             logarithmic spirals (r = a·e^(bθ)) and a nested family of Bernoulli
+//             lemniscates (∞)
+//   pulses    a few strands carry a short bright head travelling along the curve
+// Every strand is a triangle strip generated entirely in the vertex shader from
+// gl_VertexID / gl_InstanceID (no vertex buffers), extruded to a sub-pixel,
+// analytically anti-aliased line.
+//
+// Per frame: strands -> scene target; scene -> separable Gaussian at 1/4 (glow)
+// and 1/8 (frost); composite. Behind live text the scene is swapped for the 1/8
+// blur under a paper veil: a frosted-glass pane computed on the GPU, with no DOM
+// boxes and no per-frame backdrop-filter cost. Text panes come from a
+// document-space mask of measured text blocks; sticky containers are tracked per
+// frame as analytic rounded-rect panes.
 
-const COMMON = `
-vec3 perm(vec3 x){return mod(((x*34.)+1.)*x,289.);}
-float snoise(vec2 v){
-  const vec4 C=vec4(.211324865405187,.366025403784439,-.577350269189626,.024390243902439);
-  vec2 i=floor(v+dot(v,C.yy));vec2 x0=v-i+dot(i,C.xx);
-  vec2 i1=(x0.x>x0.y)?vec2(1.,0.):vec2(0.,1.);
-  vec4 x12=x0.xyxy+C.xxzz;x12.xy-=i1;i=mod(i,289.);
-  vec3 p=perm(perm(i.y+vec3(0.,i1.y,1.))+i.x+vec3(0.,i1.x,1.));
-  vec3 m=max(.5-vec3(dot(x0,x0),dot(x12.xy,x12.xy),dot(x12.zw,x12.zw)),0.);
-  m=m*m;m=m*m;
-  vec3 x=2.*fract(p*C.www)-1.;vec3 h=abs(x)-.5;vec3 ox=floor(x+.5);vec3 a0=x-ox;
-  m*=1.79284291400159-.85373472095314*(a0*a0+h*h);
-  vec3 g;g.x=a0.x*x0.x+h.x*x0.y;g.yz=a0.yz*x12.xz+h.yz*x12.yw;
-  return 130.*dot(m,g);
-}
+const CURVE_VS = `#version 300 es
+precision highp float;
 uniform float uTime;
+uniform vec2 uView;
+uniform float uScrollP;
+uniform float uScale;
 uniform vec2 uPtr;
 uniform float uPtrAmt;
-// fp: field-space CSS px. Domain-warped two-octave simplex terrain.
-float field(vec2 fp){
-  vec2 p=fp/980.;
-  float t=uTime;
-  vec2 q=vec2(snoise(p*.55+vec2(1.7,t*.026)),snoise(p*.55+vec2(8.3,-t*.022)));
-  float h=snoise(p+.55*q+vec2(t*.015,0.));
-  h+=.18*snoise(p*2.1-.4*q+vec2(-t*.012,t*.016));
-  return h;
+uniform int uKind;
+uniform int uJ0;
+uniform int uPer;
+uniform float uSeg;
+uniform float uWidth;
+uniform float uAlpha;
+uniform float uSeedOff;
+uniform float uYOff;
+out float vT;
+out float vSide;
+out float vHW;
+out float vA;
+out float vG;
+out float vSeed;
+const float PI=3.14159265;
+const float SPAN=340.;
+float hash(float n){return fract(sin(n*127.1+311.7)*43758.5453);}
+vec2 bez(vec2 a,vec2 b,vec2 c,vec2 d,float t){float u=1.-t;return u*u*u*a+3.*u*u*t*b+3.*u*t*t*c+t*t*t*d;}
+// Field-space position (CSS px; y scrolls at parallax rate) of strand idx of family j at t.
+vec2 curve(float jj,float s,float idx,float t,out float depth,out bool skip){
+  float j=jj+uSeedOff;
+  float h1=hash(j*7.1),h2=hash(j*3.7+1.),h3=hash(j*5.3+2.),h4=hash(j*9.1+3.);
+  float h5=hash(j*2.9+4.),h6=hash(j*4.3+5.),h7=hash(j*6.7+6.);
+  float Y=jj*SPAN+uYOff,W=uView.x,T=uTime;
+  skip=false;
+  if(uKind==0){
+    // Twisted Bézier ribbon.
+    vec2 a=vec2(-.12*W,Y+(h1-.5)*380.);
+    vec2 d=vec2(1.12*W,Y+(h2-.5)*380.);
+    vec2 b=vec2((.26+.08*sin(T*.05+h3*6.28))*W,Y+(h4-.5)*760.+70.*sin(T*.07+h5*6.));
+    vec2 c=vec2((.72+.08*cos(T*.045+h6*6.28))*W,Y-(h4-.5)*680.+70.*cos(T*.06+h7*6.));
+    vec2 p=bez(a,b,c,d,t);
+    vec2 tg=bez(a,b,c,d,t+.003)-p;
+    vec2 n=normalize(vec2(-tg.y,tg.x)+1e-6);
+    float w=(46.+96.*h5)*(.2+.8*sin(PI*clamp(t,0.,1.)))*(1.+.18*sin(T*.21+h1*6.));
+    float th=h7*6.28+t*(2.+2.4*h3)*PI+T*.11+s*PI;
+    depth=sin(th);
+    return p+n*w*cos(th);
+  }
+  // Gutter accents: only on some families, alternating sides and kinds.
+  if(hash(j*11.3)>.45){skip=true;depth=0.;return vec2(0.);}
+  bool left=mod(jj,2.)<.5;
+  vec2 ctr=vec2((left?.05:.95)*W,Y+SPAN*.5);
+  if(mod(floor(jj/2.),2.)<.5){
+    // Phyllotaxis rosette: counter-rotating logarithmic spirals.
+    float dir=mod(idx,2.)<.5?1.:-1.;
+    float th=t*4.2*PI;
+    float r=22.*exp(.17*th);
+    float ang=dir*th+6.2832*s+T*.025*dir;
+    depth=cos(th*.35+s*12.57+T*.2);
+    return ctr+r*vec2(cos(ang),sin(ang));
+  }
+  // Nested Bernoulli lemniscates.
+  float a=110.+250.*s;
+  float ph=t*2.*PI;
+  float k=1.+sin(ph)*sin(ph);
+  vec2 q=a*vec2(cos(ph),sin(ph)*cos(ph))/k;
+  float rot=(h2-.5)*.7+s*.35+T*.012;
+  depth=sin(ph*2.+s*6.28+T*.25);
+  return ctr+mat2(cos(rot),sin(rot),-sin(rot),cos(rot))*q;
 }
-// Pointer lens: a soft gaussian rise in screen space bends nearby isolines.
-float bump(vec2 sp){vec2 d=sp-uPtr;return uPtrAmt*.16*exp(-dot(d,d)/(170.*170.));}
-`;
+vec2 toScreen(vec2 f){
+  vec2 p=vec2(f.x,f.y-uScrollP);
+  vec2 d=p-uPtr;
+  // Strands part softly around the pointer.
+  return p+normalize(d+1e-4)*uPtrAmt*16.*exp(-dot(d,d)/(160.*160.));
+}
+void main(){
+  float fam=float(uJ0+gl_InstanceID/uPer);
+  float idx=float(gl_InstanceID-(gl_InstanceID/uPer)*uPer);
+  float s=idx/float(uPer-1);
+  float k=float(gl_VertexID>>1);
+  float side=(gl_VertexID&1)==0?-1.:1.;
+  float t=k/uSeg;
+  float depth,dd;
+  bool skip,sk2;
+  vec2 p=toScreen(curve(fam,s,idx,t,depth,skip));
+  vec2 p2=toScreen(curve(fam,s,idx,t+1./uSeg,dd,sk2));
+  if(skip){gl_Position=vec4(2.,2.,2.,1.);vT=0.;vSide=0.;vHW=0.;vA=0.;vG=0.;vSeed=1.;return;}
+  vec2 tg=p2-p;
+  vec2 n=normalize(vec2(-tg.y,tg.x)+1e-6);
+  float hw=uWidth*.5;
+  float ext=hw+1./uScale;
+  vec2 q=p+n*side*ext;
+  gl_Position=vec4(q.x/uView.x*2.-1.,1.-q.y/uView.y*2.,0.,1.);
+  vT=t;
+  vSide=side*ext;
+  vHW=hw;
+  float ends=uKind==0?smoothstep(0.,.06,t)*smoothstep(1.,.94,t):1.;
+  vA=uAlpha*mix(.22,1.,.5+.5*depth)*ends;
+  vG=.5+.5*sin(p.x/uView.x*2.2+fam*1.3+s*1.6+uTime*.05);
+  vSeed=hash(fam*31.7+idx*1.618+float(uKind)*5.);
+}`;
 
-// Shared by the emission and composite passes so the glow is exactly the blur
-// of what is drawn sharp.
-const CONTOURS = `
-uniform float uScrollY;
-uniform vec2 uView;
-const float LEVELS=12.;
-const vec3 DEEP=vec3(.043,.435,.502);
-const vec3 BRAND=vec3(.22,.596,.659);
+const CURVE_FS = `#version 300 es
+precision highp float;
+in float vT;
+in float vSide;
+in float vHW;
+in float vA;
+in float vG;
+in float vSeed;
+uniform float uTime;
+uniform float uScale;
+out vec4 o;
+const vec3 MIST=vec3(.48,.78,.84);
 const vec3 CYAN=vec3(.22,.784,.878);
-const vec3 AZURE=vec3(.2,.5,.82);
+const vec3 BRAND=vec3(.22,.596,.659);
+const vec3 AZURE=vec3(.33,.58,.84);
 vec3 ramp(float g){
-  g=clamp(g,0.,1.);
-  if(g<.34)return mix(DEEP,BRAND,g/.34);
-  if(g<.68)return mix(BRAND,CYAN,(g-.34)/.34);
-  return mix(CYAN,AZURE,(g-.68)/.32);
+  if(g<.34)return mix(MIST,CYAN,g/.34);
+  if(g<.68)return mix(CYAN,BRAND,(g-.34)/.34);
+  return mix(BRAND,AZURE,(g-.68)/.32);
 }
-// Premultiplied isoline layer. w: half line width of a major line, in target px.
-vec4 contours(vec2 px,float w){
-  vec2 fp=vec2(px.x,px.y+uScrollY*.45);
-  float h=field(fp)+bump(px);
-  float v=h*LEVELS;
-  float fw=max(fwidth(v),1e-4);
-  float d=abs(fract(v-.5)-.5)/fw;
-  float lvl=floor(v+.5);
-  float major=1.-step(.5,abs(mod(lvl,5.)));
-  float hw=w*mix(.5,1.,major);
-  float line=1.-smoothstep(hw,hw+1.,d);
-  float crowd=1.-smoothstep(.28,.6,fw);
-  float breathe=.6+.4*smoothstep(-.5,.6,snoise(fp/1500.+vec2(uTime*.012,-uTime*.009)));
-  // Gradient: diagonal sweep across the viewport, bent by terrain height, drifting in time.
-  float g=.5+.5*sin((px.x*.8+px.y*.55)/uView.x*2.6+h*1.7+uTime*.06);
-  vec3 col=mix(ramp(g),CYAN,major*.3);
-  float a=line*crowd*breathe*mix(.2,.42,major);
-  return vec4(col*a,a);
-}
-`;
+void main(){
+  float cov=clamp((vHW+.5/uScale-abs(vSide))*uScale,0.,1.);
+  vec3 col=ramp(vG);
+  float a=vA*cov;
+  if(vSeed<.16){
+    // Data pulse: sharp head, exponential tail behind it.
+    float p=fract(vT*.8-uTime*(.035+.4*vSeed)+vSeed*13.);
+    float q=p-.5;
+    float pl=q<0.?exp(q*30.):exp(-q*420.);
+    a+=cov*pl*.5;
+    col=mix(col,CYAN,pl);
+  }
+  o=vec4(col*a,a);
+}`;
 
 const QUAD_VS = `#version 300 es
 layout(location=0) in vec2 aPos;
 void main(){gl_Position=vec4(aPos,0.,1.);}`;
-
-const EMIT_FS = `#version 300 es
-precision highp float;
-${COMMON}
-${CONTOURS}
-uniform vec2 uRes;
-uniform float uScale;
-uniform sampler2D uTrail;
-uniform float uTrailOn;
-out vec4 o;
-void main(){
-  vec2 px=vec2(gl_FragCoord.x,uRes.y-gl_FragCoord.y)/uScale;
-  vec4 c=contours(px,.8)*1.5;
-  if(uTrailOn>.5){
-    float tr=clamp(texture(uTrail,gl_FragCoord.xy/uRes).r,0.,1.);
-    float a=tr*.9;
-    c=vec4(CYAN*a,a)+c*(1.-a);
-  }
-  o=c;
-}`;
 
 // 9-tap Gaussian via 5 linear-filtered fetches; uDir is in source UV units.
 const BLUR_FS = `#version 300 es
@@ -121,145 +177,45 @@ void main(){
 
 const COMPOSITE_FS = `#version 300 es
 precision highp float;
-${COMMON}
-${CONTOURS}
 uniform vec2 uRes;
 uniform float uScale;
-uniform sampler2D uMask;
-uniform vec2 uMaskDoc;
-uniform sampler2D uTrail;
+uniform float uScrollY;
+uniform sampler2D uScene;
 uniform sampler2D uGlow;
 uniform sampler2D uFrost;
-uniform float uTrailOn;
+uniform sampler2D uMask;
+uniform vec2 uMaskDoc;
 // Panes for sticky/fixed text containers, in viewport CSS px: (x, y, w, h).
 uniform vec4 uPanes[8];
 uniform int uPaneN;
 out vec4 o;
-const vec3 INK=vec3(.082,.169,.204);
+vec4 overP(vec4 dst,vec4 src){return src+dst*(1.-src.a);}
 float roundBox(vec2 p,vec4 r){
   vec2 c=r.xy+r.zw*.5;vec2 q=abs(p-c)-r.zw*.5+18.;
   return length(max(q,0.))+min(max(q.x,q.y),0.)-18.;
 }
-vec4 overP(vec4 dst,vec4 src){return src+dst*(1.-src.a);}
 void main(){
   vec2 uv=gl_FragCoord.xy/uRes;
   vec2 px=vec2(gl_FragCoord.x,uRes.y-gl_FragCoord.y)/uScale;
-  vec2 dp=px-uPtr;
-  float lens=uPtrAmt*exp(-dot(dp,dp)/(240.*240.));
+  vec4 acc=overP(texture(uGlow,uv)*.55,texture(uScene,uv));
 
-  // Bloom halo first, the crisp layers on top of it.
-  vec4 glow=texture(uGlow,uv);
-  vec4 acc=glow*(.85+lens*.7);
-
-  // Survey grid (parallax .8).
-  vec2 gp=vec2(px.x-uView.x*.5,px.y+uScrollY*.8);
-  vec2 cell=mod(gp,24.)-12.;
-  float dotA=(1.-smoothstep(.7*uScale,.7*uScale+1.,length(cell)*uScale))*(.05+.1*lens);
-  acc=overP(acc,vec4(mix(INK,CYAN,lens)*dotA,dotA));
-
-  // Slow survey sweep lifts the isolines it crosses.
-  float scanY=mod(uTime*46.,uView.y+900.)-450.;
-  float scan=exp(-pow((px.y-scanY)/120.,2.));
-  vec4 sharp=contours(px,.75*uScale)*(1.+lens*.8+scan*.7);
-  acc=overP(acc,sharp);
-
-  if(uTrailOn>.5){
-    float tr=clamp(texture(uTrail,uv).r,0.,1.);
-    float a=tr*.62;
-    acc=overP(acc,vec4(CYAN*a,a));
-  }
-
-  // Frosted pane behind text: the scene seen through a diffuser, under a paper veil.
   float mr=texture(uMask,vec2(px.x/uMaskDoc.x,(px.y+uScrollY)/uMaskDoc.y)).r;
   for(int i=0;i<8;i++){
     if(i>=uPaneN)break;
     mr=max(mr,1.-smoothstep(-2.5,2.5,roundBox(px,uPanes[i])));
   }
-  float m=smoothstep(.2,.8,mr);
+  // Glass only where there is line work behind the text: the veil scales with the
+  // local density of the blurred scene, so empty paper never shows a box.
+  vec4 fr=texture(uFrost,uv);
+  float need=smoothstep(.004,.05,fr.a);
+  float m=smoothstep(.2,.8,mr)*need;
   // The veil keeps every pane at least as light as bare paper, so text contrast never drops.
-  vec4 frost=texture(uFrost,uv);
-  vec4 pane=overP(frost,vec4(vec3(.72),.72));
+  vec4 pane=overP(fr*.9,vec4(vec3(.74),.74));
   vec4 res=mix(acc,pane,m);
   // Rim light where the pane meets the field, like the polished edge of glass.
-  float rim=(1.-abs(mr-.5)*2.);
-  rim=rim*rim*rim;
-  o=overP(res,vec4(vec3(.55*rim),.55*rim));
-}`;
-
-const SIM_VS = `#version 300 es
-precision highp float;
-${COMMON}
-layout(location=0) in vec4 aState;
-uniform float uDt;
-uniform float uScrollP;
-uniform vec2 uView;
-uniform uint uFrame;
-out vec4 vState;
-uint pcg(uint v){uint s=v*747796405u+2891336453u;uint w=((s>>((s>>28u)+4u))^s)*277803737u;return (w>>22u)^w;}
-float rnd(inout uint s){s=pcg(s);return float(s)/4294967295.;}
-float H(vec2 fp){return field(fp)+bump(vec2(fp.x,fp.y-uScrollP));}
-void main(){
-  vec4 s=aState;
-  const float e=2.;
-  vec2 g=vec2(H(s.xy+vec2(e,0.))-H(s.xy-vec2(e,0.)),H(s.xy+vec2(0.,e))-H(s.xy-vec2(0.,e)))/(2.*e);
-  vec2 vel=vec2(g.y,-g.x)*36000.;
-  float sp=length(vel);
-  if(sp>44.)vel*=44./sp;
-  s.xy+=vel*uDt;
-  s.z+=uDt;
-  vec2 scr=vec2(s.x,s.y-uScrollP);
-  bool outside=scr.x<-24.||scr.x>uView.x+24.||scr.y<-24.||scr.y>uView.y+24.;
-  if(s.z>s.w||outside){
-    uint seed=uint(gl_VertexID)*1973u+uFrame*9277u+1u;
-    s.x=rnd(seed)*uView.x;
-    s.y=rnd(seed)*uView.y+uScrollP;
-    s.z=0.;
-    s.w=7.+rnd(seed)*9.;
-  }
-  vState=s;
-}`;
-
-const SIM_FS = `#version 300 es
-precision mediump float;
-out vec4 o;
-void main(){o=vec4(0.);}`;
-
-// One instanced line per particle, from its previous to its next simulated position,
-// so trails stay continuous whatever the frame rate.
-const SEG_VS = `#version 300 es
-precision highp float;
-layout(location=0) in vec4 aPrev;
-layout(location=1) in vec4 aNext;
-uniform float uScrollP;
-uniform vec2 uView;
-out float vA;
-void main(){
-  vec4 st=gl_VertexID==1?aNext:aPrev;
-  vec2 s=vec2(st.x,st.y-uScrollP);
-  gl_Position=vec4(s.x/uView.x*2.-1.,1.-s.y/uView.y*2.,0.,1.);
-  float respawned=step(aNext.z,aPrev.z);
-  vA=(1.-respawned)*smoothstep(0.,1.6,aNext.z)*(1.-smoothstep(aNext.w-2.,aNext.w,aNext.z));
-}`;
-
-const SEG_FS = `#version 300 es
-precision mediump float;
-in float vA;
-uniform float uDeposit;
-out vec4 o;
-void main(){o=vec4(vA*uDeposit,0.,0.,1.);}`;
-
-const DECAY_FS = `#version 300 es
-precision mediump float;
-uniform sampler2D uPrev;
-uniform vec2 uRes;
-uniform vec2 uShift;
-uniform float uDecay;
-out vec4 o;
-void main(){
-  vec2 uv=gl_FragCoord.xy/uRes-uShift;
-  float v=0.;
-  if(uv.x>=0.&&uv.y>=0.&&uv.x<=1.&&uv.y<=1.)v=texture(uPrev,uv).r;
-  o=vec4(max(v*uDecay-.0018,0.),0.,0.,1.);
+  float rim=1.-abs(mr-.5)*2.;
+  rim=rim*rim*rim*.45*need;
+  o=overP(res,vec4(vec3(rim),rim));
 }`;
 
 const TEXT_SELECTOR =
@@ -267,8 +223,12 @@ const TEXT_SELECTOR =
 const RANGE_TAGS = new Set([
   "H1", "H2", "H3", "H4", "H5", "H6", "P", "LI", "DT", "DD", "BLOCKQUOTE", "FIGCAPTION", "LABEL", "TH", "TD",
 ]);
-const PARALLAX_FIELD = 0.45;
-const COUNT = 640;
+const PARALLAX = 0.45;
+const SPAN = 340;
+// Two ribbon depths: the far layer is finer, fainter and slower, offset half a span.
+const RIBBON = { per: 72, seg: 180, width: 0.6, alpha: 0.27, parallax: PARALLAX, seed: 0, yOff: 0 };
+const RIBBON_FAR = { per: 64, seg: 160, width: 0.45, alpha: 0.14, parallax: 0.25, seed: 97, yOff: 170 };
+const ACCENT = { per: 30, seg: 240, width: 0.55, alpha: 0.14, parallax: PARALLAX, seed: 0, yOff: 0 };
 let mounted = false;
 
 /**
@@ -302,12 +262,11 @@ export function mountPaperField(host) {
     }
     return s;
   };
-  /** @param {string} vs @param {string} fs @param {string[]} [varyings] */
-  const link = (vs, fs, varyings) => {
+  /** @param {string} vs @param {string} fs */
+  const link = (vs, fs) => {
     const p = /** @type {WebGLProgram} */ (gl.createProgram());
     gl.attachShader(p, compile(gl.VERTEX_SHADER, vs));
     gl.attachShader(p, compile(gl.FRAGMENT_SHADER, fs));
-    if (varyings) gl.transformFeedbackVaryings(p, varyings, gl.SEPARATE_ATTRIBS);
     gl.linkProgram(p);
     if (!gl.getProgramParameter(p, gl.LINK_STATUS)) {
       throw Error("paper-field link: " + gl.getProgramInfoLog(p));
@@ -329,14 +288,11 @@ export function mountPaperField(host) {
   const live = () =>
     force === "live" || (force !== "static" && !media.matches && !coarse.matches);
 
-  let composite, emit, blur, sim, segs, decay;
+  let curves, blur, composite;
   try {
-    composite = link(QUAD_VS, COMPOSITE_FS);
-    emit = link(QUAD_VS, EMIT_FS);
+    curves = link(CURVE_VS, CURVE_FS);
     blur = link(QUAD_VS, BLUR_FS);
-    sim = link(SIM_VS, SIM_FS, ["vState"]);
-    segs = link(SEG_VS, SEG_FS);
-    decay = link(QUAD_VS, DECAY_FS);
+    composite = link(QUAD_VS, COMPOSITE_FS);
   } catch (err) {
     if (process.env.NODE_ENV !== "production") console.warn(err);
     return noop;
@@ -344,7 +300,7 @@ export function mountPaperField(host) {
   mounted = true;
   host.append(canvas);
 
-  // Full-screen triangle.
+  // Full-screen triangle; strands need no buffers at all.
   const quadVao = gl.createVertexArray();
   const quadBuf = gl.createBuffer();
   gl.bindVertexArray(quadVao);
@@ -352,40 +308,9 @@ export function mountPaperField(host) {
   gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
   gl.enableVertexAttribArray(0);
   gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
-
-  // Particle state ping-pong: vec4(fieldX, fieldY, age, life).
-  const init = new Float32Array(COUNT * 4);
-  for (let i = 0; i < COUNT; i++) {
-    init[i * 4] = Math.random() * innerWidth;
-    init[i * 4 + 1] = Math.random() * innerHeight + scrollY * PARALLAX_FIELD;
-    init[i * 4 + 3] = 7 + Math.random() * 9;
-    init[i * 4 + 2] = Math.random() * init[i * 4 + 3];
-  }
-  const state = [0, 1].map(() => {
-    const vao = gl.createVertexArray();
-    const buf = gl.createBuffer();
-    gl.bindVertexArray(vao);
-    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-    gl.bufferData(gl.ARRAY_BUFFER, init, gl.DYNAMIC_COPY);
-    gl.enableVertexAttribArray(0);
-    gl.vertexAttribPointer(0, 4, gl.FLOAT, false, 0, 0);
-    return { vao, buf };
-  });
-  // segVao[r]: previous state from buffer r, next state from buffer 1 - r.
-  const segVao = [0, 1].map((r) => {
-    const vao = gl.createVertexArray();
-    gl.bindVertexArray(vao);
-    for (const [loc, buf] of /** @type {[number, WebGLBuffer][]} */ ([[0, state[r].buf], [1, state[1 - r].buf]])) {
-      gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-      gl.enableVertexAttribArray(loc);
-      gl.vertexAttribPointer(loc, 4, gl.FLOAT, false, 0, 0);
-      gl.vertexAttribDivisor(loc, 1);
-    }
-    return vao;
-  });
+  const emptyVao = gl.createVertexArray();
   gl.bindVertexArray(null);
   gl.bindBuffer(gl.ARRAY_BUFFER, null);
-  let read = 0;
 
   /** @param {number} w @param {number} h @param {TexImageSource | null} [src] */
   const texture = (w, h, src = null) => {
@@ -409,31 +334,21 @@ export function mountPaperField(host) {
     const fb = gl.createFramebuffer();
     gl.bindFramebuffer(gl.FRAMEBUFFER, fb);
     gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, tex, 0);
-    gl.clearColor(0, 0, 0, 0);
-    gl.clear(gl.COLOR_BUFFER_BIT);
     return { tex, fb, w, h };
   };
-  /** @param {Target[]} list */
-  const free = (list) => {
-    for (const t of list) {
+
+  // scene (full), glow 1/4 (a,b), frost 1/8 (a,b); reallocated on resize.
+  /** @type {Target[]} */
+  let chain = [];
+  const allocTargets = () => {
+    for (const t of chain) {
       gl.deleteTexture(t.tex);
       gl.deleteFramebuffer(t.fb);
     }
-  };
-
-  // Screen-space targets, reallocated on resize.
-  /** @type {Target[]} */ let trails = [];
-  /** @type {Target[]} */ let chain = [];
-  let trailRead = 0;
-  const allocTargets = () => {
-    free(trails);
-    free(chain);
     const W = canvas.width;
     const H = canvas.height;
-    trails = [target(W, H), target(W, H)];
-    // emission 1/2, glow 1/4 (a,b), frost 1/8 (a,b)
     chain = [
-      target(W / 2, H / 2),
+      target(W, H),
       target(W / 4, H / 4),
       target(W / 4, H / 4),
       target(W / 8, H / 8),
@@ -650,9 +565,7 @@ export function mountPaperField(host) {
   let lastTick = 0;
   let lastInput = 0;
   let time = 30 + Math.random() * 60;
-  let frameNo = 0;
   let introStart = 0;
-  let lastScroll = scrollY;
   let ptr = [-9999, -9999];
   let ptrTarget = [-9999, -9999];
   let ptrAmt = 0;
@@ -664,19 +577,6 @@ export function mountPaperField(host) {
     const a = scrollY;
     const b = a + innerHeight;
     return darkSpans.some(([t, bt]) => t <= a + 1 && bt >= b - 1);
-  };
-
-  /**
-   * @param {{ p: WebGLProgram; u: Record<string, WebGLUniformLocation | null> }} prog
-   * @param {number} sy
-   * @param {number[]} view
-   */
-  const fieldUniforms = (prog, sy, view) => {
-    gl.uniform1f(prog.u.uTime, time);
-    gl.uniform2f(prog.u.uPtr, ptr[0], ptr[1]);
-    gl.uniform1f(prog.u.uPtrAmt, ptrAmt);
-    gl.uniform1f(prog.u.uScrollY, sy);
-    gl.uniform2f(prog.u.uView, view[0], view[1]);
   };
 
   /** @param {Target | null} dst */
@@ -697,6 +597,30 @@ export function mountPaperField(host) {
     gl.drawArrays(gl.TRIANGLES, 0, 3);
   };
 
+  /**
+   * @param {number} kind
+   * @param {typeof RIBBON} cfg
+   * @param {number} alpha
+   * @param {number} sy
+   * @param {number} vh
+   */
+  const drawFamilies = (kind, cfg, alpha, sy, vh) => {
+    const scrollP = sy * cfg.parallax;
+    const j0 = Math.floor((scrollP - cfg.yOff - 520) / SPAN);
+    const j1 = Math.ceil((scrollP - cfg.yOff + vh + 520) / SPAN);
+    const families = j1 - j0 + 1;
+    gl.uniform1f(curves.u.uScrollP, scrollP);
+    gl.uniform1f(curves.u.uSeedOff, cfg.seed);
+    gl.uniform1f(curves.u.uYOff, cfg.yOff);
+    gl.uniform1i(curves.u.uKind, kind);
+    gl.uniform1i(curves.u.uJ0, j0);
+    gl.uniform1i(curves.u.uPer, cfg.per);
+    gl.uniform1f(curves.u.uSeg, cfg.seg);
+    gl.uniform1f(curves.u.uWidth, cfg.width);
+    gl.uniform1f(curves.u.uAlpha, alpha);
+    gl.drawArraysInstanced(gl.TRIANGLE_STRIP, 0, 2 * (cfg.seg + 1), families * cfg.per);
+  };
+
   /** @param {number} now */
   const draw = (now) => {
     if (maskDirty) rebuildMask();
@@ -704,13 +628,10 @@ export function mountPaperField(host) {
     const animate = live();
     const dt = lastDraw ? Math.min((now - lastDraw) / 1000, 0.066) : 1 / 60;
     lastDraw = now;
-    if (covered()) {
-      lastScroll = sy;
-      return false;
-    }
+    if (covered()) return false;
     if (animate) time += dt;
     if (!introStart) introStart = now;
-    const ease = animate ? 1 - Math.pow(1 - Math.min((now - introStart) / 2200, 1), 3) : 1;
+    const ease = animate ? 1 - Math.pow(1 - Math.min((now - introStart) / 1800, 1), 3) : 1;
 
     const k = 1 - Math.exp(-dt * 7);
     ptr[0] += (ptrTarget[0] - ptr[0]) * k;
@@ -718,86 +639,40 @@ export function mountPaperField(host) {
     ptrAmt += ((ptrOn && animate ? 1 : 0) - ptrAmt) * (1 - Math.exp(-dt * 2.5));
 
     const view = [canvas.width / scale, canvas.height / scale];
-    const scrollP = sy * PARALLAX_FIELD;
-    gl.disable(gl.DEPTH_TEST);
+    const [S, Ga, Gb, Fa, Fb] = chain;
+
+    // 1. Strands into the scene target (premultiplied over).
+    bind(S);
+    gl.clearColor(0, 0, 0, 0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.enable(gl.BLEND);
+    gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+    gl.useProgram(curves.p);
+    gl.bindVertexArray(emptyVao);
+    gl.uniform1f(curves.u.uTime, time);
+    gl.uniform2f(curves.u.uView, view[0], view[1]);
+    gl.uniform1f(curves.u.uScale, scale);
+    gl.uniform2f(curves.u.uPtr, ptr[0], ptr[1]);
+    gl.uniform1f(curves.u.uPtrAmt, ptrAmt);
+    drawFamilies(0, RIBBON_FAR, RIBBON_FAR.alpha * ease, sy, view[1]);
+    drawFamilies(1, ACCENT, ACCENT.alpha * ease, sy, view[1]);
+    drawFamilies(0, RIBBON, RIBBON.alpha * ease, sy, view[1]);
     gl.disable(gl.BLEND);
 
-    if (animate) {
-      // 1. Advance particles with transform feedback.
-      const write = 1 - read;
-      gl.useProgram(sim.p);
-      gl.uniform1f(sim.u.uTime, time);
-      gl.uniform2f(sim.u.uPtr, ptr[0], ptr[1]);
-      gl.uniform1f(sim.u.uPtrAmt, ptrAmt);
-      gl.uniform1f(sim.u.uDt, dt);
-      gl.uniform1f(sim.u.uScrollP, scrollP);
-      gl.uniform2f(sim.u.uView, view[0], view[1]);
-      gl.uniform1ui(sim.u.uFrame, frameNo++);
-      gl.enable(gl.RASTERIZER_DISCARD);
-      gl.bindVertexArray(state[read].vao);
-      gl.bindBufferBase(gl.TRANSFORM_FEEDBACK_BUFFER, 0, state[write].buf);
-      gl.beginTransformFeedback(gl.POINTS);
-      gl.drawArrays(gl.POINTS, 0, COUNT);
-      gl.endTransformFeedback();
-      gl.bindBufferBase(gl.TRANSFORM_FEEDBACK_BUFFER, 0, null);
-      gl.disable(gl.RASTERIZER_DISCARD);
-      const prevRead = read;
-      read = write;
-
-      // 2. Fade + scroll-shift the trail buffer, then draw this frame's segments.
-      const tw = 1 - trailRead;
-      bind(trails[tw]);
-      gl.useProgram(decay.p);
-      gl.activeTexture(gl.TEXTURE0);
-      gl.bindTexture(gl.TEXTURE_2D, trails[trailRead].tex);
-      gl.uniform1i(decay.u.uPrev, 0);
-      gl.uniform2f(decay.u.uRes, trails[tw].w, trails[tw].h);
-      gl.uniform2f(decay.u.uShift, 0, ((sy - lastScroll) * PARALLAX_FIELD) / view[1]);
-      gl.uniform1f(decay.u.uDecay, Math.exp(-dt / 2.8));
-      gl.bindVertexArray(quadVao);
-      gl.drawArrays(gl.TRIANGLES, 0, 3);
-
-      gl.enable(gl.BLEND);
-      gl.blendFunc(gl.ONE, gl.ONE);
-      gl.useProgram(segs.p);
-      gl.uniform1f(segs.u.uScrollP, scrollP);
-      gl.uniform2f(segs.u.uView, view[0], view[1]);
-      gl.uniform1f(segs.u.uDeposit, 0.8 * ease);
-      gl.bindVertexArray(segVao[prevRead]);
-      gl.drawArraysInstanced(gl.LINES, 0, 2, COUNT);
-      gl.disable(gl.BLEND);
-      trailRead = tw;
-    }
-    lastScroll = sy;
+    // 2. Bloom: glow at 1/4, frost at 1/8 (downsample + separable Gaussian each).
     gl.bindVertexArray(quadVao);
-
-    // 3. Emission at half resolution.
-    const [E, Ga, Gb, Fa, Fb] = chain;
-    bind(E);
-    gl.useProgram(emit.p);
-    fieldUniforms(emit, sy, view);
-    gl.uniform2f(emit.u.uRes, E.w, E.h);
-    gl.uniform1f(emit.u.uScale, E.w / view[0]);
-    gl.uniform1f(emit.u.uTrailOn, animate ? 1 : 0);
-    gl.activeTexture(gl.TEXTURE0);
-    gl.bindTexture(gl.TEXTURE_2D, trails[trailRead].tex);
-    gl.uniform1i(emit.u.uTrail, 0);
-    gl.drawArrays(gl.TRIANGLES, 0, 3);
-
-    // 4. Bloom: glow at 1/4, frost at 1/8 (downsample + separable Gaussian each).
-    blurPass(E, Ga, 0.9, 0);
-    blurPass(Ga, Gb, 0, 0.9);
+    blurPass(S, Ga, 1.6, 0);
+    blurPass(Ga, Gb, 0, 1.2);
     blurPass(Gb, Fa, 2.2, 0);
     blurPass(Fa, Fb, 0, 2.2);
 
-    // 5. Composite to the canvas.
+    // 3. Composite to the canvas.
     bind(null);
     gl.useProgram(composite.p);
-    fieldUniforms(composite, sy, view);
     gl.uniform2f(composite.u.uRes, canvas.width, canvas.height);
     gl.uniform1f(composite.u.uScale, scale);
+    gl.uniform1f(composite.u.uScrollY, sy);
     gl.uniform2f(composite.u.uMaskDoc, maskDoc[0], maskDoc[1]);
-    gl.uniform1f(composite.u.uTrailOn, animate ? 1 : 0);
     let paneN = 0;
     for (const el of pinned) {
       if (paneN >= 8) break;
@@ -810,10 +685,10 @@ export function mountPaperField(host) {
     gl.uniform4fv(composite.u["uPanes[0]"], panes);
     gl.uniform1i(composite.u.uPaneN, paneN);
     const units = /** @type {const} */ ([
-      ["uMask", maskTex],
-      ["uTrail", trails[trailRead].tex],
+      ["uScene", S.tex],
       ["uGlow", Gb.tex],
       ["uFrost", Fb.tex],
+      ["uMask", maskTex],
     ]);
     units.forEach(([name, tex], i) => {
       gl.activeTexture(gl.TEXTURE0 + i);
@@ -849,7 +724,7 @@ export function mountPaperField(host) {
   const tick = (now) => {
     frame = 0;
     if (dead || document.hidden || !live()) return;
-    const busy = now - lastInput < 400 || (introStart > 0 && now - introStart < 2400);
+    const busy = now - lastInput < 400 || (introStart > 0 && now - introStart < 2000);
     const interval = busy ? 1000 / 60 : 1000 / 30;
     if (lastTick && busy) adapt(now - lastTick);
     lastTick = now;

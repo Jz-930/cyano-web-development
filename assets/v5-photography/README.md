@@ -1,10 +1,10 @@
 # Cyano v5 摄影素材
 
-按 `docs/v5-photography-plan.md` 生成 PH-02 至 PH-24，共 23 张选用候选；PH-01 已取消。使用真实摄影 skill 与内置 image_gen，共生成 35 张，含三类风格样张各 4 张及 3 次定向返工。尚待用户审美确认。
+按 `docs/v5-photography-plan.md` 生成 PH-02 至 PH-24，共 23 张选用候选；PH-01 已取消。使用真实摄影 skill 与内置 image_gen，共生成 36 张，含三类风格样张各 4 张及 4 次定向返工（含 PH-02 重新选角）。尚待用户审美确认。
 
 - `masters/`：23 张原生 PNG，优先使用。
 - `web/avif/`、`web/webp/`：同尺寸压缩副本，各 23 张。
-- `candidates/`：12 张未选样张或已弃用版本。
+- `candidates/`：13 张未选样张或已弃用版本。
 - `manifest.csv`：编号、描述、实际尺寸、文件路径、替代文字与哈希。
 - `manifest.json`：另含每张选用图的实际提示词；`generation-records.json` 留存全部生成记录。
 
