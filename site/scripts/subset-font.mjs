@@ -2,6 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import subsetFont from "subset-font";
 import { createHash } from "node:crypto";
+import { renderedPages } from "./rendered-pages.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
 
@@ -86,8 +87,8 @@ async function walkFiles(dir, predicate, out = []) {
 }
 
 // 2. Collect route-specific CJK charsets for /, /about, /technology (including client interactive states)
-const appBuildDir = path.join(root, ".next/server/app");
-const homeHtml = await fs.readFile(path.join(appBuildDir, "index.html"), "utf8");
+const pages = await renderedPages(root);
+const homeHtml = await fs.readFile(pages.get("/"), "utf8");
 const headerBlock = (homeHtml.match(/<header\b[\s\S]*?<\/header>/i) || [""])[0];
 const headerChars = new Set(extractHtmlTextAndAttrs(headerBlock).match(CJK_RE) || []);
 
@@ -119,7 +120,7 @@ for (const [k, v] of Object.entries(copyNew)) {
 let aboutText = "";
 try {
   aboutText = extractHtmlTextAndAttrs(
-    await fs.readFile(path.join(appBuildDir, "about.html"), "utf8"),
+    await fs.readFile(pages.get("/about"), "utf8"),
     { alt: false },
   );
 } catch {}
@@ -136,7 +137,7 @@ for (const [k, v] of Object.entries(copyNew)) {
 let techText = "";
 try {
   techText = extractHtmlTextAndAttrs(
-    await fs.readFile(path.join(appBuildDir, "technology.html"), "utf8"),
+    await fs.readFile(pages.get("/technology"), "utf8"),
     { alt: false },
   );
 } catch {}
@@ -153,10 +154,8 @@ for (const [k, v] of Object.entries(copyNew)) {
 // 3. Collect all site-wide CJK chars across HTML, JSON, and TSX
 let allText = fullHomeText + "\n" + aboutText + "\n" + techText;
 
-const htmlFiles = await walkFiles(appBuildDir, (_p, name) => name.endsWith(".html"));
-for (const f of htmlFiles) {
-  const rel = path.relative(appBuildDir, f).replace(/\\/g, "/");
-  if (rel === "en.html" || rel.startsWith("en/")) continue;
+for (const [route, f] of pages) {
+  if (route === "/en" || route.startsWith("/en/")) continue;
   const html = await fs.readFile(f, "utf8");
   allText += "\n" + extractHtmlTextAndAttrs(html);
 }

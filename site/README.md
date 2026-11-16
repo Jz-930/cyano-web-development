@@ -18,6 +18,12 @@ npm run build
 node scripts/smoke.mjs
 ```
 
+## Vercel 构建
+
+项目的 Root Directory 设为 `site`，开启 Include files outside the root directory，框架使用 Next.js，构建命令使用默认的 `npm run build`。字体源文件与内容校验依赖仓库根目录的 `assets/` 和 `content/`。
+
+字体子集与公开页面扫描同时支持本地 `server/app` 和部署适配器的 `server/route-cache` 产物。修改这些脚本后运行 `node --test scripts/rendered-pages.test.mjs`。Vercel 构建校验已提交的六张 `public/og/` 封面图；文章封面改动后应在本地通过 `npm run build` 重新生成并提交这些图片。
+
 生产构建前检查全部案例截图、邮箱 MX 与三个在线 Demo；链接不可用时隐藏对应入口。构建后扫描公开页面文字。
 
 ## 内容与素材

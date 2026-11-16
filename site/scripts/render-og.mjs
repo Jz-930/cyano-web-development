@@ -15,6 +15,22 @@ const copyNew = JSON.parse(
   await fs.readFile(path.join(root, "content/v4/copy-new.json"), "utf8"),
 );
 
+// These images are versioned assets. Vercel builders have no system Chrome;
+// verify the committed output there and regenerate with Chrome locally.
+if (process.env.VERCEL === "1") {
+  for (const insight of insights) {
+    for (const locale of ["zh", "en"]) {
+      const file = path.join(outDir, `${insight.slug}-${locale}.png`);
+      const meta = await sharp(file).metadata();
+      if (meta.format !== "png" || meta.width !== 1200 || meta.height !== 630) {
+        throw new Error(`Invalid committed OG image: ${file}; regenerate with scripts/render-og.mjs locally`);
+      }
+    }
+  }
+  console.log(`✓ Verified ${insights.length * 2} committed OG images (1200×630); no browser required on Vercel.`);
+  process.exit(0);
+}
+
 function copyIfApproved(key, locale) {
   const entry = copyNew[key];
   if (!entry || (entry.status !== "approved" && entry.status !== "class-a")) {
