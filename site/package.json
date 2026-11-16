@@ -13,7 +13,8 @@
     "check:links": "node scripts/preflight.mjs",
     "lint": "eslint app components lib next.config.ts playwright.config.ts tests",
     "check:content": "node scripts/check-v1-content.mjs",
-    "test:smoke": "playwright test"
+    "test:smoke": "playwright test",
+    "build:photos": "node scripts/build-photos.mjs"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.0",

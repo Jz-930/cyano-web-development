@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { Children, useEffect, useRef, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { href, t, type Locale } from "@/lib/locale";
@@ -46,9 +46,12 @@ function pathsForInputCount(count: number): string[] {
 export function SolutionExplorerClient({
   locale,
   items,
+  photos,
 }: {
   locale: Locale;
   items: SolutionTabItem[];
+  /** One server-rendered <Photo> per item, cross-faded with the active tab. */
+  photos?: ReactNode;
 }) {
   const { selected, tabProps, panelProps, tablistRef, panelsRef } = useTabs(
     items.length,
@@ -143,6 +146,15 @@ export function SolutionExplorerClient({
       </div>
 
       <div className="solution-right min-w-0">
+        {photos ? (
+          <div className="ph-swap solution-photo" aria-hidden="true">
+            {Children.toArray(photos).map((node, i) => (
+              <div key={i} data-on={shownIndex === i || undefined}>
+                {node}
+              </div>
+            ))}
+          </div>
+        ) : null}
         <div className="solution-stage relative [border-radius:var(--r-panel)] [background:var(--p2)] [border:1px_solid_var(--line)] [padding:var(--sp-5)] overflow-hidden isolate">
           <span className="dot-grid solution-stage-dots absolute inset-0 pointer-events-none [z-index:-1]" aria-hidden="true" />
           {runTick > 0 ? (

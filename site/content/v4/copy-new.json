@@ -1708,5 +1708,185 @@
     "en": "The minimum development experience of each core member, not company age.",
     "status": "approved",
     "ref": "09#cite.team-6y"
+  },
+  "v42.concern-today": {
+    "zh": "现在的情况",
+    "en": "Today",
+    "status": "approved",
+    "ref": "v4.2 UI · ConcernPanel 左半标签"
+  },
+  "v42.case-challenges": {
+    "zh": "主要挑战",
+    "en": "Challenges",
+    "status": "approved",
+    "ref": "v4.2 UI · 案例详情 · 项目故事小标题"
+  },
+  "v42.case-approach": {
+    "zh": "我们的做法",
+    "en": "What we built",
+    "status": "approved",
+    "ref": "v4.2 UI · 案例详情 · 项目故事小标题"
+  },
+  "v42.contact-then": {
+    "zh": "之后",
+    "en": "Then",
+    "status": "approved",
+    "ref": "v4.2 UI · 联系页 · 接下来时间轴标签"
+  },
+  "v42.solution-read-case": {
+    "zh": "阅读完整案例",
+    "en": "Read the full case",
+    "status": "approved",
+    "ref": "v4.2 UI · 方案详情 · 代表案例链接"
+  },
+  "v42.scene-query-ready": {
+    "zh": "已生成查询",
+    "en": "Query ready",
+    "status": "approved",
+    "ref": "v4.2 UI · 样机状态标签"
+  },
+  "v42.scene-reconciled": {
+    "zh": "已自动归集",
+    "en": "Reconciled",
+    "status": "approved",
+    "ref": "v4.2 UI · 样机状态标签"
+  },
+  "photo.ph-02": {
+    "zh": "办公人员在文件柜前翻找文件夹",
+    "en": "An office worker searching through a crowded filing cabinet",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-02"
+  },
+  "photo.ph-03": {
+    "zh": "两份几乎相同的资料并排摆放，其中一处被红笔圈出",
+    "en": "Two near-identical spec sheets side by side, one figure circled in red",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-03"
+  },
+  "photo.ph-04": {
+    "zh": "审核人在签字前逐行核对文件",
+    "en": "A reviewer reading a draft line by line before signing off",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-04"
+  },
+  "photo.ph-05": {
+    "zh": "四个工位各自用不同的工具独立工作",
+    "en": "Four colleagues working side by side, each with a different set of tools",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-05"
+  },
+  "photo.ph-06": {
+    "zh": "设备展厅里，销售工程师用平板向客户讲解",
+    "en": "A sales engineer walking a client through details on a tablet in an equipment showroom",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-06"
+  },
+  "photo.ph-07": {
+    "zh": "会议桌上叠放着标书与参考资料",
+    "en": "Tender documents and reference reports stacked along a meeting table",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-07"
+  },
+  "photo.ph-08": {
+    "zh": "新员工在笔记本电脑上查询入职问题",
+    "en": "A new employee looking up an onboarding question on a laptop",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-08"
+  },
+  "photo.ph-09": {
+    "zh": "仓储通道里，店长在平板上查看库存数据",
+    "en": "An operations manager checking stock figures on a tablet in a warehouse aisle",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-09"
+  },
+  "photo.ph-10": {
+    "zh": "诊断工作坊上，顾问在白板上梳理业务流程",
+    "en": "A consultant mapping a business process on a whiteboard during a diagnostic workshop",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-10"
+  },
+  "photo.ph-11": {
+    "zh": "蓝调时刻的海面与散落的岩石小岛",
+    "en": "A calm sea at blue hour with scattered rocky islets",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-11"
+  },
+  "photo.ph-12": {
+    "zh": "工程项目现场办公室的桌面：图纸、安全帽与产品资料",
+    "en": "A site office desk with drawings, a hard hat and product binders",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-12"
+  },
+  "photo.ph-13": {
+    "zh": "深夜，顾问在成摞的研究报告间撰写方案",
+    "en": "A consultant drafting a proposal late at night among stacks of research reports",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-13"
+  },
+  "photo.ph-14": {
+    "zh": "IT 服务台上，技术人员处理设备与工单",
+    "en": "An IT technician working through devices and tickets at a service desk",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-14"
+  },
+  "photo.ph-15": {
+    "zh": "仓库里，手持平板查看库存与销量",
+    "en": "Checking inventory and sales on a tablet in a stockroom",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-15"
+  },
+  "photo.ph-16": {
+    "zh": "物业管理员按房产整理票据与钥匙",
+    "en": "A property manager sorting receipts and keys by property",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-16"
+  },
+  "photo.ph-17": {
+    "zh": "作者在软木板上调整人物与剧情分支卡片",
+    "en": "A writer rearranging character and plot cards on a cork board",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-17"
+  },
+  "photo.ph-18": {
+    "zh": "夜里，工程师在双屏前对照手绘架构图工作",
+    "en": "An engineer at two monitors at night, working from a hand-drawn architecture sketch",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-18"
+  },
+  "photo.ph-19": {
+    "zh": "办公室角落里上锁的小型设备柜",
+    "en": "A small locked equipment cabinet in the corner of an office",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-19"
+  },
+  "photo.ph-20": {
+    "zh": "双方对照验收清单逐项确认试点结果",
+    "en": "Two people checking pilot results against an acceptance list",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-20"
+  },
+  "photo.ph-21": {
+    "zh": "清晨的办公桌，屏幕上是平稳的运行曲线",
+    "en": "A desk at dawn with a steady monitoring graph on screen",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-21"
+  },
+  "photo.ph-22": {
+    "zh": "两人在工作台上讨论标注过的架构草图",
+    "en": "Two people reviewing an annotated architecture sketch on a work table",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-22"
+  },
+  "photo.ph-23": {
+    "zh": "晨光下的书桌，摊开的笔记本与一杯咖啡",
+    "en": "A desk in morning light with an open notebook and a cup of coffee",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-23"
+  },
+  "photo.ph-24": {
+    "zh": "雾中海面上的一座孤岛",
+    "en": "A lone islet in sea fog",
+    "status": "approved",
+    "ref": "docs/v5-photography-plan.md#PH-24"
   }
 }

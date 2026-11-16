@@ -54,7 +54,7 @@ export function SceneWriting({
                 {m ?? <span className="mk-skel mk-w-40 block [border-radius:var(--r-chip)] [width:40%]" />}
               </div>
               {memDetails[idx] ? (
-                <p className="m-0 [font-size:12px] [line-height:1.55] [color:var(--muted)]">{memDetails[idx]}</p>
+                <p className="m-0 [font-size:13px] [line-height:1.5] [color:var(--muted)]">{memDetails[idx]}</p>
               ) : null}
             </div>
           ))}

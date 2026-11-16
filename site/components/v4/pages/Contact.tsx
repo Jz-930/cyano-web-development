@@ -8,6 +8,7 @@ import {
 } from "@/lib/content-v4";
 import { ContactForm } from "../ContactForm";
 import { PageHero } from "../PageHero";
+import { Photo } from "../Photo";
 import { Phrase } from "../Phrase";
 
 export function Contact({ locale }: { locale: Locale }) {
@@ -101,6 +102,13 @@ export function Contact({ locale }: { locale: Locale }) {
                 <p>{k2Body}</p>
               </div>
             ) : null}
+
+            <Photo
+              id="ph-23"
+              locale={locale}
+              className="ph [aspect-ratio:4/3] [&_img]:[object-position:50%_85%]"
+              sizes="(max-width: 1023px) calc(100vw - 32px), 480px"
+            />
 
             <div className="card contact-responder-card">
               <img

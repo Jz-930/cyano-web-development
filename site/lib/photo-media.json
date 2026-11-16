@@ -1,0 +1,687 @@
+{
+  "ph-02": {
+    "width": 1448,
+    "height": 1086,
+    "alt": {
+      "zh": "办公人员在文件柜前翻找文件夹",
+      "en": "An office worker searching through a crowded filing cabinet"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-02-a6f7b71e-480.avif",
+        "webp": "/media/photo/ph-02-a6f7b71e-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-02-a6f7b71e-800.avif",
+        "webp": "/media/photo/ph-02-a6f7b71e-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-02-a6f7b71e-1200.avif",
+        "webp": "/media/photo/ph-02-a6f7b71e-1200.webp"
+      },
+      {
+        "width": 1448,
+        "avif": "/media/photo/ph-02-a6f7b71e-1448.avif",
+        "webp": "/media/photo/ph-02-a6f7b71e-1448.webp"
+      }
+    ]
+  },
+  "ph-03": {
+    "width": 1448,
+    "height": 1086,
+    "alt": {
+      "zh": "两份几乎相同的资料并排摆放，其中一处被红笔圈出",
+      "en": "Two near-identical spec sheets side by side, one figure circled in red"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-03-555024ce-480.avif",
+        "webp": "/media/photo/ph-03-555024ce-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-03-555024ce-800.avif",
+        "webp": "/media/photo/ph-03-555024ce-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-03-555024ce-1200.avif",
+        "webp": "/media/photo/ph-03-555024ce-1200.webp"
+      },
+      {
+        "width": 1448,
+        "avif": "/media/photo/ph-03-555024ce-1448.avif",
+        "webp": "/media/photo/ph-03-555024ce-1448.webp"
+      }
+    ]
+  },
+  "ph-04": {
+    "width": 1448,
+    "height": 1086,
+    "alt": {
+      "zh": "审核人在签字前逐行核对文件",
+      "en": "A reviewer reading a draft line by line before signing off"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-04-37cfbc41-480.avif",
+        "webp": "/media/photo/ph-04-37cfbc41-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-04-37cfbc41-800.avif",
+        "webp": "/media/photo/ph-04-37cfbc41-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-04-37cfbc41-1200.avif",
+        "webp": "/media/photo/ph-04-37cfbc41-1200.webp"
+      },
+      {
+        "width": 1448,
+        "avif": "/media/photo/ph-04-37cfbc41-1448.avif",
+        "webp": "/media/photo/ph-04-37cfbc41-1448.webp"
+      }
+    ]
+  },
+  "ph-05": {
+    "width": 1448,
+    "height": 1086,
+    "alt": {
+      "zh": "四个工位各自用不同的工具独立工作",
+      "en": "Four colleagues working side by side, each with a different set of tools"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-05-4ce9f9ac-480.avif",
+        "webp": "/media/photo/ph-05-4ce9f9ac-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-05-4ce9f9ac-800.avif",
+        "webp": "/media/photo/ph-05-4ce9f9ac-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-05-4ce9f9ac-1200.avif",
+        "webp": "/media/photo/ph-05-4ce9f9ac-1200.webp"
+      },
+      {
+        "width": 1448,
+        "avif": "/media/photo/ph-05-4ce9f9ac-1448.avif",
+        "webp": "/media/photo/ph-05-4ce9f9ac-1448.webp"
+      }
+    ]
+  },
+  "ph-06": {
+    "width": 1536,
+    "height": 1024,
+    "alt": {
+      "zh": "设备展厅里，销售工程师用平板向客户讲解",
+      "en": "A sales engineer walking a client through details on a tablet in an equipment showroom"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-06-74103929-480.avif",
+        "webp": "/media/photo/ph-06-74103929-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-06-74103929-800.avif",
+        "webp": "/media/photo/ph-06-74103929-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-06-74103929-1200.avif",
+        "webp": "/media/photo/ph-06-74103929-1200.webp"
+      },
+      {
+        "width": 1536,
+        "avif": "/media/photo/ph-06-74103929-1536.avif",
+        "webp": "/media/photo/ph-06-74103929-1536.webp"
+      }
+    ]
+  },
+  "ph-07": {
+    "width": 1536,
+    "height": 1024,
+    "alt": {
+      "zh": "会议桌上叠放着标书与参考资料",
+      "en": "Tender documents and reference reports stacked along a meeting table"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-07-2d07c4fa-480.avif",
+        "webp": "/media/photo/ph-07-2d07c4fa-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-07-2d07c4fa-800.avif",
+        "webp": "/media/photo/ph-07-2d07c4fa-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-07-2d07c4fa-1200.avif",
+        "webp": "/media/photo/ph-07-2d07c4fa-1200.webp"
+      },
+      {
+        "width": 1536,
+        "avif": "/media/photo/ph-07-2d07c4fa-1536.avif",
+        "webp": "/media/photo/ph-07-2d07c4fa-1536.webp"
+      }
+    ]
+  },
+  "ph-08": {
+    "width": 1536,
+    "height": 1024,
+    "alt": {
+      "zh": "新员工在笔记本电脑上查询入职问题",
+      "en": "A new employee looking up an onboarding question on a laptop"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-08-b02e64ec-480.avif",
+        "webp": "/media/photo/ph-08-b02e64ec-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-08-b02e64ec-800.avif",
+        "webp": "/media/photo/ph-08-b02e64ec-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-08-b02e64ec-1200.avif",
+        "webp": "/media/photo/ph-08-b02e64ec-1200.webp"
+      },
+      {
+        "width": 1536,
+        "avif": "/media/photo/ph-08-b02e64ec-1536.avif",
+        "webp": "/media/photo/ph-08-b02e64ec-1536.webp"
+      }
+    ]
+  },
+  "ph-09": {
+    "width": 1536,
+    "height": 1024,
+    "alt": {
+      "zh": "仓储通道里，店长在平板上查看库存数据",
+      "en": "An operations manager checking stock figures on a tablet in a warehouse aisle"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-09-6fa48384-480.avif",
+        "webp": "/media/photo/ph-09-6fa48384-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-09-6fa48384-800.avif",
+        "webp": "/media/photo/ph-09-6fa48384-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-09-6fa48384-1200.avif",
+        "webp": "/media/photo/ph-09-6fa48384-1200.webp"
+      },
+      {
+        "width": 1536,
+        "avif": "/media/photo/ph-09-6fa48384-1536.avif",
+        "webp": "/media/photo/ph-09-6fa48384-1536.webp"
+      }
+    ]
+  },
+  "ph-10": {
+    "width": 1672,
+    "height": 941,
+    "alt": {
+      "zh": "诊断工作坊上，顾问在白板上梳理业务流程",
+      "en": "A consultant mapping a business process on a whiteboard during a diagnostic workshop"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-10-2fe87754-480.avif",
+        "webp": "/media/photo/ph-10-2fe87754-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-10-2fe87754-800.avif",
+        "webp": "/media/photo/ph-10-2fe87754-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-10-2fe87754-1200.avif",
+        "webp": "/media/photo/ph-10-2fe87754-1200.webp"
+      },
+      {
+        "width": 1672,
+        "avif": "/media/photo/ph-10-2fe87754-1672.avif",
+        "webp": "/media/photo/ph-10-2fe87754-1672.webp"
+      }
+    ]
+  },
+  "ph-11": {
+    "width": 1914,
+    "height": 822,
+    "alt": {
+      "zh": "蓝调时刻的海面与散落的岩石小岛",
+      "en": "A calm sea at blue hour with scattered rocky islets"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-11-055ca3e3-480.avif",
+        "webp": "/media/photo/ph-11-055ca3e3-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-11-055ca3e3-800.avif",
+        "webp": "/media/photo/ph-11-055ca3e3-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-11-055ca3e3-1200.avif",
+        "webp": "/media/photo/ph-11-055ca3e3-1200.webp"
+      },
+      {
+        "width": 1914,
+        "avif": "/media/photo/ph-11-055ca3e3-1914.avif",
+        "webp": "/media/photo/ph-11-055ca3e3-1914.webp"
+      }
+    ]
+  },
+  "ph-12": {
+    "width": 1536,
+    "height": 1024,
+    "alt": {
+      "zh": "工程项目现场办公室的桌面：图纸、安全帽与产品资料",
+      "en": "A site office desk with drawings, a hard hat and product binders"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-12-2af33281-480.avif",
+        "webp": "/media/photo/ph-12-2af33281-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-12-2af33281-800.avif",
+        "webp": "/media/photo/ph-12-2af33281-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-12-2af33281-1200.avif",
+        "webp": "/media/photo/ph-12-2af33281-1200.webp"
+      },
+      {
+        "width": 1536,
+        "avif": "/media/photo/ph-12-2af33281-1536.avif",
+        "webp": "/media/photo/ph-12-2af33281-1536.webp"
+      }
+    ]
+  },
+  "ph-13": {
+    "width": 1536,
+    "height": 1024,
+    "alt": {
+      "zh": "深夜，顾问在成摞的研究报告间撰写方案",
+      "en": "A consultant drafting a proposal late at night among stacks of research reports"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-13-6f6ff633-480.avif",
+        "webp": "/media/photo/ph-13-6f6ff633-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-13-6f6ff633-800.avif",
+        "webp": "/media/photo/ph-13-6f6ff633-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-13-6f6ff633-1200.avif",
+        "webp": "/media/photo/ph-13-6f6ff633-1200.webp"
+      },
+      {
+        "width": 1536,
+        "avif": "/media/photo/ph-13-6f6ff633-1536.avif",
+        "webp": "/media/photo/ph-13-6f6ff633-1536.webp"
+      }
+    ]
+  },
+  "ph-14": {
+    "width": 1536,
+    "height": 1024,
+    "alt": {
+      "zh": "IT 服务台上，技术人员处理设备与工单",
+      "en": "An IT technician working through devices and tickets at a service desk"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-14-468b4e85-480.avif",
+        "webp": "/media/photo/ph-14-468b4e85-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-14-468b4e85-800.avif",
+        "webp": "/media/photo/ph-14-468b4e85-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-14-468b4e85-1200.avif",
+        "webp": "/media/photo/ph-14-468b4e85-1200.webp"
+      },
+      {
+        "width": 1536,
+        "avif": "/media/photo/ph-14-468b4e85-1536.avif",
+        "webp": "/media/photo/ph-14-468b4e85-1536.webp"
+      }
+    ]
+  },
+  "ph-15": {
+    "width": 1536,
+    "height": 1024,
+    "alt": {
+      "zh": "仓库里，手持平板查看库存与销量",
+      "en": "Checking inventory and sales on a tablet in a stockroom"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-15-6a75c6cd-480.avif",
+        "webp": "/media/photo/ph-15-6a75c6cd-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-15-6a75c6cd-800.avif",
+        "webp": "/media/photo/ph-15-6a75c6cd-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-15-6a75c6cd-1200.avif",
+        "webp": "/media/photo/ph-15-6a75c6cd-1200.webp"
+      },
+      {
+        "width": 1536,
+        "avif": "/media/photo/ph-15-6a75c6cd-1536.avif",
+        "webp": "/media/photo/ph-15-6a75c6cd-1536.webp"
+      }
+    ]
+  },
+  "ph-16": {
+    "width": 1536,
+    "height": 1024,
+    "alt": {
+      "zh": "物业管理员按房产整理票据与钥匙",
+      "en": "A property manager sorting receipts and keys by property"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-16-6129d99c-480.avif",
+        "webp": "/media/photo/ph-16-6129d99c-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-16-6129d99c-800.avif",
+        "webp": "/media/photo/ph-16-6129d99c-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-16-6129d99c-1200.avif",
+        "webp": "/media/photo/ph-16-6129d99c-1200.webp"
+      },
+      {
+        "width": 1536,
+        "avif": "/media/photo/ph-16-6129d99c-1536.avif",
+        "webp": "/media/photo/ph-16-6129d99c-1536.webp"
+      }
+    ]
+  },
+  "ph-17": {
+    "width": 1536,
+    "height": 1024,
+    "alt": {
+      "zh": "作者在软木板上调整人物与剧情分支卡片",
+      "en": "A writer rearranging character and plot cards on a cork board"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-17-3a0a9747-480.avif",
+        "webp": "/media/photo/ph-17-3a0a9747-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-17-3a0a9747-800.avif",
+        "webp": "/media/photo/ph-17-3a0a9747-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-17-3a0a9747-1200.avif",
+        "webp": "/media/photo/ph-17-3a0a9747-1200.webp"
+      },
+      {
+        "width": 1536,
+        "avif": "/media/photo/ph-17-3a0a9747-1536.avif",
+        "webp": "/media/photo/ph-17-3a0a9747-1536.webp"
+      }
+    ]
+  },
+  "ph-18": {
+    "width": 1672,
+    "height": 941,
+    "alt": {
+      "zh": "夜里，工程师在双屏前对照手绘架构图工作",
+      "en": "An engineer at two monitors at night, working from a hand-drawn architecture sketch"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-18-a3d47f56-480.avif",
+        "webp": "/media/photo/ph-18-a3d47f56-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-18-a3d47f56-800.avif",
+        "webp": "/media/photo/ph-18-a3d47f56-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-18-a3d47f56-1200.avif",
+        "webp": "/media/photo/ph-18-a3d47f56-1200.webp"
+      },
+      {
+        "width": 1672,
+        "avif": "/media/photo/ph-18-a3d47f56-1672.avif",
+        "webp": "/media/photo/ph-18-a3d47f56-1672.webp"
+      }
+    ]
+  },
+  "ph-19": {
+    "width": 1448,
+    "height": 1086,
+    "alt": {
+      "zh": "办公室角落里上锁的小型设备柜",
+      "en": "A small locked equipment cabinet in the corner of an office"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-19-3d928558-480.avif",
+        "webp": "/media/photo/ph-19-3d928558-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-19-3d928558-800.avif",
+        "webp": "/media/photo/ph-19-3d928558-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-19-3d928558-1200.avif",
+        "webp": "/media/photo/ph-19-3d928558-1200.webp"
+      },
+      {
+        "width": 1448,
+        "avif": "/media/photo/ph-19-3d928558-1448.avif",
+        "webp": "/media/photo/ph-19-3d928558-1448.webp"
+      }
+    ]
+  },
+  "ph-20": {
+    "width": 1536,
+    "height": 1024,
+    "alt": {
+      "zh": "双方对照验收清单逐项确认试点结果",
+      "en": "Two people checking pilot results against an acceptance list"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-20-86ec5188-480.avif",
+        "webp": "/media/photo/ph-20-86ec5188-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-20-86ec5188-800.avif",
+        "webp": "/media/photo/ph-20-86ec5188-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-20-86ec5188-1200.avif",
+        "webp": "/media/photo/ph-20-86ec5188-1200.webp"
+      },
+      {
+        "width": 1536,
+        "avif": "/media/photo/ph-20-86ec5188-1536.avif",
+        "webp": "/media/photo/ph-20-86ec5188-1536.webp"
+      }
+    ]
+  },
+  "ph-21": {
+    "width": 1536,
+    "height": 1024,
+    "alt": {
+      "zh": "清晨的办公桌，屏幕上是平稳的运行曲线",
+      "en": "A desk at dawn with a steady monitoring graph on screen"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-21-fab20433-480.avif",
+        "webp": "/media/photo/ph-21-fab20433-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-21-fab20433-800.avif",
+        "webp": "/media/photo/ph-21-fab20433-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-21-fab20433-1200.avif",
+        "webp": "/media/photo/ph-21-fab20433-1200.webp"
+      },
+      {
+        "width": 1536,
+        "avif": "/media/photo/ph-21-fab20433-1536.avif",
+        "webp": "/media/photo/ph-21-fab20433-1536.webp"
+      }
+    ]
+  },
+  "ph-22": {
+    "width": 1536,
+    "height": 1024,
+    "alt": {
+      "zh": "两人在工作台上讨论标注过的架构草图",
+      "en": "Two people reviewing an annotated architecture sketch on a work table"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-22-62253612-480.avif",
+        "webp": "/media/photo/ph-22-62253612-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-22-62253612-800.avif",
+        "webp": "/media/photo/ph-22-62253612-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-22-62253612-1200.avif",
+        "webp": "/media/photo/ph-22-62253612-1200.webp"
+      },
+      {
+        "width": 1536,
+        "avif": "/media/photo/ph-22-62253612-1536.avif",
+        "webp": "/media/photo/ph-22-62253612-1536.webp"
+      }
+    ]
+  },
+  "ph-23": {
+    "width": 1122,
+    "height": 1402,
+    "alt": {
+      "zh": "晨光下的书桌，摊开的笔记本与一杯咖啡",
+      "en": "A desk in morning light with an open notebook and a cup of coffee"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-23-bcab0f09-480.avif",
+        "webp": "/media/photo/ph-23-bcab0f09-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-23-bcab0f09-800.avif",
+        "webp": "/media/photo/ph-23-bcab0f09-800.webp"
+      },
+      {
+        "width": 1122,
+        "avif": "/media/photo/ph-23-bcab0f09-1122.avif",
+        "webp": "/media/photo/ph-23-bcab0f09-1122.webp"
+      }
+    ]
+  },
+  "ph-24": {
+    "width": 1672,
+    "height": 941,
+    "alt": {
+      "zh": "雾中海面上的一座孤岛",
+      "en": "A lone islet in sea fog"
+    },
+    "variants": [
+      {
+        "width": 480,
+        "avif": "/media/photo/ph-24-c7d7386c-480.avif",
+        "webp": "/media/photo/ph-24-c7d7386c-480.webp"
+      },
+      {
+        "width": 800,
+        "avif": "/media/photo/ph-24-c7d7386c-800.avif",
+        "webp": "/media/photo/ph-24-c7d7386c-800.webp"
+      },
+      {
+        "width": 1200,
+        "avif": "/media/photo/ph-24-c7d7386c-1200.avif",
+        "webp": "/media/photo/ph-24-c7d7386c-1200.webp"
+      },
+      {
+        "width": 1672,
+        "avif": "/media/photo/ph-24-c7d7386c-1672.avif",
+        "webp": "/media/photo/ph-24-c7d7386c-1672.webp"
+      }
+    ]
+  }
+}

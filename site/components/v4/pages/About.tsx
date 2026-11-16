@@ -11,6 +11,7 @@ import {
 } from "@/lib/content-v4";
 import { CitationPeek } from "../CitationPeek";
 import { PageHero } from "../PageHero";
+import { Photo } from "../Photo";
 import { Phrase } from "../Phrase";
 import { ResponsibilityMatrix } from "../ResponsibilityMatrix";
 
@@ -263,6 +264,12 @@ export function About({ locale }: { locale: Locale }) {
       {/* Section 4: Service scope (.name-story) + Principles */}
       <section className="paper about-scope-section [padding-block:var(--section-y)]" data-header="paper">
         <div className="wrap">
+          <Photo
+            id="ph-24"
+            locale={locale}
+            className="ph ph-band"
+            sizes="(max-width: 1280px) calc(100vw - 32px), 1232px"
+          />
           <div className="card name-story" data-reveal="">
             <div className="name-story-head flex flex-col [gap:var(--sp-3)]">
               <h2 className="h2">
@@ -289,6 +296,13 @@ export function About({ locale }: { locale: Locale }) {
               <Phrase text={text("D.7", "原则标题", locale)} locale={locale} />
             </h2>
           </div>
+
+          <Photo
+            id="ph-22"
+            locale={locale}
+            className="ph ph-band"
+            sizes="(max-width: 1280px) calc(100vw - 32px), 1232px"
+          />
 
           <div className="about-principles-grid grid [grid-template-columns:repeat(2,minmax(0,1fr))] [@media(max-width:1023px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-6)]">
             {principles.map((p, idx) => (

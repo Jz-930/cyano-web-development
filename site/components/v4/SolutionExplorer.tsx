@@ -8,6 +8,14 @@ import {
   SolutionExplorerClient,
   type SolutionTabItem,
 } from "./SolutionExplorerClient";
+import { Photo, type PhotoId } from "./Photo";
+
+export const SOLUTION_PHOTO: Record<string, PhotoId> = {
+  "sales-ai": "ph-06",
+  "document-automation": "ph-07",
+  "knowledge-assistant": "ph-08",
+  "data-query": "ph-09",
+};
 
 const SOLUTION_META: Record<string, { scene: SceneId; h3: string }> = {
   "sales-ai": { scene: "sales", h3: "04" },
@@ -33,5 +41,17 @@ export function SolutionExplorer({ locale }: { locale: Locale }) {
     };
   });
 
-  return <SolutionExplorerClient locale={locale} items={items} />;
+  const photos = items.map((it) =>
+    SOLUTION_PHOTO[it.slug] ? (
+      <Photo
+        key={it.slug}
+        id={SOLUTION_PHOTO[it.slug]}
+        locale={locale}
+        decorative
+        sizes="(max-width: 1023px) calc(100vw - 32px), 720px"
+      />
+    ) : null,
+  );
+
+  return <SolutionExplorerClient locale={locale} items={items} photos={photos} />;
 }

@@ -13,6 +13,13 @@ import { EngagementConfigurator } from "../EngagementConfigurator";
 import { EngagementGantt } from "../EngagementGantt";
 import { FAQ } from "../FAQ";
 import { PageHero } from "../PageHero";
+import { Photo } from "../Photo";
+
+const PROCESS_PHOTOS = [
+  { step: 0, id: "ph-10" },
+  { step: 3, id: "ph-20" },
+  { step: 4, id: "ph-21" },
+] as const;
 import { Phrase } from "../Phrase";
 import { ProcessTimeline } from "../ProcessTimeline";
 
@@ -298,6 +305,22 @@ export function Engagement({ locale }: { locale: Locale }) {
             </h2>
           </div>
 
+          <div className="eng-process-photos grid [grid-template-columns:repeat(3,minmax(0,1fr))] [@media(max-width:800px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-5)] [margin-bottom:var(--sp-8)]" data-reveal="">
+            {PROCESS_PHOTOS.map(({ step, id }) => (
+              <figure key={id} className="ph-fig">
+                <Photo
+                  id={id}
+                  locale={locale}
+                  className="ph"
+                  sizes="(max-width: 800px) calc(100vw - 32px), 400px"
+                />
+                <figcaption>
+                  <span className="label [margin-right:var(--sp-2)]">{processSteps[step].indexLabel}</span>
+                  {processSteps[step].title}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
           <ProcessTimeline steps={processSteps} />
         </div>
       </section>

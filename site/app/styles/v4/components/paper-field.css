@@ -1,0 +1,1 @@
+body{background:transparent}.paper-field{position:fixed;inset:0;z-index:-1;pointer-events:none;contain:strict;& canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity 1.4s var(--qeo)}& canvas.ready{opacity:1}}.mist{background:rgb(248 250 250/.62)}@media print{.paper-field{display:none}}

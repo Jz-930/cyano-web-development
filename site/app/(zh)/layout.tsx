@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import cjkPreload from "../fonts/cjk-preload.json";
 import { Header } from "@/components/Header";
 import { MotionRuntime } from "@/components/v4/MotionRuntime";
+import { PaperField } from "@/components/v4/PaperField";
 import { RouteFocus } from "@/components/v4/RouteFocus";
 import { RouteTransitions } from "@/components/v4/RouteTransitions";
 import { SiteFooter } from "@/components/v4/SiteFooter";
@@ -62,6 +63,7 @@ export default function ZhRootLayout({
         </a>
         <Header locale="zh" />
         <RouteFocus />
+        <PaperField />
         <MotionRuntime />
         <RouteTransitions>{children}</RouteTransitions>
         <SiteFooter locale="zh" />

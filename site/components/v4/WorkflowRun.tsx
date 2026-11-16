@@ -194,7 +194,7 @@ export function WorkflowRun({ locale, slug }: WorkflowRunProps) {
                       <span className="workflow-review-dot [width:16px] [height:16px] [border-radius:var(--q50)] [background:var(--amber)] [color:var(--n1)] inline-grid [place-items:center]" aria-hidden="true">
                         <Check size={11} strokeWidth={2.2} />
                       </span>
-                      <span className="[font-size:12px] [line-height:1] [font-weight:500] [color:var(--amber-ink)] [white-space:nowrap]">{reviewLabel}</span>
+                      <span className="[font-size:12px] [line-height:1] [font-weight:500] [color:var(--ink)] [white-space:nowrap]">{reviewLabel}</span>
                     </span>
                   ) : null}
                 </div>

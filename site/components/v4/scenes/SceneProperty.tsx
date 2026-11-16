@@ -43,7 +43,7 @@ export function SceneProperty({
             {summary ?? <span className="mk-skel mk-w-40 block [border-radius:var(--r-chip)] [width:40%]" />}
           </span>
           {period ? (
-            <span className="mk-prop-period [font-size:12px] [color:var(--muted)]">{period}</span>
+            <span className="mk-prop-period [font-size:13px] [color:var(--muted)]">{period}</span>
           ) : null}
         </div>
         <div className="mk-prop-rows grid [gap:var(--sp-3)]">

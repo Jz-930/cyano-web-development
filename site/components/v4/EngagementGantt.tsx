@@ -216,7 +216,7 @@ export function EngagementGantt({
         </li>
       </ul>
 
-      <div className="gantt-scroll">
+      <div className="gantt-scroll" tabIndex={0}>
         <svg
           className="gantt-svg"
           viewBox={`0 0 ${vbWidth} ${vbHeight}`}

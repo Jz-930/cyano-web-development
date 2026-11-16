@@ -51,14 +51,17 @@ function decodeEntities(str) {
     .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(parseInt(d, 10)));
 }
 
-function extractHtmlTextAndAttrs(html) {
+// `alt: false` leaves image alt text out of the first-screen route subsets: alt text is
+// only painted when an image fails, so its glyphs belong in the on-demand ext subset.
+function extractHtmlTextAndAttrs(html, { alt = true } = {}) {
   const withoutCode = html
     .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
     .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ");
   const attrs = [];
-  for (const m of withoutCode.matchAll(
-    /\b(?:alt|aria-label|title|placeholder|content)\s*=\s*(?:"([^"]*)"|'([^']*)')/gi,
-  )) {
+  const attrRe = alt
+    ? /\b(?:alt|aria-label|title|placeholder|content)\s*=\s*(?:"([^"]*)"|'([^']*)')/gi
+    : /\b(?:aria-label|title|placeholder|content)\s*=\s*(?:"([^"]*)"|'([^']*)')/gi;
+  for (const m of withoutCode.matchAll(attrRe)) {
     attrs.push(m[1] ?? m[2] ?? "");
   }
   const bodyMatch = withoutCode.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i);
@@ -88,7 +91,7 @@ const homeHtml = await fs.readFile(path.join(appBuildDir, "index.html"), "utf8")
 const headerBlock = (homeHtml.match(/<header\b[\s\S]*?<\/header>/i) || [""])[0];
 const headerChars = new Set(extractHtmlTextAndAttrs(headerBlock).match(CJK_RE) || []);
 
-let fullHomeText = extractHtmlTextAndAttrs(homeHtml);
+let fullHomeText = extractHtmlTextAndAttrs(homeHtml, { alt: false });
 for (const scene of ["proposal", "wiki", "sales", "data", "stage"]) {
   try {
     const mj = JSON.parse(
@@ -117,6 +120,7 @@ let aboutText = "";
 try {
   aboutText = extractHtmlTextAndAttrs(
     await fs.readFile(path.join(appBuildDir, "about.html"), "utf8"),
+    { alt: false },
   );
 } catch {}
 for (const [k, v] of Object.entries(copyNew)) {
@@ -133,6 +137,7 @@ let techText = "";
 try {
   techText = extractHtmlTextAndAttrs(
     await fs.readFile(path.join(appBuildDir, "technology.html"), "utf8"),
+    { alt: false },
   );
 } catch {}
 for (const [k, v] of Object.entries(copyNew)) {

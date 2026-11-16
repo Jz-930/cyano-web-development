@@ -8,6 +8,7 @@ import {
 import { LightField } from "./LightField";
 import { Phrase } from "./Phrase";
 import { ClosingCtaAction } from "./ClosingCtaAction";
+import { Photo } from "./Photo";
 
 export function ClosingCta({
   locale,
@@ -34,6 +35,13 @@ export function ClosingCta({
         preset="closing"
         focusSelector=".closing .button"
         textEdgeSelector=".closing-copy"
+      />
+      <Photo
+        id="ph-11"
+        locale={locale}
+        decorative
+        className="ph-bg closing-photo"
+        sizes="100vw"
       />
       <div className="wrap closing-wrap relative [z-index:var(--z-content)]">
         <div className="closing-card edge-closing relative [min-height:420px] [@media(max-width:1023px)]:min-h-0 [border-radius:var(--r-panel)] grid [grid-template-columns:minmax(0,7fr)_minmax(0,5fr)] [@media(max-width:1023px)]:[grid-template-columns:1fr] items-center [gap:var(--sp-7)] [padding:var(--sp-8)] [@media(max-width:1023px)]:[padding:var(--sp-6)] [background:var(--white-04)]" data-reveal="">

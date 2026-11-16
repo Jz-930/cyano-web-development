@@ -10,5 +10,11 @@
     "en": "Private deployment keeps data inside your environment. Every system includes access control, full audit logs and sensitive-data filtering.",
     "status": "approved",
     "ref": "09#D-20"
+  },
+  "D.2/主标题": {
+    "zh": "将企业知识，转化为可交付的 AI 生产力",
+    "en": "Turn company knowledge into AI that ships.",
+    "status": "approved",
+    "ref": "v4.2 · 英文首屏标题改用事实表口号"
   }
 }

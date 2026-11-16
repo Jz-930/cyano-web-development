@@ -14,6 +14,7 @@ import { ContextPacker } from "../ContextPacker";
 import { ConvergeWindow } from "../ConvergeWindow";
 import { CoreArch } from "../CoreArch";
 import { PageHero } from "../PageHero";
+import { Photo } from "../Photo";
 import { Phrase } from "../Phrase";
 import { renderBold } from "../richText";
 
@@ -129,7 +130,8 @@ export function Technology({ locale }: { locale: Locale }) {
       {/* Section 2: Cyano Core 4-layer architecture (K-09 + S2) */}
       <section className="paper tech-arch-section [padding-top:var(--sp-10)] [padding-bottom:var(--section-y)]" data-header="paper">
         <div className="wrap">
-          <div className="tech-arch-head flex flex-col [gap:var(--sp-3)] [max-width:68ch] [margin-bottom:var(--sp-8)]" data-reveal="">
+          <div className="tech-arch-intro grid [grid-template-columns:minmax(0,7fr)_minmax(0,5fr)] [@media(max-width:1023px)]:[grid-template-columns:minmax(0,1fr)] items-center [gap:var(--sp-7)] [margin-bottom:var(--sp-8)]">
+          <div className="tech-arch-head flex flex-col [gap:var(--sp-3)] [max-width:68ch]" data-reveal="">
             <p className="eyebrow">{pageCopy.platform_functions[locale]}</p>
             <h2 className="h2">
               <Phrase text="Cyano Core" locale={locale} />
@@ -137,6 +139,13 @@ export function Technology({ locale }: { locale: Locale }) {
             <p className="tech-arch-lead m-0 [font-size:18px] [line-height:1.7] [color:var(--muted)]">
               {text("D.6", "Cyano Core 定义", locale)}
             </p>
+          </div>
+          <Photo
+            id="ph-18"
+            locale={locale}
+            className="ph [aspect-ratio:16/10]"
+            sizes="(max-width: 1023px) calc(100vw - 32px), 500px"
+          />
           </div>
 
           <CoreArch layers={coreLayers} />

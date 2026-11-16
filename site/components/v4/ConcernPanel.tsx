@@ -1,6 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import {
+  Children,
+  useEffect,
+  useRef,
+  useState,
+  type CSSProperties,
+  type ReactNode,
+} from "react";
 import Link from "next/link";
 import { ArrowUpRight, Lock, Pause, Play } from "lucide-react";
 import { href, t, type Locale } from "@/lib/locale";
@@ -69,12 +76,15 @@ export function ConcernPanel({
   gates,
   conclusion,
   techLinkLabel,
+  photos,
 }: {
   locale: Locale;
   items: ConcernItem[];
   gates: string[];
   conclusion: string | null;
   techLinkLabel: string;
+  /** One server-rendered <Photo> per item; the active tab's photo is shown. */
+  photos?: ReactNode;
 }) {
   const panelRef = useRef<HTMLDivElement | null>(null);
   usePointerHalo(panelRef);
@@ -214,6 +224,16 @@ export function ConcernPanel({
         ))}
       </div>
 
+      <div className="concern-stage-col relative [z-index:var(--z-content)] min-w-0 flex flex-col [gap:var(--sp-6)]">
+      {photos ? (
+        <div className="ph-swap concern-photo [border:1px_solid_var(--dark-line)]" aria-hidden="true">
+          {Children.toArray(photos).map((node, i) => (
+            <div key={i} data-on={selected === i || undefined}>
+              {node}
+            </div>
+          ))}
+        </div>
+      ) : null}
       <div ref={panelsRef} className="concern-stage tab-panels relative [z-index:var(--z-content)] min-w-0">
         {items.map((item, i) => {
           const isCurrent = selected === i;
@@ -468,6 +488,7 @@ export function ConcernPanel({
             </div>
           );
         })}
+      </div>
       </div>
 
       <p className="concern-foot [grid-column:1_/_-1] relative [z-index:var(--z-content)] flex flex-wrap justify-between items-center [gap:var(--sp-4)] [padding-top:var(--sp-5)] [border-top:1px_solid_var(--dark-line-soft)] [font-size:16px] [color:var(--light)]">

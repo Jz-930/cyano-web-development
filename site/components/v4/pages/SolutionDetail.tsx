@@ -14,6 +14,8 @@ import { CitationPeek } from "../CitationPeek";
 import { FAQ } from "../FAQ";
 import { InteractiveDemo } from "../InteractiveDemo";
 import { PageHero } from "../PageHero";
+import { Photo } from "../Photo";
+import { SOLUTION_PHOTO } from "../SolutionExplorer";
 import { Phrase } from "../Phrase";
 import { SolutionHeroStage } from "../SolutionHeroStage";
 import { WorkflowRun } from "../WorkflowRun";
@@ -160,6 +162,15 @@ export function SolutionDetail({
               />
             </h2>
           </div>
+
+          {SOLUTION_PHOTO[sol.slug] ? (
+            <Photo
+              id={SOLUTION_PHOTO[sol.slug]}
+              locale={locale}
+              className="ph ph-band"
+              sizes="(max-width: 1280px) calc(100vw - 32px), 1232px"
+            />
+          ) : null}
 
           <div className="sol-pains-grid grid [grid-template-columns:repeat(3,minmax(0,1fr))] [@media(max-width:1024px)]:[grid-template-columns:minmax(0,1fr)] [gap:var(--sp-6)]">
             {sol.pains.map((p, i) => {

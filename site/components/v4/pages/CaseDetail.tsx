@@ -14,6 +14,16 @@ import { CaseGallery } from "../CaseGallery";
 import { CitationPeek } from "../CitationPeek";
 import { InteractiveDemo } from "../InteractiveDemo";
 import { PageHero } from "../PageHero";
+import { Photo, type PhotoId } from "../Photo";
+
+const CASE_PHOTO: Record<string, PhotoId> = {
+  "sales-consultant-ai": "ph-12",
+  "proposal-generation": "ph-13",
+  "it-knowledge-assistant": "ph-14",
+  "nl-data-query": "ph-15",
+  "property-management": "ph-16",
+  "writing-memory-engine": "ph-17",
+};
 import { Phrase } from "../Phrase";
 import { ScaledSceneMockup } from "../scenes";
 import { WipeCompare } from "../WipeCompare";
@@ -157,6 +167,14 @@ export function CaseDetail({
               data-reveal=""
             >
               <div className="grid [gap:var(--sp-6)] [align-content:start]">
+                {CASE_PHOTO[c.slug] ? (
+                  <Photo
+                    id={CASE_PHOTO[c.slug]}
+                    locale={locale}
+                    className="ph [aspect-ratio:3/2]"
+                    sizes="(max-width: 900px) calc(100vw - 32px), 592px"
+                  />
+                ) : null}
                 <div className="grid [gap:var(--sp-3)]">
                   <h2 className="h3">{locale === "zh" ? "项目背景" : "Background"}</h2>
                   <p className="m-0 [color:var(--muted)] [line-height:1.8]">{c.story.background}</p>

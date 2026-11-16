@@ -33,6 +33,7 @@ import { ProvenanceLines } from "@/components/v4/ProvenanceLines";
 import { InsightCover } from "@/components/v4/InsightCover";
 import { renderBold, renderNotEqual } from "@/components/v4/inlineFormat";
 import { Picture } from "@/components/v4/Picture";
+import { Photo } from "@/components/v4/Photo";
 
 const INDUSTRY_ICONS = [
   Factory,
@@ -399,6 +400,15 @@ export function Home({ locale }: { locale: Locale }) {
             gates={concernGates}
             conclusion={concernConclusion}
             techLinkLabel={stripArrow(text("D.2", "痛点区链接", locale))}
+            photos={(["ph-02", "ph-03", "ph-04", "ph-05"] as const).map((id) => (
+              <Photo
+                key={id}
+                id={id}
+                locale={locale}
+                decorative
+                sizes="(max-width: 1023px) calc(100vw - 72px), 900px"
+              />
+            ))}
           />
         </div>
       </section>
@@ -525,6 +535,12 @@ export function Home({ locale }: { locale: Locale }) {
             </Link>
           </header>
 
+          <Photo
+            id="ph-10"
+            locale={locale}
+            className="ph ph-band"
+            sizes="(max-width: 1280px) calc(100vw - 32px), 1232px"
+          />
           <EngagementCards locale={locale} />
           {pathApproved ? <AdoptionPath steps={e2Steps as string[]} /> : null}
           <EngagementGantt locale={locale} compact />

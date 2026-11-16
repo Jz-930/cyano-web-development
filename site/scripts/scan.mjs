@@ -66,9 +66,12 @@ for (const block of homeBlocks) {
 }
 const homeHtmlPath = path.join(root, ".next/server/app/index.html");
 let homeHtml = await fs.readFile(homeHtmlPath, "utf8");
+// Image alt text is only painted when an image fails to load, so it never triggers the ext
+// download; subset-font.mjs keeps those glyphs in ext rather than the first-screen subsets.
 homeHtml = homeHtml
   .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, " ")
-  .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ");
+  .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
+  .replace(/\balt\s*=\s*(?:"[^"]*"|'[^']*')/gi, " ");
 const homeSpill = new Set();
 for (const ch of homeHtml.match(/[\u3000-\u303f\u3400-\u9fff\uff00-\uffef]/g) || []) {
   if (!coreCovered.has(ch.codePointAt(0))) homeSpill.add(ch);

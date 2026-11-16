@@ -13,3 +13,7 @@ site/.env.*
 !site/.env.example
 .DS_Store
 Thumbs.db
+
+# v5 photography: rejected candidates and the generator's own exports (the site builds its own via site/scripts/build-photos.mjs)
+assets/v5-photography/candidates/
+assets/v5-photography/web/

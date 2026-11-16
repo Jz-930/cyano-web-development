@@ -19,9 +19,11 @@
 @import "./v4/components/faq.css" layer(v4-components);
 @import "./v4/components/field.css" layer(v4-components);
 @import "./v4/components/media.css" layer(v4-components);
+@import "./v4/components/photo.css" layer(v4-components);
 @import "./v4/components/overlay.css" layer(v4-components);
 @import "./v4/components/mobile-menu.css" layer(v4-components);
 @import "./v4/components/light-field.css" layer(v4-components);
+@import "./v4/components/paper-field.css" layer(v4-components);
 @import "./v4/components/provenance.css" layer(v4-components);
 @import "./v4/components/mockup.css" layer(v4-components);
 @import "./v4/components/cover.css" layer(v4-components);

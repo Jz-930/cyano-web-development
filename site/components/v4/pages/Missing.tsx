@@ -3,11 +3,13 @@ import pageCopy from "@/content/v4/pages/Missing.json";
 import { href, text, type Locale } from "@/lib/content-v4";
 import { FieldPoster } from "../FieldPoster";
 import { Phrase } from "../Phrase";
+import { Photo } from "../Photo";
 
 export function Missing({ locale }: { locale: Locale }) {
   return (
     <section className="dark missing-section relative isolate overflow-hidden [min-height:76vh] [padding:140px_0_var(--sp-9)] flex items-center" data-header="dark">
       <FieldPoster preset="converge" opacity={0.5} />
+      <Photo id="ph-24" locale={locale} decorative className="ph-bg missing-photo" sizes="100vw" />
       <div className="wrap">
         <div className="missing-inner relative [z-index:var(--z-content)] [max-width:56ch] [margin-inline:auto] flex flex-col items-center text-center [gap:var(--sp-4)]">
           <p className="eyebrow on-dark">404</p>
